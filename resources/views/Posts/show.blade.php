@@ -12,6 +12,7 @@
                          <p class="card-text">内容：{{ $post->body }}</p>
                          <p class="card-text">投稿者：{{ $post->user->name }}</p>
                          <p>投稿日時：{{ $post->created_at }}</p>
+                         <img src="{{ $post->image_path }}" alt="画像"><br>
                          @if ($post->user_id === Auth::user()->id)
                          <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">編集する</a>
                          <form action="{{ route('posts.destroy', $post->id) }}" method="post">
