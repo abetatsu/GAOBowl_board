@@ -22,11 +22,12 @@ export default {
   data() {
        return {
             count: "",
-            result: "false"
+            result: "false",
        }
   },
   mounted() {
     this.countfavorites();
+    this.hasfavorites();
   },
   methods: {
     favorite() {
@@ -55,7 +56,7 @@ export default {
           console.log(error);
         });
     },
-    hasfavorite() {
+    hasfavorites() {
       axios.get('/posts/' + this.post.id+'/hasfavorites')
       .then(res => {
            this.result = res.data;

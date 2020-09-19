@@ -1969,6 +1969,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.countfavorites();
+    this.hasfavorites();
   },
   methods: {
     favorite: function favorite() {
@@ -2000,7 +2001,7 @@ __webpack_require__.r(__webpack_exports__);
         console.log(error);
       });
     },
-    hasfavorite: function hasfavorite() {
+    hasfavorites: function hasfavorites() {
       var _this4 = this;
 
       axios.get('/posts/' + this.post.id + '/hasfavorites').then(function (res) {
