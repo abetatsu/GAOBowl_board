@@ -22,10 +22,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        // $posts = Post::all();
+        $posts = Post::all();
         // $posts->load('user');
         // $posts = DB::table('posts')->get();
-        $posts = Post::with('user')->get();
+        // $posts = Post::with('user')->get();
         // dd($posts);
         return view('posts.index', compact('posts'));
     }
