@@ -40,5 +40,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
     Route::get('home',      'Admin\HomeController@index')->name('admin.home');
 });
 
-Route::post('posts/{post}/favorites', 'FavoriteController@store')->name('favorites');
-Route::post('posts/{post}/unfavorites', 'FavoriteController@destroy')->name('unfavorites');
+Route::get('posts/{post}/favorites', 'FavoriteController@store')->name('favorites');
+Route::get('posts/{post}/unfavorites', 'FavoriteController@destroy')->name('unfavorites');
+Route::get('posts/{post}/countfavorites', 'FavoriteController@count');
+Route::get('posts/{post}/hasfavorites', 'FavoriteController@hasfavorite');

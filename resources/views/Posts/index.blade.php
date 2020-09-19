@@ -11,6 +11,11 @@
           <p class="card-text">内容：{{ $post->body }}</p>
           <p class="card-text">投稿者：{{ $post->user->name }}</p>
           <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">詳細</a>
+          <div class="row justify-content-center">
+               <like-component
+                    :post="{{ json_encode($post) }}"
+               ></like-component>
+          </div>
      </div>
      <div class="row justify-content-center">
           @if($post->users()->where('user_id', Auth::id())->exists())
