@@ -41,6 +41,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
 });
 
 Route::get('posts/{post}/favorites', 'FavoriteController@store')->name('favorites');
-Route::get('posts/{post}/unfavorites', 'FavoriteController@destroy')->name('unfavorites');
+Route::get('posts/{post}/removefavorites', 'FavoriteController@destroy')->name('removefavorites');
 Route::get('posts/{post}/countfavorites', 'FavoriteController@count');
 Route::get('posts/{post}/hasfavorites', 'FavoriteController@hasfavorite');
+
+Route::get('posts/{post}/unfavorites', 'UnfavoriteController@store')->name('unfavorites');
+Route::get('posts/{post}/removeunfavorites', 'UnfavoriteController@destroy')->name('removeunfavorites');
+Route::get('posts/{post}/countunfavorites', 'FavoriteController@count');
+Route::get('posts/{post}/hasunfavorites', 'FavoriteController@hasfavorite');

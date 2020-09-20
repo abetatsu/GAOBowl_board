@@ -3,11 +3,11 @@
     <div class="row justify-content-center mt-1">
       <div class="col-md-12">
         <div>
-          <a @click="removefavorite()" class="btn btn-success" v-if="result">
-               <i class="fas fa-thumbs-up"></i>
+          <a @click="removeunfavorite()" class="btn btn-danger" v-if="result">
+               <i class="fas fa-thumbs-down"></i>
           </a>
-          <a @click="favorite()" class="btn btn-secondary" v-else>
-               <i class="fas fa-thumbs-up"></i>
+          <a @click="unfavorite()" class="btn btn-secondary" v-else>
+               <i class="fas fa-thumbs-down"></i>
           </a>
           <p>いいね数：{{ count }}</p>
         </div>
@@ -26,12 +26,12 @@ export default {
        }
   },
   mounted() {
-    this.countfavorites();
-    this.hasfavorites();
+    this.countunfavorites();
+    this.hasunfavorites();
   },
   methods: {
-    favorite() {
-      axios.get("/posts/" + this.post.id + "/favorites")
+    unfavorite() {
+      axios.get("/posts/" + this.post.id + "/unfavorites")
       .then(res => {
            this.count = res.data.count;
            this.result = res.data.result;
@@ -39,8 +39,8 @@ export default {
           console.log(error);
         });
     },
-    removefavorite() {
-      axios.get("/posts/" + this.post.id + "/removefavorites")
+    removeunfavorite() {
+      axios.get("/posts/" + this.post.id + "/removeunfavorites")
       .then(res => {
            this.count = res.data.count;
            this.result = res.data.result;
@@ -48,16 +48,16 @@ export default {
           console.log(error);
         });
     },
-    countfavorites() {
-      axios.get("/posts/" + this.post.id + "/countfavorites")
+    countunfavorites() {
+      axios.get("/posts/" + this.post.id + "/countunfavorites")
       .then(res => {
            this.count = res.data;
       }).catch(function (error) {
           console.log(error);
         });
     },
-    hasfavorites() {
-      axios.get('/posts/' + this.post.id+'/hasfavorites')
+    hasunfavorites() {
+      axios.get('/posts/' + this.post.id+'/hasunfavorites')
       .then(res => {
            this.result = res.data;
       }).catch(function (error) {
