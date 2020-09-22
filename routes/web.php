@@ -49,3 +49,6 @@ Route::get('posts/{post}/unfavorites', 'UnfavoriteController@store')->name('unfa
 Route::get('posts/{post}/removeunfavorites', 'UnfavoriteController@destroy')->name('removeunfavorites');
 Route::get('posts/{post}/countunfavorites', 'FavoriteController@count');
 Route::get('posts/{post}/hasunfavorites', 'FavoriteController@hasfavorite');
+
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@send');
