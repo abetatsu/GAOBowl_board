@@ -8,6 +8,8 @@ use App\Post;
 use Auth;
 use Illuminate\Support\Facades\DB;
 use JD\Cloudder\Facades\Cloudder;
+use App\CarbonDate;
+use Carbon\Carbon;
 
 class PostController extends Controller
 {
@@ -27,6 +29,7 @@ class PostController extends Controller
         // $posts = DB::table('posts')->get();
         // $posts = Post::with('user')->get();
         // dd($posts);
+        $CarbonDate = new CarbonDate();
         return view('posts.index', compact('posts'));
     }
 

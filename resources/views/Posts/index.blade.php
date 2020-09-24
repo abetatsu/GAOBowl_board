@@ -21,7 +21,7 @@
           :post="{{ json_encode($post) }}"
      ></dislike-component>
      <div class="card-footer text-muted">
-          投稿日時：{{ $post->created_at }}
+          投稿日時：{{ $post->created_at->diffForHumans(Carbon\Carbon::now()) }}
      </div>
      @endforeach
 </div>
