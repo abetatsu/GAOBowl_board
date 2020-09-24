@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -78,5 +79,4 @@
         </main>
     </div>
 </body>
-
 </html>

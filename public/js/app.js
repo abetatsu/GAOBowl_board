@@ -2007,9 +2007,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  data: function data() {
+    return {
+      list: [],
+      page: 1
+    };
+  },
+  methods: {
+    infiniteHandler: function infiniteHandler($state) {
+      var _this = this;
+
+      this.$http.get('/posts?page=' + this.page).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        $.each(data.data, function (key, value) {
+          _this.list.push(value);
+        });
+        $state.loaded();
+      });
+      this.page = this.page + 1;
+    }
   }
 });
 
@@ -49968,25 +49992,59 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "container", staticStyle: { "margin-top": "50px" } },
+    [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c(
+                "div",
+                [
+                  _vm._l(_vm.list, function(item) {
+                    return _c("p", { key: item.id }, [
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "http://127.0.0.1:8000/post/" + item.slug,
+                            target: "_blank"
+                          }
+                        },
+                        [_vm._v(_vm._s(item.title))]
+                      )
+                    ])
+                  }),
+                  _vm._v(" "),
+                  _c("infinite-loading", {
+                    on: {
+                      distance: function($event) {
+                        1
+                      },
+                      infinite: _vm.infiniteHandler
+                    }
+                  })
+                ],
+                2
+              )
+            ])
+          ])
+        ])
+      ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [_vm._v("GAObowl")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v("\n                    I'm a student.\n                ")
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "card-header" }, [
+      _c("strong", [_vm._v(" Laravel Vue JS Infinite Scroll - codechief.org")])
     ])
   }
 ]

@@ -28,4 +28,5 @@
 <div class="col-md-2">
      <a href="{{ route('posts.create') }}" class="btn btn-primary">新規投稿</a>
 </div>
+
 @endsection

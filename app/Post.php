@@ -28,4 +28,5 @@ class Post extends Model
     {
         return $this->belongsToMany('App\User', 'dislikes')->withTimestamps();
     }
+
 }
