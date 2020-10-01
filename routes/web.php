@@ -52,3 +52,5 @@ Route::get('posts/{post}/hasunfavorites', 'FavoriteController@hasfavorite');
 
 Route::get('/contact', 'ContactController@index');
 Route::post('/contact', 'ContactController@send');
+
+Route::resource('contacts', 'ContactController');

@@ -3,47 +3,94 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use App\Mail\HelloEmail;
 use Mail;
+use Auth;
 
 class ContactController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('contact.index');
+        return view('contacts.index');
     }
 
-    public function send(Request $request)
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-        $rules = [
-            'name' => 'required|max:10',
-            'email' => 'required|email',
-            'message' => 'required|max:1000',
-        ];
+        //
+    }
 
-        $messages = [
-            'name.required' => '名前を入力して下さい。',
-            'name.max' => '名前は10文字以下で入力して下さい。',
-            'email.required' => 'メールアドレスを入力して下さい。',
-            'email.email' => '正しいメールアドレスを入力して下さい。',
-            'message.required' => 'メッセージを入力して下さい。',
-            'message.max' => 'メッセージは1000文字以下で入力して下さい。',
-        ];
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        Mail::send('emails.contact', [
+            'user' => Auth::user(),
+            'contact' => $request->contact,
+        ], function ($message) {
+            $message->to(config('mail.username'))->subject('お問い合わせがありました。');
+        });
+        return redirect()->route('contacts.index');
+    }
 
-        $validator = Validator::make($request->all(), $rules, $messages);
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
-        if ($validator->fails()) {
-            return redirect('/contact')
-                ->withErrors($validator)
-                ->withInput();
-        }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
-        $data = $validator->validate();
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
-        Mail::to('admin@hoge.co.jp')->send(new HelloEmail($data));
-
-        session()->flash('success', '送信いたしました！');
-        return back();
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }

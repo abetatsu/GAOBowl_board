@@ -1,4 +1,3 @@
-<p>名前：{{ $data['name'] }}さん</p>
-<p>メールアドレス：{{ $data['email'] }}</p>
-<p>---以下メッセージが送信されました---</p>
-<p>{!! nl2br( $data['message'] ) !!}</p>
+<p>{{ $user->name }}</p>さんから
+<p>{{ $user->email }}</p>
+<p>{{ $contact }}</p>
