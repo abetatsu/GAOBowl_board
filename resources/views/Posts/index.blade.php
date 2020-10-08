@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<swiper-component
+          :posts="{{ json_encode($posts) }}"
+     ></swiper-component>
 <div class="card text-center">
      <div class="card-header">
           投稿一覧
@@ -10,9 +13,8 @@
           <h5 class="card-title">タイトル：{{ $post->title }}</h5>
           <p class="card-text">内容：{{ $post->body }}</p>
           <p class="card-text">投稿者：{{ $post->user->name }}</p>
+          <img src="{{ $post->image_path }}">
           <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">詳細</a>
-          <div class="row justify-content-center">
-          </div>
      </div>
      <like-component
           :post="{{ json_encode($post) }}"
