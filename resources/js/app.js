@@ -10,7 +10,7 @@ window.Vue = require('vue'); //Vue.jsの読み込み
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'// VueAwesomeSwiperの読み込み
 Vue.use(VueAwesomeSwiper);// Vue.jsで、VueAwesomeSwiperを使うように設定
-
+Vue.use(require('vue-moment'));
 
 /**
  * The following block of code may be used to automatically register your

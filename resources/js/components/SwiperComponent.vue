@@ -1,6 +1,9 @@
 <template>
      <swiper :options="swiperOption" ref="mySwiper1">
-     <swiper-slide v-for="post in posts" :key="post.image_path"><img :src="post.image_path"></swiper-slide>
+     <swiper-slide v-for="post in posts" :key="post.image_path">
+          {{ post.created_at | moment("YYYY年MM月DD日") }}
+          <img :src="post.image_path">
+     </swiper-slide>
      <div class="swiper-pagination"  slot="pagination"></div>
      <div class="swiper-button-prev" slot="button-prev"></div>
      <div class="swiper-button-next" slot="button-next"></div>
@@ -48,6 +51,7 @@ export default {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
                     },
+                    date: this.$moment().format(),
                },
           }
      }
