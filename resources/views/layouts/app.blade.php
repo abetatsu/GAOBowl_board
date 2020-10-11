@@ -73,7 +73,7 @@
                 </div>
             </div>
         </nav>
-
+        <fullcalendar-component></fullcalendar-component>
         <main class="py-4">
             @yield('content')
         </main>

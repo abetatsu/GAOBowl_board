@@ -5,12 +5,15 @@
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue'); //Vue.jsの読み込み
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'// VueAwesomeSwiperの読み込み
+import VCalendar from 'v-calendar';
+import VueStar from 'vue-star'
 Vue.use(VueAwesomeSwiper);// Vue.jsで、VueAwesomeSwiperを使うように設定
 Vue.use(require('vue-moment'));
+Vue.use(VCalendar);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,7 +30,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('like-component', require('./components/LikeComponent.vue').default);
 Vue.component('dislike-component', require('./components/DislikeComponent.vue').default);
 Vue.component('swiper-component', require('./components/SwiperComponent.vue').default);
-
+Vue.component('fullcalendar-component', require('./components/FullcalendarComponent.vue').default);
+Vue.component('vcalendar-component', require('./components/vcalendarComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

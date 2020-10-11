@@ -4,6 +4,7 @@
 <swiper-component
           :posts="{{ json_encode($posts) }}"
      ></swiper-component>
+<vcalendar-component></vcalendar-component>
 <div class="card text-center">
      <div class="card-header">
           投稿一覧
@@ -30,5 +31,4 @@
 <div class="col-md-2">
      <a href="{{ route('posts.create') }}" class="btn btn-primary">新規投稿</a>
 </div>
-
 @endsection

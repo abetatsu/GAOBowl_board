@@ -86,6 +86,13159 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@fullcalendar/core/main.esm.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@fullcalendar/core/main.esm.js ***!
+  \*****************************************************/
+/*! exports provided: Calendar, Component, ComponentContext, DateComponent, DateEnv, DateProfileGenerator, DayHeader, DaySeries, DayTable, ElementDragging, ElementScrollController, EmitterMixin, EventApi, FgEventRenderer, FillRenderer, Interaction, Mixin, NamedTimeZoneImpl, PositionCache, ScrollComponent, ScrollController, Slicer, Splitter, Theme, View, WindowScrollController, addDays, addDurations, addMs, addWeeks, allowContextMenu, allowSelection, appendToElement, applyAll, applyMutationToEventStore, applyStyle, applyStyleProp, asRoughMinutes, asRoughMs, asRoughSeconds, buildGotoAnchorHtml, buildSegCompareObj, capitaliseFirstLetter, combineEventUis, compareByFieldSpec, compareByFieldSpecs, compareNumbers, compensateScroll, computeClippingRect, computeEdges, computeEventDraggable, computeEventEndResizable, computeEventStartResizable, computeFallbackHeaderFormat, computeHeightAndMargins, computeInnerRect, computeRect, computeVisibleDayRange, config, constrainPoint, createDuration, createElement, createEmptyEventStore, createEventInstance, createFormatter, createPlugin, cssToStr, debounce, diffDates, diffDayAndTime, diffDays, diffPoints, diffWeeks, diffWholeDays, diffWholeWeeks, disableCursor, distributeHeight, elementClosest, elementMatches, enableCursor, eventTupleToStore, filterEventStoreDefs, filterHash, findChildren, findElements, flexibleCompare, forceClassName, formatDate, formatIsoTimeString, formatRange, getAllDayHtml, getClippingParents, getDayClasses, getElSeg, getRectCenter, getRelevantEvents, globalDefaults, greatestDurationDenominator, hasBgRendering, htmlEscape, htmlToElement, insertAfterElement, interactionSettingsStore, interactionSettingsToStore, intersectRanges, intersectRects, isArraysEqual, isDateSpansEqual, isInt, isInteractionValid, isMultiDayRange, isPropsEqual, isPropsValid, isSingleDay, isValidDate, listenBySelector, mapHash, matchCellWidths, memoize, memoizeOutput, memoizeRendering, mergeEventStores, multiplyDuration, padStart, parseBusinessHours, parseDragMeta, parseEventDef, parseFieldSpecs, parseMarker, pointInsideRect, prependToElement, preventContextMenu, preventDefault, preventSelection, processScopedUiProps, rangeContainsMarker, rangeContainsRange, rangesEqual, rangesIntersect, refineProps, removeElement, removeExact, renderDateCell, requestJson, sliceEventStore, startOfDay, subtractInnerElHeight, translateRect, uncompensateScroll, undistributeHeight, unpromisify, version, whenTransitionDone, wholeDivideDurations */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Calendar", function() { return Calendar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentContext", function() { return ComponentContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateComponent", function() { return DateComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateEnv", function() { return DateEnv; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateProfileGenerator", function() { return DateProfileGenerator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayHeader", function() { return DayHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DaySeries", function() { return DaySeries; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayTable", function() { return DayTable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementDragging", function() { return ElementDragging; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementScrollController", function() { return ElementScrollController; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmitterMixin", function() { return EmitterMixin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventApi", function() { return EventApi; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FgEventRenderer", function() { return FgEventRenderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FillRenderer", function() { return FillRenderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Interaction", function() { return Interaction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Mixin", function() { return Mixin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NamedTimeZoneImpl", function() { return NamedTimeZoneImpl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PositionCache", function() { return PositionCache; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollComponent", function() { return ScrollComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollController", function() { return ScrollController; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Slicer", function() { return Slicer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Splitter", function() { return Splitter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Theme", function() { return Theme; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View", function() { return View; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WindowScrollController", function() { return WindowScrollController; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addDays", function() { return addDays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addDurations", function() { return addDurations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addMs", function() { return addMs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addWeeks", function() { return addWeeks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allowContextMenu", function() { return allowContextMenu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allowSelection", function() { return allowSelection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendToElement", function() { return appendToElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyAll", function() { return applyAll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMutationToEventStore", function() { return applyMutationToEventStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyStyle", function() { return applyStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyStyleProp", function() { return applyStyleProp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asRoughMinutes", function() { return asRoughMinutes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asRoughMs", function() { return asRoughMs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asRoughSeconds", function() { return asRoughSeconds; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildGotoAnchorHtml", function() { return buildGotoAnchorHtml; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildSegCompareObj", function() { return buildSegCompareObj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "capitaliseFirstLetter", function() { return capitaliseFirstLetter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combineEventUis", function() { return combineEventUis; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpec", function() { return compareByFieldSpec; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpecs", function() { return compareByFieldSpecs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compareNumbers", function() { return compareNumbers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compensateScroll", function() { return compensateScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeClippingRect", function() { return computeClippingRect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEdges", function() { return computeEdges; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEventDraggable", function() { return computeEventDraggable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEventEndResizable", function() { return computeEventEndResizable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEventStartResizable", function() { return computeEventStartResizable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeFallbackHeaderFormat", function() { return computeFallbackHeaderFormat; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeHeightAndMargins", function() { return computeHeightAndMargins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeInnerRect", function() { return computeInnerRect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeRect", function() { return computeRect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeVisibleDayRange", function() { return computeVisibleDayRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "constrainPoint", function() { return constrainPoint; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDuration", function() { return createDuration; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEmptyEventStore", function() { return createEmptyEventStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEventInstance", function() { return createEventInstance; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createFormatter", function() { return createFormatter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPlugin", function() { return createPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cssToStr", function() { return cssToStr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "debounce", function() { return debounce; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffDates", function() { return diffDates; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffDayAndTime", function() { return diffDayAndTime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffDays", function() { return diffDays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffPoints", function() { return diffPoints; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffWeeks", function() { return diffWeeks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffWholeDays", function() { return diffWholeDays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffWholeWeeks", function() { return diffWholeWeeks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableCursor", function() { return disableCursor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "distributeHeight", function() { return distributeHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elementClosest", function() { return elementClosest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elementMatches", function() { return elementMatches; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableCursor", function() { return enableCursor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eventTupleToStore", function() { return eventTupleToStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterEventStoreDefs", function() { return filterEventStoreDefs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterHash", function() { return filterHash; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findChildren", function() { return findChildren; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findElements", function() { return findElements; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "flexibleCompare", function() { return flexibleCompare; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forceClassName", function() { return forceClassName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatIsoTimeString", function() { return formatIsoTimeString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatRange", function() { return formatRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAllDayHtml", function() { return getAllDayHtml; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getClippingParents", function() { return getClippingParents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDayClasses", function() { return getDayClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getElSeg", function() { return getElSeg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRectCenter", function() { return getRectCenter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRelevantEvents", function() { return getRelevantEvents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globalDefaults", function() { return globalDefaults; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "greatestDurationDenominator", function() { return greatestDurationDenominator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasBgRendering", function() { return hasBgRendering; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "htmlEscape", function() { return htmlEscape; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "htmlToElement", function() { return htmlToElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insertAfterElement", function() { return insertAfterElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsStore", function() { return interactionSettingsStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsToStore", function() { return interactionSettingsToStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "intersectRanges", function() { return intersectRanges; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "intersectRects", function() { return intersectRects; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isArraysEqual", function() { return isArraysEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDateSpansEqual", function() { return isDateSpansEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInt", function() { return isInt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInteractionValid", function() { return isInteractionValid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMultiDayRange", function() { return isMultiDayRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPropsEqual", function() { return isPropsEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPropsValid", function() { return isPropsValid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isSingleDay", function() { return isSingleDay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidDate", function() { return isValidDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listenBySelector", function() { return listenBySelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapHash", function() { return mapHash; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matchCellWidths", function() { return matchCellWidths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoize", function() { return memoize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoizeOutput", function() { return memoizeOutput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoizeRendering", function() { return memoizeRendering; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeEventStores", function() { return mergeEventStores; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "multiplyDuration", function() { return multiplyDuration; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "padStart", function() { return padStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseBusinessHours", function() { return parseBusinessHours; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseDragMeta", function() { return parseDragMeta; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseEventDef", function() { return parseEventDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseFieldSpecs", function() { return parseFieldSpecs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseMarker", function() { return parse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pointInsideRect", function() { return pointInsideRect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prependToElement", function() { return prependToElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "preventContextMenu", function() { return preventContextMenu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "preventDefault", function() { return preventDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "preventSelection", function() { return preventSelection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "processScopedUiProps", function() { return processScopedUiProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeContainsMarker", function() { return rangeContainsMarker; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeContainsRange", function() { return rangeContainsRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangesEqual", function() { return rangesEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangesIntersect", function() { return rangesIntersect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "refineProps", function() { return refineProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeElement", function() { return removeElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeExact", function() { return removeExact; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderDateCell", function() { return renderDateCell; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestJson", function() { return requestJson; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliceEventStore", function() { return sliceEventStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startOfDay", function() { return startOfDay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subtractInnerElHeight", function() { return subtractInnerElHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translateRect", function() { return translateRect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uncompensateScroll", function() { return uncompensateScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "undistributeHeight", function() { return undistributeHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unpromisify", function() { return unpromisify; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenTransitionDone", function() { return whenTransitionDone; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wholeDivideDurations", function() { return wholeDivideDurations; });
+/*!
+FullCalendar Core Package v4.4.2
+Docs & License: https://fullcalendar.io/
+(c) 2019 Adam Shaw
+*/
+
+// Creating
+// ----------------------------------------------------------------------------------------------------------------
+var elementPropHash = {
+    className: true,
+    colSpan: true,
+    rowSpan: true
+};
+var containerTagHash = {
+    '<tr': 'tbody',
+    '<td': 'tr'
+};
+function createElement(tagName, attrs, content) {
+    var el = document.createElement(tagName);
+    if (attrs) {
+        for (var attrName in attrs) {
+            if (attrName === 'style') {
+                applyStyle(el, attrs[attrName]);
+            }
+            else if (elementPropHash[attrName]) {
+                el[attrName] = attrs[attrName];
+            }
+            else {
+                el.setAttribute(attrName, attrs[attrName]);
+            }
+        }
+    }
+    if (typeof content === 'string') {
+        el.innerHTML = content; // shortcut. no need to process HTML in any way
+    }
+    else if (content != null) {
+        appendToElement(el, content);
+    }
+    return el;
+}
+function htmlToElement(html) {
+    html = html.trim();
+    var container = document.createElement(computeContainerTag(html));
+    container.innerHTML = html;
+    return container.firstChild;
+}
+function htmlToElements(html) {
+    return Array.prototype.slice.call(htmlToNodeList(html));
+}
+function htmlToNodeList(html) {
+    html = html.trim();
+    var container = document.createElement(computeContainerTag(html));
+    container.innerHTML = html;
+    return container.childNodes;
+}
+// assumes html already trimmed and tag names are lowercase
+function computeContainerTag(html) {
+    return containerTagHash[html.substr(0, 3) // faster than using regex
+    ] || 'div';
+}
+function appendToElement(el, content) {
+    var childNodes = normalizeContent(content);
+    for (var i = 0; i < childNodes.length; i++) {
+        el.appendChild(childNodes[i]);
+    }
+}
+function prependToElement(parent, content) {
+    var newEls = normalizeContent(content);
+    var afterEl = parent.firstChild || null; // if no firstChild, will append to end, but that's okay, b/c there were no children
+    for (var i = 0; i < newEls.length; i++) {
+        parent.insertBefore(newEls[i], afterEl);
+    }
+}
+function insertAfterElement(refEl, content) {
+    var newEls = normalizeContent(content);
+    var afterEl = refEl.nextSibling || null;
+    for (var i = 0; i < newEls.length; i++) {
+        refEl.parentNode.insertBefore(newEls[i], afterEl);
+    }
+}
+function normalizeContent(content) {
+    var els;
+    if (typeof content === 'string') {
+        els = htmlToElements(content);
+    }
+    else if (content instanceof Node) {
+        els = [content];
+    }
+    else { // Node[] or NodeList
+        els = Array.prototype.slice.call(content);
+    }
+    return els;
+}
+function removeElement(el) {
+    if (el.parentNode) {
+        el.parentNode.removeChild(el);
+    }
+}
+// Querying
+// ----------------------------------------------------------------------------------------------------------------
+// from https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+var matchesMethod = Element.prototype.matches ||
+    Element.prototype.matchesSelector ||
+    Element.prototype.msMatchesSelector;
+var closestMethod = Element.prototype.closest || function (selector) {
+    // polyfill
+    var el = this;
+    if (!document.documentElement.contains(el)) {
+        return null;
+    }
+    do {
+        if (elementMatches(el, selector)) {
+            return el;
+        }
+        el = el.parentElement || el.parentNode;
+    } while (el !== null && el.nodeType === 1);
+    return null;
+};
+function elementClosest(el, selector) {
+    return closestMethod.call(el, selector);
+}
+function elementMatches(el, selector) {
+    return matchesMethod.call(el, selector);
+}
+// accepts multiple subject els
+// returns a real array. good for methods like forEach
+function findElements(container, selector) {
+    var containers = container instanceof HTMLElement ? [container] : container;
+    var allMatches = [];
+    for (var i = 0; i < containers.length; i++) {
+        var matches = containers[i].querySelectorAll(selector);
+        for (var j = 0; j < matches.length; j++) {
+            allMatches.push(matches[j]);
+        }
+    }
+    return allMatches;
+}
+// accepts multiple subject els
+// only queries direct child elements
+function findChildren(parent, selector) {
+    var parents = parent instanceof HTMLElement ? [parent] : parent;
+    var allMatches = [];
+    for (var i = 0; i < parents.length; i++) {
+        var childNodes = parents[i].children; // only ever elements
+        for (var j = 0; j < childNodes.length; j++) {
+            var childNode = childNodes[j];
+            if (!selector || elementMatches(childNode, selector)) {
+                allMatches.push(childNode);
+            }
+        }
+    }
+    return allMatches;
+}
+// Attributes
+// ----------------------------------------------------------------------------------------------------------------
+function forceClassName(el, className, bool) {
+    if (bool) {
+        el.classList.add(className);
+    }
+    else {
+        el.classList.remove(className);
+    }
+}
+// Style
+// ----------------------------------------------------------------------------------------------------------------
+var PIXEL_PROP_RE = /(top|left|right|bottom|width|height)$/i;
+function applyStyle(el, props) {
+    for (var propName in props) {
+        applyStyleProp(el, propName, props[propName]);
+    }
+}
+function applyStyleProp(el, name, val) {
+    if (val == null) {
+        el.style[name] = '';
+    }
+    else if (typeof val === 'number' && PIXEL_PROP_RE.test(name)) {
+        el.style[name] = val + 'px';
+    }
+    else {
+        el.style[name] = val;
+    }
+}
+
+function pointInsideRect(point, rect) {
+    return point.left >= rect.left &&
+        point.left < rect.right &&
+        point.top >= rect.top &&
+        point.top < rect.bottom;
+}
+// Returns a new rectangle that is the intersection of the two rectangles. If they don't intersect, returns false
+function intersectRects(rect1, rect2) {
+    var res = {
+        left: Math.max(rect1.left, rect2.left),
+        right: Math.min(rect1.right, rect2.right),
+        top: Math.max(rect1.top, rect2.top),
+        bottom: Math.min(rect1.bottom, rect2.bottom)
+    };
+    if (res.left < res.right && res.top < res.bottom) {
+        return res;
+    }
+    return false;
+}
+function translateRect(rect, deltaX, deltaY) {
+    return {
+        left: rect.left + deltaX,
+        right: rect.right + deltaX,
+        top: rect.top + deltaY,
+        bottom: rect.bottom + deltaY
+    };
+}
+// Returns a new point that will have been moved to reside within the given rectangle
+function constrainPoint(point, rect) {
+    return {
+        left: Math.min(Math.max(point.left, rect.left), rect.right),
+        top: Math.min(Math.max(point.top, rect.top), rect.bottom)
+    };
+}
+// Returns a point that is the center of the given rectangle
+function getRectCenter(rect) {
+    return {
+        left: (rect.left + rect.right) / 2,
+        top: (rect.top + rect.bottom) / 2
+    };
+}
+// Subtracts point2's coordinates from point1's coordinates, returning a delta
+function diffPoints(point1, point2) {
+    return {
+        left: point1.left - point2.left,
+        top: point1.top - point2.top
+    };
+}
+
+// Logic for determining if, when the element is right-to-left, the scrollbar appears on the left side
+var isRtlScrollbarOnLeft = null;
+function getIsRtlScrollbarOnLeft() {
+    if (isRtlScrollbarOnLeft === null) {
+        isRtlScrollbarOnLeft = computeIsRtlScrollbarOnLeft();
+    }
+    return isRtlScrollbarOnLeft;
+}
+function computeIsRtlScrollbarOnLeft() {
+    var outerEl = createElement('div', {
+        style: {
+            position: 'absolute',
+            top: -1000,
+            left: 0,
+            border: 0,
+            padding: 0,
+            overflow: 'scroll',
+            direction: 'rtl'
+        }
+    }, '<div></div>');
+    document.body.appendChild(outerEl);
+    var innerEl = outerEl.firstChild;
+    var res = innerEl.getBoundingClientRect().left > outerEl.getBoundingClientRect().left;
+    removeElement(outerEl);
+    return res;
+}
+// The scrollbar width computations in computeEdges are sometimes flawed when it comes to
+// retina displays, rounding, and IE11. Massage them into a usable value.
+function sanitizeScrollbarWidth(width) {
+    width = Math.max(0, width); // no negatives
+    width = Math.round(width);
+    return width;
+}
+
+function computeEdges(el, getPadding) {
+    if (getPadding === void 0) { getPadding = false; }
+    var computedStyle = window.getComputedStyle(el);
+    var borderLeft = parseInt(computedStyle.borderLeftWidth, 10) || 0;
+    var borderRight = parseInt(computedStyle.borderRightWidth, 10) || 0;
+    var borderTop = parseInt(computedStyle.borderTopWidth, 10) || 0;
+    var borderBottom = parseInt(computedStyle.borderBottomWidth, 10) || 0;
+    // must use offset(Width|Height) because compatible with client(Width|Height)
+    var scrollbarLeftRight = sanitizeScrollbarWidth(el.offsetWidth - el.clientWidth - borderLeft - borderRight);
+    var scrollbarBottom = sanitizeScrollbarWidth(el.offsetHeight - el.clientHeight - borderTop - borderBottom);
+    var res = {
+        borderLeft: borderLeft,
+        borderRight: borderRight,
+        borderTop: borderTop,
+        borderBottom: borderBottom,
+        scrollbarBottom: scrollbarBottom,
+        scrollbarLeft: 0,
+        scrollbarRight: 0
+    };
+    if (getIsRtlScrollbarOnLeft() && computedStyle.direction === 'rtl') { // is the scrollbar on the left side?
+        res.scrollbarLeft = scrollbarLeftRight;
+    }
+    else {
+        res.scrollbarRight = scrollbarLeftRight;
+    }
+    if (getPadding) {
+        res.paddingLeft = parseInt(computedStyle.paddingLeft, 10) || 0;
+        res.paddingRight = parseInt(computedStyle.paddingRight, 10) || 0;
+        res.paddingTop = parseInt(computedStyle.paddingTop, 10) || 0;
+        res.paddingBottom = parseInt(computedStyle.paddingBottom, 10) || 0;
+    }
+    return res;
+}
+function computeInnerRect(el, goWithinPadding) {
+    if (goWithinPadding === void 0) { goWithinPadding = false; }
+    var outerRect = computeRect(el);
+    var edges = computeEdges(el, goWithinPadding);
+    var res = {
+        left: outerRect.left + edges.borderLeft + edges.scrollbarLeft,
+        right: outerRect.right - edges.borderRight - edges.scrollbarRight,
+        top: outerRect.top + edges.borderTop,
+        bottom: outerRect.bottom - edges.borderBottom - edges.scrollbarBottom
+    };
+    if (goWithinPadding) {
+        res.left += edges.paddingLeft;
+        res.right -= edges.paddingRight;
+        res.top += edges.paddingTop;
+        res.bottom -= edges.paddingBottom;
+    }
+    return res;
+}
+function computeRect(el) {
+    var rect = el.getBoundingClientRect();
+    return {
+        left: rect.left + window.pageXOffset,
+        top: rect.top + window.pageYOffset,
+        right: rect.right + window.pageXOffset,
+        bottom: rect.bottom + window.pageYOffset
+    };
+}
+function computeViewportRect() {
+    return {
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        top: window.pageYOffset,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+    };
+}
+function computeHeightAndMargins(el) {
+    return el.getBoundingClientRect().height + computeVMargins(el);
+}
+function computeVMargins(el) {
+    var computed = window.getComputedStyle(el);
+    return parseInt(computed.marginTop, 10) +
+        parseInt(computed.marginBottom, 10);
+}
+// does not return window
+function getClippingParents(el) {
+    var parents = [];
+    while (el instanceof HTMLElement) { // will stop when gets to document or null
+        var computedStyle = window.getComputedStyle(el);
+        if (computedStyle.position === 'fixed') {
+            break;
+        }
+        if ((/(auto|scroll)/).test(computedStyle.overflow + computedStyle.overflowY + computedStyle.overflowX)) {
+            parents.push(el);
+        }
+        el = el.parentNode;
+    }
+    return parents;
+}
+function computeClippingRect(el) {
+    return getClippingParents(el)
+        .map(function (el) {
+        return computeInnerRect(el);
+    })
+        .concat(computeViewportRect())
+        .reduce(function (rect0, rect1) {
+        return intersectRects(rect0, rect1) || rect1; // should always intersect
+    });
+}
+
+// Stops a mouse/touch event from doing it's native browser action
+function preventDefault(ev) {
+    ev.preventDefault();
+}
+// Event Delegation
+// ----------------------------------------------------------------------------------------------------------------
+function listenBySelector(container, eventType, selector, handler) {
+    function realHandler(ev) {
+        var matchedChild = elementClosest(ev.target, selector);
+        if (matchedChild) {
+            handler.call(matchedChild, ev, matchedChild);
+        }
+    }
+    container.addEventListener(eventType, realHandler);
+    return function () {
+        container.removeEventListener(eventType, realHandler);
+    };
+}
+function listenToHoverBySelector(container, selector, onMouseEnter, onMouseLeave) {
+    var currentMatchedChild;
+    return listenBySelector(container, 'mouseover', selector, function (ev, matchedChild) {
+        if (matchedChild !== currentMatchedChild) {
+            currentMatchedChild = matchedChild;
+            onMouseEnter(ev, matchedChild);
+            var realOnMouseLeave_1 = function (ev) {
+                currentMatchedChild = null;
+                onMouseLeave(ev, matchedChild);
+                matchedChild.removeEventListener('mouseleave', realOnMouseLeave_1);
+            };
+            // listen to the next mouseleave, and then unattach
+            matchedChild.addEventListener('mouseleave', realOnMouseLeave_1);
+        }
+    });
+}
+// Animation
+// ----------------------------------------------------------------------------------------------------------------
+var transitionEventNames = [
+    'webkitTransitionEnd',
+    'otransitionend',
+    'oTransitionEnd',
+    'msTransitionEnd',
+    'transitionend'
+];
+// triggered only when the next single subsequent transition finishes
+function whenTransitionDone(el, callback) {
+    var realCallback = function (ev) {
+        callback(ev);
+        transitionEventNames.forEach(function (eventName) {
+            el.removeEventListener(eventName, realCallback);
+        });
+    };
+    transitionEventNames.forEach(function (eventName) {
+        el.addEventListener(eventName, realCallback); // cross-browser way to determine when the transition finishes
+    });
+}
+
+var DAY_IDS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+// Adding
+function addWeeks(m, n) {
+    var a = dateToUtcArray(m);
+    a[2] += n * 7;
+    return arrayToUtcDate(a);
+}
+function addDays(m, n) {
+    var a = dateToUtcArray(m);
+    a[2] += n;
+    return arrayToUtcDate(a);
+}
+function addMs(m, n) {
+    var a = dateToUtcArray(m);
+    a[6] += n;
+    return arrayToUtcDate(a);
+}
+// Diffing (all return floats)
+function diffWeeks(m0, m1) {
+    return diffDays(m0, m1) / 7;
+}
+function diffDays(m0, m1) {
+    return (m1.valueOf() - m0.valueOf()) / (1000 * 60 * 60 * 24);
+}
+function diffHours(m0, m1) {
+    return (m1.valueOf() - m0.valueOf()) / (1000 * 60 * 60);
+}
+function diffMinutes(m0, m1) {
+    return (m1.valueOf() - m0.valueOf()) / (1000 * 60);
+}
+function diffSeconds(m0, m1) {
+    return (m1.valueOf() - m0.valueOf()) / 1000;
+}
+function diffDayAndTime(m0, m1) {
+    var m0day = startOfDay(m0);
+    var m1day = startOfDay(m1);
+    return {
+        years: 0,
+        months: 0,
+        days: Math.round(diffDays(m0day, m1day)),
+        milliseconds: (m1.valueOf() - m1day.valueOf()) - (m0.valueOf() - m0day.valueOf())
+    };
+}
+// Diffing Whole Units
+function diffWholeWeeks(m0, m1) {
+    var d = diffWholeDays(m0, m1);
+    if (d !== null && d % 7 === 0) {
+        return d / 7;
+    }
+    return null;
+}
+function diffWholeDays(m0, m1) {
+    if (timeAsMs(m0) === timeAsMs(m1)) {
+        return Math.round(diffDays(m0, m1));
+    }
+    return null;
+}
+// Start-Of
+function startOfDay(m) {
+    return arrayToUtcDate([
+        m.getUTCFullYear(),
+        m.getUTCMonth(),
+        m.getUTCDate()
+    ]);
+}
+function startOfHour(m) {
+    return arrayToUtcDate([
+        m.getUTCFullYear(),
+        m.getUTCMonth(),
+        m.getUTCDate(),
+        m.getUTCHours()
+    ]);
+}
+function startOfMinute(m) {
+    return arrayToUtcDate([
+        m.getUTCFullYear(),
+        m.getUTCMonth(),
+        m.getUTCDate(),
+        m.getUTCHours(),
+        m.getUTCMinutes()
+    ]);
+}
+function startOfSecond(m) {
+    return arrayToUtcDate([
+        m.getUTCFullYear(),
+        m.getUTCMonth(),
+        m.getUTCDate(),
+        m.getUTCHours(),
+        m.getUTCMinutes(),
+        m.getUTCSeconds()
+    ]);
+}
+// Week Computation
+function weekOfYear(marker, dow, doy) {
+    var y = marker.getUTCFullYear();
+    var w = weekOfGivenYear(marker, y, dow, doy);
+    if (w < 1) {
+        return weekOfGivenYear(marker, y - 1, dow, doy);
+    }
+    var nextW = weekOfGivenYear(marker, y + 1, dow, doy);
+    if (nextW >= 1) {
+        return Math.min(w, nextW);
+    }
+    return w;
+}
+function weekOfGivenYear(marker, year, dow, doy) {
+    var firstWeekStart = arrayToUtcDate([year, 0, 1 + firstWeekOffset(year, dow, doy)]);
+    var dayStart = startOfDay(marker);
+    var days = Math.round(diffDays(firstWeekStart, dayStart));
+    return Math.floor(days / 7) + 1; // zero-indexed
+}
+// start-of-first-week - start-of-year
+function firstWeekOffset(year, dow, doy) {
+    // first-week day -- which january is always in the first week (4 for iso, 1 for other)
+    var fwd = 7 + dow - doy;
+    // first-week day local weekday -- which local weekday is fwd
+    var fwdlw = (7 + arrayToUtcDate([year, 0, fwd]).getUTCDay() - dow) % 7;
+    return -fwdlw + fwd - 1;
+}
+// Array Conversion
+function dateToLocalArray(date) {
+    return [
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate(),
+        date.getHours(),
+        date.getMinutes(),
+        date.getSeconds(),
+        date.getMilliseconds()
+    ];
+}
+function arrayToLocalDate(a) {
+    return new Date(a[0], a[1] || 0, a[2] == null ? 1 : a[2], // day of month
+    a[3] || 0, a[4] || 0, a[5] || 0);
+}
+function dateToUtcArray(date) {
+    return [
+        date.getUTCFullYear(),
+        date.getUTCMonth(),
+        date.getUTCDate(),
+        date.getUTCHours(),
+        date.getUTCMinutes(),
+        date.getUTCSeconds(),
+        date.getUTCMilliseconds()
+    ];
+}
+function arrayToUtcDate(a) {
+    // according to web standards (and Safari), a month index is required.
+    // massage if only given a year.
+    if (a.length === 1) {
+        a = a.concat([0]);
+    }
+    return new Date(Date.UTC.apply(Date, a));
+}
+// Other Utils
+function isValidDate(m) {
+    return !isNaN(m.valueOf());
+}
+function timeAsMs(m) {
+    return m.getUTCHours() * 1000 * 60 * 60 +
+        m.getUTCMinutes() * 1000 * 60 +
+        m.getUTCSeconds() * 1000 +
+        m.getUTCMilliseconds();
+}
+
+var INTERNAL_UNITS = ['years', 'months', 'days', 'milliseconds'];
+var PARSE_RE = /^(-?)(?:(\d+)\.)?(\d+):(\d\d)(?::(\d\d)(?:\.(\d\d\d))?)?/;
+// Parsing and Creation
+function createDuration(input, unit) {
+    var _a;
+    if (typeof input === 'string') {
+        return parseString(input);
+    }
+    else if (typeof input === 'object' && input) { // non-null object
+        return normalizeObject(input);
+    }
+    else if (typeof input === 'number') {
+        return normalizeObject((_a = {}, _a[unit || 'milliseconds'] = input, _a));
+    }
+    else {
+        return null;
+    }
+}
+function parseString(s) {
+    var m = PARSE_RE.exec(s);
+    if (m) {
+        var sign = m[1] ? -1 : 1;
+        return {
+            years: 0,
+            months: 0,
+            days: sign * (m[2] ? parseInt(m[2], 10) : 0),
+            milliseconds: sign * ((m[3] ? parseInt(m[3], 10) : 0) * 60 * 60 * 1000 + // hours
+                (m[4] ? parseInt(m[4], 10) : 0) * 60 * 1000 + // minutes
+                (m[5] ? parseInt(m[5], 10) : 0) * 1000 + // seconds
+                (m[6] ? parseInt(m[6], 10) : 0) // ms
+            )
+        };
+    }
+    return null;
+}
+function normalizeObject(obj) {
+    return {
+        years: obj.years || obj.year || 0,
+        months: obj.months || obj.month || 0,
+        days: (obj.days || obj.day || 0) +
+            getWeeksFromInput(obj) * 7,
+        milliseconds: (obj.hours || obj.hour || 0) * 60 * 60 * 1000 + // hours
+            (obj.minutes || obj.minute || 0) * 60 * 1000 + // minutes
+            (obj.seconds || obj.second || 0) * 1000 + // seconds
+            (obj.milliseconds || obj.millisecond || obj.ms || 0) // ms
+    };
+}
+function getWeeksFromInput(obj) {
+    return obj.weeks || obj.week || 0;
+}
+// Equality
+function durationsEqual(d0, d1) {
+    return d0.years === d1.years &&
+        d0.months === d1.months &&
+        d0.days === d1.days &&
+        d0.milliseconds === d1.milliseconds;
+}
+function isSingleDay(dur) {
+    return dur.years === 0 && dur.months === 0 && dur.days === 1 && dur.milliseconds === 0;
+}
+// Simple Math
+function addDurations(d0, d1) {
+    return {
+        years: d0.years + d1.years,
+        months: d0.months + d1.months,
+        days: d0.days + d1.days,
+        milliseconds: d0.milliseconds + d1.milliseconds
+    };
+}
+function subtractDurations(d1, d0) {
+    return {
+        years: d1.years - d0.years,
+        months: d1.months - d0.months,
+        days: d1.days - d0.days,
+        milliseconds: d1.milliseconds - d0.milliseconds
+    };
+}
+function multiplyDuration(d, n) {
+    return {
+        years: d.years * n,
+        months: d.months * n,
+        days: d.days * n,
+        milliseconds: d.milliseconds * n
+    };
+}
+// Conversions
+// "Rough" because they are based on average-case Gregorian months/years
+function asRoughYears(dur) {
+    return asRoughDays(dur) / 365;
+}
+function asRoughMonths(dur) {
+    return asRoughDays(dur) / 30;
+}
+function asRoughDays(dur) {
+    return asRoughMs(dur) / 864e5;
+}
+function asRoughMinutes(dur) {
+    return asRoughMs(dur) / (1000 * 60);
+}
+function asRoughSeconds(dur) {
+    return asRoughMs(dur) / 1000;
+}
+function asRoughMs(dur) {
+    return dur.years * (365 * 864e5) +
+        dur.months * (30 * 864e5) +
+        dur.days * 864e5 +
+        dur.milliseconds;
+}
+// Advanced Math
+function wholeDivideDurations(numerator, denominator) {
+    var res = null;
+    for (var i = 0; i < INTERNAL_UNITS.length; i++) {
+        var unit = INTERNAL_UNITS[i];
+        if (denominator[unit]) {
+            var localRes = numerator[unit] / denominator[unit];
+            if (!isInt(localRes) || (res !== null && res !== localRes)) {
+                return null;
+            }
+            res = localRes;
+        }
+        else if (numerator[unit]) {
+            // needs to divide by something but can't!
+            return null;
+        }
+    }
+    return res;
+}
+function greatestDurationDenominator(dur, dontReturnWeeks) {
+    var ms = dur.milliseconds;
+    if (ms) {
+        if (ms % 1000 !== 0) {
+            return { unit: 'millisecond', value: ms };
+        }
+        if (ms % (1000 * 60) !== 0) {
+            return { unit: 'second', value: ms / 1000 };
+        }
+        if (ms % (1000 * 60 * 60) !== 0) {
+            return { unit: 'minute', value: ms / (1000 * 60) };
+        }
+        if (ms) {
+            return { unit: 'hour', value: ms / (1000 * 60 * 60) };
+        }
+    }
+    if (dur.days) {
+        if (!dontReturnWeeks && dur.days % 7 === 0) {
+            return { unit: 'week', value: dur.days / 7 };
+        }
+        return { unit: 'day', value: dur.days };
+    }
+    if (dur.months) {
+        return { unit: 'month', value: dur.months };
+    }
+    if (dur.years) {
+        return { unit: 'year', value: dur.years };
+    }
+    return { unit: 'millisecond', value: 0 };
+}
+
+/* FullCalendar-specific DOM Utilities
+----------------------------------------------------------------------------------------------------------------------*/
+// Given the scrollbar widths of some other container, create borders/margins on rowEls in order to match the left
+// and right space that was offset by the scrollbars. A 1-pixel border first, then margin beyond that.
+function compensateScroll(rowEl, scrollbarWidths) {
+    if (scrollbarWidths.left) {
+        applyStyle(rowEl, {
+            borderLeftWidth: 1,
+            marginLeft: scrollbarWidths.left - 1
+        });
+    }
+    if (scrollbarWidths.right) {
+        applyStyle(rowEl, {
+            borderRightWidth: 1,
+            marginRight: scrollbarWidths.right - 1
+        });
+    }
+}
+// Undoes compensateScroll and restores all borders/margins
+function uncompensateScroll(rowEl) {
+    applyStyle(rowEl, {
+        marginLeft: '',
+        marginRight: '',
+        borderLeftWidth: '',
+        borderRightWidth: ''
+    });
+}
+// Make the mouse cursor express that an event is not allowed in the current area
+function disableCursor() {
+    document.body.classList.add('fc-not-allowed');
+}
+// Returns the mouse cursor to its original look
+function enableCursor() {
+    document.body.classList.remove('fc-not-allowed');
+}
+// Given a total available height to fill, have `els` (essentially child rows) expand to accomodate.
+// By default, all elements that are shorter than the recommended height are expanded uniformly, not considering
+// any other els that are already too tall. if `shouldRedistribute` is on, it considers these tall rows and
+// reduces the available height.
+function distributeHeight(els, availableHeight, shouldRedistribute) {
+    // *FLOORING NOTE*: we floor in certain places because zoom can give inaccurate floating-point dimensions,
+    // and it is better to be shorter than taller, to avoid creating unnecessary scrollbars.
+    var minOffset1 = Math.floor(availableHeight / els.length); // for non-last element
+    var minOffset2 = Math.floor(availableHeight - minOffset1 * (els.length - 1)); // for last element *FLOORING NOTE*
+    var flexEls = []; // elements that are allowed to expand. array of DOM nodes
+    var flexOffsets = []; // amount of vertical space it takes up
+    var flexHeights = []; // actual css height
+    var usedHeight = 0;
+    undistributeHeight(els); // give all elements their natural height
+    // find elements that are below the recommended height (expandable).
+    // important to query for heights in a single first pass (to avoid reflow oscillation).
+    els.forEach(function (el, i) {
+        var minOffset = i === els.length - 1 ? minOffset2 : minOffset1;
+        var naturalHeight = el.getBoundingClientRect().height;
+        var naturalOffset = naturalHeight + computeVMargins(el);
+        if (naturalOffset < minOffset) {
+            flexEls.push(el);
+            flexOffsets.push(naturalOffset);
+            flexHeights.push(naturalHeight);
+        }
+        else {
+            // this element stretches past recommended height (non-expandable). mark the space as occupied.
+            usedHeight += naturalOffset;
+        }
+    });
+    // readjust the recommended height to only consider the height available to non-maxed-out rows.
+    if (shouldRedistribute) {
+        availableHeight -= usedHeight;
+        minOffset1 = Math.floor(availableHeight / flexEls.length);
+        minOffset2 = Math.floor(availableHeight - minOffset1 * (flexEls.length - 1)); // *FLOORING NOTE*
+    }
+    // assign heights to all expandable elements
+    flexEls.forEach(function (el, i) {
+        var minOffset = i === flexEls.length - 1 ? minOffset2 : minOffset1;
+        var naturalOffset = flexOffsets[i];
+        var naturalHeight = flexHeights[i];
+        var newHeight = minOffset - (naturalOffset - naturalHeight); // subtract the margin/padding
+        if (naturalOffset < minOffset) { // we check this again because redistribution might have changed things
+            el.style.height = newHeight + 'px';
+        }
+    });
+}
+// Undoes distrubuteHeight, restoring all els to their natural height
+function undistributeHeight(els) {
+    els.forEach(function (el) {
+        el.style.height = '';
+    });
+}
+// Given `els`, a set of <td> cells, find the cell with the largest natural width and set the widths of all the
+// cells to be that width.
+// PREREQUISITE: if you want a cell to take up width, it needs to have a single inner element w/ display:inline
+function matchCellWidths(els) {
+    var maxInnerWidth = 0;
+    els.forEach(function (el) {
+        var innerEl = el.firstChild; // hopefully an element
+        if (innerEl instanceof HTMLElement) {
+            var innerWidth_1 = innerEl.getBoundingClientRect().width;
+            if (innerWidth_1 > maxInnerWidth) {
+                maxInnerWidth = innerWidth_1;
+            }
+        }
+    });
+    maxInnerWidth++; // sometimes not accurate of width the text needs to stay on one line. insurance
+    els.forEach(function (el) {
+        el.style.width = maxInnerWidth + 'px';
+    });
+    return maxInnerWidth;
+}
+// Given one element that resides inside another,
+// Subtracts the height of the inner element from the outer element.
+function subtractInnerElHeight(outerEl, innerEl) {
+    // effin' IE8/9/10/11 sometimes returns 0 for dimensions. this weird hack was the only thing that worked
+    var reflowStyleProps = {
+        position: 'relative',
+        left: -1 // ensure reflow in case the el was already relative. negative is less likely to cause new scroll
+    };
+    applyStyle(outerEl, reflowStyleProps);
+    applyStyle(innerEl, reflowStyleProps);
+    var diff = // grab the dimensions
+     outerEl.getBoundingClientRect().height -
+        innerEl.getBoundingClientRect().height;
+    // undo hack
+    var resetStyleProps = { position: '', left: '' };
+    applyStyle(outerEl, resetStyleProps);
+    applyStyle(innerEl, resetStyleProps);
+    return diff;
+}
+/* Selection
+----------------------------------------------------------------------------------------------------------------------*/
+function preventSelection(el) {
+    el.classList.add('fc-unselectable');
+    el.addEventListener('selectstart', preventDefault);
+}
+function allowSelection(el) {
+    el.classList.remove('fc-unselectable');
+    el.removeEventListener('selectstart', preventDefault);
+}
+/* Context Menu
+----------------------------------------------------------------------------------------------------------------------*/
+function preventContextMenu(el) {
+    el.addEventListener('contextmenu', preventDefault);
+}
+function allowContextMenu(el) {
+    el.removeEventListener('contextmenu', preventDefault);
+}
+/* Object Ordering by Field
+----------------------------------------------------------------------------------------------------------------------*/
+function parseFieldSpecs(input) {
+    var specs = [];
+    var tokens = [];
+    var i;
+    var token;
+    if (typeof input === 'string') {
+        tokens = input.split(/\s*,\s*/);
+    }
+    else if (typeof input === 'function') {
+        tokens = [input];
+    }
+    else if (Array.isArray(input)) {
+        tokens = input;
+    }
+    for (i = 0; i < tokens.length; i++) {
+        token = tokens[i];
+        if (typeof token === 'string') {
+            specs.push(token.charAt(0) === '-' ?
+                { field: token.substring(1), order: -1 } :
+                { field: token, order: 1 });
+        }
+        else if (typeof token === 'function') {
+            specs.push({ func: token });
+        }
+    }
+    return specs;
+}
+function compareByFieldSpecs(obj0, obj1, fieldSpecs) {
+    var i;
+    var cmp;
+    for (i = 0; i < fieldSpecs.length; i++) {
+        cmp = compareByFieldSpec(obj0, obj1, fieldSpecs[i]);
+        if (cmp) {
+            return cmp;
+        }
+    }
+    return 0;
+}
+function compareByFieldSpec(obj0, obj1, fieldSpec) {
+    if (fieldSpec.func) {
+        return fieldSpec.func(obj0, obj1);
+    }
+    return flexibleCompare(obj0[fieldSpec.field], obj1[fieldSpec.field])
+        * (fieldSpec.order || 1);
+}
+function flexibleCompare(a, b) {
+    if (!a && !b) {
+        return 0;
+    }
+    if (b == null) {
+        return -1;
+    }
+    if (a == null) {
+        return 1;
+    }
+    if (typeof a === 'string' || typeof b === 'string') {
+        return String(a).localeCompare(String(b));
+    }
+    return a - b;
+}
+/* String Utilities
+----------------------------------------------------------------------------------------------------------------------*/
+function capitaliseFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+function padStart(val, len) {
+    var s = String(val);
+    return '000'.substr(0, len - s.length) + s;
+}
+/* Number Utilities
+----------------------------------------------------------------------------------------------------------------------*/
+function compareNumbers(a, b) {
+    return a - b;
+}
+function isInt(n) {
+    return n % 1 === 0;
+}
+/* Weird Utilities
+----------------------------------------------------------------------------------------------------------------------*/
+function applyAll(functions, thisObj, args) {
+    if (typeof functions === 'function') { // supplied a single function
+        functions = [functions];
+    }
+    if (functions) {
+        var i = void 0;
+        var ret = void 0;
+        for (i = 0; i < functions.length; i++) {
+            ret = functions[i].apply(thisObj, args) || ret;
+        }
+        return ret;
+    }
+}
+function firstDefined() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    for (var i = 0; i < args.length; i++) {
+        if (args[i] !== undefined) {
+            return args[i];
+        }
+    }
+}
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+// https://github.com/jashkenas/underscore/blob/1.6.0/underscore.js#L714
+function debounce(func, wait) {
+    var timeout;
+    var args;
+    var context;
+    var timestamp;
+    var result;
+    var later = function () {
+        var last = new Date().valueOf() - timestamp;
+        if (last < wait) {
+            timeout = setTimeout(later, wait - last);
+        }
+        else {
+            timeout = null;
+            result = func.apply(context, args);
+            context = args = null;
+        }
+    };
+    return function () {
+        context = this;
+        args = arguments;
+        timestamp = new Date().valueOf();
+        if (!timeout) {
+            timeout = setTimeout(later, wait);
+        }
+        return result;
+    };
+}
+// Number and Boolean are only types that defaults or not computed for
+// TODO: write more comments
+function refineProps(rawProps, processors, defaults, leftoverProps) {
+    if (defaults === void 0) { defaults = {}; }
+    var refined = {};
+    for (var key in processors) {
+        var processor = processors[key];
+        if (rawProps[key] !== undefined) {
+            // found
+            if (processor === Function) {
+                refined[key] = typeof rawProps[key] === 'function' ? rawProps[key] : null;
+            }
+            else if (processor) { // a refining function?
+                refined[key] = processor(rawProps[key]);
+            }
+            else {
+                refined[key] = rawProps[key];
+            }
+        }
+        else if (defaults[key] !== undefined) {
+            // there's an explicit default
+            refined[key] = defaults[key];
+        }
+        else {
+            // must compute a default
+            if (processor === String) {
+                refined[key] = ''; // empty string is default for String
+            }
+            else if (!processor || processor === Number || processor === Boolean || processor === Function) {
+                refined[key] = null; // assign null for other non-custom processor funcs
+            }
+            else {
+                refined[key] = processor(null); // run the custom processor func
+            }
+        }
+    }
+    if (leftoverProps) {
+        for (var key in rawProps) {
+            if (processors[key] === undefined) {
+                leftoverProps[key] = rawProps[key];
+            }
+        }
+    }
+    return refined;
+}
+/* Date stuff that doesn't belong in datelib core
+----------------------------------------------------------------------------------------------------------------------*/
+// given a timed range, computes an all-day range that has the same exact duration,
+// but whose start time is aligned with the start of the day.
+function computeAlignedDayRange(timedRange) {
+    var dayCnt = Math.floor(diffDays(timedRange.start, timedRange.end)) || 1;
+    var start = startOfDay(timedRange.start);
+    var end = addDays(start, dayCnt);
+    return { start: start, end: end };
+}
+// given a timed range, computes an all-day range based on how for the end date bleeds into the next day
+// TODO: give nextDayThreshold a default arg
+function computeVisibleDayRange(timedRange, nextDayThreshold) {
+    if (nextDayThreshold === void 0) { nextDayThreshold = createDuration(0); }
+    var startDay = null;
+    var endDay = null;
+    if (timedRange.end) {
+        endDay = startOfDay(timedRange.end);
+        var endTimeMS = timedRange.end.valueOf() - endDay.valueOf(); // # of milliseconds into `endDay`
+        // If the end time is actually inclusively part of the next day and is equal to or
+        // beyond the next day threshold, adjust the end to be the exclusive end of `endDay`.
+        // Otherwise, leaving it as inclusive will cause it to exclude `endDay`.
+        if (endTimeMS && endTimeMS >= asRoughMs(nextDayThreshold)) {
+            endDay = addDays(endDay, 1);
+        }
+    }
+    if (timedRange.start) {
+        startDay = startOfDay(timedRange.start); // the beginning of the day the range starts
+        // If end is within `startDay` but not past nextDayThreshold, assign the default duration of one day.
+        if (endDay && endDay <= startDay) {
+            endDay = addDays(startDay, 1);
+        }
+    }
+    return { start: startDay, end: endDay };
+}
+// spans from one day into another?
+function isMultiDayRange(range) {
+    var visibleRange = computeVisibleDayRange(range);
+    return diffDays(visibleRange.start, visibleRange.end) > 1;
+}
+function diffDates(date0, date1, dateEnv, largeUnit) {
+    if (largeUnit === 'year') {
+        return createDuration(dateEnv.diffWholeYears(date0, date1), 'year');
+    }
+    else if (largeUnit === 'month') {
+        return createDuration(dateEnv.diffWholeMonths(date0, date1), 'month');
+    }
+    else {
+        return diffDayAndTime(date0, date1); // returns a duration
+    }
+}
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function parseRecurring(eventInput, allDayDefault, dateEnv, recurringTypes, leftovers) {
+    for (var i = 0; i < recurringTypes.length; i++) {
+        var localLeftovers = {};
+        var parsed = recurringTypes[i].parse(eventInput, localLeftovers, dateEnv);
+        if (parsed) {
+            var allDay = localLeftovers.allDay;
+            delete localLeftovers.allDay; // remove from leftovers
+            if (allDay == null) {
+                allDay = allDayDefault;
+                if (allDay == null) {
+                    allDay = parsed.allDayGuess;
+                    if (allDay == null) {
+                        allDay = false;
+                    }
+                }
+            }
+            __assign(leftovers, localLeftovers);
+            return {
+                allDay: allDay,
+                duration: parsed.duration,
+                typeData: parsed.typeData,
+                typeId: i
+            };
+        }
+    }
+    return null;
+}
+/*
+Event MUST have a recurringDef
+*/
+function expandRecurringRanges(eventDef, duration, framingRange, dateEnv, recurringTypes) {
+    var typeDef = recurringTypes[eventDef.recurringDef.typeId];
+    var markers = typeDef.expand(eventDef.recurringDef.typeData, {
+        start: dateEnv.subtract(framingRange.start, duration),
+        end: framingRange.end
+    }, dateEnv);
+    // the recurrence plugins don't guarantee that all-day events are start-of-day, so we have to
+    if (eventDef.allDay) {
+        markers = markers.map(startOfDay);
+    }
+    return markers;
+}
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+// Merges an array of objects into a single object.
+// The second argument allows for an array of property names who's object values will be merged together.
+function mergeProps(propObjs, complexProps) {
+    var dest = {};
+    var i;
+    var name;
+    var complexObjs;
+    var j;
+    var val;
+    var props;
+    if (complexProps) {
+        for (i = 0; i < complexProps.length; i++) {
+            name = complexProps[i];
+            complexObjs = [];
+            // collect the trailing object values, stopping when a non-object is discovered
+            for (j = propObjs.length - 1; j >= 0; j--) {
+                val = propObjs[j][name];
+                if (typeof val === 'object' && val) { // non-null object
+                    complexObjs.unshift(val);
+                }
+                else if (val !== undefined) {
+                    dest[name] = val; // if there were no objects, this value will be used
+                    break;
+                }
+            }
+            // if the trailing values were objects, use the merged value
+            if (complexObjs.length) {
+                dest[name] = mergeProps(complexObjs);
+            }
+        }
+    }
+    // copy values into the destination, going from last to first
+    for (i = propObjs.length - 1; i >= 0; i--) {
+        props = propObjs[i];
+        for (name in props) {
+            if (!(name in dest)) { // if already assigned by previous props or complex props, don't reassign
+                dest[name] = props[name];
+            }
+        }
+    }
+    return dest;
+}
+function filterHash(hash, func) {
+    var filtered = {};
+    for (var key in hash) {
+        if (func(hash[key], key)) {
+            filtered[key] = hash[key];
+        }
+    }
+    return filtered;
+}
+function mapHash(hash, func) {
+    var newHash = {};
+    for (var key in hash) {
+        newHash[key] = func(hash[key], key);
+    }
+    return newHash;
+}
+function arrayToHash(a) {
+    var hash = {};
+    for (var _i = 0, a_1 = a; _i < a_1.length; _i++) {
+        var item = a_1[_i];
+        hash[item] = true;
+    }
+    return hash;
+}
+function hashValuesToArray(obj) {
+    var a = [];
+    for (var key in obj) {
+        a.push(obj[key]);
+    }
+    return a;
+}
+function isPropsEqual(obj0, obj1) {
+    for (var key in obj0) {
+        if (hasOwnProperty.call(obj0, key)) {
+            if (!(key in obj1)) {
+                return false;
+            }
+        }
+    }
+    for (var key in obj1) {
+        if (hasOwnProperty.call(obj1, key)) {
+            if (obj0[key] !== obj1[key]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function parseEvents(rawEvents, sourceId, calendar, allowOpenRange) {
+    var eventStore = createEmptyEventStore();
+    for (var _i = 0, rawEvents_1 = rawEvents; _i < rawEvents_1.length; _i++) {
+        var rawEvent = rawEvents_1[_i];
+        var tuple = parseEvent(rawEvent, sourceId, calendar, allowOpenRange);
+        if (tuple) {
+            eventTupleToStore(tuple, eventStore);
+        }
+    }
+    return eventStore;
+}
+function eventTupleToStore(tuple, eventStore) {
+    if (eventStore === void 0) { eventStore = createEmptyEventStore(); }
+    eventStore.defs[tuple.def.defId] = tuple.def;
+    if (tuple.instance) {
+        eventStore.instances[tuple.instance.instanceId] = tuple.instance;
+    }
+    return eventStore;
+}
+function expandRecurring(eventStore, framingRange, calendar) {
+    var dateEnv = calendar.dateEnv;
+    var defs = eventStore.defs, instances = eventStore.instances;
+    // remove existing recurring instances
+    instances = filterHash(instances, function (instance) {
+        return !defs[instance.defId].recurringDef;
+    });
+    for (var defId in defs) {
+        var def = defs[defId];
+        if (def.recurringDef) {
+            var duration = def.recurringDef.duration;
+            if (!duration) {
+                duration = def.allDay ?
+                    calendar.defaultAllDayEventDuration :
+                    calendar.defaultTimedEventDuration;
+            }
+            var starts = expandRecurringRanges(def, duration, framingRange, calendar.dateEnv, calendar.pluginSystem.hooks.recurringTypes);
+            for (var _i = 0, starts_1 = starts; _i < starts_1.length; _i++) {
+                var start = starts_1[_i];
+                var instance = createEventInstance(defId, {
+                    start: start,
+                    end: dateEnv.add(start, duration)
+                });
+                instances[instance.instanceId] = instance;
+            }
+        }
+    }
+    return { defs: defs, instances: instances };
+}
+// retrieves events that have the same groupId as the instance specified by `instanceId`
+// or they are the same as the instance.
+// why might instanceId not be in the store? an event from another calendar?
+function getRelevantEvents(eventStore, instanceId) {
+    var instance = eventStore.instances[instanceId];
+    if (instance) {
+        var def_1 = eventStore.defs[instance.defId];
+        // get events/instances with same group
+        var newStore = filterEventStoreDefs(eventStore, function (lookDef) {
+            return isEventDefsGrouped(def_1, lookDef);
+        });
+        // add the original
+        // TODO: wish we could use eventTupleToStore or something like it
+        newStore.defs[def_1.defId] = def_1;
+        newStore.instances[instance.instanceId] = instance;
+        return newStore;
+    }
+    return createEmptyEventStore();
+}
+function isEventDefsGrouped(def0, def1) {
+    return Boolean(def0.groupId && def0.groupId === def1.groupId);
+}
+function transformRawEvents(rawEvents, eventSource, calendar) {
+    var calEachTransform = calendar.opt('eventDataTransform');
+    var sourceEachTransform = eventSource ? eventSource.eventDataTransform : null;
+    if (sourceEachTransform) {
+        rawEvents = transformEachRawEvent(rawEvents, sourceEachTransform);
+    }
+    if (calEachTransform) {
+        rawEvents = transformEachRawEvent(rawEvents, calEachTransform);
+    }
+    return rawEvents;
+}
+function transformEachRawEvent(rawEvents, func) {
+    var refinedEvents;
+    if (!func) {
+        refinedEvents = rawEvents;
+    }
+    else {
+        refinedEvents = [];
+        for (var _i = 0, rawEvents_2 = rawEvents; _i < rawEvents_2.length; _i++) {
+            var rawEvent = rawEvents_2[_i];
+            var refinedEvent = func(rawEvent);
+            if (refinedEvent) {
+                refinedEvents.push(refinedEvent);
+            }
+            else if (refinedEvent == null) {
+                refinedEvents.push(rawEvent);
+            } // if a different falsy value, do nothing
+        }
+    }
+    return refinedEvents;
+}
+function createEmptyEventStore() {
+    return { defs: {}, instances: {} };
+}
+function mergeEventStores(store0, store1) {
+    return {
+        defs: __assign({}, store0.defs, store1.defs),
+        instances: __assign({}, store0.instances, store1.instances)
+    };
+}
+function filterEventStoreDefs(eventStore, filterFunc) {
+    var defs = filterHash(eventStore.defs, filterFunc);
+    var instances = filterHash(eventStore.instances, function (instance) {
+        return defs[instance.defId]; // still exists?
+    });
+    return { defs: defs, instances: instances };
+}
+
+function parseRange(input, dateEnv) {
+    var start = null;
+    var end = null;
+    if (input.start) {
+        start = dateEnv.createMarker(input.start);
+    }
+    if (input.end) {
+        end = dateEnv.createMarker(input.end);
+    }
+    if (!start && !end) {
+        return null;
+    }
+    if (start && end && end < start) {
+        return null;
+    }
+    return { start: start, end: end };
+}
+// SIDE-EFFECT: will mutate ranges.
+// Will return a new array result.
+function invertRanges(ranges, constraintRange) {
+    var invertedRanges = [];
+    var start = constraintRange.start; // the end of the previous range. the start of the new range
+    var i;
+    var dateRange;
+    // ranges need to be in order. required for our date-walking algorithm
+    ranges.sort(compareRanges);
+    for (i = 0; i < ranges.length; i++) {
+        dateRange = ranges[i];
+        // add the span of time before the event (if there is any)
+        if (dateRange.start > start) { // compare millisecond time (skip any ambig logic)
+            invertedRanges.push({ start: start, end: dateRange.start });
+        }
+        if (dateRange.end > start) {
+            start = dateRange.end;
+        }
+    }
+    // add the span of time after the last event (if there is any)
+    if (start < constraintRange.end) { // compare millisecond time (skip any ambig logic)
+        invertedRanges.push({ start: start, end: constraintRange.end });
+    }
+    return invertedRanges;
+}
+function compareRanges(range0, range1) {
+    return range0.start.valueOf() - range1.start.valueOf(); // earlier ranges go first
+}
+function intersectRanges(range0, range1) {
+    var start = range0.start;
+    var end = range0.end;
+    var newRange = null;
+    if (range1.start !== null) {
+        if (start === null) {
+            start = range1.start;
+        }
+        else {
+            start = new Date(Math.max(start.valueOf(), range1.start.valueOf()));
+        }
+    }
+    if (range1.end != null) {
+        if (end === null) {
+            end = range1.end;
+        }
+        else {
+            end = new Date(Math.min(end.valueOf(), range1.end.valueOf()));
+        }
+    }
+    if (start === null || end === null || start < end) {
+        newRange = { start: start, end: end };
+    }
+    return newRange;
+}
+function rangesEqual(range0, range1) {
+    return (range0.start === null ? null : range0.start.valueOf()) === (range1.start === null ? null : range1.start.valueOf()) &&
+        (range0.end === null ? null : range0.end.valueOf()) === (range1.end === null ? null : range1.end.valueOf());
+}
+function rangesIntersect(range0, range1) {
+    return (range0.end === null || range1.start === null || range0.end > range1.start) &&
+        (range0.start === null || range1.end === null || range0.start < range1.end);
+}
+function rangeContainsRange(outerRange, innerRange) {
+    return (outerRange.start === null || (innerRange.start !== null && innerRange.start >= outerRange.start)) &&
+        (outerRange.end === null || (innerRange.end !== null && innerRange.end <= outerRange.end));
+}
+function rangeContainsMarker(range, date) {
+    return (range.start === null || date >= range.start) &&
+        (range.end === null || date < range.end);
+}
+// If the given date is not within the given range, move it inside.
+// (If it's past the end, make it one millisecond before the end).
+function constrainMarkerToRange(date, range) {
+    if (range.start != null && date < range.start) {
+        return range.start;
+    }
+    if (range.end != null && date >= range.end) {
+        return new Date(range.end.valueOf() - 1);
+    }
+    return date;
+}
+
+function removeExact(array, exactVal) {
+    var removeCnt = 0;
+    var i = 0;
+    while (i < array.length) {
+        if (array[i] === exactVal) {
+            array.splice(i, 1);
+            removeCnt++;
+        }
+        else {
+            i++;
+        }
+    }
+    return removeCnt;
+}
+function isArraysEqual(a0, a1) {
+    var len = a0.length;
+    var i;
+    if (len !== a1.length) { // not array? or not same length?
+        return false;
+    }
+    for (i = 0; i < len; i++) {
+        if (a0[i] !== a1[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function memoize(workerFunc) {
+    var args;
+    var res;
+    return function () {
+        if (!args || !isArraysEqual(args, arguments)) {
+            args = arguments;
+            res = workerFunc.apply(this, arguments);
+        }
+        return res;
+    };
+}
+/*
+always executes the workerFunc, but if the result is equal to the previous result,
+return the previous result instead.
+*/
+function memoizeOutput(workerFunc, equalityFunc) {
+    var cachedRes = null;
+    return function () {
+        var newRes = workerFunc.apply(this, arguments);
+        if (cachedRes === null || !(cachedRes === newRes || equalityFunc(cachedRes, newRes))) {
+            cachedRes = newRes;
+        }
+        return cachedRes;
+    };
+}
+
+var EXTENDED_SETTINGS_AND_SEVERITIES = {
+    week: 3,
+    separator: 0,
+    omitZeroMinute: 0,
+    meridiem: 0,
+    omitCommas: 0
+};
+var STANDARD_DATE_PROP_SEVERITIES = {
+    timeZoneName: 7,
+    era: 6,
+    year: 5,
+    month: 4,
+    day: 2,
+    weekday: 2,
+    hour: 1,
+    minute: 1,
+    second: 1
+};
+var MERIDIEM_RE = /\s*([ap])\.?m\.?/i; // eats up leading spaces too
+var COMMA_RE = /,/g; // we need re for globalness
+var MULTI_SPACE_RE = /\s+/g;
+var LTR_RE = /\u200e/g; // control character
+var UTC_RE = /UTC|GMT/;
+var NativeFormatter = /** @class */ (function () {
+    function NativeFormatter(formatSettings) {
+        var standardDateProps = {};
+        var extendedSettings = {};
+        var severity = 0;
+        for (var name_1 in formatSettings) {
+            if (name_1 in EXTENDED_SETTINGS_AND_SEVERITIES) {
+                extendedSettings[name_1] = formatSettings[name_1];
+                severity = Math.max(EXTENDED_SETTINGS_AND_SEVERITIES[name_1], severity);
+            }
+            else {
+                standardDateProps[name_1] = formatSettings[name_1];
+                if (name_1 in STANDARD_DATE_PROP_SEVERITIES) {
+                    severity = Math.max(STANDARD_DATE_PROP_SEVERITIES[name_1], severity);
+                }
+            }
+        }
+        this.standardDateProps = standardDateProps;
+        this.extendedSettings = extendedSettings;
+        this.severity = severity;
+        this.buildFormattingFunc = memoize(buildFormattingFunc);
+    }
+    NativeFormatter.prototype.format = function (date, context) {
+        return this.buildFormattingFunc(this.standardDateProps, this.extendedSettings, context)(date);
+    };
+    NativeFormatter.prototype.formatRange = function (start, end, context) {
+        var _a = this, standardDateProps = _a.standardDateProps, extendedSettings = _a.extendedSettings;
+        var diffSeverity = computeMarkerDiffSeverity(start.marker, end.marker, context.calendarSystem);
+        if (!diffSeverity) {
+            return this.format(start, context);
+        }
+        var biggestUnitForPartial = diffSeverity;
+        if (biggestUnitForPartial > 1 && // the two dates are different in a way that's larger scale than time
+            (standardDateProps.year === 'numeric' || standardDateProps.year === '2-digit') &&
+            (standardDateProps.month === 'numeric' || standardDateProps.month === '2-digit') &&
+            (standardDateProps.day === 'numeric' || standardDateProps.day === '2-digit')) {
+            biggestUnitForPartial = 1; // make it look like the dates are only different in terms of time
+        }
+        var full0 = this.format(start, context);
+        var full1 = this.format(end, context);
+        if (full0 === full1) {
+            return full0;
+        }
+        var partialDateProps = computePartialFormattingOptions(standardDateProps, biggestUnitForPartial);
+        var partialFormattingFunc = buildFormattingFunc(partialDateProps, extendedSettings, context);
+        var partial0 = partialFormattingFunc(start);
+        var partial1 = partialFormattingFunc(end);
+        var insertion = findCommonInsertion(full0, partial0, full1, partial1);
+        var separator = extendedSettings.separator || '';
+        if (insertion) {
+            return insertion.before + partial0 + separator + partial1 + insertion.after;
+        }
+        return full0 + separator + full1;
+    };
+    NativeFormatter.prototype.getLargestUnit = function () {
+        switch (this.severity) {
+            case 7:
+            case 6:
+            case 5:
+                return 'year';
+            case 4:
+                return 'month';
+            case 3:
+                return 'week';
+            default:
+                return 'day';
+        }
+    };
+    return NativeFormatter;
+}());
+function buildFormattingFunc(standardDateProps, extendedSettings, context) {
+    var standardDatePropCnt = Object.keys(standardDateProps).length;
+    if (standardDatePropCnt === 1 && standardDateProps.timeZoneName === 'short') {
+        return function (date) {
+            return formatTimeZoneOffset(date.timeZoneOffset);
+        };
+    }
+    if (standardDatePropCnt === 0 && extendedSettings.week) {
+        return function (date) {
+            return formatWeekNumber(context.computeWeekNumber(date.marker), context.weekLabel, context.locale, extendedSettings.week);
+        };
+    }
+    return buildNativeFormattingFunc(standardDateProps, extendedSettings, context);
+}
+function buildNativeFormattingFunc(standardDateProps, extendedSettings, context) {
+    standardDateProps = __assign({}, standardDateProps); // copy
+    extendedSettings = __assign({}, extendedSettings); // copy
+    sanitizeSettings(standardDateProps, extendedSettings);
+    standardDateProps.timeZone = 'UTC'; // we leverage the only guaranteed timeZone for our UTC markers
+    var normalFormat = new Intl.DateTimeFormat(context.locale.codes, standardDateProps);
+    var zeroFormat; // needed?
+    if (extendedSettings.omitZeroMinute) {
+        var zeroProps = __assign({}, standardDateProps);
+        delete zeroProps.minute; // seconds and ms were already considered in sanitizeSettings
+        zeroFormat = new Intl.DateTimeFormat(context.locale.codes, zeroProps);
+    }
+    return function (date) {
+        var marker = date.marker;
+        var format;
+        if (zeroFormat && !marker.getUTCMinutes()) {
+            format = zeroFormat;
+        }
+        else {
+            format = normalFormat;
+        }
+        var s = format.format(marker);
+        return postProcess(s, date, standardDateProps, extendedSettings, context);
+    };
+}
+function sanitizeSettings(standardDateProps, extendedSettings) {
+    // deal with a browser inconsistency where formatting the timezone
+    // requires that the hour/minute be present.
+    if (standardDateProps.timeZoneName) {
+        if (!standardDateProps.hour) {
+            standardDateProps.hour = '2-digit';
+        }
+        if (!standardDateProps.minute) {
+            standardDateProps.minute = '2-digit';
+        }
+    }
+    // only support short timezone names
+    if (standardDateProps.timeZoneName === 'long') {
+        standardDateProps.timeZoneName = 'short';
+    }
+    // if requesting to display seconds, MUST display minutes
+    if (extendedSettings.omitZeroMinute && (standardDateProps.second || standardDateProps.millisecond)) {
+        delete extendedSettings.omitZeroMinute;
+    }
+}
+function postProcess(s, date, standardDateProps, extendedSettings, context) {
+    s = s.replace(LTR_RE, ''); // remove left-to-right control chars. do first. good for other regexes
+    if (standardDateProps.timeZoneName === 'short') {
+        s = injectTzoStr(s, (context.timeZone === 'UTC' || date.timeZoneOffset == null) ?
+            'UTC' : // important to normalize for IE, which does "GMT"
+            formatTimeZoneOffset(date.timeZoneOffset));
+    }
+    if (extendedSettings.omitCommas) {
+        s = s.replace(COMMA_RE, '').trim();
+    }
+    if (extendedSettings.omitZeroMinute) {
+        s = s.replace(':00', ''); // zeroFormat doesn't always achieve this
+    }
+    // ^ do anything that might create adjacent spaces before this point,
+    // because MERIDIEM_RE likes to eat up loading spaces
+    if (extendedSettings.meridiem === false) {
+        s = s.replace(MERIDIEM_RE, '').trim();
+    }
+    else if (extendedSettings.meridiem === 'narrow') { // a/p
+        s = s.replace(MERIDIEM_RE, function (m0, m1) {
+            return m1.toLocaleLowerCase();
+        });
+    }
+    else if (extendedSettings.meridiem === 'short') { // am/pm
+        s = s.replace(MERIDIEM_RE, function (m0, m1) {
+            return m1.toLocaleLowerCase() + 'm';
+        });
+    }
+    else if (extendedSettings.meridiem === 'lowercase') { // other meridiem transformers already converted to lowercase
+        s = s.replace(MERIDIEM_RE, function (m0) {
+            return m0.toLocaleLowerCase();
+        });
+    }
+    s = s.replace(MULTI_SPACE_RE, ' ');
+    s = s.trim();
+    return s;
+}
+function injectTzoStr(s, tzoStr) {
+    var replaced = false;
+    s = s.replace(UTC_RE, function () {
+        replaced = true;
+        return tzoStr;
+    });
+    // IE11 doesn't include UTC/GMT in the original string, so append to end
+    if (!replaced) {
+        s += ' ' + tzoStr;
+    }
+    return s;
+}
+function formatWeekNumber(num, weekLabel, locale, display) {
+    var parts = [];
+    if (display === 'narrow') {
+        parts.push(weekLabel);
+    }
+    else if (display === 'short') {
+        parts.push(weekLabel, ' ');
+    }
+    // otherwise, considered 'numeric'
+    parts.push(locale.simpleNumberFormat.format(num));
+    if (locale.options.isRtl) { // TODO: use control characters instead?
+        parts.reverse();
+    }
+    return parts.join('');
+}
+// Range Formatting Utils
+// 0 = exactly the same
+// 1 = different by time
+// and bigger
+function computeMarkerDiffSeverity(d0, d1, ca) {
+    if (ca.getMarkerYear(d0) !== ca.getMarkerYear(d1)) {
+        return 5;
+    }
+    if (ca.getMarkerMonth(d0) !== ca.getMarkerMonth(d1)) {
+        return 4;
+    }
+    if (ca.getMarkerDay(d0) !== ca.getMarkerDay(d1)) {
+        return 2;
+    }
+    if (timeAsMs(d0) !== timeAsMs(d1)) {
+        return 1;
+    }
+    return 0;
+}
+function computePartialFormattingOptions(options, biggestUnit) {
+    var partialOptions = {};
+    for (var name_2 in options) {
+        if (!(name_2 in STANDARD_DATE_PROP_SEVERITIES) || // not a date part prop (like timeZone)
+            STANDARD_DATE_PROP_SEVERITIES[name_2] <= biggestUnit) {
+            partialOptions[name_2] = options[name_2];
+        }
+    }
+    return partialOptions;
+}
+function findCommonInsertion(full0, partial0, full1, partial1) {
+    var i0 = 0;
+    while (i0 < full0.length) {
+        var found0 = full0.indexOf(partial0, i0);
+        if (found0 === -1) {
+            break;
+        }
+        var before0 = full0.substr(0, found0);
+        i0 = found0 + partial0.length;
+        var after0 = full0.substr(i0);
+        var i1 = 0;
+        while (i1 < full1.length) {
+            var found1 = full1.indexOf(partial1, i1);
+            if (found1 === -1) {
+                break;
+            }
+            var before1 = full1.substr(0, found1);
+            i1 = found1 + partial1.length;
+            var after1 = full1.substr(i1);
+            if (before0 === before1 && after0 === after1) {
+                return {
+                    before: before0,
+                    after: after0
+                };
+            }
+        }
+    }
+    return null;
+}
+
+/*
+TODO: fix the terminology of "formatter" vs "formatting func"
+*/
+/*
+At the time of instantiation, this object does not know which cmd-formatting system it will use.
+It receives this at the time of formatting, as a setting.
+*/
+var CmdFormatter = /** @class */ (function () {
+    function CmdFormatter(cmdStr, separator) {
+        this.cmdStr = cmdStr;
+        this.separator = separator;
+    }
+    CmdFormatter.prototype.format = function (date, context) {
+        return context.cmdFormatter(this.cmdStr, createVerboseFormattingArg(date, null, context, this.separator));
+    };
+    CmdFormatter.prototype.formatRange = function (start, end, context) {
+        return context.cmdFormatter(this.cmdStr, createVerboseFormattingArg(start, end, context, this.separator));
+    };
+    return CmdFormatter;
+}());
+
+var FuncFormatter = /** @class */ (function () {
+    function FuncFormatter(func) {
+        this.func = func;
+    }
+    FuncFormatter.prototype.format = function (date, context) {
+        return this.func(createVerboseFormattingArg(date, null, context));
+    };
+    FuncFormatter.prototype.formatRange = function (start, end, context) {
+        return this.func(createVerboseFormattingArg(start, end, context));
+    };
+    return FuncFormatter;
+}());
+
+// Formatter Object Creation
+function createFormatter(input, defaultSeparator) {
+    if (typeof input === 'object' && input) { // non-null object
+        if (typeof defaultSeparator === 'string') {
+            input = __assign({ separator: defaultSeparator }, input);
+        }
+        return new NativeFormatter(input);
+    }
+    else if (typeof input === 'string') {
+        return new CmdFormatter(input, defaultSeparator);
+    }
+    else if (typeof input === 'function') {
+        return new FuncFormatter(input);
+    }
+}
+// String Utils
+// timeZoneOffset is in minutes
+function buildIsoString(marker, timeZoneOffset, stripZeroTime) {
+    if (stripZeroTime === void 0) { stripZeroTime = false; }
+    var s = marker.toISOString();
+    s = s.replace('.000', '');
+    if (stripZeroTime) {
+        s = s.replace('T00:00:00Z', '');
+    }
+    if (s.length > 10) { // time part wasn't stripped, can add timezone info
+        if (timeZoneOffset == null) {
+            s = s.replace('Z', '');
+        }
+        else if (timeZoneOffset !== 0) {
+            s = s.replace('Z', formatTimeZoneOffset(timeZoneOffset, true));
+        }
+        // otherwise, its UTC-0 and we want to keep the Z
+    }
+    return s;
+}
+function formatIsoTimeString(marker) {
+    return padStart(marker.getUTCHours(), 2) + ':' +
+        padStart(marker.getUTCMinutes(), 2) + ':' +
+        padStart(marker.getUTCSeconds(), 2);
+}
+function formatTimeZoneOffset(minutes, doIso) {
+    if (doIso === void 0) { doIso = false; }
+    var sign = minutes < 0 ? '-' : '+';
+    var abs = Math.abs(minutes);
+    var hours = Math.floor(abs / 60);
+    var mins = Math.round(abs % 60);
+    if (doIso) {
+        return sign + padStart(hours, 2) + ':' + padStart(mins, 2);
+    }
+    else {
+        return 'GMT' + sign + hours + (mins ? ':' + padStart(mins, 2) : '');
+    }
+}
+// Arg Utils
+function createVerboseFormattingArg(start, end, context, separator) {
+    var startInfo = expandZonedMarker(start, context.calendarSystem);
+    var endInfo = end ? expandZonedMarker(end, context.calendarSystem) : null;
+    return {
+        date: startInfo,
+        start: startInfo,
+        end: endInfo,
+        timeZone: context.timeZone,
+        localeCodes: context.locale.codes,
+        separator: separator
+    };
+}
+function expandZonedMarker(dateInfo, calendarSystem) {
+    var a = calendarSystem.markerToArray(dateInfo.marker);
+    return {
+        marker: dateInfo.marker,
+        timeZoneOffset: dateInfo.timeZoneOffset,
+        array: a,
+        year: a[0],
+        month: a[1],
+        day: a[2],
+        hour: a[3],
+        minute: a[4],
+        second: a[5],
+        millisecond: a[6]
+    };
+}
+
+var EventSourceApi = /** @class */ (function () {
+    function EventSourceApi(calendar, internalEventSource) {
+        this.calendar = calendar;
+        this.internalEventSource = internalEventSource;
+    }
+    EventSourceApi.prototype.remove = function () {
+        this.calendar.dispatch({
+            type: 'REMOVE_EVENT_SOURCE',
+            sourceId: this.internalEventSource.sourceId
+        });
+    };
+    EventSourceApi.prototype.refetch = function () {
+        this.calendar.dispatch({
+            type: 'FETCH_EVENT_SOURCES',
+            sourceIds: [this.internalEventSource.sourceId]
+        });
+    };
+    Object.defineProperty(EventSourceApi.prototype, "id", {
+        get: function () {
+            return this.internalEventSource.publicId;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventSourceApi.prototype, "url", {
+        // only relevant to json-feed event sources
+        get: function () {
+            return this.internalEventSource.meta.url;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return EventSourceApi;
+}());
+
+var EventApi = /** @class */ (function () {
+    function EventApi(calendar, def, instance) {
+        this._calendar = calendar;
+        this._def = def;
+        this._instance = instance || null;
+    }
+    /*
+    TODO: make event struct more responsible for this
+    */
+    EventApi.prototype.setProp = function (name, val) {
+        var _a, _b;
+        if (name in DATE_PROPS) ;
+        else if (name in NON_DATE_PROPS) {
+            if (typeof NON_DATE_PROPS[name] === 'function') {
+                val = NON_DATE_PROPS[name](val);
+            }
+            this.mutate({
+                standardProps: (_a = {}, _a[name] = val, _a)
+            });
+        }
+        else if (name in UNSCOPED_EVENT_UI_PROPS) {
+            var ui = void 0;
+            if (typeof UNSCOPED_EVENT_UI_PROPS[name] === 'function') {
+                val = UNSCOPED_EVENT_UI_PROPS[name](val);
+            }
+            if (name === 'color') {
+                ui = { backgroundColor: val, borderColor: val };
+            }
+            else if (name === 'editable') {
+                ui = { startEditable: val, durationEditable: val };
+            }
+            else {
+                ui = (_b = {}, _b[name] = val, _b);
+            }
+            this.mutate({
+                standardProps: { ui: ui }
+            });
+        }
+    };
+    EventApi.prototype.setExtendedProp = function (name, val) {
+        var _a;
+        this.mutate({
+            extendedProps: (_a = {}, _a[name] = val, _a)
+        });
+    };
+    EventApi.prototype.setStart = function (startInput, options) {
+        if (options === void 0) { options = {}; }
+        var dateEnv = this._calendar.dateEnv;
+        var start = dateEnv.createMarker(startInput);
+        if (start && this._instance) { // TODO: warning if parsed bad
+            var instanceRange = this._instance.range;
+            var startDelta = diffDates(instanceRange.start, start, dateEnv, options.granularity); // what if parsed bad!?
+            if (options.maintainDuration) {
+                this.mutate({ datesDelta: startDelta });
+            }
+            else {
+                this.mutate({ startDelta: startDelta });
+            }
+        }
+    };
+    EventApi.prototype.setEnd = function (endInput, options) {
+        if (options === void 0) { options = {}; }
+        var dateEnv = this._calendar.dateEnv;
+        var end;
+        if (endInput != null) {
+            end = dateEnv.createMarker(endInput);
+            if (!end) {
+                return; // TODO: warning if parsed bad
+            }
+        }
+        if (this._instance) {
+            if (end) {
+                var endDelta = diffDates(this._instance.range.end, end, dateEnv, options.granularity);
+                this.mutate({ endDelta: endDelta });
+            }
+            else {
+                this.mutate({ standardProps: { hasEnd: false } });
+            }
+        }
+    };
+    EventApi.prototype.setDates = function (startInput, endInput, options) {
+        if (options === void 0) { options = {}; }
+        var dateEnv = this._calendar.dateEnv;
+        var standardProps = { allDay: options.allDay };
+        var start = dateEnv.createMarker(startInput);
+        var end;
+        if (!start) {
+            return; // TODO: warning if parsed bad
+        }
+        if (endInput != null) {
+            end = dateEnv.createMarker(endInput);
+            if (!end) { // TODO: warning if parsed bad
+                return;
+            }
+        }
+        if (this._instance) {
+            var instanceRange = this._instance.range;
+            // when computing the diff for an event being converted to all-day,
+            // compute diff off of the all-day values the way event-mutation does.
+            if (options.allDay === true) {
+                instanceRange = computeAlignedDayRange(instanceRange);
+            }
+            var startDelta = diffDates(instanceRange.start, start, dateEnv, options.granularity);
+            if (end) {
+                var endDelta = diffDates(instanceRange.end, end, dateEnv, options.granularity);
+                if (durationsEqual(startDelta, endDelta)) {
+                    this.mutate({ datesDelta: startDelta, standardProps: standardProps });
+                }
+                else {
+                    this.mutate({ startDelta: startDelta, endDelta: endDelta, standardProps: standardProps });
+                }
+            }
+            else { // means "clear the end"
+                standardProps.hasEnd = false;
+                this.mutate({ datesDelta: startDelta, standardProps: standardProps });
+            }
+        }
+    };
+    EventApi.prototype.moveStart = function (deltaInput) {
+        var delta = createDuration(deltaInput);
+        if (delta) { // TODO: warning if parsed bad
+            this.mutate({ startDelta: delta });
+        }
+    };
+    EventApi.prototype.moveEnd = function (deltaInput) {
+        var delta = createDuration(deltaInput);
+        if (delta) { // TODO: warning if parsed bad
+            this.mutate({ endDelta: delta });
+        }
+    };
+    EventApi.prototype.moveDates = function (deltaInput) {
+        var delta = createDuration(deltaInput);
+        if (delta) { // TODO: warning if parsed bad
+            this.mutate({ datesDelta: delta });
+        }
+    };
+    EventApi.prototype.setAllDay = function (allDay, options) {
+        if (options === void 0) { options = {}; }
+        var standardProps = { allDay: allDay };
+        var maintainDuration = options.maintainDuration;
+        if (maintainDuration == null) {
+            maintainDuration = this._calendar.opt('allDayMaintainDuration');
+        }
+        if (this._def.allDay !== allDay) {
+            standardProps.hasEnd = maintainDuration;
+        }
+        this.mutate({ standardProps: standardProps });
+    };
+    EventApi.prototype.formatRange = function (formatInput) {
+        var dateEnv = this._calendar.dateEnv;
+        var instance = this._instance;
+        var formatter = createFormatter(formatInput, this._calendar.opt('defaultRangeSeparator'));
+        if (this._def.hasEnd) {
+            return dateEnv.formatRange(instance.range.start, instance.range.end, formatter, {
+                forcedStartTzo: instance.forcedStartTzo,
+                forcedEndTzo: instance.forcedEndTzo
+            });
+        }
+        else {
+            return dateEnv.format(instance.range.start, formatter, {
+                forcedTzo: instance.forcedStartTzo
+            });
+        }
+    };
+    EventApi.prototype.mutate = function (mutation) {
+        var def = this._def;
+        var instance = this._instance;
+        if (instance) {
+            this._calendar.dispatch({
+                type: 'MUTATE_EVENTS',
+                instanceId: instance.instanceId,
+                mutation: mutation,
+                fromApi: true
+            });
+            var eventStore = this._calendar.state.eventStore;
+            this._def = eventStore.defs[def.defId];
+            this._instance = eventStore.instances[instance.instanceId];
+        }
+    };
+    EventApi.prototype.remove = function () {
+        this._calendar.dispatch({
+            type: 'REMOVE_EVENT_DEF',
+            defId: this._def.defId
+        });
+    };
+    Object.defineProperty(EventApi.prototype, "source", {
+        get: function () {
+            var sourceId = this._def.sourceId;
+            if (sourceId) {
+                return new EventSourceApi(this._calendar, this._calendar.state.eventSources[sourceId]);
+            }
+            return null;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "start", {
+        get: function () {
+            return this._instance ?
+                this._calendar.dateEnv.toDate(this._instance.range.start) :
+                null;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "end", {
+        get: function () {
+            return (this._instance && this._def.hasEnd) ?
+                this._calendar.dateEnv.toDate(this._instance.range.end) :
+                null;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "id", {
+        // computable props that all access the def
+        // TODO: find a TypeScript-compatible way to do this at scale
+        get: function () { return this._def.publicId; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "groupId", {
+        get: function () { return this._def.groupId; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "allDay", {
+        get: function () { return this._def.allDay; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "title", {
+        get: function () { return this._def.title; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "url", {
+        get: function () { return this._def.url; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "rendering", {
+        get: function () { return this._def.rendering; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "startEditable", {
+        get: function () { return this._def.ui.startEditable; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "durationEditable", {
+        get: function () { return this._def.ui.durationEditable; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "constraint", {
+        get: function () { return this._def.ui.constraints[0] || null; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "overlap", {
+        get: function () { return this._def.ui.overlap; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "allow", {
+        get: function () { return this._def.ui.allows[0] || null; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "backgroundColor", {
+        get: function () { return this._def.ui.backgroundColor; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "borderColor", {
+        get: function () { return this._def.ui.borderColor; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "textColor", {
+        get: function () { return this._def.ui.textColor; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "classNames", {
+        // NOTE: user can't modify these because Object.freeze was called in event-def parsing
+        get: function () { return this._def.ui.classNames; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventApi.prototype, "extendedProps", {
+        get: function () { return this._def.extendedProps; },
+        enumerable: true,
+        configurable: true
+    });
+    return EventApi;
+}());
+
+/*
+Specifying nextDayThreshold signals that all-day ranges should be sliced.
+*/
+function sliceEventStore(eventStore, eventUiBases, framingRange, nextDayThreshold) {
+    var inverseBgByGroupId = {};
+    var inverseBgByDefId = {};
+    var defByGroupId = {};
+    var bgRanges = [];
+    var fgRanges = [];
+    var eventUis = compileEventUis(eventStore.defs, eventUiBases);
+    for (var defId in eventStore.defs) {
+        var def = eventStore.defs[defId];
+        if (def.rendering === 'inverse-background') {
+            if (def.groupId) {
+                inverseBgByGroupId[def.groupId] = [];
+                if (!defByGroupId[def.groupId]) {
+                    defByGroupId[def.groupId] = def;
+                }
+            }
+            else {
+                inverseBgByDefId[defId] = [];
+            }
+        }
+    }
+    for (var instanceId in eventStore.instances) {
+        var instance = eventStore.instances[instanceId];
+        var def = eventStore.defs[instance.defId];
+        var ui = eventUis[def.defId];
+        var origRange = instance.range;
+        var normalRange = (!def.allDay && nextDayThreshold) ?
+            computeVisibleDayRange(origRange, nextDayThreshold) :
+            origRange;
+        var slicedRange = intersectRanges(normalRange, framingRange);
+        if (slicedRange) {
+            if (def.rendering === 'inverse-background') {
+                if (def.groupId) {
+                    inverseBgByGroupId[def.groupId].push(slicedRange);
+                }
+                else {
+                    inverseBgByDefId[instance.defId].push(slicedRange);
+                }
+            }
+            else {
+                (def.rendering === 'background' ? bgRanges : fgRanges).push({
+                    def: def,
+                    ui: ui,
+                    instance: instance,
+                    range: slicedRange,
+                    isStart: normalRange.start && normalRange.start.valueOf() === slicedRange.start.valueOf(),
+                    isEnd: normalRange.end && normalRange.end.valueOf() === slicedRange.end.valueOf()
+                });
+            }
+        }
+    }
+    for (var groupId in inverseBgByGroupId) { // BY GROUP
+        var ranges = inverseBgByGroupId[groupId];
+        var invertedRanges = invertRanges(ranges, framingRange);
+        for (var _i = 0, invertedRanges_1 = invertedRanges; _i < invertedRanges_1.length; _i++) {
+            var invertedRange = invertedRanges_1[_i];
+            var def = defByGroupId[groupId];
+            var ui = eventUis[def.defId];
+            bgRanges.push({
+                def: def,
+                ui: ui,
+                instance: null,
+                range: invertedRange,
+                isStart: false,
+                isEnd: false
+            });
+        }
+    }
+    for (var defId in inverseBgByDefId) {
+        var ranges = inverseBgByDefId[defId];
+        var invertedRanges = invertRanges(ranges, framingRange);
+        for (var _a = 0, invertedRanges_2 = invertedRanges; _a < invertedRanges_2.length; _a++) {
+            var invertedRange = invertedRanges_2[_a];
+            bgRanges.push({
+                def: eventStore.defs[defId],
+                ui: eventUis[defId],
+                instance: null,
+                range: invertedRange,
+                isStart: false,
+                isEnd: false
+            });
+        }
+    }
+    return { bg: bgRanges, fg: fgRanges };
+}
+function hasBgRendering(def) {
+    return def.rendering === 'background' || def.rendering === 'inverse-background';
+}
+function filterSegsViaEls(context, segs, isMirror) {
+    var calendar = context.calendar, view = context.view;
+    if (calendar.hasPublicHandlers('eventRender')) {
+        segs = segs.filter(function (seg) {
+            var custom = calendar.publiclyTrigger('eventRender', [
+                {
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
+                    isMirror: isMirror,
+                    isStart: seg.isStart,
+                    isEnd: seg.isEnd,
+                    // TODO: include seg.range once all components consistently generate it
+                    el: seg.el,
+                    view: view
+                }
+            ]);
+            if (custom === false) { // means don't render at all
+                return false;
+            }
+            else if (custom && custom !== true) {
+                seg.el = custom;
+            }
+            return true;
+        });
+    }
+    for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
+        var seg = segs_1[_i];
+        setElSeg(seg.el, seg);
+    }
+    return segs;
+}
+function setElSeg(el, seg) {
+    el.fcSeg = seg;
+}
+function getElSeg(el) {
+    return el.fcSeg || null;
+}
+// event ui computation
+function compileEventUis(eventDefs, eventUiBases) {
+    return mapHash(eventDefs, function (eventDef) {
+        return compileEventUi(eventDef, eventUiBases);
+    });
+}
+function compileEventUi(eventDef, eventUiBases) {
+    var uis = [];
+    if (eventUiBases['']) {
+        uis.push(eventUiBases['']);
+    }
+    if (eventUiBases[eventDef.defId]) {
+        uis.push(eventUiBases[eventDef.defId]);
+    }
+    uis.push(eventDef.ui);
+    return combineEventUis(uis);
+}
+// triggers
+function triggerRenderedSegs(context, segs, isMirrors) {
+    var calendar = context.calendar, view = context.view;
+    if (calendar.hasPublicHandlers('eventPositioned')) {
+        for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
+            var seg = segs_2[_i];
+            calendar.publiclyTriggerAfterSizing('eventPositioned', [
+                {
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
+                    isMirror: isMirrors,
+                    isStart: seg.isStart,
+                    isEnd: seg.isEnd,
+                    el: seg.el,
+                    view: view
+                }
+            ]);
+        }
+    }
+    if (!calendar.state.eventSourceLoadingLevel) { // avoid initial empty state while pending
+        calendar.afterSizingTriggers._eventsPositioned = [null]; // fire once
+    }
+}
+function triggerWillRemoveSegs(context, segs, isMirrors) {
+    var calendar = context.calendar, view = context.view;
+    for (var _i = 0, segs_3 = segs; _i < segs_3.length; _i++) {
+        var seg = segs_3[_i];
+        calendar.trigger('eventElRemove', seg.el);
+    }
+    if (calendar.hasPublicHandlers('eventDestroy')) {
+        for (var _a = 0, segs_4 = segs; _a < segs_4.length; _a++) {
+            var seg = segs_4[_a];
+            calendar.publiclyTrigger('eventDestroy', [
+                {
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
+                    isMirror: isMirrors,
+                    el: seg.el,
+                    view: view
+                }
+            ]);
+        }
+    }
+}
+// is-interactable
+function computeEventDraggable(context, eventDef, eventUi) {
+    var calendar = context.calendar, view = context.view;
+    var transformers = calendar.pluginSystem.hooks.isDraggableTransformers;
+    var val = eventUi.startEditable;
+    for (var _i = 0, transformers_1 = transformers; _i < transformers_1.length; _i++) {
+        var transformer = transformers_1[_i];
+        val = transformer(val, eventDef, eventUi, view);
+    }
+    return val;
+}
+function computeEventStartResizable(context, eventDef, eventUi) {
+    return eventUi.durationEditable && context.options.eventResizableFromStart;
+}
+function computeEventEndResizable(context, eventDef, eventUi) {
+    return eventUi.durationEditable;
+}
+
+// applies the mutation to ALL defs/instances within the event store
+function applyMutationToEventStore(eventStore, eventConfigBase, mutation, calendar) {
+    var eventConfigs = compileEventUis(eventStore.defs, eventConfigBase);
+    var dest = createEmptyEventStore();
+    for (var defId in eventStore.defs) {
+        var def = eventStore.defs[defId];
+        dest.defs[defId] = applyMutationToEventDef(def, eventConfigs[defId], mutation, calendar.pluginSystem.hooks.eventDefMutationAppliers, calendar);
+    }
+    for (var instanceId in eventStore.instances) {
+        var instance = eventStore.instances[instanceId];
+        var def = dest.defs[instance.defId]; // important to grab the newly modified def
+        dest.instances[instanceId] = applyMutationToEventInstance(instance, def, eventConfigs[instance.defId], mutation, calendar);
+    }
+    return dest;
+}
+function applyMutationToEventDef(eventDef, eventConfig, mutation, appliers, calendar) {
+    var standardProps = mutation.standardProps || {};
+    // if hasEnd has not been specified, guess a good value based on deltas.
+    // if duration will change, there's no way the default duration will persist,
+    // and thus, we need to mark the event as having a real end
+    if (standardProps.hasEnd == null &&
+        eventConfig.durationEditable &&
+        (mutation.startDelta || mutation.endDelta)) {
+        standardProps.hasEnd = true; // TODO: is this mutation okay?
+    }
+    var copy = __assign({}, eventDef, standardProps, { ui: __assign({}, eventDef.ui, standardProps.ui) });
+    if (mutation.extendedProps) {
+        copy.extendedProps = __assign({}, copy.extendedProps, mutation.extendedProps);
+    }
+    for (var _i = 0, appliers_1 = appliers; _i < appliers_1.length; _i++) {
+        var applier = appliers_1[_i];
+        applier(copy, mutation, calendar);
+    }
+    if (!copy.hasEnd && calendar.opt('forceEventDuration')) {
+        copy.hasEnd = true;
+    }
+    return copy;
+}
+function applyMutationToEventInstance(eventInstance, eventDef, // must first be modified by applyMutationToEventDef
+eventConfig, mutation, calendar) {
+    var dateEnv = calendar.dateEnv;
+    var forceAllDay = mutation.standardProps && mutation.standardProps.allDay === true;
+    var clearEnd = mutation.standardProps && mutation.standardProps.hasEnd === false;
+    var copy = __assign({}, eventInstance);
+    if (forceAllDay) {
+        copy.range = computeAlignedDayRange(copy.range);
+    }
+    if (mutation.datesDelta && eventConfig.startEditable) {
+        copy.range = {
+            start: dateEnv.add(copy.range.start, mutation.datesDelta),
+            end: dateEnv.add(copy.range.end, mutation.datesDelta)
+        };
+    }
+    if (mutation.startDelta && eventConfig.durationEditable) {
+        copy.range = {
+            start: dateEnv.add(copy.range.start, mutation.startDelta),
+            end: copy.range.end
+        };
+    }
+    if (mutation.endDelta && eventConfig.durationEditable) {
+        copy.range = {
+            start: copy.range.start,
+            end: dateEnv.add(copy.range.end, mutation.endDelta)
+        };
+    }
+    if (clearEnd) {
+        copy.range = {
+            start: copy.range.start,
+            end: calendar.getDefaultEventEnd(eventDef.allDay, copy.range.start)
+        };
+    }
+    // in case event was all-day but the supplied deltas were not
+    // better util for this?
+    if (eventDef.allDay) {
+        copy.range = {
+            start: startOfDay(copy.range.start),
+            end: startOfDay(copy.range.end)
+        };
+    }
+    // handle invalid durations
+    if (copy.range.end < copy.range.start) {
+        copy.range.end = calendar.getDefaultEventEnd(eventDef.allDay, copy.range.start);
+    }
+    return copy;
+}
+
+function reduceEventStore (eventStore, action, eventSources, dateProfile, calendar) {
+    switch (action.type) {
+        case 'RECEIVE_EVENTS': // raw
+            return receiveRawEvents(eventStore, eventSources[action.sourceId], action.fetchId, action.fetchRange, action.rawEvents, calendar);
+        case 'ADD_EVENTS': // already parsed, but not expanded
+            return addEvent(eventStore, action.eventStore, // new ones
+            dateProfile ? dateProfile.activeRange : null, calendar);
+        case 'MERGE_EVENTS': // already parsed and expanded
+            return mergeEventStores(eventStore, action.eventStore);
+        case 'PREV': // TODO: how do we track all actions that affect dateProfile :(
+        case 'NEXT':
+        case 'SET_DATE':
+        case 'SET_VIEW_TYPE':
+            if (dateProfile) {
+                return expandRecurring(eventStore, dateProfile.activeRange, calendar);
+            }
+            else {
+                return eventStore;
+            }
+        case 'CHANGE_TIMEZONE':
+            return rezoneDates(eventStore, action.oldDateEnv, calendar.dateEnv);
+        case 'MUTATE_EVENTS':
+            return applyMutationToRelated(eventStore, action.instanceId, action.mutation, action.fromApi, calendar);
+        case 'REMOVE_EVENT_INSTANCES':
+            return excludeInstances(eventStore, action.instances);
+        case 'REMOVE_EVENT_DEF':
+            return filterEventStoreDefs(eventStore, function (eventDef) {
+                return eventDef.defId !== action.defId;
+            });
+        case 'REMOVE_EVENT_SOURCE':
+            return excludeEventsBySourceId(eventStore, action.sourceId);
+        case 'REMOVE_ALL_EVENT_SOURCES':
+            return filterEventStoreDefs(eventStore, function (eventDef) {
+                return !eventDef.sourceId; // only keep events with no source id
+            });
+        case 'REMOVE_ALL_EVENTS':
+            return createEmptyEventStore();
+        case 'RESET_EVENTS':
+            return {
+                defs: eventStore.defs,
+                instances: eventStore.instances
+            };
+        default:
+            return eventStore;
+    }
+}
+function receiveRawEvents(eventStore, eventSource, fetchId, fetchRange, rawEvents, calendar) {
+    if (eventSource && // not already removed
+        fetchId === eventSource.latestFetchId // TODO: wish this logic was always in event-sources
+    ) {
+        var subset = parseEvents(transformRawEvents(rawEvents, eventSource, calendar), eventSource.sourceId, calendar);
+        if (fetchRange) {
+            subset = expandRecurring(subset, fetchRange, calendar);
+        }
+        return mergeEventStores(excludeEventsBySourceId(eventStore, eventSource.sourceId), subset);
+    }
+    return eventStore;
+}
+function addEvent(eventStore, subset, expandRange, calendar) {
+    if (expandRange) {
+        subset = expandRecurring(subset, expandRange, calendar);
+    }
+    return mergeEventStores(eventStore, subset);
+}
+function rezoneDates(eventStore, oldDateEnv, newDateEnv) {
+    var defs = eventStore.defs;
+    var instances = mapHash(eventStore.instances, function (instance) {
+        var def = defs[instance.defId];
+        if (def.allDay || def.recurringDef) {
+            return instance; // isn't dependent on timezone
+        }
+        else {
+            return __assign({}, instance, { range: {
+                    start: newDateEnv.createMarker(oldDateEnv.toDate(instance.range.start, instance.forcedStartTzo)),
+                    end: newDateEnv.createMarker(oldDateEnv.toDate(instance.range.end, instance.forcedEndTzo))
+                }, forcedStartTzo: newDateEnv.canComputeOffset ? null : instance.forcedStartTzo, forcedEndTzo: newDateEnv.canComputeOffset ? null : instance.forcedEndTzo });
+        }
+    });
+    return { defs: defs, instances: instances };
+}
+function applyMutationToRelated(eventStore, instanceId, mutation, fromApi, calendar) {
+    var relevant = getRelevantEvents(eventStore, instanceId);
+    var eventConfigBase = fromApi ?
+        { '': {
+                startEditable: true,
+                durationEditable: true,
+                constraints: [],
+                overlap: null,
+                allows: [],
+                backgroundColor: '',
+                borderColor: '',
+                textColor: '',
+                classNames: []
+            } } :
+        calendar.eventUiBases;
+    relevant = applyMutationToEventStore(relevant, eventConfigBase, mutation, calendar);
+    return mergeEventStores(eventStore, relevant);
+}
+function excludeEventsBySourceId(eventStore, sourceId) {
+    return filterEventStoreDefs(eventStore, function (eventDef) {
+        return eventDef.sourceId !== sourceId;
+    });
+}
+// QUESTION: why not just return instances? do a general object-property-exclusion util
+function excludeInstances(eventStore, removals) {
+    return {
+        defs: eventStore.defs,
+        instances: filterHash(eventStore.instances, function (instance) {
+            return !removals[instance.instanceId];
+        })
+    };
+}
+
+// high-level segmenting-aware tester functions
+// ------------------------------------------------------------------------------------------------------------------------
+function isInteractionValid(interaction, calendar) {
+    return isNewPropsValid({ eventDrag: interaction }, calendar); // HACK: the eventDrag props is used for ALL interactions
+}
+function isDateSelectionValid(dateSelection, calendar) {
+    return isNewPropsValid({ dateSelection: dateSelection }, calendar);
+}
+function isNewPropsValid(newProps, calendar) {
+    var view = calendar.view;
+    var props = __assign({ businessHours: view ? view.props.businessHours : createEmptyEventStore(), dateSelection: '', eventStore: calendar.state.eventStore, eventUiBases: calendar.eventUiBases, eventSelection: '', eventDrag: null, eventResize: null }, newProps);
+    return (calendar.pluginSystem.hooks.isPropsValid || isPropsValid)(props, calendar);
+}
+function isPropsValid(state, calendar, dateSpanMeta, filterConfig) {
+    if (dateSpanMeta === void 0) { dateSpanMeta = {}; }
+    if (state.eventDrag && !isInteractionPropsValid(state, calendar, dateSpanMeta, filterConfig)) {
+        return false;
+    }
+    if (state.dateSelection && !isDateSelectionPropsValid(state, calendar, dateSpanMeta, filterConfig)) {
+        return false;
+    }
+    return true;
+}
+// Moving Event Validation
+// ------------------------------------------------------------------------------------------------------------------------
+function isInteractionPropsValid(state, calendar, dateSpanMeta, filterConfig) {
+    var interaction = state.eventDrag; // HACK: the eventDrag props is used for ALL interactions
+    var subjectEventStore = interaction.mutatedEvents;
+    var subjectDefs = subjectEventStore.defs;
+    var subjectInstances = subjectEventStore.instances;
+    var subjectConfigs = compileEventUis(subjectDefs, interaction.isEvent ?
+        state.eventUiBases :
+        { '': calendar.selectionConfig } // if not a real event, validate as a selection
+    );
+    if (filterConfig) {
+        subjectConfigs = mapHash(subjectConfigs, filterConfig);
+    }
+    var otherEventStore = excludeInstances(state.eventStore, interaction.affectedEvents.instances); // exclude the subject events. TODO: exclude defs too?
+    var otherDefs = otherEventStore.defs;
+    var otherInstances = otherEventStore.instances;
+    var otherConfigs = compileEventUis(otherDefs, state.eventUiBases);
+    for (var subjectInstanceId in subjectInstances) {
+        var subjectInstance = subjectInstances[subjectInstanceId];
+        var subjectRange = subjectInstance.range;
+        var subjectConfig = subjectConfigs[subjectInstance.defId];
+        var subjectDef = subjectDefs[subjectInstance.defId];
+        // constraint
+        if (!allConstraintsPass(subjectConfig.constraints, subjectRange, otherEventStore, state.businessHours, calendar)) {
+            return false;
+        }
+        // overlap
+        var overlapFunc = calendar.opt('eventOverlap');
+        if (typeof overlapFunc !== 'function') {
+            overlapFunc = null;
+        }
+        for (var otherInstanceId in otherInstances) {
+            var otherInstance = otherInstances[otherInstanceId];
+            // intersect! evaluate
+            if (rangesIntersect(subjectRange, otherInstance.range)) {
+                var otherOverlap = otherConfigs[otherInstance.defId].overlap;
+                // consider the other event's overlap. only do this if the subject event is a "real" event
+                if (otherOverlap === false && interaction.isEvent) {
+                    return false;
+                }
+                if (subjectConfig.overlap === false) {
+                    return false;
+                }
+                if (overlapFunc && !overlapFunc(new EventApi(calendar, otherDefs[otherInstance.defId], otherInstance), // still event
+                new EventApi(calendar, subjectDef, subjectInstance) // moving event
+                )) {
+                    return false;
+                }
+            }
+        }
+        // allow (a function)
+        var calendarEventStore = calendar.state.eventStore; // need global-to-calendar, not local to component (splittable)state
+        for (var _i = 0, _a = subjectConfig.allows; _i < _a.length; _i++) {
+            var subjectAllow = _a[_i];
+            var subjectDateSpan = __assign({}, dateSpanMeta, { range: subjectInstance.range, allDay: subjectDef.allDay });
+            var origDef = calendarEventStore.defs[subjectDef.defId];
+            var origInstance = calendarEventStore.instances[subjectInstanceId];
+            var eventApi = void 0;
+            if (origDef) { // was previously in the calendar
+                eventApi = new EventApi(calendar, origDef, origInstance);
+            }
+            else { // was an external event
+                eventApi = new EventApi(calendar, subjectDef); // no instance, because had no dates
+            }
+            if (!subjectAllow(calendar.buildDateSpanApi(subjectDateSpan), eventApi)) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+// Date Selection Validation
+// ------------------------------------------------------------------------------------------------------------------------
+function isDateSelectionPropsValid(state, calendar, dateSpanMeta, filterConfig) {
+    var relevantEventStore = state.eventStore;
+    var relevantDefs = relevantEventStore.defs;
+    var relevantInstances = relevantEventStore.instances;
+    var selection = state.dateSelection;
+    var selectionRange = selection.range;
+    var selectionConfig = calendar.selectionConfig;
+    if (filterConfig) {
+        selectionConfig = filterConfig(selectionConfig);
+    }
+    // constraint
+    if (!allConstraintsPass(selectionConfig.constraints, selectionRange, relevantEventStore, state.businessHours, calendar)) {
+        return false;
+    }
+    // overlap
+    var overlapFunc = calendar.opt('selectOverlap');
+    if (typeof overlapFunc !== 'function') {
+        overlapFunc = null;
+    }
+    for (var relevantInstanceId in relevantInstances) {
+        var relevantInstance = relevantInstances[relevantInstanceId];
+        // intersect! evaluate
+        if (rangesIntersect(selectionRange, relevantInstance.range)) {
+            if (selectionConfig.overlap === false) {
+                return false;
+            }
+            if (overlapFunc && !overlapFunc(new EventApi(calendar, relevantDefs[relevantInstance.defId], relevantInstance))) {
+                return false;
+            }
+        }
+    }
+    // allow (a function)
+    for (var _i = 0, _a = selectionConfig.allows; _i < _a.length; _i++) {
+        var selectionAllow = _a[_i];
+        var fullDateSpan = __assign({}, dateSpanMeta, selection);
+        if (!selectionAllow(calendar.buildDateSpanApi(fullDateSpan), null)) {
+            return false;
+        }
+    }
+    return true;
+}
+// Constraint Utils
+// ------------------------------------------------------------------------------------------------------------------------
+function allConstraintsPass(constraints, subjectRange, otherEventStore, businessHoursUnexpanded, calendar) {
+    for (var _i = 0, constraints_1 = constraints; _i < constraints_1.length; _i++) {
+        var constraint = constraints_1[_i];
+        if (!anyRangesContainRange(constraintToRanges(constraint, subjectRange, otherEventStore, businessHoursUnexpanded, calendar), subjectRange)) {
+            return false;
+        }
+    }
+    return true;
+}
+function constraintToRanges(constraint, subjectRange, // for expanding a recurring constraint, or expanding business hours
+otherEventStore, // for if constraint is an even group ID
+businessHoursUnexpanded, // for if constraint is 'businessHours'
+calendar // for expanding businesshours
+) {
+    if (constraint === 'businessHours') {
+        return eventStoreToRanges(expandRecurring(businessHoursUnexpanded, subjectRange, calendar));
+    }
+    else if (typeof constraint === 'string') { // an group ID
+        return eventStoreToRanges(filterEventStoreDefs(otherEventStore, function (eventDef) {
+            return eventDef.groupId === constraint;
+        }));
+    }
+    else if (typeof constraint === 'object' && constraint) { // non-null object
+        return eventStoreToRanges(expandRecurring(constraint, subjectRange, calendar));
+    }
+    return []; // if it's false
+}
+// TODO: move to event-store file?
+function eventStoreToRanges(eventStore) {
+    var instances = eventStore.instances;
+    var ranges = [];
+    for (var instanceId in instances) {
+        ranges.push(instances[instanceId].range);
+    }
+    return ranges;
+}
+// TODO: move to geom file?
+function anyRangesContainRange(outerRanges, innerRange) {
+    for (var _i = 0, outerRanges_1 = outerRanges; _i < outerRanges_1.length; _i++) {
+        var outerRange = outerRanges_1[_i];
+        if (rangeContainsRange(outerRange, innerRange)) {
+            return true;
+        }
+    }
+    return false;
+}
+// Parsing
+// ------------------------------------------------------------------------------------------------------------------------
+function normalizeConstraint(input, calendar) {
+    if (Array.isArray(input)) {
+        return parseEvents(input, '', calendar, true); // allowOpenRange=true
+    }
+    else if (typeof input === 'object' && input) { // non-null object
+        return parseEvents([input], '', calendar, true); // allowOpenRange=true
+    }
+    else if (input != null) {
+        return String(input);
+    }
+    else {
+        return null;
+    }
+}
+
+function htmlEscape(s) {
+    return (s + '').replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/'/g, '&#039;')
+        .replace(/"/g, '&quot;')
+        .replace(/\n/g, '<br />');
+}
+// Given a hash of CSS properties, returns a string of CSS.
+// Uses property names as-is (no camel-case conversion). Will not make statements for null/undefined values.
+function cssToStr(cssProps) {
+    var statements = [];
+    for (var name_1 in cssProps) {
+        var val = cssProps[name_1];
+        if (val != null && val !== '') {
+            statements.push(name_1 + ':' + val);
+        }
+    }
+    return statements.join(';');
+}
+// Given an object hash of HTML attribute names to values,
+// generates a string that can be injected between < > in HTML
+function attrsToStr(attrs) {
+    var parts = [];
+    for (var name_2 in attrs) {
+        var val = attrs[name_2];
+        if (val != null) {
+            parts.push(name_2 + '="' + htmlEscape(val) + '"');
+        }
+    }
+    return parts.join(' ');
+}
+function parseClassName(raw) {
+    if (Array.isArray(raw)) {
+        return raw;
+    }
+    else if (typeof raw === 'string') {
+        return raw.split(/\s+/);
+    }
+    else {
+        return [];
+    }
+}
+
+var UNSCOPED_EVENT_UI_PROPS = {
+    editable: Boolean,
+    startEditable: Boolean,
+    durationEditable: Boolean,
+    constraint: null,
+    overlap: null,
+    allow: null,
+    className: parseClassName,
+    classNames: parseClassName,
+    color: String,
+    backgroundColor: String,
+    borderColor: String,
+    textColor: String
+};
+function processUnscopedUiProps(rawProps, calendar, leftovers) {
+    var props = refineProps(rawProps, UNSCOPED_EVENT_UI_PROPS, {}, leftovers);
+    var constraint = normalizeConstraint(props.constraint, calendar);
+    return {
+        startEditable: props.startEditable != null ? props.startEditable : props.editable,
+        durationEditable: props.durationEditable != null ? props.durationEditable : props.editable,
+        constraints: constraint != null ? [constraint] : [],
+        overlap: props.overlap,
+        allows: props.allow != null ? [props.allow] : [],
+        backgroundColor: props.backgroundColor || props.color,
+        borderColor: props.borderColor || props.color,
+        textColor: props.textColor,
+        classNames: props.classNames.concat(props.className)
+    };
+}
+function processScopedUiProps(prefix, rawScoped, calendar, leftovers) {
+    var rawUnscoped = {};
+    var wasFound = {};
+    for (var key in UNSCOPED_EVENT_UI_PROPS) {
+        var scopedKey = prefix + capitaliseFirstLetter(key);
+        rawUnscoped[key] = rawScoped[scopedKey];
+        wasFound[scopedKey] = true;
+    }
+    if (prefix === 'event') {
+        rawUnscoped.editable = rawScoped.editable; // special case. there is no 'eventEditable', just 'editable'
+    }
+    if (leftovers) {
+        for (var key in rawScoped) {
+            if (!wasFound[key]) {
+                leftovers[key] = rawScoped[key];
+            }
+        }
+    }
+    return processUnscopedUiProps(rawUnscoped, calendar);
+}
+var EMPTY_EVENT_UI = {
+    startEditable: null,
+    durationEditable: null,
+    constraints: [],
+    overlap: null,
+    allows: [],
+    backgroundColor: '',
+    borderColor: '',
+    textColor: '',
+    classNames: []
+};
+// prevent against problems with <2 args!
+function combineEventUis(uis) {
+    return uis.reduce(combineTwoEventUis, EMPTY_EVENT_UI);
+}
+function combineTwoEventUis(item0, item1) {
+    return {
+        startEditable: item1.startEditable != null ? item1.startEditable : item0.startEditable,
+        durationEditable: item1.durationEditable != null ? item1.durationEditable : item0.durationEditable,
+        constraints: item0.constraints.concat(item1.constraints),
+        overlap: typeof item1.overlap === 'boolean' ? item1.overlap : item0.overlap,
+        allows: item0.allows.concat(item1.allows),
+        backgroundColor: item1.backgroundColor || item0.backgroundColor,
+        borderColor: item1.borderColor || item0.borderColor,
+        textColor: item1.textColor || item0.textColor,
+        classNames: item0.classNames.concat(item1.classNames)
+    };
+}
+
+var NON_DATE_PROPS = {
+    id: String,
+    groupId: String,
+    title: String,
+    url: String,
+    rendering: String,
+    extendedProps: null
+};
+var DATE_PROPS = {
+    start: null,
+    date: null,
+    end: null,
+    allDay: null
+};
+var uid = 0;
+function parseEvent(raw, sourceId, calendar, allowOpenRange) {
+    var allDayDefault = computeIsAllDayDefault(sourceId, calendar);
+    var leftovers0 = {};
+    var recurringRes = parseRecurring(raw, // raw, but with single-event stuff stripped out
+    allDayDefault, calendar.dateEnv, calendar.pluginSystem.hooks.recurringTypes, leftovers0 // will populate with non-recurring props
+    );
+    if (recurringRes) {
+        var def = parseEventDef(leftovers0, sourceId, recurringRes.allDay, Boolean(recurringRes.duration), calendar);
+        def.recurringDef = {
+            typeId: recurringRes.typeId,
+            typeData: recurringRes.typeData,
+            duration: recurringRes.duration
+        };
+        return { def: def, instance: null };
+    }
+    else {
+        var leftovers1 = {};
+        var singleRes = parseSingle(raw, allDayDefault, calendar, leftovers1, allowOpenRange);
+        if (singleRes) {
+            var def = parseEventDef(leftovers1, sourceId, singleRes.allDay, singleRes.hasEnd, calendar);
+            var instance = createEventInstance(def.defId, singleRes.range, singleRes.forcedStartTzo, singleRes.forcedEndTzo);
+            return { def: def, instance: instance };
+        }
+    }
+    return null;
+}
+/*
+Will NOT populate extendedProps with the leftover properties.
+Will NOT populate date-related props.
+The EventNonDateInput has been normalized (id => publicId, etc).
+*/
+function parseEventDef(raw, sourceId, allDay, hasEnd, calendar) {
+    var leftovers = {};
+    var def = pluckNonDateProps(raw, calendar, leftovers);
+    def.defId = String(uid++);
+    def.sourceId = sourceId;
+    def.allDay = allDay;
+    def.hasEnd = hasEnd;
+    for (var _i = 0, _a = calendar.pluginSystem.hooks.eventDefParsers; _i < _a.length; _i++) {
+        var eventDefParser = _a[_i];
+        var newLeftovers = {};
+        eventDefParser(def, leftovers, newLeftovers);
+        leftovers = newLeftovers;
+    }
+    def.extendedProps = __assign(leftovers, def.extendedProps || {});
+    // help out EventApi from having user modify props
+    Object.freeze(def.ui.classNames);
+    Object.freeze(def.extendedProps);
+    return def;
+}
+function createEventInstance(defId, range, forcedStartTzo, forcedEndTzo) {
+    return {
+        instanceId: String(uid++),
+        defId: defId,
+        range: range,
+        forcedStartTzo: forcedStartTzo == null ? null : forcedStartTzo,
+        forcedEndTzo: forcedEndTzo == null ? null : forcedEndTzo
+    };
+}
+function parseSingle(raw, allDayDefault, calendar, leftovers, allowOpenRange) {
+    var props = pluckDateProps(raw, leftovers);
+    var allDay = props.allDay;
+    var startMeta;
+    var startMarker = null;
+    var hasEnd = false;
+    var endMeta;
+    var endMarker = null;
+    startMeta = calendar.dateEnv.createMarkerMeta(props.start);
+    if (startMeta) {
+        startMarker = startMeta.marker;
+    }
+    else if (!allowOpenRange) {
+        return null;
+    }
+    if (props.end != null) {
+        endMeta = calendar.dateEnv.createMarkerMeta(props.end);
+    }
+    if (allDay == null) {
+        if (allDayDefault != null) {
+            allDay = allDayDefault;
+        }
+        else {
+            // fall back to the date props LAST
+            allDay = (!startMeta || startMeta.isTimeUnspecified) &&
+                (!endMeta || endMeta.isTimeUnspecified);
+        }
+    }
+    if (allDay && startMarker) {
+        startMarker = startOfDay(startMarker);
+    }
+    if (endMeta) {
+        endMarker = endMeta.marker;
+        if (allDay) {
+            endMarker = startOfDay(endMarker);
+        }
+        if (startMarker && endMarker <= startMarker) {
+            endMarker = null;
+        }
+    }
+    if (endMarker) {
+        hasEnd = true;
+    }
+    else if (!allowOpenRange) {
+        hasEnd = calendar.opt('forceEventDuration') || false;
+        endMarker = calendar.dateEnv.add(startMarker, allDay ?
+            calendar.defaultAllDayEventDuration :
+            calendar.defaultTimedEventDuration);
+    }
+    return {
+        allDay: allDay,
+        hasEnd: hasEnd,
+        range: { start: startMarker, end: endMarker },
+        forcedStartTzo: startMeta ? startMeta.forcedTzo : null,
+        forcedEndTzo: endMeta ? endMeta.forcedTzo : null
+    };
+}
+function pluckDateProps(raw, leftovers) {
+    var props = refineProps(raw, DATE_PROPS, {}, leftovers);
+    props.start = (props.start !== null) ? props.start : props.date;
+    delete props.date;
+    return props;
+}
+function pluckNonDateProps(raw, calendar, leftovers) {
+    var preLeftovers = {};
+    var props = refineProps(raw, NON_DATE_PROPS, {}, preLeftovers);
+    var ui = processUnscopedUiProps(preLeftovers, calendar, leftovers);
+    props.publicId = props.id;
+    delete props.id;
+    props.ui = ui;
+    return props;
+}
+function computeIsAllDayDefault(sourceId, calendar) {
+    var res = null;
+    if (sourceId) {
+        var source = calendar.state.eventSources[sourceId];
+        res = source.allDayDefault;
+    }
+    if (res == null) {
+        res = calendar.opt('allDayDefault');
+    }
+    return res;
+}
+
+var DEF_DEFAULTS = {
+    startTime: '09:00',
+    endTime: '17:00',
+    daysOfWeek: [1, 2, 3, 4, 5],
+    rendering: 'inverse-background',
+    classNames: 'fc-nonbusiness',
+    groupId: '_businessHours' // so multiple defs get grouped
+};
+/*
+TODO: pass around as EventDefHash!!!
+*/
+function parseBusinessHours(input, calendar) {
+    return parseEvents(refineInputs(input), '', calendar);
+}
+function refineInputs(input) {
+    var rawDefs;
+    if (input === true) {
+        rawDefs = [{}]; // will get DEF_DEFAULTS verbatim
+    }
+    else if (Array.isArray(input)) {
+        // if specifying an array, every sub-definition NEEDS a day-of-week
+        rawDefs = input.filter(function (rawDef) {
+            return rawDef.daysOfWeek;
+        });
+    }
+    else if (typeof input === 'object' && input) { // non-null object
+        rawDefs = [input];
+    }
+    else { // is probably false
+        rawDefs = [];
+    }
+    rawDefs = rawDefs.map(function (rawDef) {
+        return __assign({}, DEF_DEFAULTS, rawDef);
+    });
+    return rawDefs;
+}
+
+function memoizeRendering(renderFunc, unrenderFunc, dependencies) {
+    if (dependencies === void 0) { dependencies = []; }
+    var dependents = [];
+    var thisContext;
+    var prevArgs;
+    function unrender() {
+        if (prevArgs) {
+            for (var _i = 0, dependents_1 = dependents; _i < dependents_1.length; _i++) {
+                var dependent = dependents_1[_i];
+                dependent.unrender();
+            }
+            if (unrenderFunc) {
+                unrenderFunc.apply(thisContext, prevArgs);
+            }
+            prevArgs = null;
+        }
+    }
+    function res() {
+        if (!prevArgs || !isArraysEqual(prevArgs, arguments)) {
+            unrender();
+            thisContext = this;
+            prevArgs = arguments;
+            renderFunc.apply(this, arguments);
+        }
+    }
+    res.dependents = dependents;
+    res.unrender = unrender;
+    for (var _i = 0, dependencies_1 = dependencies; _i < dependencies_1.length; _i++) {
+        var dependency = dependencies_1[_i];
+        dependency.dependents.push(res);
+    }
+    return res;
+}
+
+var EMPTY_EVENT_STORE = createEmptyEventStore(); // for purecomponents. TODO: keep elsewhere
+var Splitter = /** @class */ (function () {
+    function Splitter() {
+        this.getKeysForEventDefs = memoize(this._getKeysForEventDefs);
+        this.splitDateSelection = memoize(this._splitDateSpan);
+        this.splitEventStore = memoize(this._splitEventStore);
+        this.splitIndividualUi = memoize(this._splitIndividualUi);
+        this.splitEventDrag = memoize(this._splitInteraction);
+        this.splitEventResize = memoize(this._splitInteraction);
+        this.eventUiBuilders = {}; // TODO: typescript protection
+    }
+    Splitter.prototype.splitProps = function (props) {
+        var _this = this;
+        var keyInfos = this.getKeyInfo(props);
+        var defKeys = this.getKeysForEventDefs(props.eventStore);
+        var dateSelections = this.splitDateSelection(props.dateSelection);
+        var individualUi = this.splitIndividualUi(props.eventUiBases, defKeys); // the individual *bases*
+        var eventStores = this.splitEventStore(props.eventStore, defKeys);
+        var eventDrags = this.splitEventDrag(props.eventDrag);
+        var eventResizes = this.splitEventResize(props.eventResize);
+        var splitProps = {};
+        this.eventUiBuilders = mapHash(keyInfos, function (info, key) {
+            return _this.eventUiBuilders[key] || memoize(buildEventUiForKey);
+        });
+        for (var key in keyInfos) {
+            var keyInfo = keyInfos[key];
+            var eventStore = eventStores[key] || EMPTY_EVENT_STORE;
+            var buildEventUi = this.eventUiBuilders[key];
+            splitProps[key] = {
+                businessHours: keyInfo.businessHours || props.businessHours,
+                dateSelection: dateSelections[key] || null,
+                eventStore: eventStore,
+                eventUiBases: buildEventUi(props.eventUiBases[''], keyInfo.ui, individualUi[key]),
+                eventSelection: eventStore.instances[props.eventSelection] ? props.eventSelection : '',
+                eventDrag: eventDrags[key] || null,
+                eventResize: eventResizes[key] || null
+            };
+        }
+        return splitProps;
+    };
+    Splitter.prototype._splitDateSpan = function (dateSpan) {
+        var dateSpans = {};
+        if (dateSpan) {
+            var keys = this.getKeysForDateSpan(dateSpan);
+            for (var _i = 0, keys_1 = keys; _i < keys_1.length; _i++) {
+                var key = keys_1[_i];
+                dateSpans[key] = dateSpan;
+            }
+        }
+        return dateSpans;
+    };
+    Splitter.prototype._getKeysForEventDefs = function (eventStore) {
+        var _this = this;
+        return mapHash(eventStore.defs, function (eventDef) {
+            return _this.getKeysForEventDef(eventDef);
+        });
+    };
+    Splitter.prototype._splitEventStore = function (eventStore, defKeys) {
+        var defs = eventStore.defs, instances = eventStore.instances;
+        var splitStores = {};
+        for (var defId in defs) {
+            for (var _i = 0, _a = defKeys[defId]; _i < _a.length; _i++) {
+                var key = _a[_i];
+                if (!splitStores[key]) {
+                    splitStores[key] = createEmptyEventStore();
+                }
+                splitStores[key].defs[defId] = defs[defId];
+            }
+        }
+        for (var instanceId in instances) {
+            var instance = instances[instanceId];
+            for (var _b = 0, _c = defKeys[instance.defId]; _b < _c.length; _b++) {
+                var key = _c[_b];
+                if (splitStores[key]) { // must have already been created
+                    splitStores[key].instances[instanceId] = instance;
+                }
+            }
+        }
+        return splitStores;
+    };
+    Splitter.prototype._splitIndividualUi = function (eventUiBases, defKeys) {
+        var splitHashes = {};
+        for (var defId in eventUiBases) {
+            if (defId) { // not the '' key
+                for (var _i = 0, _a = defKeys[defId]; _i < _a.length; _i++) {
+                    var key = _a[_i];
+                    if (!splitHashes[key]) {
+                        splitHashes[key] = {};
+                    }
+                    splitHashes[key][defId] = eventUiBases[defId];
+                }
+            }
+        }
+        return splitHashes;
+    };
+    Splitter.prototype._splitInteraction = function (interaction) {
+        var splitStates = {};
+        if (interaction) {
+            var affectedStores_1 = this._splitEventStore(interaction.affectedEvents, this._getKeysForEventDefs(interaction.affectedEvents) // can't use cached. might be events from other calendar
+            );
+            // can't rely on defKeys because event data is mutated
+            var mutatedKeysByDefId = this._getKeysForEventDefs(interaction.mutatedEvents);
+            var mutatedStores_1 = this._splitEventStore(interaction.mutatedEvents, mutatedKeysByDefId);
+            var populate = function (key) {
+                if (!splitStates[key]) {
+                    splitStates[key] = {
+                        affectedEvents: affectedStores_1[key] || EMPTY_EVENT_STORE,
+                        mutatedEvents: mutatedStores_1[key] || EMPTY_EVENT_STORE,
+                        isEvent: interaction.isEvent,
+                        origSeg: interaction.origSeg
+                    };
+                }
+            };
+            for (var key in affectedStores_1) {
+                populate(key);
+            }
+            for (var key in mutatedStores_1) {
+                populate(key);
+            }
+        }
+        return splitStates;
+    };
+    return Splitter;
+}());
+function buildEventUiForKey(allUi, eventUiForKey, individualUi) {
+    var baseParts = [];
+    if (allUi) {
+        baseParts.push(allUi);
+    }
+    if (eventUiForKey) {
+        baseParts.push(eventUiForKey);
+    }
+    var stuff = {
+        '': combineEventUis(baseParts)
+    };
+    if (individualUi) {
+        __assign(stuff, individualUi);
+    }
+    return stuff;
+}
+
+// Generates HTML for an anchor to another view into the calendar.
+// Will either generate an <a> tag or a non-clickable <span> tag, depending on enabled settings.
+// `gotoOptions` can either be a DateMarker, or an object with the form:
+// { date, type, forceOff }
+// `type` is a view-type like "day" or "week". default value is "day".
+// `attrs` and `innerHtml` are use to generate the rest of the HTML tag.
+function buildGotoAnchorHtml(allOptions, dateEnv, gotoOptions, attrs, innerHtml) {
+    var date;
+    var type;
+    var forceOff;
+    var finalOptions;
+    if (gotoOptions instanceof Date) {
+        date = gotoOptions; // a single date-like input
+    }
+    else {
+        date = gotoOptions.date;
+        type = gotoOptions.type;
+        forceOff = gotoOptions.forceOff;
+    }
+    finalOptions = {
+        date: dateEnv.formatIso(date, { omitTime: true }),
+        type: type || 'day'
+    };
+    if (typeof attrs === 'string') {
+        innerHtml = attrs;
+        attrs = null;
+    }
+    attrs = attrs ? ' ' + attrsToStr(attrs) : ''; // will have a leading space
+    innerHtml = innerHtml || '';
+    if (!forceOff && allOptions.navLinks) {
+        return '<a' + attrs +
+            ' data-goto="' + htmlEscape(JSON.stringify(finalOptions)) + '">' +
+            innerHtml +
+            '</a>';
+    }
+    else {
+        return '<span' + attrs + '>' +
+            innerHtml +
+            '</span>';
+    }
+}
+function getAllDayHtml(allOptions) {
+    return allOptions.allDayHtml || htmlEscape(allOptions.allDayText);
+}
+// Computes HTML classNames for a single-day element
+function getDayClasses(date, dateProfile, context, noThemeHighlight) {
+    var calendar = context.calendar, options = context.options, theme = context.theme, dateEnv = context.dateEnv;
+    var classes = [];
+    var todayStart;
+    var todayEnd;
+    if (!rangeContainsMarker(dateProfile.activeRange, date)) {
+        classes.push('fc-disabled-day');
+    }
+    else {
+        classes.push('fc-' + DAY_IDS[date.getUTCDay()]);
+        if (options.monthMode &&
+            dateEnv.getMonth(date) !== dateEnv.getMonth(dateProfile.currentRange.start)) {
+            classes.push('fc-other-month');
+        }
+        todayStart = startOfDay(calendar.getNow());
+        todayEnd = addDays(todayStart, 1);
+        if (date < todayStart) {
+            classes.push('fc-past');
+        }
+        else if (date >= todayEnd) {
+            classes.push('fc-future');
+        }
+        else {
+            classes.push('fc-today');
+            if (noThemeHighlight !== true) {
+                classes.push(theme.getClass('today'));
+            }
+        }
+    }
+    return classes;
+}
+
+// given a function that resolves a result asynchronously.
+// the function can either call passed-in success and failure callbacks,
+// or it can return a promise.
+// if you need to pass additional params to func, bind them first.
+function unpromisify(func, success, failure) {
+    // guard against success/failure callbacks being called more than once
+    // and guard against a promise AND callback being used together.
+    var isResolved = false;
+    var wrappedSuccess = function () {
+        if (!isResolved) {
+            isResolved = true;
+            success.apply(this, arguments);
+        }
+    };
+    var wrappedFailure = function () {
+        if (!isResolved) {
+            isResolved = true;
+            if (failure) {
+                failure.apply(this, arguments);
+            }
+        }
+    };
+    var res = func(wrappedSuccess, wrappedFailure);
+    if (res && typeof res.then === 'function') {
+        res.then(wrappedSuccess, wrappedFailure);
+    }
+}
+
+var Mixin = /** @class */ (function () {
+    function Mixin() {
+    }
+    // mix into a CLASS
+    Mixin.mixInto = function (destClass) {
+        this.mixIntoObj(destClass.prototype);
+    };
+    // mix into ANY object
+    Mixin.mixIntoObj = function (destObj) {
+        var _this = this;
+        Object.getOwnPropertyNames(this.prototype).forEach(function (name) {
+            if (!destObj[name]) { // if destination doesn't already define it
+                destObj[name] = _this.prototype[name];
+            }
+        });
+    };
+    /*
+    will override existing methods
+    TODO: remove! not used anymore
+    */
+    Mixin.mixOver = function (destClass) {
+        var _this = this;
+        Object.getOwnPropertyNames(this.prototype).forEach(function (name) {
+            destClass.prototype[name] = _this.prototype[name];
+        });
+    };
+    return Mixin;
+}());
+
+/*
+USAGE:
+  import { default as EmitterMixin, EmitterInterface } from './EmitterMixin'
+in class:
+  on: EmitterInterface['on']
+  one: EmitterInterface['one']
+  off: EmitterInterface['off']
+  trigger: EmitterInterface['trigger']
+  triggerWith: EmitterInterface['triggerWith']
+  hasHandlers: EmitterInterface['hasHandlers']
+after class:
+  EmitterMixin.mixInto(TheClass)
+*/
+var EmitterMixin = /** @class */ (function (_super) {
+    __extends(EmitterMixin, _super);
+    function EmitterMixin() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    EmitterMixin.prototype.on = function (type, handler) {
+        addToHash(this._handlers || (this._handlers = {}), type, handler);
+        return this; // for chaining
+    };
+    // todo: add comments
+    EmitterMixin.prototype.one = function (type, handler) {
+        addToHash(this._oneHandlers || (this._oneHandlers = {}), type, handler);
+        return this; // for chaining
+    };
+    EmitterMixin.prototype.off = function (type, handler) {
+        if (this._handlers) {
+            removeFromHash(this._handlers, type, handler);
+        }
+        if (this._oneHandlers) {
+            removeFromHash(this._oneHandlers, type, handler);
+        }
+        return this; // for chaining
+    };
+    EmitterMixin.prototype.trigger = function (type) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        this.triggerWith(type, this, args);
+        return this; // for chaining
+    };
+    EmitterMixin.prototype.triggerWith = function (type, context, args) {
+        if (this._handlers) {
+            applyAll(this._handlers[type], context, args);
+        }
+        if (this._oneHandlers) {
+            applyAll(this._oneHandlers[type], context, args);
+            delete this._oneHandlers[type]; // will never fire again
+        }
+        return this; // for chaining
+    };
+    EmitterMixin.prototype.hasHandlers = function (type) {
+        return (this._handlers && this._handlers[type] && this._handlers[type].length) ||
+            (this._oneHandlers && this._oneHandlers[type] && this._oneHandlers[type].length);
+    };
+    return EmitterMixin;
+}(Mixin));
+function addToHash(hash, type, handler) {
+    (hash[type] || (hash[type] = []))
+        .push(handler);
+}
+function removeFromHash(hash, type, handler) {
+    if (handler) {
+        if (hash[type]) {
+            hash[type] = hash[type].filter(function (func) {
+                return func !== handler;
+            });
+        }
+    }
+    else {
+        delete hash[type]; // remove all handler funcs for this type
+    }
+}
+
+/*
+Records offset information for a set of elements, relative to an origin element.
+Can record the left/right OR the top/bottom OR both.
+Provides methods for querying the cache by position.
+*/
+var PositionCache = /** @class */ (function () {
+    function PositionCache(originEl, els, isHorizontal, isVertical) {
+        this.originEl = originEl;
+        this.els = els;
+        this.isHorizontal = isHorizontal;
+        this.isVertical = isVertical;
+    }
+    // Queries the els for coordinates and stores them.
+    // Call this method before using and of the get* methods below.
+    PositionCache.prototype.build = function () {
+        var originEl = this.originEl;
+        var originClientRect = this.originClientRect =
+            originEl.getBoundingClientRect(); // relative to viewport top-left
+        if (this.isHorizontal) {
+            this.buildElHorizontals(originClientRect.left);
+        }
+        if (this.isVertical) {
+            this.buildElVerticals(originClientRect.top);
+        }
+    };
+    // Populates the left/right internal coordinate arrays
+    PositionCache.prototype.buildElHorizontals = function (originClientLeft) {
+        var lefts = [];
+        var rights = [];
+        for (var _i = 0, _a = this.els; _i < _a.length; _i++) {
+            var el = _a[_i];
+            var rect = el.getBoundingClientRect();
+            lefts.push(rect.left - originClientLeft);
+            rights.push(rect.right - originClientLeft);
+        }
+        this.lefts = lefts;
+        this.rights = rights;
+    };
+    // Populates the top/bottom internal coordinate arrays
+    PositionCache.prototype.buildElVerticals = function (originClientTop) {
+        var tops = [];
+        var bottoms = [];
+        for (var _i = 0, _a = this.els; _i < _a.length; _i++) {
+            var el = _a[_i];
+            var rect = el.getBoundingClientRect();
+            tops.push(rect.top - originClientTop);
+            bottoms.push(rect.bottom - originClientTop);
+        }
+        this.tops = tops;
+        this.bottoms = bottoms;
+    };
+    // Given a left offset (from document left), returns the index of the el that it horizontally intersects.
+    // If no intersection is made, returns undefined.
+    PositionCache.prototype.leftToIndex = function (leftPosition) {
+        var lefts = this.lefts;
+        var rights = this.rights;
+        var len = lefts.length;
+        var i;
+        for (i = 0; i < len; i++) {
+            if (leftPosition >= lefts[i] && leftPosition < rights[i]) {
+                return i;
+            }
+        }
+    };
+    // Given a top offset (from document top), returns the index of the el that it vertically intersects.
+    // If no intersection is made, returns undefined.
+    PositionCache.prototype.topToIndex = function (topPosition) {
+        var tops = this.tops;
+        var bottoms = this.bottoms;
+        var len = tops.length;
+        var i;
+        for (i = 0; i < len; i++) {
+            if (topPosition >= tops[i] && topPosition < bottoms[i]) {
+                return i;
+            }
+        }
+    };
+    // Gets the width of the element at the given index
+    PositionCache.prototype.getWidth = function (leftIndex) {
+        return this.rights[leftIndex] - this.lefts[leftIndex];
+    };
+    // Gets the height of the element at the given index
+    PositionCache.prototype.getHeight = function (topIndex) {
+        return this.bottoms[topIndex] - this.tops[topIndex];
+    };
+    return PositionCache;
+}());
+
+/*
+An object for getting/setting scroll-related information for an element.
+Internally, this is done very differently for window versus DOM element,
+so this object serves as a common interface.
+*/
+var ScrollController = /** @class */ (function () {
+    function ScrollController() {
+    }
+    ScrollController.prototype.getMaxScrollTop = function () {
+        return this.getScrollHeight() - this.getClientHeight();
+    };
+    ScrollController.prototype.getMaxScrollLeft = function () {
+        return this.getScrollWidth() - this.getClientWidth();
+    };
+    ScrollController.prototype.canScrollVertically = function () {
+        return this.getMaxScrollTop() > 0;
+    };
+    ScrollController.prototype.canScrollHorizontally = function () {
+        return this.getMaxScrollLeft() > 0;
+    };
+    ScrollController.prototype.canScrollUp = function () {
+        return this.getScrollTop() > 0;
+    };
+    ScrollController.prototype.canScrollDown = function () {
+        return this.getScrollTop() < this.getMaxScrollTop();
+    };
+    ScrollController.prototype.canScrollLeft = function () {
+        return this.getScrollLeft() > 0;
+    };
+    ScrollController.prototype.canScrollRight = function () {
+        return this.getScrollLeft() < this.getMaxScrollLeft();
+    };
+    return ScrollController;
+}());
+var ElementScrollController = /** @class */ (function (_super) {
+    __extends(ElementScrollController, _super);
+    function ElementScrollController(el) {
+        var _this = _super.call(this) || this;
+        _this.el = el;
+        return _this;
+    }
+    ElementScrollController.prototype.getScrollTop = function () {
+        return this.el.scrollTop;
+    };
+    ElementScrollController.prototype.getScrollLeft = function () {
+        return this.el.scrollLeft;
+    };
+    ElementScrollController.prototype.setScrollTop = function (top) {
+        this.el.scrollTop = top;
+    };
+    ElementScrollController.prototype.setScrollLeft = function (left) {
+        this.el.scrollLeft = left;
+    };
+    ElementScrollController.prototype.getScrollWidth = function () {
+        return this.el.scrollWidth;
+    };
+    ElementScrollController.prototype.getScrollHeight = function () {
+        return this.el.scrollHeight;
+    };
+    ElementScrollController.prototype.getClientHeight = function () {
+        return this.el.clientHeight;
+    };
+    ElementScrollController.prototype.getClientWidth = function () {
+        return this.el.clientWidth;
+    };
+    return ElementScrollController;
+}(ScrollController));
+var WindowScrollController = /** @class */ (function (_super) {
+    __extends(WindowScrollController, _super);
+    function WindowScrollController() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    WindowScrollController.prototype.getScrollTop = function () {
+        return window.pageYOffset;
+    };
+    WindowScrollController.prototype.getScrollLeft = function () {
+        return window.pageXOffset;
+    };
+    WindowScrollController.prototype.setScrollTop = function (n) {
+        window.scroll(window.pageXOffset, n);
+    };
+    WindowScrollController.prototype.setScrollLeft = function (n) {
+        window.scroll(n, window.pageYOffset);
+    };
+    WindowScrollController.prototype.getScrollWidth = function () {
+        return document.documentElement.scrollWidth;
+    };
+    WindowScrollController.prototype.getScrollHeight = function () {
+        return document.documentElement.scrollHeight;
+    };
+    WindowScrollController.prototype.getClientHeight = function () {
+        return document.documentElement.clientHeight;
+    };
+    WindowScrollController.prototype.getClientWidth = function () {
+        return document.documentElement.clientWidth;
+    };
+    return WindowScrollController;
+}(ScrollController));
+
+/*
+Embodies a div that has potential scrollbars
+*/
+var ScrollComponent = /** @class */ (function (_super) {
+    __extends(ScrollComponent, _super);
+    function ScrollComponent(overflowX, overflowY) {
+        var _this = _super.call(this, createElement('div', {
+            className: 'fc-scroller'
+        })) || this;
+        _this.overflowX = overflowX;
+        _this.overflowY = overflowY;
+        _this.applyOverflow();
+        return _this;
+    }
+    // sets to natural height, unlocks overflow
+    ScrollComponent.prototype.clear = function () {
+        this.setHeight('auto');
+        this.applyOverflow();
+    };
+    ScrollComponent.prototype.destroy = function () {
+        removeElement(this.el);
+    };
+    // Overflow
+    // -----------------------------------------------------------------------------------------------------------------
+    ScrollComponent.prototype.applyOverflow = function () {
+        applyStyle(this.el, {
+            overflowX: this.overflowX,
+            overflowY: this.overflowY
+        });
+    };
+    // Causes any 'auto' overflow values to resolves to 'scroll' or 'hidden'.
+    // Useful for preserving scrollbar widths regardless of future resizes.
+    // Can pass in scrollbarWidths for optimization.
+    ScrollComponent.prototype.lockOverflow = function (scrollbarWidths) {
+        var overflowX = this.overflowX;
+        var overflowY = this.overflowY;
+        scrollbarWidths = scrollbarWidths || this.getScrollbarWidths();
+        if (overflowX === 'auto') {
+            overflowX = (scrollbarWidths.bottom || // horizontal scrollbars?
+                this.canScrollHorizontally() // OR scrolling pane with massless scrollbars?
+            ) ? 'scroll' : 'hidden';
+        }
+        if (overflowY === 'auto') {
+            overflowY = (scrollbarWidths.left || scrollbarWidths.right || // horizontal scrollbars?
+                this.canScrollVertically() // OR scrolling pane with massless scrollbars?
+            ) ? 'scroll' : 'hidden';
+        }
+        applyStyle(this.el, { overflowX: overflowX, overflowY: overflowY });
+    };
+    ScrollComponent.prototype.setHeight = function (height) {
+        applyStyleProp(this.el, 'height', height);
+    };
+    ScrollComponent.prototype.getScrollbarWidths = function () {
+        var edges = computeEdges(this.el);
+        return {
+            left: edges.scrollbarLeft,
+            right: edges.scrollbarRight,
+            bottom: edges.scrollbarBottom
+        };
+    };
+    return ScrollComponent;
+}(ElementScrollController));
+
+var Theme = /** @class */ (function () {
+    function Theme(calendarOptions) {
+        this.calendarOptions = calendarOptions;
+        this.processIconOverride();
+    }
+    Theme.prototype.processIconOverride = function () {
+        if (this.iconOverrideOption) {
+            this.setIconOverride(this.calendarOptions[this.iconOverrideOption]);
+        }
+    };
+    Theme.prototype.setIconOverride = function (iconOverrideHash) {
+        var iconClassesCopy;
+        var buttonName;
+        if (typeof iconOverrideHash === 'object' && iconOverrideHash) { // non-null object
+            iconClassesCopy = __assign({}, this.iconClasses);
+            for (buttonName in iconOverrideHash) {
+                iconClassesCopy[buttonName] = this.applyIconOverridePrefix(iconOverrideHash[buttonName]);
+            }
+            this.iconClasses = iconClassesCopy;
+        }
+        else if (iconOverrideHash === false) {
+            this.iconClasses = {};
+        }
+    };
+    Theme.prototype.applyIconOverridePrefix = function (className) {
+        var prefix = this.iconOverridePrefix;
+        if (prefix && className.indexOf(prefix) !== 0) { // if not already present
+            className = prefix + className;
+        }
+        return className;
+    };
+    Theme.prototype.getClass = function (key) {
+        return this.classes[key] || '';
+    };
+    Theme.prototype.getIconClass = function (buttonName) {
+        var className = this.iconClasses[buttonName];
+        if (className) {
+            return this.baseIconClass + ' ' + className;
+        }
+        return '';
+    };
+    Theme.prototype.getCustomButtonIconClass = function (customButtonProps) {
+        var className;
+        if (this.iconOverrideCustomButtonOption) {
+            className = customButtonProps[this.iconOverrideCustomButtonOption];
+            if (className) {
+                return this.baseIconClass + ' ' + this.applyIconOverridePrefix(className);
+            }
+        }
+        return '';
+    };
+    return Theme;
+}());
+Theme.prototype.classes = {};
+Theme.prototype.iconClasses = {};
+Theme.prototype.baseIconClass = '';
+Theme.prototype.iconOverridePrefix = '';
+
+var guid = 0;
+var ComponentContext = /** @class */ (function () {
+    function ComponentContext(calendar, theme, dateEnv, options, view) {
+        this.calendar = calendar;
+        this.theme = theme;
+        this.dateEnv = dateEnv;
+        this.options = options;
+        this.view = view;
+        this.isRtl = options.dir === 'rtl';
+        this.eventOrderSpecs = parseFieldSpecs(options.eventOrder);
+        this.nextDayThreshold = createDuration(options.nextDayThreshold);
+    }
+    ComponentContext.prototype.extend = function (options, view) {
+        return new ComponentContext(this.calendar, this.theme, this.dateEnv, options || this.options, view || this.view);
+    };
+    return ComponentContext;
+}());
+var Component = /** @class */ (function () {
+    function Component() {
+        this.everRendered = false;
+        this.uid = String(guid++);
+    }
+    Component.addEqualityFuncs = function (newFuncs) {
+        this.prototype.equalityFuncs = __assign({}, this.prototype.equalityFuncs, newFuncs);
+    };
+    Component.prototype.receiveProps = function (props, context) {
+        this.receiveContext(context);
+        var _a = recycleProps(this.props || {}, props, this.equalityFuncs), anyChanges = _a.anyChanges, comboProps = _a.comboProps;
+        this.props = comboProps;
+        if (anyChanges) {
+            if (this.everRendered) {
+                this.beforeUpdate();
+            }
+            this.render(comboProps, context);
+            if (this.everRendered) {
+                this.afterUpdate();
+            }
+        }
+        this.everRendered = true;
+    };
+    Component.prototype.receiveContext = function (context) {
+        var oldContext = this.context;
+        this.context = context;
+        if (!oldContext) {
+            this.firstContext(context);
+        }
+    };
+    Component.prototype.render = function (props, context) {
+    };
+    Component.prototype.firstContext = function (context) {
+    };
+    Component.prototype.beforeUpdate = function () {
+    };
+    Component.prototype.afterUpdate = function () {
+    };
+    // after destroy is called, this component won't ever be used again
+    Component.prototype.destroy = function () {
+    };
+    return Component;
+}());
+Component.prototype.equalityFuncs = {};
+/*
+Reuses old values when equal. If anything is unequal, returns newProps as-is.
+Great for PureComponent, but won't be feasible with React, so just eliminate and use React's DOM diffing.
+*/
+function recycleProps(oldProps, newProps, equalityFuncs) {
+    var comboProps = {}; // some old, some new
+    var anyChanges = false;
+    for (var key in newProps) {
+        if (key in oldProps && (oldProps[key] === newProps[key] ||
+            (equalityFuncs[key] && equalityFuncs[key](oldProps[key], newProps[key])))) {
+            // equal to old? use old prop
+            comboProps[key] = oldProps[key];
+        }
+        else {
+            comboProps[key] = newProps[key];
+            anyChanges = true;
+        }
+    }
+    for (var key in oldProps) {
+        if (!(key in newProps)) {
+            anyChanges = true;
+            break;
+        }
+    }
+    return { anyChanges: anyChanges, comboProps: comboProps };
+}
+
+/*
+PURPOSES:
+- hook up to fg, fill, and mirror renderers
+- interface for dragging and hits
+*/
+var DateComponent = /** @class */ (function (_super) {
+    __extends(DateComponent, _super);
+    function DateComponent(el) {
+        var _this = _super.call(this) || this;
+        _this.el = el;
+        return _this;
+    }
+    DateComponent.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        removeElement(this.el);
+    };
+    // Hit System
+    // -----------------------------------------------------------------------------------------------------------------
+    DateComponent.prototype.buildPositionCaches = function () {
+    };
+    DateComponent.prototype.queryHit = function (positionLeft, positionTop, elWidth, elHeight) {
+        return null; // this should be abstract
+    };
+    // Validation
+    // -----------------------------------------------------------------------------------------------------------------
+    DateComponent.prototype.isInteractionValid = function (interaction) {
+        var calendar = this.context.calendar;
+        var dateProfile = this.props.dateProfile; // HACK
+        var instances = interaction.mutatedEvents.instances;
+        if (dateProfile) { // HACK for DayTile
+            for (var instanceId in instances) {
+                if (!rangeContainsRange(dateProfile.validRange, instances[instanceId].range)) {
+                    return false;
+                }
+            }
+        }
+        return isInteractionValid(interaction, calendar);
+    };
+    DateComponent.prototype.isDateSelectionValid = function (selection) {
+        var calendar = this.context.calendar;
+        var dateProfile = this.props.dateProfile; // HACK
+        if (dateProfile && // HACK for DayTile
+            !rangeContainsRange(dateProfile.validRange, selection.range)) {
+            return false;
+        }
+        return isDateSelectionValid(selection, calendar);
+    };
+    // Pointer Interaction Utils
+    // -----------------------------------------------------------------------------------------------------------------
+    DateComponent.prototype.isValidSegDownEl = function (el) {
+        return !this.props.eventDrag && // HACK
+            !this.props.eventResize && // HACK
+            !elementClosest(el, '.fc-mirror') &&
+            (this.isPopover() || !this.isInPopover(el));
+        // ^above line ensures we don't detect a seg interaction within a nested component.
+        // it's a HACK because it only supports a popover as the nested component.
+    };
+    DateComponent.prototype.isValidDateDownEl = function (el) {
+        var segEl = elementClosest(el, this.fgSegSelector);
+        return (!segEl || segEl.classList.contains('fc-mirror')) &&
+            !elementClosest(el, '.fc-more') && // a "more.." link
+            !elementClosest(el, 'a[data-goto]') && // a clickable nav link
+            !this.isInPopover(el);
+    };
+    DateComponent.prototype.isPopover = function () {
+        return this.el.classList.contains('fc-popover');
+    };
+    DateComponent.prototype.isInPopover = function (el) {
+        return Boolean(elementClosest(el, '.fc-popover'));
+    };
+    return DateComponent;
+}(Component));
+DateComponent.prototype.fgSegSelector = '.fc-event-container > *';
+DateComponent.prototype.bgSegSelector = '.fc-bgevent:not(.fc-nonbusiness)';
+
+var uid$1 = 0;
+function createPlugin(input) {
+    return {
+        id: String(uid$1++),
+        deps: input.deps || [],
+        reducers: input.reducers || [],
+        eventDefParsers: input.eventDefParsers || [],
+        isDraggableTransformers: input.isDraggableTransformers || [],
+        eventDragMutationMassagers: input.eventDragMutationMassagers || [],
+        eventDefMutationAppliers: input.eventDefMutationAppliers || [],
+        dateSelectionTransformers: input.dateSelectionTransformers || [],
+        datePointTransforms: input.datePointTransforms || [],
+        dateSpanTransforms: input.dateSpanTransforms || [],
+        views: input.views || {},
+        viewPropsTransformers: input.viewPropsTransformers || [],
+        isPropsValid: input.isPropsValid || null,
+        externalDefTransforms: input.externalDefTransforms || [],
+        eventResizeJoinTransforms: input.eventResizeJoinTransforms || [],
+        viewContainerModifiers: input.viewContainerModifiers || [],
+        eventDropTransformers: input.eventDropTransformers || [],
+        componentInteractions: input.componentInteractions || [],
+        calendarInteractions: input.calendarInteractions || [],
+        themeClasses: input.themeClasses || {},
+        eventSourceDefs: input.eventSourceDefs || [],
+        cmdFormatter: input.cmdFormatter,
+        recurringTypes: input.recurringTypes || [],
+        namedTimeZonedImpl: input.namedTimeZonedImpl,
+        defaultView: input.defaultView || '',
+        elementDraggingImpl: input.elementDraggingImpl,
+        optionChangeHandlers: input.optionChangeHandlers || {}
+    };
+}
+var PluginSystem = /** @class */ (function () {
+    function PluginSystem() {
+        this.hooks = {
+            reducers: [],
+            eventDefParsers: [],
+            isDraggableTransformers: [],
+            eventDragMutationMassagers: [],
+            eventDefMutationAppliers: [],
+            dateSelectionTransformers: [],
+            datePointTransforms: [],
+            dateSpanTransforms: [],
+            views: {},
+            viewPropsTransformers: [],
+            isPropsValid: null,
+            externalDefTransforms: [],
+            eventResizeJoinTransforms: [],
+            viewContainerModifiers: [],
+            eventDropTransformers: [],
+            componentInteractions: [],
+            calendarInteractions: [],
+            themeClasses: {},
+            eventSourceDefs: [],
+            cmdFormatter: null,
+            recurringTypes: [],
+            namedTimeZonedImpl: null,
+            defaultView: '',
+            elementDraggingImpl: null,
+            optionChangeHandlers: {}
+        };
+        this.addedHash = {};
+    }
+    PluginSystem.prototype.add = function (plugin) {
+        if (!this.addedHash[plugin.id]) {
+            this.addedHash[plugin.id] = true;
+            for (var _i = 0, _a = plugin.deps; _i < _a.length; _i++) {
+                var dep = _a[_i];
+                this.add(dep);
+            }
+            this.hooks = combineHooks(this.hooks, plugin);
+        }
+    };
+    return PluginSystem;
+}());
+function combineHooks(hooks0, hooks1) {
+    return {
+        reducers: hooks0.reducers.concat(hooks1.reducers),
+        eventDefParsers: hooks0.eventDefParsers.concat(hooks1.eventDefParsers),
+        isDraggableTransformers: hooks0.isDraggableTransformers.concat(hooks1.isDraggableTransformers),
+        eventDragMutationMassagers: hooks0.eventDragMutationMassagers.concat(hooks1.eventDragMutationMassagers),
+        eventDefMutationAppliers: hooks0.eventDefMutationAppliers.concat(hooks1.eventDefMutationAppliers),
+        dateSelectionTransformers: hooks0.dateSelectionTransformers.concat(hooks1.dateSelectionTransformers),
+        datePointTransforms: hooks0.datePointTransforms.concat(hooks1.datePointTransforms),
+        dateSpanTransforms: hooks0.dateSpanTransforms.concat(hooks1.dateSpanTransforms),
+        views: __assign({}, hooks0.views, hooks1.views),
+        viewPropsTransformers: hooks0.viewPropsTransformers.concat(hooks1.viewPropsTransformers),
+        isPropsValid: hooks1.isPropsValid || hooks0.isPropsValid,
+        externalDefTransforms: hooks0.externalDefTransforms.concat(hooks1.externalDefTransforms),
+        eventResizeJoinTransforms: hooks0.eventResizeJoinTransforms.concat(hooks1.eventResizeJoinTransforms),
+        viewContainerModifiers: hooks0.viewContainerModifiers.concat(hooks1.viewContainerModifiers),
+        eventDropTransformers: hooks0.eventDropTransformers.concat(hooks1.eventDropTransformers),
+        calendarInteractions: hooks0.calendarInteractions.concat(hooks1.calendarInteractions),
+        componentInteractions: hooks0.componentInteractions.concat(hooks1.componentInteractions),
+        themeClasses: __assign({}, hooks0.themeClasses, hooks1.themeClasses),
+        eventSourceDefs: hooks0.eventSourceDefs.concat(hooks1.eventSourceDefs),
+        cmdFormatter: hooks1.cmdFormatter || hooks0.cmdFormatter,
+        recurringTypes: hooks0.recurringTypes.concat(hooks1.recurringTypes),
+        namedTimeZonedImpl: hooks1.namedTimeZonedImpl || hooks0.namedTimeZonedImpl,
+        defaultView: hooks0.defaultView || hooks1.defaultView,
+        elementDraggingImpl: hooks0.elementDraggingImpl || hooks1.elementDraggingImpl,
+        optionChangeHandlers: __assign({}, hooks0.optionChangeHandlers, hooks1.optionChangeHandlers)
+    };
+}
+
+var eventSourceDef = {
+    ignoreRange: true,
+    parseMeta: function (raw) {
+        if (Array.isArray(raw)) { // short form
+            return raw;
+        }
+        else if (Array.isArray(raw.events)) {
+            return raw.events;
+        }
+        return null;
+    },
+    fetch: function (arg, success) {
+        success({
+            rawEvents: arg.eventSource.meta
+        });
+    }
+};
+var ArrayEventSourcePlugin = createPlugin({
+    eventSourceDefs: [eventSourceDef]
+});
+
+var eventSourceDef$1 = {
+    parseMeta: function (raw) {
+        if (typeof raw === 'function') { // short form
+            return raw;
+        }
+        else if (typeof raw.events === 'function') {
+            return raw.events;
+        }
+        return null;
+    },
+    fetch: function (arg, success, failure) {
+        var dateEnv = arg.calendar.dateEnv;
+        var func = arg.eventSource.meta;
+        unpromisify(func.bind(null, {
+            start: dateEnv.toDate(arg.range.start),
+            end: dateEnv.toDate(arg.range.end),
+            startStr: dateEnv.formatIso(arg.range.start),
+            endStr: dateEnv.formatIso(arg.range.end),
+            timeZone: dateEnv.timeZone
+        }), function (rawEvents) {
+            success({ rawEvents: rawEvents }); // needs an object response
+        }, failure // send errorObj directly to failure callback
+        );
+    }
+};
+var FuncEventSourcePlugin = createPlugin({
+    eventSourceDefs: [eventSourceDef$1]
+});
+
+function requestJson(method, url, params, successCallback, failureCallback) {
+    method = method.toUpperCase();
+    var body = null;
+    if (method === 'GET') {
+        url = injectQueryStringParams(url, params);
+    }
+    else {
+        body = encodeParams(params);
+    }
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    if (method !== 'GET') {
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    }
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 400) {
+            try {
+                var res = JSON.parse(xhr.responseText);
+                successCallback(res, xhr);
+            }
+            catch (err) {
+                failureCallback('Failure parsing JSON', xhr);
+            }
+        }
+        else {
+            failureCallback('Request failed', xhr);
+        }
+    };
+    xhr.onerror = function () {
+        failureCallback('Request failed', xhr);
+    };
+    xhr.send(body);
+}
+function injectQueryStringParams(url, params) {
+    return url +
+        (url.indexOf('?') === -1 ? '?' : '&') +
+        encodeParams(params);
+}
+function encodeParams(params) {
+    var parts = [];
+    for (var key in params) {
+        parts.push(encodeURIComponent(key) + '=' + encodeURIComponent(params[key]));
+    }
+    return parts.join('&');
+}
+
+var eventSourceDef$2 = {
+    parseMeta: function (raw) {
+        if (typeof raw === 'string') { // short form
+            raw = { url: raw };
+        }
+        else if (!raw || typeof raw !== 'object' || !raw.url) {
+            return null;
+        }
+        return {
+            url: raw.url,
+            method: (raw.method || 'GET').toUpperCase(),
+            extraParams: raw.extraParams,
+            startParam: raw.startParam,
+            endParam: raw.endParam,
+            timeZoneParam: raw.timeZoneParam
+        };
+    },
+    fetch: function (arg, success, failure) {
+        var meta = arg.eventSource.meta;
+        var requestParams = buildRequestParams(meta, arg.range, arg.calendar);
+        requestJson(meta.method, meta.url, requestParams, function (rawEvents, xhr) {
+            success({ rawEvents: rawEvents, xhr: xhr });
+        }, function (errorMessage, xhr) {
+            failure({ message: errorMessage, xhr: xhr });
+        });
+    }
+};
+var JsonFeedEventSourcePlugin = createPlugin({
+    eventSourceDefs: [eventSourceDef$2]
+});
+function buildRequestParams(meta, range, calendar) {
+    var dateEnv = calendar.dateEnv;
+    var startParam;
+    var endParam;
+    var timeZoneParam;
+    var customRequestParams;
+    var params = {};
+    startParam = meta.startParam;
+    if (startParam == null) {
+        startParam = calendar.opt('startParam');
+    }
+    endParam = meta.endParam;
+    if (endParam == null) {
+        endParam = calendar.opt('endParam');
+    }
+    timeZoneParam = meta.timeZoneParam;
+    if (timeZoneParam == null) {
+        timeZoneParam = calendar.opt('timeZoneParam');
+    }
+    // retrieve any outbound GET/POST data from the options
+    if (typeof meta.extraParams === 'function') {
+        // supplied as a function that returns a key/value object
+        customRequestParams = meta.extraParams();
+    }
+    else {
+        // probably supplied as a straight key/value object
+        customRequestParams = meta.extraParams || {};
+    }
+    __assign(params, customRequestParams);
+    params[startParam] = dateEnv.formatIso(range.start);
+    params[endParam] = dateEnv.formatIso(range.end);
+    if (dateEnv.timeZone !== 'local') {
+        params[timeZoneParam] = dateEnv.timeZone;
+    }
+    return params;
+}
+
+var recurring = {
+    parse: function (rawEvent, leftoverProps, dateEnv) {
+        var createMarker = dateEnv.createMarker.bind(dateEnv);
+        var processors = {
+            daysOfWeek: null,
+            startTime: createDuration,
+            endTime: createDuration,
+            startRecur: createMarker,
+            endRecur: createMarker
+        };
+        var props = refineProps(rawEvent, processors, {}, leftoverProps);
+        var anyValid = false;
+        for (var propName in props) {
+            if (props[propName] != null) {
+                anyValid = true;
+                break;
+            }
+        }
+        if (anyValid) {
+            var duration = null;
+            if ('duration' in leftoverProps) {
+                duration = createDuration(leftoverProps.duration);
+                delete leftoverProps.duration;
+            }
+            if (!duration && props.startTime && props.endTime) {
+                duration = subtractDurations(props.endTime, props.startTime);
+            }
+            return {
+                allDayGuess: Boolean(!props.startTime && !props.endTime),
+                duration: duration,
+                typeData: props // doesn't need endTime anymore but oh well
+            };
+        }
+        return null;
+    },
+    expand: function (typeData, framingRange, dateEnv) {
+        var clippedFramingRange = intersectRanges(framingRange, { start: typeData.startRecur, end: typeData.endRecur });
+        if (clippedFramingRange) {
+            return expandRanges(typeData.daysOfWeek, typeData.startTime, clippedFramingRange, dateEnv);
+        }
+        else {
+            return [];
+        }
+    }
+};
+var SimpleRecurrencePlugin = createPlugin({
+    recurringTypes: [recurring]
+});
+function expandRanges(daysOfWeek, startTime, framingRange, dateEnv) {
+    var dowHash = daysOfWeek ? arrayToHash(daysOfWeek) : null;
+    var dayMarker = startOfDay(framingRange.start);
+    var endMarker = framingRange.end;
+    var instanceStarts = [];
+    while (dayMarker < endMarker) {
+        var instanceStart 
+        // if everyday, or this particular day-of-week
+        = void 0;
+        // if everyday, or this particular day-of-week
+        if (!dowHash || dowHash[dayMarker.getUTCDay()]) {
+            if (startTime) {
+                instanceStart = dateEnv.add(dayMarker, startTime);
+            }
+            else {
+                instanceStart = dayMarker;
+            }
+            instanceStarts.push(instanceStart);
+        }
+        dayMarker = addDays(dayMarker, 1);
+    }
+    return instanceStarts;
+}
+
+var DefaultOptionChangeHandlers = createPlugin({
+    optionChangeHandlers: {
+        events: function (events, calendar, deepEqual) {
+            handleEventSources([events], calendar, deepEqual);
+        },
+        eventSources: handleEventSources,
+        plugins: handlePlugins
+    }
+});
+function handleEventSources(inputs, calendar, deepEqual) {
+    var unfoundSources = hashValuesToArray(calendar.state.eventSources);
+    var newInputs = [];
+    for (var _i = 0, inputs_1 = inputs; _i < inputs_1.length; _i++) {
+        var input = inputs_1[_i];
+        var inputFound = false;
+        for (var i = 0; i < unfoundSources.length; i++) {
+            if (deepEqual(unfoundSources[i]._raw, input)) {
+                unfoundSources.splice(i, 1); // delete
+                inputFound = true;
+                break;
+            }
+        }
+        if (!inputFound) {
+            newInputs.push(input);
+        }
+    }
+    for (var _a = 0, unfoundSources_1 = unfoundSources; _a < unfoundSources_1.length; _a++) {
+        var unfoundSource = unfoundSources_1[_a];
+        calendar.dispatch({
+            type: 'REMOVE_EVENT_SOURCE',
+            sourceId: unfoundSource.sourceId
+        });
+    }
+    for (var _b = 0, newInputs_1 = newInputs; _b < newInputs_1.length; _b++) {
+        var newInput = newInputs_1[_b];
+        calendar.addEventSource(newInput);
+    }
+}
+// shortcoming: won't remove plugins
+function handlePlugins(inputs, calendar) {
+    calendar.addPluginInputs(inputs); // will gracefully handle duplicates
+}
+
+var config = {}; // TODO: make these options
+var globalDefaults = {
+    defaultRangeSeparator: ' - ',
+    titleRangeSeparator: ' \u2013 ',
+    defaultTimedEventDuration: '01:00:00',
+    defaultAllDayEventDuration: { day: 1 },
+    forceEventDuration: false,
+    nextDayThreshold: '00:00:00',
+    // display
+    columnHeader: true,
+    defaultView: '',
+    aspectRatio: 1.35,
+    header: {
+        left: 'title',
+        center: '',
+        right: 'today prev,next'
+    },
+    weekends: true,
+    weekNumbers: false,
+    weekNumberCalculation: 'local',
+    editable: false,
+    // nowIndicator: false,
+    scrollTime: '06:00:00',
+    minTime: '00:00:00',
+    maxTime: '24:00:00',
+    showNonCurrentDates: true,
+    // event ajax
+    lazyFetching: true,
+    startParam: 'start',
+    endParam: 'end',
+    timeZoneParam: 'timeZone',
+    timeZone: 'local',
+    // allDayDefault: undefined,
+    // locale
+    locales: [],
+    locale: '',
+    // dir: will get this from the default locale
+    // buttonIcons: null,
+    // allows setting a min-height to the event segment to prevent short events overlapping each other
+    timeGridEventMinHeight: 0,
+    themeSystem: 'standard',
+    // eventResizableFromStart: false,
+    dragRevertDuration: 500,
+    dragScroll: true,
+    allDayMaintainDuration: false,
+    // selectable: false,
+    unselectAuto: true,
+    // selectMinDistance: 0,
+    dropAccept: '*',
+    eventOrder: 'start,-duration,allDay,title',
+    // ^ if start tie, longer events go before shorter. final tie-breaker is title text
+    // rerenderDelay: null,
+    eventLimit: false,
+    eventLimitClick: 'popover',
+    dayPopoverFormat: { month: 'long', day: 'numeric', year: 'numeric' },
+    handleWindowResize: true,
+    windowResizeDelay: 100,
+    longPressDelay: 1000,
+    eventDragMinDistance: 5 // only applies to mouse
+};
+var rtlDefaults = {
+    header: {
+        left: 'next,prev today',
+        center: '',
+        right: 'title'
+    },
+    buttonIcons: {
+        // TODO: make RTL support the responibility of the theme
+        prev: 'fc-icon-chevron-right',
+        next: 'fc-icon-chevron-left',
+        prevYear: 'fc-icon-chevrons-right',
+        nextYear: 'fc-icon-chevrons-left'
+    }
+};
+var complexOptions = [
+    'header',
+    'footer',
+    'buttonText',
+    'buttonIcons'
+];
+// Merges an array of option objects into a single object
+function mergeOptions(optionObjs) {
+    return mergeProps(optionObjs, complexOptions);
+}
+// TODO: move this stuff to a "plugin"-related file...
+var INTERNAL_PLUGINS = [
+    ArrayEventSourcePlugin,
+    FuncEventSourcePlugin,
+    JsonFeedEventSourcePlugin,
+    SimpleRecurrencePlugin,
+    DefaultOptionChangeHandlers
+];
+function refinePluginDefs(pluginInputs) {
+    var plugins = [];
+    for (var _i = 0, pluginInputs_1 = pluginInputs; _i < pluginInputs_1.length; _i++) {
+        var pluginInput = pluginInputs_1[_i];
+        if (typeof pluginInput === 'string') {
+            var globalName = 'FullCalendar' + capitaliseFirstLetter(pluginInput);
+            if (!window[globalName]) {
+                console.warn('Plugin file not loaded for ' + pluginInput);
+            }
+            else {
+                plugins.push(window[globalName].default); // is an ES6 module
+            }
+        }
+        else {
+            plugins.push(pluginInput);
+        }
+    }
+    return INTERNAL_PLUGINS.concat(plugins);
+}
+
+var RAW_EN_LOCALE = {
+    code: 'en',
+    week: {
+        dow: 0,
+        doy: 4 // 4 days need to be within the year to be considered the first week
+    },
+    dir: 'ltr',
+    buttonText: {
+        prev: 'prev',
+        next: 'next',
+        prevYear: 'prev year',
+        nextYear: 'next year',
+        year: 'year',
+        today: 'today',
+        month: 'month',
+        week: 'week',
+        day: 'day',
+        list: 'list'
+    },
+    weekLabel: 'W',
+    allDayText: 'all-day',
+    eventLimitText: 'more',
+    noEventsMessage: 'No events to display'
+};
+function parseRawLocales(explicitRawLocales) {
+    var defaultCode = explicitRawLocales.length > 0 ? explicitRawLocales[0].code : 'en';
+    var globalArray = window['FullCalendarLocalesAll'] || []; // from locales-all.js
+    var globalObject = window['FullCalendarLocales'] || {}; // from locales/*.js. keys are meaningless
+    var allRawLocales = globalArray.concat(// globalArray is low prio
+    hashValuesToArray(globalObject), // medium prio
+    explicitRawLocales // highest prio
+    );
+    var rawLocaleMap = {
+        en: RAW_EN_LOCALE // necessary?
+    };
+    for (var _i = 0, allRawLocales_1 = allRawLocales; _i < allRawLocales_1.length; _i++) {
+        var rawLocale = allRawLocales_1[_i];
+        rawLocaleMap[rawLocale.code] = rawLocale;
+    }
+    return {
+        map: rawLocaleMap,
+        defaultCode: defaultCode
+    };
+}
+function buildLocale(inputSingular, available) {
+    if (typeof inputSingular === 'object' && !Array.isArray(inputSingular)) {
+        return parseLocale(inputSingular.code, [inputSingular.code], inputSingular);
+    }
+    else {
+        return queryLocale(inputSingular, available);
+    }
+}
+function queryLocale(codeArg, available) {
+    var codes = [].concat(codeArg || []); // will convert to array
+    var raw = queryRawLocale(codes, available) || RAW_EN_LOCALE;
+    return parseLocale(codeArg, codes, raw);
+}
+function queryRawLocale(codes, available) {
+    for (var i = 0; i < codes.length; i++) {
+        var parts = codes[i].toLocaleLowerCase().split('-');
+        for (var j = parts.length; j > 0; j--) {
+            var simpleId = parts.slice(0, j).join('-');
+            if (available[simpleId]) {
+                return available[simpleId];
+            }
+        }
+    }
+    return null;
+}
+function parseLocale(codeArg, codes, raw) {
+    var merged = mergeProps([RAW_EN_LOCALE, raw], ['buttonText']);
+    delete merged.code; // don't want this part of the options
+    var week = merged.week;
+    delete merged.week;
+    return {
+        codeArg: codeArg,
+        codes: codes,
+        week: week,
+        simpleNumberFormat: new Intl.NumberFormat(codeArg),
+        options: merged
+    };
+}
+
+var OptionsManager = /** @class */ (function () {
+    function OptionsManager(overrides) {
+        this.overrides = __assign({}, overrides); // make a copy
+        this.dynamicOverrides = {};
+        this.compute();
+    }
+    OptionsManager.prototype.mutate = function (updates, removals, isDynamic) {
+        if (!Object.keys(updates).length && !removals.length) {
+            return;
+        }
+        var overrideHash = isDynamic ? this.dynamicOverrides : this.overrides;
+        __assign(overrideHash, updates);
+        for (var _i = 0, removals_1 = removals; _i < removals_1.length; _i++) {
+            var propName = removals_1[_i];
+            delete overrideHash[propName];
+        }
+        this.compute();
+    };
+    // Computes the flattened options hash for the calendar and assigns to `this.options`.
+    // Assumes this.overrides and this.dynamicOverrides have already been initialized.
+    OptionsManager.prototype.compute = function () {
+        // TODO: not a very efficient system
+        var locales = firstDefined(// explicit locale option given?
+        this.dynamicOverrides.locales, this.overrides.locales, globalDefaults.locales);
+        var locale = firstDefined(// explicit locales option given?
+        this.dynamicOverrides.locale, this.overrides.locale, globalDefaults.locale);
+        var available = parseRawLocales(locales);
+        var localeDefaults = buildLocale(locale || available.defaultCode, available.map).options;
+        var dir = firstDefined(// based on options computed so far, is direction RTL?
+        this.dynamicOverrides.dir, this.overrides.dir, localeDefaults.dir);
+        var dirDefaults = dir === 'rtl' ? rtlDefaults : {};
+        this.dirDefaults = dirDefaults;
+        this.localeDefaults = localeDefaults;
+        this.computed = mergeOptions([
+            globalDefaults,
+            dirDefaults,
+            localeDefaults,
+            this.overrides,
+            this.dynamicOverrides
+        ]);
+    };
+    return OptionsManager;
+}());
+
+var calendarSystemClassMap = {};
+function registerCalendarSystem(name, theClass) {
+    calendarSystemClassMap[name] = theClass;
+}
+function createCalendarSystem(name) {
+    return new calendarSystemClassMap[name]();
+}
+var GregorianCalendarSystem = /** @class */ (function () {
+    function GregorianCalendarSystem() {
+    }
+    GregorianCalendarSystem.prototype.getMarkerYear = function (d) {
+        return d.getUTCFullYear();
+    };
+    GregorianCalendarSystem.prototype.getMarkerMonth = function (d) {
+        return d.getUTCMonth();
+    };
+    GregorianCalendarSystem.prototype.getMarkerDay = function (d) {
+        return d.getUTCDate();
+    };
+    GregorianCalendarSystem.prototype.arrayToMarker = function (arr) {
+        return arrayToUtcDate(arr);
+    };
+    GregorianCalendarSystem.prototype.markerToArray = function (marker) {
+        return dateToUtcArray(marker);
+    };
+    return GregorianCalendarSystem;
+}());
+registerCalendarSystem('gregory', GregorianCalendarSystem);
+
+var ISO_RE = /^\s*(\d{4})(-(\d{2})(-(\d{2})([T ](\d{2}):(\d{2})(:(\d{2})(\.(\d+))?)?(Z|(([-+])(\d{2})(:?(\d{2}))?))?)?)?)?$/;
+function parse(str) {
+    var m = ISO_RE.exec(str);
+    if (m) {
+        var marker = new Date(Date.UTC(Number(m[1]), m[3] ? Number(m[3]) - 1 : 0, Number(m[5] || 1), Number(m[7] || 0), Number(m[8] || 0), Number(m[10] || 0), m[12] ? Number('0.' + m[12]) * 1000 : 0));
+        if (isValidDate(marker)) {
+            var timeZoneOffset = null;
+            if (m[13]) {
+                timeZoneOffset = (m[15] === '-' ? -1 : 1) * (Number(m[16] || 0) * 60 +
+                    Number(m[18] || 0));
+            }
+            return {
+                marker: marker,
+                isTimeUnspecified: !m[6],
+                timeZoneOffset: timeZoneOffset
+            };
+        }
+    }
+    return null;
+}
+
+var DateEnv = /** @class */ (function () {
+    function DateEnv(settings) {
+        var timeZone = this.timeZone = settings.timeZone;
+        var isNamedTimeZone = timeZone !== 'local' && timeZone !== 'UTC';
+        if (settings.namedTimeZoneImpl && isNamedTimeZone) {
+            this.namedTimeZoneImpl = new settings.namedTimeZoneImpl(timeZone);
+        }
+        this.canComputeOffset = Boolean(!isNamedTimeZone || this.namedTimeZoneImpl);
+        this.calendarSystem = createCalendarSystem(settings.calendarSystem);
+        this.locale = settings.locale;
+        this.weekDow = settings.locale.week.dow;
+        this.weekDoy = settings.locale.week.doy;
+        if (settings.weekNumberCalculation === 'ISO') {
+            this.weekDow = 1;
+            this.weekDoy = 4;
+        }
+        if (typeof settings.firstDay === 'number') {
+            this.weekDow = settings.firstDay;
+        }
+        if (typeof settings.weekNumberCalculation === 'function') {
+            this.weekNumberFunc = settings.weekNumberCalculation;
+        }
+        this.weekLabel = settings.weekLabel != null ? settings.weekLabel : settings.locale.options.weekLabel;
+        this.cmdFormatter = settings.cmdFormatter;
+    }
+    // Creating / Parsing
+    DateEnv.prototype.createMarker = function (input) {
+        var meta = this.createMarkerMeta(input);
+        if (meta === null) {
+            return null;
+        }
+        return meta.marker;
+    };
+    DateEnv.prototype.createNowMarker = function () {
+        if (this.canComputeOffset) {
+            return this.timestampToMarker(new Date().valueOf());
+        }
+        else {
+            // if we can't compute the current date val for a timezone,
+            // better to give the current local date vals than UTC
+            return arrayToUtcDate(dateToLocalArray(new Date()));
+        }
+    };
+    DateEnv.prototype.createMarkerMeta = function (input) {
+        if (typeof input === 'string') {
+            return this.parse(input);
+        }
+        var marker = null;
+        if (typeof input === 'number') {
+            marker = this.timestampToMarker(input);
+        }
+        else if (input instanceof Date) {
+            input = input.valueOf();
+            if (!isNaN(input)) {
+                marker = this.timestampToMarker(input);
+            }
+        }
+        else if (Array.isArray(input)) {
+            marker = arrayToUtcDate(input);
+        }
+        if (marker === null || !isValidDate(marker)) {
+            return null;
+        }
+        return { marker: marker, isTimeUnspecified: false, forcedTzo: null };
+    };
+    DateEnv.prototype.parse = function (s) {
+        var parts = parse(s);
+        if (parts === null) {
+            return null;
+        }
+        var marker = parts.marker;
+        var forcedTzo = null;
+        if (parts.timeZoneOffset !== null) {
+            if (this.canComputeOffset) {
+                marker = this.timestampToMarker(marker.valueOf() - parts.timeZoneOffset * 60 * 1000);
+            }
+            else {
+                forcedTzo = parts.timeZoneOffset;
+            }
+        }
+        return { marker: marker, isTimeUnspecified: parts.isTimeUnspecified, forcedTzo: forcedTzo };
+    };
+    // Accessors
+    DateEnv.prototype.getYear = function (marker) {
+        return this.calendarSystem.getMarkerYear(marker);
+    };
+    DateEnv.prototype.getMonth = function (marker) {
+        return this.calendarSystem.getMarkerMonth(marker);
+    };
+    // Adding / Subtracting
+    DateEnv.prototype.add = function (marker, dur) {
+        var a = this.calendarSystem.markerToArray(marker);
+        a[0] += dur.years;
+        a[1] += dur.months;
+        a[2] += dur.days;
+        a[6] += dur.milliseconds;
+        return this.calendarSystem.arrayToMarker(a);
+    };
+    DateEnv.prototype.subtract = function (marker, dur) {
+        var a = this.calendarSystem.markerToArray(marker);
+        a[0] -= dur.years;
+        a[1] -= dur.months;
+        a[2] -= dur.days;
+        a[6] -= dur.milliseconds;
+        return this.calendarSystem.arrayToMarker(a);
+    };
+    DateEnv.prototype.addYears = function (marker, n) {
+        var a = this.calendarSystem.markerToArray(marker);
+        a[0] += n;
+        return this.calendarSystem.arrayToMarker(a);
+    };
+    DateEnv.prototype.addMonths = function (marker, n) {
+        var a = this.calendarSystem.markerToArray(marker);
+        a[1] += n;
+        return this.calendarSystem.arrayToMarker(a);
+    };
+    // Diffing Whole Units
+    DateEnv.prototype.diffWholeYears = function (m0, m1) {
+        var calendarSystem = this.calendarSystem;
+        if (timeAsMs(m0) === timeAsMs(m1) &&
+            calendarSystem.getMarkerDay(m0) === calendarSystem.getMarkerDay(m1) &&
+            calendarSystem.getMarkerMonth(m0) === calendarSystem.getMarkerMonth(m1)) {
+            return calendarSystem.getMarkerYear(m1) - calendarSystem.getMarkerYear(m0);
+        }
+        return null;
+    };
+    DateEnv.prototype.diffWholeMonths = function (m0, m1) {
+        var calendarSystem = this.calendarSystem;
+        if (timeAsMs(m0) === timeAsMs(m1) &&
+            calendarSystem.getMarkerDay(m0) === calendarSystem.getMarkerDay(m1)) {
+            return (calendarSystem.getMarkerMonth(m1) - calendarSystem.getMarkerMonth(m0)) +
+                (calendarSystem.getMarkerYear(m1) - calendarSystem.getMarkerYear(m0)) * 12;
+        }
+        return null;
+    };
+    // Range / Duration
+    DateEnv.prototype.greatestWholeUnit = function (m0, m1) {
+        var n = this.diffWholeYears(m0, m1);
+        if (n !== null) {
+            return { unit: 'year', value: n };
+        }
+        n = this.diffWholeMonths(m0, m1);
+        if (n !== null) {
+            return { unit: 'month', value: n };
+        }
+        n = diffWholeWeeks(m0, m1);
+        if (n !== null) {
+            return { unit: 'week', value: n };
+        }
+        n = diffWholeDays(m0, m1);
+        if (n !== null) {
+            return { unit: 'day', value: n };
+        }
+        n = diffHours(m0, m1);
+        if (isInt(n)) {
+            return { unit: 'hour', value: n };
+        }
+        n = diffMinutes(m0, m1);
+        if (isInt(n)) {
+            return { unit: 'minute', value: n };
+        }
+        n = diffSeconds(m0, m1);
+        if (isInt(n)) {
+            return { unit: 'second', value: n };
+        }
+        return { unit: 'millisecond', value: m1.valueOf() - m0.valueOf() };
+    };
+    DateEnv.prototype.countDurationsBetween = function (m0, m1, d) {
+        // TODO: can use greatestWholeUnit
+        var diff;
+        if (d.years) {
+            diff = this.diffWholeYears(m0, m1);
+            if (diff !== null) {
+                return diff / asRoughYears(d);
+            }
+        }
+        if (d.months) {
+            diff = this.diffWholeMonths(m0, m1);
+            if (diff !== null) {
+                return diff / asRoughMonths(d);
+            }
+        }
+        if (d.days) {
+            diff = diffWholeDays(m0, m1);
+            if (diff !== null) {
+                return diff / asRoughDays(d);
+            }
+        }
+        return (m1.valueOf() - m0.valueOf()) / asRoughMs(d);
+    };
+    // Start-Of
+    DateEnv.prototype.startOf = function (m, unit) {
+        if (unit === 'year') {
+            return this.startOfYear(m);
+        }
+        else if (unit === 'month') {
+            return this.startOfMonth(m);
+        }
+        else if (unit === 'week') {
+            return this.startOfWeek(m);
+        }
+        else if (unit === 'day') {
+            return startOfDay(m);
+        }
+        else if (unit === 'hour') {
+            return startOfHour(m);
+        }
+        else if (unit === 'minute') {
+            return startOfMinute(m);
+        }
+        else if (unit === 'second') {
+            return startOfSecond(m);
+        }
+    };
+    DateEnv.prototype.startOfYear = function (m) {
+        return this.calendarSystem.arrayToMarker([
+            this.calendarSystem.getMarkerYear(m)
+        ]);
+    };
+    DateEnv.prototype.startOfMonth = function (m) {
+        return this.calendarSystem.arrayToMarker([
+            this.calendarSystem.getMarkerYear(m),
+            this.calendarSystem.getMarkerMonth(m)
+        ]);
+    };
+    DateEnv.prototype.startOfWeek = function (m) {
+        return this.calendarSystem.arrayToMarker([
+            this.calendarSystem.getMarkerYear(m),
+            this.calendarSystem.getMarkerMonth(m),
+            m.getUTCDate() - ((m.getUTCDay() - this.weekDow + 7) % 7)
+        ]);
+    };
+    // Week Number
+    DateEnv.prototype.computeWeekNumber = function (marker) {
+        if (this.weekNumberFunc) {
+            return this.weekNumberFunc(this.toDate(marker));
+        }
+        else {
+            return weekOfYear(marker, this.weekDow, this.weekDoy);
+        }
+    };
+    // TODO: choke on timeZoneName: long
+    DateEnv.prototype.format = function (marker, formatter, dateOptions) {
+        if (dateOptions === void 0) { dateOptions = {}; }
+        return formatter.format({
+            marker: marker,
+            timeZoneOffset: dateOptions.forcedTzo != null ?
+                dateOptions.forcedTzo :
+                this.offsetForMarker(marker)
+        }, this);
+    };
+    DateEnv.prototype.formatRange = function (start, end, formatter, dateOptions) {
+        if (dateOptions === void 0) { dateOptions = {}; }
+        if (dateOptions.isEndExclusive) {
+            end = addMs(end, -1);
+        }
+        return formatter.formatRange({
+            marker: start,
+            timeZoneOffset: dateOptions.forcedStartTzo != null ?
+                dateOptions.forcedStartTzo :
+                this.offsetForMarker(start)
+        }, {
+            marker: end,
+            timeZoneOffset: dateOptions.forcedEndTzo != null ?
+                dateOptions.forcedEndTzo :
+                this.offsetForMarker(end)
+        }, this);
+    };
+    DateEnv.prototype.formatIso = function (marker, extraOptions) {
+        if (extraOptions === void 0) { extraOptions = {}; }
+        var timeZoneOffset = null;
+        if (!extraOptions.omitTimeZoneOffset) {
+            if (extraOptions.forcedTzo != null) {
+                timeZoneOffset = extraOptions.forcedTzo;
+            }
+            else {
+                timeZoneOffset = this.offsetForMarker(marker);
+            }
+        }
+        return buildIsoString(marker, timeZoneOffset, extraOptions.omitTime);
+    };
+    // TimeZone
+    DateEnv.prototype.timestampToMarker = function (ms) {
+        if (this.timeZone === 'local') {
+            return arrayToUtcDate(dateToLocalArray(new Date(ms)));
+        }
+        else if (this.timeZone === 'UTC' || !this.namedTimeZoneImpl) {
+            return new Date(ms);
+        }
+        else {
+            return arrayToUtcDate(this.namedTimeZoneImpl.timestampToArray(ms));
+        }
+    };
+    DateEnv.prototype.offsetForMarker = function (m) {
+        if (this.timeZone === 'local') {
+            return -arrayToLocalDate(dateToUtcArray(m)).getTimezoneOffset(); // convert "inverse" offset to "normal" offset
+        }
+        else if (this.timeZone === 'UTC') {
+            return 0;
+        }
+        else if (this.namedTimeZoneImpl) {
+            return this.namedTimeZoneImpl.offsetForArray(dateToUtcArray(m));
+        }
+        return null;
+    };
+    // Conversion
+    DateEnv.prototype.toDate = function (m, forcedTzo) {
+        if (this.timeZone === 'local') {
+            return arrayToLocalDate(dateToUtcArray(m));
+        }
+        else if (this.timeZone === 'UTC') {
+            return new Date(m.valueOf()); // make sure it's a copy
+        }
+        else if (!this.namedTimeZoneImpl) {
+            return new Date(m.valueOf() - (forcedTzo || 0));
+        }
+        else {
+            return new Date(m.valueOf() -
+                this.namedTimeZoneImpl.offsetForArray(dateToUtcArray(m)) * 1000 * 60 // convert minutes -> ms
+            );
+        }
+    };
+    return DateEnv;
+}());
+
+var SIMPLE_SOURCE_PROPS = {
+    id: String,
+    allDayDefault: Boolean,
+    eventDataTransform: Function,
+    success: Function,
+    failure: Function
+};
+var uid$2 = 0;
+function doesSourceNeedRange(eventSource, calendar) {
+    var defs = calendar.pluginSystem.hooks.eventSourceDefs;
+    return !defs[eventSource.sourceDefId].ignoreRange;
+}
+function parseEventSource(raw, calendar) {
+    var defs = calendar.pluginSystem.hooks.eventSourceDefs;
+    for (var i = defs.length - 1; i >= 0; i--) { // later-added plugins take precedence
+        var def = defs[i];
+        var meta = def.parseMeta(raw);
+        if (meta) {
+            var res = parseEventSourceProps(typeof raw === 'object' ? raw : {}, meta, i, calendar);
+            res._raw = raw;
+            return res;
+        }
+    }
+    return null;
+}
+function parseEventSourceProps(raw, meta, sourceDefId, calendar) {
+    var leftovers0 = {};
+    var props = refineProps(raw, SIMPLE_SOURCE_PROPS, {}, leftovers0);
+    var leftovers1 = {};
+    var ui = processUnscopedUiProps(leftovers0, calendar, leftovers1);
+    props.isFetching = false;
+    props.latestFetchId = '';
+    props.fetchRange = null;
+    props.publicId = String(raw.id || '');
+    props.sourceId = String(uid$2++);
+    props.sourceDefId = sourceDefId;
+    props.meta = meta;
+    props.ui = ui;
+    props.extendedProps = leftovers1;
+    return props;
+}
+
+function reduceEventSources (eventSources, action, dateProfile, calendar) {
+    switch (action.type) {
+        case 'ADD_EVENT_SOURCES': // already parsed
+            return addSources(eventSources, action.sources, dateProfile ? dateProfile.activeRange : null, calendar);
+        case 'REMOVE_EVENT_SOURCE':
+            return removeSource(eventSources, action.sourceId);
+        case 'PREV': // TODO: how do we track all actions that affect dateProfile :(
+        case 'NEXT':
+        case 'SET_DATE':
+        case 'SET_VIEW_TYPE':
+            if (dateProfile) {
+                return fetchDirtySources(eventSources, dateProfile.activeRange, calendar);
+            }
+            else {
+                return eventSources;
+            }
+        case 'FETCH_EVENT_SOURCES':
+        case 'CHANGE_TIMEZONE':
+            return fetchSourcesByIds(eventSources, action.sourceIds ?
+                arrayToHash(action.sourceIds) :
+                excludeStaticSources(eventSources, calendar), dateProfile ? dateProfile.activeRange : null, calendar);
+        case 'RECEIVE_EVENTS':
+        case 'RECEIVE_EVENT_ERROR':
+            return receiveResponse(eventSources, action.sourceId, action.fetchId, action.fetchRange);
+        case 'REMOVE_ALL_EVENT_SOURCES':
+            return {};
+        default:
+            return eventSources;
+    }
+}
+var uid$3 = 0;
+function addSources(eventSourceHash, sources, fetchRange, calendar) {
+    var hash = {};
+    for (var _i = 0, sources_1 = sources; _i < sources_1.length; _i++) {
+        var source = sources_1[_i];
+        hash[source.sourceId] = source;
+    }
+    if (fetchRange) {
+        hash = fetchDirtySources(hash, fetchRange, calendar);
+    }
+    return __assign({}, eventSourceHash, hash);
+}
+function removeSource(eventSourceHash, sourceId) {
+    return filterHash(eventSourceHash, function (eventSource) {
+        return eventSource.sourceId !== sourceId;
+    });
+}
+function fetchDirtySources(sourceHash, fetchRange, calendar) {
+    return fetchSourcesByIds(sourceHash, filterHash(sourceHash, function (eventSource) {
+        return isSourceDirty(eventSource, fetchRange, calendar);
+    }), fetchRange, calendar);
+}
+function isSourceDirty(eventSource, fetchRange, calendar) {
+    if (!doesSourceNeedRange(eventSource, calendar)) {
+        return !eventSource.latestFetchId;
+    }
+    else {
+        return !calendar.opt('lazyFetching') ||
+            !eventSource.fetchRange ||
+            eventSource.isFetching || // always cancel outdated in-progress fetches
+            fetchRange.start < eventSource.fetchRange.start ||
+            fetchRange.end > eventSource.fetchRange.end;
+    }
+}
+function fetchSourcesByIds(prevSources, sourceIdHash, fetchRange, calendar) {
+    var nextSources = {};
+    for (var sourceId in prevSources) {
+        var source = prevSources[sourceId];
+        if (sourceIdHash[sourceId]) {
+            nextSources[sourceId] = fetchSource(source, fetchRange, calendar);
+        }
+        else {
+            nextSources[sourceId] = source;
+        }
+    }
+    return nextSources;
+}
+function fetchSource(eventSource, fetchRange, calendar) {
+    var sourceDef = calendar.pluginSystem.hooks.eventSourceDefs[eventSource.sourceDefId];
+    var fetchId = String(uid$3++);
+    sourceDef.fetch({
+        eventSource: eventSource,
+        calendar: calendar,
+        range: fetchRange
+    }, function (res) {
+        var rawEvents = res.rawEvents;
+        var calSuccess = calendar.opt('eventSourceSuccess');
+        var calSuccessRes;
+        var sourceSuccessRes;
+        if (eventSource.success) {
+            sourceSuccessRes = eventSource.success(rawEvents, res.xhr);
+        }
+        if (calSuccess) {
+            calSuccessRes = calSuccess(rawEvents, res.xhr);
+        }
+        rawEvents = sourceSuccessRes || calSuccessRes || rawEvents;
+        calendar.dispatch({
+            type: 'RECEIVE_EVENTS',
+            sourceId: eventSource.sourceId,
+            fetchId: fetchId,
+            fetchRange: fetchRange,
+            rawEvents: rawEvents
+        });
+    }, function (error) {
+        var callFailure = calendar.opt('eventSourceFailure');
+        console.warn(error.message, error);
+        if (eventSource.failure) {
+            eventSource.failure(error);
+        }
+        if (callFailure) {
+            callFailure(error);
+        }
+        calendar.dispatch({
+            type: 'RECEIVE_EVENT_ERROR',
+            sourceId: eventSource.sourceId,
+            fetchId: fetchId,
+            fetchRange: fetchRange,
+            error: error
+        });
+    });
+    return __assign({}, eventSource, { isFetching: true, latestFetchId: fetchId });
+}
+function receiveResponse(sourceHash, sourceId, fetchId, fetchRange) {
+    var _a;
+    var eventSource = sourceHash[sourceId];
+    if (eventSource && // not already removed
+        fetchId === eventSource.latestFetchId) {
+        return __assign({}, sourceHash, (_a = {}, _a[sourceId] = __assign({}, eventSource, { isFetching: false, fetchRange: fetchRange // also serves as a marker that at least one fetch has completed
+         }), _a));
+    }
+    return sourceHash;
+}
+function excludeStaticSources(eventSources, calendar) {
+    return filterHash(eventSources, function (eventSource) {
+        return doesSourceNeedRange(eventSource, calendar);
+    });
+}
+
+var DateProfileGenerator = /** @class */ (function () {
+    function DateProfileGenerator(viewSpec, calendar) {
+        this.viewSpec = viewSpec;
+        this.options = viewSpec.options;
+        this.dateEnv = calendar.dateEnv;
+        this.calendar = calendar;
+        this.initHiddenDays();
+    }
+    /* Date Range Computation
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Builds a structure with info about what the dates/ranges will be for the "prev" view.
+    DateProfileGenerator.prototype.buildPrev = function (currentDateProfile, currentDate) {
+        var dateEnv = this.dateEnv;
+        var prevDate = dateEnv.subtract(dateEnv.startOf(currentDate, currentDateProfile.currentRangeUnit), // important for start-of-month
+        currentDateProfile.dateIncrement);
+        return this.build(prevDate, -1);
+    };
+    // Builds a structure with info about what the dates/ranges will be for the "next" view.
+    DateProfileGenerator.prototype.buildNext = function (currentDateProfile, currentDate) {
+        var dateEnv = this.dateEnv;
+        var nextDate = dateEnv.add(dateEnv.startOf(currentDate, currentDateProfile.currentRangeUnit), // important for start-of-month
+        currentDateProfile.dateIncrement);
+        return this.build(nextDate, 1);
+    };
+    // Builds a structure holding dates/ranges for rendering around the given date.
+    // Optional direction param indicates whether the date is being incremented/decremented
+    // from its previous value. decremented = -1, incremented = 1 (default).
+    DateProfileGenerator.prototype.build = function (currentDate, direction, forceToValid) {
+        if (forceToValid === void 0) { forceToValid = false; }
+        var validRange;
+        var minTime = null;
+        var maxTime = null;
+        var currentInfo;
+        var isRangeAllDay;
+        var renderRange;
+        var activeRange;
+        var isValid;
+        validRange = this.buildValidRange();
+        validRange = this.trimHiddenDays(validRange);
+        if (forceToValid) {
+            currentDate = constrainMarkerToRange(currentDate, validRange);
+        }
+        currentInfo = this.buildCurrentRangeInfo(currentDate, direction);
+        isRangeAllDay = /^(year|month|week|day)$/.test(currentInfo.unit);
+        renderRange = this.buildRenderRange(this.trimHiddenDays(currentInfo.range), currentInfo.unit, isRangeAllDay);
+        renderRange = this.trimHiddenDays(renderRange);
+        activeRange = renderRange;
+        if (!this.options.showNonCurrentDates) {
+            activeRange = intersectRanges(activeRange, currentInfo.range);
+        }
+        minTime = createDuration(this.options.minTime);
+        maxTime = createDuration(this.options.maxTime);
+        activeRange = this.adjustActiveRange(activeRange, minTime, maxTime);
+        activeRange = intersectRanges(activeRange, validRange); // might return null
+        // it's invalid if the originally requested date is not contained,
+        // or if the range is completely outside of the valid range.
+        isValid = rangesIntersect(currentInfo.range, validRange);
+        return {
+            // constraint for where prev/next operations can go and where events can be dragged/resized to.
+            // an object with optional start and end properties.
+            validRange: validRange,
+            // range the view is formally responsible for.
+            // for example, a month view might have 1st-31st, excluding padded dates
+            currentRange: currentInfo.range,
+            // name of largest unit being displayed, like "month" or "week"
+            currentRangeUnit: currentInfo.unit,
+            isRangeAllDay: isRangeAllDay,
+            // dates that display events and accept drag-n-drop
+            // will be `null` if no dates accept events
+            activeRange: activeRange,
+            // date range with a rendered skeleton
+            // includes not-active days that need some sort of DOM
+            renderRange: renderRange,
+            // Duration object that denotes the first visible time of any given day
+            minTime: minTime,
+            // Duration object that denotes the exclusive visible end time of any given day
+            maxTime: maxTime,
+            isValid: isValid,
+            // how far the current date will move for a prev/next operation
+            dateIncrement: this.buildDateIncrement(currentInfo.duration)
+            // pass a fallback (might be null) ^
+        };
+    };
+    // Builds an object with optional start/end properties.
+    // Indicates the minimum/maximum dates to display.
+    // not responsible for trimming hidden days.
+    DateProfileGenerator.prototype.buildValidRange = function () {
+        return this.getRangeOption('validRange', this.calendar.getNow()) ||
+            { start: null, end: null }; // completely open-ended
+    };
+    // Builds a structure with info about the "current" range, the range that is
+    // highlighted as being the current month for example.
+    // See build() for a description of `direction`.
+    // Guaranteed to have `range` and `unit` properties. `duration` is optional.
+    DateProfileGenerator.prototype.buildCurrentRangeInfo = function (date, direction) {
+        var _a = this, viewSpec = _a.viewSpec, dateEnv = _a.dateEnv;
+        var duration = null;
+        var unit = null;
+        var range = null;
+        var dayCount;
+        if (viewSpec.duration) {
+            duration = viewSpec.duration;
+            unit = viewSpec.durationUnit;
+            range = this.buildRangeFromDuration(date, direction, duration, unit);
+        }
+        else if ((dayCount = this.options.dayCount)) {
+            unit = 'day';
+            range = this.buildRangeFromDayCount(date, direction, dayCount);
+        }
+        else if ((range = this.buildCustomVisibleRange(date))) {
+            unit = dateEnv.greatestWholeUnit(range.start, range.end).unit;
+        }
+        else {
+            duration = this.getFallbackDuration();
+            unit = greatestDurationDenominator(duration).unit;
+            range = this.buildRangeFromDuration(date, direction, duration, unit);
+        }
+        return { duration: duration, unit: unit, range: range };
+    };
+    DateProfileGenerator.prototype.getFallbackDuration = function () {
+        return createDuration({ day: 1 });
+    };
+    // Returns a new activeRange to have time values (un-ambiguate)
+    // minTime or maxTime causes the range to expand.
+    DateProfileGenerator.prototype.adjustActiveRange = function (range, minTime, maxTime) {
+        var dateEnv = this.dateEnv;
+        var start = range.start;
+        var end = range.end;
+        if (this.viewSpec.class.prototype.usesMinMaxTime) {
+            // expand active range if minTime is negative (why not when positive?)
+            if (asRoughDays(minTime) < 0) {
+                start = startOfDay(start); // necessary?
+                start = dateEnv.add(start, minTime);
+            }
+            // expand active range if maxTime is beyond one day (why not when positive?)
+            if (asRoughDays(maxTime) > 1) {
+                end = startOfDay(end); // necessary?
+                end = addDays(end, -1);
+                end = dateEnv.add(end, maxTime);
+            }
+        }
+        return { start: start, end: end };
+    };
+    // Builds the "current" range when it is specified as an explicit duration.
+    // `unit` is the already-computed greatestDurationDenominator unit of duration.
+    DateProfileGenerator.prototype.buildRangeFromDuration = function (date, direction, duration, unit) {
+        var dateEnv = this.dateEnv;
+        var alignment = this.options.dateAlignment;
+        var dateIncrementInput;
+        var dateIncrementDuration;
+        var start;
+        var end;
+        var res;
+        // compute what the alignment should be
+        if (!alignment) {
+            dateIncrementInput = this.options.dateIncrement;
+            if (dateIncrementInput) {
+                dateIncrementDuration = createDuration(dateIncrementInput);
+                // use the smaller of the two units
+                if (asRoughMs(dateIncrementDuration) < asRoughMs(duration)) {
+                    alignment = greatestDurationDenominator(dateIncrementDuration, !getWeeksFromInput(dateIncrementInput)).unit;
+                }
+                else {
+                    alignment = unit;
+                }
+            }
+            else {
+                alignment = unit;
+            }
+        }
+        // if the view displays a single day or smaller
+        if (asRoughDays(duration) <= 1) {
+            if (this.isHiddenDay(start)) {
+                start = this.skipHiddenDays(start, direction);
+                start = startOfDay(start);
+            }
+        }
+        function computeRes() {
+            start = dateEnv.startOf(date, alignment);
+            end = dateEnv.add(start, duration);
+            res = { start: start, end: end };
+        }
+        computeRes();
+        // if range is completely enveloped by hidden days, go past the hidden days
+        if (!this.trimHiddenDays(res)) {
+            date = this.skipHiddenDays(date, direction);
+            computeRes();
+        }
+        return res;
+    };
+    // Builds the "current" range when a dayCount is specified.
+    DateProfileGenerator.prototype.buildRangeFromDayCount = function (date, direction, dayCount) {
+        var dateEnv = this.dateEnv;
+        var customAlignment = this.options.dateAlignment;
+        var runningCount = 0;
+        var start = date;
+        var end;
+        if (customAlignment) {
+            start = dateEnv.startOf(start, customAlignment);
+        }
+        start = startOfDay(start);
+        start = this.skipHiddenDays(start, direction);
+        end = start;
+        do {
+            end = addDays(end, 1);
+            if (!this.isHiddenDay(end)) {
+                runningCount++;
+            }
+        } while (runningCount < dayCount);
+        return { start: start, end: end };
+    };
+    // Builds a normalized range object for the "visible" range,
+    // which is a way to define the currentRange and activeRange at the same time.
+    DateProfileGenerator.prototype.buildCustomVisibleRange = function (date) {
+        var dateEnv = this.dateEnv;
+        var visibleRange = this.getRangeOption('visibleRange', dateEnv.toDate(date));
+        if (visibleRange && (visibleRange.start == null || visibleRange.end == null)) {
+            return null;
+        }
+        return visibleRange;
+    };
+    // Computes the range that will represent the element/cells for *rendering*,
+    // but which may have voided days/times.
+    // not responsible for trimming hidden days.
+    DateProfileGenerator.prototype.buildRenderRange = function (currentRange, currentRangeUnit, isRangeAllDay) {
+        return currentRange;
+    };
+    // Compute the duration value that should be added/substracted to the current date
+    // when a prev/next operation happens.
+    DateProfileGenerator.prototype.buildDateIncrement = function (fallback) {
+        var dateIncrementInput = this.options.dateIncrement;
+        var customAlignment;
+        if (dateIncrementInput) {
+            return createDuration(dateIncrementInput);
+        }
+        else if ((customAlignment = this.options.dateAlignment)) {
+            return createDuration(1, customAlignment);
+        }
+        else if (fallback) {
+            return fallback;
+        }
+        else {
+            return createDuration({ days: 1 });
+        }
+    };
+    // Arguments after name will be forwarded to a hypothetical function value
+    // WARNING: passed-in arguments will be given to generator functions as-is and can cause side-effects.
+    // Always clone your objects if you fear mutation.
+    DateProfileGenerator.prototype.getRangeOption = function (name) {
+        var otherArgs = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            otherArgs[_i - 1] = arguments[_i];
+        }
+        var val = this.options[name];
+        if (typeof val === 'function') {
+            val = val.apply(null, otherArgs);
+        }
+        if (val) {
+            val = parseRange(val, this.dateEnv);
+        }
+        if (val) {
+            val = computeVisibleDayRange(val);
+        }
+        return val;
+    };
+    /* Hidden Days
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Initializes internal variables related to calculating hidden days-of-week
+    DateProfileGenerator.prototype.initHiddenDays = function () {
+        var hiddenDays = this.options.hiddenDays || []; // array of day-of-week indices that are hidden
+        var isHiddenDayHash = []; // is the day-of-week hidden? (hash with day-of-week-index -> bool)
+        var dayCnt = 0;
+        var i;
+        if (this.options.weekends === false) {
+            hiddenDays.push(0, 6); // 0=sunday, 6=saturday
+        }
+        for (i = 0; i < 7; i++) {
+            if (!(isHiddenDayHash[i] = hiddenDays.indexOf(i) !== -1)) {
+                dayCnt++;
+            }
+        }
+        if (!dayCnt) {
+            throw new Error('invalid hiddenDays'); // all days were hidden? bad.
+        }
+        this.isHiddenDayHash = isHiddenDayHash;
+    };
+    // Remove days from the beginning and end of the range that are computed as hidden.
+    // If the whole range is trimmed off, returns null
+    DateProfileGenerator.prototype.trimHiddenDays = function (range) {
+        var start = range.start;
+        var end = range.end;
+        if (start) {
+            start = this.skipHiddenDays(start);
+        }
+        if (end) {
+            end = this.skipHiddenDays(end, -1, true);
+        }
+        if (start == null || end == null || start < end) {
+            return { start: start, end: end };
+        }
+        return null;
+    };
+    // Is the current day hidden?
+    // `day` is a day-of-week index (0-6), or a Date (used for UTC)
+    DateProfileGenerator.prototype.isHiddenDay = function (day) {
+        if (day instanceof Date) {
+            day = day.getUTCDay();
+        }
+        return this.isHiddenDayHash[day];
+    };
+    // Incrementing the current day until it is no longer a hidden day, returning a copy.
+    // DOES NOT CONSIDER validRange!
+    // If the initial value of `date` is not a hidden day, don't do anything.
+    // Pass `isExclusive` as `true` if you are dealing with an end date.
+    // `inc` defaults to `1` (increment one day forward each time)
+    DateProfileGenerator.prototype.skipHiddenDays = function (date, inc, isExclusive) {
+        if (inc === void 0) { inc = 1; }
+        if (isExclusive === void 0) { isExclusive = false; }
+        while (this.isHiddenDayHash[(date.getUTCDay() + (isExclusive ? inc : 0) + 7) % 7]) {
+            date = addDays(date, inc);
+        }
+        return date;
+    };
+    return DateProfileGenerator;
+}());
+// TODO: find a way to avoid comparing DateProfiles. it's tedious
+function isDateProfilesEqual(p0, p1) {
+    return rangesEqual(p0.validRange, p1.validRange) &&
+        rangesEqual(p0.activeRange, p1.activeRange) &&
+        rangesEqual(p0.renderRange, p1.renderRange) &&
+        durationsEqual(p0.minTime, p1.minTime) &&
+        durationsEqual(p0.maxTime, p1.maxTime);
+    /*
+    TODO: compare more?
+      currentRange: DateRange
+      currentRangeUnit: string
+      isRangeAllDay: boolean
+      isValid: boolean
+      dateIncrement: Duration
+    */
+}
+
+function reduce (state, action, calendar) {
+    var viewType = reduceViewType(state.viewType, action);
+    var dateProfile = reduceDateProfile(state.dateProfile, action, state.currentDate, viewType, calendar);
+    var eventSources = reduceEventSources(state.eventSources, action, dateProfile, calendar);
+    var nextState = __assign({}, state, { viewType: viewType,
+        dateProfile: dateProfile, currentDate: reduceCurrentDate(state.currentDate, action, dateProfile), eventSources: eventSources, eventStore: reduceEventStore(state.eventStore, action, eventSources, dateProfile, calendar), dateSelection: reduceDateSelection(state.dateSelection, action, calendar), eventSelection: reduceSelectedEvent(state.eventSelection, action), eventDrag: reduceEventDrag(state.eventDrag, action, eventSources, calendar), eventResize: reduceEventResize(state.eventResize, action, eventSources, calendar), eventSourceLoadingLevel: computeLoadingLevel(eventSources), loadingLevel: computeLoadingLevel(eventSources) });
+    for (var _i = 0, _a = calendar.pluginSystem.hooks.reducers; _i < _a.length; _i++) {
+        var reducerFunc = _a[_i];
+        nextState = reducerFunc(nextState, action, calendar);
+    }
+    // console.log(action.type, nextState)
+    return nextState;
+}
+function reduceViewType(currentViewType, action) {
+    switch (action.type) {
+        case 'SET_VIEW_TYPE':
+            return action.viewType;
+        default:
+            return currentViewType;
+    }
+}
+function reduceDateProfile(currentDateProfile, action, currentDate, viewType, calendar) {
+    var newDateProfile;
+    switch (action.type) {
+        case 'PREV':
+            newDateProfile = calendar.dateProfileGenerators[viewType].buildPrev(currentDateProfile, currentDate);
+            break;
+        case 'NEXT':
+            newDateProfile = calendar.dateProfileGenerators[viewType].buildNext(currentDateProfile, currentDate);
+            break;
+        case 'SET_DATE':
+            if (!currentDateProfile.activeRange ||
+                !rangeContainsMarker(currentDateProfile.currentRange, action.dateMarker)) {
+                newDateProfile = calendar.dateProfileGenerators[viewType].build(action.dateMarker, undefined, true // forceToValid
+                );
+            }
+            break;
+        case 'SET_VIEW_TYPE':
+            var generator = calendar.dateProfileGenerators[viewType];
+            if (!generator) {
+                throw new Error(viewType ?
+                    'The FullCalendar view "' + viewType + '" does not exist. Make sure your plugins are loaded correctly.' :
+                    'No available FullCalendar view plugins.');
+            }
+            newDateProfile = generator.build(action.dateMarker || currentDate, undefined, true // forceToValid
+            );
+            break;
+    }
+    if (newDateProfile &&
+        newDateProfile.isValid &&
+        !(currentDateProfile && isDateProfilesEqual(currentDateProfile, newDateProfile))) {
+        return newDateProfile;
+    }
+    else {
+        return currentDateProfile;
+    }
+}
+function reduceCurrentDate(currentDate, action, dateProfile) {
+    switch (action.type) {
+        case 'PREV':
+        case 'NEXT':
+            if (!rangeContainsMarker(dateProfile.currentRange, currentDate)) {
+                return dateProfile.currentRange.start;
+            }
+            else {
+                return currentDate;
+            }
+        case 'SET_DATE':
+        case 'SET_VIEW_TYPE':
+            var newDate = action.dateMarker || currentDate;
+            if (dateProfile.activeRange && !rangeContainsMarker(dateProfile.activeRange, newDate)) {
+                return dateProfile.currentRange.start;
+            }
+            else {
+                return newDate;
+            }
+        default:
+            return currentDate;
+    }
+}
+function reduceDateSelection(currentSelection, action, calendar) {
+    switch (action.type) {
+        case 'SELECT_DATES':
+            return action.selection;
+        case 'UNSELECT_DATES':
+            return null;
+        default:
+            return currentSelection;
+    }
+}
+function reduceSelectedEvent(currentInstanceId, action) {
+    switch (action.type) {
+        case 'SELECT_EVENT':
+            return action.eventInstanceId;
+        case 'UNSELECT_EVENT':
+            return '';
+        default:
+            return currentInstanceId;
+    }
+}
+function reduceEventDrag(currentDrag, action, sources, calendar) {
+    switch (action.type) {
+        case 'SET_EVENT_DRAG':
+            var newDrag = action.state;
+            return {
+                affectedEvents: newDrag.affectedEvents,
+                mutatedEvents: newDrag.mutatedEvents,
+                isEvent: newDrag.isEvent,
+                origSeg: newDrag.origSeg
+            };
+        case 'UNSET_EVENT_DRAG':
+            return null;
+        default:
+            return currentDrag;
+    }
+}
+function reduceEventResize(currentResize, action, sources, calendar) {
+    switch (action.type) {
+        case 'SET_EVENT_RESIZE':
+            var newResize = action.state;
+            return {
+                affectedEvents: newResize.affectedEvents,
+                mutatedEvents: newResize.mutatedEvents,
+                isEvent: newResize.isEvent,
+                origSeg: newResize.origSeg
+            };
+        case 'UNSET_EVENT_RESIZE':
+            return null;
+        default:
+            return currentResize;
+    }
+}
+function computeLoadingLevel(eventSources) {
+    var cnt = 0;
+    for (var sourceId in eventSources) {
+        if (eventSources[sourceId].isFetching) {
+            cnt++;
+        }
+    }
+    return cnt;
+}
+
+var STANDARD_PROPS = {
+    start: null,
+    end: null,
+    allDay: Boolean
+};
+function parseDateSpan(raw, dateEnv, defaultDuration) {
+    var span = parseOpenDateSpan(raw, dateEnv);
+    var range = span.range;
+    if (!range.start) {
+        return null;
+    }
+    if (!range.end) {
+        if (defaultDuration == null) {
+            return null;
+        }
+        else {
+            range.end = dateEnv.add(range.start, defaultDuration);
+        }
+    }
+    return span;
+}
+/*
+TODO: somehow combine with parseRange?
+Will return null if the start/end props were present but parsed invalidly.
+*/
+function parseOpenDateSpan(raw, dateEnv) {
+    var leftovers = {};
+    var standardProps = refineProps(raw, STANDARD_PROPS, {}, leftovers);
+    var startMeta = standardProps.start ? dateEnv.createMarkerMeta(standardProps.start) : null;
+    var endMeta = standardProps.end ? dateEnv.createMarkerMeta(standardProps.end) : null;
+    var allDay = standardProps.allDay;
+    if (allDay == null) {
+        allDay = (startMeta && startMeta.isTimeUnspecified) &&
+            (!endMeta || endMeta.isTimeUnspecified);
+    }
+    // use this leftover object as the selection object
+    leftovers.range = {
+        start: startMeta ? startMeta.marker : null,
+        end: endMeta ? endMeta.marker : null
+    };
+    leftovers.allDay = allDay;
+    return leftovers;
+}
+function isDateSpansEqual(span0, span1) {
+    return rangesEqual(span0.range, span1.range) &&
+        span0.allDay === span1.allDay &&
+        isSpanPropsEqual(span0, span1);
+}
+// the NON-DATE-RELATED props
+function isSpanPropsEqual(span0, span1) {
+    for (var propName in span1) {
+        if (propName !== 'range' && propName !== 'allDay') {
+            if (span0[propName] !== span1[propName]) {
+                return false;
+            }
+        }
+    }
+    // are there any props that span0 has that span1 DOESN'T have?
+    // both have range/allDay, so no need to special-case.
+    for (var propName in span0) {
+        if (!(propName in span1)) {
+            return false;
+        }
+    }
+    return true;
+}
+function buildDateSpanApi(span, dateEnv) {
+    return {
+        start: dateEnv.toDate(span.range.start),
+        end: dateEnv.toDate(span.range.end),
+        startStr: dateEnv.formatIso(span.range.start, { omitTime: span.allDay }),
+        endStr: dateEnv.formatIso(span.range.end, { omitTime: span.allDay }),
+        allDay: span.allDay
+    };
+}
+function buildDatePointApi(span, dateEnv) {
+    return {
+        date: dateEnv.toDate(span.range.start),
+        dateStr: dateEnv.formatIso(span.range.start, { omitTime: span.allDay }),
+        allDay: span.allDay
+    };
+}
+function fabricateEventRange(dateSpan, eventUiBases, calendar) {
+    var def = parseEventDef({ editable: false }, '', // sourceId
+    dateSpan.allDay, true, // hasEnd
+    calendar);
+    return {
+        def: def,
+        ui: compileEventUi(def, eventUiBases),
+        instance: createEventInstance(def.defId, dateSpan.range),
+        range: dateSpan.range,
+        isStart: true,
+        isEnd: true
+    };
+}
+
+function compileViewDefs(defaultConfigs, overrideConfigs) {
+    var hash = {};
+    var viewType;
+    for (viewType in defaultConfigs) {
+        ensureViewDef(viewType, hash, defaultConfigs, overrideConfigs);
+    }
+    for (viewType in overrideConfigs) {
+        ensureViewDef(viewType, hash, defaultConfigs, overrideConfigs);
+    }
+    return hash;
+}
+function ensureViewDef(viewType, hash, defaultConfigs, overrideConfigs) {
+    if (hash[viewType]) {
+        return hash[viewType];
+    }
+    var viewDef = buildViewDef(viewType, hash, defaultConfigs, overrideConfigs);
+    if (viewDef) {
+        hash[viewType] = viewDef;
+    }
+    return viewDef;
+}
+function buildViewDef(viewType, hash, defaultConfigs, overrideConfigs) {
+    var defaultConfig = defaultConfigs[viewType];
+    var overrideConfig = overrideConfigs[viewType];
+    var queryProp = function (name) {
+        return (defaultConfig && defaultConfig[name] !== null) ? defaultConfig[name] :
+            ((overrideConfig && overrideConfig[name] !== null) ? overrideConfig[name] : null);
+    };
+    var theClass = queryProp('class');
+    var superType = queryProp('superType');
+    if (!superType && theClass) {
+        superType =
+            findViewNameBySubclass(theClass, overrideConfigs) ||
+                findViewNameBySubclass(theClass, defaultConfigs);
+    }
+    var superDef = null;
+    if (superType) {
+        if (superType === viewType) {
+            throw new Error('Can\'t have a custom view type that references itself');
+        }
+        superDef = ensureViewDef(superType, hash, defaultConfigs, overrideConfigs);
+    }
+    if (!theClass && superDef) {
+        theClass = superDef.class;
+    }
+    if (!theClass) {
+        return null; // don't throw a warning, might be settings for a single-unit view
+    }
+    return {
+        type: viewType,
+        class: theClass,
+        defaults: __assign({}, (superDef ? superDef.defaults : {}), (defaultConfig ? defaultConfig.options : {})),
+        overrides: __assign({}, (superDef ? superDef.overrides : {}), (overrideConfig ? overrideConfig.options : {}))
+    };
+}
+function findViewNameBySubclass(viewSubclass, configs) {
+    var superProto = Object.getPrototypeOf(viewSubclass.prototype);
+    for (var viewType in configs) {
+        var parsed = configs[viewType];
+        // need DIRECT subclass, so instanceof won't do it
+        if (parsed.class && parsed.class.prototype === superProto) {
+            return viewType;
+        }
+    }
+    return '';
+}
+
+function parseViewConfigs(inputs) {
+    return mapHash(inputs, parseViewConfig);
+}
+var VIEW_DEF_PROPS = {
+    type: String,
+    class: null
+};
+function parseViewConfig(input) {
+    if (typeof input === 'function') {
+        input = { class: input };
+    }
+    var options = {};
+    var props = refineProps(input, VIEW_DEF_PROPS, {}, options);
+    return {
+        superType: props.type,
+        class: props.class,
+        options: options
+    };
+}
+
+function buildViewSpecs(defaultInputs, optionsManager) {
+    var defaultConfigs = parseViewConfigs(defaultInputs);
+    var overrideConfigs = parseViewConfigs(optionsManager.overrides.views);
+    var viewDefs = compileViewDefs(defaultConfigs, overrideConfigs);
+    return mapHash(viewDefs, function (viewDef) {
+        return buildViewSpec(viewDef, overrideConfigs, optionsManager);
+    });
+}
+function buildViewSpec(viewDef, overrideConfigs, optionsManager) {
+    var durationInput = viewDef.overrides.duration ||
+        viewDef.defaults.duration ||
+        optionsManager.dynamicOverrides.duration ||
+        optionsManager.overrides.duration;
+    var duration = null;
+    var durationUnit = '';
+    var singleUnit = '';
+    var singleUnitOverrides = {};
+    if (durationInput) {
+        duration = createDuration(durationInput);
+        if (duration) { // valid?
+            var denom = greatestDurationDenominator(duration, !getWeeksFromInput(durationInput));
+            durationUnit = denom.unit;
+            if (denom.value === 1) {
+                singleUnit = durationUnit;
+                singleUnitOverrides = overrideConfigs[durationUnit] ? overrideConfigs[durationUnit].options : {};
+            }
+        }
+    }
+    var queryButtonText = function (options) {
+        var buttonTextMap = options.buttonText || {};
+        var buttonTextKey = viewDef.defaults.buttonTextKey;
+        if (buttonTextKey != null && buttonTextMap[buttonTextKey] != null) {
+            return buttonTextMap[buttonTextKey];
+        }
+        if (buttonTextMap[viewDef.type] != null) {
+            return buttonTextMap[viewDef.type];
+        }
+        if (buttonTextMap[singleUnit] != null) {
+            return buttonTextMap[singleUnit];
+        }
+    };
+    return {
+        type: viewDef.type,
+        class: viewDef.class,
+        duration: duration,
+        durationUnit: durationUnit,
+        singleUnit: singleUnit,
+        options: __assign({}, globalDefaults, viewDef.defaults, optionsManager.dirDefaults, optionsManager.localeDefaults, optionsManager.overrides, singleUnitOverrides, viewDef.overrides, optionsManager.dynamicOverrides),
+        buttonTextOverride: queryButtonText(optionsManager.dynamicOverrides) ||
+            queryButtonText(optionsManager.overrides) || // constructor-specified buttonText lookup hash takes precedence
+            viewDef.overrides.buttonText,
+        buttonTextDefault: queryButtonText(optionsManager.localeDefaults) ||
+            queryButtonText(optionsManager.dirDefaults) ||
+            viewDef.defaults.buttonText ||
+            queryButtonText(globalDefaults) ||
+            viewDef.type // fall back to given view name
+    };
+}
+
+var Toolbar = /** @class */ (function (_super) {
+    __extends(Toolbar, _super);
+    function Toolbar(extraClassName) {
+        var _this = _super.call(this) || this;
+        _this._renderLayout = memoizeRendering(_this.renderLayout, _this.unrenderLayout);
+        _this._updateTitle = memoizeRendering(_this.updateTitle, null, [_this._renderLayout]);
+        _this._updateActiveButton = memoizeRendering(_this.updateActiveButton, null, [_this._renderLayout]);
+        _this._updateToday = memoizeRendering(_this.updateToday, null, [_this._renderLayout]);
+        _this._updatePrev = memoizeRendering(_this.updatePrev, null, [_this._renderLayout]);
+        _this._updateNext = memoizeRendering(_this.updateNext, null, [_this._renderLayout]);
+        _this.el = createElement('div', { className: 'fc-toolbar ' + extraClassName });
+        return _this;
+    }
+    Toolbar.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this._renderLayout.unrender(); // should unrender everything else
+        removeElement(this.el);
+    };
+    Toolbar.prototype.render = function (props) {
+        this._renderLayout(props.layout);
+        this._updateTitle(props.title);
+        this._updateActiveButton(props.activeButton);
+        this._updateToday(props.isTodayEnabled);
+        this._updatePrev(props.isPrevEnabled);
+        this._updateNext(props.isNextEnabled);
+    };
+    Toolbar.prototype.renderLayout = function (layout) {
+        var el = this.el;
+        this.viewsWithButtons = [];
+        appendToElement(el, this.renderSection('left', layout.left));
+        appendToElement(el, this.renderSection('center', layout.center));
+        appendToElement(el, this.renderSection('right', layout.right));
+    };
+    Toolbar.prototype.unrenderLayout = function () {
+        this.el.innerHTML = '';
+    };
+    Toolbar.prototype.renderSection = function (position, buttonStr) {
+        var _this = this;
+        var _a = this.context, theme = _a.theme, calendar = _a.calendar;
+        var optionsManager = calendar.optionsManager;
+        var viewSpecs = calendar.viewSpecs;
+        var sectionEl = createElement('div', { className: 'fc-' + position });
+        var calendarCustomButtons = optionsManager.computed.customButtons || {};
+        var calendarButtonTextOverrides = optionsManager.overrides.buttonText || {};
+        var calendarButtonText = optionsManager.computed.buttonText || {};
+        if (buttonStr) {
+            buttonStr.split(' ').forEach(function (buttonGroupStr, i) {
+                var groupChildren = [];
+                var isOnlyButtons = true;
+                var groupEl;
+                buttonGroupStr.split(',').forEach(function (buttonName, j) {
+                    var customButtonProps;
+                    var viewSpec;
+                    var buttonClick;
+                    var buttonIcon; // only one of these will be set
+                    var buttonText; // "
+                    var buttonInnerHtml;
+                    var buttonClasses;
+                    var buttonEl;
+                    var buttonAriaAttr;
+                    if (buttonName === 'title') {
+                        groupChildren.push(htmlToElement('<h2>&nbsp;</h2>')); // we always want it to take up height
+                        isOnlyButtons = false;
+                    }
+                    else {
+                        if ((customButtonProps = calendarCustomButtons[buttonName])) {
+                            buttonClick = function (ev) {
+                                if (customButtonProps.click) {
+                                    customButtonProps.click.call(buttonEl, ev);
+                                }
+                            };
+                            (buttonIcon = theme.getCustomButtonIconClass(customButtonProps)) ||
+                                (buttonIcon = theme.getIconClass(buttonName)) ||
+                                (buttonText = customButtonProps.text);
+                        }
+                        else if ((viewSpec = viewSpecs[buttonName])) {
+                            _this.viewsWithButtons.push(buttonName);
+                            buttonClick = function () {
+                                calendar.changeView(buttonName);
+                            };
+                            (buttonText = viewSpec.buttonTextOverride) ||
+                                (buttonIcon = theme.getIconClass(buttonName)) ||
+                                (buttonText = viewSpec.buttonTextDefault);
+                        }
+                        else if (calendar[buttonName]) { // a calendar method
+                            buttonClick = function () {
+                                calendar[buttonName]();
+                            };
+                            (buttonText = calendarButtonTextOverrides[buttonName]) ||
+                                (buttonIcon = theme.getIconClass(buttonName)) ||
+                                (buttonText = calendarButtonText[buttonName]);
+                            //            ^ everything else is considered default
+                        }
+                        if (buttonClick) {
+                            buttonClasses = [
+                                'fc-' + buttonName + '-button',
+                                theme.getClass('button')
+                            ];
+                            if (buttonText) {
+                                buttonInnerHtml = htmlEscape(buttonText);
+                                buttonAriaAttr = '';
+                            }
+                            else if (buttonIcon) {
+                                buttonInnerHtml = "<span class='" + buttonIcon + "'></span>";
+                                buttonAriaAttr = ' aria-label="' + buttonName + '"';
+                            }
+                            buttonEl = htmlToElement(// type="button" so that it doesn't submit a form
+                            '<button type="button" class="' + buttonClasses.join(' ') + '"' +
+                                buttonAriaAttr +
+                                '>' + buttonInnerHtml + '</button>');
+                            buttonEl.addEventListener('click', buttonClick);
+                            groupChildren.push(buttonEl);
+                        }
+                    }
+                });
+                if (groupChildren.length > 1) {
+                    groupEl = document.createElement('div');
+                    var buttonGroupClassName = theme.getClass('buttonGroup');
+                    if (isOnlyButtons && buttonGroupClassName) {
+                        groupEl.classList.add(buttonGroupClassName);
+                    }
+                    appendToElement(groupEl, groupChildren);
+                    sectionEl.appendChild(groupEl);
+                }
+                else {
+                    appendToElement(sectionEl, groupChildren); // 1 or 0 children
+                }
+            });
+        }
+        return sectionEl;
+    };
+    Toolbar.prototype.updateToday = function (isTodayEnabled) {
+        this.toggleButtonEnabled('today', isTodayEnabled);
+    };
+    Toolbar.prototype.updatePrev = function (isPrevEnabled) {
+        this.toggleButtonEnabled('prev', isPrevEnabled);
+    };
+    Toolbar.prototype.updateNext = function (isNextEnabled) {
+        this.toggleButtonEnabled('next', isNextEnabled);
+    };
+    Toolbar.prototype.updateTitle = function (text) {
+        findElements(this.el, 'h2').forEach(function (titleEl) {
+            titleEl.innerText = text;
+        });
+    };
+    Toolbar.prototype.updateActiveButton = function (buttonName) {
+        var theme = this.context.theme;
+        var className = theme.getClass('buttonActive');
+        findElements(this.el, 'button').forEach(function (buttonEl) {
+            if (buttonName && buttonEl.classList.contains('fc-' + buttonName + '-button')) {
+                buttonEl.classList.add(className);
+            }
+            else {
+                buttonEl.classList.remove(className);
+            }
+        });
+    };
+    Toolbar.prototype.toggleButtonEnabled = function (buttonName, bool) {
+        findElements(this.el, '.fc-' + buttonName + '-button').forEach(function (buttonEl) {
+            buttonEl.disabled = !bool;
+        });
+    };
+    return Toolbar;
+}(Component));
+
+var CalendarComponent = /** @class */ (function (_super) {
+    __extends(CalendarComponent, _super);
+    function CalendarComponent(el) {
+        var _this = _super.call(this) || this;
+        _this.elClassNames = [];
+        _this.renderSkeleton = memoizeRendering(_this._renderSkeleton, _this._unrenderSkeleton);
+        _this.renderToolbars = memoizeRendering(_this._renderToolbars, _this._unrenderToolbars, [_this.renderSkeleton]);
+        _this.buildComponentContext = memoize(buildComponentContext);
+        _this.buildViewPropTransformers = memoize(buildViewPropTransformers);
+        _this.el = el;
+        _this.computeTitle = memoize(computeTitle);
+        _this.parseBusinessHours = memoize(function (input) {
+            return parseBusinessHours(input, _this.context.calendar);
+        });
+        return _this;
+    }
+    CalendarComponent.prototype.render = function (props, context) {
+        this.freezeHeight();
+        var title = this.computeTitle(props.dateProfile, props.viewSpec.options);
+        this.renderSkeleton(context);
+        this.renderToolbars(props.viewSpec, props.dateProfile, props.currentDate, title);
+        this.renderView(props, title);
+        this.updateSize();
+        this.thawHeight();
+    };
+    CalendarComponent.prototype.destroy = function () {
+        if (this.header) {
+            this.header.destroy();
+        }
+        if (this.footer) {
+            this.footer.destroy();
+        }
+        this.renderSkeleton.unrender(); // will call destroyView
+        _super.prototype.destroy.call(this);
+    };
+    CalendarComponent.prototype._renderSkeleton = function (context) {
+        this.updateElClassNames(context);
+        prependToElement(this.el, this.contentEl = createElement('div', { className: 'fc-view-container' }));
+        var calendar = context.calendar;
+        for (var _i = 0, _a = calendar.pluginSystem.hooks.viewContainerModifiers; _i < _a.length; _i++) {
+            var modifyViewContainer = _a[_i];
+            modifyViewContainer(this.contentEl, calendar);
+        }
+    };
+    CalendarComponent.prototype._unrenderSkeleton = function () {
+        // weird to have this here
+        if (this.view) {
+            this.savedScroll = this.view.queryScroll();
+            this.view.destroy();
+            this.view = null;
+        }
+        removeElement(this.contentEl);
+        this.removeElClassNames();
+    };
+    CalendarComponent.prototype.removeElClassNames = function () {
+        var classList = this.el.classList;
+        for (var _i = 0, _a = this.elClassNames; _i < _a.length; _i++) {
+            var className = _a[_i];
+            classList.remove(className);
+        }
+        this.elClassNames = [];
+    };
+    CalendarComponent.prototype.updateElClassNames = function (context) {
+        this.removeElClassNames();
+        var theme = context.theme, options = context.options;
+        this.elClassNames = [
+            'fc',
+            'fc-' + options.dir,
+            theme.getClass('widget')
+        ];
+        var classList = this.el.classList;
+        for (var _i = 0, _a = this.elClassNames; _i < _a.length; _i++) {
+            var className = _a[_i];
+            classList.add(className);
+        }
+    };
+    CalendarComponent.prototype._renderToolbars = function (viewSpec, dateProfile, currentDate, title) {
+        var _a = this, context = _a.context, header = _a.header, footer = _a.footer;
+        var options = context.options, calendar = context.calendar;
+        var headerLayout = options.header;
+        var footerLayout = options.footer;
+        var dateProfileGenerator = this.props.dateProfileGenerator;
+        var now = calendar.getNow();
+        var todayInfo = dateProfileGenerator.build(now);
+        var prevInfo = dateProfileGenerator.buildPrev(dateProfile, currentDate);
+        var nextInfo = dateProfileGenerator.buildNext(dateProfile, currentDate);
+        var toolbarProps = {
+            title: title,
+            activeButton: viewSpec.type,
+            isTodayEnabled: todayInfo.isValid && !rangeContainsMarker(dateProfile.currentRange, now),
+            isPrevEnabled: prevInfo.isValid,
+            isNextEnabled: nextInfo.isValid
+        };
+        if (headerLayout) {
+            if (!header) {
+                header = this.header = new Toolbar('fc-header-toolbar');
+                prependToElement(this.el, header.el);
+            }
+            header.receiveProps(__assign({ layout: headerLayout }, toolbarProps), context);
+        }
+        else if (header) {
+            header.destroy();
+            header = this.header = null;
+        }
+        if (footerLayout) {
+            if (!footer) {
+                footer = this.footer = new Toolbar('fc-footer-toolbar');
+                appendToElement(this.el, footer.el);
+            }
+            footer.receiveProps(__assign({ layout: footerLayout }, toolbarProps), context);
+        }
+        else if (footer) {
+            footer.destroy();
+            footer = this.footer = null;
+        }
+    };
+    CalendarComponent.prototype._unrenderToolbars = function () {
+        if (this.header) {
+            this.header.destroy();
+            this.header = null;
+        }
+        if (this.footer) {
+            this.footer.destroy();
+            this.footer = null;
+        }
+    };
+    CalendarComponent.prototype.renderView = function (props, title) {
+        var view = this.view;
+        var _a = this.context, calendar = _a.calendar, options = _a.options;
+        var viewSpec = props.viewSpec, dateProfileGenerator = props.dateProfileGenerator;
+        if (!view || view.viewSpec !== viewSpec) {
+            if (view) {
+                view.destroy();
+            }
+            view = this.view = new viewSpec['class'](viewSpec, this.contentEl);
+            if (this.savedScroll) {
+                view.addScroll(this.savedScroll, true);
+                this.savedScroll = null;
+            }
+        }
+        view.title = title; // for the API
+        var viewProps = {
+            dateProfileGenerator: dateProfileGenerator,
+            dateProfile: props.dateProfile,
+            businessHours: this.parseBusinessHours(viewSpec.options.businessHours),
+            eventStore: props.eventStore,
+            eventUiBases: props.eventUiBases,
+            dateSelection: props.dateSelection,
+            eventSelection: props.eventSelection,
+            eventDrag: props.eventDrag,
+            eventResize: props.eventResize
+        };
+        var transformers = this.buildViewPropTransformers(calendar.pluginSystem.hooks.viewPropsTransformers);
+        for (var _i = 0, transformers_1 = transformers; _i < transformers_1.length; _i++) {
+            var transformer = transformers_1[_i];
+            __assign(viewProps, transformer.transform(viewProps, viewSpec, props, options));
+        }
+        view.receiveProps(viewProps, this.buildComponentContext(this.context, viewSpec, view));
+    };
+    // Sizing
+    // -----------------------------------------------------------------------------------------------------------------
+    CalendarComponent.prototype.updateSize = function (isResize) {
+        if (isResize === void 0) { isResize = false; }
+        var view = this.view;
+        if (!view) {
+            return; // why?
+        }
+        if (isResize || this.isHeightAuto == null) {
+            this.computeHeightVars();
+        }
+        view.updateSize(isResize, this.viewHeight, this.isHeightAuto);
+        view.updateNowIndicator(); // we need to guarantee this will run after updateSize
+        view.popScroll(isResize);
+    };
+    CalendarComponent.prototype.computeHeightVars = function () {
+        var calendar = this.context.calendar; // yuck. need to handle dynamic options
+        var heightInput = calendar.opt('height');
+        var contentHeightInput = calendar.opt('contentHeight');
+        this.isHeightAuto = heightInput === 'auto' || contentHeightInput === 'auto';
+        if (typeof contentHeightInput === 'number') { // exists and not 'auto'
+            this.viewHeight = contentHeightInput;
+        }
+        else if (typeof contentHeightInput === 'function') { // exists and is a function
+            this.viewHeight = contentHeightInput();
+        }
+        else if (typeof heightInput === 'number') { // exists and not 'auto'
+            this.viewHeight = heightInput - this.queryToolbarsHeight();
+        }
+        else if (typeof heightInput === 'function') { // exists and is a function
+            this.viewHeight = heightInput() - this.queryToolbarsHeight();
+        }
+        else if (heightInput === 'parent') { // set to height of parent element
+            var parentEl = this.el.parentNode;
+            this.viewHeight = parentEl.getBoundingClientRect().height - this.queryToolbarsHeight();
+        }
+        else {
+            this.viewHeight = Math.round(this.contentEl.getBoundingClientRect().width /
+                Math.max(calendar.opt('aspectRatio'), .5));
+        }
+    };
+    CalendarComponent.prototype.queryToolbarsHeight = function () {
+        var height = 0;
+        if (this.header) {
+            height += computeHeightAndMargins(this.header.el);
+        }
+        if (this.footer) {
+            height += computeHeightAndMargins(this.footer.el);
+        }
+        return height;
+    };
+    // Height "Freezing"
+    // -----------------------------------------------------------------------------------------------------------------
+    CalendarComponent.prototype.freezeHeight = function () {
+        applyStyle(this.el, {
+            height: this.el.getBoundingClientRect().height,
+            overflow: 'hidden'
+        });
+    };
+    CalendarComponent.prototype.thawHeight = function () {
+        applyStyle(this.el, {
+            height: '',
+            overflow: ''
+        });
+    };
+    return CalendarComponent;
+}(Component));
+// Title and Date Formatting
+// -----------------------------------------------------------------------------------------------------------------
+// Computes what the title at the top of the calendar should be for this view
+function computeTitle(dateProfile, viewOptions) {
+    var range;
+    // for views that span a large unit of time, show the proper interval, ignoring stray days before and after
+    if (/^(year|month)$/.test(dateProfile.currentRangeUnit)) {
+        range = dateProfile.currentRange;
+    }
+    else { // for day units or smaller, use the actual day range
+        range = dateProfile.activeRange;
+    }
+    return this.context.dateEnv.formatRange(range.start, range.end, createFormatter(viewOptions.titleFormat || computeTitleFormat(dateProfile), viewOptions.titleRangeSeparator), { isEndExclusive: dateProfile.isRangeAllDay });
+}
+// Generates the format string that should be used to generate the title for the current date range.
+// Attempts to compute the most appropriate format if not explicitly specified with `titleFormat`.
+function computeTitleFormat(dateProfile) {
+    var currentRangeUnit = dateProfile.currentRangeUnit;
+    if (currentRangeUnit === 'year') {
+        return { year: 'numeric' };
+    }
+    else if (currentRangeUnit === 'month') {
+        return { year: 'numeric', month: 'long' }; // like "September 2014"
+    }
+    else {
+        var days = diffWholeDays(dateProfile.currentRange.start, dateProfile.currentRange.end);
+        if (days !== null && days > 1) {
+            // multi-day range. shorter, like "Sep 9 - 10 2014"
+            return { year: 'numeric', month: 'short', day: 'numeric' };
+        }
+        else {
+            // one day. longer, like "September 9 2014"
+            return { year: 'numeric', month: 'long', day: 'numeric' };
+        }
+    }
+}
+// build a context scoped to the view
+function buildComponentContext(context, viewSpec, view) {
+    return context.extend(viewSpec.options, view);
+}
+// Plugin
+// -----------------------------------------------------------------------------------------------------------------
+function buildViewPropTransformers(theClasses) {
+    return theClasses.map(function (theClass) {
+        return new theClass();
+    });
+}
+
+var Interaction = /** @class */ (function () {
+    function Interaction(settings) {
+        this.component = settings.component;
+    }
+    Interaction.prototype.destroy = function () {
+    };
+    return Interaction;
+}());
+function parseInteractionSettings(component, input) {
+    return {
+        component: component,
+        el: input.el,
+        useEventCenter: input.useEventCenter != null ? input.useEventCenter : true
+    };
+}
+function interactionSettingsToStore(settings) {
+    var _a;
+    return _a = {},
+        _a[settings.component.uid] = settings,
+        _a;
+}
+// global state
+var interactionSettingsStore = {};
+
+/*
+Detects when the user clicks on an event within a DateComponent
+*/
+var EventClicking = /** @class */ (function (_super) {
+    __extends(EventClicking, _super);
+    function EventClicking(settings) {
+        var _this = _super.call(this, settings) || this;
+        _this.handleSegClick = function (ev, segEl) {
+            var component = _this.component;
+            var _a = component.context, calendar = _a.calendar, view = _a.view;
+            var seg = getElSeg(segEl);
+            if (seg && // might be the <div> surrounding the more link
+                component.isValidSegDownEl(ev.target)) {
+                // our way to simulate a link click for elements that can't be <a> tags
+                // grab before trigger fired in case trigger trashes DOM thru rerendering
+                var hasUrlContainer = elementClosest(ev.target, '.fc-has-url');
+                var url = hasUrlContainer ? hasUrlContainer.querySelector('a[href]').href : '';
+                calendar.publiclyTrigger('eventClick', [
+                    {
+                        el: segEl,
+                        event: new EventApi(component.context.calendar, seg.eventRange.def, seg.eventRange.instance),
+                        jsEvent: ev,
+                        view: view
+                    }
+                ]);
+                if (url && !ev.defaultPrevented) {
+                    window.location.href = url;
+                }
+            }
+        };
+        var component = settings.component;
+        _this.destroy = listenBySelector(component.el, 'click', component.fgSegSelector + ',' + component.bgSegSelector, _this.handleSegClick);
+        return _this;
+    }
+    return EventClicking;
+}(Interaction));
+
+/*
+Triggers events and adds/removes core classNames when the user's pointer
+enters/leaves event-elements of a component.
+*/
+var EventHovering = /** @class */ (function (_super) {
+    __extends(EventHovering, _super);
+    function EventHovering(settings) {
+        var _this = _super.call(this, settings) || this;
+        // for simulating an eventMouseLeave when the event el is destroyed while mouse is over it
+        _this.handleEventElRemove = function (el) {
+            if (el === _this.currentSegEl) {
+                _this.handleSegLeave(null, _this.currentSegEl);
+            }
+        };
+        _this.handleSegEnter = function (ev, segEl) {
+            if (getElSeg(segEl)) { // TODO: better way to make sure not hovering over more+ link or its wrapper
+                segEl.classList.add('fc-allow-mouse-resize');
+                _this.currentSegEl = segEl;
+                _this.triggerEvent('eventMouseEnter', ev, segEl);
+            }
+        };
+        _this.handleSegLeave = function (ev, segEl) {
+            if (_this.currentSegEl) {
+                segEl.classList.remove('fc-allow-mouse-resize');
+                _this.currentSegEl = null;
+                _this.triggerEvent('eventMouseLeave', ev, segEl);
+            }
+        };
+        var component = settings.component;
+        _this.removeHoverListeners = listenToHoverBySelector(component.el, component.fgSegSelector + ',' + component.bgSegSelector, _this.handleSegEnter, _this.handleSegLeave);
+        // how to make sure component already has context?
+        component.context.calendar.on('eventElRemove', _this.handleEventElRemove);
+        return _this;
+    }
+    EventHovering.prototype.destroy = function () {
+        this.removeHoverListeners();
+        this.component.context.calendar.off('eventElRemove', this.handleEventElRemove);
+    };
+    EventHovering.prototype.triggerEvent = function (publicEvName, ev, segEl) {
+        var component = this.component;
+        var _a = component.context, calendar = _a.calendar, view = _a.view;
+        var seg = getElSeg(segEl);
+        if (!ev || component.isValidSegDownEl(ev.target)) {
+            calendar.publiclyTrigger(publicEvName, [
+                {
+                    el: segEl,
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
+                    jsEvent: ev,
+                    view: view
+                }
+            ]);
+        }
+    };
+    return EventHovering;
+}(Interaction));
+
+var StandardTheme = /** @class */ (function (_super) {
+    __extends(StandardTheme, _super);
+    function StandardTheme() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return StandardTheme;
+}(Theme));
+StandardTheme.prototype.classes = {
+    widget: 'fc-unthemed',
+    widgetHeader: 'fc-widget-header',
+    widgetContent: 'fc-widget-content',
+    buttonGroup: 'fc-button-group',
+    button: 'fc-button fc-button-primary',
+    buttonActive: 'fc-button-active',
+    popoverHeader: 'fc-widget-header',
+    popoverContent: 'fc-widget-content',
+    // day grid
+    headerRow: 'fc-widget-header',
+    dayRow: 'fc-widget-content',
+    // list view
+    listView: 'fc-widget-content'
+};
+StandardTheme.prototype.baseIconClass = 'fc-icon';
+StandardTheme.prototype.iconClasses = {
+    close: 'fc-icon-x',
+    prev: 'fc-icon-chevron-left',
+    next: 'fc-icon-chevron-right',
+    prevYear: 'fc-icon-chevrons-left',
+    nextYear: 'fc-icon-chevrons-right'
+};
+StandardTheme.prototype.iconOverrideOption = 'buttonIcons';
+StandardTheme.prototype.iconOverrideCustomButtonOption = 'icon';
+StandardTheme.prototype.iconOverridePrefix = 'fc-icon-';
+
+var Calendar = /** @class */ (function () {
+    function Calendar(el, overrides) {
+        var _this = this;
+        this.buildComponentContext = memoize(buildComponentContext$1);
+        this.parseRawLocales = memoize(parseRawLocales);
+        this.buildLocale = memoize(buildLocale);
+        this.buildDateEnv = memoize(buildDateEnv);
+        this.buildTheme = memoize(buildTheme);
+        this.buildEventUiSingleBase = memoize(this._buildEventUiSingleBase);
+        this.buildSelectionConfig = memoize(this._buildSelectionConfig);
+        this.buildEventUiBySource = memoizeOutput(buildEventUiBySource, isPropsEqual);
+        this.buildEventUiBases = memoize(buildEventUiBases);
+        this.interactionsStore = {};
+        this.actionQueue = [];
+        this.isReducing = false;
+        // isDisplaying: boolean = false // installed in DOM? accepting renders?
+        this.needsRerender = false; // needs a render?
+        this.isRendering = false; // currently in the executeRender function?
+        this.renderingPauseDepth = 0;
+        this.buildDelayedRerender = memoize(buildDelayedRerender);
+        this.afterSizingTriggers = {};
+        this.isViewUpdated = false;
+        this.isDatesUpdated = false;
+        this.isEventsUpdated = false;
+        this.el = el;
+        this.optionsManager = new OptionsManager(overrides || {});
+        this.pluginSystem = new PluginSystem();
+        // only do once. don't do in handleOptions. because can't remove plugins
+        this.addPluginInputs(this.optionsManager.computed.plugins || []);
+        this.handleOptions(this.optionsManager.computed);
+        this.publiclyTrigger('_init'); // for tests
+        this.hydrate();
+        this.calendarInteractions = this.pluginSystem.hooks.calendarInteractions
+            .map(function (calendarInteractionClass) {
+            return new calendarInteractionClass(_this);
+        });
+    }
+    Calendar.prototype.addPluginInputs = function (pluginInputs) {
+        var pluginDefs = refinePluginDefs(pluginInputs);
+        for (var _i = 0, pluginDefs_1 = pluginDefs; _i < pluginDefs_1.length; _i++) {
+            var pluginDef = pluginDefs_1[_i];
+            this.pluginSystem.add(pluginDef);
+        }
+    };
+    Object.defineProperty(Calendar.prototype, "view", {
+        // public API
+        get: function () {
+            return this.component ? this.component.view : null;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    // Public API for rendering
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.render = function () {
+        if (!this.component) {
+            this.component = new CalendarComponent(this.el);
+            this.renderableEventStore = createEmptyEventStore();
+            this.bindHandlers();
+            this.executeRender();
+        }
+        else {
+            this.requestRerender();
+        }
+    };
+    Calendar.prototype.destroy = function () {
+        if (this.component) {
+            this.unbindHandlers();
+            this.component.destroy(); // don't null-out. in case API needs access
+            this.component = null; // umm ???
+            for (var _i = 0, _a = this.calendarInteractions; _i < _a.length; _i++) {
+                var interaction = _a[_i];
+                interaction.destroy();
+            }
+            this.publiclyTrigger('_destroyed');
+        }
+    };
+    // Handlers
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.bindHandlers = function () {
+        var _this = this;
+        // event delegation for nav links
+        this.removeNavLinkListener = listenBySelector(this.el, 'click', 'a[data-goto]', function (ev, anchorEl) {
+            var gotoOptions = anchorEl.getAttribute('data-goto');
+            gotoOptions = gotoOptions ? JSON.parse(gotoOptions) : {};
+            var dateEnv = _this.dateEnv;
+            var dateMarker = dateEnv.createMarker(gotoOptions.date);
+            var viewType = gotoOptions.type;
+            // property like "navLinkDayClick". might be a string or a function
+            var customAction = _this.viewOpt('navLink' + capitaliseFirstLetter(viewType) + 'Click');
+            if (typeof customAction === 'function') {
+                customAction(dateEnv.toDate(dateMarker), ev);
+            }
+            else {
+                if (typeof customAction === 'string') {
+                    viewType = customAction;
+                }
+                _this.zoomTo(dateMarker, viewType);
+            }
+        });
+        if (this.opt('handleWindowResize')) {
+            window.addEventListener('resize', this.windowResizeProxy = debounce(// prevents rapid calls
+            this.windowResize.bind(this), this.opt('windowResizeDelay')));
+        }
+    };
+    Calendar.prototype.unbindHandlers = function () {
+        this.removeNavLinkListener();
+        if (this.windowResizeProxy) {
+            window.removeEventListener('resize', this.windowResizeProxy);
+            this.windowResizeProxy = null;
+        }
+    };
+    // Dispatcher
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.hydrate = function () {
+        var _this = this;
+        this.state = this.buildInitialState();
+        var rawSources = this.opt('eventSources') || [];
+        var singleRawSource = this.opt('events');
+        var sources = []; // parsed
+        if (singleRawSource) {
+            rawSources.unshift(singleRawSource);
+        }
+        for (var _i = 0, rawSources_1 = rawSources; _i < rawSources_1.length; _i++) {
+            var rawSource = rawSources_1[_i];
+            var source = parseEventSource(rawSource, this);
+            if (source) {
+                sources.push(source);
+            }
+        }
+        this.batchRendering(function () {
+            _this.dispatch({ type: 'INIT' }); // pass in sources here?
+            _this.dispatch({ type: 'ADD_EVENT_SOURCES', sources: sources });
+            _this.dispatch({
+                type: 'SET_VIEW_TYPE',
+                viewType: _this.opt('defaultView') || _this.pluginSystem.hooks.defaultView
+            });
+        });
+    };
+    Calendar.prototype.buildInitialState = function () {
+        return {
+            viewType: null,
+            loadingLevel: 0,
+            eventSourceLoadingLevel: 0,
+            currentDate: this.getInitialDate(),
+            dateProfile: null,
+            eventSources: {},
+            eventStore: createEmptyEventStore(),
+            dateSelection: null,
+            eventSelection: '',
+            eventDrag: null,
+            eventResize: null
+        };
+    };
+    Calendar.prototype.dispatch = function (action) {
+        this.actionQueue.push(action);
+        if (!this.isReducing) {
+            this.isReducing = true;
+            var oldState = this.state;
+            while (this.actionQueue.length) {
+                this.state = this.reduce(this.state, this.actionQueue.shift(), this);
+            }
+            var newState = this.state;
+            this.isReducing = false;
+            if (!oldState.loadingLevel && newState.loadingLevel) {
+                this.publiclyTrigger('loading', [true]);
+            }
+            else if (oldState.loadingLevel && !newState.loadingLevel) {
+                this.publiclyTrigger('loading', [false]);
+            }
+            var view = this.component && this.component.view;
+            if (oldState.eventStore !== newState.eventStore) {
+                if (oldState.eventStore) {
+                    this.isEventsUpdated = true;
+                }
+            }
+            if (oldState.dateProfile !== newState.dateProfile) {
+                if (oldState.dateProfile && view) { // why would view be null!?
+                    this.publiclyTrigger('datesDestroy', [
+                        {
+                            view: view,
+                            el: view.el
+                        }
+                    ]);
+                }
+                this.isDatesUpdated = true;
+            }
+            if (oldState.viewType !== newState.viewType) {
+                if (oldState.viewType && view) { // why would view be null!?
+                    this.publiclyTrigger('viewSkeletonDestroy', [
+                        {
+                            view: view,
+                            el: view.el
+                        }
+                    ]);
+                }
+                this.isViewUpdated = true;
+            }
+            this.requestRerender();
+        }
+    };
+    Calendar.prototype.reduce = function (state, action, calendar) {
+        return reduce(state, action, calendar);
+    };
+    // Render Queue
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.requestRerender = function () {
+        this.needsRerender = true;
+        this.delayedRerender(); // will call a debounced-version of tryRerender
+    };
+    Calendar.prototype.tryRerender = function () {
+        if (this.component && // must be accepting renders
+            this.needsRerender && // indicates that a rerender was requested
+            !this.renderingPauseDepth && // not paused
+            !this.isRendering // not currently in the render loop
+        ) {
+            this.executeRender();
+        }
+    };
+    Calendar.prototype.batchRendering = function (func) {
+        this.renderingPauseDepth++;
+        func();
+        this.renderingPauseDepth--;
+        if (this.needsRerender) {
+            this.requestRerender();
+        }
+    };
+    // Rendering
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.executeRender = function () {
+        // clear these BEFORE the render so that new values will accumulate during render
+        this.needsRerender = false;
+        this.isRendering = true;
+        this.renderComponent();
+        this.isRendering = false;
+        // received a rerender request while rendering
+        if (this.needsRerender) {
+            this.delayedRerender();
+        }
+    };
+    /*
+    don't call this directly. use executeRender instead
+    */
+    Calendar.prototype.renderComponent = function () {
+        var _a = this, state = _a.state, component = _a.component;
+        var viewType = state.viewType;
+        var viewSpec = this.viewSpecs[viewType];
+        if (!viewSpec) {
+            throw new Error("View type \"" + viewType + "\" is not valid");
+        }
+        // if event sources are still loading and progressive rendering hasn't been enabled,
+        // keep rendering the last fully loaded set of events
+        var renderableEventStore = this.renderableEventStore =
+            (state.eventSourceLoadingLevel && !this.opt('progressiveEventRendering')) ?
+                this.renderableEventStore :
+                state.eventStore;
+        var eventUiSingleBase = this.buildEventUiSingleBase(viewSpec.options);
+        var eventUiBySource = this.buildEventUiBySource(state.eventSources);
+        var eventUiBases = this.eventUiBases = this.buildEventUiBases(renderableEventStore.defs, eventUiSingleBase, eventUiBySource);
+        component.receiveProps(__assign({}, state, { viewSpec: viewSpec, dateProfileGenerator: this.dateProfileGenerators[viewType], dateProfile: state.dateProfile, eventStore: renderableEventStore, eventUiBases: eventUiBases, dateSelection: state.dateSelection, eventSelection: state.eventSelection, eventDrag: state.eventDrag, eventResize: state.eventResize }), this.buildComponentContext(this.theme, this.dateEnv, this.optionsManager.computed));
+        if (this.isViewUpdated) {
+            this.isViewUpdated = false;
+            this.publiclyTrigger('viewSkeletonRender', [
+                {
+                    view: component.view,
+                    el: component.view.el
+                }
+            ]);
+        }
+        if (this.isDatesUpdated) {
+            this.isDatesUpdated = false;
+            this.publiclyTrigger('datesRender', [
+                {
+                    view: component.view,
+                    el: component.view.el
+                }
+            ]);
+        }
+        if (this.isEventsUpdated) {
+            this.isEventsUpdated = false;
+        }
+        this.releaseAfterSizingTriggers();
+    };
+    // Options
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.setOption = function (name, val) {
+        var _a;
+        this.mutateOptions((_a = {}, _a[name] = val, _a), [], true);
+    };
+    Calendar.prototype.getOption = function (name) {
+        return this.optionsManager.computed[name];
+    };
+    Calendar.prototype.opt = function (name) {
+        return this.optionsManager.computed[name];
+    };
+    Calendar.prototype.viewOpt = function (name) {
+        return this.viewOpts()[name];
+    };
+    Calendar.prototype.viewOpts = function () {
+        return this.viewSpecs[this.state.viewType].options;
+    };
+    /*
+    handles option changes (like a diff)
+    */
+    Calendar.prototype.mutateOptions = function (updates, removals, isDynamic, deepEqual) {
+        var _this = this;
+        var changeHandlers = this.pluginSystem.hooks.optionChangeHandlers;
+        var normalUpdates = {};
+        var specialUpdates = {};
+        var oldDateEnv = this.dateEnv; // do this before handleOptions
+        var isTimeZoneDirty = false;
+        var isSizeDirty = false;
+        var anyDifficultOptions = Boolean(removals.length);
+        for (var name_1 in updates) {
+            if (changeHandlers[name_1]) {
+                specialUpdates[name_1] = updates[name_1];
+            }
+            else {
+                normalUpdates[name_1] = updates[name_1];
+            }
+        }
+        for (var name_2 in normalUpdates) {
+            if (/^(height|contentHeight|aspectRatio)$/.test(name_2)) {
+                isSizeDirty = true;
+            }
+            else if (/^(defaultDate|defaultView)$/.test(name_2)) ;
+            else {
+                anyDifficultOptions = true;
+                if (name_2 === 'timeZone') {
+                    isTimeZoneDirty = true;
+                }
+            }
+        }
+        this.optionsManager.mutate(normalUpdates, removals, isDynamic);
+        if (anyDifficultOptions) {
+            this.handleOptions(this.optionsManager.computed);
+        }
+        this.batchRendering(function () {
+            if (anyDifficultOptions) {
+                if (isTimeZoneDirty) {
+                    _this.dispatch({
+                        type: 'CHANGE_TIMEZONE',
+                        oldDateEnv: oldDateEnv
+                    });
+                }
+                /* HACK
+                has the same effect as calling this.requestRerender()
+                but recomputes the state's dateProfile
+                */
+                _this.dispatch({
+                    type: 'SET_VIEW_TYPE',
+                    viewType: _this.state.viewType
+                });
+            }
+            else if (isSizeDirty) {
+                _this.updateSize();
+            }
+            // special updates
+            if (deepEqual) {
+                for (var name_3 in specialUpdates) {
+                    changeHandlers[name_3](specialUpdates[name_3], _this, deepEqual);
+                }
+            }
+        });
+    };
+    /*
+    rebuilds things based off of a complete set of refined options
+    */
+    Calendar.prototype.handleOptions = function (options) {
+        var _this = this;
+        var pluginHooks = this.pluginSystem.hooks;
+        this.defaultAllDayEventDuration = createDuration(options.defaultAllDayEventDuration);
+        this.defaultTimedEventDuration = createDuration(options.defaultTimedEventDuration);
+        this.delayedRerender = this.buildDelayedRerender(options.rerenderDelay);
+        this.theme = this.buildTheme(options);
+        var available = this.parseRawLocales(options.locales);
+        this.availableRawLocales = available.map;
+        var locale = this.buildLocale(options.locale || available.defaultCode, available.map);
+        this.dateEnv = this.buildDateEnv(locale, options.timeZone, pluginHooks.namedTimeZonedImpl, options.firstDay, options.weekNumberCalculation, options.weekLabel, pluginHooks.cmdFormatter);
+        this.selectionConfig = this.buildSelectionConfig(options); // needs dateEnv. do after :(
+        // ineffecient to do every time?
+        this.viewSpecs = buildViewSpecs(pluginHooks.views, this.optionsManager);
+        // ineffecient to do every time?
+        this.dateProfileGenerators = mapHash(this.viewSpecs, function (viewSpec) {
+            return new viewSpec.class.prototype.dateProfileGeneratorClass(viewSpec, _this);
+        });
+    };
+    Calendar.prototype.getAvailableLocaleCodes = function () {
+        return Object.keys(this.availableRawLocales);
+    };
+    Calendar.prototype._buildSelectionConfig = function (rawOpts) {
+        return processScopedUiProps('select', rawOpts, this);
+    };
+    Calendar.prototype._buildEventUiSingleBase = function (rawOpts) {
+        if (rawOpts.editable) { // so 'editable' affected events
+            rawOpts = __assign({}, rawOpts, { eventEditable: true });
+        }
+        return processScopedUiProps('event', rawOpts, this);
+    };
+    // Trigger
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.hasPublicHandlers = function (name) {
+        return this.hasHandlers(name) ||
+            this.opt(name); // handler specified in options
+    };
+    Calendar.prototype.publiclyTrigger = function (name, args) {
+        var optHandler = this.opt(name);
+        this.triggerWith(name, this, args);
+        if (optHandler) {
+            return optHandler.apply(this, args);
+        }
+    };
+    Calendar.prototype.publiclyTriggerAfterSizing = function (name, args) {
+        var afterSizingTriggers = this.afterSizingTriggers;
+        (afterSizingTriggers[name] || (afterSizingTriggers[name] = [])).push(args);
+    };
+    Calendar.prototype.releaseAfterSizingTriggers = function () {
+        var afterSizingTriggers = this.afterSizingTriggers;
+        for (var name_4 in afterSizingTriggers) {
+            for (var _i = 0, _a = afterSizingTriggers[name_4]; _i < _a.length; _i++) {
+                var args = _a[_i];
+                this.publiclyTrigger(name_4, args);
+            }
+        }
+        this.afterSizingTriggers = {};
+    };
+    // View
+    // -----------------------------------------------------------------------------------------------------------------
+    // Returns a boolean about whether the view is okay to instantiate at some point
+    Calendar.prototype.isValidViewType = function (viewType) {
+        return Boolean(this.viewSpecs[viewType]);
+    };
+    Calendar.prototype.changeView = function (viewType, dateOrRange) {
+        var dateMarker = null;
+        if (dateOrRange) {
+            if (dateOrRange.start && dateOrRange.end) { // a range
+                this.optionsManager.mutate({ visibleRange: dateOrRange }, []); // will not rerender
+                this.handleOptions(this.optionsManager.computed); // ...but yuck
+            }
+            else { // a date
+                dateMarker = this.dateEnv.createMarker(dateOrRange); // just like gotoDate
+            }
+        }
+        this.unselect();
+        this.dispatch({
+            type: 'SET_VIEW_TYPE',
+            viewType: viewType,
+            dateMarker: dateMarker
+        });
+    };
+    // Forces navigation to a view for the given date.
+    // `viewType` can be a specific view name or a generic one like "week" or "day".
+    // needs to change
+    Calendar.prototype.zoomTo = function (dateMarker, viewType) {
+        var spec;
+        viewType = viewType || 'day'; // day is default zoom
+        spec = this.viewSpecs[viewType] ||
+            this.getUnitViewSpec(viewType);
+        this.unselect();
+        if (spec) {
+            this.dispatch({
+                type: 'SET_VIEW_TYPE',
+                viewType: spec.type,
+                dateMarker: dateMarker
+            });
+        }
+        else {
+            this.dispatch({
+                type: 'SET_DATE',
+                dateMarker: dateMarker
+            });
+        }
+    };
+    // Given a duration singular unit, like "week" or "day", finds a matching view spec.
+    // Preference is given to views that have corresponding buttons.
+    Calendar.prototype.getUnitViewSpec = function (unit) {
+        var component = this.component;
+        var viewTypes = [];
+        var i;
+        var spec;
+        // put views that have buttons first. there will be duplicates, but oh
+        if (component.header) {
+            viewTypes.push.apply(viewTypes, component.header.viewsWithButtons);
+        }
+        if (component.footer) {
+            viewTypes.push.apply(viewTypes, component.footer.viewsWithButtons);
+        }
+        for (var viewType in this.viewSpecs) {
+            viewTypes.push(viewType);
+        }
+        for (i = 0; i < viewTypes.length; i++) {
+            spec = this.viewSpecs[viewTypes[i]];
+            if (spec) {
+                if (spec.singleUnit === unit) {
+                    return spec;
+                }
+            }
+        }
+    };
+    // Current Date
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.getInitialDate = function () {
+        var defaultDateInput = this.opt('defaultDate');
+        // compute the initial ambig-timezone date
+        if (defaultDateInput != null) {
+            return this.dateEnv.createMarker(defaultDateInput);
+        }
+        else {
+            return this.getNow(); // getNow already returns unzoned
+        }
+    };
+    Calendar.prototype.prev = function () {
+        this.unselect();
+        this.dispatch({ type: 'PREV' });
+    };
+    Calendar.prototype.next = function () {
+        this.unselect();
+        this.dispatch({ type: 'NEXT' });
+    };
+    Calendar.prototype.prevYear = function () {
+        this.unselect();
+        this.dispatch({
+            type: 'SET_DATE',
+            dateMarker: this.dateEnv.addYears(this.state.currentDate, -1)
+        });
+    };
+    Calendar.prototype.nextYear = function () {
+        this.unselect();
+        this.dispatch({
+            type: 'SET_DATE',
+            dateMarker: this.dateEnv.addYears(this.state.currentDate, 1)
+        });
+    };
+    Calendar.prototype.today = function () {
+        this.unselect();
+        this.dispatch({
+            type: 'SET_DATE',
+            dateMarker: this.getNow()
+        });
+    };
+    Calendar.prototype.gotoDate = function (zonedDateInput) {
+        this.unselect();
+        this.dispatch({
+            type: 'SET_DATE',
+            dateMarker: this.dateEnv.createMarker(zonedDateInput)
+        });
+    };
+    Calendar.prototype.incrementDate = function (deltaInput) {
+        var delta = createDuration(deltaInput);
+        if (delta) { // else, warn about invalid input?
+            this.unselect();
+            this.dispatch({
+                type: 'SET_DATE',
+                dateMarker: this.dateEnv.add(this.state.currentDate, delta)
+            });
+        }
+    };
+    // for external API
+    Calendar.prototype.getDate = function () {
+        return this.dateEnv.toDate(this.state.currentDate);
+    };
+    // Date Formatting Utils
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.formatDate = function (d, formatter) {
+        var dateEnv = this.dateEnv;
+        return dateEnv.format(dateEnv.createMarker(d), createFormatter(formatter));
+    };
+    // `settings` is for formatter AND isEndExclusive
+    Calendar.prototype.formatRange = function (d0, d1, settings) {
+        var dateEnv = this.dateEnv;
+        return dateEnv.formatRange(dateEnv.createMarker(d0), dateEnv.createMarker(d1), createFormatter(settings, this.opt('defaultRangeSeparator')), settings);
+    };
+    Calendar.prototype.formatIso = function (d, omitTime) {
+        var dateEnv = this.dateEnv;
+        return dateEnv.formatIso(dateEnv.createMarker(d), { omitTime: omitTime });
+    };
+    // Sizing
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.windowResize = function (ev) {
+        if (!this.isHandlingWindowResize &&
+            this.component && // why?
+            ev.target === window // not a jqui resize event
+        ) {
+            this.isHandlingWindowResize = true;
+            this.updateSize();
+            this.publiclyTrigger('windowResize', [this.view]);
+            this.isHandlingWindowResize = false;
+        }
+    };
+    Calendar.prototype.updateSize = function () {
+        if (this.component) { // when?
+            this.component.updateSize(true);
+        }
+    };
+    // Component Registration
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.registerInteractiveComponent = function (component, settingsInput) {
+        var settings = parseInteractionSettings(component, settingsInput);
+        var DEFAULT_INTERACTIONS = [
+            EventClicking,
+            EventHovering
+        ];
+        var interactionClasses = DEFAULT_INTERACTIONS.concat(this.pluginSystem.hooks.componentInteractions);
+        var interactions = interactionClasses.map(function (interactionClass) {
+            return new interactionClass(settings);
+        });
+        this.interactionsStore[component.uid] = interactions;
+        interactionSettingsStore[component.uid] = settings;
+    };
+    Calendar.prototype.unregisterInteractiveComponent = function (component) {
+        for (var _i = 0, _a = this.interactionsStore[component.uid]; _i < _a.length; _i++) {
+            var listener = _a[_i];
+            listener.destroy();
+        }
+        delete this.interactionsStore[component.uid];
+        delete interactionSettingsStore[component.uid];
+    };
+    // Date Selection / Event Selection / DayClick
+    // -----------------------------------------------------------------------------------------------------------------
+    // this public method receives start/end dates in any format, with any timezone
+    // NOTE: args were changed from v3
+    Calendar.prototype.select = function (dateOrObj, endDate) {
+        var selectionInput;
+        if (endDate == null) {
+            if (dateOrObj.start != null) {
+                selectionInput = dateOrObj;
+            }
+            else {
+                selectionInput = {
+                    start: dateOrObj,
+                    end: null
+                };
+            }
+        }
+        else {
+            selectionInput = {
+                start: dateOrObj,
+                end: endDate
+            };
+        }
+        var selection = parseDateSpan(selectionInput, this.dateEnv, createDuration({ days: 1 }) // TODO: cache this?
+        );
+        if (selection) { // throw parse error otherwise?
+            this.dispatch({ type: 'SELECT_DATES', selection: selection });
+            this.triggerDateSelect(selection);
+        }
+    };
+    // public method
+    Calendar.prototype.unselect = function (pev) {
+        if (this.state.dateSelection) {
+            this.dispatch({ type: 'UNSELECT_DATES' });
+            this.triggerDateUnselect(pev);
+        }
+    };
+    Calendar.prototype.triggerDateSelect = function (selection, pev) {
+        var arg = __assign({}, this.buildDateSpanApi(selection), { jsEvent: pev ? pev.origEvent : null, view: this.view });
+        this.publiclyTrigger('select', [arg]);
+    };
+    Calendar.prototype.triggerDateUnselect = function (pev) {
+        this.publiclyTrigger('unselect', [
+            {
+                jsEvent: pev ? pev.origEvent : null,
+                view: this.view
+            }
+        ]);
+    };
+    // TODO: receive pev?
+    Calendar.prototype.triggerDateClick = function (dateSpan, dayEl, view, ev) {
+        var arg = __assign({}, this.buildDatePointApi(dateSpan), { dayEl: dayEl, jsEvent: ev, // Is this always a mouse event? See #4655
+            view: view });
+        this.publiclyTrigger('dateClick', [arg]);
+    };
+    Calendar.prototype.buildDatePointApi = function (dateSpan) {
+        var props = {};
+        for (var _i = 0, _a = this.pluginSystem.hooks.datePointTransforms; _i < _a.length; _i++) {
+            var transform = _a[_i];
+            __assign(props, transform(dateSpan, this));
+        }
+        __assign(props, buildDatePointApi(dateSpan, this.dateEnv));
+        return props;
+    };
+    Calendar.prototype.buildDateSpanApi = function (dateSpan) {
+        var props = {};
+        for (var _i = 0, _a = this.pluginSystem.hooks.dateSpanTransforms; _i < _a.length; _i++) {
+            var transform = _a[_i];
+            __assign(props, transform(dateSpan, this));
+        }
+        __assign(props, buildDateSpanApi(dateSpan, this.dateEnv));
+        return props;
+    };
+    // Date Utils
+    // -----------------------------------------------------------------------------------------------------------------
+    // Returns a DateMarker for the current date, as defined by the client's computer or from the `now` option
+    Calendar.prototype.getNow = function () {
+        var now = this.opt('now');
+        if (typeof now === 'function') {
+            now = now();
+        }
+        if (now == null) {
+            return this.dateEnv.createNowMarker();
+        }
+        return this.dateEnv.createMarker(now);
+    };
+    // Event-Date Utilities
+    // -----------------------------------------------------------------------------------------------------------------
+    // Given an event's allDay status and start date, return what its fallback end date should be.
+    // TODO: rename to computeDefaultEventEnd
+    Calendar.prototype.getDefaultEventEnd = function (allDay, marker) {
+        var end = marker;
+        if (allDay) {
+            end = startOfDay(end);
+            end = this.dateEnv.add(end, this.defaultAllDayEventDuration);
+        }
+        else {
+            end = this.dateEnv.add(end, this.defaultTimedEventDuration);
+        }
+        return end;
+    };
+    // Public Events API
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.addEvent = function (eventInput, sourceInput) {
+        if (eventInput instanceof EventApi) {
+            var def = eventInput._def;
+            var instance = eventInput._instance;
+            // not already present? don't want to add an old snapshot
+            if (!this.state.eventStore.defs[def.defId]) {
+                this.dispatch({
+                    type: 'ADD_EVENTS',
+                    eventStore: eventTupleToStore({ def: def, instance: instance }) // TODO: better util for two args?
+                });
+            }
+            return eventInput;
+        }
+        var sourceId;
+        if (sourceInput instanceof EventSourceApi) {
+            sourceId = sourceInput.internalEventSource.sourceId;
+        }
+        else if (sourceInput != null) {
+            var sourceApi = this.getEventSourceById(sourceInput); // TODO: use an internal function
+            if (!sourceApi) {
+                console.warn('Could not find an event source with ID "' + sourceInput + '"'); // TODO: test
+                return null;
+            }
+            else {
+                sourceId = sourceApi.internalEventSource.sourceId;
+            }
+        }
+        var tuple = parseEvent(eventInput, sourceId, this);
+        if (tuple) {
+            this.dispatch({
+                type: 'ADD_EVENTS',
+                eventStore: eventTupleToStore(tuple)
+            });
+            return new EventApi(this, tuple.def, tuple.def.recurringDef ? null : tuple.instance);
+        }
+        return null;
+    };
+    // TODO: optimize
+    Calendar.prototype.getEventById = function (id) {
+        var _a = this.state.eventStore, defs = _a.defs, instances = _a.instances;
+        id = String(id);
+        for (var defId in defs) {
+            var def = defs[defId];
+            if (def.publicId === id) {
+                if (def.recurringDef) {
+                    return new EventApi(this, def, null);
+                }
+                else {
+                    for (var instanceId in instances) {
+                        var instance = instances[instanceId];
+                        if (instance.defId === def.defId) {
+                            return new EventApi(this, def, instance);
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    };
+    Calendar.prototype.getEvents = function () {
+        var _a = this.state.eventStore, defs = _a.defs, instances = _a.instances;
+        var eventApis = [];
+        for (var id in instances) {
+            var instance = instances[id];
+            var def = defs[instance.defId];
+            eventApis.push(new EventApi(this, def, instance));
+        }
+        return eventApis;
+    };
+    Calendar.prototype.removeAllEvents = function () {
+        this.dispatch({ type: 'REMOVE_ALL_EVENTS' });
+    };
+    Calendar.prototype.rerenderEvents = function () {
+        this.dispatch({ type: 'RESET_EVENTS' });
+    };
+    // Public Event Sources API
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.getEventSources = function () {
+        var sourceHash = this.state.eventSources;
+        var sourceApis = [];
+        for (var internalId in sourceHash) {
+            sourceApis.push(new EventSourceApi(this, sourceHash[internalId]));
+        }
+        return sourceApis;
+    };
+    Calendar.prototype.getEventSourceById = function (id) {
+        var sourceHash = this.state.eventSources;
+        id = String(id);
+        for (var sourceId in sourceHash) {
+            if (sourceHash[sourceId].publicId === id) {
+                return new EventSourceApi(this, sourceHash[sourceId]);
+            }
+        }
+        return null;
+    };
+    Calendar.prototype.addEventSource = function (sourceInput) {
+        if (sourceInput instanceof EventSourceApi) {
+            // not already present? don't want to add an old snapshot
+            if (!this.state.eventSources[sourceInput.internalEventSource.sourceId]) {
+                this.dispatch({
+                    type: 'ADD_EVENT_SOURCES',
+                    sources: [sourceInput.internalEventSource]
+                });
+            }
+            return sourceInput;
+        }
+        var eventSource = parseEventSource(sourceInput, this);
+        if (eventSource) { // TODO: error otherwise?
+            this.dispatch({ type: 'ADD_EVENT_SOURCES', sources: [eventSource] });
+            return new EventSourceApi(this, eventSource);
+        }
+        return null;
+    };
+    Calendar.prototype.removeAllEventSources = function () {
+        this.dispatch({ type: 'REMOVE_ALL_EVENT_SOURCES' });
+    };
+    Calendar.prototype.refetchEvents = function () {
+        this.dispatch({ type: 'FETCH_EVENT_SOURCES' });
+    };
+    // Scroll
+    // -----------------------------------------------------------------------------------------------------------------
+    Calendar.prototype.scrollToTime = function (timeInput) {
+        var duration = createDuration(timeInput);
+        if (duration) {
+            this.component.view.scrollToDuration(duration);
+        }
+    };
+    return Calendar;
+}());
+EmitterMixin.mixInto(Calendar);
+// for memoizers
+// -----------------------------------------------------------------------------------------------------------------
+function buildComponentContext$1(theme, dateEnv, options) {
+    return new ComponentContext(this, theme, dateEnv, options, null);
+}
+function buildDateEnv(locale, timeZone, namedTimeZoneImpl, firstDay, weekNumberCalculation, weekLabel, cmdFormatter) {
+    return new DateEnv({
+        calendarSystem: 'gregory',
+        timeZone: timeZone,
+        namedTimeZoneImpl: namedTimeZoneImpl,
+        locale: locale,
+        weekNumberCalculation: weekNumberCalculation,
+        firstDay: firstDay,
+        weekLabel: weekLabel,
+        cmdFormatter: cmdFormatter
+    });
+}
+function buildTheme(calendarOptions) {
+    var themeClass = this.pluginSystem.hooks.themeClasses[calendarOptions.themeSystem] || StandardTheme;
+    return new themeClass(calendarOptions);
+}
+function buildDelayedRerender(wait) {
+    var func = this.tryRerender.bind(this);
+    if (wait != null) {
+        func = debounce(func, wait);
+    }
+    return func;
+}
+function buildEventUiBySource(eventSources) {
+    return mapHash(eventSources, function (eventSource) {
+        return eventSource.ui;
+    });
+}
+function buildEventUiBases(eventDefs, eventUiSingleBase, eventUiBySource) {
+    var eventUiBases = { '': eventUiSingleBase };
+    for (var defId in eventDefs) {
+        var def = eventDefs[defId];
+        if (def.sourceId && eventUiBySource[def.sourceId]) {
+            eventUiBases[defId] = eventUiBySource[def.sourceId];
+        }
+    }
+    return eventUiBases;
+}
+
+var View = /** @class */ (function (_super) {
+    __extends(View, _super);
+    function View(viewSpec, parentEl) {
+        var _this = _super.call(this, createElement('div', { className: 'fc-view fc-' + viewSpec.type + '-view' })) || this;
+        _this.renderDatesMem = memoizeRendering(_this.renderDatesWrap, _this.unrenderDatesWrap);
+        _this.renderBusinessHoursMem = memoizeRendering(_this.renderBusinessHours, _this.unrenderBusinessHours, [_this.renderDatesMem]);
+        _this.renderDateSelectionMem = memoizeRendering(_this.renderDateSelectionWrap, _this.unrenderDateSelectionWrap, [_this.renderDatesMem]);
+        _this.renderEventsMem = memoizeRendering(_this.renderEvents, _this.unrenderEvents, [_this.renderDatesMem]);
+        _this.renderEventSelectionMem = memoizeRendering(_this.renderEventSelectionWrap, _this.unrenderEventSelectionWrap, [_this.renderEventsMem]);
+        _this.renderEventDragMem = memoizeRendering(_this.renderEventDragWrap, _this.unrenderEventDragWrap, [_this.renderDatesMem]);
+        _this.renderEventResizeMem = memoizeRendering(_this.renderEventResizeWrap, _this.unrenderEventResizeWrap, [_this.renderDatesMem]);
+        _this.viewSpec = viewSpec;
+        _this.type = viewSpec.type;
+        parentEl.appendChild(_this.el);
+        _this.initialize();
+        return _this;
+    }
+    View.prototype.initialize = function () {
+    };
+    Object.defineProperty(View.prototype, "activeStart", {
+        // Date Setting/Unsetting
+        // -----------------------------------------------------------------------------------------------------------------
+        get: function () {
+            return this.context.dateEnv.toDate(this.props.dateProfile.activeRange.start);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(View.prototype, "activeEnd", {
+        get: function () {
+            return this.context.dateEnv.toDate(this.props.dateProfile.activeRange.end);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(View.prototype, "currentStart", {
+        get: function () {
+            return this.context.dateEnv.toDate(this.props.dateProfile.currentRange.start);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(View.prototype, "currentEnd", {
+        get: function () {
+            return this.context.dateEnv.toDate(this.props.dateProfile.currentRange.end);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    // General Rendering
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.render = function (props, context) {
+        this.renderDatesMem(props.dateProfile);
+        this.renderBusinessHoursMem(props.businessHours);
+        this.renderDateSelectionMem(props.dateSelection);
+        this.renderEventsMem(props.eventStore);
+        this.renderEventSelectionMem(props.eventSelection);
+        this.renderEventDragMem(props.eventDrag);
+        this.renderEventResizeMem(props.eventResize);
+    };
+    View.prototype.beforeUpdate = function () {
+        this.addScroll(this.queryScroll());
+    };
+    View.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderDatesMem.unrender(); // should unrender everything else
+    };
+    // Sizing
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.updateSize = function (isResize, viewHeight, isAuto) {
+        var calendar = this.context.calendar;
+        if (isResize) {
+            this.addScroll(this.queryScroll()); // NOTE: same code as in beforeUpdate
+        }
+        if (isResize || // HACKS...
+            calendar.isViewUpdated ||
+            calendar.isDatesUpdated ||
+            calendar.isEventsUpdated) {
+            // sort of the catch-all sizing
+            // anything that might cause dimension changes
+            this.updateBaseSize(isResize, viewHeight, isAuto);
+        }
+        // NOTE: popScroll is called by CalendarComponent
+    };
+    View.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {
+    };
+    // Date Rendering
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.renderDatesWrap = function (dateProfile) {
+        this.renderDates(dateProfile);
+        this.addScroll({
+            duration: createDuration(this.context.options.scrollTime)
+        });
+    };
+    View.prototype.unrenderDatesWrap = function () {
+        this.stopNowIndicator();
+        this.unrenderDates();
+    };
+    View.prototype.renderDates = function (dateProfile) { };
+    View.prototype.unrenderDates = function () { };
+    // Business Hours
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.renderBusinessHours = function (businessHours) { };
+    View.prototype.unrenderBusinessHours = function () { };
+    // Date Selection
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.renderDateSelectionWrap = function (selection) {
+        if (selection) {
+            this.renderDateSelection(selection);
+        }
+    };
+    View.prototype.unrenderDateSelectionWrap = function (selection) {
+        if (selection) {
+            this.unrenderDateSelection(selection);
+        }
+    };
+    View.prototype.renderDateSelection = function (selection) { };
+    View.prototype.unrenderDateSelection = function (selection) { };
+    // Event Rendering
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.renderEvents = function (eventStore) { };
+    View.prototype.unrenderEvents = function () { };
+    // util for subclasses
+    View.prototype.sliceEvents = function (eventStore, allDay) {
+        var props = this.props;
+        return sliceEventStore(eventStore, props.eventUiBases, props.dateProfile.activeRange, allDay ? this.context.nextDayThreshold : null).fg;
+    };
+    // Event Selection
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.renderEventSelectionWrap = function (instanceId) {
+        if (instanceId) {
+            this.renderEventSelection(instanceId);
+        }
+    };
+    View.prototype.unrenderEventSelectionWrap = function (instanceId) {
+        if (instanceId) {
+            this.unrenderEventSelection(instanceId);
+        }
+    };
+    View.prototype.renderEventSelection = function (instanceId) { };
+    View.prototype.unrenderEventSelection = function (instanceId) { };
+    // Event Drag
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.renderEventDragWrap = function (state) {
+        if (state) {
+            this.renderEventDrag(state);
+        }
+    };
+    View.prototype.unrenderEventDragWrap = function (state) {
+        if (state) {
+            this.unrenderEventDrag(state);
+        }
+    };
+    View.prototype.renderEventDrag = function (state) { };
+    View.prototype.unrenderEventDrag = function (state) { };
+    // Event Resize
+    // -----------------------------------------------------------------------------------------------------------------
+    View.prototype.renderEventResizeWrap = function (state) {
+        if (state) {
+            this.renderEventResize(state);
+        }
+    };
+    View.prototype.unrenderEventResizeWrap = function (state) {
+        if (state) {
+            this.unrenderEventResize(state);
+        }
+    };
+    View.prototype.renderEventResize = function (state) { };
+    View.prototype.unrenderEventResize = function (state) { };
+    /* Now Indicator
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Immediately render the current time indicator and begins re-rendering it at an interval,
+    // which is defined by this.getNowIndicatorUnit().
+    // TODO: somehow do this for the current whole day's background too
+    // USAGE: must be called manually from subclasses' render methods! don't need to call stopNowIndicator tho
+    View.prototype.startNowIndicator = function (dateProfile, dateProfileGenerator) {
+        var _this = this;
+        var _a = this.context, calendar = _a.calendar, dateEnv = _a.dateEnv, options = _a.options;
+        var unit;
+        var update;
+        var delay; // ms wait value
+        if (options.nowIndicator && !this.initialNowDate) {
+            unit = this.getNowIndicatorUnit(dateProfile, dateProfileGenerator);
+            if (unit) {
+                update = this.updateNowIndicator.bind(this);
+                this.initialNowDate = calendar.getNow();
+                this.initialNowQueriedMs = new Date().valueOf();
+                // wait until the beginning of the next interval
+                delay = dateEnv.add(dateEnv.startOf(this.initialNowDate, unit), createDuration(1, unit)).valueOf() - this.initialNowDate.valueOf();
+                // TODO: maybe always use setTimeout, waiting until start of next unit
+                this.nowIndicatorTimeoutID = setTimeout(function () {
+                    _this.nowIndicatorTimeoutID = null;
+                    update();
+                    if (unit === 'second') {
+                        delay = 1000; // every second
+                    }
+                    else {
+                        delay = 1000 * 60; // otherwise, every minute
+                    }
+                    _this.nowIndicatorIntervalID = setInterval(update, delay); // update every interval
+                }, delay);
+            }
+            // rendering will be initiated in updateSize
+        }
+    };
+    // rerenders the now indicator, computing the new current time from the amount of time that has passed
+    // since the initial getNow call.
+    View.prototype.updateNowIndicator = function () {
+        if (this.props.dateProfile && // a way to determine if dates were rendered yet
+            this.initialNowDate // activated before?
+        ) {
+            this.unrenderNowIndicator(); // won't unrender if unnecessary
+            this.renderNowIndicator(addMs(this.initialNowDate, new Date().valueOf() - this.initialNowQueriedMs));
+            this.isNowIndicatorRendered = true;
+        }
+    };
+    // Immediately unrenders the view's current time indicator and stops any re-rendering timers.
+    // Won't cause side effects if indicator isn't rendered.
+    View.prototype.stopNowIndicator = function () {
+        if (this.nowIndicatorTimeoutID) {
+            clearTimeout(this.nowIndicatorTimeoutID);
+            this.nowIndicatorTimeoutID = null;
+        }
+        if (this.nowIndicatorIntervalID) {
+            clearInterval(this.nowIndicatorIntervalID);
+            this.nowIndicatorIntervalID = null;
+        }
+        if (this.isNowIndicatorRendered) {
+            this.unrenderNowIndicator();
+            this.isNowIndicatorRendered = false;
+        }
+    };
+    View.prototype.getNowIndicatorUnit = function (dateProfile, dateProfileGenerator) {
+        // subclasses should implement
+    };
+    // Renders a current time indicator at the given datetime
+    View.prototype.renderNowIndicator = function (date) {
+        // SUBCLASSES MUST PASS TO CHILDREN!
+    };
+    // Undoes the rendering actions from renderNowIndicator
+    View.prototype.unrenderNowIndicator = function () {
+        // SUBCLASSES MUST PASS TO CHILDREN!
+    };
+    /* Scroller
+    ------------------------------------------------------------------------------------------------------------------*/
+    View.prototype.addScroll = function (scroll, isForced) {
+        if (isForced) {
+            scroll.isForced = isForced;
+        }
+        __assign(this.queuedScroll || (this.queuedScroll = {}), scroll);
+    };
+    View.prototype.popScroll = function (isResize) {
+        this.applyQueuedScroll(isResize);
+        this.queuedScroll = null;
+    };
+    View.prototype.applyQueuedScroll = function (isResize) {
+        if (this.queuedScroll) {
+            this.applyScroll(this.queuedScroll, isResize);
+        }
+    };
+    View.prototype.queryScroll = function () {
+        var scroll = {};
+        if (this.props.dateProfile) { // dates rendered yet?
+            __assign(scroll, this.queryDateScroll());
+        }
+        return scroll;
+    };
+    View.prototype.applyScroll = function (scroll, isResize) {
+        var duration = scroll.duration, isForced = scroll.isForced;
+        if (duration != null && !isForced) {
+            delete scroll.duration;
+            if (this.props.dateProfile) { // dates rendered yet?
+                __assign(scroll, this.computeDateScroll(duration));
+            }
+        }
+        if (this.props.dateProfile) { // dates rendered yet?
+            this.applyDateScroll(scroll);
+        }
+    };
+    View.prototype.computeDateScroll = function (duration) {
+        return {}; // subclasses must implement
+    };
+    View.prototype.queryDateScroll = function () {
+        return {}; // subclasses must implement
+    };
+    View.prototype.applyDateScroll = function (scroll) {
+        // subclasses must implement
+    };
+    // for API
+    View.prototype.scrollToDuration = function (duration) {
+        this.applyScroll({ duration: duration }, false);
+    };
+    return View;
+}(DateComponent));
+EmitterMixin.mixInto(View);
+View.prototype.usesMinMaxTime = false;
+View.prototype.dateProfileGeneratorClass = DateProfileGenerator;
+
+var FgEventRenderer = /** @class */ (function () {
+    function FgEventRenderer() {
+        this.segs = [];
+        this.isSizeDirty = false;
+    }
+    FgEventRenderer.prototype.renderSegs = function (context, segs, mirrorInfo) {
+        this.context = context;
+        this.rangeUpdated(); // called too frequently :(
+        // render an `.el` on each seg
+        // returns a subset of the segs. segs that were actually rendered
+        segs = this.renderSegEls(segs, mirrorInfo);
+        this.segs = segs;
+        this.attachSegs(segs, mirrorInfo);
+        this.isSizeDirty = true;
+        triggerRenderedSegs(this.context, this.segs, Boolean(mirrorInfo));
+    };
+    FgEventRenderer.prototype.unrender = function (context, _segs, mirrorInfo) {
+        triggerWillRemoveSegs(this.context, this.segs, Boolean(mirrorInfo));
+        this.detachSegs(this.segs);
+        this.segs = [];
+    };
+    // Updates values that rely on options and also relate to range
+    FgEventRenderer.prototype.rangeUpdated = function () {
+        var options = this.context.options;
+        var displayEventTime;
+        var displayEventEnd;
+        this.eventTimeFormat = createFormatter(options.eventTimeFormat || this.computeEventTimeFormat(), options.defaultRangeSeparator);
+        displayEventTime = options.displayEventTime;
+        if (displayEventTime == null) {
+            displayEventTime = this.computeDisplayEventTime(); // might be based off of range
+        }
+        displayEventEnd = options.displayEventEnd;
+        if (displayEventEnd == null) {
+            displayEventEnd = this.computeDisplayEventEnd(); // might be based off of range
+        }
+        this.displayEventTime = displayEventTime;
+        this.displayEventEnd = displayEventEnd;
+    };
+    // Renders and assigns an `el` property for each foreground event segment.
+    // Only returns segments that successfully rendered.
+    FgEventRenderer.prototype.renderSegEls = function (segs, mirrorInfo) {
+        var html = '';
+        var i;
+        if (segs.length) { // don't build an empty html string
+            // build a large concatenation of event segment HTML
+            for (i = 0; i < segs.length; i++) {
+                html += this.renderSegHtml(segs[i], mirrorInfo);
+            }
+            // Grab individual elements from the combined HTML string. Use each as the default rendering.
+            // Then, compute the 'el' for each segment. An el might be null if the eventRender callback returned false.
+            htmlToElements(html).forEach(function (el, i) {
+                var seg = segs[i];
+                if (el) {
+                    seg.el = el;
+                }
+            });
+            segs = filterSegsViaEls(this.context, segs, Boolean(mirrorInfo));
+        }
+        return segs;
+    };
+    // Generic utility for generating the HTML classNames for an event segment's element
+    FgEventRenderer.prototype.getSegClasses = function (seg, isDraggable, isResizable, mirrorInfo) {
+        var classes = [
+            'fc-event',
+            seg.isStart ? 'fc-start' : 'fc-not-start',
+            seg.isEnd ? 'fc-end' : 'fc-not-end'
+        ].concat(seg.eventRange.ui.classNames);
+        if (isDraggable) {
+            classes.push('fc-draggable');
+        }
+        if (isResizable) {
+            classes.push('fc-resizable');
+        }
+        if (mirrorInfo) {
+            classes.push('fc-mirror');
+            if (mirrorInfo.isDragging) {
+                classes.push('fc-dragging');
+            }
+            if (mirrorInfo.isResizing) {
+                classes.push('fc-resizing');
+            }
+        }
+        return classes;
+    };
+    // Compute the text that should be displayed on an event's element.
+    // `range` can be the Event object itself, or something range-like, with at least a `start`.
+    // If event times are disabled, or the event has no time, will return a blank string.
+    // If not specified, formatter will default to the eventTimeFormat setting,
+    // and displayEnd will default to the displayEventEnd setting.
+    FgEventRenderer.prototype.getTimeText = function (eventRange, formatter, displayEnd) {
+        var def = eventRange.def, instance = eventRange.instance;
+        return this._getTimeText(instance.range.start, def.hasEnd ? instance.range.end : null, def.allDay, formatter, displayEnd, instance.forcedStartTzo, instance.forcedEndTzo);
+    };
+    FgEventRenderer.prototype._getTimeText = function (start, end, allDay, formatter, displayEnd, forcedStartTzo, forcedEndTzo) {
+        var dateEnv = this.context.dateEnv;
+        if (formatter == null) {
+            formatter = this.eventTimeFormat;
+        }
+        if (displayEnd == null) {
+            displayEnd = this.displayEventEnd;
+        }
+        if (this.displayEventTime && !allDay) {
+            if (displayEnd && end) {
+                return dateEnv.formatRange(start, end, formatter, {
+                    forcedStartTzo: forcedStartTzo,
+                    forcedEndTzo: forcedEndTzo
+                });
+            }
+            else {
+                return dateEnv.format(start, formatter, {
+                    forcedTzo: forcedStartTzo
+                });
+            }
+        }
+        return '';
+    };
+    FgEventRenderer.prototype.computeEventTimeFormat = function () {
+        return {
+            hour: 'numeric',
+            minute: '2-digit',
+            omitZeroMinute: true
+        };
+    };
+    FgEventRenderer.prototype.computeDisplayEventTime = function () {
+        return true;
+    };
+    FgEventRenderer.prototype.computeDisplayEventEnd = function () {
+        return true;
+    };
+    // Utility for generating event skin-related CSS properties
+    FgEventRenderer.prototype.getSkinCss = function (ui) {
+        return {
+            'background-color': ui.backgroundColor,
+            'border-color': ui.borderColor,
+            color: ui.textColor
+        };
+    };
+    FgEventRenderer.prototype.sortEventSegs = function (segs) {
+        var specs = this.context.eventOrderSpecs;
+        var objs = segs.map(buildSegCompareObj);
+        objs.sort(function (obj0, obj1) {
+            return compareByFieldSpecs(obj0, obj1, specs);
+        });
+        return objs.map(function (c) {
+            return c._seg;
+        });
+    };
+    FgEventRenderer.prototype.computeSizes = function (force) {
+        if (force || this.isSizeDirty) {
+            this.computeSegSizes(this.segs);
+        }
+    };
+    FgEventRenderer.prototype.assignSizes = function (force) {
+        if (force || this.isSizeDirty) {
+            this.assignSegSizes(this.segs);
+            this.isSizeDirty = false;
+        }
+    };
+    FgEventRenderer.prototype.computeSegSizes = function (segs) {
+    };
+    FgEventRenderer.prototype.assignSegSizes = function (segs) {
+    };
+    // Manipulation on rendered segs
+    FgEventRenderer.prototype.hideByHash = function (hash) {
+        if (hash) {
+            for (var _i = 0, _a = this.segs; _i < _a.length; _i++) {
+                var seg = _a[_i];
+                if (hash[seg.eventRange.instance.instanceId]) {
+                    seg.el.style.visibility = 'hidden';
+                }
+            }
+        }
+    };
+    FgEventRenderer.prototype.showByHash = function (hash) {
+        if (hash) {
+            for (var _i = 0, _a = this.segs; _i < _a.length; _i++) {
+                var seg = _a[_i];
+                if (hash[seg.eventRange.instance.instanceId]) {
+                    seg.el.style.visibility = '';
+                }
+            }
+        }
+    };
+    FgEventRenderer.prototype.selectByInstanceId = function (instanceId) {
+        if (instanceId) {
+            for (var _i = 0, _a = this.segs; _i < _a.length; _i++) {
+                var seg = _a[_i];
+                var eventInstance = seg.eventRange.instance;
+                if (eventInstance && eventInstance.instanceId === instanceId &&
+                    seg.el // necessary?
+                ) {
+                    seg.el.classList.add('fc-selected');
+                }
+            }
+        }
+    };
+    FgEventRenderer.prototype.unselectByInstanceId = function (instanceId) {
+        if (instanceId) {
+            for (var _i = 0, _a = this.segs; _i < _a.length; _i++) {
+                var seg = _a[_i];
+                if (seg.el) { // necessary?
+                    seg.el.classList.remove('fc-selected');
+                }
+            }
+        }
+    };
+    return FgEventRenderer;
+}());
+// returns a object with all primitive props that can be compared
+function buildSegCompareObj(seg) {
+    var eventDef = seg.eventRange.def;
+    var range = seg.eventRange.instance.range;
+    var start = range.start ? range.start.valueOf() : 0; // TODO: better support for open-range events
+    var end = range.end ? range.end.valueOf() : 0; // "
+    return __assign({}, eventDef.extendedProps, eventDef, { id: eventDef.publicId, start: start,
+        end: end, duration: end - start, allDay: Number(eventDef.allDay), _seg: seg // for later retrieval
+     });
+}
+
+/*
+TODO: when refactoring this class, make a new FillRenderer instance for each `type`
+*/
+var FillRenderer = /** @class */ (function () {
+    function FillRenderer() {
+        this.fillSegTag = 'div';
+        this.dirtySizeFlags = {};
+        this.containerElsByType = {};
+        this.segsByType = {};
+    }
+    FillRenderer.prototype.getSegsByType = function (type) {
+        return this.segsByType[type] || [];
+    };
+    FillRenderer.prototype.renderSegs = function (type, context, segs) {
+        var _a;
+        this.context = context;
+        var renderedSegs = this.renderSegEls(type, segs); // assignes `.el` to each seg. returns successfully rendered segs
+        var containerEls = this.attachSegs(type, renderedSegs);
+        if (containerEls) {
+            (_a = (this.containerElsByType[type] || (this.containerElsByType[type] = []))).push.apply(_a, containerEls);
+        }
+        this.segsByType[type] = renderedSegs;
+        if (type === 'bgEvent') {
+            triggerRenderedSegs(context, renderedSegs, false); // isMirror=false
+        }
+        this.dirtySizeFlags[type] = true;
+    };
+    // Unrenders a specific type of fill that is currently rendered on the grid
+    FillRenderer.prototype.unrender = function (type, context) {
+        var segs = this.segsByType[type];
+        if (segs) {
+            if (type === 'bgEvent') {
+                triggerWillRemoveSegs(context, segs, false); // isMirror=false
+            }
+            this.detachSegs(type, segs);
+        }
+    };
+    // Renders and assigns an `el` property for each fill segment. Generic enough to work with different types.
+    // Only returns segments that successfully rendered.
+    FillRenderer.prototype.renderSegEls = function (type, segs) {
+        var _this = this;
+        var html = '';
+        var i;
+        if (segs.length) {
+            // build a large concatenation of segment HTML
+            for (i = 0; i < segs.length; i++) {
+                html += this.renderSegHtml(type, segs[i]);
+            }
+            // Grab individual elements from the combined HTML string. Use each as the default rendering.
+            // Then, compute the 'el' for each segment.
+            htmlToElements(html).forEach(function (el, i) {
+                var seg = segs[i];
+                if (el) {
+                    seg.el = el;
+                }
+            });
+            if (type === 'bgEvent') {
+                segs = filterSegsViaEls(this.context, segs, false // isMirror. background events can never be mirror elements
+                );
+            }
+            // correct element type? (would be bad if a non-TD were inserted into a table for example)
+            segs = segs.filter(function (seg) {
+                return elementMatches(seg.el, _this.fillSegTag);
+            });
+        }
+        return segs;
+    };
+    // Builds the HTML needed for one fill segment. Generic enough to work with different types.
+    FillRenderer.prototype.renderSegHtml = function (type, seg) {
+        var css = null;
+        var classNames = [];
+        if (type !== 'highlight' && type !== 'businessHours') {
+            css = {
+                'background-color': seg.eventRange.ui.backgroundColor
+            };
+        }
+        if (type !== 'highlight') {
+            classNames = classNames.concat(seg.eventRange.ui.classNames);
+        }
+        if (type === 'businessHours') {
+            classNames.push('fc-bgevent');
+        }
+        else {
+            classNames.push('fc-' + type.toLowerCase());
+        }
+        return '<' + this.fillSegTag +
+            (classNames.length ? ' class="' + classNames.join(' ') + '"' : '') +
+            (css ? ' style="' + cssToStr(css) + '"' : '') +
+            '></' + this.fillSegTag + '>';
+    };
+    FillRenderer.prototype.detachSegs = function (type, segs) {
+        var containerEls = this.containerElsByType[type];
+        if (containerEls) {
+            containerEls.forEach(removeElement);
+            delete this.containerElsByType[type];
+        }
+    };
+    FillRenderer.prototype.computeSizes = function (force) {
+        for (var type in this.segsByType) {
+            if (force || this.dirtySizeFlags[type]) {
+                this.computeSegSizes(this.segsByType[type]);
+            }
+        }
+    };
+    FillRenderer.prototype.assignSizes = function (force) {
+        for (var type in this.segsByType) {
+            if (force || this.dirtySizeFlags[type]) {
+                this.assignSegSizes(this.segsByType[type]);
+            }
+        }
+        this.dirtySizeFlags = {};
+    };
+    FillRenderer.prototype.computeSegSizes = function (segs) {
+    };
+    FillRenderer.prototype.assignSegSizes = function (segs) {
+    };
+    return FillRenderer;
+}());
+
+var NamedTimeZoneImpl = /** @class */ (function () {
+    function NamedTimeZoneImpl(timeZoneName) {
+        this.timeZoneName = timeZoneName;
+    }
+    return NamedTimeZoneImpl;
+}());
+
+/*
+An abstraction for a dragging interaction originating on an event.
+Does higher-level things than PointerDragger, such as possibly:
+- a "mirror" that moves with the pointer
+- a minimum number of pixels or other criteria for a true drag to begin
+
+subclasses must emit:
+- pointerdown
+- dragstart
+- dragmove
+- pointerup
+- dragend
+*/
+var ElementDragging = /** @class */ (function () {
+    function ElementDragging(el) {
+        this.emitter = new EmitterMixin();
+    }
+    ElementDragging.prototype.destroy = function () {
+    };
+    ElementDragging.prototype.setMirrorIsVisible = function (bool) {
+        // optional if subclass doesn't want to support a mirror
+    };
+    ElementDragging.prototype.setMirrorNeedsRevert = function (bool) {
+        // optional if subclass doesn't want to support a mirror
+    };
+    ElementDragging.prototype.setAutoScrollEnabled = function (bool) {
+        // optional
+    };
+    return ElementDragging;
+}());
+
+function formatDate(dateInput, settings) {
+    if (settings === void 0) { settings = {}; }
+    var dateEnv = buildDateEnv$1(settings);
+    var formatter = createFormatter(settings);
+    var dateMeta = dateEnv.createMarkerMeta(dateInput);
+    if (!dateMeta) { // TODO: warning?
+        return '';
+    }
+    return dateEnv.format(dateMeta.marker, formatter, {
+        forcedTzo: dateMeta.forcedTzo
+    });
+}
+function formatRange(startInput, endInput, settings // mixture of env and formatter settings
+) {
+    var dateEnv = buildDateEnv$1(typeof settings === 'object' && settings ? settings : {}); // pass in if non-null object
+    var formatter = createFormatter(settings, globalDefaults.defaultRangeSeparator);
+    var startMeta = dateEnv.createMarkerMeta(startInput);
+    var endMeta = dateEnv.createMarkerMeta(endInput);
+    if (!startMeta || !endMeta) { // TODO: warning?
+        return '';
+    }
+    return dateEnv.formatRange(startMeta.marker, endMeta.marker, formatter, {
+        forcedStartTzo: startMeta.forcedTzo,
+        forcedEndTzo: endMeta.forcedTzo,
+        isEndExclusive: settings.isEndExclusive
+    });
+}
+// TODO: more DRY and optimized
+function buildDateEnv$1(settings) {
+    var locale = buildLocale(settings.locale || 'en', parseRawLocales([]).map); // TODO: don't hardcode 'en' everywhere
+    // ensure required settings
+    settings = __assign({ timeZone: globalDefaults.timeZone, calendarSystem: 'gregory' }, settings, { locale: locale });
+    return new DateEnv(settings);
+}
+
+var DRAG_META_PROPS = {
+    startTime: createDuration,
+    duration: createDuration,
+    create: Boolean,
+    sourceId: String
+};
+var DRAG_META_DEFAULTS = {
+    create: true
+};
+function parseDragMeta(raw) {
+    var leftoverProps = {};
+    var refined = refineProps(raw, DRAG_META_PROPS, DRAG_META_DEFAULTS, leftoverProps);
+    refined.leftoverProps = leftoverProps;
+    return refined;
+}
+
+// Computes a default column header formatting string if `colFormat` is not explicitly defined
+function computeFallbackHeaderFormat(datesRepDistinctDays, dayCnt) {
+    // if more than one week row, or if there are a lot of columns with not much space,
+    // put just the day numbers will be in each cell
+    if (!datesRepDistinctDays || dayCnt > 10) {
+        return { weekday: 'short' }; // "Sat"
+    }
+    else if (dayCnt > 1) {
+        return { weekday: 'short', month: 'numeric', day: 'numeric', omitCommas: true }; // "Sat 11/12"
+    }
+    else {
+        return { weekday: 'long' }; // "Saturday"
+    }
+}
+function renderDateCell(dateMarker, dateProfile, datesRepDistinctDays, colCnt, colHeadFormat, context, colspan, otherAttrs) {
+    var dateEnv = context.dateEnv, theme = context.theme, options = context.options;
+    var isDateValid = rangeContainsMarker(dateProfile.activeRange, dateMarker); // TODO: called too frequently. cache somehow.
+    var classNames = [
+        'fc-day-header',
+        theme.getClass('widgetHeader')
+    ];
+    var innerHtml;
+    if (typeof options.columnHeaderHtml === 'function') {
+        innerHtml = options.columnHeaderHtml(dateEnv.toDate(dateMarker));
+    }
+    else if (typeof options.columnHeaderText === 'function') {
+        innerHtml = htmlEscape(options.columnHeaderText(dateEnv.toDate(dateMarker)));
+    }
+    else {
+        innerHtml = htmlEscape(dateEnv.format(dateMarker, colHeadFormat));
+    }
+    // if only one row of days, the classNames on the header can represent the specific days beneath
+    if (datesRepDistinctDays) {
+        classNames = classNames.concat(
+        // includes the day-of-week class
+        // noThemeHighlight=true (don't highlight the header)
+        getDayClasses(dateMarker, dateProfile, context, true));
+    }
+    else {
+        classNames.push('fc-' + DAY_IDS[dateMarker.getUTCDay()]); // only add the day-of-week class
+    }
+    return '' +
+        '<th class="' + classNames.join(' ') + '"' +
+        ((isDateValid && datesRepDistinctDays) ?
+            ' data-date="' + dateEnv.formatIso(dateMarker, { omitTime: true }) + '"' :
+            '') +
+        (colspan > 1 ?
+            ' colspan="' + colspan + '"' :
+            '') +
+        (otherAttrs ?
+            ' ' + otherAttrs :
+            '') +
+        '>' +
+        (isDateValid ?
+            // don't make a link if the heading could represent multiple days, or if there's only one day (forceOff)
+            buildGotoAnchorHtml(options, dateEnv, { date: dateMarker, forceOff: !datesRepDistinctDays || colCnt === 1 }, innerHtml) :
+            // if not valid, display text, but no link
+            innerHtml) +
+        '</th>';
+}
+
+var DayHeader = /** @class */ (function (_super) {
+    __extends(DayHeader, _super);
+    function DayHeader(parentEl) {
+        var _this = _super.call(this) || this;
+        _this.renderSkeleton = memoizeRendering(_this._renderSkeleton, _this._unrenderSkeleton);
+        _this.parentEl = parentEl;
+        return _this;
+    }
+    DayHeader.prototype.render = function (props, context) {
+        var dates = props.dates, datesRepDistinctDays = props.datesRepDistinctDays;
+        var parts = [];
+        this.renderSkeleton(context);
+        if (props.renderIntroHtml) {
+            parts.push(props.renderIntroHtml());
+        }
+        var colHeadFormat = createFormatter(context.options.columnHeaderFormat ||
+            computeFallbackHeaderFormat(datesRepDistinctDays, dates.length));
+        for (var _i = 0, dates_1 = dates; _i < dates_1.length; _i++) {
+            var date = dates_1[_i];
+            parts.push(renderDateCell(date, props.dateProfile, datesRepDistinctDays, dates.length, colHeadFormat, context));
+        }
+        if (context.isRtl) {
+            parts.reverse();
+        }
+        this.thead.innerHTML = '<tr>' + parts.join('') + '</tr>';
+    };
+    DayHeader.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderSkeleton.unrender();
+    };
+    DayHeader.prototype._renderSkeleton = function (context) {
+        var theme = context.theme;
+        var parentEl = this.parentEl;
+        parentEl.innerHTML = ''; // because might be nbsp
+        parentEl.appendChild(this.el = htmlToElement('<div class="fc-row ' + theme.getClass('headerRow') + '">' +
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+            '<thead></thead>' +
+            '</table>' +
+            '</div>'));
+        this.thead = this.el.querySelector('thead');
+    };
+    DayHeader.prototype._unrenderSkeleton = function () {
+        removeElement(this.el);
+    };
+    return DayHeader;
+}(Component));
+
+var DaySeries = /** @class */ (function () {
+    function DaySeries(range, dateProfileGenerator) {
+        var date = range.start;
+        var end = range.end;
+        var indices = [];
+        var dates = [];
+        var dayIndex = -1;
+        while (date < end) { // loop each day from start to end
+            if (dateProfileGenerator.isHiddenDay(date)) {
+                indices.push(dayIndex + 0.5); // mark that it's between indices
+            }
+            else {
+                dayIndex++;
+                indices.push(dayIndex);
+                dates.push(date);
+            }
+            date = addDays(date, 1);
+        }
+        this.dates = dates;
+        this.indices = indices;
+        this.cnt = dates.length;
+    }
+    DaySeries.prototype.sliceRange = function (range) {
+        var firstIndex = this.getDateDayIndex(range.start); // inclusive first index
+        var lastIndex = this.getDateDayIndex(addDays(range.end, -1)); // inclusive last index
+        var clippedFirstIndex = Math.max(0, firstIndex);
+        var clippedLastIndex = Math.min(this.cnt - 1, lastIndex);
+        // deal with in-between indices
+        clippedFirstIndex = Math.ceil(clippedFirstIndex); // in-between starts round to next cell
+        clippedLastIndex = Math.floor(clippedLastIndex); // in-between ends round to prev cell
+        if (clippedFirstIndex <= clippedLastIndex) {
+            return {
+                firstIndex: clippedFirstIndex,
+                lastIndex: clippedLastIndex,
+                isStart: firstIndex === clippedFirstIndex,
+                isEnd: lastIndex === clippedLastIndex
+            };
+        }
+        else {
+            return null;
+        }
+    };
+    // Given a date, returns its chronolocial cell-index from the first cell of the grid.
+    // If the date lies between cells (because of hiddenDays), returns a floating-point value between offsets.
+    // If before the first offset, returns a negative number.
+    // If after the last offset, returns an offset past the last cell offset.
+    // Only works for *start* dates of cells. Will not work for exclusive end dates for cells.
+    DaySeries.prototype.getDateDayIndex = function (date) {
+        var indices = this.indices;
+        var dayOffset = Math.floor(diffDays(this.dates[0], date));
+        if (dayOffset < 0) {
+            return indices[0] - 1;
+        }
+        else if (dayOffset >= indices.length) {
+            return indices[indices.length - 1] + 1;
+        }
+        else {
+            return indices[dayOffset];
+        }
+    };
+    return DaySeries;
+}());
+
+var DayTable = /** @class */ (function () {
+    function DayTable(daySeries, breakOnWeeks) {
+        var dates = daySeries.dates;
+        var daysPerRow;
+        var firstDay;
+        var rowCnt;
+        if (breakOnWeeks) {
+            // count columns until the day-of-week repeats
+            firstDay = dates[0].getUTCDay();
+            for (daysPerRow = 1; daysPerRow < dates.length; daysPerRow++) {
+                if (dates[daysPerRow].getUTCDay() === firstDay) {
+                    break;
+                }
+            }
+            rowCnt = Math.ceil(dates.length / daysPerRow);
+        }
+        else {
+            rowCnt = 1;
+            daysPerRow = dates.length;
+        }
+        this.rowCnt = rowCnt;
+        this.colCnt = daysPerRow;
+        this.daySeries = daySeries;
+        this.cells = this.buildCells();
+        this.headerDates = this.buildHeaderDates();
+    }
+    DayTable.prototype.buildCells = function () {
+        var rows = [];
+        for (var row = 0; row < this.rowCnt; row++) {
+            var cells = [];
+            for (var col = 0; col < this.colCnt; col++) {
+                cells.push(this.buildCell(row, col));
+            }
+            rows.push(cells);
+        }
+        return rows;
+    };
+    DayTable.prototype.buildCell = function (row, col) {
+        return {
+            date: this.daySeries.dates[row * this.colCnt + col]
+        };
+    };
+    DayTable.prototype.buildHeaderDates = function () {
+        var dates = [];
+        for (var col = 0; col < this.colCnt; col++) {
+            dates.push(this.cells[0][col].date);
+        }
+        return dates;
+    };
+    DayTable.prototype.sliceRange = function (range) {
+        var colCnt = this.colCnt;
+        var seriesSeg = this.daySeries.sliceRange(range);
+        var segs = [];
+        if (seriesSeg) {
+            var firstIndex = seriesSeg.firstIndex, lastIndex = seriesSeg.lastIndex;
+            var index = firstIndex;
+            while (index <= lastIndex) {
+                var row = Math.floor(index / colCnt);
+                var nextIndex = Math.min((row + 1) * colCnt, lastIndex + 1);
+                segs.push({
+                    row: row,
+                    firstCol: index % colCnt,
+                    lastCol: (nextIndex - 1) % colCnt,
+                    isStart: seriesSeg.isStart && index === firstIndex,
+                    isEnd: seriesSeg.isEnd && (nextIndex - 1) === lastIndex
+                });
+                index = nextIndex;
+            }
+        }
+        return segs;
+    };
+    return DayTable;
+}());
+
+var Slicer = /** @class */ (function () {
+    function Slicer() {
+        this.sliceBusinessHours = memoize(this._sliceBusinessHours);
+        this.sliceDateSelection = memoize(this._sliceDateSpan);
+        this.sliceEventStore = memoize(this._sliceEventStore);
+        this.sliceEventDrag = memoize(this._sliceInteraction);
+        this.sliceEventResize = memoize(this._sliceInteraction);
+    }
+    Slicer.prototype.sliceProps = function (props, dateProfile, nextDayThreshold, calendar, component) {
+        var extraArgs = [];
+        for (var _i = 5; _i < arguments.length; _i++) {
+            extraArgs[_i - 5] = arguments[_i];
+        }
+        var eventUiBases = props.eventUiBases;
+        var eventSegs = this.sliceEventStore.apply(this, [props.eventStore, eventUiBases, dateProfile, nextDayThreshold, component].concat(extraArgs));
+        return {
+            dateSelectionSegs: this.sliceDateSelection.apply(this, [props.dateSelection, eventUiBases, component].concat(extraArgs)),
+            businessHourSegs: this.sliceBusinessHours.apply(this, [props.businessHours, dateProfile, nextDayThreshold, calendar, component].concat(extraArgs)),
+            fgEventSegs: eventSegs.fg,
+            bgEventSegs: eventSegs.bg,
+            eventDrag: this.sliceEventDrag.apply(this, [props.eventDrag, eventUiBases, dateProfile, nextDayThreshold, component].concat(extraArgs)),
+            eventResize: this.sliceEventResize.apply(this, [props.eventResize, eventUiBases, dateProfile, nextDayThreshold, component].concat(extraArgs)),
+            eventSelection: props.eventSelection
+        }; // TODO: give interactionSegs?
+    };
+    Slicer.prototype.sliceNowDate = function (// does not memoize
+    date, component) {
+        var extraArgs = [];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            extraArgs[_i - 2] = arguments[_i];
+        }
+        return this._sliceDateSpan.apply(this, [{ range: { start: date, end: addMs(date, 1) }, allDay: false },
+            {},
+            component].concat(extraArgs));
+    };
+    Slicer.prototype._sliceBusinessHours = function (businessHours, dateProfile, nextDayThreshold, calendar, component) {
+        var extraArgs = [];
+        for (var _i = 5; _i < arguments.length; _i++) {
+            extraArgs[_i - 5] = arguments[_i];
+        }
+        if (!businessHours) {
+            return [];
+        }
+        return this._sliceEventStore.apply(this, [expandRecurring(businessHours, computeActiveRange(dateProfile, Boolean(nextDayThreshold)), calendar),
+            {},
+            dateProfile,
+            nextDayThreshold,
+            component].concat(extraArgs)).bg;
+    };
+    Slicer.prototype._sliceEventStore = function (eventStore, eventUiBases, dateProfile, nextDayThreshold, component) {
+        var extraArgs = [];
+        for (var _i = 5; _i < arguments.length; _i++) {
+            extraArgs[_i - 5] = arguments[_i];
+        }
+        if (eventStore) {
+            var rangeRes = sliceEventStore(eventStore, eventUiBases, computeActiveRange(dateProfile, Boolean(nextDayThreshold)), nextDayThreshold);
+            return {
+                bg: this.sliceEventRanges(rangeRes.bg, component, extraArgs),
+                fg: this.sliceEventRanges(rangeRes.fg, component, extraArgs)
+            };
+        }
+        else {
+            return { bg: [], fg: [] };
+        }
+    };
+    Slicer.prototype._sliceInteraction = function (interaction, eventUiBases, dateProfile, nextDayThreshold, component) {
+        var extraArgs = [];
+        for (var _i = 5; _i < arguments.length; _i++) {
+            extraArgs[_i - 5] = arguments[_i];
+        }
+        if (!interaction) {
+            return null;
+        }
+        var rangeRes = sliceEventStore(interaction.mutatedEvents, eventUiBases, computeActiveRange(dateProfile, Boolean(nextDayThreshold)), nextDayThreshold);
+        return {
+            segs: this.sliceEventRanges(rangeRes.fg, component, extraArgs),
+            affectedInstances: interaction.affectedEvents.instances,
+            isEvent: interaction.isEvent,
+            sourceSeg: interaction.origSeg
+        };
+    };
+    Slicer.prototype._sliceDateSpan = function (dateSpan, eventUiBases, component) {
+        var extraArgs = [];
+        for (var _i = 3; _i < arguments.length; _i++) {
+            extraArgs[_i - 3] = arguments[_i];
+        }
+        if (!dateSpan) {
+            return [];
+        }
+        var eventRange = fabricateEventRange(dateSpan, eventUiBases, component.context.calendar);
+        var segs = this.sliceRange.apply(this, [dateSpan.range].concat(extraArgs));
+        for (var _a = 0, segs_1 = segs; _a < segs_1.length; _a++) {
+            var seg = segs_1[_a];
+            seg.component = component;
+            seg.eventRange = eventRange;
+        }
+        return segs;
+    };
+    /*
+    "complete" seg means it has component and eventRange
+    */
+    Slicer.prototype.sliceEventRanges = function (eventRanges, component, // TODO: kill
+    extraArgs) {
+        var segs = [];
+        for (var _i = 0, eventRanges_1 = eventRanges; _i < eventRanges_1.length; _i++) {
+            var eventRange = eventRanges_1[_i];
+            segs.push.apply(segs, this.sliceEventRange(eventRange, component, extraArgs));
+        }
+        return segs;
+    };
+    /*
+    "complete" seg means it has component and eventRange
+    */
+    Slicer.prototype.sliceEventRange = function (eventRange, component, // TODO: kill
+    extraArgs) {
+        var segs = this.sliceRange.apply(this, [eventRange.range].concat(extraArgs));
+        for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
+            var seg = segs_2[_i];
+            seg.component = component;
+            seg.eventRange = eventRange;
+            seg.isStart = eventRange.isStart && seg.isStart;
+            seg.isEnd = eventRange.isEnd && seg.isEnd;
+        }
+        return segs;
+    };
+    return Slicer;
+}());
+/*
+for incorporating minTime/maxTime if appropriate
+TODO: should be part of DateProfile!
+TimelineDateProfile already does this btw
+*/
+function computeActiveRange(dateProfile, isComponentAllDay) {
+    var range = dateProfile.activeRange;
+    if (isComponentAllDay) {
+        return range;
+    }
+    return {
+        start: addMs(range.start, dateProfile.minTime.milliseconds),
+        end: addMs(range.end, dateProfile.maxTime.milliseconds - 864e5) // 864e5 = ms in a day
+    };
+}
+
+// exports
+// --------------------------------------------------------------------------------------------------
+var version = '4.4.2';
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/daygrid/main.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@fullcalendar/daygrid/main.esm.js ***!
+  \********************************************************/
+/*! exports provided: default, AbstractDayGridView, DayBgRow, DayGrid, DayGridSlicer, DayGridView, SimpleDayGrid, buildBasicDayTable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractDayGridView", function() { return AbstractDayGridView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayBgRow", function() { return DayBgRow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGrid", function() { return DayGrid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGridSlicer", function() { return DayGridSlicer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGridView", function() { return DayGridView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleDayGrid", function() { return SimpleDayGrid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildBasicDayTable", function() { return buildDayTable; });
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
+/*!
+FullCalendar Day Grid Plugin v4.4.2
+Docs & License: https://fullcalendar.io/
+(c) 2019 Adam Shaw
+*/
+
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+var DayGridDateProfileGenerator = /** @class */ (function (_super) {
+    __extends(DayGridDateProfileGenerator, _super);
+    function DayGridDateProfileGenerator() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    // Computes the date range that will be rendered.
+    DayGridDateProfileGenerator.prototype.buildRenderRange = function (currentRange, currentRangeUnit, isRangeAllDay) {
+        var dateEnv = this.dateEnv;
+        var renderRange = _super.prototype.buildRenderRange.call(this, currentRange, currentRangeUnit, isRangeAllDay);
+        var start = renderRange.start;
+        var end = renderRange.end;
+        var endOfWeek;
+        // year and month views should be aligned with weeks. this is already done for week
+        if (/^(year|month)$/.test(currentRangeUnit)) {
+            start = dateEnv.startOfWeek(start);
+            // make end-of-week if not already
+            endOfWeek = dateEnv.startOfWeek(end);
+            if (endOfWeek.valueOf() !== end.valueOf()) {
+                end = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addWeeks"])(endOfWeek, 1);
+            }
+        }
+        // ensure 6 weeks
+        if (this.options.monthMode &&
+            this.options.fixedWeekCount) {
+            var rowCnt = Math.ceil(// could be partial weeks due to hiddenDays
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffWeeks"])(start, end));
+            end = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addWeeks"])(end, 6 - rowCnt);
+        }
+        return { start: start, end: end };
+    };
+    return DayGridDateProfileGenerator;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DateProfileGenerator"]));
+
+/* A rectangular panel that is absolutely positioned over other content
+------------------------------------------------------------------------------------------------------------------------
+Options:
+  - className (string)
+  - content (HTML string, element, or element array)
+  - parentEl
+  - top
+  - left
+  - right (the x coord of where the right edge should be. not a "CSS" right)
+  - autoHide (boolean)
+  - show (callback)
+  - hide (callback)
+*/
+var Popover = /** @class */ (function () {
+    function Popover(options) {
+        var _this = this;
+        this.isHidden = true;
+        this.margin = 10; // the space required between the popover and the edges of the scroll container
+        // Triggered when the user clicks *anywhere* in the document, for the autoHide feature
+        this.documentMousedown = function (ev) {
+            // only hide the popover if the click happened outside the popover
+            if (_this.el && !_this.el.contains(ev.target)) {
+                _this.hide();
+            }
+        };
+        this.options = options;
+    }
+    // Shows the popover on the specified position. Renders it if not already
+    Popover.prototype.show = function () {
+        if (this.isHidden) {
+            if (!this.el) {
+                this.render();
+            }
+            this.el.style.display = '';
+            this.position();
+            this.isHidden = false;
+            this.trigger('show');
+        }
+    };
+    // Hides the popover, through CSS, but does not remove it from the DOM
+    Popover.prototype.hide = function () {
+        if (!this.isHidden) {
+            this.el.style.display = 'none';
+            this.isHidden = true;
+            this.trigger('hide');
+        }
+    };
+    // Creates `this.el` and renders content inside of it
+    Popover.prototype.render = function () {
+        var _this = this;
+        var options = this.options;
+        var el = this.el = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', {
+            className: 'fc-popover ' + (options.className || ''),
+            style: {
+                top: '0',
+                left: '0'
+            }
+        });
+        if (typeof options.content === 'function') {
+            options.content(el);
+        }
+        options.parentEl.appendChild(el);
+        // when a click happens on anything inside with a 'fc-close' className, hide the popover
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["listenBySelector"])(el, 'click', '.fc-close', function (ev) {
+            _this.hide();
+        });
+        if (options.autoHide) {
+            document.addEventListener('mousedown', this.documentMousedown);
+        }
+    };
+    // Hides and unregisters any handlers
+    Popover.prototype.destroy = function () {
+        this.hide();
+        if (this.el) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(this.el);
+            this.el = null;
+        }
+        document.removeEventListener('mousedown', this.documentMousedown);
+    };
+    // Positions the popover optimally, using the top/left/right options
+    Popover.prototype.position = function () {
+        var options = this.options;
+        var el = this.el;
+        var elDims = el.getBoundingClientRect(); // only used for width,height
+        var origin = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(el.offsetParent);
+        var clippingRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeClippingRect"])(options.parentEl);
+        var top; // the "position" (not "offset") values for the popover
+        var left; //
+        // compute top and left
+        top = options.top || 0;
+        if (options.left !== undefined) {
+            left = options.left;
+        }
+        else if (options.right !== undefined) {
+            left = options.right - elDims.width; // derive the left value from the right value
+        }
+        else {
+            left = 0;
+        }
+        // constrain to the view port. if constrained by two edges, give precedence to top/left
+        top = Math.min(top, clippingRect.bottom - elDims.height - this.margin);
+        top = Math.max(top, clippingRect.top + this.margin);
+        left = Math.min(left, clippingRect.right - elDims.width - this.margin);
+        left = Math.max(left, clippingRect.left + this.margin);
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(el, {
+            top: top - origin.top,
+            left: left - origin.left
+        });
+    };
+    // Triggers a callback. Calls a function in the option hash of the same name.
+    // Arguments beyond the first `name` are forwarded on.
+    // TODO: better code reuse for this. Repeat code
+    // can kill this???
+    Popover.prototype.trigger = function (name) {
+        if (this.options[name]) {
+            this.options[name].apply(this, Array.prototype.slice.call(arguments, 1));
+        }
+    };
+    return Popover;
+}());
+
+/* Event-rendering methods for the DayGrid class
+----------------------------------------------------------------------------------------------------------------------*/
+// "Simple" is bad a name. has nothing to do with SimpleDayGrid
+var SimpleDayGridEventRenderer = /** @class */ (function (_super) {
+    __extends(SimpleDayGridEventRenderer, _super);
+    function SimpleDayGridEventRenderer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    // Builds the HTML to be used for the default element for an individual segment
+    SimpleDayGridEventRenderer.prototype.renderSegHtml = function (seg, mirrorInfo) {
+        var context = this.context;
+        var eventRange = seg.eventRange;
+        var eventDef = eventRange.def;
+        var eventUi = eventRange.ui;
+        var allDay = eventDef.allDay;
+        var isDraggable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventDraggable"])(context, eventDef, eventUi);
+        var isResizableFromStart = allDay && seg.isStart && Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventStartResizable"])(context, eventDef, eventUi);
+        var isResizableFromEnd = allDay && seg.isEnd && Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventEndResizable"])(context, eventDef, eventUi);
+        var classes = this.getSegClasses(seg, isDraggable, isResizableFromStart || isResizableFromEnd, mirrorInfo);
+        var skinCss = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["cssToStr"])(this.getSkinCss(eventUi));
+        var timeHtml = '';
+        var timeText;
+        var titleHtml;
+        classes.unshift('fc-day-grid-event', 'fc-h-event');
+        // Only display a timed events time if it is the starting segment
+        if (seg.isStart) {
+            timeText = this.getTimeText(eventRange);
+            if (timeText) {
+                timeHtml = '<span class="fc-time">' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(timeText) + '</span>';
+            }
+        }
+        titleHtml =
+            '<span class="fc-title">' +
+                (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(eventDef.title || '') || '&nbsp;') + // we always want one line of height
+                '</span>';
+        return '<a class="' + classes.join(' ') + '"' +
+            (eventDef.url ?
+                ' href="' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(eventDef.url) + '"' :
+                '') +
+            (skinCss ?
+                ' style="' + skinCss + '"' :
+                '') +
+            '>' +
+            '<div class="fc-content">' +
+            (context.options.dir === 'rtl' ?
+                titleHtml + ' ' + timeHtml : // put a natural space in between
+                timeHtml + ' ' + titleHtml //
+            ) +
+            '</div>' +
+            (isResizableFromStart ?
+                '<div class="fc-resizer fc-start-resizer"></div>' :
+                '') +
+            (isResizableFromEnd ?
+                '<div class="fc-resizer fc-end-resizer"></div>' :
+                '') +
+            '</a>';
+    };
+    // Computes a default event time formatting string if `eventTimeFormat` is not explicitly defined
+    SimpleDayGridEventRenderer.prototype.computeEventTimeFormat = function () {
+        return {
+            hour: 'numeric',
+            minute: '2-digit',
+            omitZeroMinute: true,
+            meridiem: 'narrow'
+        };
+    };
+    SimpleDayGridEventRenderer.prototype.computeDisplayEventEnd = function () {
+        return false; // TODO: somehow consider the originating DayGrid's column count
+    };
+    return SimpleDayGridEventRenderer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["FgEventRenderer"]));
+
+/* Event-rendering methods for the DayGrid class
+----------------------------------------------------------------------------------------------------------------------*/
+var DayGridEventRenderer = /** @class */ (function (_super) {
+    __extends(DayGridEventRenderer, _super);
+    function DayGridEventRenderer(dayGrid) {
+        var _this = _super.call(this) || this;
+        _this.dayGrid = dayGrid;
+        return _this;
+    }
+    // Renders the given foreground event segments onto the grid
+    DayGridEventRenderer.prototype.attachSegs = function (segs, mirrorInfo) {
+        var rowStructs = this.rowStructs = this.renderSegRows(segs);
+        // append to each row's content skeleton
+        this.dayGrid.rowEls.forEach(function (rowNode, i) {
+            rowNode.querySelector('.fc-content-skeleton > table').appendChild(rowStructs[i].tbodyEl);
+        });
+        // removes the "more.." events popover
+        if (!mirrorInfo) {
+            this.dayGrid.removeSegPopover();
+        }
+    };
+    // Unrenders all currently rendered foreground event segments
+    DayGridEventRenderer.prototype.detachSegs = function () {
+        var rowStructs = this.rowStructs || [];
+        var rowStruct;
+        while ((rowStruct = rowStructs.pop())) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(rowStruct.tbodyEl);
+        }
+        this.rowStructs = null;
+    };
+    // Uses the given events array to generate <tbody> elements that should be appended to each row's content skeleton.
+    // Returns an array of rowStruct objects (see the bottom of `renderSegRow`).
+    // PRECONDITION: each segment shoud already have a rendered and assigned `.el`
+    DayGridEventRenderer.prototype.renderSegRows = function (segs) {
+        var rowStructs = [];
+        var segRows;
+        var row;
+        segRows = this.groupSegRows(segs); // group into nested arrays
+        // iterate each row of segment groupings
+        for (row = 0; row < segRows.length; row++) {
+            rowStructs.push(this.renderSegRow(row, segRows[row]));
+        }
+        return rowStructs;
+    };
+    // Given a row # and an array of segments all in the same row, render a <tbody> element, a skeleton that contains
+    // the segments. Returns object with a bunch of internal data about how the render was calculated.
+    // NOTE: modifies rowSegs
+    DayGridEventRenderer.prototype.renderSegRow = function (row, rowSegs) {
+        var isRtl = this.context.isRtl;
+        var dayGrid = this.dayGrid;
+        var colCnt = dayGrid.colCnt;
+        var segLevels = this.buildSegLevels(rowSegs); // group into sub-arrays of levels
+        var levelCnt = Math.max(1, segLevels.length); // ensure at least one level
+        var tbody = document.createElement('tbody');
+        var segMatrix = []; // lookup for which segments are rendered into which level+col cells
+        var cellMatrix = []; // lookup for all <td> elements of the level+col matrix
+        var loneCellMatrix = []; // lookup for <td> elements that only take up a single column
+        var i;
+        var levelSegs;
+        var col;
+        var tr;
+        var j;
+        var seg;
+        var td;
+        // populates empty cells from the current column (`col`) to `endCol`
+        function emptyCellsUntil(endCol) {
+            while (col < endCol) {
+                // try to grab a cell from the level above and extend its rowspan. otherwise, create a fresh cell
+                td = (loneCellMatrix[i - 1] || [])[col];
+                if (td) {
+                    td.rowSpan = (td.rowSpan || 1) + 1;
+                }
+                else {
+                    td = document.createElement('td');
+                    tr.appendChild(td);
+                }
+                cellMatrix[i][col] = td;
+                loneCellMatrix[i][col] = td;
+                col++;
+            }
+        }
+        for (i = 0; i < levelCnt; i++) { // iterate through all levels
+            levelSegs = segLevels[i];
+            col = 0;
+            tr = document.createElement('tr');
+            segMatrix.push([]);
+            cellMatrix.push([]);
+            loneCellMatrix.push([]);
+            // levelCnt might be 1 even though there are no actual levels. protect against this.
+            // this single empty row is useful for styling.
+            if (levelSegs) {
+                for (j = 0; j < levelSegs.length; j++) { // iterate through segments in level
+                    seg = levelSegs[j];
+                    var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
+                    var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
+                    emptyCellsUntil(leftCol);
+                    // create a container that occupies or more columns. append the event element.
+                    td = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('td', { className: 'fc-event-container' }, seg.el);
+                    if (leftCol !== rightCol) {
+                        td.colSpan = rightCol - leftCol + 1;
+                    }
+                    else { // a single-column segment
+                        loneCellMatrix[i][col] = td;
+                    }
+                    while (col <= rightCol) {
+                        cellMatrix[i][col] = td;
+                        segMatrix[i][col] = seg;
+                        col++;
+                    }
+                    tr.appendChild(td);
+                }
+            }
+            emptyCellsUntil(colCnt); // finish off the row
+            var introHtml = dayGrid.renderProps.renderIntroHtml();
+            if (introHtml) {
+                if (isRtl) {
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(tr, introHtml);
+                }
+                else {
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["prependToElement"])(tr, introHtml);
+                }
+            }
+            tbody.appendChild(tr);
+        }
+        return {
+            row: row,
+            tbodyEl: tbody,
+            cellMatrix: cellMatrix,
+            segMatrix: segMatrix,
+            segLevels: segLevels,
+            segs: rowSegs
+        };
+    };
+    // Stacks a flat array of segments, which are all assumed to be in the same row, into subarrays of vertical levels.
+    // NOTE: modifies segs
+    DayGridEventRenderer.prototype.buildSegLevels = function (segs) {
+        var isRtl = this.context.isRtl;
+        var colCnt = this.dayGrid.colCnt;
+        var levels = [];
+        var i;
+        var seg;
+        var j;
+        // Give preference to elements with certain criteria, so they have
+        // a chance to be closer to the top.
+        segs = this.sortEventSegs(segs);
+        for (i = 0; i < segs.length; i++) {
+            seg = segs[i];
+            // loop through levels, starting with the topmost, until the segment doesn't collide with other segments
+            for (j = 0; j < levels.length; j++) {
+                if (!isDaySegCollision(seg, levels[j])) {
+                    break;
+                }
+            }
+            // `j` now holds the desired subrow index
+            seg.level = j;
+            seg.leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol; // for sorting only
+            seg.rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol // for sorting only
+            ;
+            (levels[j] || (levels[j] = [])).push(seg);
+        }
+        // order segments left-to-right. very important if calendar is RTL
+        for (j = 0; j < levels.length; j++) {
+            levels[j].sort(compareDaySegCols);
+        }
+        return levels;
+    };
+    // Given a flat array of segments, return an array of sub-arrays, grouped by each segment's row
+    DayGridEventRenderer.prototype.groupSegRows = function (segs) {
+        var segRows = [];
+        var i;
+        for (i = 0; i < this.dayGrid.rowCnt; i++) {
+            segRows.push([]);
+        }
+        for (i = 0; i < segs.length; i++) {
+            segRows[segs[i].row].push(segs[i]);
+        }
+        return segRows;
+    };
+    // Computes a default `displayEventEnd` value if one is not expliclty defined
+    DayGridEventRenderer.prototype.computeDisplayEventEnd = function () {
+        return this.dayGrid.colCnt === 1; // we'll likely have space if there's only one day
+    };
+    return DayGridEventRenderer;
+}(SimpleDayGridEventRenderer));
+// Computes whether two segments' columns collide. They are assumed to be in the same row.
+function isDaySegCollision(seg, otherSegs) {
+    var i;
+    var otherSeg;
+    for (i = 0; i < otherSegs.length; i++) {
+        otherSeg = otherSegs[i];
+        if (otherSeg.firstCol <= seg.lastCol &&
+            otherSeg.lastCol >= seg.firstCol) {
+            return true;
+        }
+    }
+    return false;
+}
+// A cmp function for determining the leftmost event
+function compareDaySegCols(a, b) {
+    return a.leftCol - b.leftCol;
+}
+
+var DayGridMirrorRenderer = /** @class */ (function (_super) {
+    __extends(DayGridMirrorRenderer, _super);
+    function DayGridMirrorRenderer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DayGridMirrorRenderer.prototype.attachSegs = function (segs, mirrorInfo) {
+        var sourceSeg = mirrorInfo.sourceSeg;
+        var rowStructs = this.rowStructs = this.renderSegRows(segs);
+        // inject each new event skeleton into each associated row
+        this.dayGrid.rowEls.forEach(function (rowNode, row) {
+            var skeletonEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlToElement"])('<div class="fc-mirror-skeleton"><table></table></div>'); // will be absolutely positioned
+            var skeletonTopEl;
+            var skeletonTop;
+            // If there is an original segment, match the top position. Otherwise, put it at the row's top level
+            if (sourceSeg && sourceSeg.row === row) {
+                skeletonTopEl = sourceSeg.el;
+            }
+            else {
+                skeletonTopEl = rowNode.querySelector('.fc-content-skeleton tbody');
+                if (!skeletonTopEl) { // when no events
+                    skeletonTopEl = rowNode.querySelector('.fc-content-skeleton table');
+                }
+            }
+            skeletonTop = skeletonTopEl.getBoundingClientRect().top -
+                rowNode.getBoundingClientRect().top; // the offsetParent origin
+            skeletonEl.style.top = skeletonTop + 'px';
+            skeletonEl.querySelector('table').appendChild(rowStructs[row].tbodyEl);
+            rowNode.appendChild(skeletonEl);
+        });
+    };
+    return DayGridMirrorRenderer;
+}(DayGridEventRenderer));
+
+var EMPTY_CELL_HTML = '<td style="pointer-events:none"></td>';
+var DayGridFillRenderer = /** @class */ (function (_super) {
+    __extends(DayGridFillRenderer, _super);
+    function DayGridFillRenderer(dayGrid) {
+        var _this = _super.call(this) || this;
+        _this.fillSegTag = 'td'; // override the default tag name
+        _this.dayGrid = dayGrid;
+        return _this;
+    }
+    DayGridFillRenderer.prototype.renderSegs = function (type, context, segs) {
+        // don't render timed background events
+        if (type === 'bgEvent') {
+            segs = segs.filter(function (seg) {
+                return seg.eventRange.def.allDay;
+            });
+        }
+        _super.prototype.renderSegs.call(this, type, context, segs);
+    };
+    DayGridFillRenderer.prototype.attachSegs = function (type, segs) {
+        var els = [];
+        var i;
+        var seg;
+        var skeletonEl;
+        for (i = 0; i < segs.length; i++) {
+            seg = segs[i];
+            skeletonEl = this.renderFillRow(type, seg);
+            this.dayGrid.rowEls[seg.row].appendChild(skeletonEl);
+            els.push(skeletonEl);
+        }
+        return els;
+    };
+    // Generates the HTML needed for one row of a fill. Requires the seg's el to be rendered.
+    DayGridFillRenderer.prototype.renderFillRow = function (type, seg) {
+        var dayGrid = this.dayGrid;
+        var isRtl = this.context.isRtl;
+        var colCnt = dayGrid.colCnt;
+        var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
+        var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
+        var startCol = leftCol;
+        var endCol = rightCol + 1;
+        var className;
+        var skeletonEl;
+        var trEl;
+        if (type === 'businessHours') {
+            className = 'bgevent';
+        }
+        else {
+            className = type.toLowerCase();
+        }
+        skeletonEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlToElement"])('<div class="fc-' + className + '-skeleton">' +
+            '<table><tr></tr></table>' +
+            '</div>');
+        trEl = skeletonEl.getElementsByTagName('tr')[0];
+        if (startCol > 0) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl, 
+            // will create (startCol + 1) td's
+            new Array(startCol + 1).join(EMPTY_CELL_HTML));
+        }
+        seg.el.colSpan = endCol - startCol;
+        trEl.appendChild(seg.el);
+        if (endCol < colCnt) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl, 
+            // will create (colCnt - endCol) td's
+            new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML));
+        }
+        var introHtml = dayGrid.renderProps.renderIntroHtml();
+        if (introHtml) {
+            if (isRtl) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl, introHtml);
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["prependToElement"])(trEl, introHtml);
+            }
+        }
+        return skeletonEl;
+    };
+    return DayGridFillRenderer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["FillRenderer"]));
+
+var DayTile = /** @class */ (function (_super) {
+    __extends(DayTile, _super);
+    function DayTile(el) {
+        var _this = _super.call(this, el) || this;
+        var eventRenderer = _this.eventRenderer = new DayTileEventRenderer(_this);
+        var renderFrame = _this.renderFrame = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderFrame);
+        _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderFrame]);
+        _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);
+        _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);
+        _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);
+        return _this;
+    }
+    DayTile.prototype.firstContext = function (context) {
+        context.calendar.registerInteractiveComponent(this, {
+            el: this.el,
+            useEventCenter: false
+        });
+    };
+    DayTile.prototype.render = function (props, context) {
+        this.renderFrame(props.date);
+        this.renderFgEvents(context, props.fgSegs);
+        this.renderEventSelection(props.eventSelection);
+        this.renderEventDrag(props.eventDragInstances);
+        this.renderEventResize(props.eventResizeInstances);
+    };
+    DayTile.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderFrame.unrender(); // should unrender everything else
+        this.context.calendar.unregisterInteractiveComponent(this);
+    };
+    DayTile.prototype._renderFrame = function (date) {
+        var _a = this.context, theme = _a.theme, dateEnv = _a.dateEnv, options = _a.options;
+        var title = dateEnv.format(date, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])(options.dayPopoverFormat) // TODO: cache
+        );
+        this.el.innerHTML =
+            '<div class="fc-header ' + theme.getClass('popoverHeader') + '">' +
+                '<span class="fc-title">' +
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(title) +
+                '</span>' +
+                '<span class="fc-close ' + theme.getIconClass('close') + '"></span>' +
+                '</div>' +
+                '<div class="fc-body ' + theme.getClass('popoverContent') + '">' +
+                '<div class="fc-event-container"></div>' +
+                '</div>';
+        this.segContainerEl = this.el.querySelector('.fc-event-container');
+    };
+    DayTile.prototype.queryHit = function (positionLeft, positionTop, elWidth, elHeight) {
+        var date = this.props.date; // HACK
+        if (positionLeft < elWidth && positionTop < elHeight) {
+            return {
+                component: this,
+                dateSpan: {
+                    allDay: true,
+                    range: { start: date, end: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDays"])(date, 1) }
+                },
+                dayEl: this.el,
+                rect: {
+                    left: 0,
+                    top: 0,
+                    right: elWidth,
+                    bottom: elHeight
+                },
+                layer: 1
+            };
+        }
+    };
+    return DayTile;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DateComponent"]));
+var DayTileEventRenderer = /** @class */ (function (_super) {
+    __extends(DayTileEventRenderer, _super);
+    function DayTileEventRenderer(dayTile) {
+        var _this = _super.call(this) || this;
+        _this.dayTile = dayTile;
+        return _this;
+    }
+    DayTileEventRenderer.prototype.attachSegs = function (segs) {
+        for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
+            var seg = segs_1[_i];
+            this.dayTile.segContainerEl.appendChild(seg.el);
+        }
+    };
+    DayTileEventRenderer.prototype.detachSegs = function (segs) {
+        for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
+            var seg = segs_2[_i];
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(seg.el);
+        }
+    };
+    return DayTileEventRenderer;
+}(SimpleDayGridEventRenderer));
+
+var DayBgRow = /** @class */ (function () {
+    function DayBgRow(context) {
+        this.context = context;
+    }
+    DayBgRow.prototype.renderHtml = function (props) {
+        var parts = [];
+        if (props.renderIntroHtml) {
+            parts.push(props.renderIntroHtml());
+        }
+        for (var _i = 0, _a = props.cells; _i < _a.length; _i++) {
+            var cell = _a[_i];
+            parts.push(renderCellHtml(cell.date, props.dateProfile, this.context, cell.htmlAttrs));
+        }
+        if (!props.cells.length) {
+            parts.push('<td class="fc-day ' + this.context.theme.getClass('widgetContent') + '"></td>');
+        }
+        if (this.context.options.dir === 'rtl') {
+            parts.reverse();
+        }
+        return '<tr>' + parts.join('') + '</tr>';
+    };
+    return DayBgRow;
+}());
+function renderCellHtml(date, dateProfile, context, otherAttrs) {
+    var dateEnv = context.dateEnv, theme = context.theme;
+    var isDateValid = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["rangeContainsMarker"])(dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.
+    var classes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getDayClasses"])(date, dateProfile, context);
+    classes.unshift('fc-day', theme.getClass('widgetContent'));
+    return '<td class="' + classes.join(' ') + '"' +
+        (isDateValid ?
+            ' data-date="' + dateEnv.formatIso(date, { omitTime: true }) + '"' :
+            '') +
+        (otherAttrs ?
+            ' ' + otherAttrs :
+            '') +
+        '></td>';
+}
+
+var DAY_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])({ day: 'numeric' });
+var WEEK_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])({ week: 'numeric' });
+var DayGrid = /** @class */ (function (_super) {
+    __extends(DayGrid, _super);
+    function DayGrid(el, renderProps) {
+        var _this = _super.call(this, el) || this;
+        _this.bottomCoordPadding = 0; // hack for extending the hit area for the last row of the coordinate grid
+        _this.isCellSizesDirty = false;
+        _this.renderProps = renderProps;
+        var eventRenderer = _this.eventRenderer = new DayGridEventRenderer(_this);
+        var fillRenderer = _this.fillRenderer = new DayGridFillRenderer(_this);
+        _this.mirrorRenderer = new DayGridMirrorRenderer(_this);
+        var renderCells = _this.renderCells = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderCells, _this._unrenderCells);
+        _this.renderBusinessHours = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'businessHours'), fillRenderer.unrender.bind(fillRenderer, 'businessHours'), [renderCells]);
+        _this.renderDateSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'highlight'), fillRenderer.unrender.bind(fillRenderer, 'highlight'), [renderCells]);
+        _this.renderBgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'bgEvent'), fillRenderer.unrender.bind(fillRenderer, 'bgEvent'), [renderCells]);
+        _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderCells]);
+        _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);
+        _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderEventDrag, _this._unrenderEventDrag, [renderCells]);
+        _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderEventResize, _this._unrenderEventResize, [renderCells]);
+        return _this;
+    }
+    DayGrid.prototype.render = function (props, context) {
+        var cells = props.cells;
+        this.rowCnt = cells.length;
+        this.colCnt = cells[0].length;
+        this.renderCells(cells, props.isRigid);
+        this.renderBusinessHours(context, props.businessHourSegs);
+        this.renderDateSelection(context, props.dateSelectionSegs);
+        this.renderBgEvents(context, props.bgEventSegs);
+        this.renderFgEvents(context, props.fgEventSegs);
+        this.renderEventSelection(props.eventSelection);
+        this.renderEventDrag(props.eventDrag);
+        this.renderEventResize(props.eventResize);
+        if (this.segPopoverTile) {
+            this.updateSegPopoverTile();
+        }
+    };
+    DayGrid.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderCells.unrender(); // will unrender everything else
+    };
+    DayGrid.prototype.getCellRange = function (row, col) {
+        var start = this.props.cells[row][col].date;
+        var end = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDays"])(start, 1);
+        return { start: start, end: end };
+    };
+    DayGrid.prototype.updateSegPopoverTile = function (date, segs) {
+        var ownProps = this.props;
+        this.segPopoverTile.receiveProps({
+            date: date || this.segPopoverTile.props.date,
+            fgSegs: segs || this.segPopoverTile.props.fgSegs,
+            eventSelection: ownProps.eventSelection,
+            eventDragInstances: ownProps.eventDrag ? ownProps.eventDrag.affectedInstances : null,
+            eventResizeInstances: ownProps.eventResize ? ownProps.eventResize.affectedInstances : null
+        }, this.context);
+    };
+    /* Date Rendering
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype._renderCells = function (cells, isRigid) {
+        var _a = this.context, calendar = _a.calendar, view = _a.view, isRtl = _a.isRtl, dateEnv = _a.dateEnv;
+        var _b = this, rowCnt = _b.rowCnt, colCnt = _b.colCnt;
+        var html = '';
+        var row;
+        var col;
+        for (row = 0; row < rowCnt; row++) {
+            html += this.renderDayRowHtml(row, isRigid);
+        }
+        this.el.innerHTML = html;
+        this.rowEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-row');
+        this.cellEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-day, .fc-disabled-day');
+        if (isRtl) {
+            this.cellEls.reverse();
+        }
+        this.rowPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["PositionCache"](this.el, this.rowEls, false, true // vertical
+        );
+        this.colPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["PositionCache"](this.el, this.cellEls.slice(0, colCnt), // only the first row
+        true, false // horizontal
+        );
+        // trigger dayRender with each cell's element
+        for (row = 0; row < rowCnt; row++) {
+            for (col = 0; col < colCnt; col++) {
+                calendar.publiclyTrigger('dayRender', [
+                    {
+                        date: dateEnv.toDate(cells[row][col].date),
+                        el: this.getCellEl(row, col),
+                        view: view
+                    }
+                ]);
+            }
+        }
+        this.isCellSizesDirty = true;
+    };
+    DayGrid.prototype._unrenderCells = function () {
+        this.removeSegPopover();
+    };
+    // Generates the HTML for a single row, which is a div that wraps a table.
+    // `row` is the row number.
+    DayGrid.prototype.renderDayRowHtml = function (row, isRigid) {
+        var theme = this.context.theme;
+        var classes = ['fc-row', 'fc-week', theme.getClass('dayRow')];
+        if (isRigid) {
+            classes.push('fc-rigid');
+        }
+        var bgRow = new DayBgRow(this.context);
+        return '' +
+            '<div class="' + classes.join(' ') + '">' +
+            '<div class="fc-bg">' +
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+            bgRow.renderHtml({
+                cells: this.props.cells[row],
+                dateProfile: this.props.dateProfile,
+                renderIntroHtml: this.renderProps.renderBgIntroHtml
+            }) +
+            '</table>' +
+            '</div>' +
+            '<div class="fc-content-skeleton">' +
+            '<table>' +
+            (this.getIsNumbersVisible() ?
+                '<thead>' +
+                    this.renderNumberTrHtml(row) +
+                    '</thead>' :
+                '') +
+            '</table>' +
+            '</div>' +
+            '</div>';
+    };
+    DayGrid.prototype.getIsNumbersVisible = function () {
+        return this.getIsDayNumbersVisible() ||
+            this.renderProps.cellWeekNumbersVisible ||
+            this.renderProps.colWeekNumbersVisible;
+    };
+    DayGrid.prototype.getIsDayNumbersVisible = function () {
+        return this.rowCnt > 1;
+    };
+    /* Grid Number Rendering
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.renderNumberTrHtml = function (row) {
+        var isRtl = this.context.isRtl;
+        var intro = this.renderProps.renderNumberIntroHtml(row, this);
+        return '' +
+            '<tr>' +
+            (isRtl ? '' : intro) +
+            this.renderNumberCellsHtml(row) +
+            (isRtl ? intro : '') +
+            '</tr>';
+    };
+    DayGrid.prototype.renderNumberCellsHtml = function (row) {
+        var htmls = [];
+        var col;
+        var date;
+        for (col = 0; col < this.colCnt; col++) {
+            date = this.props.cells[row][col].date;
+            htmls.push(this.renderNumberCellHtml(date));
+        }
+        if (this.context.isRtl) {
+            htmls.reverse();
+        }
+        return htmls.join('');
+    };
+    // Generates the HTML for the <td>s of the "number" row in the DayGrid's content skeleton.
+    // The number row will only exist if either day numbers or week numbers are turned on.
+    DayGrid.prototype.renderNumberCellHtml = function (date) {
+        var _a = this.context, dateEnv = _a.dateEnv, options = _a.options;
+        var html = '';
+        var isDateValid = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["rangeContainsMarker"])(this.props.dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.
+        var isDayNumberVisible = this.getIsDayNumbersVisible() && isDateValid;
+        var classes;
+        var weekCalcFirstDow;
+        if (!isDayNumberVisible && !this.renderProps.cellWeekNumbersVisible) {
+            // no numbers in day cell (week number must be along the side)
+            return '<td></td>'; //  will create an empty space above events :(
+        }
+        classes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getDayClasses"])(date, this.props.dateProfile, this.context);
+        classes.unshift('fc-day-top');
+        if (this.renderProps.cellWeekNumbersVisible) {
+            weekCalcFirstDow = dateEnv.weekDow;
+        }
+        html += '<td class="' + classes.join(' ') + '"' +
+            (isDateValid ?
+                ' data-date="' + dateEnv.formatIso(date, { omitTime: true }) + '"' :
+                '') +
+            '>';
+        if (this.renderProps.cellWeekNumbersVisible && (date.getUTCDay() === weekCalcFirstDow)) {
+            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(options, dateEnv, { date: date, type: 'week' }, { 'class': 'fc-week-number' }, dateEnv.format(date, WEEK_NUM_FORMAT) // inner HTML
+            );
+        }
+        if (isDayNumberVisible) {
+            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(options, dateEnv, date, { 'class': 'fc-day-number' }, dateEnv.format(date, DAY_NUM_FORMAT) // inner HTML
+            );
+        }
+        html += '</td>';
+        return html;
+    };
+    /* Sizing
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.updateSize = function (isResize) {
+        var calendar = this.context.calendar;
+        var _a = this, fillRenderer = _a.fillRenderer, eventRenderer = _a.eventRenderer, mirrorRenderer = _a.mirrorRenderer;
+        if (isResize ||
+            this.isCellSizesDirty ||
+            calendar.isEventsUpdated // hack
+        ) {
+            this.buildPositionCaches();
+            this.isCellSizesDirty = false;
+        }
+        fillRenderer.computeSizes(isResize);
+        eventRenderer.computeSizes(isResize);
+        mirrorRenderer.computeSizes(isResize);
+        fillRenderer.assignSizes(isResize);
+        eventRenderer.assignSizes(isResize);
+        mirrorRenderer.assignSizes(isResize);
+    };
+    DayGrid.prototype.buildPositionCaches = function () {
+        this.buildColPositions();
+        this.buildRowPositions();
+    };
+    DayGrid.prototype.buildColPositions = function () {
+        this.colPositions.build();
+    };
+    DayGrid.prototype.buildRowPositions = function () {
+        this.rowPositions.build();
+        this.rowPositions.bottoms[this.rowCnt - 1] += this.bottomCoordPadding; // hack
+    };
+    /* Hit System
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.positionToHit = function (leftPosition, topPosition) {
+        var _a = this, colPositions = _a.colPositions, rowPositions = _a.rowPositions;
+        var col = colPositions.leftToIndex(leftPosition);
+        var row = rowPositions.topToIndex(topPosition);
+        if (row != null && col != null) {
+            return {
+                row: row,
+                col: col,
+                dateSpan: {
+                    range: this.getCellRange(row, col),
+                    allDay: true
+                },
+                dayEl: this.getCellEl(row, col),
+                relativeRect: {
+                    left: colPositions.lefts[col],
+                    right: colPositions.rights[col],
+                    top: rowPositions.tops[row],
+                    bottom: rowPositions.bottoms[row]
+                }
+            };
+        }
+    };
+    /* Cell System
+    ------------------------------------------------------------------------------------------------------------------*/
+    // FYI: the first column is the leftmost column, regardless of date
+    DayGrid.prototype.getCellEl = function (row, col) {
+        return this.cellEls[row * this.colCnt + col];
+    };
+    /* Event Drag Visualization
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype._renderEventDrag = function (state) {
+        if (state) {
+            this.eventRenderer.hideByHash(state.affectedInstances);
+            this.fillRenderer.renderSegs('highlight', this.context, state.segs);
+        }
+    };
+    DayGrid.prototype._unrenderEventDrag = function (state) {
+        if (state) {
+            this.eventRenderer.showByHash(state.affectedInstances);
+            this.fillRenderer.unrender('highlight', this.context);
+        }
+    };
+    /* Event Resize Visualization
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype._renderEventResize = function (state) {
+        if (state) {
+            this.eventRenderer.hideByHash(state.affectedInstances);
+            this.fillRenderer.renderSegs('highlight', this.context, state.segs);
+            this.mirrorRenderer.renderSegs(this.context, state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+        }
+    };
+    DayGrid.prototype._unrenderEventResize = function (state) {
+        if (state) {
+            this.eventRenderer.showByHash(state.affectedInstances);
+            this.fillRenderer.unrender('highlight', this.context);
+            this.mirrorRenderer.unrender(this.context, state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+        }
+    };
+    /* More+ Link Popover
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.removeSegPopover = function () {
+        if (this.segPopover) {
+            this.segPopover.hide(); // in handler, will call segPopover's removeElement
+        }
+    };
+    // Limits the number of "levels" (vertically stacking layers of events) for each row of the grid.
+    // `levelLimit` can be false (don't limit), a number, or true (should be computed).
+    DayGrid.prototype.limitRows = function (levelLimit) {
+        var rowStructs = this.eventRenderer.rowStructs || [];
+        var row; // row #
+        var rowLevelLimit;
+        for (row = 0; row < rowStructs.length; row++) {
+            this.unlimitRow(row);
+            if (!levelLimit) {
+                rowLevelLimit = false;
+            }
+            else if (typeof levelLimit === 'number') {
+                rowLevelLimit = levelLimit;
+            }
+            else {
+                rowLevelLimit = this.computeRowLevelLimit(row);
+            }
+            if (rowLevelLimit !== false) {
+                this.limitRow(row, rowLevelLimit);
+            }
+        }
+    };
+    // Computes the number of levels a row will accomodate without going outside its bounds.
+    // Assumes the row is "rigid" (maintains a constant height regardless of what is inside).
+    // `row` is the row number.
+    DayGrid.prototype.computeRowLevelLimit = function (row) {
+        var rowEl = this.rowEls[row]; // the containing "fake" row div
+        var rowBottom = rowEl.getBoundingClientRect().bottom; // relative to viewport!
+        var trEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findChildren"])(this.eventRenderer.rowStructs[row].tbodyEl);
+        var i;
+        var trEl;
+        // Reveal one level <tr> at a time and stop when we find one out of bounds
+        for (i = 0; i < trEls.length; i++) {
+            trEl = trEls[i];
+            trEl.classList.remove('fc-limited'); // reset to original state (reveal)
+            if (trEl.getBoundingClientRect().bottom > rowBottom) {
+                return i;
+            }
+        }
+        return false; // should not limit at all
+    };
+    // Limits the given grid row to the maximum number of levels and injects "more" links if necessary.
+    // `row` is the row number.
+    // `levelLimit` is a number for the maximum (inclusive) number of levels allowed.
+    DayGrid.prototype.limitRow = function (row, levelLimit) {
+        var _this = this;
+        var colCnt = this.colCnt;
+        var isRtl = this.context.isRtl;
+        var rowStruct = this.eventRenderer.rowStructs[row];
+        var moreNodes = []; // array of "more" <a> links and <td> DOM nodes
+        var col = 0; // col #, left-to-right (not chronologically)
+        var levelSegs; // array of segment objects in the last allowable level, ordered left-to-right
+        var cellMatrix; // a matrix (by level, then column) of all <td> elements in the row
+        var limitedNodes; // array of temporarily hidden level <tr> and segment <td> DOM nodes
+        var i;
+        var seg;
+        var segsBelow; // array of segment objects below `seg` in the current `col`
+        var totalSegsBelow; // total number of segments below `seg` in any of the columns `seg` occupies
+        var colSegsBelow; // array of segment arrays, below seg, one for each column (offset from segs's first column)
+        var td;
+        var rowSpan;
+        var segMoreNodes; // array of "more" <td> cells that will stand-in for the current seg's cell
+        var j;
+        var moreTd;
+        var moreWrap;
+        var moreLink;
+        // Iterates through empty level cells and places "more" links inside if need be
+        var emptyCellsUntil = function (endCol) {
+            while (col < endCol) {
+                segsBelow = _this.getCellSegs(row, col, levelLimit);
+                if (segsBelow.length) {
+                    td = cellMatrix[levelLimit - 1][col];
+                    moreLink = _this.renderMoreLink(row, col, segsBelow);
+                    moreWrap = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', null, moreLink);
+                    td.appendChild(moreWrap);
+                    moreNodes.push(moreWrap);
+                }
+                col++;
+            }
+        };
+        if (levelLimit && levelLimit < rowStruct.segLevels.length) { // is it actually over the limit?
+            levelSegs = rowStruct.segLevels[levelLimit - 1];
+            cellMatrix = rowStruct.cellMatrix;
+            limitedNodes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findChildren"])(rowStruct.tbodyEl).slice(levelLimit); // get level <tr> elements past the limit
+            limitedNodes.forEach(function (node) {
+                node.classList.add('fc-limited'); // hide elements and get a simple DOM-nodes array
+            });
+            // iterate though segments in the last allowable level
+            for (i = 0; i < levelSegs.length; i++) {
+                seg = levelSegs[i];
+                var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
+                var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
+                emptyCellsUntil(leftCol); // process empty cells before the segment
+                // determine *all* segments below `seg` that occupy the same columns
+                colSegsBelow = [];
+                totalSegsBelow = 0;
+                while (col <= rightCol) {
+                    segsBelow = this.getCellSegs(row, col, levelLimit);
+                    colSegsBelow.push(segsBelow);
+                    totalSegsBelow += segsBelow.length;
+                    col++;
+                }
+                if (totalSegsBelow) { // do we need to replace this segment with one or many "more" links?
+                    td = cellMatrix[levelLimit - 1][leftCol]; // the segment's parent cell
+                    rowSpan = td.rowSpan || 1;
+                    segMoreNodes = [];
+                    // make a replacement <td> for each column the segment occupies. will be one for each colspan
+                    for (j = 0; j < colSegsBelow.length; j++) {
+                        moreTd = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('td', { className: 'fc-more-cell', rowSpan: rowSpan });
+                        segsBelow = colSegsBelow[j];
+                        moreLink = this.renderMoreLink(row, leftCol + j, [seg].concat(segsBelow) // count seg as hidden too
+                        );
+                        moreWrap = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', null, moreLink);
+                        moreTd.appendChild(moreWrap);
+                        segMoreNodes.push(moreTd);
+                        moreNodes.push(moreTd);
+                    }
+                    td.classList.add('fc-limited');
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["insertAfterElement"])(td, segMoreNodes);
+                    limitedNodes.push(td);
+                }
+            }
+            emptyCellsUntil(this.colCnt); // finish off the level
+            rowStruct.moreEls = moreNodes; // for easy undoing later
+            rowStruct.limitedEls = limitedNodes; // for easy undoing later
+        }
+    };
+    // Reveals all levels and removes all "more"-related elements for a grid's row.
+    // `row` is a row number.
+    DayGrid.prototype.unlimitRow = function (row) {
+        var rowStruct = this.eventRenderer.rowStructs[row];
+        if (rowStruct.moreEls) {
+            rowStruct.moreEls.forEach(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"]);
+            rowStruct.moreEls = null;
+        }
+        if (rowStruct.limitedEls) {
+            rowStruct.limitedEls.forEach(function (limitedEl) {
+                limitedEl.classList.remove('fc-limited');
+            });
+            rowStruct.limitedEls = null;
+        }
+    };
+    // Renders an <a> element that represents hidden event element for a cell.
+    // Responsible for attaching click handler as well.
+    DayGrid.prototype.renderMoreLink = function (row, col, hiddenSegs) {
+        var _this = this;
+        var _a = this.context, calendar = _a.calendar, view = _a.view, dateEnv = _a.dateEnv, options = _a.options, isRtl = _a.isRtl;
+        var a = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('a', { className: 'fc-more' });
+        a.innerText = this.getMoreLinkText(hiddenSegs.length);
+        a.addEventListener('click', function (ev) {
+            var clickOption = options.eventLimitClick;
+            var _col = isRtl ? _this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
+            var date = _this.props.cells[row][_col].date;
+            var moreEl = ev.currentTarget;
+            var dayEl = _this.getCellEl(row, col);
+            var allSegs = _this.getCellSegs(row, col);
+            // rescope the segments to be within the cell's date
+            var reslicedAllSegs = _this.resliceDaySegs(allSegs, date);
+            var reslicedHiddenSegs = _this.resliceDaySegs(hiddenSegs, date);
+            if (typeof clickOption === 'function') {
+                // the returned value can be an atomic option
+                clickOption = calendar.publiclyTrigger('eventLimitClick', [
+                    {
+                        date: dateEnv.toDate(date),
+                        allDay: true,
+                        dayEl: dayEl,
+                        moreEl: moreEl,
+                        segs: reslicedAllSegs,
+                        hiddenSegs: reslicedHiddenSegs,
+                        jsEvent: ev,
+                        view: view
+                    }
+                ]);
+            }
+            if (clickOption === 'popover') {
+                _this.showSegPopover(row, col, moreEl, reslicedAllSegs);
+            }
+            else if (typeof clickOption === 'string') { // a view name
+                calendar.zoomTo(date, clickOption);
+            }
+        });
+        return a;
+    };
+    // Reveals the popover that displays all events within a cell
+    DayGrid.prototype.showSegPopover = function (row, col, moreLink, segs) {
+        var _this = this;
+        var _a = this.context, calendar = _a.calendar, view = _a.view, theme = _a.theme, isRtl = _a.isRtl;
+        var _col = isRtl ? this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
+        var moreWrap = moreLink.parentNode; // the <div> wrapper around the <a>
+        var topEl; // the element we want to match the top coordinate of
+        var options;
+        if (this.rowCnt === 1) {
+            topEl = view.el; // will cause the popover to cover any sort of header
+        }
+        else {
+            topEl = this.rowEls[row]; // will align with top of row
+        }
+        options = {
+            className: 'fc-more-popover ' + theme.getClass('popover'),
+            parentEl: view.el,
+            top: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(topEl).top,
+            autoHide: true,
+            content: function (el) {
+                _this.segPopoverTile = new DayTile(el);
+                _this.updateSegPopoverTile(_this.props.cells[row][_col].date, segs);
+            },
+            hide: function () {
+                _this.segPopoverTile.destroy();
+                _this.segPopoverTile = null;
+                _this.segPopover.destroy();
+                _this.segPopover = null;
+            }
+        };
+        // Determine horizontal coordinate.
+        // We use the moreWrap instead of the <td> to avoid border confusion.
+        if (isRtl) {
+            options.right = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(moreWrap).right + 1; // +1 to be over cell border
+        }
+        else {
+            options.left = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(moreWrap).left - 1; // -1 to be over cell border
+        }
+        this.segPopover = new Popover(options);
+        this.segPopover.show();
+        calendar.releaseAfterSizingTriggers(); // hack for eventPositioned
+    };
+    // Given the events within an array of segment objects, reslice them to be in a single day
+    DayGrid.prototype.resliceDaySegs = function (segs, dayDate) {
+        var dayStart = dayDate;
+        var dayEnd = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDays"])(dayStart, 1);
+        var dayRange = { start: dayStart, end: dayEnd };
+        var newSegs = [];
+        for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
+            var seg = segs_1[_i];
+            var eventRange = seg.eventRange;
+            var origRange = eventRange.range;
+            var slicedRange = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["intersectRanges"])(origRange, dayRange);
+            if (slicedRange) {
+                newSegs.push(__assign({}, seg, { eventRange: {
+                        def: eventRange.def,
+                        ui: __assign({}, eventRange.ui, { durationEditable: false }),
+                        instance: eventRange.instance,
+                        range: slicedRange
+                    }, isStart: seg.isStart && slicedRange.start.valueOf() === origRange.start.valueOf(), isEnd: seg.isEnd && slicedRange.end.valueOf() === origRange.end.valueOf() }));
+            }
+        }
+        return newSegs;
+    };
+    // Generates the text that should be inside a "more" link, given the number of events it represents
+    DayGrid.prototype.getMoreLinkText = function (num) {
+        var opt = this.context.options.eventLimitText;
+        if (typeof opt === 'function') {
+            return opt(num);
+        }
+        else {
+            return '+' + num + ' ' + opt;
+        }
+    };
+    // Returns segments within a given cell.
+    // If `startLevel` is specified, returns only events including and below that level. Otherwise returns all segs.
+    DayGrid.prototype.getCellSegs = function (row, col, startLevel) {
+        var segMatrix = this.eventRenderer.rowStructs[row].segMatrix;
+        var level = startLevel || 0;
+        var segs = [];
+        var seg;
+        while (level < segMatrix.length) {
+            seg = segMatrix[level][col];
+            if (seg) {
+                segs.push(seg);
+            }
+            level++;
+        }
+        return segs;
+    };
+    return DayGrid;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DateComponent"]));
+
+var WEEK_NUM_FORMAT$1 = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])({ week: 'numeric' });
+/* An abstract class for the daygrid views, as well as month view. Renders one or more rows of day cells.
+----------------------------------------------------------------------------------------------------------------------*/
+// It is a manager for a DayGrid subcomponent, which does most of the heavy lifting.
+// It is responsible for managing width/height.
+var AbstractDayGridView = /** @class */ (function (_super) {
+    __extends(AbstractDayGridView, _super);
+    function AbstractDayGridView() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.processOptions = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(_this._processOptions);
+        _this.renderSkeleton = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderSkeleton, _this._unrenderSkeleton);
+        /* Header Rendering
+        ------------------------------------------------------------------------------------------------------------------*/
+        // Generates the HTML that will go before the day-of week header cells
+        _this.renderHeadIntroHtml = function () {
+            var _a = _this.context, theme = _a.theme, options = _a.options;
+            if (_this.colWeekNumbersVisible) {
+                return '' +
+                    '<th class="fc-week-number ' + theme.getClass('widgetHeader') + '" ' + _this.weekNumberStyleAttr() + '>' +
+                    '<span>' + // needed for matchCellWidths
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(options.weekLabel) +
+                    '</span>' +
+                    '</th>';
+            }
+            return '';
+        };
+        /* Day Grid Rendering
+        ------------------------------------------------------------------------------------------------------------------*/
+        // Generates the HTML that will go before content-skeleton cells that display the day/week numbers
+        _this.renderDayGridNumberIntroHtml = function (row, dayGrid) {
+            var _a = _this.context, options = _a.options, dateEnv = _a.dateEnv;
+            var weekStart = dayGrid.props.cells[row][0].date;
+            if (_this.colWeekNumbersVisible) {
+                return '' +
+                    '<td class="fc-week-number" ' + _this.weekNumberStyleAttr() + '>' +
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(// aside from link, important for matchCellWidths
+                    options, dateEnv, { date: weekStart, type: 'week', forceOff: dayGrid.colCnt === 1 }, dateEnv.format(weekStart, WEEK_NUM_FORMAT$1) // inner HTML
+                    ) +
+                    '</td>';
+            }
+            return '';
+        };
+        // Generates the HTML that goes before the day bg cells for each day-row
+        _this.renderDayGridBgIntroHtml = function () {
+            var theme = _this.context.theme;
+            if (_this.colWeekNumbersVisible) {
+                return '<td class="fc-week-number ' + theme.getClass('widgetContent') + '" ' + _this.weekNumberStyleAttr() + '></td>';
+            }
+            return '';
+        };
+        // Generates the HTML that goes before every other type of row generated by DayGrid.
+        // Affects mirror-skeleton and highlight-skeleton rows.
+        _this.renderDayGridIntroHtml = function () {
+            if (_this.colWeekNumbersVisible) {
+                return '<td class="fc-week-number" ' + _this.weekNumberStyleAttr() + '></td>';
+            }
+            return '';
+        };
+        return _this;
+    }
+    AbstractDayGridView.prototype._processOptions = function (options) {
+        if (options.weekNumbers) {
+            if (options.weekNumbersWithinDays) {
+                this.cellWeekNumbersVisible = true;
+                this.colWeekNumbersVisible = false;
+            }
+            else {
+                this.cellWeekNumbersVisible = false;
+                this.colWeekNumbersVisible = true;
+            }
+        }
+        else {
+            this.colWeekNumbersVisible = false;
+            this.cellWeekNumbersVisible = false;
+        }
+    };
+    AbstractDayGridView.prototype.render = function (props, context) {
+        _super.prototype.render.call(this, props, context);
+        this.processOptions(context.options);
+        this.renderSkeleton(context);
+    };
+    AbstractDayGridView.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderSkeleton.unrender();
+    };
+    AbstractDayGridView.prototype._renderSkeleton = function (context) {
+        this.el.classList.add('fc-dayGrid-view');
+        this.el.innerHTML = this.renderSkeletonHtml();
+        this.scroller = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ScrollComponent"]('hidden', // overflow x
+        'auto' // overflow y
+        );
+        var dayGridContainerEl = this.scroller.el;
+        this.el.querySelector('.fc-body > tr > td').appendChild(dayGridContainerEl);
+        dayGridContainerEl.classList.add('fc-day-grid-container');
+        var dayGridEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', { className: 'fc-day-grid' });
+        dayGridContainerEl.appendChild(dayGridEl);
+        this.dayGrid = new DayGrid(dayGridEl, {
+            renderNumberIntroHtml: this.renderDayGridNumberIntroHtml,
+            renderBgIntroHtml: this.renderDayGridBgIntroHtml,
+            renderIntroHtml: this.renderDayGridIntroHtml,
+            colWeekNumbersVisible: this.colWeekNumbersVisible,
+            cellWeekNumbersVisible: this.cellWeekNumbersVisible
+        });
+    };
+    AbstractDayGridView.prototype._unrenderSkeleton = function () {
+        this.el.classList.remove('fc-dayGrid-view');
+        this.dayGrid.destroy();
+        this.scroller.destroy();
+    };
+    // Builds the HTML skeleton for the view.
+    // The day-grid component will render inside of a container defined by this HTML.
+    AbstractDayGridView.prototype.renderSkeletonHtml = function () {
+        var _a = this.context, theme = _a.theme, options = _a.options;
+        return '' +
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+            (options.columnHeader ?
+                '<thead class="fc-head">' +
+                    '<tr>' +
+                    '<td class="fc-head-container ' + theme.getClass('widgetHeader') + '">&nbsp;</td>' +
+                    '</tr>' +
+                    '</thead>' :
+                '') +
+            '<tbody class="fc-body">' +
+            '<tr>' +
+            '<td class="' + theme.getClass('widgetContent') + '"></td>' +
+            '</tr>' +
+            '</tbody>' +
+            '</table>';
+    };
+    // Generates an HTML attribute string for setting the width of the week number column, if it is known
+    AbstractDayGridView.prototype.weekNumberStyleAttr = function () {
+        if (this.weekNumberWidth != null) {
+            return 'style="width:' + this.weekNumberWidth + 'px"';
+        }
+        return '';
+    };
+    // Determines whether each row should have a constant height
+    AbstractDayGridView.prototype.hasRigidRows = function () {
+        var eventLimit = this.context.options.eventLimit;
+        return eventLimit && typeof eventLimit !== 'number';
+    };
+    /* Dimensions
+    ------------------------------------------------------------------------------------------------------------------*/
+    AbstractDayGridView.prototype.updateSize = function (isResize, viewHeight, isAuto) {
+        _super.prototype.updateSize.call(this, isResize, viewHeight, isAuto); // will call updateBaseSize. important that executes first
+        this.dayGrid.updateSize(isResize);
+    };
+    // Refreshes the horizontal dimensions of the view
+    AbstractDayGridView.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {
+        var dayGrid = this.dayGrid;
+        var eventLimit = this.context.options.eventLimit;
+        var headRowEl = this.header ? this.header.el : null; // HACK
+        var scrollerHeight;
+        var scrollbarWidths;
+        // hack to give the view some height prior to dayGrid's columns being rendered
+        // TODO: separate setting height from scroller VS dayGrid.
+        if (!dayGrid.rowEls) {
+            if (!isAuto) {
+                scrollerHeight = this.computeScrollerHeight(viewHeight);
+                this.scroller.setHeight(scrollerHeight);
+            }
+            return;
+        }
+        if (this.colWeekNumbersVisible) {
+            // Make sure all week number cells running down the side have the same width.
+            this.weekNumberWidth = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["matchCellWidths"])(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-week-number'));
+        }
+        // reset all heights to be natural
+        this.scroller.clear();
+        if (headRowEl) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["uncompensateScroll"])(headRowEl);
+        }
+        dayGrid.removeSegPopover(); // kill the "more" popover if displayed
+        // is the event limit a constant level number?
+        if (eventLimit && typeof eventLimit === 'number') {
+            dayGrid.limitRows(eventLimit); // limit the levels first so the height can redistribute after
+        }
+        // distribute the height to the rows
+        // (viewHeight is a "recommended" value if isAuto)
+        scrollerHeight = this.computeScrollerHeight(viewHeight);
+        this.setGridHeight(scrollerHeight, isAuto);
+        // is the event limit dynamically calculated?
+        if (eventLimit && typeof eventLimit !== 'number') {
+            dayGrid.limitRows(eventLimit); // limit the levels after the grid's row heights have been set
+        }
+        if (!isAuto) { // should we force dimensions of the scroll container?
+            this.scroller.setHeight(scrollerHeight);
+            scrollbarWidths = this.scroller.getScrollbarWidths();
+            if (scrollbarWidths.left || scrollbarWidths.right) { // using scrollbars?
+                if (headRowEl) {
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["compensateScroll"])(headRowEl, scrollbarWidths);
+                }
+                // doing the scrollbar compensation might have created text overflow which created more height. redo
+                scrollerHeight = this.computeScrollerHeight(viewHeight);
+                this.scroller.setHeight(scrollerHeight);
+            }
+            // guarantees the same scrollbar widths
+            this.scroller.lockOverflow(scrollbarWidths);
+        }
+    };
+    // given a desired total height of the view, returns what the height of the scroller should be
+    AbstractDayGridView.prototype.computeScrollerHeight = function (viewHeight) {
+        return viewHeight -
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["subtractInnerElHeight"])(this.el, this.scroller.el); // everything that's NOT the scroller
+    };
+    // Sets the height of just the DayGrid component in this view
+    AbstractDayGridView.prototype.setGridHeight = function (height, isAuto) {
+        if (this.context.options.monthMode) {
+            // if auto, make the height of each row the height that it would be if there were 6 weeks
+            if (isAuto) {
+                height *= this.dayGrid.rowCnt / 6;
+            }
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["distributeHeight"])(this.dayGrid.rowEls, height, !isAuto); // if auto, don't compensate for height-hogging rows
+        }
+        else {
+            if (isAuto) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["undistributeHeight"])(this.dayGrid.rowEls); // let the rows be their natural height with no expanding
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["distributeHeight"])(this.dayGrid.rowEls, height, true); // true = compensate for height-hogging rows
+            }
+        }
+    };
+    /* Scroll
+    ------------------------------------------------------------------------------------------------------------------*/
+    AbstractDayGridView.prototype.computeDateScroll = function (duration) {
+        return { top: 0 };
+    };
+    AbstractDayGridView.prototype.queryDateScroll = function () {
+        return { top: this.scroller.getScrollTop() };
+    };
+    AbstractDayGridView.prototype.applyDateScroll = function (scroll) {
+        if (scroll.top !== undefined) {
+            this.scroller.setScrollTop(scroll.top);
+        }
+    };
+    return AbstractDayGridView;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["View"]));
+AbstractDayGridView.prototype.dateProfileGeneratorClass = DayGridDateProfileGenerator;
+
+var SimpleDayGrid = /** @class */ (function (_super) {
+    __extends(SimpleDayGrid, _super);
+    function SimpleDayGrid(dayGrid) {
+        var _this = _super.call(this, dayGrid.el) || this;
+        _this.slicer = new DayGridSlicer();
+        _this.dayGrid = dayGrid;
+        return _this;
+    }
+    SimpleDayGrid.prototype.firstContext = function (context) {
+        context.calendar.registerInteractiveComponent(this, { el: this.dayGrid.el });
+    };
+    SimpleDayGrid.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.context.calendar.unregisterInteractiveComponent(this);
+    };
+    SimpleDayGrid.prototype.render = function (props, context) {
+        var dayGrid = this.dayGrid;
+        var dateProfile = props.dateProfile, dayTable = props.dayTable;
+        dayGrid.receiveContext(context); // hack because context is used in sliceProps
+        dayGrid.receiveProps(__assign({}, this.slicer.sliceProps(props, dateProfile, props.nextDayThreshold, context.calendar, dayGrid, dayTable), { dateProfile: dateProfile, cells: dayTable.cells, isRigid: props.isRigid }), context);
+    };
+    SimpleDayGrid.prototype.buildPositionCaches = function () {
+        this.dayGrid.buildPositionCaches();
+    };
+    SimpleDayGrid.prototype.queryHit = function (positionLeft, positionTop) {
+        var rawHit = this.dayGrid.positionToHit(positionLeft, positionTop);
+        if (rawHit) {
+            return {
+                component: this.dayGrid,
+                dateSpan: rawHit.dateSpan,
+                dayEl: rawHit.dayEl,
+                rect: {
+                    left: rawHit.relativeRect.left,
+                    right: rawHit.relativeRect.right,
+                    top: rawHit.relativeRect.top,
+                    bottom: rawHit.relativeRect.bottom
+                },
+                layer: 0
+            };
+        }
+    };
+    return SimpleDayGrid;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DateComponent"]));
+var DayGridSlicer = /** @class */ (function (_super) {
+    __extends(DayGridSlicer, _super);
+    function DayGridSlicer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DayGridSlicer.prototype.sliceRange = function (dateRange, dayTable) {
+        return dayTable.sliceRange(dateRange);
+    };
+    return DayGridSlicer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Slicer"]));
+
+var DayGridView = /** @class */ (function (_super) {
+    __extends(DayGridView, _super);
+    function DayGridView() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.buildDayTable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(buildDayTable);
+        return _this;
+    }
+    DayGridView.prototype.render = function (props, context) {
+        _super.prototype.render.call(this, props, context); // will call _renderSkeleton/_unrenderSkeleton
+        var dateProfile = this.props.dateProfile;
+        var dayTable = this.dayTable =
+            this.buildDayTable(dateProfile, props.dateProfileGenerator);
+        if (this.header) {
+            this.header.receiveProps({
+                dateProfile: dateProfile,
+                dates: dayTable.headerDates,
+                datesRepDistinctDays: dayTable.rowCnt === 1,
+                renderIntroHtml: this.renderHeadIntroHtml
+            }, context);
+        }
+        this.simpleDayGrid.receiveProps({
+            dateProfile: dateProfile,
+            dayTable: dayTable,
+            businessHours: props.businessHours,
+            dateSelection: props.dateSelection,
+            eventStore: props.eventStore,
+            eventUiBases: props.eventUiBases,
+            eventSelection: props.eventSelection,
+            eventDrag: props.eventDrag,
+            eventResize: props.eventResize,
+            isRigid: this.hasRigidRows(),
+            nextDayThreshold: this.context.nextDayThreshold
+        }, context);
+    };
+    DayGridView.prototype._renderSkeleton = function (context) {
+        _super.prototype._renderSkeleton.call(this, context);
+        if (context.options.columnHeader) {
+            this.header = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DayHeader"](this.el.querySelector('.fc-head-container'));
+        }
+        this.simpleDayGrid = new SimpleDayGrid(this.dayGrid);
+    };
+    DayGridView.prototype._unrenderSkeleton = function () {
+        _super.prototype._unrenderSkeleton.call(this);
+        if (this.header) {
+            this.header.destroy();
+        }
+        this.simpleDayGrid.destroy();
+    };
+    return DayGridView;
+}(AbstractDayGridView));
+function buildDayTable(dateProfile, dateProfileGenerator) {
+    var daySeries = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DaySeries"](dateProfile.renderRange, dateProfileGenerator);
+    return new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DayTable"](daySeries, /year|month|week/.test(dateProfile.currentRangeUnit));
+}
+
+var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"])({
+    defaultView: 'dayGridMonth',
+    views: {
+        dayGrid: DayGridView,
+        dayGridDay: {
+            type: 'dayGrid',
+            duration: { days: 1 }
+        },
+        dayGridWeek: {
+            type: 'dayGrid',
+            duration: { weeks: 1 }
+        },
+        dayGridMonth: {
+            type: 'dayGrid',
+            duration: { months: 1 },
+            monthMode: true,
+            fixedWeekCount: true
+        }
+    }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (main);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/interaction/main.esm.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@fullcalendar/interaction/main.esm.js ***!
+  \************************************************************/
+/*! exports provided: default, Draggable, FeaturefulElementDragging, PointerDragging, ThirdPartyDraggable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Draggable", function() { return ExternalDraggable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturefulElementDragging", function() { return FeaturefulElementDragging; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PointerDragging", function() { return PointerDragging; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThirdPartyDraggable", function() { return ThirdPartyDraggable; });
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
+/*!
+FullCalendar Interaction Plugin v4.4.2
+Docs & License: https://fullcalendar.io/
+(c) 2019 Adam Shaw
+*/
+
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].touchMouseIgnoreWait = 500;
+var ignoreMouseDepth = 0;
+var listenerCnt = 0;
+var isWindowTouchMoveCancelled = false;
+/*
+Uses a "pointer" abstraction, which monitors UI events for both mouse and touch.
+Tracks when the pointer "drags" on a certain element, meaning down+move+up.
+
+Also, tracks if there was touch-scrolling.
+Also, can prevent touch-scrolling from happening.
+Also, can fire pointermove events when scrolling happens underneath, even when no real pointer movement.
+
+emits:
+- pointerdown
+- pointermove
+- pointerup
+*/
+var PointerDragging = /** @class */ (function () {
+    function PointerDragging(containerEl) {
+        var _this = this;
+        this.subjectEl = null;
+        this.downEl = null;
+        // options that can be directly assigned by caller
+        this.selector = ''; // will cause subjectEl in all emitted events to be this element
+        this.handleSelector = '';
+        this.shouldIgnoreMove = false;
+        this.shouldWatchScroll = true; // for simulating pointermove on scroll
+        // internal states
+        this.isDragging = false;
+        this.isTouchDragging = false;
+        this.wasTouchScroll = false;
+        // Mouse
+        // ----------------------------------------------------------------------------------------------------
+        this.handleMouseDown = function (ev) {
+            if (!_this.shouldIgnoreMouse() &&
+                isPrimaryMouseButton(ev) &&
+                _this.tryStart(ev)) {
+                var pev = _this.createEventFromMouse(ev, true);
+                _this.emitter.trigger('pointerdown', pev);
+                _this.initScrollWatch(pev);
+                if (!_this.shouldIgnoreMove) {
+                    document.addEventListener('mousemove', _this.handleMouseMove);
+                }
+                document.addEventListener('mouseup', _this.handleMouseUp);
+            }
+        };
+        this.handleMouseMove = function (ev) {
+            var pev = _this.createEventFromMouse(ev);
+            _this.recordCoords(pev);
+            _this.emitter.trigger('pointermove', pev);
+        };
+        this.handleMouseUp = function (ev) {
+            document.removeEventListener('mousemove', _this.handleMouseMove);
+            document.removeEventListener('mouseup', _this.handleMouseUp);
+            _this.emitter.trigger('pointerup', _this.createEventFromMouse(ev));
+            _this.cleanup(); // call last so that pointerup has access to props
+        };
+        // Touch
+        // ----------------------------------------------------------------------------------------------------
+        this.handleTouchStart = function (ev) {
+            if (_this.tryStart(ev)) {
+                _this.isTouchDragging = true;
+                var pev = _this.createEventFromTouch(ev, true);
+                _this.emitter.trigger('pointerdown', pev);
+                _this.initScrollWatch(pev);
+                // unlike mouse, need to attach to target, not document
+                // https://stackoverflow.com/a/45760014
+                var target = ev.target;
+                if (!_this.shouldIgnoreMove) {
+                    target.addEventListener('touchmove', _this.handleTouchMove);
+                }
+                target.addEventListener('touchend', _this.handleTouchEnd);
+                target.addEventListener('touchcancel', _this.handleTouchEnd); // treat it as a touch end
+                // attach a handler to get called when ANY scroll action happens on the page.
+                // this was impossible to do with normal on/off because 'scroll' doesn't bubble.
+                // http://stackoverflow.com/a/32954565/96342
+                window.addEventListener('scroll', _this.handleTouchScroll, true // useCapture
+                );
+            }
+        };
+        this.handleTouchMove = function (ev) {
+            var pev = _this.createEventFromTouch(ev);
+            _this.recordCoords(pev);
+            _this.emitter.trigger('pointermove', pev);
+        };
+        this.handleTouchEnd = function (ev) {
+            if (_this.isDragging) { // done to guard against touchend followed by touchcancel
+                var target = ev.target;
+                target.removeEventListener('touchmove', _this.handleTouchMove);
+                target.removeEventListener('touchend', _this.handleTouchEnd);
+                target.removeEventListener('touchcancel', _this.handleTouchEnd);
+                window.removeEventListener('scroll', _this.handleTouchScroll, true); // useCaptured=true
+                _this.emitter.trigger('pointerup', _this.createEventFromTouch(ev));
+                _this.cleanup(); // call last so that pointerup has access to props
+                _this.isTouchDragging = false;
+                startIgnoringMouse();
+            }
+        };
+        this.handleTouchScroll = function () {
+            _this.wasTouchScroll = true;
+        };
+        this.handleScroll = function (ev) {
+            if (!_this.shouldIgnoreMove) {
+                var pageX = (window.pageXOffset - _this.prevScrollX) + _this.prevPageX;
+                var pageY = (window.pageYOffset - _this.prevScrollY) + _this.prevPageY;
+                _this.emitter.trigger('pointermove', {
+                    origEvent: ev,
+                    isTouch: _this.isTouchDragging,
+                    subjectEl: _this.subjectEl,
+                    pageX: pageX,
+                    pageY: pageY,
+                    deltaX: pageX - _this.origPageX,
+                    deltaY: pageY - _this.origPageY
+                });
+            }
+        };
+        this.containerEl = containerEl;
+        this.emitter = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EmitterMixin"]();
+        containerEl.addEventListener('mousedown', this.handleMouseDown);
+        containerEl.addEventListener('touchstart', this.handleTouchStart, { passive: true });
+        listenerCreated();
+    }
+    PointerDragging.prototype.destroy = function () {
+        this.containerEl.removeEventListener('mousedown', this.handleMouseDown);
+        this.containerEl.removeEventListener('touchstart', this.handleTouchStart, { passive: true });
+        listenerDestroyed();
+    };
+    PointerDragging.prototype.tryStart = function (ev) {
+        var subjectEl = this.querySubjectEl(ev);
+        var downEl = ev.target;
+        if (subjectEl &&
+            (!this.handleSelector || Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(downEl, this.handleSelector))) {
+            this.subjectEl = subjectEl;
+            this.downEl = downEl;
+            this.isDragging = true; // do this first so cancelTouchScroll will work
+            this.wasTouchScroll = false;
+            return true;
+        }
+        return false;
+    };
+    PointerDragging.prototype.cleanup = function () {
+        isWindowTouchMoveCancelled = false;
+        this.isDragging = false;
+        this.subjectEl = null;
+        this.downEl = null;
+        // keep wasTouchScroll around for later access
+        this.destroyScrollWatch();
+    };
+    PointerDragging.prototype.querySubjectEl = function (ev) {
+        if (this.selector) {
+            return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(ev.target, this.selector);
+        }
+        else {
+            return this.containerEl;
+        }
+    };
+    PointerDragging.prototype.shouldIgnoreMouse = function () {
+        return ignoreMouseDepth || this.isTouchDragging;
+    };
+    // can be called by user of this class, to cancel touch-based scrolling for the current drag
+    PointerDragging.prototype.cancelTouchScroll = function () {
+        if (this.isDragging) {
+            isWindowTouchMoveCancelled = true;
+        }
+    };
+    // Scrolling that simulates pointermoves
+    // ----------------------------------------------------------------------------------------------------
+    PointerDragging.prototype.initScrollWatch = function (ev) {
+        if (this.shouldWatchScroll) {
+            this.recordCoords(ev);
+            window.addEventListener('scroll', this.handleScroll, true); // useCapture=true
+        }
+    };
+    PointerDragging.prototype.recordCoords = function (ev) {
+        if (this.shouldWatchScroll) {
+            this.prevPageX = ev.pageX;
+            this.prevPageY = ev.pageY;
+            this.prevScrollX = window.pageXOffset;
+            this.prevScrollY = window.pageYOffset;
+        }
+    };
+    PointerDragging.prototype.destroyScrollWatch = function () {
+        if (this.shouldWatchScroll) {
+            window.removeEventListener('scroll', this.handleScroll, true); // useCaptured=true
+        }
+    };
+    // Event Normalization
+    // ----------------------------------------------------------------------------------------------------
+    PointerDragging.prototype.createEventFromMouse = function (ev, isFirst) {
+        var deltaX = 0;
+        var deltaY = 0;
+        // TODO: repeat code
+        if (isFirst) {
+            this.origPageX = ev.pageX;
+            this.origPageY = ev.pageY;
+        }
+        else {
+            deltaX = ev.pageX - this.origPageX;
+            deltaY = ev.pageY - this.origPageY;
+        }
+        return {
+            origEvent: ev,
+            isTouch: false,
+            subjectEl: this.subjectEl,
+            pageX: ev.pageX,
+            pageY: ev.pageY,
+            deltaX: deltaX,
+            deltaY: deltaY
+        };
+    };
+    PointerDragging.prototype.createEventFromTouch = function (ev, isFirst) {
+        var touches = ev.touches;
+        var pageX;
+        var pageY;
+        var deltaX = 0;
+        var deltaY = 0;
+        // if touch coords available, prefer,
+        // because FF would give bad ev.pageX ev.pageY
+        if (touches && touches.length) {
+            pageX = touches[0].pageX;
+            pageY = touches[0].pageY;
+        }
+        else {
+            pageX = ev.pageX;
+            pageY = ev.pageY;
+        }
+        // TODO: repeat code
+        if (isFirst) {
+            this.origPageX = pageX;
+            this.origPageY = pageY;
+        }
+        else {
+            deltaX = pageX - this.origPageX;
+            deltaY = pageY - this.origPageY;
+        }
+        return {
+            origEvent: ev,
+            isTouch: true,
+            subjectEl: this.subjectEl,
+            pageX: pageX,
+            pageY: pageY,
+            deltaX: deltaX,
+            deltaY: deltaY
+        };
+    };
+    return PointerDragging;
+}());
+// Returns a boolean whether this was a left mouse click and no ctrl key (which means right click on Mac)
+function isPrimaryMouseButton(ev) {
+    return ev.button === 0 && !ev.ctrlKey;
+}
+// Ignoring fake mouse events generated by touch
+// ----------------------------------------------------------------------------------------------------
+function startIgnoringMouse() {
+    ignoreMouseDepth++;
+    setTimeout(function () {
+        ignoreMouseDepth--;
+    }, _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].touchMouseIgnoreWait);
+}
+// We want to attach touchmove as early as possible for Safari
+// ----------------------------------------------------------------------------------------------------
+function listenerCreated() {
+    if (!(listenerCnt++)) {
+        window.addEventListener('touchmove', onWindowTouchMove, { passive: false });
+    }
+}
+function listenerDestroyed() {
+    if (!(--listenerCnt)) {
+        window.removeEventListener('touchmove', onWindowTouchMove, { passive: false });
+    }
+}
+function onWindowTouchMove(ev) {
+    if (isWindowTouchMoveCancelled) {
+        ev.preventDefault();
+    }
+}
+
+/*
+An effect in which an element follows the movement of a pointer across the screen.
+The moving element is a clone of some other element.
+Must call start + handleMove + stop.
+*/
+var ElementMirror = /** @class */ (function () {
+    function ElementMirror() {
+        this.isVisible = false; // must be explicitly enabled
+        this.sourceEl = null;
+        this.mirrorEl = null;
+        this.sourceElRect = null; // screen coords relative to viewport
+        // options that can be set directly by caller
+        this.parentNode = document.body;
+        this.zIndex = 9999;
+        this.revertDuration = 0;
+    }
+    ElementMirror.prototype.start = function (sourceEl, pageX, pageY) {
+        this.sourceEl = sourceEl;
+        this.sourceElRect = this.sourceEl.getBoundingClientRect();
+        this.origScreenX = pageX - window.pageXOffset;
+        this.origScreenY = pageY - window.pageYOffset;
+        this.deltaX = 0;
+        this.deltaY = 0;
+        this.updateElPosition();
+    };
+    ElementMirror.prototype.handleMove = function (pageX, pageY) {
+        this.deltaX = (pageX - window.pageXOffset) - this.origScreenX;
+        this.deltaY = (pageY - window.pageYOffset) - this.origScreenY;
+        this.updateElPosition();
+    };
+    // can be called before start
+    ElementMirror.prototype.setIsVisible = function (bool) {
+        if (bool) {
+            if (!this.isVisible) {
+                if (this.mirrorEl) {
+                    this.mirrorEl.style.display = '';
+                }
+                this.isVisible = bool; // needs to happen before updateElPosition
+                this.updateElPosition(); // because was not updating the position while invisible
+            }
+        }
+        else {
+            if (this.isVisible) {
+                if (this.mirrorEl) {
+                    this.mirrorEl.style.display = 'none';
+                }
+                this.isVisible = bool;
+            }
+        }
+    };
+    // always async
+    ElementMirror.prototype.stop = function (needsRevertAnimation, callback) {
+        var _this = this;
+        var done = function () {
+            _this.cleanup();
+            callback();
+        };
+        if (needsRevertAnimation &&
+            this.mirrorEl &&
+            this.isVisible &&
+            this.revertDuration && // if 0, transition won't work
+            (this.deltaX || this.deltaY) // if same coords, transition won't work
+        ) {
+            this.doRevertAnimation(done, this.revertDuration);
+        }
+        else {
+            setTimeout(done, 0);
+        }
+    };
+    ElementMirror.prototype.doRevertAnimation = function (callback, revertDuration) {
+        var mirrorEl = this.mirrorEl;
+        var finalSourceElRect = this.sourceEl.getBoundingClientRect(); // because autoscrolling might have happened
+        mirrorEl.style.transition =
+            'top ' + revertDuration + 'ms,' +
+                'left ' + revertDuration + 'ms';
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(mirrorEl, {
+            left: finalSourceElRect.left,
+            top: finalSourceElRect.top
+        });
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["whenTransitionDone"])(mirrorEl, function () {
+            mirrorEl.style.transition = '';
+            callback();
+        });
+    };
+    ElementMirror.prototype.cleanup = function () {
+        if (this.mirrorEl) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(this.mirrorEl);
+            this.mirrorEl = null;
+        }
+        this.sourceEl = null;
+    };
+    ElementMirror.prototype.updateElPosition = function () {
+        if (this.sourceEl && this.isVisible) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(this.getMirrorEl(), {
+                left: this.sourceElRect.left + this.deltaX,
+                top: this.sourceElRect.top + this.deltaY
+            });
+        }
+    };
+    ElementMirror.prototype.getMirrorEl = function () {
+        var sourceElRect = this.sourceElRect;
+        var mirrorEl = this.mirrorEl;
+        if (!mirrorEl) {
+            mirrorEl = this.mirrorEl = this.sourceEl.cloneNode(true); // cloneChildren=true
+            // we don't want long taps or any mouse interaction causing selection/menus.
+            // would use preventSelection(), but that prevents selectstart, causing problems.
+            mirrorEl.classList.add('fc-unselectable');
+            mirrorEl.classList.add('fc-dragging');
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(mirrorEl, {
+                position: 'fixed',
+                zIndex: this.zIndex,
+                visibility: '',
+                boxSizing: 'border-box',
+                width: sourceElRect.right - sourceElRect.left,
+                height: sourceElRect.bottom - sourceElRect.top,
+                right: 'auto',
+                bottom: 'auto',
+                margin: 0
+            });
+            this.parentNode.appendChild(mirrorEl);
+        }
+        return mirrorEl;
+    };
+    return ElementMirror;
+}());
+
+/*
+Is a cache for a given element's scroll information (all the info that ScrollController stores)
+in addition the "client rectangle" of the element.. the area within the scrollbars.
+
+The cache can be in one of two modes:
+- doesListening:false - ignores when the container is scrolled by someone else
+- doesListening:true - watch for scrolling and update the cache
+*/
+var ScrollGeomCache = /** @class */ (function (_super) {
+    __extends(ScrollGeomCache, _super);
+    function ScrollGeomCache(scrollController, doesListening) {
+        var _this = _super.call(this) || this;
+        _this.handleScroll = function () {
+            _this.scrollTop = _this.scrollController.getScrollTop();
+            _this.scrollLeft = _this.scrollController.getScrollLeft();
+            _this.handleScrollChange();
+        };
+        _this.scrollController = scrollController;
+        _this.doesListening = doesListening;
+        _this.scrollTop = _this.origScrollTop = scrollController.getScrollTop();
+        _this.scrollLeft = _this.origScrollLeft = scrollController.getScrollLeft();
+        _this.scrollWidth = scrollController.getScrollWidth();
+        _this.scrollHeight = scrollController.getScrollHeight();
+        _this.clientWidth = scrollController.getClientWidth();
+        _this.clientHeight = scrollController.getClientHeight();
+        _this.clientRect = _this.computeClientRect(); // do last in case it needs cached values
+        if (_this.doesListening) {
+            _this.getEventTarget().addEventListener('scroll', _this.handleScroll);
+        }
+        return _this;
+    }
+    ScrollGeomCache.prototype.destroy = function () {
+        if (this.doesListening) {
+            this.getEventTarget().removeEventListener('scroll', this.handleScroll);
+        }
+    };
+    ScrollGeomCache.prototype.getScrollTop = function () {
+        return this.scrollTop;
+    };
+    ScrollGeomCache.prototype.getScrollLeft = function () {
+        return this.scrollLeft;
+    };
+    ScrollGeomCache.prototype.setScrollTop = function (top) {
+        this.scrollController.setScrollTop(top);
+        if (!this.doesListening) {
+            // we are not relying on the element to normalize out-of-bounds scroll values
+            // so we need to sanitize ourselves
+            this.scrollTop = Math.max(Math.min(top, this.getMaxScrollTop()), 0);
+            this.handleScrollChange();
+        }
+    };
+    ScrollGeomCache.prototype.setScrollLeft = function (top) {
+        this.scrollController.setScrollLeft(top);
+        if (!this.doesListening) {
+            // we are not relying on the element to normalize out-of-bounds scroll values
+            // so we need to sanitize ourselves
+            this.scrollLeft = Math.max(Math.min(top, this.getMaxScrollLeft()), 0);
+            this.handleScrollChange();
+        }
+    };
+    ScrollGeomCache.prototype.getClientWidth = function () {
+        return this.clientWidth;
+    };
+    ScrollGeomCache.prototype.getClientHeight = function () {
+        return this.clientHeight;
+    };
+    ScrollGeomCache.prototype.getScrollWidth = function () {
+        return this.scrollWidth;
+    };
+    ScrollGeomCache.prototype.getScrollHeight = function () {
+        return this.scrollHeight;
+    };
+    ScrollGeomCache.prototype.handleScrollChange = function () {
+    };
+    return ScrollGeomCache;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ScrollController"]));
+var ElementScrollGeomCache = /** @class */ (function (_super) {
+    __extends(ElementScrollGeomCache, _super);
+    function ElementScrollGeomCache(el, doesListening) {
+        return _super.call(this, new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ElementScrollController"](el), doesListening) || this;
+    }
+    ElementScrollGeomCache.prototype.getEventTarget = function () {
+        return this.scrollController.el;
+    };
+    ElementScrollGeomCache.prototype.computeClientRect = function () {
+        return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeInnerRect"])(this.scrollController.el);
+    };
+    return ElementScrollGeomCache;
+}(ScrollGeomCache));
+var WindowScrollGeomCache = /** @class */ (function (_super) {
+    __extends(WindowScrollGeomCache, _super);
+    function WindowScrollGeomCache(doesListening) {
+        return _super.call(this, new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["WindowScrollController"](), doesListening) || this;
+    }
+    WindowScrollGeomCache.prototype.getEventTarget = function () {
+        return window;
+    };
+    WindowScrollGeomCache.prototype.computeClientRect = function () {
+        return {
+            left: this.scrollLeft,
+            right: this.scrollLeft + this.clientWidth,
+            top: this.scrollTop,
+            bottom: this.scrollTop + this.clientHeight
+        };
+    };
+    // the window is the only scroll object that changes it's rectangle relative
+    // to the document's topleft as it scrolls
+    WindowScrollGeomCache.prototype.handleScrollChange = function () {
+        this.clientRect = this.computeClientRect();
+    };
+    return WindowScrollGeomCache;
+}(ScrollGeomCache));
+
+// If available we are using native "performance" API instead of "Date"
+// Read more about it on MDN:
+// https://developer.mozilla.org/en-US/docs/Web/API/Performance
+var getTime = typeof performance === 'function' ? performance.now : Date.now;
+/*
+For a pointer interaction, automatically scrolls certain scroll containers when the pointer
+approaches the edge.
+
+The caller must call start + handleMove + stop.
+*/
+var AutoScroller = /** @class */ (function () {
+    function AutoScroller() {
+        var _this = this;
+        // options that can be set by caller
+        this.isEnabled = true;
+        this.scrollQuery = [window, '.fc-scroller'];
+        this.edgeThreshold = 50; // pixels
+        this.maxVelocity = 300; // pixels per second
+        // internal state
+        this.pointerScreenX = null;
+        this.pointerScreenY = null;
+        this.isAnimating = false;
+        this.scrollCaches = null;
+        // protect against the initial pointerdown being too close to an edge and starting the scroll
+        this.everMovedUp = false;
+        this.everMovedDown = false;
+        this.everMovedLeft = false;
+        this.everMovedRight = false;
+        this.animate = function () {
+            if (_this.isAnimating) { // wasn't cancelled between animation calls
+                var edge = _this.computeBestEdge(_this.pointerScreenX + window.pageXOffset, _this.pointerScreenY + window.pageYOffset);
+                if (edge) {
+                    var now = getTime();
+                    _this.handleSide(edge, (now - _this.msSinceRequest) / 1000);
+                    _this.requestAnimation(now);
+                }
+                else {
+                    _this.isAnimating = false; // will stop animation
+                }
+            }
+        };
+    }
+    AutoScroller.prototype.start = function (pageX, pageY) {
+        if (this.isEnabled) {
+            this.scrollCaches = this.buildCaches();
+            this.pointerScreenX = null;
+            this.pointerScreenY = null;
+            this.everMovedUp = false;
+            this.everMovedDown = false;
+            this.everMovedLeft = false;
+            this.everMovedRight = false;
+            this.handleMove(pageX, pageY);
+        }
+    };
+    AutoScroller.prototype.handleMove = function (pageX, pageY) {
+        if (this.isEnabled) {
+            var pointerScreenX = pageX - window.pageXOffset;
+            var pointerScreenY = pageY - window.pageYOffset;
+            var yDelta = this.pointerScreenY === null ? 0 : pointerScreenY - this.pointerScreenY;
+            var xDelta = this.pointerScreenX === null ? 0 : pointerScreenX - this.pointerScreenX;
+            if (yDelta < 0) {
+                this.everMovedUp = true;
+            }
+            else if (yDelta > 0) {
+                this.everMovedDown = true;
+            }
+            if (xDelta < 0) {
+                this.everMovedLeft = true;
+            }
+            else if (xDelta > 0) {
+                this.everMovedRight = true;
+            }
+            this.pointerScreenX = pointerScreenX;
+            this.pointerScreenY = pointerScreenY;
+            if (!this.isAnimating) {
+                this.isAnimating = true;
+                this.requestAnimation(getTime());
+            }
+        }
+    };
+    AutoScroller.prototype.stop = function () {
+        if (this.isEnabled) {
+            this.isAnimating = false; // will stop animation
+            for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+                var scrollCache = _a[_i];
+                scrollCache.destroy();
+            }
+            this.scrollCaches = null;
+        }
+    };
+    AutoScroller.prototype.requestAnimation = function (now) {
+        this.msSinceRequest = now;
+        requestAnimationFrame(this.animate);
+    };
+    AutoScroller.prototype.handleSide = function (edge, seconds) {
+        var scrollCache = edge.scrollCache;
+        var edgeThreshold = this.edgeThreshold;
+        var invDistance = edgeThreshold - edge.distance;
+        var velocity = // the closer to the edge, the faster we scroll
+         (invDistance * invDistance) / (edgeThreshold * edgeThreshold) * // quadratic
+            this.maxVelocity * seconds;
+        var sign = 1;
+        switch (edge.name) {
+            case 'left':
+                sign = -1;
+            // falls through
+            case 'right':
+                scrollCache.setScrollLeft(scrollCache.getScrollLeft() + velocity * sign);
+                break;
+            case 'top':
+                sign = -1;
+            // falls through
+            case 'bottom':
+                scrollCache.setScrollTop(scrollCache.getScrollTop() + velocity * sign);
+                break;
+        }
+    };
+    // left/top are relative to document topleft
+    AutoScroller.prototype.computeBestEdge = function (left, top) {
+        var edgeThreshold = this.edgeThreshold;
+        var bestSide = null;
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            var rect = scrollCache.clientRect;
+            var leftDist = left - rect.left;
+            var rightDist = rect.right - left;
+            var topDist = top - rect.top;
+            var bottomDist = rect.bottom - top;
+            // completely within the rect?
+            if (leftDist >= 0 && rightDist >= 0 && topDist >= 0 && bottomDist >= 0) {
+                if (topDist <= edgeThreshold && this.everMovedUp && scrollCache.canScrollUp() &&
+                    (!bestSide || bestSide.distance > topDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'top', distance: topDist };
+                }
+                if (bottomDist <= edgeThreshold && this.everMovedDown && scrollCache.canScrollDown() &&
+                    (!bestSide || bestSide.distance > bottomDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'bottom', distance: bottomDist };
+                }
+                if (leftDist <= edgeThreshold && this.everMovedLeft && scrollCache.canScrollLeft() &&
+                    (!bestSide || bestSide.distance > leftDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'left', distance: leftDist };
+                }
+                if (rightDist <= edgeThreshold && this.everMovedRight && scrollCache.canScrollRight() &&
+                    (!bestSide || bestSide.distance > rightDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'right', distance: rightDist };
+                }
+            }
+        }
+        return bestSide;
+    };
+    AutoScroller.prototype.buildCaches = function () {
+        return this.queryScrollEls().map(function (el) {
+            if (el === window) {
+                return new WindowScrollGeomCache(false); // false = don't listen to user-generated scrolls
+            }
+            else {
+                return new ElementScrollGeomCache(el, false); // false = don't listen to user-generated scrolls
+            }
+        });
+    };
+    AutoScroller.prototype.queryScrollEls = function () {
+        var els = [];
+        for (var _i = 0, _a = this.scrollQuery; _i < _a.length; _i++) {
+            var query = _a[_i];
+            if (typeof query === 'object') {
+                els.push(query);
+            }
+            else {
+                els.push.apply(els, Array.prototype.slice.call(document.querySelectorAll(query)));
+            }
+        }
+        return els;
+    };
+    return AutoScroller;
+}());
+
+/*
+Monitors dragging on an element. Has a number of high-level features:
+- minimum distance required before dragging
+- minimum wait time ("delay") before dragging
+- a mirror element that follows the pointer
+*/
+var FeaturefulElementDragging = /** @class */ (function (_super) {
+    __extends(FeaturefulElementDragging, _super);
+    function FeaturefulElementDragging(containerEl) {
+        var _this = _super.call(this, containerEl) || this;
+        // options that can be directly set by caller
+        // the caller can also set the PointerDragging's options as well
+        _this.delay = null;
+        _this.minDistance = 0;
+        _this.touchScrollAllowed = true; // prevents drag from starting and blocks scrolling during drag
+        _this.mirrorNeedsRevert = false;
+        _this.isInteracting = false; // is the user validly moving the pointer? lasts until pointerup
+        _this.isDragging = false; // is it INTENTFULLY dragging? lasts until after revert animation
+        _this.isDelayEnded = false;
+        _this.isDistanceSurpassed = false;
+        _this.delayTimeoutId = null;
+        _this.onPointerDown = function (ev) {
+            if (!_this.isDragging) { // so new drag doesn't happen while revert animation is going
+                _this.isInteracting = true;
+                _this.isDelayEnded = false;
+                _this.isDistanceSurpassed = false;
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["preventSelection"])(document.body);
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["preventContextMenu"])(document.body);
+                // prevent links from being visited if there's an eventual drag.
+                // also prevents selection in older browsers (maybe?).
+                // not necessary for touch, besides, browser would complain about passiveness.
+                if (!ev.isTouch) {
+                    ev.origEvent.preventDefault();
+                }
+                _this.emitter.trigger('pointerdown', ev);
+                if (!_this.pointer.shouldIgnoreMove) {
+                    // actions related to initiating dragstart+dragmove+dragend...
+                    _this.mirror.setIsVisible(false); // reset. caller must set-visible
+                    _this.mirror.start(ev.subjectEl, ev.pageX, ev.pageY); // must happen on first pointer down
+                    _this.startDelay(ev);
+                    if (!_this.minDistance) {
+                        _this.handleDistanceSurpassed(ev);
+                    }
+                }
+            }
+        };
+        _this.onPointerMove = function (ev) {
+            if (_this.isInteracting) { // if false, still waiting for previous drag's revert
+                _this.emitter.trigger('pointermove', ev);
+                if (!_this.isDistanceSurpassed) {
+                    var minDistance = _this.minDistance;
+                    var distanceSq = void 0; // current distance from the origin, squared
+                    var deltaX = ev.deltaX, deltaY = ev.deltaY;
+                    distanceSq = deltaX * deltaX + deltaY * deltaY;
+                    if (distanceSq >= minDistance * minDistance) { // use pythagorean theorem
+                        _this.handleDistanceSurpassed(ev);
+                    }
+                }
+                if (_this.isDragging) {
+                    // a real pointer move? (not one simulated by scrolling)
+                    if (ev.origEvent.type !== 'scroll') {
+                        _this.mirror.handleMove(ev.pageX, ev.pageY);
+                        _this.autoScroller.handleMove(ev.pageX, ev.pageY);
+                    }
+                    _this.emitter.trigger('dragmove', ev);
+                }
+            }
+        };
+        _this.onPointerUp = function (ev) {
+            if (_this.isInteracting) { // if false, still waiting for previous drag's revert
+                _this.isInteracting = false;
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["allowSelection"])(document.body);
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["allowContextMenu"])(document.body);
+                _this.emitter.trigger('pointerup', ev); // can potentially set mirrorNeedsRevert
+                if (_this.isDragging) {
+                    _this.autoScroller.stop();
+                    _this.tryStopDrag(ev); // which will stop the mirror
+                }
+                if (_this.delayTimeoutId) {
+                    clearTimeout(_this.delayTimeoutId);
+                    _this.delayTimeoutId = null;
+                }
+            }
+        };
+        var pointer = _this.pointer = new PointerDragging(containerEl);
+        pointer.emitter.on('pointerdown', _this.onPointerDown);
+        pointer.emitter.on('pointermove', _this.onPointerMove);
+        pointer.emitter.on('pointerup', _this.onPointerUp);
+        _this.mirror = new ElementMirror();
+        _this.autoScroller = new AutoScroller();
+        return _this;
+    }
+    FeaturefulElementDragging.prototype.destroy = function () {
+        this.pointer.destroy();
+    };
+    FeaturefulElementDragging.prototype.startDelay = function (ev) {
+        var _this = this;
+        if (typeof this.delay === 'number') {
+            this.delayTimeoutId = setTimeout(function () {
+                _this.delayTimeoutId = null;
+                _this.handleDelayEnd(ev);
+            }, this.delay); // not assignable to number!
+        }
+        else {
+            this.handleDelayEnd(ev);
+        }
+    };
+    FeaturefulElementDragging.prototype.handleDelayEnd = function (ev) {
+        this.isDelayEnded = true;
+        this.tryStartDrag(ev);
+    };
+    FeaturefulElementDragging.prototype.handleDistanceSurpassed = function (ev) {
+        this.isDistanceSurpassed = true;
+        this.tryStartDrag(ev);
+    };
+    FeaturefulElementDragging.prototype.tryStartDrag = function (ev) {
+        if (this.isDelayEnded && this.isDistanceSurpassed) {
+            if (!this.pointer.wasTouchScroll || this.touchScrollAllowed) {
+                this.isDragging = true;
+                this.mirrorNeedsRevert = false;
+                this.autoScroller.start(ev.pageX, ev.pageY);
+                this.emitter.trigger('dragstart', ev);
+                if (this.touchScrollAllowed === false) {
+                    this.pointer.cancelTouchScroll();
+                }
+            }
+        }
+    };
+    FeaturefulElementDragging.prototype.tryStopDrag = function (ev) {
+        // .stop() is ALWAYS asynchronous, which we NEED because we want all pointerup events
+        // that come from the document to fire beforehand. much more convenient this way.
+        this.mirror.stop(this.mirrorNeedsRevert, this.stopDrag.bind(this, ev) // bound with args
+        );
+    };
+    FeaturefulElementDragging.prototype.stopDrag = function (ev) {
+        this.isDragging = false;
+        this.emitter.trigger('dragend', ev);
+    };
+    // fill in the implementations...
+    FeaturefulElementDragging.prototype.setIgnoreMove = function (bool) {
+        this.pointer.shouldIgnoreMove = bool;
+    };
+    FeaturefulElementDragging.prototype.setMirrorIsVisible = function (bool) {
+        this.mirror.setIsVisible(bool);
+    };
+    FeaturefulElementDragging.prototype.setMirrorNeedsRevert = function (bool) {
+        this.mirrorNeedsRevert = bool;
+    };
+    FeaturefulElementDragging.prototype.setAutoScrollEnabled = function (bool) {
+        this.autoScroller.isEnabled = bool;
+    };
+    return FeaturefulElementDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ElementDragging"]));
+
+/*
+When this class is instantiated, it records the offset of an element (relative to the document topleft),
+and continues to monitor scrolling, updating the cached coordinates if it needs to.
+Does not access the DOM after instantiation, so highly performant.
+
+Also keeps track of all scrolling/overflow:hidden containers that are parents of the given element
+and an determine if a given point is inside the combined clipping rectangle.
+*/
+var OffsetTracker = /** @class */ (function () {
+    function OffsetTracker(el) {
+        this.origRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(el);
+        // will work fine for divs that have overflow:hidden
+        this.scrollCaches = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getClippingParents"])(el).map(function (el) {
+            return new ElementScrollGeomCache(el, true); // listen=true
+        });
+    }
+    OffsetTracker.prototype.destroy = function () {
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            scrollCache.destroy();
+        }
+    };
+    OffsetTracker.prototype.computeLeft = function () {
+        var left = this.origRect.left;
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            left += scrollCache.origScrollLeft - scrollCache.getScrollLeft();
+        }
+        return left;
+    };
+    OffsetTracker.prototype.computeTop = function () {
+        var top = this.origRect.top;
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            top += scrollCache.origScrollTop - scrollCache.getScrollTop();
+        }
+        return top;
+    };
+    OffsetTracker.prototype.isWithinClipping = function (pageX, pageY) {
+        var point = { left: pageX, top: pageY };
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            if (!isIgnoredClipping(scrollCache.getEventTarget()) &&
+                !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["pointInsideRect"])(point, scrollCache.clientRect)) {
+                return false;
+            }
+        }
+        return true;
+    };
+    return OffsetTracker;
+}());
+// certain clipping containers should never constrain interactions, like <html> and <body>
+// https://github.com/fullcalendar/fullcalendar/issues/3615
+function isIgnoredClipping(node) {
+    var tagName = node.tagName;
+    return tagName === 'HTML' || tagName === 'BODY';
+}
+
+/*
+Tracks movement over multiple droppable areas (aka "hits")
+that exist in one or more DateComponents.
+Relies on an existing draggable.
+
+emits:
+- pointerdown
+- dragstart
+- hitchange - fires initially, even if not over a hit
+- pointerup
+- (hitchange - again, to null, if ended over a hit)
+- dragend
+*/
+var HitDragging = /** @class */ (function () {
+    function HitDragging(dragging, droppableStore) {
+        var _this = this;
+        // options that can be set by caller
+        this.useSubjectCenter = false;
+        this.requireInitial = true; // if doesn't start out on a hit, won't emit any events
+        this.initialHit = null;
+        this.movingHit = null;
+        this.finalHit = null; // won't ever be populated if shouldIgnoreMove
+        this.handlePointerDown = function (ev) {
+            var dragging = _this.dragging;
+            _this.initialHit = null;
+            _this.movingHit = null;
+            _this.finalHit = null;
+            _this.prepareHits();
+            _this.processFirstCoord(ev);
+            if (_this.initialHit || !_this.requireInitial) {
+                dragging.setIgnoreMove(false);
+                _this.emitter.trigger('pointerdown', ev); // TODO: fire this before computing processFirstCoord, so listeners can cancel. this gets fired by almost every handler :(
+            }
+            else {
+                dragging.setIgnoreMove(true);
+            }
+        };
+        this.handleDragStart = function (ev) {
+            _this.emitter.trigger('dragstart', ev);
+            _this.handleMove(ev, true); // force = fire even if initially null
+        };
+        this.handleDragMove = function (ev) {
+            _this.emitter.trigger('dragmove', ev);
+            _this.handleMove(ev);
+        };
+        this.handlePointerUp = function (ev) {
+            _this.releaseHits();
+            _this.emitter.trigger('pointerup', ev);
+        };
+        this.handleDragEnd = function (ev) {
+            if (_this.movingHit) {
+                _this.emitter.trigger('hitupdate', null, true, ev);
+            }
+            _this.finalHit = _this.movingHit;
+            _this.movingHit = null;
+            _this.emitter.trigger('dragend', ev);
+        };
+        this.droppableStore = droppableStore;
+        dragging.emitter.on('pointerdown', this.handlePointerDown);
+        dragging.emitter.on('dragstart', this.handleDragStart);
+        dragging.emitter.on('dragmove', this.handleDragMove);
+        dragging.emitter.on('pointerup', this.handlePointerUp);
+        dragging.emitter.on('dragend', this.handleDragEnd);
+        this.dragging = dragging;
+        this.emitter = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EmitterMixin"]();
+    }
+    // sets initialHit
+    // sets coordAdjust
+    HitDragging.prototype.processFirstCoord = function (ev) {
+        var origPoint = { left: ev.pageX, top: ev.pageY };
+        var adjustedPoint = origPoint;
+        var subjectEl = ev.subjectEl;
+        var subjectRect;
+        if (subjectEl !== document) {
+            subjectRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(subjectEl);
+            adjustedPoint = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["constrainPoint"])(adjustedPoint, subjectRect);
+        }
+        var initialHit = this.initialHit = this.queryHitForOffset(adjustedPoint.left, adjustedPoint.top);
+        if (initialHit) {
+            if (this.useSubjectCenter && subjectRect) {
+                var slicedSubjectRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["intersectRects"])(subjectRect, initialHit.rect);
+                if (slicedSubjectRect) {
+                    adjustedPoint = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getRectCenter"])(slicedSubjectRect);
+                }
+            }
+            this.coordAdjust = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffPoints"])(adjustedPoint, origPoint);
+        }
+        else {
+            this.coordAdjust = { left: 0, top: 0 };
+        }
+    };
+    HitDragging.prototype.handleMove = function (ev, forceHandle) {
+        var hit = this.queryHitForOffset(ev.pageX + this.coordAdjust.left, ev.pageY + this.coordAdjust.top);
+        if (forceHandle || !isHitsEqual(this.movingHit, hit)) {
+            this.movingHit = hit;
+            this.emitter.trigger('hitupdate', hit, false, ev);
+        }
+    };
+    HitDragging.prototype.prepareHits = function () {
+        this.offsetTrackers = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["mapHash"])(this.droppableStore, function (interactionSettings) {
+            interactionSettings.component.buildPositionCaches();
+            return new OffsetTracker(interactionSettings.el);
+        });
+    };
+    HitDragging.prototype.releaseHits = function () {
+        var offsetTrackers = this.offsetTrackers;
+        for (var id in offsetTrackers) {
+            offsetTrackers[id].destroy();
+        }
+        this.offsetTrackers = {};
+    };
+    HitDragging.prototype.queryHitForOffset = function (offsetLeft, offsetTop) {
+        var _a = this, droppableStore = _a.droppableStore, offsetTrackers = _a.offsetTrackers;
+        var bestHit = null;
+        for (var id in droppableStore) {
+            var component = droppableStore[id].component;
+            var offsetTracker = offsetTrackers[id];
+            if (offsetTracker.isWithinClipping(offsetLeft, offsetTop)) {
+                var originLeft = offsetTracker.computeLeft();
+                var originTop = offsetTracker.computeTop();
+                var positionLeft = offsetLeft - originLeft;
+                var positionTop = offsetTop - originTop;
+                var origRect = offsetTracker.origRect;
+                var width = origRect.right - origRect.left;
+                var height = origRect.bottom - origRect.top;
+                if (
+                // must be within the element's bounds
+                positionLeft >= 0 && positionLeft < width &&
+                    positionTop >= 0 && positionTop < height) {
+                    var hit = component.queryHit(positionLeft, positionTop, width, height);
+                    if (hit &&
+                        (
+                        // make sure the hit is within activeRange, meaning it's not a deal cell
+                        !component.props.dateProfile || // hack for DayTile
+                            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["rangeContainsRange"])(component.props.dateProfile.activeRange, hit.dateSpan.range)) &&
+                        (!bestHit || hit.layer > bestHit.layer)) {
+                        // TODO: better way to re-orient rectangle
+                        hit.rect.left += originLeft;
+                        hit.rect.right += originLeft;
+                        hit.rect.top += originTop;
+                        hit.rect.bottom += originTop;
+                        bestHit = hit;
+                    }
+                }
+            }
+        }
+        return bestHit;
+    };
+    return HitDragging;
+}());
+function isHitsEqual(hit0, hit1) {
+    if (!hit0 && !hit1) {
+        return true;
+    }
+    if (Boolean(hit0) !== Boolean(hit1)) {
+        return false;
+    }
+    return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["isDateSpansEqual"])(hit0.dateSpan, hit1.dateSpan);
+}
+
+/*
+Monitors when the user clicks on a specific date/time of a component.
+A pointerdown+pointerup on the same "hit" constitutes a click.
+*/
+var DateClicking = /** @class */ (function (_super) {
+    __extends(DateClicking, _super);
+    function DateClicking(settings) {
+        var _this = _super.call(this, settings) || this;
+        _this.handlePointerDown = function (ev) {
+            var dragging = _this.dragging;
+            // do this in pointerdown (not dragend) because DOM might be mutated by the time dragend is fired
+            dragging.setIgnoreMove(!_this.component.isValidDateDownEl(dragging.pointer.downEl));
+        };
+        // won't even fire if moving was ignored
+        _this.handleDragEnd = function (ev) {
+            var component = _this.component;
+            var _a = component.context, calendar = _a.calendar, view = _a.view;
+            var pointer = _this.dragging.pointer;
+            if (!pointer.wasTouchScroll) {
+                var _b = _this.hitDragging, initialHit = _b.initialHit, finalHit = _b.finalHit;
+                if (initialHit && finalHit && isHitsEqual(initialHit, finalHit)) {
+                    calendar.triggerDateClick(initialHit.dateSpan, initialHit.dayEl, view, ev.origEvent);
+                }
+            }
+        };
+        var component = settings.component;
+        // we DO want to watch pointer moves because otherwise finalHit won't get populated
+        _this.dragging = new FeaturefulElementDragging(component.el);
+        _this.dragging.autoScroller.isEnabled = false;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragend', _this.handleDragEnd);
+        return _this;
+    }
+    DateClicking.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return DateClicking;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+
+/*
+Tracks when the user selects a portion of time of a component,
+constituted by a drag over date cells, with a possible delay at the beginning of the drag.
+*/
+var DateSelecting = /** @class */ (function (_super) {
+    __extends(DateSelecting, _super);
+    function DateSelecting(settings) {
+        var _this = _super.call(this, settings) || this;
+        _this.dragSelection = null;
+        _this.handlePointerDown = function (ev) {
+            var _a = _this, component = _a.component, dragging = _a.dragging;
+            var options = component.context.options;
+            var canSelect = options.selectable &&
+                component.isValidDateDownEl(ev.origEvent.target);
+            // don't bother to watch expensive moves if component won't do selection
+            dragging.setIgnoreMove(!canSelect);
+            // if touch, require user to hold down
+            dragging.delay = ev.isTouch ? getComponentTouchDelay(component) : null;
+        };
+        _this.handleDragStart = function (ev) {
+            _this.component.context.calendar.unselect(ev); // unselect previous selections
+        };
+        _this.handleHitUpdate = function (hit, isFinal) {
+            var calendar = _this.component.context.calendar;
+            var dragSelection = null;
+            var isInvalid = false;
+            if (hit) {
+                dragSelection = joinHitsIntoSelection(_this.hitDragging.initialHit, hit, calendar.pluginSystem.hooks.dateSelectionTransformers);
+                if (!dragSelection || !_this.component.isDateSelectionValid(dragSelection)) {
+                    isInvalid = true;
+                    dragSelection = null;
+                }
+            }
+            if (dragSelection) {
+                calendar.dispatch({ type: 'SELECT_DATES', selection: dragSelection });
+            }
+            else if (!isFinal) { // only unselect if moved away while dragging
+                calendar.dispatch({ type: 'UNSELECT_DATES' });
+            }
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                _this.dragSelection = dragSelection; // only clear if moved away from all hits while dragging
+            }
+        };
+        _this.handlePointerUp = function (pev) {
+            if (_this.dragSelection) {
+                // selection is already rendered, so just need to report selection
+                _this.component.context.calendar.triggerDateSelect(_this.dragSelection, pev);
+                _this.dragSelection = null;
+            }
+        };
+        var component = settings.component;
+        var options = component.context.options;
+        var dragging = _this.dragging = new FeaturefulElementDragging(component.el);
+        dragging.touchScrollAllowed = false;
+        dragging.minDistance = options.selectMinDistance || 0;
+        dragging.autoScroller.isEnabled = options.dragScroll;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragstart', _this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
+        hitDragging.emitter.on('pointerup', _this.handlePointerUp);
+        return _this;
+    }
+    DateSelecting.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return DateSelecting;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+function getComponentTouchDelay(component) {
+    var options = component.context.options;
+    var delay = options.selectLongPressDelay;
+    if (delay == null) {
+        delay = options.longPressDelay;
+    }
+    return delay;
+}
+function joinHitsIntoSelection(hit0, hit1, dateSelectionTransformers) {
+    var dateSpan0 = hit0.dateSpan;
+    var dateSpan1 = hit1.dateSpan;
+    var ms = [
+        dateSpan0.range.start,
+        dateSpan0.range.end,
+        dateSpan1.range.start,
+        dateSpan1.range.end
+    ];
+    ms.sort(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["compareNumbers"]);
+    var props = {};
+    for (var _i = 0, dateSelectionTransformers_1 = dateSelectionTransformers; _i < dateSelectionTransformers_1.length; _i++) {
+        var transformer = dateSelectionTransformers_1[_i];
+        var res = transformer(hit0, hit1);
+        if (res === false) {
+            return null;
+        }
+        else if (res) {
+            __assign(props, res);
+        }
+    }
+    props.range = { start: ms[0], end: ms[3] };
+    props.allDay = dateSpan0.allDay;
+    return props;
+}
+
+var EventDragging = /** @class */ (function (_super) {
+    __extends(EventDragging, _super);
+    function EventDragging(settings) {
+        var _this = _super.call(this, settings) || this;
+        // internal state
+        _this.subjectSeg = null; // the seg being selected/dragged
+        _this.isDragging = false;
+        _this.eventRange = null;
+        _this.relevantEvents = null; // the events being dragged
+        _this.receivingCalendar = null;
+        _this.validMutation = null;
+        _this.mutatedRelevantEvents = null;
+        _this.handlePointerDown = function (ev) {
+            var origTarget = ev.origEvent.target;
+            var _a = _this, component = _a.component, dragging = _a.dragging;
+            var mirror = dragging.mirror;
+            var options = component.context.options;
+            var initialCalendar = component.context.calendar;
+            var subjectSeg = _this.subjectSeg = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getElSeg"])(ev.subjectEl);
+            var eventRange = _this.eventRange = subjectSeg.eventRange;
+            var eventInstanceId = eventRange.instance.instanceId;
+            _this.relevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getRelevantEvents"])(initialCalendar.state.eventStore, eventInstanceId);
+            dragging.minDistance = ev.isTouch ? 0 : options.eventDragMinDistance;
+            dragging.delay =
+                // only do a touch delay if touch and this event hasn't been selected yet
+                (ev.isTouch && eventInstanceId !== component.props.eventSelection) ?
+                    getComponentTouchDelay$1(component) :
+                    null;
+            mirror.parentNode = initialCalendar.el;
+            mirror.revertDuration = options.dragRevertDuration;
+            var isValid = component.isValidSegDownEl(origTarget) &&
+                !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(origTarget, '.fc-resizer'); // NOT on a resizer
+            dragging.setIgnoreMove(!isValid);
+            // disable dragging for elements that are resizable (ie, selectable)
+            // but are not draggable
+            _this.isDragging = isValid &&
+                ev.subjectEl.classList.contains('fc-draggable');
+        };
+        _this.handleDragStart = function (ev) {
+            var context = _this.component.context;
+            var initialCalendar = context.calendar;
+            var eventRange = _this.eventRange;
+            var eventInstanceId = eventRange.instance.instanceId;
+            if (ev.isTouch) {
+                // need to select a different event?
+                if (eventInstanceId !== _this.component.props.eventSelection) {
+                    initialCalendar.dispatch({ type: 'SELECT_EVENT', eventInstanceId: eventInstanceId });
+                }
+            }
+            else {
+                // if now using mouse, but was previous touch interaction, clear selected event
+                initialCalendar.dispatch({ type: 'UNSELECT_EVENT' });
+            }
+            if (_this.isDragging) {
+                initialCalendar.unselect(ev); // unselect *date* selection
+                initialCalendar.publiclyTrigger('eventDragStart', [
+                    {
+                        el: _this.subjectSeg.el,
+                        event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](initialCalendar, eventRange.def, eventRange.instance),
+                        jsEvent: ev.origEvent,
+                        view: context.view
+                    }
+                ]);
+            }
+        };
+        _this.handleHitUpdate = function (hit, isFinal) {
+            if (!_this.isDragging) {
+                return;
+            }
+            var relevantEvents = _this.relevantEvents;
+            var initialHit = _this.hitDragging.initialHit;
+            var initialCalendar = _this.component.context.calendar;
+            // states based on new hit
+            var receivingCalendar = null;
+            var mutation = null;
+            var mutatedRelevantEvents = null;
+            var isInvalid = false;
+            var interaction = {
+                affectedEvents: relevantEvents,
+                mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                isEvent: true,
+                origSeg: _this.subjectSeg
+            };
+            if (hit) {
+                var receivingComponent = hit.component;
+                receivingCalendar = receivingComponent.context.calendar;
+                var receivingOptions = receivingComponent.context.options;
+                if (initialCalendar === receivingCalendar ||
+                    receivingOptions.editable && receivingOptions.droppable) {
+                    mutation = computeEventMutation(initialHit, hit, receivingCalendar.pluginSystem.hooks.eventDragMutationMassagers);
+                    if (mutation) {
+                        mutatedRelevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyMutationToEventStore"])(relevantEvents, receivingCalendar.eventUiBases, mutation, receivingCalendar);
+                        interaction.mutatedEvents = mutatedRelevantEvents;
+                        if (!receivingComponent.isInteractionValid(interaction)) {
+                            isInvalid = true;
+                            mutation = null;
+                            mutatedRelevantEvents = null;
+                            interaction.mutatedEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])();
+                        }
+                    }
+                }
+                else {
+                    receivingCalendar = null;
+                }
+            }
+            _this.displayDrag(receivingCalendar, interaction);
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                if (initialCalendar === receivingCalendar && // TODO: write test for this
+                    isHitsEqual(initialHit, hit)) {
+                    mutation = null;
+                }
+                _this.dragging.setMirrorNeedsRevert(!mutation);
+                // render the mirror if no already-rendered mirror
+                // TODO: wish we could somehow wait for dispatch to guarantee render
+                _this.dragging.setMirrorIsVisible(!hit || !document.querySelector('.fc-mirror'));
+                // assign states based on new hit
+                _this.receivingCalendar = receivingCalendar;
+                _this.validMutation = mutation;
+                _this.mutatedRelevantEvents = mutatedRelevantEvents;
+            }
+        };
+        _this.handlePointerUp = function () {
+            if (!_this.isDragging) {
+                _this.cleanup(); // because handleDragEnd won't fire
+            }
+        };
+        _this.handleDragEnd = function (ev) {
+            if (_this.isDragging) {
+                var context = _this.component.context;
+                var initialCalendar_1 = context.calendar;
+                var initialView = context.view;
+                var _a = _this, receivingCalendar = _a.receivingCalendar, validMutation = _a.validMutation;
+                var eventDef = _this.eventRange.def;
+                var eventInstance = _this.eventRange.instance;
+                var eventApi = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](initialCalendar_1, eventDef, eventInstance);
+                var relevantEvents_1 = _this.relevantEvents;
+                var mutatedRelevantEvents = _this.mutatedRelevantEvents;
+                var finalHit = _this.hitDragging.finalHit;
+                _this.clearDrag(); // must happen after revert animation
+                initialCalendar_1.publiclyTrigger('eventDragStop', [
+                    {
+                        el: _this.subjectSeg.el,
+                        event: eventApi,
+                        jsEvent: ev.origEvent,
+                        view: initialView
+                    }
+                ]);
+                if (validMutation) {
+                    // dropped within same calendar
+                    if (receivingCalendar === initialCalendar_1) {
+                        initialCalendar_1.dispatch({
+                            type: 'MERGE_EVENTS',
+                            eventStore: mutatedRelevantEvents
+                        });
+                        var transformed = {};
+                        for (var _i = 0, _b = initialCalendar_1.pluginSystem.hooks.eventDropTransformers; _i < _b.length; _i++) {
+                            var transformer = _b[_i];
+                            __assign(transformed, transformer(validMutation, initialCalendar_1));
+                        }
+                        var eventDropArg = __assign({}, transformed, { el: ev.subjectEl, delta: validMutation.datesDelta, oldEvent: eventApi, event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](// the data AFTER the mutation
+                            initialCalendar_1, mutatedRelevantEvents.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents.instances[eventInstance.instanceId] : null), revert: function () {
+                                initialCalendar_1.dispatch({
+                                    type: 'MERGE_EVENTS',
+                                    eventStore: relevantEvents_1
+                                });
+                            }, jsEvent: ev.origEvent, view: initialView });
+                        initialCalendar_1.publiclyTrigger('eventDrop', [eventDropArg]);
+                        // dropped in different calendar
+                    }
+                    else if (receivingCalendar) {
+                        initialCalendar_1.publiclyTrigger('eventLeave', [
+                            {
+                                draggedEl: ev.subjectEl,
+                                event: eventApi,
+                                view: initialView
+                            }
+                        ]);
+                        initialCalendar_1.dispatch({
+                            type: 'REMOVE_EVENT_INSTANCES',
+                            instances: _this.mutatedRelevantEvents.instances
+                        });
+                        receivingCalendar.dispatch({
+                            type: 'MERGE_EVENTS',
+                            eventStore: _this.mutatedRelevantEvents
+                        });
+                        if (ev.isTouch) {
+                            receivingCalendar.dispatch({
+                                type: 'SELECT_EVENT',
+                                eventInstanceId: eventInstance.instanceId
+                            });
+                        }
+                        var dropArg = __assign({}, receivingCalendar.buildDatePointApi(finalHit.dateSpan), { draggedEl: ev.subjectEl, jsEvent: ev.origEvent, view: finalHit.component // should this be finalHit.component.view? See #4644
+                         });
+                        receivingCalendar.publiclyTrigger('drop', [dropArg]);
+                        receivingCalendar.publiclyTrigger('eventReceive', [
+                            {
+                                draggedEl: ev.subjectEl,
+                                event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](// the data AFTER the mutation
+                                receivingCalendar, mutatedRelevantEvents.defs[eventDef.defId], mutatedRelevantEvents.instances[eventInstance.instanceId]),
+                                view: finalHit.component // should this be finalHit.component.view? See #4644
+                            }
+                        ]);
+                    }
+                }
+                else {
+                    initialCalendar_1.publiclyTrigger('_noEventDrop');
+                }
+            }
+            _this.cleanup();
+        };
+        var component = _this.component;
+        var options = component.context.options;
+        var dragging = _this.dragging = new FeaturefulElementDragging(component.el);
+        dragging.pointer.selector = EventDragging.SELECTOR;
+        dragging.touchScrollAllowed = false;
+        dragging.autoScroller.isEnabled = options.dragScroll;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsStore"]);
+        hitDragging.useSubjectCenter = settings.useEventCenter;
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragstart', _this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
+        hitDragging.emitter.on('pointerup', _this.handlePointerUp);
+        hitDragging.emitter.on('dragend', _this.handleDragEnd);
+        return _this;
+    }
+    EventDragging.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    // render a drag state on the next receivingCalendar
+    EventDragging.prototype.displayDrag = function (nextCalendar, state) {
+        var initialCalendar = this.component.context.calendar;
+        var prevCalendar = this.receivingCalendar;
+        // does the previous calendar need to be cleared?
+        if (prevCalendar && prevCalendar !== nextCalendar) {
+            // does the initial calendar need to be cleared?
+            // if so, don't clear all the way. we still need to to hide the affectedEvents
+            if (prevCalendar === initialCalendar) {
+                prevCalendar.dispatch({
+                    type: 'SET_EVENT_DRAG',
+                    state: {
+                        affectedEvents: state.affectedEvents,
+                        mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                        isEvent: true,
+                        origSeg: state.origSeg
+                    }
+                });
+                // completely clear the old calendar if it wasn't the initial
+            }
+            else {
+                prevCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+            }
+        }
+        if (nextCalendar) {
+            nextCalendar.dispatch({ type: 'SET_EVENT_DRAG', state: state });
+        }
+    };
+    EventDragging.prototype.clearDrag = function () {
+        var initialCalendar = this.component.context.calendar;
+        var receivingCalendar = this.receivingCalendar;
+        if (receivingCalendar) {
+            receivingCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+        // the initial calendar might have an dummy drag state from displayDrag
+        if (initialCalendar !== receivingCalendar) {
+            initialCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+    };
+    EventDragging.prototype.cleanup = function () {
+        this.subjectSeg = null;
+        this.isDragging = false;
+        this.eventRange = null;
+        this.relevantEvents = null;
+        this.receivingCalendar = null;
+        this.validMutation = null;
+        this.mutatedRelevantEvents = null;
+    };
+    EventDragging.SELECTOR = '.fc-draggable, .fc-resizable'; // TODO: test this in IE11
+    return EventDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+function computeEventMutation(hit0, hit1, massagers) {
+    var dateSpan0 = hit0.dateSpan;
+    var dateSpan1 = hit1.dateSpan;
+    var date0 = dateSpan0.range.start;
+    var date1 = dateSpan1.range.start;
+    var standardProps = {};
+    if (dateSpan0.allDay !== dateSpan1.allDay) {
+        standardProps.allDay = dateSpan1.allDay;
+        standardProps.hasEnd = hit1.component.context.options.allDayMaintainDuration;
+        if (dateSpan1.allDay) {
+            // means date1 is already start-of-day,
+            // but date0 needs to be converted
+            date0 = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["startOfDay"])(date0);
+        }
+    }
+    var delta = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffDates"])(date0, date1, hit0.component.context.dateEnv, hit0.component === hit1.component ?
+        hit0.component.largeUnit :
+        null);
+    if (delta.milliseconds) { // has hours/minutes/seconds
+        standardProps.allDay = false;
+    }
+    var mutation = {
+        datesDelta: delta,
+        standardProps: standardProps
+    };
+    for (var _i = 0, massagers_1 = massagers; _i < massagers_1.length; _i++) {
+        var massager = massagers_1[_i];
+        massager(mutation, hit0, hit1);
+    }
+    return mutation;
+}
+function getComponentTouchDelay$1(component) {
+    var options = component.context.options;
+    var delay = options.eventLongPressDelay;
+    if (delay == null) {
+        delay = options.longPressDelay;
+    }
+    return delay;
+}
+
+var EventDragging$1 = /** @class */ (function (_super) {
+    __extends(EventDragging, _super);
+    function EventDragging(settings) {
+        var _this = _super.call(this, settings) || this;
+        // internal state
+        _this.draggingSeg = null; // TODO: rename to resizingSeg? subjectSeg?
+        _this.eventRange = null;
+        _this.relevantEvents = null;
+        _this.validMutation = null;
+        _this.mutatedRelevantEvents = null;
+        _this.handlePointerDown = function (ev) {
+            var component = _this.component;
+            var seg = _this.querySeg(ev);
+            var eventRange = _this.eventRange = seg.eventRange;
+            _this.dragging.minDistance = component.context.options.eventDragMinDistance;
+            // if touch, need to be working with a selected event
+            _this.dragging.setIgnoreMove(!_this.component.isValidSegDownEl(ev.origEvent.target) ||
+                (ev.isTouch && _this.component.props.eventSelection !== eventRange.instance.instanceId));
+        };
+        _this.handleDragStart = function (ev) {
+            var _a = _this.component.context, calendar = _a.calendar, view = _a.view;
+            var eventRange = _this.eventRange;
+            _this.relevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getRelevantEvents"])(calendar.state.eventStore, _this.eventRange.instance.instanceId);
+            _this.draggingSeg = _this.querySeg(ev);
+            calendar.unselect();
+            calendar.publiclyTrigger('eventResizeStart', [
+                {
+                    el: _this.draggingSeg.el,
+                    event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](calendar, eventRange.def, eventRange.instance),
+                    jsEvent: ev.origEvent,
+                    view: view
+                }
+            ]);
+        };
+        _this.handleHitUpdate = function (hit, isFinal, ev) {
+            var calendar = _this.component.context.calendar;
+            var relevantEvents = _this.relevantEvents;
+            var initialHit = _this.hitDragging.initialHit;
+            var eventInstance = _this.eventRange.instance;
+            var mutation = null;
+            var mutatedRelevantEvents = null;
+            var isInvalid = false;
+            var interaction = {
+                affectedEvents: relevantEvents,
+                mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                isEvent: true,
+                origSeg: _this.draggingSeg
+            };
+            if (hit) {
+                mutation = computeMutation(initialHit, hit, ev.subjectEl.classList.contains('fc-start-resizer'), eventInstance.range, calendar.pluginSystem.hooks.eventResizeJoinTransforms);
+            }
+            if (mutation) {
+                mutatedRelevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyMutationToEventStore"])(relevantEvents, calendar.eventUiBases, mutation, calendar);
+                interaction.mutatedEvents = mutatedRelevantEvents;
+                if (!_this.component.isInteractionValid(interaction)) {
+                    isInvalid = true;
+                    mutation = null;
+                    mutatedRelevantEvents = null;
+                    interaction.mutatedEvents = null;
+                }
+            }
+            if (mutatedRelevantEvents) {
+                calendar.dispatch({
+                    type: 'SET_EVENT_RESIZE',
+                    state: interaction
+                });
+            }
+            else {
+                calendar.dispatch({ type: 'UNSET_EVENT_RESIZE' });
+            }
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                if (mutation && isHitsEqual(initialHit, hit)) {
+                    mutation = null;
+                }
+                _this.validMutation = mutation;
+                _this.mutatedRelevantEvents = mutatedRelevantEvents;
+            }
+        };
+        _this.handleDragEnd = function (ev) {
+            var _a = _this.component.context, calendar = _a.calendar, view = _a.view;
+            var eventDef = _this.eventRange.def;
+            var eventInstance = _this.eventRange.instance;
+            var eventApi = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](calendar, eventDef, eventInstance);
+            var relevantEvents = _this.relevantEvents;
+            var mutatedRelevantEvents = _this.mutatedRelevantEvents;
+            calendar.publiclyTrigger('eventResizeStop', [
+                {
+                    el: _this.draggingSeg.el,
+                    event: eventApi,
+                    jsEvent: ev.origEvent,
+                    view: view
+                }
+            ]);
+            if (_this.validMutation) {
+                calendar.dispatch({
+                    type: 'MERGE_EVENTS',
+                    eventStore: mutatedRelevantEvents
+                });
+                calendar.publiclyTrigger('eventResize', [
+                    {
+                        el: _this.draggingSeg.el,
+                        startDelta: _this.validMutation.startDelta || Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(0),
+                        endDelta: _this.validMutation.endDelta || Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(0),
+                        prevEvent: eventApi,
+                        event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](// the data AFTER the mutation
+                        calendar, mutatedRelevantEvents.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents.instances[eventInstance.instanceId] : null),
+                        revert: function () {
+                            calendar.dispatch({
+                                type: 'MERGE_EVENTS',
+                                eventStore: relevantEvents
+                            });
+                        },
+                        jsEvent: ev.origEvent,
+                        view: view
+                    }
+                ]);
+            }
+            else {
+                calendar.publiclyTrigger('_noEventResize');
+            }
+            // reset all internal state
+            _this.draggingSeg = null;
+            _this.relevantEvents = null;
+            _this.validMutation = null;
+            // okay to keep eventInstance around. useful to set it in handlePointerDown
+        };
+        var component = settings.component;
+        var dragging = _this.dragging = new FeaturefulElementDragging(component.el);
+        dragging.pointer.selector = '.fc-resizer';
+        dragging.touchScrollAllowed = false;
+        dragging.autoScroller.isEnabled = component.context.options.dragScroll;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragstart', _this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
+        hitDragging.emitter.on('dragend', _this.handleDragEnd);
+        return _this;
+    }
+    EventDragging.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    EventDragging.prototype.querySeg = function (ev) {
+        return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getElSeg"])(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(ev.subjectEl, this.component.fgSegSelector));
+    };
+    return EventDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+function computeMutation(hit0, hit1, isFromStart, instanceRange, transforms) {
+    var dateEnv = hit0.component.context.dateEnv;
+    var date0 = hit0.dateSpan.range.start;
+    var date1 = hit1.dateSpan.range.start;
+    var delta = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffDates"])(date0, date1, dateEnv, hit0.component.largeUnit);
+    var props = {};
+    for (var _i = 0, transforms_1 = transforms; _i < transforms_1.length; _i++) {
+        var transform = transforms_1[_i];
+        var res = transform(hit0, hit1);
+        if (res === false) {
+            return null;
+        }
+        else if (res) {
+            __assign(props, res);
+        }
+    }
+    if (isFromStart) {
+        if (dateEnv.add(instanceRange.start, delta) < instanceRange.end) {
+            props.startDelta = delta;
+            return props;
+        }
+    }
+    else {
+        if (dateEnv.add(instanceRange.end, delta) > instanceRange.start) {
+            props.endDelta = delta;
+            return props;
+        }
+    }
+    return null;
+}
+
+var UnselectAuto = /** @class */ (function () {
+    function UnselectAuto(calendar) {
+        var _this = this;
+        this.isRecentPointerDateSelect = false; // wish we could use a selector to detect date selection, but uses hit system
+        this.onSelect = function (selectInfo) {
+            if (selectInfo.jsEvent) {
+                _this.isRecentPointerDateSelect = true;
+            }
+        };
+        this.onDocumentPointerUp = function (pev) {
+            var _a = _this, calendar = _a.calendar, documentPointer = _a.documentPointer;
+            var state = calendar.state;
+            // touch-scrolling should never unfocus any type of selection
+            if (!documentPointer.wasTouchScroll) {
+                if (state.dateSelection && // an existing date selection?
+                    !_this.isRecentPointerDateSelect // a new pointer-initiated date selection since last onDocumentPointerUp?
+                ) {
+                    var unselectAuto = calendar.viewOpt('unselectAuto');
+                    var unselectCancel = calendar.viewOpt('unselectCancel');
+                    if (unselectAuto && (!unselectAuto || !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(documentPointer.downEl, unselectCancel))) {
+                        calendar.unselect(pev);
+                    }
+                }
+                if (state.eventSelection && // an existing event selected?
+                    !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(documentPointer.downEl, EventDragging.SELECTOR) // interaction DIDN'T start on an event
+                ) {
+                    calendar.dispatch({ type: 'UNSELECT_EVENT' });
+                }
+            }
+            _this.isRecentPointerDateSelect = false;
+        };
+        this.calendar = calendar;
+        var documentPointer = this.documentPointer = new PointerDragging(document);
+        documentPointer.shouldIgnoreMove = true;
+        documentPointer.shouldWatchScroll = false;
+        documentPointer.emitter.on('pointerup', this.onDocumentPointerUp);
+        /*
+        TODO: better way to know about whether there was a selection with the pointer
+        */
+        calendar.on('select', this.onSelect);
+    }
+    UnselectAuto.prototype.destroy = function () {
+        this.calendar.off('select', this.onSelect);
+        this.documentPointer.destroy();
+    };
+    return UnselectAuto;
+}());
+
+/*
+Given an already instantiated draggable object for one-or-more elements,
+Interprets any dragging as an attempt to drag an events that lives outside
+of a calendar onto a calendar.
+*/
+var ExternalElementDragging = /** @class */ (function () {
+    function ExternalElementDragging(dragging, suppliedDragMeta) {
+        var _this = this;
+        this.receivingCalendar = null;
+        this.droppableEvent = null; // will exist for all drags, even if create:false
+        this.suppliedDragMeta = null;
+        this.dragMeta = null;
+        this.handleDragStart = function (ev) {
+            _this.dragMeta = _this.buildDragMeta(ev.subjectEl);
+        };
+        this.handleHitUpdate = function (hit, isFinal, ev) {
+            var dragging = _this.hitDragging.dragging;
+            var receivingCalendar = null;
+            var droppableEvent = null;
+            var isInvalid = false;
+            var interaction = {
+                affectedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                isEvent: _this.dragMeta.create,
+                origSeg: null
+            };
+            if (hit) {
+                receivingCalendar = hit.component.context.calendar;
+                if (_this.canDropElOnCalendar(ev.subjectEl, receivingCalendar)) {
+                    droppableEvent = computeEventForDateSpan(hit.dateSpan, _this.dragMeta, receivingCalendar);
+                    interaction.mutatedEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["eventTupleToStore"])(droppableEvent);
+                    isInvalid = !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["isInteractionValid"])(interaction, receivingCalendar);
+                    if (isInvalid) {
+                        interaction.mutatedEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])();
+                        droppableEvent = null;
+                    }
+                }
+            }
+            _this.displayDrag(receivingCalendar, interaction);
+            // show mirror if no already-rendered mirror element OR if we are shutting down the mirror (?)
+            // TODO: wish we could somehow wait for dispatch to guarantee render
+            dragging.setMirrorIsVisible(isFinal || !droppableEvent || !document.querySelector('.fc-mirror'));
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                dragging.setMirrorNeedsRevert(!droppableEvent);
+                _this.receivingCalendar = receivingCalendar;
+                _this.droppableEvent = droppableEvent;
+            }
+        };
+        this.handleDragEnd = function (pev) {
+            var _a = _this, receivingCalendar = _a.receivingCalendar, droppableEvent = _a.droppableEvent;
+            _this.clearDrag();
+            if (receivingCalendar && droppableEvent) {
+                var finalHit = _this.hitDragging.finalHit;
+                var finalView = finalHit.component.context.view;
+                var dragMeta = _this.dragMeta;
+                var arg = __assign({}, receivingCalendar.buildDatePointApi(finalHit.dateSpan), { draggedEl: pev.subjectEl, jsEvent: pev.origEvent, view: finalView });
+                receivingCalendar.publiclyTrigger('drop', [arg]);
+                if (dragMeta.create) {
+                    receivingCalendar.dispatch({
+                        type: 'MERGE_EVENTS',
+                        eventStore: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["eventTupleToStore"])(droppableEvent)
+                    });
+                    if (pev.isTouch) {
+                        receivingCalendar.dispatch({
+                            type: 'SELECT_EVENT',
+                            eventInstanceId: droppableEvent.instance.instanceId
+                        });
+                    }
+                    // signal that an external event landed
+                    receivingCalendar.publiclyTrigger('eventReceive', [
+                        {
+                            draggedEl: pev.subjectEl,
+                            event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](receivingCalendar, droppableEvent.def, droppableEvent.instance),
+                            view: finalView
+                        }
+                    ]);
+                }
+            }
+            _this.receivingCalendar = null;
+            _this.droppableEvent = null;
+        };
+        var hitDragging = this.hitDragging = new HitDragging(dragging, _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsStore"]);
+        hitDragging.requireInitial = false; // will start outside of a component
+        hitDragging.emitter.on('dragstart', this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', this.handleHitUpdate);
+        hitDragging.emitter.on('dragend', this.handleDragEnd);
+        this.suppliedDragMeta = suppliedDragMeta;
+    }
+    ExternalElementDragging.prototype.buildDragMeta = function (subjectEl) {
+        if (typeof this.suppliedDragMeta === 'object') {
+            return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(this.suppliedDragMeta);
+        }
+        else if (typeof this.suppliedDragMeta === 'function') {
+            return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(this.suppliedDragMeta(subjectEl));
+        }
+        else {
+            return getDragMetaFromEl(subjectEl);
+        }
+    };
+    ExternalElementDragging.prototype.displayDrag = function (nextCalendar, state) {
+        var prevCalendar = this.receivingCalendar;
+        if (prevCalendar && prevCalendar !== nextCalendar) {
+            prevCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+        if (nextCalendar) {
+            nextCalendar.dispatch({ type: 'SET_EVENT_DRAG', state: state });
+        }
+    };
+    ExternalElementDragging.prototype.clearDrag = function () {
+        if (this.receivingCalendar) {
+            this.receivingCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+    };
+    ExternalElementDragging.prototype.canDropElOnCalendar = function (el, receivingCalendar) {
+        var dropAccept = receivingCalendar.opt('dropAccept');
+        if (typeof dropAccept === 'function') {
+            return dropAccept(el);
+        }
+        else if (typeof dropAccept === 'string' && dropAccept) {
+            return Boolean(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementMatches"])(el, dropAccept));
+        }
+        return true;
+    };
+    return ExternalElementDragging;
+}());
+// Utils for computing event store from the DragMeta
+// ----------------------------------------------------------------------------------------------------
+function computeEventForDateSpan(dateSpan, dragMeta, calendar) {
+    var defProps = __assign({}, dragMeta.leftoverProps);
+    for (var _i = 0, _a = calendar.pluginSystem.hooks.externalDefTransforms; _i < _a.length; _i++) {
+        var transform = _a[_i];
+        __assign(defProps, transform(dateSpan, dragMeta));
+    }
+    var def = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseEventDef"])(defProps, dragMeta.sourceId, dateSpan.allDay, calendar.opt('forceEventDuration') || Boolean(dragMeta.duration), // hasEnd
+    calendar);
+    var start = dateSpan.range.start;
+    // only rely on time info if drop zone is all-day,
+    // otherwise, we already know the time
+    if (dateSpan.allDay && dragMeta.startTime) {
+        start = calendar.dateEnv.add(start, dragMeta.startTime);
+    }
+    var end = dragMeta.duration ?
+        calendar.dateEnv.add(start, dragMeta.duration) :
+        calendar.getDefaultEventEnd(dateSpan.allDay, start);
+    var instance = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEventInstance"])(def.defId, { start: start, end: end });
+    return { def: def, instance: instance };
+}
+// Utils for extracting data from element
+// ----------------------------------------------------------------------------------------------------
+function getDragMetaFromEl(el) {
+    var str = getEmbeddedElData(el, 'event');
+    var obj = str ?
+        JSON.parse(str) :
+        { create: false }; // if no embedded data, assume no event creation
+    return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(obj);
+}
+_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].dataAttrPrefix = '';
+function getEmbeddedElData(el, name) {
+    var prefix = _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].dataAttrPrefix;
+    var prefixedName = (prefix ? prefix + '-' : '') + name;
+    return el.getAttribute('data-' + prefixedName) || '';
+}
+
+/*
+Makes an element (that is *external* to any calendar) draggable.
+Can pass in data that determines how an event will be created when dropped onto a calendar.
+Leverages FullCalendar's internal drag-n-drop functionality WITHOUT a third-party drag system.
+*/
+var ExternalDraggable = /** @class */ (function () {
+    function ExternalDraggable(el, settings) {
+        var _this = this;
+        if (settings === void 0) { settings = {}; }
+        this.handlePointerDown = function (ev) {
+            var dragging = _this.dragging;
+            var _a = _this.settings, minDistance = _a.minDistance, longPressDelay = _a.longPressDelay;
+            dragging.minDistance =
+                minDistance != null ?
+                    minDistance :
+                    (ev.isTouch ? 0 : _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["globalDefaults"].eventDragMinDistance);
+            dragging.delay =
+                ev.isTouch ? // TODO: eventually read eventLongPressDelay instead vvv
+                    (longPressDelay != null ? longPressDelay : _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["globalDefaults"].longPressDelay) :
+                    0;
+        };
+        this.handleDragStart = function (ev) {
+            if (ev.isTouch &&
+                _this.dragging.delay &&
+                ev.subjectEl.classList.contains('fc-event')) {
+                _this.dragging.mirror.getMirrorEl().classList.add('fc-selected');
+            }
+        };
+        this.settings = settings;
+        var dragging = this.dragging = new FeaturefulElementDragging(el);
+        dragging.touchScrollAllowed = false;
+        if (settings.itemSelector != null) {
+            dragging.pointer.selector = settings.itemSelector;
+        }
+        if (settings.appendTo != null) {
+            dragging.mirror.parentNode = settings.appendTo; // TODO: write tests
+        }
+        dragging.emitter.on('pointerdown', this.handlePointerDown);
+        dragging.emitter.on('dragstart', this.handleDragStart);
+        new ExternalElementDragging(dragging, settings.eventData);
+    }
+    ExternalDraggable.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return ExternalDraggable;
+}());
+
+/*
+Detects when a *THIRD-PARTY* drag-n-drop system interacts with elements.
+The third-party system is responsible for drawing the visuals effects of the drag.
+This class simply monitors for pointer movements and fires events.
+It also has the ability to hide the moving element (the "mirror") during the drag.
+*/
+var InferredElementDragging = /** @class */ (function (_super) {
+    __extends(InferredElementDragging, _super);
+    function InferredElementDragging(containerEl) {
+        var _this = _super.call(this, containerEl) || this;
+        _this.shouldIgnoreMove = false;
+        _this.mirrorSelector = '';
+        _this.currentMirrorEl = null;
+        _this.handlePointerDown = function (ev) {
+            _this.emitter.trigger('pointerdown', ev);
+            if (!_this.shouldIgnoreMove) {
+                // fire dragstart right away. does not support delay or min-distance
+                _this.emitter.trigger('dragstart', ev);
+            }
+        };
+        _this.handlePointerMove = function (ev) {
+            if (!_this.shouldIgnoreMove) {
+                _this.emitter.trigger('dragmove', ev);
+            }
+        };
+        _this.handlePointerUp = function (ev) {
+            _this.emitter.trigger('pointerup', ev);
+            if (!_this.shouldIgnoreMove) {
+                // fire dragend right away. does not support a revert animation
+                _this.emitter.trigger('dragend', ev);
+            }
+        };
+        var pointer = _this.pointer = new PointerDragging(containerEl);
+        pointer.emitter.on('pointerdown', _this.handlePointerDown);
+        pointer.emitter.on('pointermove', _this.handlePointerMove);
+        pointer.emitter.on('pointerup', _this.handlePointerUp);
+        return _this;
+    }
+    InferredElementDragging.prototype.destroy = function () {
+        this.pointer.destroy();
+    };
+    InferredElementDragging.prototype.setIgnoreMove = function (bool) {
+        this.shouldIgnoreMove = bool;
+    };
+    InferredElementDragging.prototype.setMirrorIsVisible = function (bool) {
+        if (bool) {
+            // restore a previously hidden element.
+            // use the reference in case the selector class has already been removed.
+            if (this.currentMirrorEl) {
+                this.currentMirrorEl.style.visibility = '';
+                this.currentMirrorEl = null;
+            }
+        }
+        else {
+            var mirrorEl = this.mirrorSelector ?
+                document.querySelector(this.mirrorSelector) :
+                null;
+            if (mirrorEl) {
+                this.currentMirrorEl = mirrorEl;
+                mirrorEl.style.visibility = 'hidden';
+            }
+        }
+    };
+    return InferredElementDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ElementDragging"]));
+
+/*
+Bridges third-party drag-n-drop systems with FullCalendar.
+Must be instantiated and destroyed by caller.
+*/
+var ThirdPartyDraggable = /** @class */ (function () {
+    function ThirdPartyDraggable(containerOrSettings, settings) {
+        var containerEl = document;
+        if (
+        // wish we could just test instanceof EventTarget, but doesn't work in IE11
+        containerOrSettings === document ||
+            containerOrSettings instanceof Element) {
+            containerEl = containerOrSettings;
+            settings = settings || {};
+        }
+        else {
+            settings = (containerOrSettings || {});
+        }
+        var dragging = this.dragging = new InferredElementDragging(containerEl);
+        if (typeof settings.itemSelector === 'string') {
+            dragging.pointer.selector = settings.itemSelector;
+        }
+        else if (containerEl === document) {
+            dragging.pointer.selector = '[data-event]';
+        }
+        if (typeof settings.mirrorSelector === 'string') {
+            dragging.mirrorSelector = settings.mirrorSelector;
+        }
+        new ExternalElementDragging(dragging, settings.eventData);
+    }
+    ThirdPartyDraggable.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return ThirdPartyDraggable;
+}());
+
+var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"])({
+    componentInteractions: [DateClicking, DateSelecting, EventDragging, EventDragging$1],
+    calendarInteractions: [UnselectAuto],
+    elementDraggingImpl: FeaturefulElementDragging
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (main);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/vue/main.esm.js":
+/*!****************************************************!*\
+  !*** ./node_modules/@fullcalendar/vue/main.esm.js ***!
+  \****************************************************/
+/*! exports provided: default, install */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
+/* harmony import */ var fast_deep_equal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fast-deep-equal */ "./node_modules/@fullcalendar/vue/node_modules/fast-deep-equal/index.js");
+/* harmony import */ var fast_deep_equal__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fast_deep_equal__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
+/*
+FullCalendar Vue Component v4.4.2
+Docs: https://fullcalendar.io/docs/vue
+License: MIT
+*/
+
+
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
+function _createForOfIteratorHelper(o, allowArrayLike) {
+  var it;
+
+  if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {
+    if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
+      if (it) o = it;
+      var i = 0;
+
+      var F = function () {};
+
+      return {
+        s: F,
+        n: function () {
+          if (i >= o.length) return {
+            done: true
+          };
+          return {
+            done: false,
+            value: o[i++]
+          };
+        },
+        e: function (e) {
+          throw e;
+        },
+        f: F
+      };
+    }
+
+    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+
+  var normalCompletion = true,
+      didErr = false,
+      err;
+  return {
+    s: function () {
+      it = o[Symbol.iterator]();
+    },
+    n: function () {
+      var step = it.next();
+      normalCompletion = step.done;
+      return step;
+    },
+    e: function (e) {
+      didErr = true;
+      err = e;
+    },
+    f: function () {
+      try {
+        if (!normalCompletion && it.return != null) it.return();
+      } finally {
+        if (didErr) throw err;
+      }
+    }
+  };
+}
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+/*
+Really simple clone utility. Only copies plain arrays, objects, and Dates. Transfers everything else as-is.
+Wanted to use a third-party lib, but none did exactly this.
+*/
+
+function deepCopy(input) {
+  if (Array.isArray(input)) {
+    return input.map(deepCopy);
+  } else if (input instanceof Date) {
+    return new Date(input.valueOf());
+  } else if (_typeof(input) === 'object' && input) {
+    // non-null object
+    return mapHash(input, deepCopy);
+  } else {
+    // everything else (null, function, etc)
+    return input;
+  }
+}
+function mapHash(input, func) {
+  var output = {};
+
+  for (var key in input) {
+    if (hasOwnProperty.call(input, key)) {
+      output[key] = func(input[key], key);
+    }
+  }
+
+  return output;
+}
+
+/*
+the docs point to this file as an index of options.
+when this files is moved, update the docs.
+*/
+
+/*
+TODO: figure out booleans so attributes can be defined like:
+<FullCalendar editable />
+*/
+var PROP_DEFS = {
+  header: {},
+  footer: {},
+  customButtons: {},
+  buttonIcons: {},
+  themeSystem: {},
+  bootstrapFontAwesome: {},
+  firstDay: {},
+  dir: {},
+  weekends: {},
+  hiddenDays: {},
+  fixedWeekCount: {},
+  weekNumbers: {},
+  weekNumbersWithinDays: {},
+  weekNumberCalculation: {},
+  businessHours: {},
+  showNonCurrentDates: {},
+  height: {},
+  contentHeight: {},
+  aspectRatio: {},
+  handleWindowResize: {},
+  windowResizeDelay: {},
+  eventLimit: {},
+  eventLimitClick: {},
+  timeZone: {},
+  now: {},
+  defaultView: {},
+  allDaySlot: {},
+  allDayText: {},
+  slotDuration: {},
+  slotLabelFormat: {},
+  slotLabelInterval: {},
+  snapDuration: {},
+  scrollTime: {},
+  minTime: {},
+  maxTime: {},
+  slotEventOverlap: {},
+  listDayFormat: {},
+  listDayAltFormat: {},
+  noEventsMessage: {},
+  defaultDate: {},
+  nowIndicator: {},
+  visibleRange: {},
+  validRange: {},
+  dateIncrement: {},
+  dateAlignment: {},
+  duration: {},
+  dayCount: {},
+  locales: {},
+  locale: {},
+  eventTimeFormat: {},
+  columnHeader: {},
+  columnHeaderFormat: {},
+  columnHeaderText: {},
+  columnHeaderHtml: {},
+  titleFormat: {},
+  weekLabel: {},
+  displayEventTime: {},
+  displayEventEnd: {},
+  eventLimitText: {},
+  dayPopoverFormat: {},
+  navLinks: {},
+  navLinkDayClick: {},
+  navLinkWeekClick: {},
+  selectable: {},
+  selectMirror: {},
+  unselectAuto: {},
+  unselectCancel: {},
+  defaultAllDayEventDuration: {},
+  defaultTimedEventDuration: {},
+  cmdFormatter: {},
+  defaultRangeSeparator: {},
+  selectConstraint: {},
+  selectOverlap: {},
+  selectAllow: {},
+  editable: {},
+  eventStartEditable: {},
+  eventDurationEditable: {},
+  eventConstraint: {},
+  eventOverlap: {},
+  eventAllow: {},
+  eventClassName: {},
+  eventClassNames: {},
+  eventBackgroundColor: {},
+  eventBorderColor: {},
+  eventTextColor: {},
+  eventColor: {},
+  events: {},
+  eventSources: {},
+  allDayDefault: {},
+  startParam: {},
+  endParam: {},
+  lazyFetching: {},
+  nextDayThreshold: {},
+  eventOrder: {},
+  rerenderDelay: {},
+  dragRevertDuration: {},
+  dragScroll: {},
+  longPressDelay: {},
+  eventLongPressDelay: {},
+  droppable: {},
+  dropAccept: {},
+  eventDataTransform: {},
+  allDayMaintainDuration: {},
+  eventResizableFromStart: {},
+  timeGridEventMinHeight: {},
+  allDayHtml: {},
+  eventDragMinDistance: {},
+  eventResourceEditable: {},
+  eventSourceFailure: {},
+  eventSourceSuccess: {},
+  forceEventDuration: {},
+  progressiveEventRendering: {},
+  selectLongPressDelay: {},
+  selectMinDistance: {},
+  timeZoneParam: {},
+  titleRangeSeparator: {},
+  // compound OptionsInput...
+  buttonText: {},
+  views: {},
+  plugins: {},
+  // scheduler...
+  schedulerLicenseKey: {},
+  resources: {},
+  resourceLabelText: {},
+  resourceOrder: {},
+  filterResourcesWithEvents: {},
+  resourceText: {},
+  resourceGroupField: {},
+  resourceGroupText: {},
+  resourceAreaWidth: {},
+  resourceColumns: {},
+  resourcesInitiallyExpanded: {},
+  slotWidth: {},
+  datesAboveResources: {},
+  googleCalendarApiKey: {},
+  refetchResourcesOnNavigate: {},
+  // used to be emissions but are now props...
+  datesRender: {},
+  datesDestroy: {},
+  dayRender: {},
+  eventRender: {},
+  eventDestroy: {},
+  viewSkeletonRender: {},
+  viewSkeletonDestroy: {},
+  resourceRender: {}
+};
+var PROP_IS_DEEP = {
+  header: true,
+  footer: true,
+  events: true,
+  eventSources: true,
+  resources: true
+};
+var EMISSION_NAMES = ['windowResize', 'dateClick', 'eventClick', 'eventMouseEnter', 'eventMouseLeave', 'select', 'unselect', 'loading', 'eventPositioned', '_eventsPositioned', 'eventDragStart', 'eventDragStop', 'eventDrop', 'eventResizeStart', 'eventResizeStop', 'eventResize', 'drop', 'eventReceive', 'eventLeave', '_destroyed', // should now be props... (TODO: eventually remove)
+'datesRender', 'datesDestroy', 'dayRender', 'eventRender', 'eventDestroy', 'viewSkeletonRender', 'viewSkeletonDestroy', 'resourceRender']; // identify deprecated emissions (TODO: eventually remove)
+
+var EMISSION_USE_PROP = {
+  datesRender: true,
+  datesDestroy: true,
+  dayRender: true,
+  eventRender: true,
+  eventDestroy: true,
+  viewSkeletonRender: true,
+  viewSkeletonDestroy: true,
+  resourceRender: true
+};
+
+/*
+VOCAB:
+"props" are the values passed in from the parent (they are NOT listeners/emissions)
+"emissions" are another way to say "events that will fire"
+"options" are the options that the FullCalendar API accepts
+
+NOTE: "deep" props are complex objects that we want to watch for internal changes.
+Vue allows a reference to be internally mutated. Each time we detect a mutation,
+we use deepCopy to freeze the state. This has the added benefit of stripping the
+getter/setter methods that Vue embeds.
+*/
+
+var FullCalendarComponent = {
+  props: PROP_DEFS,
+  // INTERNALS
+  // this.$options.calendar
+  // this.$options.deepCopies - all current deep options
+  // this.$options.dirtyOptions - null/undefined means nothing dirty
+  data: function data() {
+    return {
+      renderId: 0,
+      deepCopies: {}
+    };
+  },
+  render: function render(createElement) {
+    return createElement('div', {
+      // when renderId is changed, Vue will trigger a real-DOM async rerender, calling beforeUpdate/updated
+      attrs: {
+        'data-fc-render-id': this.renderId
+      }
+    });
+  },
+  mounted: function mounted() {
+    warnDeprecatedListeners(this.$listeners);
+    this.$options.calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Calendar"](this.$el, this.buildCalendarOptions());
+    this.$options.calendar.render();
+  },
+  beforeUpdate: function beforeUpdate() {
+    this.renderDirty();
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.$options.calendar.destroy();
+  },
+  watch: mapHash(PROP_DEFS, buildPropWatcher),
+  methods: {
+    buildCalendarOptions: function buildCalendarOptions() {
+      var _this = this;
+
+      var options = {};
+
+      var _iterator = _createForOfIteratorHelper(EMISSION_NAMES),
+          _step;
+
+      try {
+        var _loop = function _loop() {
+          var emissionName = _step.value;
+
+          options[emissionName] = function () {
+            for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+
+            _this.$emit.apply(_this, [emissionName].concat(args));
+          };
+        };
+
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          _loop();
+        } // do after emissions. these props will override emissions with same name
+
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      for (var propName in PROP_DEFS) {
+        var propVal = this[propName]; // protect against FullCalendar choking on undefined options
+
+        if (propVal !== undefined) {
+          if (PROP_IS_DEEP[propName]) {
+            propVal = deepCopy(propVal); // freeze state
+
+            this.deepCopies[propName] = propVal; // side effect!
+          }
+
+          options[propName] = propVal;
+        }
+      }
+
+      return options;
+    },
+    recordDirtyOption: function recordDirtyOption(optionName, newVal) {
+      (this.$options.dirtyOptions || (this.$options.dirtyOptions = {}))[optionName] = newVal;
+      this.renderId++; // triggers a render eventually
+    },
+    renderDirty: function renderDirty() {
+      var dirtyOptions = this.$options.dirtyOptions;
+
+      if (dirtyOptions) {
+        this.$options.dirtyOptions = null; // clear before rendering. might trigger new dirtiness
+
+        this.$options.calendar.mutateOptions(dirtyOptions, [], false, fast_deep_equal__WEBPACK_IMPORTED_MODULE_0___default.a);
+      }
+    },
+    getApi: function getApi() {
+      return this.$options.calendar;
+    }
+  }
+};
+
+function buildPropWatcher(propDef, propName) {
+  if (PROP_IS_DEEP[propName]) {
+    return {
+      deep: true,
+      // listen to children as well
+      handler: function handler(newVal) {
+        // use this instead of the handler's param because if same reference, will always be equal
+        var oldVal = this.deepCopies[propName];
+
+        if (!fast_deep_equal__WEBPACK_IMPORTED_MODULE_0___default()(newVal, oldVal)) {
+          newVal = deepCopy(newVal); // freeze state
+
+          this.deepCopies[propName] = newVal; // always keep this up to date
+
+          this.recordDirtyOption(propName, newVal);
+        }
+      }
+    };
+  } else {
+    return function (newVal) {
+      this.recordDirtyOption(propName, newVal);
+    };
+  }
+}
+
+function warnDeprecatedListeners(listenerHash) {
+  for (var emissionName in listenerHash) {
+    if (EMISSION_USE_PROP[emissionName]) {
+      console.warn('Use of ' + emissionName + ' as an event is deprecated. Please convert to a prop.');
+    }
+  }
+}
+
+/*
+Registers the component globally if appropriate.
+This modules exposes the component AND an install function.
+
+Derived from:
+https://vuejs.org/v2/cookbook/packaging-sfc-for-npm.html
+*/
+
+var installed = false; // declare install function executed by Vue.use()
+
+function install(Vue) {
+  if (!installed) {
+    installed = true;
+    Vue.component('FullCalendar', FullCalendarComponent);
+  }
+} // detect a globally availble version of Vue (eg. in browser via <script> tag)
+
+var GlobalVue;
+
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.Vue;
+} // auto-install if possible
+
+
+if (GlobalVue) {
+  GlobalVue.use({
+    install: install
+  });
+} // to allow use as module (npm/webpack/etc.) export component
+
+/* harmony default export */ __webpack_exports__["default"] = (FullCalendarComponent);
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/vue/node_modules/fast-deep-equal/index.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@fullcalendar/vue/node_modules/fast-deep-equal/index.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var isArray = Array.isArray;
+var keyList = Object.keys;
+var hasProp = Object.prototype.hasOwnProperty;
+
+module.exports = function equal(a, b) {
+  if (a === b) return true;
+
+  if (a && b && typeof a == 'object' && typeof b == 'object') {
+    var arrA = isArray(a)
+      , arrB = isArray(b)
+      , i
+      , length
+      , key;
+
+    if (arrA && arrB) {
+      length = a.length;
+      if (length != b.length) return false;
+      for (i = length; i-- !== 0;)
+        if (!equal(a[i], b[i])) return false;
+      return true;
+    }
+
+    if (arrA != arrB) return false;
+
+    var dateA = a instanceof Date
+      , dateB = b instanceof Date;
+    if (dateA != dateB) return false;
+    if (dateA && dateB) return a.getTime() == b.getTime();
+
+    var regexpA = a instanceof RegExp
+      , regexpB = b instanceof RegExp;
+    if (regexpA != regexpB) return false;
+    if (regexpA && regexpB) return a.toString() == b.toString();
+
+    var keys = keyList(a);
+    length = keys.length;
+
+    if (length !== keyList(b).length)
+      return false;
+
+    for (i = length; i-- !== 0;)
+      if (!hasProp.call(b, keys[i])) return false;
+
+    for (i = length; i-- !== 0;) {
+      key = keys[i];
+      if (!equal(a[key], b[key])) return false;
+    }
+
+    return true;
+  }
+
+  return a!==a && b!==b;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -2039,6 +15192,192 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FullcalendarComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/vue */ "./node_modules/@fullcalendar/vue/main.esm.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.esm.js");
+/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/interaction */ "./node_modules/@fullcalendar/interaction/main.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Fullcalendar: _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"] // make the <FullCalendar> tag available
+
+  },
+  data: function data() {
+    return {
+      calendarPlugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_2__["default"]],
+      events: "",
+      newEvent: {
+        event_name: "",
+        start_date: "",
+        end_date: ""
+      },
+      addingMode: true,
+      indexToUpdate: ""
+    };
+  },
+  created: function created() {
+    this.getEvents();
+  },
+  methods: {
+    addNewEvent: function addNewEvent() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("/api/calendar", _objectSpread({}, this.newEvent)).then(function (data) {
+        _this.getEvents();
+
+        _this.resetForm();
+      })["catch"](function (err) {
+        return console.log("イベントを追加できません", err.response.data);
+      });
+    },
+    showEvent: function showEvent(arg) {
+      this.addingMode = false;
+
+      var _this$events$find = this.events.find(function (event) {
+        return event.id === +arg.event.id;
+      }),
+          id = _this$events$find.id,
+          title = _this$events$find.title,
+          start = _this$events$find.start,
+          end = _this$events$find.end;
+
+      this.indexToUpdate = id;
+      this.newEvent = {
+        event_name: title,
+        start_date: start,
+        end_date: end
+      };
+    },
+    updateEvent: function updateEvent() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.put("/api/calendar/" + this.indexToUpdate, _objectSpread({}, this.newEvent)).then(function (resp) {
+        _this2.resetForm();
+
+        _this2.getEvents();
+
+        _this2.addingMode = !_this2.addingMode;
+      })["catch"](function (err) {
+        return console.log("更新できません", err.response.data);
+      });
+    },
+    deleteEvent: function deleteEvent() {
+      var _this3 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a["delete"]("/api/calendar/" + this.indexToUpdate).then(function (resp) {
+        _this3.resetForm();
+
+        _this3.getEvents();
+
+        _this3.addingMode = !_this3.addingMode;
+      })["catch"](function (err) {
+        return console.log("削除できませんでした", err.response.data);
+      });
+    },
+    getEvents: function getEvents() {
+      var _this4 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("/api/calendar").then(function (resp) {
+        return _this4.events = resp.data.data;
+      })["catch"](function (err) {
+        return console.log(err.response.data);
+      });
+    },
+    resetForm: function resetForm() {
+      var _this5 = this;
+
+      Object.keys(this.newEvent).forEach(function (key) {
+        return _this5.newEvent[key] = "";
+      });
+    }
+  },
+  watch: {
+    indexToUpdate: function indexToUpdate() {
+      return this.indexToUpdate;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LikeComponent.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/LikeComponent.vue?vue&type=script&lang=js& ***!
@@ -2185,6 +15524,53 @@ __webpack_require__.r(__webpack_exports__);
         },
         date: this.$moment().format()
       }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      attrs: [{
+        key: 'today',
+        bar: {
+          height: '3px',
+          backgroundColor: 'red',
+          borderColor: null,
+          borderWidth: '1px',
+          borderStyle: 'solid',
+          opacity: 1
+        },
+        dates: {
+          start: new Date(),
+          monthlyInterval: 2,
+          ordinalWeekdays: _defineProperty({}, -1, 6)
+        },
+        popover: {
+          label: 'メッセージを表示できます'
+        },
+        backgroundColor: '#111',
+        border: '1px solid #111'
+      }]
     };
   }
 });
@@ -6624,6 +20010,64 @@ exports = module.exports = __webpack_require__(/*! ../css-loader/lib/css-base.js
 
 // module
 exports.push([module.i, "/**\n * Swiper 6.2.0\n * Most modern mobile touch slider and framework with hardware accelerated transitions\n * http://swiperjs.com\n *\n * Copyright 2014-2020 Vladimir Kharlampidi\n *\n * Released under the MIT License\n *\n * Released on: September 4, 2020\n */\n\n@font-face {\n  font-family: 'swiper-icons';\n  src: url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA') format('woff');\n  font-weight: 400;\n  font-style: normal;\n}\n:root {\n  --swiper-theme-color: #007aff;\n}\n.swiper-container {\n  margin-left: auto;\n  margin-right: auto;\n  position: relative;\n  overflow: hidden;\n  list-style: none;\n  padding: 0;\n  /* Fix of Webkit flickering */\n  z-index: 1;\n}\n.swiper-container-vertical > .swiper-wrapper {\n  flex-direction: column;\n}\n.swiper-wrapper {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n  display: flex;\n  transition-property: transform;\n  box-sizing: content-box;\n}\n.swiper-container-android .swiper-slide,\n.swiper-wrapper {\n  transform: translate3d(0px, 0, 0);\n}\n.swiper-container-multirow > .swiper-wrapper {\n  flex-wrap: wrap;\n}\n.swiper-container-multirow-column > .swiper-wrapper {\n  flex-wrap: wrap;\n  flex-direction: column;\n}\n.swiper-container-free-mode > .swiper-wrapper {\n  transition-timing-function: ease-out;\n  margin: 0 auto;\n}\n.swiper-slide {\n  flex-shrink: 0;\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transition-property: transform;\n}\n.swiper-slide-invisible-blank {\n  visibility: hidden;\n}\n/* Auto Height */\n.swiper-container-autoheight,\n.swiper-container-autoheight .swiper-slide {\n  height: auto;\n}\n.swiper-container-autoheight .swiper-wrapper {\n  align-items: flex-start;\n  transition-property: transform, height;\n}\n/* 3D Effects */\n.swiper-container-3d {\n  perspective: 1200px;\n}\n.swiper-container-3d .swiper-wrapper,\n.swiper-container-3d .swiper-slide,\n.swiper-container-3d .swiper-slide-shadow-left,\n.swiper-container-3d .swiper-slide-shadow-right,\n.swiper-container-3d .swiper-slide-shadow-top,\n.swiper-container-3d .swiper-slide-shadow-bottom,\n.swiper-container-3d .swiper-cube-shadow {\n  transform-style: preserve-3d;\n}\n.swiper-container-3d .swiper-slide-shadow-left,\n.swiper-container-3d .swiper-slide-shadow-right,\n.swiper-container-3d .swiper-slide-shadow-top,\n.swiper-container-3d .swiper-slide-shadow-bottom {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n  z-index: 10;\n}\n.swiper-container-3d .swiper-slide-shadow-left {\n  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n.swiper-container-3d .swiper-slide-shadow-right {\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n.swiper-container-3d .swiper-slide-shadow-top {\n  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n.swiper-container-3d .swiper-slide-shadow-bottom {\n  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n/* CSS Mode */\n.swiper-container-css-mode > .swiper-wrapper {\n  overflow: auto;\n  scrollbar-width: none;\n  /* For Firefox */\n  -ms-overflow-style: none;\n  /* For Internet Explorer and Edge */\n}\n.swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar {\n  display: none;\n}\n.swiper-container-css-mode > .swiper-wrapper > .swiper-slide {\n  scroll-snap-align: start start;\n}\n.swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {\n  -ms-scroll-snap-type: x mandatory;\n      scroll-snap-type: x mandatory;\n}\n.swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {\n  -ms-scroll-snap-type: y mandatory;\n      scroll-snap-type: y mandatory;\n}\n:root {\n  --swiper-navigation-size: 44px;\n  /*\n  --swiper-navigation-color: var(--swiper-theme-color);\n  */\n}\n.swiper-button-prev,\n.swiper-button-next {\n  position: absolute;\n  top: 50%;\n  width: calc(var(--swiper-navigation-size) / 44 * 27);\n  height: var(--swiper-navigation-size);\n  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);\n  z-index: 10;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: var(--swiper-navigation-color, var(--swiper-theme-color));\n}\n.swiper-button-prev.swiper-button-disabled,\n.swiper-button-next.swiper-button-disabled {\n  opacity: 0.35;\n  cursor: auto;\n  pointer-events: none;\n}\n.swiper-button-prev:after,\n.swiper-button-next:after {\n  font-family: swiper-icons;\n  font-size: var(--swiper-navigation-size);\n  text-transform: none !important;\n  letter-spacing: 0;\n  text-transform: none;\n  font-variant: initial;\n  line-height: 1;\n}\n.swiper-button-prev,\n.swiper-container-rtl .swiper-button-next {\n  left: 10px;\n  right: auto;\n}\n.swiper-button-prev:after,\n.swiper-container-rtl .swiper-button-next:after {\n  content: 'prev';\n}\n.swiper-button-next,\n.swiper-container-rtl .swiper-button-prev {\n  right: 10px;\n  left: auto;\n}\n.swiper-button-next:after,\n.swiper-container-rtl .swiper-button-prev:after {\n  content: 'next';\n}\n.swiper-button-prev.swiper-button-white,\n.swiper-button-next.swiper-button-white {\n  --swiper-navigation-color: #ffffff;\n}\n.swiper-button-prev.swiper-button-black,\n.swiper-button-next.swiper-button-black {\n  --swiper-navigation-color: #000000;\n}\n.swiper-button-lock {\n  display: none;\n}\n:root {\n  /*\n  --swiper-pagination-color: var(--swiper-theme-color);\n  */\n}\n.swiper-pagination {\n  position: absolute;\n  text-align: center;\n  transition: 300ms opacity;\n  transform: translate3d(0, 0, 0);\n  z-index: 10;\n}\n.swiper-pagination.swiper-pagination-hidden {\n  opacity: 0;\n}\n/* Common Styles */\n.swiper-pagination-fraction,\n.swiper-pagination-custom,\n.swiper-container-horizontal > .swiper-pagination-bullets {\n  bottom: 10px;\n  left: 0;\n  width: 100%;\n}\n/* Bullets */\n.swiper-pagination-bullets-dynamic {\n  overflow: hidden;\n  font-size: 0;\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  transform: scale(0.33);\n  position: relative;\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {\n  transform: scale(1);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {\n  transform: scale(1);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {\n  transform: scale(0.66);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {\n  transform: scale(0.33);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {\n  transform: scale(0.66);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {\n  transform: scale(0.33);\n}\n.swiper-pagination-bullet {\n  width: 8px;\n  height: 8px;\n  display: inline-block;\n  border-radius: 100%;\n  background: #000;\n  opacity: 0.2;\n}\nbutton.swiper-pagination-bullet {\n  border: none;\n  margin: 0;\n  padding: 0;\n  box-shadow: none;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n}\n.swiper-pagination-clickable .swiper-pagination-bullet {\n  cursor: pointer;\n}\n.swiper-pagination-bullet-active {\n  opacity: 1;\n  background: var(--swiper-pagination-color, var(--swiper-theme-color));\n}\n.swiper-container-vertical > .swiper-pagination-bullets {\n  right: 10px;\n  top: 50%;\n  transform: translate3d(0px, -50%, 0);\n}\n.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {\n  margin: 6px 0;\n  display: block;\n}\n.swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {\n  top: 50%;\n  transform: translateY(-50%);\n  width: 8px;\n}\n.swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  display: inline-block;\n  transition: 200ms transform, 200ms top;\n}\n.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {\n  margin: 0 4px;\n}\n.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {\n  left: 50%;\n  transform: translateX(-50%);\n  white-space: nowrap;\n}\n.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  transition: 200ms transform, 200ms left;\n}\n.swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  transition: 200ms transform, 200ms right;\n}\n/* Progress */\n.swiper-pagination-progressbar {\n  background: rgba(0, 0, 0, 0.25);\n  position: absolute;\n}\n.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {\n  background: var(--swiper-pagination-color, var(--swiper-theme-color));\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  transform: scale(0);\n  transform-origin: left top;\n}\n.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {\n  transform-origin: right top;\n}\n.swiper-container-horizontal > .swiper-pagination-progressbar,\n.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {\n  width: 100%;\n  height: 4px;\n  left: 0;\n  top: 0;\n}\n.swiper-container-vertical > .swiper-pagination-progressbar,\n.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {\n  width: 4px;\n  height: 100%;\n  left: 0;\n  top: 0;\n}\n.swiper-pagination-white {\n  --swiper-pagination-color: #ffffff;\n}\n.swiper-pagination-black {\n  --swiper-pagination-color: #000000;\n}\n.swiper-pagination-lock {\n  display: none;\n}\n/* Scrollbar */\n.swiper-scrollbar {\n  border-radius: 10px;\n  position: relative;\n  -ms-touch-action: none;\n  background: rgba(0, 0, 0, 0.1);\n}\n.swiper-container-horizontal > .swiper-scrollbar {\n  position: absolute;\n  left: 1%;\n  bottom: 3px;\n  z-index: 50;\n  height: 5px;\n  width: 98%;\n}\n.swiper-container-vertical > .swiper-scrollbar {\n  position: absolute;\n  right: 3px;\n  top: 1%;\n  z-index: 50;\n  width: 5px;\n  height: 98%;\n}\n.swiper-scrollbar-drag {\n  height: 100%;\n  width: 100%;\n  position: relative;\n  background: rgba(0, 0, 0, 0.5);\n  border-radius: 10px;\n  left: 0;\n  top: 0;\n}\n.swiper-scrollbar-cursor-drag {\n  cursor: move;\n}\n.swiper-scrollbar-lock {\n  display: none;\n}\n.swiper-zoom-container {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n}\n.swiper-zoom-container > img,\n.swiper-zoom-container > svg,\n.swiper-zoom-container > canvas {\n  max-width: 100%;\n  max-height: 100%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.swiper-slide-zoomed {\n  cursor: move;\n}\n/* Preloader */\n:root {\n  /*\n  --swiper-preloader-color: var(--swiper-theme-color);\n  */\n}\n.swiper-lazy-preloader {\n  width: 42px;\n  height: 42px;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  margin-left: -21px;\n  margin-top: -21px;\n  z-index: 10;\n  transform-origin: 50%;\n  -webkit-animation: swiper-preloader-spin 1s infinite linear;\n          animation: swiper-preloader-spin 1s infinite linear;\n  box-sizing: border-box;\n  border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));\n  border-radius: 50%;\n  border-top-color: transparent;\n}\n.swiper-lazy-preloader-white {\n  --swiper-preloader-color: #fff;\n}\n.swiper-lazy-preloader-black {\n  --swiper-preloader-color: #000;\n}\n@-webkit-keyframes swiper-preloader-spin {\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes swiper-preloader-spin {\n  100% {\n    transform: rotate(360deg);\n  }\n}\n/* a11y */\n.swiper-container .swiper-notification {\n  position: absolute;\n  left: 0;\n  top: 0;\n  pointer-events: none;\n  opacity: 0;\n  z-index: -1000;\n}\n.swiper-container-fade.swiper-container-free-mode .swiper-slide {\n  transition-timing-function: ease-out;\n}\n.swiper-container-fade .swiper-slide {\n  pointer-events: none;\n  transition-property: opacity;\n}\n.swiper-container-fade .swiper-slide .swiper-slide {\n  pointer-events: none;\n}\n.swiper-container-fade .swiper-slide-active,\n.swiper-container-fade .swiper-slide-active .swiper-slide-active {\n  pointer-events: auto;\n}\n.swiper-container-cube {\n  overflow: visible;\n}\n.swiper-container-cube .swiper-slide {\n  pointer-events: none;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n  z-index: 1;\n  visibility: hidden;\n  transform-origin: 0 0;\n  width: 100%;\n  height: 100%;\n}\n.swiper-container-cube .swiper-slide .swiper-slide {\n  pointer-events: none;\n}\n.swiper-container-cube.swiper-container-rtl .swiper-slide {\n  transform-origin: 100% 0;\n}\n.swiper-container-cube .swiper-slide-active,\n.swiper-container-cube .swiper-slide-active .swiper-slide-active {\n  pointer-events: auto;\n}\n.swiper-container-cube .swiper-slide-active,\n.swiper-container-cube .swiper-slide-next,\n.swiper-container-cube .swiper-slide-prev,\n.swiper-container-cube .swiper-slide-next + .swiper-slide {\n  pointer-events: auto;\n  visibility: visible;\n}\n.swiper-container-cube .swiper-slide-shadow-top,\n.swiper-container-cube .swiper-slide-shadow-bottom,\n.swiper-container-cube .swiper-slide-shadow-left,\n.swiper-container-cube .swiper-slide-shadow-right {\n  z-index: 0;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.swiper-container-cube .swiper-cube-shadow {\n  position: absolute;\n  left: 0;\n  bottom: 0px;\n  width: 100%;\n  height: 100%;\n  background: #000;\n  opacity: 0.6;\n  -webkit-filter: blur(50px);\n  filter: blur(50px);\n  z-index: 0;\n}\n.swiper-container-flip {\n  overflow: visible;\n}\n.swiper-container-flip .swiper-slide {\n  pointer-events: none;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n  z-index: 1;\n}\n.swiper-container-flip .swiper-slide .swiper-slide {\n  pointer-events: none;\n}\n.swiper-container-flip .swiper-slide-active,\n.swiper-container-flip .swiper-slide-active .swiper-slide-active {\n  pointer-events: auto;\n}\n.swiper-container-flip .swiper-slide-shadow-top,\n.swiper-container-flip .swiper-slide-shadow-bottom,\n.swiper-container-flip .swiper-slide-shadow-left,\n.swiper-container-flip .swiper-slide-shadow-right {\n  z-index: 0;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/core/main.css":
+/*!***********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/core/main.css ***!
+  \***********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@charset \"UTF-8\";\n.fc {\n  direction: ltr;\n  text-align: left;\n}\n.fc-rtl {\n  text-align: right;\n}\nbody .fc {\n  /* extra precedence to overcome jqui */\n  font-size: 1em;\n}\n\n/* Colors\n--------------------------------------------------------------------------------------------------*/\n.fc-highlight {\n  /* when user is selecting cells */\n  background: #bce8f1;\n  opacity: 0.3;\n}\n.fc-bgevent {\n  /* default look for background events */\n  background: #8fdf82;\n  opacity: 0.3;\n}\n.fc-nonbusiness {\n  /* default look for non-business-hours areas */\n  /* will inherit .fc-bgevent's styles */\n  background: #d7d7d7;\n}\n\n/* Popover\n--------------------------------------------------------------------------------------------------*/\n.fc-popover {\n  position: absolute;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);\n}\n.fc-popover .fc-header {\n  /* TODO: be more consistent with fc-head/fc-body */\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  padding: 2px 4px;\n}\n.fc-rtl .fc-popover .fc-header {\n  flex-direction: row-reverse;\n}\n.fc-popover .fc-header .fc-title {\n  margin: 0 2px;\n}\n.fc-popover .fc-header .fc-close {\n  cursor: pointer;\n  opacity: 0.65;\n  font-size: 1.1em;\n}\n\n/* Misc Reusable Components\n--------------------------------------------------------------------------------------------------*/\n.fc-divider {\n  border-style: solid;\n  border-width: 1px;\n}\nhr.fc-divider {\n  height: 0;\n  margin: 0;\n  padding: 0 0 2px;\n  /* height is unreliable across browsers, so use padding */\n  border-width: 1px 0;\n}\n.fc-bg,\n.fc-bgevent-skeleton,\n.fc-highlight-skeleton,\n.fc-mirror-skeleton {\n  /* these element should always cling to top-left/right corners */\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n.fc-bg {\n  bottom: 0;\n  /* strech bg to bottom edge */\n}\n.fc-bg table {\n  height: 100%;\n  /* strech bg to bottom edge */\n}\n\n/* Tables\n--------------------------------------------------------------------------------------------------*/\n.fc table {\n  width: 100%;\n  box-sizing: border-box;\n  /* fix scrollbar issue in firefox */\n  table-layout: fixed;\n  border-collapse: collapse;\n  border-spacing: 0;\n  font-size: 1em;\n  /* normalize cross-browser */\n}\n.fc th {\n  text-align: center;\n}\n.fc th,\n.fc td {\n  border-style: solid;\n  border-width: 1px;\n  padding: 0;\n  vertical-align: top;\n}\n.fc td.fc-today {\n  border-style: double;\n  /* overcome neighboring borders */\n}\n\n/* Internal Nav Links\n--------------------------------------------------------------------------------------------------*/\na[data-goto] {\n  cursor: pointer;\n}\na[data-goto]:hover {\n  text-decoration: underline;\n}\n\n/* Fake Table Rows\n--------------------------------------------------------------------------------------------------*/\n.fc .fc-row {\n  /* extra precedence to overcome themes forcing a 1px border */\n  /* no visible border by default. but make available if need be (scrollbar width compensation) */\n  border-style: solid;\n  border-width: 0;\n}\n.fc-row table {\n  /* don't put left/right border on anything within a fake row.\n     the outer tbody will worry about this */\n  border-left: 0 hidden transparent;\n  border-right: 0 hidden transparent;\n  /* no bottom borders on rows */\n  border-bottom: 0 hidden transparent;\n}\n.fc-row:first-child table {\n  border-top: 0 hidden transparent;\n  /* no top border on first row */\n}\n\n/* Day Row (used within the header and the DayGrid)\n--------------------------------------------------------------------------------------------------*/\n.fc-row {\n  position: relative;\n}\n.fc-row .fc-bg {\n  z-index: 1;\n}\n\n/* highlighting cells & background event skeleton */\n.fc-row .fc-bgevent-skeleton,\n.fc-row .fc-highlight-skeleton {\n  bottom: 0;\n  /* stretch skeleton to bottom of row */\n}\n.fc-row .fc-bgevent-skeleton table,\n.fc-row .fc-highlight-skeleton table {\n  height: 100%;\n  /* stretch skeleton to bottom of row */\n}\n.fc-row .fc-highlight-skeleton td,\n.fc-row .fc-bgevent-skeleton td {\n  border-color: transparent;\n}\n.fc-row .fc-bgevent-skeleton {\n  z-index: 2;\n}\n.fc-row .fc-highlight-skeleton {\n  z-index: 3;\n}\n\n/*\nrow content (which contains day/week numbers and events) as well as \"mirror\" (which contains\ntemporary rendered events).\n*/\n.fc-row .fc-content-skeleton {\n  position: relative;\n  z-index: 4;\n  padding-bottom: 2px;\n  /* matches the space above the events */\n}\n.fc-row .fc-mirror-skeleton {\n  z-index: 5;\n}\n.fc .fc-row .fc-content-skeleton table,\n.fc .fc-row .fc-content-skeleton td,\n.fc .fc-row .fc-mirror-skeleton td {\n  /* see-through to the background below */\n  /* extra precedence to prevent theme-provided backgrounds */\n  background: none;\n  /* in case <td>s are globally styled */\n  border-color: transparent;\n}\n.fc-row .fc-content-skeleton td,\n.fc-row .fc-mirror-skeleton td {\n  /* don't put a border between events and/or the day number */\n  border-bottom: 0;\n}\n.fc-row .fc-content-skeleton tbody td,\n.fc-row .fc-mirror-skeleton tbody td {\n  /* don't put a border between event cells */\n  border-top: 0;\n}\n\n/* Scrolling Container\n--------------------------------------------------------------------------------------------------*/\n.fc-scroller {\n  -webkit-overflow-scrolling: touch;\n}\n\n/* TODO: move to timegrid/daygrid */\n.fc-scroller > .fc-day-grid,\n.fc-scroller > .fc-time-grid {\n  position: relative;\n  /* re-scope all positions */\n  width: 100%;\n  /* hack to force re-sizing this inner element when scrollbars appear/disappear */\n}\n\n/* Global Event Styles\n--------------------------------------------------------------------------------------------------*/\n.fc-event {\n  position: relative;\n  /* for resize handle and other inner positioning */\n  display: block;\n  /* make the <a> tag block */\n  font-size: 0.85em;\n  line-height: 1.4;\n  border-radius: 3px;\n  border: 1px solid #3788d8;\n}\n.fc-event,\n.fc-event-dot {\n  background-color: #3788d8;\n  /* default BACKGROUND color */\n}\n.fc-event,\n.fc-event:hover {\n  color: #fff;\n  /* default TEXT color */\n  text-decoration: none;\n  /* if <a> has an href */\n}\n.fc-event[href],\n.fc-event.fc-draggable {\n  cursor: pointer;\n  /* give events with links and draggable events a hand mouse pointer */\n}\n.fc-not-allowed,\n.fc-not-allowed .fc-event {\n  /* to override an event's custom cursor */\n  cursor: not-allowed;\n}\n.fc-event .fc-content {\n  position: relative;\n  z-index: 2;\n}\n\n/* resizer (cursor AND touch devices) */\n.fc-event .fc-resizer {\n  position: absolute;\n  z-index: 4;\n}\n\n/* resizer (touch devices) */\n.fc-event .fc-resizer {\n  display: none;\n}\n.fc-event.fc-allow-mouse-resize .fc-resizer,\n.fc-event.fc-selected .fc-resizer {\n  /* only show when hovering or selected (with touch) */\n  display: block;\n}\n\n/* hit area */\n.fc-event.fc-selected .fc-resizer:before {\n  /* 40x40 touch area */\n  content: \"\";\n  position: absolute;\n  z-index: 9999;\n  /* user of this util can scope within a lower z-index */\n  top: 50%;\n  left: 50%;\n  width: 40px;\n  height: 40px;\n  margin-left: -20px;\n  margin-top: -20px;\n}\n\n/* Event Selection (only for touch devices)\n--------------------------------------------------------------------------------------------------*/\n.fc-event.fc-selected {\n  z-index: 9999 !important;\n  /* overcomes inline z-index */\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);\n}\n.fc-event.fc-selected:after {\n  content: \"\";\n  position: absolute;\n  z-index: 1;\n  /* same z-index as fc-bg, behind text */\n  /* overcome the borders */\n  top: -1px;\n  right: -1px;\n  bottom: -1px;\n  left: -1px;\n  /* darkening effect */\n  background: #000;\n  opacity: 0.25;\n}\n\n/* Event Dragging\n--------------------------------------------------------------------------------------------------*/\n.fc-event.fc-dragging.fc-selected {\n  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);\n}\n.fc-event.fc-dragging:not(.fc-selected) {\n  opacity: 0.75;\n}\n\n/* Horizontal Events\n--------------------------------------------------------------------------------------------------*/\n/* bigger touch area when selected */\n.fc-h-event.fc-selected:before {\n  content: \"\";\n  position: absolute;\n  z-index: 3;\n  /* below resizers */\n  top: -10px;\n  bottom: -10px;\n  left: 0;\n  right: 0;\n}\n\n/* events that are continuing to/from another week. kill rounded corners and butt up against edge */\n.fc-ltr .fc-h-event.fc-not-start,\n.fc-rtl .fc-h-event.fc-not-end {\n  margin-left: 0;\n  border-left-width: 0;\n  padding-left: 1px;\n  /* replace the border with padding */\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.fc-ltr .fc-h-event.fc-not-end,\n.fc-rtl .fc-h-event.fc-not-start {\n  margin-right: 0;\n  border-right-width: 0;\n  padding-right: 1px;\n  /* replace the border with padding */\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n/* resizer (cursor AND touch devices) */\n/* left resizer  */\n.fc-ltr .fc-h-event .fc-start-resizer,\n.fc-rtl .fc-h-event .fc-end-resizer {\n  cursor: w-resize;\n  left: -1px;\n  /* overcome border */\n}\n\n/* right resizer */\n.fc-ltr .fc-h-event .fc-end-resizer,\n.fc-rtl .fc-h-event .fc-start-resizer {\n  cursor: e-resize;\n  right: -1px;\n  /* overcome border */\n}\n\n/* resizer (mouse devices) */\n.fc-h-event.fc-allow-mouse-resize .fc-resizer {\n  width: 7px;\n  top: -1px;\n  /* overcome top border */\n  bottom: -1px;\n  /* overcome bottom border */\n}\n\n/* resizer (touch devices) */\n.fc-h-event.fc-selected .fc-resizer {\n  /* 8x8 little dot */\n  border-radius: 4px;\n  border-width: 1px;\n  width: 6px;\n  height: 6px;\n  border-style: solid;\n  border-color: inherit;\n  background: #fff;\n  /* vertically center */\n  top: 50%;\n  margin-top: -4px;\n}\n\n/* left resizer  */\n.fc-ltr .fc-h-event.fc-selected .fc-start-resizer,\n.fc-rtl .fc-h-event.fc-selected .fc-end-resizer {\n  margin-left: -4px;\n  /* centers the 8x8 dot on the left edge */\n}\n\n/* right resizer */\n.fc-ltr .fc-h-event.fc-selected .fc-end-resizer,\n.fc-rtl .fc-h-event.fc-selected .fc-start-resizer {\n  margin-right: -4px;\n  /* centers the 8x8 dot on the right edge */\n}\n\n/* DayGrid events\n----------------------------------------------------------------------------------------------------\nWe use the full \"fc-day-grid-event\" class instead of using descendants because the event won't\nbe a descendant of the grid when it is being dragged.\n*/\n.fc-day-grid-event {\n  margin: 1px 2px 0;\n  /* spacing between events and edges */\n  padding: 0 1px;\n}\ntr:first-child > td > .fc-day-grid-event {\n  margin-top: 2px;\n  /* a little bit more space before the first event */\n}\n.fc-mirror-skeleton tr:first-child > td > .fc-day-grid-event {\n  margin-top: 0;\n  /* except for mirror skeleton */\n}\n.fc-day-grid-event .fc-content {\n  /* force events to be one-line tall */\n  white-space: nowrap;\n  overflow: hidden;\n}\n.fc-day-grid-event .fc-time {\n  font-weight: bold;\n}\n\n/* resizer (cursor devices) */\n/* left resizer  */\n.fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer,\n.fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer {\n  margin-left: -2px;\n  /* to the day cell's edge */\n}\n\n/* right resizer */\n.fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer,\n.fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer {\n  margin-right: -2px;\n  /* to the day cell's edge */\n}\n\n/* Event Limiting\n--------------------------------------------------------------------------------------------------*/\n/* \"more\" link that represents hidden events */\na.fc-more {\n  margin: 1px 3px;\n  font-size: 0.85em;\n  cursor: pointer;\n  text-decoration: none;\n}\na.fc-more:hover {\n  text-decoration: underline;\n}\n.fc-limited {\n  /* rows and cells that are hidden because of a \"more\" link */\n  display: none;\n}\n\n/* popover that appears when \"more\" link is clicked */\n.fc-day-grid .fc-row {\n  z-index: 1;\n  /* make the \"more\" popover one higher than this */\n}\n.fc-more-popover {\n  z-index: 2;\n  width: 220px;\n}\n.fc-more-popover .fc-event-container {\n  padding: 10px;\n}\n\n/* Now Indicator\n--------------------------------------------------------------------------------------------------*/\n.fc-now-indicator {\n  position: absolute;\n  border: 0 solid red;\n}\n\n/* Utilities\n--------------------------------------------------------------------------------------------------*/\n.fc-unselectable {\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n\n/*\nTODO: more distinction between this file and common.css\n*/\n/* Colors\n--------------------------------------------------------------------------------------------------*/\n.fc-unthemed th,\n.fc-unthemed td,\n.fc-unthemed thead,\n.fc-unthemed tbody,\n.fc-unthemed .fc-divider,\n.fc-unthemed .fc-row,\n.fc-unthemed .fc-content,\n.fc-unthemed .fc-popover,\n.fc-unthemed .fc-list-view,\n.fc-unthemed .fc-list-heading td {\n  border-color: #ddd;\n}\n.fc-unthemed .fc-popover {\n  background-color: #fff;\n}\n.fc-unthemed .fc-divider,\n.fc-unthemed .fc-popover .fc-header,\n.fc-unthemed .fc-list-heading td {\n  background: #eee;\n}\n.fc-unthemed td.fc-today {\n  background: #fcf8e3;\n}\n.fc-unthemed .fc-disabled-day {\n  background: #d7d7d7;\n  opacity: 0.3;\n}\n\n/* Icons\n--------------------------------------------------------------------------------------------------\nfrom https://feathericons.com/ and built with IcoMoon\n*/\n@font-face {\n  font-family: \"fcicons\";\n  src: url(\"data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBfAAAAC8AAAAYGNtYXAXVtKNAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZgYydxIAAAF4AAAFNGhlYWQUJ7cIAAAGrAAAADZoaGVhB20DzAAABuQAAAAkaG10eCIABhQAAAcIAAAALGxvY2ED4AU6AAAHNAAAABhtYXhwAA8AjAAAB0wAAAAgbmFtZXsr690AAAdsAAABhnBvc3QAAwAAAAAI9AAAACAAAwPAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpBgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6Qb//f//AAAAAAAg6QD//f//AAH/4xcEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAWIAjQKeAskAEwAAJSc3NjQnJiIHAQYUFwEWMjc2NCcCnuLiDQ0MJAz/AA0NAQAMJAwNDcni4gwjDQwM/wANIwz/AA0NDCMNAAAAAQFiAI0CngLJABMAACUBNjQnASYiBwYUHwEHBhQXFjI3AZ4BAA0N/wAMJAwNDeLiDQ0MJAyNAQAMIw0BAAwMDSMM4uINIwwNDQAAAAIA4gC3Ax4CngATACcAACUnNzY0JyYiDwEGFB8BFjI3NjQnISc3NjQnJiIPAQYUHwEWMjc2NCcB87e3DQ0MIw3VDQ3VDSMMDQ0BK7e3DQ0MJAzVDQ3VDCQMDQ3zuLcMJAwNDdUNIwzWDAwNIwy4twwkDA0N1Q0jDNYMDA0jDAAAAgDiALcDHgKeABMAJwAAJTc2NC8BJiIHBhQfAQcGFBcWMjchNzY0LwEmIgcGFB8BBwYUFxYyNwJJ1Q0N1Q0jDA0Nt7cNDQwjDf7V1Q0N1QwkDA0Nt7cNDQwkDLfWDCMN1Q0NDCQMt7gMIw0MDNYMIw3VDQ0MJAy3uAwjDQwMAAADAFUAAAOrA1UAMwBoAHcAABMiBgcOAQcOAQcOARURFBYXHgEXHgEXHgEzITI2Nz4BNz4BNz4BNRE0JicuAScuAScuASMFITIWFx4BFx4BFx4BFREUBgcOAQcOAQcOASMhIiYnLgEnLgEnLgE1ETQ2Nz4BNz4BNz4BMxMhMjY1NCYjISIGFRQWM9UNGAwLFQkJDgUFBQUFBQ4JCRULDBgNAlYNGAwLFQkJDgUFBQUFBQ4JCRULDBgN/aoCVgQIBAQHAwMFAQIBAQIBBQMDBwQECAT9qgQIBAQHAwMFAQIBAQIBBQMDBwQECASAAVYRGRkR/qoRGRkRA1UFBAUOCQkVDAsZDf2rDRkLDBUJCA4FBQUFBQUOCQgVDAsZDQJVDRkLDBUJCQ4FBAVVAgECBQMCBwQECAX9qwQJAwQHAwMFAQICAgIBBQMDBwQDCQQCVQUIBAQHAgMFAgEC/oAZEhEZGRESGQAAAAADAFUAAAOrA1UAMwBoAIkAABMiBgcOAQcOAQcOARURFBYXHgEXHgEXHgEzITI2Nz4BNz4BNz4BNRE0JicuAScuAScuASMFITIWFx4BFx4BFx4BFREUBgcOAQcOAQcOASMhIiYnLgEnLgEnLgE1ETQ2Nz4BNz4BNz4BMxMzFRQWMzI2PQEzMjY1NCYrATU0JiMiBh0BIyIGFRQWM9UNGAwLFQkJDgUFBQUFBQ4JCRULDBgNAlYNGAwLFQkJDgUFBQUFBQ4JCRULDBgN/aoCVgQIBAQHAwMFAQIBAQIBBQMDBwQECAT9qgQIBAQHAwMFAQIBAQIBBQMDBwQECASAgBkSEhmAERkZEYAZEhIZgBEZGREDVQUEBQ4JCRUMCxkN/asNGQsMFQkIDgUFBQUFBQ4JCBUMCxkNAlUNGQsMFQkJDgUEBVUCAQIFAwIHBAQIBf2rBAkDBAcDAwUBAgICAgEFAwMHBAMJBAJVBQgEBAcCAwUCAQL+gIASGRkSgBkSERmAEhkZEoAZERIZAAABAOIAjQMeAskAIAAAExcHBhQXFjI/ARcWMjc2NC8BNzY0JyYiDwEnJiIHBhQX4uLiDQ0MJAzi4gwkDA0N4uINDQwkDOLiDCQMDQ0CjeLiDSMMDQ3h4Q0NDCMN4uIMIw0MDOLiDAwNIwwAAAABAAAAAQAAa5n0y18PPPUACwQAAAAAANivOVsAAAAA2K85WwAAAAADqwNVAAAACAACAAAAAAAAAAEAAAPA/8AAAAQAAAAAAAOrAAEAAAAAAAAAAAAAAAAAAAALBAAAAAAAAAAAAAAAAgAAAAQAAWIEAAFiBAAA4gQAAOIEAABVBAAAVQQAAOIAAAAAAAoAFAAeAEQAagCqAOoBngJkApoAAQAAAAsAigADAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAcAAAABAAAAAAACAAcAYAABAAAAAAADAAcANgABAAAAAAAEAAcAdQABAAAAAAAFAAsAFQABAAAAAAAGAAcASwABAAAAAAAKABoAigADAAEECQABAA4ABwADAAEECQACAA4AZwADAAEECQADAA4APQADAAEECQAEAA4AfAADAAEECQAFABYAIAADAAEECQAGAA4AUgADAAEECQAKADQApGZjaWNvbnMAZgBjAGkAYwBvAG4Ac1ZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGZjaWNvbnMAZgBjAGkAYwBvAG4Ac2ZjaWNvbnMAZgBjAGkAYwBvAG4Ac1JlZ3VsYXIAUgBlAGcAdQBsAGEAcmZjaWNvbnMAZgBjAGkAYwBvAG4Ac0ZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal;\n}\n.fc-icon {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: \"fcicons\" !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.fc-icon-chevron-left:before {\n  content: \"\\E900\";\n}\n.fc-icon-chevron-right:before {\n  content: \"\\E901\";\n}\n.fc-icon-chevrons-left:before {\n  content: \"\\E902\";\n}\n.fc-icon-chevrons-right:before {\n  content: \"\\E903\";\n}\n.fc-icon-minus-square:before {\n  content: \"\\E904\";\n}\n.fc-icon-plus-square:before {\n  content: \"\\E905\";\n}\n.fc-icon-x:before {\n  content: \"\\E906\";\n}\n.fc-icon {\n  display: inline-block;\n  width: 1em;\n  height: 1em;\n  text-align: center;\n}\n\n/* Buttons\n--------------------------------------------------------------------------------------------------\nLots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css\n*/\n/* reset */\n.fc-button {\n  border-radius: 0;\n  overflow: visible;\n  text-transform: none;\n  margin: 0;\n  font-family: inherit;\n  font-size: inherit;\n  line-height: inherit;\n}\n.fc-button:focus {\n  outline: 1px dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n}\n.fc-button {\n  -webkit-appearance: button;\n}\n.fc-button:not(:disabled) {\n  cursor: pointer;\n}\n.fc-button::-moz-focus-inner {\n  padding: 0;\n  border-style: none;\n}\n\n/* theme */\n.fc-button {\n  display: inline-block;\n  font-weight: 400;\n  color: #212529;\n  text-align: center;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-color: transparent;\n  border: 1px solid transparent;\n  padding: 0.4em 0.65em;\n  font-size: 1em;\n  line-height: 1.5;\n  border-radius: 0.25em;\n}\n.fc-button:hover {\n  color: #212529;\n  text-decoration: none;\n}\n.fc-button:focus {\n  outline: 0;\n  -webkit-box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);\n  box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);\n}\n.fc-button:disabled {\n  opacity: 0.65;\n}\n\n/* \"primary\" coloring */\n.fc-button-primary {\n  color: #fff;\n  background-color: #2C3E50;\n  border-color: #2C3E50;\n}\n.fc-button-primary:hover {\n  color: #fff;\n  background-color: #1e2b37;\n  border-color: #1a252f;\n}\n.fc-button-primary:focus {\n  -webkit-box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n  box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n}\n.fc-button-primary:disabled {\n  color: #fff;\n  background-color: #2C3E50;\n  border-color: #2C3E50;\n}\n.fc-button-primary:not(:disabled):active,\n.fc-button-primary:not(:disabled).fc-button-active {\n  color: #fff;\n  background-color: #1a252f;\n  border-color: #151e27;\n}\n.fc-button-primary:not(:disabled):active:focus,\n.fc-button-primary:not(:disabled).fc-button-active:focus {\n  -webkit-box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n  box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n}\n\n/* icons within buttons */\n.fc-button .fc-icon {\n  vertical-align: middle;\n  font-size: 1.5em;\n}\n\n/* Buttons Groups\n--------------------------------------------------------------------------------------------------*/\n.fc-button-group {\n  position: relative;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  vertical-align: middle;\n}\n.fc-button-group > .fc-button {\n  position: relative;\n  -webkit-box-flex: 1;\n  -ms-flex: 1 1 auto;\n  flex: 1 1 auto;\n}\n.fc-button-group > .fc-button:hover {\n  z-index: 1;\n}\n.fc-button-group > .fc-button:focus,\n.fc-button-group > .fc-button:active,\n.fc-button-group > .fc-button.fc-button-active {\n  z-index: 1;\n}\n.fc-button-group > .fc-button:not(:first-child) {\n  margin-left: -1px;\n}\n.fc-button-group > .fc-button:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.fc-button-group > .fc-button:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n/* Popover\n--------------------------------------------------------------------------------------------------*/\n.fc-unthemed .fc-popover {\n  border-width: 1px;\n  border-style: solid;\n}\n\n/* List View\n--------------------------------------------------------------------------------------------------*/\n.fc-unthemed .fc-list-item:hover td {\n  background-color: #f5f5f5;\n}\n\n/* Toolbar\n--------------------------------------------------------------------------------------------------*/\n.fc-toolbar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.fc-toolbar.fc-header-toolbar {\n  margin-bottom: 1.5em;\n}\n.fc-toolbar.fc-footer-toolbar {\n  margin-top: 1.5em;\n}\n\n/* inner content */\n.fc-toolbar > * > :not(:first-child) {\n  margin-left: 0.75em;\n}\n.fc-toolbar h2 {\n  font-size: 1.75em;\n  margin: 0;\n}\n\n/* View Structure\n--------------------------------------------------------------------------------------------------*/\n.fc-view-container {\n  position: relative;\n}\n\n/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */\n/* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */\n.fc-view-container *,\n.fc-view-container *:before,\n.fc-view-container *:after {\n  -webkit-box-sizing: content-box;\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n}\n.fc-view,\n.fc-view > table {\n  /* so dragged elements can be above the view's main element */\n  position: relative;\n  z-index: 1;\n}\n@media print {\n.fc {\n    max-width: 100% !important;\n}\n\n  /* Global Event Restyling\n  --------------------------------------------------------------------------------------------------*/\n.fc-event {\n    background: #fff !important;\n    color: #000 !important;\n    page-break-inside: avoid;\n}\n.fc-event .fc-resizer {\n    display: none;\n}\n\n  /* Table & Day-Row Restyling\n  --------------------------------------------------------------------------------------------------*/\n.fc th,\n.fc td,\n.fc hr,\n.fc thead,\n.fc tbody,\n.fc-row {\n    border-color: #ccc !important;\n    background: #fff !important;\n}\n\n  /* kill the overlaid, absolutely-positioned components */\n  /* common... */\n.fc-bg,\n.fc-bgevent-skeleton,\n.fc-highlight-skeleton,\n.fc-mirror-skeleton,\n.fc-bgevent-container,\n.fc-business-container,\n.fc-highlight-container,\n.fc-mirror-container {\n    display: none;\n}\n\n  /* don't force a min-height on rows (for DayGrid) */\n.fc tbody .fc-row {\n    height: auto !important;\n    /* undo height that JS set in distributeHeight */\n    min-height: 0 !important;\n    /* undo the min-height from each view's specific stylesheet */\n}\n.fc tbody .fc-row .fc-content-skeleton {\n    position: static;\n    /* undo .fc-rigid */\n    padding-bottom: 0 !important;\n    /* use a more border-friendly method for this... */\n}\n.fc tbody .fc-row .fc-content-skeleton tbody tr:last-child td {\n    /* only works in newer browsers */\n    padding-bottom: 1em;\n    /* ...gives space within the skeleton. also ensures min height in a way */\n}\n.fc tbody .fc-row .fc-content-skeleton table {\n    /* provides a min-height for the row, but only effective for IE, which exaggerates this value,\n       making it look more like 3em. for other browers, it will already be this tall */\n    height: 1em;\n}\n\n  /* Undo month-view event limiting. Display all events and hide the \"more\" links\n  --------------------------------------------------------------------------------------------------*/\n.fc-more-cell,\n.fc-more {\n    display: none !important;\n}\n.fc tr.fc-limited {\n    display: table-row !important;\n}\n.fc td.fc-limited {\n    display: table-cell !important;\n}\n.fc-popover {\n    display: none;\n    /* never display the \"more..\" popover in print mode */\n}\n\n  /* TimeGrid Restyling\n  --------------------------------------------------------------------------------------------------*/\n  /* undo the min-height 100% trick used to fill the container's height */\n.fc-time-grid {\n    min-height: 0 !important;\n}\n\n  /* don't display the side axis at all (\"all-day\" and time cells) */\n.fc-timeGrid-view .fc-axis {\n    display: none;\n}\n\n  /* don't display the horizontal lines */\n.fc-slats,\n.fc-time-grid hr {\n    /* this hr is used when height is underused and needs to be filled */\n    display: none !important;\n    /* important overrides inline declaration */\n}\n\n  /* let the container that holds the events be naturally positioned and create real height */\n.fc-time-grid .fc-content-skeleton {\n    position: static;\n}\n\n  /* in case there are no events, we still want some height */\n.fc-time-grid .fc-content-skeleton table {\n    height: 4em;\n}\n\n  /* kill the horizontal spacing made by the event container. event margins will be done below */\n.fc-time-grid .fc-event-container {\n    margin: 0 !important;\n}\n\n  /* TimeGrid *Event* Restyling\n  --------------------------------------------------------------------------------------------------*/\n  /* naturally position events, vertically stacking them */\n.fc-time-grid .fc-event {\n    position: static !important;\n    margin: 3px 2px !important;\n}\n\n  /* for events that continue to a future day, give the bottom border back */\n.fc-time-grid .fc-event.fc-not-end {\n    border-bottom-width: 1px !important;\n}\n\n  /* indicate the event continues via \"...\" text */\n.fc-time-grid .fc-event.fc-not-end:after {\n    content: \"...\";\n}\n\n  /* for events that are continuations from previous days, give the top border back */\n.fc-time-grid .fc-event.fc-not-start {\n    border-top-width: 1px !important;\n}\n\n  /* indicate the event is a continuation via \"...\" text */\n.fc-time-grid .fc-event.fc-not-start:before {\n    content: \"...\";\n}\n\n  /* time */\n  /* undo a previous declaration and let the time text span to a second line */\n.fc-time-grid .fc-event .fc-time {\n    white-space: normal !important;\n}\n\n  /* hide the the time that is normally displayed... */\n.fc-time-grid .fc-event .fc-time span {\n    display: none;\n}\n\n  /* ...replace it with a more verbose version (includes AM/PM) stored in an html attribute */\n.fc-time-grid .fc-event .fc-time:after {\n    content: attr(data-full);\n}\n\n  /* Vertical Scroller & Containers\n  --------------------------------------------------------------------------------------------------*/\n  /* kill the scrollbars and allow natural height */\n.fc-scroller,\n.fc-day-grid-container,\n.fc-time-grid-container {\n    /* */\n    overflow: visible !important;\n    height: auto !important;\n}\n\n  /* kill the horizontal border/padding used to compensate for scrollbars */\n.fc-row {\n    border: 0 !important;\n    margin: 0 !important;\n}\n\n  /* Button Controls\n  --------------------------------------------------------------------------------------------------*/\n.fc-button-group,\n.fc button {\n    display: none;\n    /* don't display any button-related controls */\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/daygrid/main.css":
+/*!**************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/daygrid/main.css ***!
+  \**************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* DayGridView\n--------------------------------------------------------------------------------------------------*/\n/* day row structure */\n.fc-dayGridWeek-view .fc-content-skeleton,\n.fc-dayGridDay-view .fc-content-skeleton {\n  /* there may be week numbers in these views, so no padding-top */\n  padding-bottom: 1em;\n  /* ensure a space at bottom of cell for user selecting/clicking */\n}\n.fc-dayGrid-view .fc-body .fc-row {\n  min-height: 4em;\n  /* ensure that all rows are at least this tall */\n}\n\n/* a \"rigid\" row will take up a constant amount of height because content-skeleton is absolute */\n.fc-row.fc-rigid {\n  overflow: hidden;\n}\n.fc-row.fc-rigid .fc-content-skeleton {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n/* week and day number styling */\n.fc-day-top.fc-other-month {\n  opacity: 0.3;\n}\n.fc-dayGrid-view .fc-week-number,\n.fc-dayGrid-view .fc-day-number {\n  padding: 2px;\n}\n.fc-dayGrid-view th.fc-week-number,\n.fc-dayGrid-view th.fc-day-number {\n  padding: 0 2px;\n  /* column headers can't have as much v space */\n}\n.fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {\n  float: right;\n}\n.fc-rtl .fc-dayGrid-view .fc-day-top .fc-day-number {\n  float: left;\n}\n.fc-ltr .fc-dayGrid-view .fc-day-top .fc-week-number {\n  float: left;\n  border-radius: 0 0 3px 0;\n}\n.fc-rtl .fc-dayGrid-view .fc-day-top .fc-week-number {\n  float: right;\n  border-radius: 0 0 0 3px;\n}\n.fc-dayGrid-view .fc-day-top .fc-week-number {\n  min-width: 1.5em;\n  text-align: center;\n  background-color: #f2f2f2;\n  color: #808080;\n}\n\n/* when week/day number have own column */\n.fc-dayGrid-view td.fc-week-number {\n  text-align: center;\n}\n.fc-dayGrid-view td.fc-week-number > * {\n  /* work around the way we do column resizing and ensure a minimum width */\n  display: inline-block;\n  min-width: 1.25em;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!@fullcalendar/core/main.css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/core/main.css"), "");
+exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!@fullcalendar/daygrid/main.css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/daygrid/main.css"), "");
+
+// module
+exports.push([module.i, "\n.fc-title {\n  color: #fff;\n}\n.fc-title:hover {\n  cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -39765,6 +53209,36 @@ function getWindow() {
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./FullcalendarComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SwiperComponent.vue?vue&type=style&index=0&id=5415256c&scoped=true&lang=css&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SwiperComponent.vue?vue&type=style&index=0&id=5415256c&scoped=true&lang=css& ***!
@@ -50037,6 +63511,43 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/v-calendar/lib/v-calendar.umd.min.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/v-calendar/lib/v-calendar.umd.min.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function(e,t){ true?module.exports=t(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js")):undefined})("undefined"!==typeof self?self:this,(function(e){return function(e){var t={};function r(o){if(t[o])return t[o].exports;var n=t[o]={i:o,l:!1,exports:{}};return e[o].call(n.exports,n,n.exports,r),n.l=!0,n.exports}return r.m=e,r.c=t,r.d=function(e,t,o){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},r.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(r.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)r.d(o,n,function(t){return e[t]}.bind(null,n));return o},r.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s="fb15")}({"00fd":function(e,t,r){var o=r("9e69"),n=Object.prototype,c=n.hasOwnProperty,i=n.toString,a=o?o.toStringTag:void 0;function s(e){var t=c.call(e,a),r=e[a];try{e[a]=void 0;var o=!0}catch(s){}var n=i.call(e);return o&&(t?e[a]=r:delete e[a]),n}e.exports=s},"01f9":function(e,t,r){"use strict";var o=r("2d00"),n=r("5ca1"),c=r("2aba"),i=r("32e9"),a=r("84f2"),s=r("41a0"),d=r("7f20"),u=r("38fd"),l=r("2b4c")("iterator"),f=!([].keys&&"next"in[].keys()),v="@@iterator",b="keys",h="values",p=function(){return this};e.exports=function(e,t,r,g,m,y,x){s(r,t,g);var w,k,O,j=function(e){if(!f&&e in S)return S[e];switch(e){case b:return function(){return new r(this,e)};case h:return function(){return new r(this,e)}}return function(){return new r(this,e)}},D=t+" Iterator",P=m==h,M=!1,S=e.prototype,E=S[l]||S[v]||m&&S[m],_=E||j(m),Y=m?P?j("entries"):_:void 0,C="Array"==t&&S.entries||E;if(C&&(O=u(C.call(new e)),O!==Object.prototype&&O.next&&(d(O,D,!0),o||"function"==typeof O[l]||i(O,l,p))),P&&E&&E.name!==h&&(M=!0,_=function(){return E.call(this)}),o&&!x||!f&&!M&&S[l]||i(S,l,_),a[t]=_,a[D]=p,m)if(w={values:P?_:j(h),keys:y?_:j(b),entries:Y},x)for(k in w)k in S||c(S,k,w[k]);else n(n.P+n.F*(f||M),t,w);return w}},"02f4":function(e,t,r){var o=r("4588"),n=r("be13");e.exports=function(e){return function(t,r){var c,i,a=String(n(t)),s=o(r),d=a.length;return s<0||s>=d?e?"":void 0:(c=a.charCodeAt(s),c<55296||c>56319||s+1===d||(i=a.charCodeAt(s+1))<56320||i>57343?e?a.charAt(s):c:e?a.slice(s,s+2):i-56320+(c-55296<<10)+65536)}}},"0390":function(e,t,r){"use strict";var o=r("02f4")(!0);e.exports=function(e,t,r){return t+(r?o(e,t).length:1)}},"03dd":function(e,t,r){var o=r("eac5"),n=r("57a5"),c=Object.prototype,i=c.hasOwnProperty;function a(e){if(!o(e))return n(e);var t=[];for(var r in Object(e))i.call(e,r)&&"constructor"!=r&&t.push(r);return t}e.exports=a},"04d4":function(e,t,r){"use strict";var o=r("c539"),n=r.n(o);n.a},"0621":function(e,t,r){var o=r("9e69"),n=r("d370"),c=r("6747"),i=o?o.isConcatSpreadable:void 0;function a(e){return c(e)||n(e)||!!(i&&e&&e[i])}e.exports=a},"0733":function(e,t,r){"use strict";r.d(t,"b",(function(){return c})),r.d(t,"a",(function(){return i}));var o=r("2fa3"),n=r("9404");const c=function(e,t){if(!e||!e.addEventListener||!Object(n["j"])(t))return null;let r=!1,c=!1;const i=function(){return r=!0},a=function(){return r=!1},s=function(e){if(r)return r=!1,c=!0,void t(e);"click"!==e.type||c||t(e),c=!1};return Object(o["n"])(e,"touchstart",i),Object(o["n"])(e,"touchmove",a),Object(o["n"])(e,"click",s),Object(o["n"])(e,"touchend",s),function(){Object(o["m"])(e,"touchstart",i),Object(o["m"])(e,"touchmove",a),Object(o["m"])(e,"click",s),Object(o["m"])(e,"touchend",s)}},i=function(e,t,{maxSwipeTime:r,minHorizontalSwipeDistance:c,maxVerticalSwipeDistance:i}){if(!e||!e.addEventListener||!Object(n["j"])(t))return null;let a=0,s=0,d=null,u=!1;function l(e){const t=e.changedTouches[0];a=t.screenX,s=t.screenY,d=(new Date).getTime(),u=!0}function f(e){if(!u)return;u=!1;const o=e.changedTouches[0],n=o.screenX-a,l=o.screenY-s,f=(new Date).getTime()-d;if(f<r&&Math.abs(n)>=c&&Math.abs(l)<=i){const e={toLeft:!1,toRight:!1};n<0?e.toLeft=!0:e.toRight=!0,t(e)}}return Object(o["n"])(e,"touchstart",l),Object(o["n"])(e,"touchend",f),function(){Object(o["m"])(e,"touchstart",l),Object(o["m"])(e,"touchend",f)}}},"07c7":function(e,t){function r(){return!1}e.exports=r},"07e3":function(e,t){var r={}.hasOwnProperty;e.exports=function(e,t){return r.call(e,t)}},"087d":function(e,t){function r(e,t){var r=-1,o=t.length,n=e.length;while(++r<o)e[n+r]=t[r];return e}e.exports=r},"08cc":function(e,t,r){var o=r("1a8c");function n(e){return e===e&&!o(e)}e.exports=n},"099a":function(e,t){function r(e,t,r){var o=r-1,n=e.length;while(++o<n)if(e[o]===t)return o;return-1}e.exports=r},"0b07":function(e,t,r){var o=r("34ac"),n=r("3698");function c(e,t){var r=n(e,t);return o(r)?r:void 0}e.exports=c},"0bfb":function(e,t,r){"use strict";var o=r("cb7c");e.exports=function(){var e=o(this),t="";return e.global&&(t+="g"),e.ignoreCase&&(t+="i"),e.multiline&&(t+="m"),e.unicode&&(t+="u"),e.sticky&&(t+="y"),t}},"0d24":function(e,t,r){(function(e){var o=r("2b3e"),n=r("07c7"),c=t&&!t.nodeType&&t,i=c&&"object"==typeof e&&e&&!e.nodeType&&e,a=i&&i.exports===c,s=a?o.Buffer:void 0,d=s?s.isBuffer:void 0,u=d||n;e.exports=u}).call(this,r("62e4")(e))},"0d58":function(e,t,r){var o=r("ce10"),n=r("e11e");e.exports=Object.keys||function(e){return o(e,n)}},"0f0f":function(e,t,r){var o=r("8eeb"),n=r("9934");function c(e,t){return e&&o(t,n(t),e)}e.exports=c},"0f5c":function(e,t,r){var o=r("159a");function n(e,t,r){return null==e?e:o(e,t,r)}e.exports=n},"100e":function(e,t,r){var o=r("cd9d"),n=r("2286"),c=r("c1c9");function i(e,t){return c(n(e,t,o),e+"")}e.exports=i},1041:function(e,t,r){var o=r("8eeb"),n=r("a029");function c(e,t){return o(e,n(e),t)}e.exports=c},"11e9":function(e,t,r){var o=r("52a7"),n=r("4630"),c=r("6821"),i=r("6a99"),a=r("69a8"),s=r("c69a"),d=Object.getOwnPropertyDescriptor;t.f=r("9e1e")?d:function(e,t){if(e=c(e),t=i(t,!0),s)try{return d(e,t)}catch(r){}if(a(e,t))return n(!o.f.call(e,t),e[t])}},"126d":function(e,t,r){var o=r("6da8"),n=r("aaec"),c=r("d094");function i(e){return n(e)?c(e):o(e)}e.exports=i},1290:function(e,t){function r(e){var t=typeof e;return"string"==t||"number"==t||"symbol"==t||"boolean"==t?"__proto__"!==e:null===e}e.exports=r},1310:function(e,t){function r(e){return null!=e&&"object"==typeof e}e.exports=r},1315:function(e,t,r){"use strict";r.d(t,"a",(function(){return l}));var o=r("8bbf"),n=r.n(o),c=r("9404");function i(e){return Object(c["m"])(e)&&(e={min:e}),Object(c["h"])(e)||(e=[e]),e.map((function(e){return Object(c["e"])(e,"raw")?e.raw:Object(c["p"])(e,(function(e,t){return t=Object(c["d"])({min:"min-width",max:"max-width"},t,t),`(${t}: ${e})`})).join(" and ")})).join(", ")}var a=r("85a9");let s=!1,d=!1,u=null;function l(e=a,t){u&&!t||s||(s=!0,d=!0,u=new n.a({data(){return{matches:[],queries:[]}},methods:{refreshQueries(){var t=this;this.queries=Object(c["q"])(e,(function(e){const r=window.matchMedia(i(e));return r.addListener(t.refreshMatches),r})),this.refreshMatches()},refreshMatches(){this.matches=Object(c["u"])(this.queries).filter((function(e){return e[1].matches})).map((function(e){return e[0]}))}}}),s=!1)}n.a.mixin({beforeCreate(){s||l()},mounted(){d&&u&&(u.refreshQueries(),d=!1)},computed:{$screens(){return function(e,t){return u.matches.reduce((function(t,r){return Object(c["e"])(e,r)?e[r]:t}),Object(c["n"])(t)?e.default:t)}}}})},1349:function(e,t,r){var o=r("f064");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("61acf245",o,!0,{sourceMap:!1,shadowMode:!1})},1368:function(e,t,r){var o=r("da03"),n=function(){var e=/[^.]+$/.exec(o&&o.keys&&o.keys.IE_PROTO||"");return e?"Symbol(src)_1."+e:""}();function c(e){return!!n&&n in e}e.exports=c},1495:function(e,t,r){var o=r("86cc"),n=r("cb7c"),c=r("0d58");e.exports=r("9e1e")?Object.defineProperties:function(e,t){n(e);var r,i=c(t),a=i.length,s=0;while(a>s)o.f(e,r=i[s++],t[r]);return e}},"159a":function(e,t,r){var o=r("32b3"),n=r("e2e4"),c=r("c098"),i=r("1a8c"),a=r("f4d6");function s(e,t,r,s){if(!i(e))return e;t=n(t,e);var d=-1,u=t.length,l=u-1,f=e;while(null!=f&&++d<u){var v=a(t[d]),b=r;if(d!=l){var h=f[v];b=s?s(h,v,f):void 0,void 0===b&&(b=i(h)?h:c(t[d+1])?[]:{})}o(f,v,b),f=f[v]}return e}e.exports=s},"15f3":function(e,t,r){var o=r("89d9"),n=r("8604");function c(e,t){return o(e,t,(function(t,r){return n(e,r)}))}e.exports=c},1838:function(e,t,r){var o=r("c05f"),n=r("9b02"),c=r("8604"),i=r("f608"),a=r("08cc"),s=r("20ec"),d=r("f4d6"),u=1,l=2;function f(e,t){return i(e)&&a(t)?s(d(e),t):function(r){var i=n(r,e);return void 0===i&&i===t?c(r,e):o(t,i,u|l)}}e.exports=f},"18d8":function(e,t,r){var o=r("234d"),n=/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,c=/\\(\\)?/g,i=o((function(e){var t=[];return 46===e.charCodeAt(0)&&t.push(""),e.replace(n,(function(e,r,o,n){t.push(o?n.replace(c,"$1"):r||e)})),t}));e.exports=i},"1a2d":function(e,t,r){var o=r("42a2"),n=r("1310"),c="[object Map]";function i(e){return n(e)&&o(e)==c}e.exports=i},"1a8c":function(e,t){function r(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)}e.exports=r},"1bac":function(e,t,r){var o=r("7d1f"),n=r("a029"),c=r("9934");function i(e){return o(e,c,n)}e.exports=i},"1bc3":function(e,t,r){var o=r("f772");e.exports=function(e,t){if(!o(e))return e;var r,n;if(t&&"function"==typeof(r=e.toString)&&!o(n=r.call(e)))return n;if("function"==typeof(r=e.valueOf)&&!o(n=r.call(e)))return n;if(!t&&"function"==typeof(r=e.toString)&&!o(n=r.call(e)))return n;throw TypeError("Can't convert object to primitive value")}},"1c3c":function(e,t,r){var o=r("9e69"),n=r("2474"),c=r("9638"),i=r("a2be"),a=r("edfa"),s=r("ac41"),d=1,u=2,l="[object Boolean]",f="[object Date]",v="[object Error]",b="[object Map]",h="[object Number]",p="[object RegExp]",g="[object Set]",m="[object String]",y="[object Symbol]",x="[object ArrayBuffer]",w="[object DataView]",k=o?o.prototype:void 0,O=k?k.valueOf:void 0;function j(e,t,r,o,k,j,D){switch(r){case w:if(e.byteLength!=t.byteLength||e.byteOffset!=t.byteOffset)return!1;e=e.buffer,t=t.buffer;case x:return!(e.byteLength!=t.byteLength||!j(new n(e),new n(t)));case l:case f:case h:return c(+e,+t);case v:return e.name==t.name&&e.message==t.message;case p:case m:return e==t+"";case b:var P=a;case g:var M=o&d;if(P||(P=s),e.size!=t.size&&!M)return!1;var S=D.get(e);if(S)return S==t;o|=u,D.set(e,t);var E=i(P(e),P(t),o,k,j,D);return D["delete"](e),E;case y:if(O)return O.call(e)==O.call(t)}return!1}e.exports=j},"1cec":function(e,t,r){var o=r("0b07"),n=r("2b3e"),c=o(n,"Promise");e.exports=c},"1ec9":function(e,t,r){var o=r("f772"),n=r("e53d").document,c=o(n)&&o(n.createElement);e.exports=function(e){return c?n.createElement(e):{}}},"1efc":function(e,t){function r(e){var t=this.has(e)&&delete this.__data__[e];return this.size-=t?1:0,t}e.exports=r},"1fc8":function(e,t,r){var o=r("4245");function n(e,t){var r=o(this,e),n=r.size;return r.set(e,t),this.size+=r.size==n?0:1,this}e.exports=n},"20ec":function(e,t){function r(e,t){return function(r){return null!=r&&(r[e]===t&&(void 0!==t||e in Object(r)))}}e.exports=r},"214f":function(e,t,r){"use strict";r("b0c5");var o=r("2aba"),n=r("32e9"),c=r("79e5"),i=r("be13"),a=r("2b4c"),s=r("520a"),d=a("species"),u=!c((function(){var e=/./;return e.exec=function(){var e=[];return e.groups={a:"7"},e},"7"!=="".replace(e,"$<a>")})),l=function(){var e=/(?:)/,t=e.exec;e.exec=function(){return t.apply(this,arguments)};var r="ab".split(e);return 2===r.length&&"a"===r[0]&&"b"===r[1]}();e.exports=function(e,t,r){var f=a(e),v=!c((function(){var t={};return t[f]=function(){return 7},7!=""[e](t)})),b=v?!c((function(){var t=!1,r=/a/;return r.exec=function(){return t=!0,null},"split"===e&&(r.constructor={},r.constructor[d]=function(){return r}),r[f](""),!t})):void 0;if(!v||!b||"replace"===e&&!u||"split"===e&&!l){var h=/./[f],p=r(i,f,""[e],(function(e,t,r,o,n){return t.exec===s?v&&!n?{done:!0,value:h.call(t,r,o)}:{done:!0,value:e.call(r,t,o)}:{done:!1}})),g=p[0],m=p[1];o(String.prototype,e,g),n(RegExp.prototype,f,2==t?function(e,t){return m.call(e,this,t)}:function(e){return m.call(e,this)})}}},2285:function(e,t,r){"use strict";var o=r("6f6a"),n=r.n(o);n.a},2286:function(e,t,r){var o=r("85e3"),n=Math.max;function c(e,t,r){return t=n(void 0===t?e.length-1:t,0),function(){var c=arguments,i=-1,a=n(c.length-t,0),s=Array(a);while(++i<a)s[i]=c[t+i];i=-1;var d=Array(t+1);while(++i<t)d[i]=c[i];return d[t]=r(s),o(e,this,d)}}e.exports=c},"22f3":function(e,t,r){"use strict";r.d(t,"a",(function(){return i}));var o=r("cfe5"),n=r("2fa3"),c=r("9404");class i{constructor({key:e,hashcode:t,highlight:r,content:i,dot:a,bar:s,popover:d,dates:u,excludeDates:l,excludeMode:f,customData:v,order:b,pinPage:h},p,g){var m=this;this.key=Object(c["n"])(e)?Object(n["c"])():e,this.hashcode=t,this.customData=v,this.order=b||0,this.dateOpts={order:b,locale:g},this.pinPage=h,r&&(this.highlight=p.normalizeHighlight(r)),i&&(this.content=p.normalizeContent(i)),a&&(this.dot=p.normalizeDot(a)),s&&(this.bar=p.normalizeBar(s)),d&&(this.popover=d),u&&(this.dates=Object(c["h"])(u)?u:[u]),this.hasDates=Object(n["b"])(this.dates),l&&(this.excludeDates=Object(c["h"])(l)?l:[l]),this.hasExcludeDates=Object(n["b"])(this.excludeDates),this.excludeMode=f||"intersects",this.dates=(this.hasDates&&this.dates||this.hasExcludeDates&&[{}]||[]).map((function(e){return e&&(e instanceof o["a"]?e:new o["a"](e,m.dateOpts))})).filter((function(e){return e})),this.excludeDates=(this.hasExcludeDates&&this.excludeDates||[]).map((function(e){return e&&(e instanceof o["a"]?e:new o["a"](e,m.dateOpts))})).filter((function(e){return e})),this.isComplex=Object(c["t"])(this.dates,(function(e){return e.isComplex}))}intersectsDate(e){return!this.excludesDate(e)&&(this.dates.find((function(t){return t.intersectsDate(e)}))||!1)}includesDate(e){return e=e instanceof o["a"]?e:new o["a"](e,this.dateOpts),!this.excludesDate(e)&&(this.dates.find((function(t){return t.includesDate(e)}))||!1)}excludesDate(e){var t=this;return e=e instanceof o["a"]?e:new o["a"](e,this.dateOpts),this.hasExcludeDates&&this.excludeDates.find((function(r){return"intersects"===t.excludeMode&&r.intersectsDate(e)||"includes"===t.excludeMode&&r.includesDate(e)}))}includesDay(e){return!this.excludesDay(e)&&(this.dates.find((function(t){return t.includesDay(e)}))||!1)}excludesDay(e){return this.hasExcludeDates&&this.excludeDates.find((function(t){return t.includesDay(e)}))}}},"230e":function(e,t,r){var o=r("d3f4"),n=r("7726").document,c=o(n)&&o(n.createElement);e.exports=function(e){return c?n.createElement(e):{}}},"234d":function(e,t,r){var o=r("e380"),n=500;function c(e){var t=o(e,(function(e){return r.size===n&&r.clear(),e})),r=t.cache;return t}e.exports=c},2350:function(e,t){function r(e,t){var r=e[1]||"",n=e[3];if(!n)return r;if(t&&"function"===typeof btoa){var c=o(n),i=n.sources.map((function(e){return"/*# sourceURL="+n.sourceRoot+e+" */"}));return[r].concat(i).concat([c]).join("\n")}return[r].join("\n")}function o(e){var t=btoa(unescape(encodeURIComponent(JSON.stringify(e)))),r="sourceMappingURL=data:application/json;charset=utf-8;base64,"+t;return"/*# "+r+" */"}e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var o=r(t,e);return t[2]?"@media "+t[2]+"{"+o+"}":o})).join("")},t.i=function(e,r){"string"===typeof e&&(e=[[null,e,""]]);for(var o={},n=0;n<this.length;n++){var c=this[n][0];"number"===typeof c&&(o[c]=!0)}for(n=0;n<e.length;n++){var i=e[n];"number"===typeof i[0]&&o[i[0]]||(r&&!i[2]?i[2]=r:r&&(i[2]="("+i[2]+") and ("+r+")"),t.push(i))}},t}},"23a5":function(e){e.exports=JSON.parse('{"maxSwipeTime":300,"minHorizontalSwipeDistance":60,"maxVerticalSwipeDistance":80}')},"23c6":function(e,t,r){var o=r("2d95"),n=r("2b4c")("toStringTag"),c="Arguments"==o(function(){return arguments}()),i=function(e,t){try{return e[t]}catch(r){}};e.exports=function(e){var t,r,a;return void 0===e?"Undefined":null===e?"Null":"string"==typeof(r=i(t=Object(e),n))?r:c?o(t):"Object"==(a=o(t))&&"function"==typeof t.callee?"Arguments":a}},2411:function(e,t,r){var o=r("f909"),n=r("2ec1"),c=n((function(e,t,r,n){o(e,t,r,n)}));e.exports=c},"242e":function(e,t,r){var o=r("72af"),n=r("ec69");function c(e,t){return e&&o(e,t,n)}e.exports=c},2474:function(e,t,r){var o=r("2b3e"),n=o.Uint8Array;e.exports=n},2478:function(e,t,r){var o=r("4245");function n(e){return o(this,e).get(e)}e.exports=n},2524:function(e,t,r){var o=r("6044"),n="__lodash_hash_undefined__";function c(e,t){var r=this.__data__;return this.size+=this.has(e)?0:1,r[e]=o&&void 0===t?n:t,this}e.exports=c},"253c":function(e,t,r){var o=r("3729"),n=r("1310"),c="[object Arguments]";function i(e){return n(e)&&o(e)==c}e.exports=i},2593:function(e,t,r){var o=r("15f3"),n=r("c6cf"),c=n((function(e,t){return null==e?{}:o(e,t)}));e.exports=c},"26e8":function(e,t){function r(e,t){return null!=e&&t in Object(e)}e.exports=r},2768:function(e,t){function r(e){return null==e}e.exports=r},"28a5":function(e,t,r){"use strict";var o=r("aae3"),n=r("cb7c"),c=r("ebd6"),i=r("0390"),a=r("9def"),s=r("5f1b"),d=r("520a"),u=r("79e5"),l=Math.min,f=[].push,v="split",b="length",h="lastIndex",p=4294967295,g=!u((function(){RegExp(p,"y")}));r("214f")("split",2,(function(e,t,r,u){var m;return m="c"=="abbc"[v](/(b)*/)[1]||4!="test"[v](/(?:)/,-1)[b]||2!="ab"[v](/(?:ab)*/)[b]||4!="."[v](/(.?)(.?)/)[b]||"."[v](/()()/)[b]>1||""[v](/.?/)[b]?function(e,t){var n=String(this);if(void 0===e&&0===t)return[];if(!o(e))return r.call(n,e,t);var c,i,a,s=[],u=(e.ignoreCase?"i":"")+(e.multiline?"m":"")+(e.unicode?"u":"")+(e.sticky?"y":""),l=0,v=void 0===t?p:t>>>0,g=new RegExp(e.source,u+"g");while(c=d.call(g,n)){if(i=g[h],i>l&&(s.push(n.slice(l,c.index)),c[b]>1&&c.index<n[b]&&f.apply(s,c.slice(1)),a=c[0][b],l=i,s[b]>=v))break;g[h]===c.index&&g[h]++}return l===n[b]?!a&&g.test("")||s.push(""):s.push(n.slice(l)),s[b]>v?s.slice(0,v):s}:"0"[v](void 0,0)[b]?function(e,t){return void 0===e&&0===t?[]:r.call(this,e,t)}:r,[function(r,o){var n=e(this),c=void 0==r?void 0:r[t];return void 0!==c?c.call(r,n,o):m.call(String(n),r,o)},function(e,t){var o=u(m,e,this,t,m!==r);if(o.done)return o.value;var d=n(e),f=String(this),v=c(d,RegExp),b=d.unicode,h=(d.ignoreCase?"i":"")+(d.multiline?"m":"")+(d.unicode?"u":"")+(g?"y":"g"),y=new v(g?d:"^(?:"+d.source+")",h),x=void 0===t?p:t>>>0;if(0===x)return[];if(0===f.length)return null===s(y,f)?[f]:[];var w=0,k=0,O=[];while(k<f.length){y.lastIndex=g?k:0;var j,D=s(y,g?f:f.slice(k));if(null===D||(j=l(a(y.lastIndex+(g?0:k)),f.length))===w)k=i(f,k,b);else{if(O.push(f.slice(w,k)),O.length===x)return O;for(var P=1;P<=D.length-1;P++)if(O.push(D[P]),O.length===x)return O;k=w=j}}return O.push(f.slice(w)),O}]}))},"28c9":function(e,t){function r(){this.__data__=[],this.size=0}e.exports=r},"294c":function(e,t){e.exports=function(e){try{return!!e()}catch(t){return!0}}},"29ae":function(e,t,r){"use strict";r.d(t,"a",(function(){return P}));r("6b54");var o=r("bd86"),n=(r("ac6a"),r("386d"),r("a481"),r("4917"),r("3b2b"),r("9404"));const c=/d{1,2}|W{1,4}|M{1,4}|YY(?:YY)?|S{1,3}|Do|ZZ|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g,i=/\d\d?/,a=/\d{3}/,s=/\d{4}/,d=/[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF/]+(\s*?[\u0600-\u06FF]+){1,2}/i,u=/\[([^]*?)\]/gm,l=function(){};function f(e){return function(t,r,o){const n=o[e].indexOf(r.charAt(0).toUpperCase()+r.substr(1).toLowerCase());~n&&(t.month=n)}}function v(e,t){e=String(e),t=t||2;while(e.length<t)e="0"+e;return e}const b={D(e){return e.getDate()},DD(e){return v(e.getDate())},Do(e,t){return t.DoFn(e.getDate())},d(e){return e.getDay()},dd(e){return v(e.getDay())},W(e,t){return t.dayNamesNarrow[e.getDay()]},WW(e,t){return t.dayNamesShorter[e.getDay()]},WWW(e,t){return t.dayNamesShort[e.getDay()]},WWWW(e,t){return t.dayNames[e.getDay()]},M(e){return e.getMonth()+1},MM(e){return v(e.getMonth()+1)},MMM(e,t){return t.monthNamesShort[e.getMonth()]},MMMM(e,t){return t.monthNames[e.getMonth()]},YY(e){return String(e.getFullYear()).substr(2)},YYYY(e){return v(e.getFullYear(),4)},h(e){return e.getHours()%12||12},hh(e){return v(e.getHours()%12||12)},H(e){return e.getHours()},HH(e){return v(e.getHours())},m(e){return e.getMinutes()},mm(e){return v(e.getMinutes())},s(e){return e.getSeconds()},ss(e){return v(e.getSeconds())},S(e){return Math.round(e.getMilliseconds()/100)},SS(e){return v(Math.round(e.getMilliseconds()/10),2)},SSS(e){return v(e.getMilliseconds(),3)},a(e,t){return e.getHours()<12?t.amPm[0]:t.amPm[1]},A(e,t){return e.getHours()<12?t.amPm[0].toUpperCase():t.amPm[1].toUpperCase()},ZZ(e){const t=e.getTimezoneOffset();return(t>0?"-":"+")+v(100*Math.floor(Math.abs(t)/60)+Math.abs(t)%60,4)}},h={D:[i,function(e,t){e.day=t}],Do:[new RegExp(i.source+d.source),function(e,t){e.day=parseInt(t,10)}],d:[i,l],W:[d,l],M:[i,function(e,t){e.month=t-1}],MMM:[d,f("monthNamesShort")],MMMM:[d,f("monthNames")],YY:[i,function(e,t){const r=new Date,o=+r.getFullYear().toString().substr(0,2);e.year=`${t>68?o-1:o}${t}`}],YYYY:[s,function(e,t){e.year=t}],S:[/\d/,function(e,t){e.millisecond=100*t}],SS:[/\d{2}/,function(e,t){e.millisecond=10*t}],SSS:[a,function(e,t){e.millisecond=t}],h:[i,function(e,t){e.hour=t}],m:[i,function(e,t){e.minute=t}],s:[i,function(e,t){e.second=t}],a:[d,function(e,t,r){const o=t.toLowerCase();o===r.amPm[0]?e.isPm=!1:o===r.amPm[1]&&(e.isPm=!0)}],ZZ:[/([\+\-]\d\d:?\d\d|Z)/,function(e,t){"Z"===t&&(t="+00:00");const r=(""+t).match(/([+-]|\d\d)/gi);if(r){const t=60*r[1]+parseInt(r[2],10);e.timezoneOffset="+"===r[0]?t:-t}}]};h.DD=h.D,h.dd=h.d,h.WWWW=h.WWW=h.WW=h.W,h.MM=h.M,h.mm=h.m,h.hh=h.H=h.HH=h.h,h.ss=h.s,h.A=h.a;const p=function(e,t,r){if(n["k"]&&(e=new Date(e)),!Object(n["i"])(e))throw new Error("Invalid Date in fecha.format");t=r.masks[t]||t;const o=[];return t=t.replace(u,(function(e,t){return o.push(t),"??"})),t=t.replace(c,(function(t){return t in b?b[t](e,r):t.slice(1,t.length-1)})),t.replace(/\?\?/g,(function(){return o.shift()}))},g=function(e,t,r){if("string"!==typeof t)throw new Error("Invalid mask in fecha.parse");if(t=r.masks[t]||t,e.length>1e3)return!1;let o=!0;const n={};if(t.replace(c,(function(t){if(h[t]){const c=h[t],i=e.search(c[0]);~i?e.replace(c[0],(function(t){return c[1](n,t,r),e=e.substr(i+t.length),t})):o=!1}return h[t]?"":t.slice(1,t.length-1)})),!o)return!1;const i=new Date;let a;return!0===n.isPm&&null!=n.hour&&12!==+n.hour?n.hour=+n.hour+12:!1===n.isPm&&12===+n.hour&&(n.hour=0),null!=n.timezoneOffset?(n.minute=+(n.minute||0)-+n.timezoneOffset,a=new Date(Date.UTC(n.year||i.getFullYear(),n.month||0,n.day||1,n.hour||0,n.minute||0,n.second||0,n.millisecond||0))):a=new Date(n.year||i.getFullYear(),n.month||0,n.day||1,n.hour||0,n.minute||0,n.second||0,n.millisecond||0),a},m=function(e,t,r){const o=Object(n["h"])(t)&&t||[Object(n["m"])(t)&&t||"YYYY-MM-DD"];return o.map((function(t){return g(e,t,r)})).find((function(e){return e}))||new Date(e)};var y=r("f15d"),x=r("2fa3");function w(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function k(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?w(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):w(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}const O=7,j=[31,28,31,30,31,30,31,31,30,31,30,31];function D(e,t){const r=(new Intl.DateTimeFormat).resolvedOptions().locale;let o;Object(n["m"])(e)?o=e:Object(n["e"])(e,"id")&&(o=e.id),o=(o||r).toLowerCase();const c=Object.keys(t),i=function(e){return c.find((function(t){return t.toLowerCase()===e}))};o=i(o)||i(o.substring(0,2))||r;const a=k(k(k({},t["en-IE"]),t[o]),{},{id:o});return e=Object(n["l"])(e)?Object(n["c"])(e,a):a,e}class P{constructor(e,t=y["a"]){const{id:r,firstDayOfWeek:o,masks:c}=D(e,t);this.id=r,this.firstDayOfWeek=Object(n["a"])(o,1,O),this.masks=c,this.dayNames=this.getDayNames("long"),this.dayNamesShort=this.getDayNames("short"),this.dayNamesShorter=this.dayNamesShort.map((function(e){return e.substring(0,2)})),this.dayNamesNarrow=this.getDayNames("narrow"),this.monthNames=this.getMonthNames("long"),this.monthNamesShort=this.getMonthNames("short"),this.monthData={},this.getMonthComps=this.getMonthComps.bind(this),this.parse=this.parse.bind(this),this.format=this.format.bind(this),this.toDate=this.toDate.bind(this),this.toPage=this.toPage.bind(this)}parse(e,t){return m(e,t||this.masks.L,this)}format(e,t){return p(e,t||this.masks.L,this)}toDate(e,t){if(Object(n["i"])(e))return new Date(e.getTime());if(Object(n["k"])(e))return new Date(e);if(Object(n["m"])(e))return this.parse(e,t);if(Object(n["l"])(e)){const t=new Date;return new Date(e.year||t.getFullYear(),e.month||t.getMonth(),e.day||t.getDate())}return e}toPage(e,t){return Object(n["k"])(e)?Object(x["a"])(t,e):Object(n["m"])(e)?Object(x["p"])(this.toDate(e)):Object(n["i"])(e)?Object(x["p"])(e):Object(n["l"])(e)?e:null}getMonthDates(e=2e3){const t=[];for(let r=0;r<12;r++)t.push(new Date(e,r,15));return t}getMonthNames(e){const t=new Intl.DateTimeFormat(this.id,{month:e,timezome:"UTC"});return this.getMonthDates().map((function(e){return t.format(e)}))}getWeekdayDates({year:e=2e3,utc:t=!1,firstDayOfWeek:r=this.firstDayOfWeek}={}){const o=[];for(let n=1,c=0;c<O;n++){const i=t?new Date(Date.UTC(e,0,n)):new Date(e,0,n),a=t?i.getUTCDay():i.getDay();(a===r-1||c>0)&&(o.push(i),c++)}return o}getDayNames(e){const t=new Intl.DateTimeFormat(this.id,{weekday:e,timeZone:"UTC"});return this.getWeekdayDates({firstDayOfWeek:1,utc:!0}).map((function(e){return t.format(e)}))}getMonthComps(e,t){const r=`${e}-${t}`;let o=this.monthData[r];if(!o){const n=t%4===0&&t%100!==0||t%400===0,c=new Date(t,e-1,1).getDay()+1,i=2===e&&n?29:j[e-1],a=Math.ceil((i+Math.abs(c-this.firstDayOfWeek))/O);o={firstDayOfWeek:this.firstDayOfWeek,inLeapYear:n,firstWeekday:c,days:i,weeks:a,month:e,year:t},this.monthData[r]=o}return o}getThisMonthComps(){const e=new Date;return this.getMonthComps(e.getMonth()+1,e.getFullYear())}getPrevMonthComps(e,t){return 1===e?this.getMonthComps(12,t-1):this.getMonthComps(e-1,t)}getNextMonthComps(e,t){return 12===e?this.getMonthComps(1,t+1):this.getMonthComps(e+1,t)}getDayFromDate(e){if(!e)return null;const t=e.getMonth()+1,r=e.getUTCFullYear(),o=this.getMonthComps(t,r),n=e.getDate(),c=o.days-n+1,i=e.getDay()+1,a=Math.floor((n-1)/7+1),s=Math.floor((o.days-n)/7+1),d=Math.ceil((n+Math.abs(o.firstWeekday-o.firstDayOfWeek))/7),u=o.weeks-d+1;return{day:n,dayFromEnd:c,weekday:i,weekdayOrdinal:a,weekdayOrdinalFromEnd:s,week:d,weekFromEnd:u,month:t,year:r,date:e,dateTime:e.getTime()}}getCalendarDays({monthComps:e,prevMonthComps:t,nextMonthComps:r}){const o=[],{firstDayOfWeek:n,firstWeekday:c}=e,i=c+(c<n?O:0)-n;let a=!0,s=!1,d=!1;const u=new Intl.DateTimeFormat(this.id,{weekday:"long",year:"numeric",month:"long",day:"numeric"});let l=t.days-i+1,f=t.days-l+1,v=Math.floor((l-1)/O+1),b=1,h=t.weeks,p=1,g=t.month,m=t.year;const y=new Date,x=y.getDate(),w=y.getMonth()+1,k=y.getFullYear();for(let j=1;j<=6;j++){for(let t=1,i=n;t<=O;t++,i+=i===O?1-O:1){a&&i===c&&(l=1,f=e.days,v=Math.floor((l-1)/O+1),b=Math.floor((e.days-l)/O+1),h=1,p=e.weeks,g=e.month,m=e.year,a=!1,s=!0);const n=new Date(m,g-1,l),y=this.format(n,"YYYY-MM-DD"),D=t,P=O-t,M=l===x&&g===w&&m===k,S=s&&1===l,E=s&&l===e.days,_=1===j,Y=6===j,C=1===t,I=t===O;o.push({id:y,label:l.toString(),ariaLabel:u.format(n),day:l,dayFromEnd:f,weekday:i,weekdayPosition:D,weekdayPositionFromEnd:P,weekdayOrdinal:v,weekdayOrdinalFromEnd:b,week:h,weekFromEnd:p,month:g,year:m,date:n,dateTime:n.getTime(),isToday:M,isFirstDay:S,isLastDay:E,inMonth:s,inPrevMonth:a,inNextMonth:d,onTop:_,onBottom:Y,onLeft:C,onRight:I,classes:["id-"+y,"day-"+l,"day-from-end-"+f,"weekday-"+i,"weekday-position-"+D,"weekday-ordinal-"+v,"weekday-ordinal-from-end-"+b,"week-"+h,"week-from-end-"+p,{"is-today":M,"is-first-day":S,"is-last-day":E,"in-month":s,"in-prev-month":a,"in-next-month":d,"on-top":_,"on-bottom":Y,"on-left":C,"on-right":I}]}),s&&E?(s=!1,d=!0,l=1,f=r.days,v=1,b=Math.floor((r.days-l)/O+1),h=1,p=r.weeks,g=r.month,m=r.year):(l++,f--,v=Math.floor((l-1)/O+1),b=Math.floor((e.days-l)/O+1))}h++,p--}return o}}},"29f3":function(e,t){var r=Object.prototype,o=r.toString;function n(e){return o.call(e)}e.exports=n},"2aba":function(e,t,r){var o=r("7726"),n=r("32e9"),c=r("69a8"),i=r("ca5a")("src"),a=r("fa5b"),s="toString",d=(""+a).split(s);r("8378").inspectSource=function(e){return a.call(e)},(e.exports=function(e,t,r,a){var s="function"==typeof r;s&&(c(r,"name")||n(r,"name",t)),e[t]!==r&&(s&&(c(r,i)||n(r,i,e[t]?""+e[t]:d.join(String(t)))),e===o?e[t]=r:a?e[t]?e[t]=r:n(e,t,r):(delete e[t],n(e,t,r)))})(Function.prototype,s,(function(){return"function"==typeof this&&this[i]||a.call(this)}))},"2aeb":function(e,t,r){var o=r("cb7c"),n=r("1495"),c=r("e11e"),i=r("613b")("IE_PROTO"),a=function(){},s="prototype",d=function(){var e,t=r("230e")("iframe"),o=c.length,n="<",i=">";t.style.display="none",r("fab2").appendChild(t),t.src="javascript:",e=t.contentWindow.document,e.open(),e.write(n+"script"+i+"document.F=Object"+n+"/script"+i),e.close(),d=e.F;while(o--)delete d[s][c[o]];return d()};e.exports=Object.create||function(e,t){var r;return null!==e?(a[s]=o(e),r=new a,a[s]=null,r[i]=e):r=d(),void 0===t?r:n(r,t)}},"2af9":function(e,t,r){"use strict";r.r(t),r.d(t,"Calendar",(function(){return ot})),r.d(t,"CalendarNav",(function(){return Pe})),r.d(t,"DatePicker",(function(){return ht})),r.d(t,"Popover",(function(){return P})),r.d(t,"PopoverRef",(function(){return ue})),r.d(t,"Grid",(function(){return ie}));r("6b54"),r("ac6a");var o=r("bd86"),n=r("f7f1"),c=r("fe1f"),i=r("fd3a"),a=r("8c86");function s(e,t){Object(a["a"])(2,arguments);var r=Object(i["a"])(e),o=Object(c["a"])(t);if(isNaN(o))return new Date(NaN);if(!o)return r;var n=r.getDate(),s=new Date(r.getTime());s.setMonth(r.getMonth()+o+1,0);var d=s.getDate();return n>=d?s:(r.setFullYear(s.getFullYear(),s.getMonth(),n),r)}function d(e,t){Object(a["a"])(2,arguments);var r=Object(c["a"])(t);return s(e,12*r)}r("28a5");var u=r("f0bd"),l=r("9404");function f(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function v(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?f(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):f(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}const b={},h={data(){return{popovers$:b}},computed:{$popovers(){return this.popovers$}},methods:{$popoverExists(e){return this.$popovers&&this.$popovers[e]},$popoverIsActive(e,t){const r=this.$popovers&&this.$popovers[e]&&this.$popovers[e].ref;return!(!r||t&&t!==r)},$popoverHasPriority(e){const t=this.$popovers[e.id];return!t||!t.priority||e.priority>t.priority},$showPopover(e){var t=this;if(!this.$popoverHasPriority(e))return;const{id:r,ref:o}=e,n=this.$popovers[r];Object(l["b"])(e,n),e.next=function(){n&&o===n.ref||t.$set(t.$popovers,r,v(v({},e),{},{priority:0}))},this.handleStateTimer(e,"show")},$hidePopover(e){var t=this;if(!this.$popoverHasPriority(e))return;const{id:r,ref:o}=e;Object(l["b"])(e,this.$popovers[r]),e.next=function(){o&&o!==t.$popovers[r].ref||t.$set(t.$popovers,r,{})},this.handleStateTimer(e,"hide")},$updatePopover(e){const{id:t,ref:r}=e;Object(l["b"])(e,this.$popovers[t]),r&&r!==this.$popovers[t].ref||this.$set(this.$popovers,t,e)},handleStateTimer(e){e.timer&&(clearTimeout(e.timer),e.timer=void 0),e.delay?this.$set(this.$popovers,e.id,v(v({},e),{},{timer:setTimeout(e.next,e.delay)})):e.next()}}};var p=r("2fa3"),g=r("0733");function m(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function y(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?m(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):m(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}var x,w,k={name:"Popover",render(e){return e("div",{class:["vc-popover-content-wrapper",{"is-interactive":this.isInteractive}],ref:"popover"},[e("transition",{props:{name:this.transition,appear:!0},on:{beforeEnter:this.beforeEnter,afterEnter:this.afterEnter,beforeLeave:this.beforeLeave,afterLeave:this.afterLeave}},[this.isVisible&&e("div",{attrs:{tabindex:-1},class:["vc-popover-content","direction-"+this.direction,this.contentClass]},[this.content,e("span",{class:["vc-popover-caret","direction-"+this.direction,"align-"+this.alignment]})])])])},mixins:[h],props:{id:{type:String,required:!0},transition:{type:String,default:"slide-fade"},contentClass:String},data(){return{ref:null,args:null,visibility:"",placement:"bottom",positionFixed:!1,modifiers:{},isInteractive:!1,delay:10,popperEl:null}},computed:{content(){var e=this;return Object(l["j"])(this.$scopedSlots.default)&&this.$scopedSlots.default({direction:this.direction,alignment:this.alignment,args:this.args,updateLayout:this.scheduleUpdate,hide:function(t){return e.hide(t)}})||this.$slots.default},popperOptions(){return{placement:this.placement,positionFixed:this.positionFixed,modifiers:y({hide:{enabled:!1},preventOverflow:{enabled:!1}},this.modifiers),onCreate:this.onPopperUpdate,onUpdate:this.onPopperUpdate}},isVisible(){return!(!this.ref||!this.$scopedSlots.default&&!this.$slots.default||"hidden"===this.visibility)},direction(){return this.placement&&this.placement.split("-")[0]||"bottom"},alignment(){const e="left"===this.direction||"right"===this.direction;let t=this.placement.split("-");return t=t.length>1?t[1]:"",["start","top","left"].includes(t)?e?"top":"left":["end","bottom","right"].includes(t)?e?"bottom":"right":e?"middle":"center"},state(){return this.$popovers[this.id]}},watch:{state:{immediate:!0,handler(e){e&&(this.ref=e.ref,this.args=e.args,this.visibility=e.visibility,this.placement=e.placement,this.positionFixed=e.positionFixed,this.modifiers=e.modifiers,this.isInteractive=e.isInteractive,this.setupPopper())}}},mounted(){this.popoverEl=this.$refs.popover,this.addEvents()},beforeDestroy(){this.removeEvents()},methods:{addEvents(){Object(p["n"])(this.popoverEl,"click",this.onClick),Object(p["n"])(this.popoverEl,"mouseover",this.onMouseOver),Object(p["n"])(this.popoverEl,"mouseleave",this.onMouseLeave),Object(p["n"])(this.popoverEl,"focusin",this.onFocusIn),Object(p["n"])(this.popoverEl,"focusout",this.onFocusOut),Object(p["n"])(document,"keydown",this.onDocumentKeydown),this.removeDocHandler=Object(g["b"])(document,this.onDocumentClick)},removeEvents(){Object(p["m"])(this.popoverEl,"click",this.onClick),Object(p["m"])(this.popoverEl,"mouseover",this.onMouseOver),Object(p["m"])(this.popoverEl,"mouseleave",this.onMouseLeave),Object(p["m"])(this.popoverEl,"focusin",this.onFocusIn),Object(p["m"])(this.popoverEl,"focusout",this.onFocusOut),Object(p["m"])(document,"keydown",this.onDocumentKeydown),this.removeDocHandler&&this.removeDocHandler()},onClick(e){e.stopPropagation()},onMouseOver(){this.isInteractive&&"hover"===this.visibility&&this.show()},onMouseLeave(){this.isInteractive&&"hover"===this.visibility&&this.hide()},onFocusIn(){this.isInteractive&&"focus"===this.visibility&&this.show()},onFocusOut(e){this.isInteractive&&"focus"===this.visibility&&e.relatedTarget&&!Object(p["e"])(this.popoverEl,e.relatedTarget)&&this.hide()},onDocumentClick(e){this.$refs.popover&&this.ref&&(Object(p["e"])(this.popoverEl,e.target)||Object(p["e"])(this.ref,e.target)||this.hide())},onDocumentKeydown(e){"Esc"!==e.key&&"Escape"!==e.key||this.hide()},show(){this.$showPopover({id:this.id,ref:this.ref,delay:0})},hide(e){this.$hidePopover(y(y({},e),{},{id:this.id,ref:this.ref}))},onUpdate({args:e}){this.args=e,this.setupPopper()},setupPopper(){var e=this;this.$nextTick((function(){e.ref&&e.$refs.popover&&(e.popper&&e.popper.reference!==e.ref&&(e.popper.destroy(),e.popper=null),e.popper?e.popper.scheduleUpdate():e.popper=new u["a"](e.ref,e.popoverEl,e.popperOptions))}))},onPopperUpdate(e){this.placement=e.placement},scheduleUpdate(){this.popper&&this.popper.scheduleUpdate()},beforeEnter(e){this.$emit("beforeShow",e)},afterEnter(e){this.$emit("afterShow",e)},beforeLeave(e){this.$emit("beforeHide",e)},afterLeave(e){this.destroyPopper(),this.$emit("afterHide",e)},destroyPopper(){this.popper&&(this.popper.destroy(),this.popper=null)}}},O=k;r("86aa");function j(e,t,r,o,n,c,i,a){var s,d="function"===typeof e?e.options:e;if(t&&(d.render=t,d.staticRenderFns=r,d._compiled=!0),o&&(d.functional=!0),c&&(d._scopeId="data-v-"+c),i?(s=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"===typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),n&&n.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(i)},d._ssrRegister=s):n&&(s=a?function(){n.call(this,(d.functional?this.parent:this).$root.$options.shadowRoot)}:n),s)if(d.functional){d._injectStyles=s;var u=d.render;d.render=function(e,t){return s.call(t),u(e,t)}}else{var l=d.beforeCreate;d.beforeCreate=l?[].concat(l,s):[s]}return{exports:e,options:d}}var D=j(O,x,w,!1,null,"7605e1b2",null),P=D.exports,M=function(){var e=this,t=e.$createElement,r=e._self._c||t;return r("div",{staticClass:"vc-day-popover-row"},[e.indicator?r("div",{staticClass:"vc-day-popover-row-indicator"},[r("span",{class:e.indicator.class,style:e.indicator.style})]):e._e(),r("div",{staticClass:"vc-day-popover-row-content"},[e._t("default",[e._v(e._s(e.attribute.popover?e.attribute.popover.label:"No content provided"))])],2)])},S=[],E=r("51ec");const _={inject:["sharedState"],mixins:[E["a"],h],computed:{masks(){return this.sharedState.masks},theme(){return this.sharedState.theme},locale(){return this.sharedState.locale},dayPopoverId(){return this.sharedState.dayPopoverId}},methods:{format(e,t){return this.locale.format(e,t)}}};r("a481");var Y=r("5ca5");function C(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function I(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?C(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):C(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}const $=["base","start","end","startEnd"],A=["class","color","fillMode"];function T(e,t,r){e&&t&&r&&(e[t]=`${e[t]?e[t]+" ":""}${r}`)}class L{constructor(e){var t=this;this._config=Object(l["b"])(e,Y["a"]),Object(l["u"])(this._config).forEach((function([e]){Object.defineProperty(t,e,{enumerable:!0,get(){return this.getConfig(e,{})}})})),this.buildNormalizedAttrs()}buildNormalizedAttrs(){var e=this;this.normalizedAttrs={highlight:{opts:["fillMode","class","contentClass"]},dot:{opts:["class"]},bar:{opts:["class"]},content:{opts:["class"]}},Object(l["u"])(this.normalizedAttrs).forEach((function([t,r]){const o={base:{},start:{},end:{}};r.opts.forEach((function(r){const n=t,c=Object(l["w"])(r),i=e[`${n}Base${c}`],a=e[`${n}StartEnd${c}`]||i,s=e[`${n}Start${c}`]||a,d=e[`${n}End${c}`]||s;Object(l["n"])(i)||(o.base[r]=i),Object(l["n"])(s)||(o.start[r]=s),Object(l["n"])(d)||(o.end[r]=d)})),r.attr=o}))}getConfig(e,{color:t=this._config.color,isDark:r=this._config.isDark}){if(!Object(l["e"])(this._config,e))return;let o=Object(l["d"])(this._config,e);return Object(l["l"])(o)&&Object(l["f"])(o,["light","dark"])&&(o=r?o.dark:o.light),Object(l["m"])(o)?o.replace(/{color}/g,t):o}mergeTargets(e,t){const r={};return Object(l["c"])(r,e,t),e.class&&t.class&&!e.class.includes(t.class)&&(r.class=`${e.class} ${t.class}`),r}normalizeAttr({config:e,type:t}){var r=this;let o=this.color,n={};const c=this.normalizedAttrs[t].attr;if(!0===e||Object(l["m"])(e))o=Object(l["m"])(e)?e:o,n=I({},c);else{if(!Object(l["l"])(e))return null;n=Object(l["f"])(e,$)?I({},e):{base:I({},e),start:I({},e),end:I({},e)}}return Object(l["b"])(n,{start:n.startEnd,end:n.startEnd},c),Object(l["u"])(n).forEach((function([e,t]){let i=o;!0===t||Object(l["m"])(t)?(i=Object(l["m"])(t)?t:i,n[e]={color:i}):Object(l["l"])(t)&&(Object(l["f"])(t,A)?n[e]=I({},t):n[e]={}),n[e]=r.mergeTargets(n[e],c[e]),Object(l["e"])(n,e+".color")||Object(l["s"])(n,e+".color",i)})),n}getHighlightBgClass(e,t=this._config){switch(e){case"none":return this.getConfig("bgLow",t);case"light":return this.getConfig("bgAccentLow",t);case"solid":return this.getConfig("bgAccentHigh",t);default:return""}}getHighlightContentClass(e,t=this._config){switch(e){case"none":return this.getConfig("contentAccent",t);case"light":return this.getConfig("contentAccent",t);case"solid":return this.getConfig("contentAccentContrast",t);default:return""}}normalizeHighlight(e){var t=this;const r=this.normalizeAttr({config:e,type:"highlight"});return Object(l["u"])(r).forEach((function([e,r]){const{fillMode:o}=Object(l["b"])(r,{isDark:t.isDark,color:t.color});T(r,"class",t.getHighlightBgClass(o,r)),T(r,"contentClass",t.getHighlightContentClass(o,r))})),r}normalizeDot(e){var t=this;const r=this.normalizeAttr({config:e,type:"dot"});return Object(l["u"])(r).forEach((function([e,r]){Object(l["b"])(r,{isDark:t.isDark,color:t.color}),T(r,"class",t.getConfig("bgAccentHigh",r))})),r}normalizeBar(e){var t=this;const r=this.normalizeAttr({config:e,type:"bar"});return Object(l["u"])(r).forEach((function([e,r]){Object(l["b"])(r,{isDark:t.isDark,color:t.color}),T(r,"class",t.getConfig("bgAccentHigh",r))})),r}normalizeContent(e){var t=this;const r=this.normalizeAttr({config:e,type:"content"});return Object(l["u"])(r).forEach((function([e,r]){Object(l["b"])(r,{isDark:t.isDark,color:t.color}),T(r,"class",t.getConfig("contentAccent",r))})),r}}var F=r("29ae"),N=r("1315"),z=r("22f3");const R={mixins:[E["a"],h],props:{color:String,isDark:Boolean,theme:Object,firstDayOfWeek:Number,masks:Object,locale:[String,Object],minDate:null,maxDate:null,disabledDates:null,availableDates:null},computed:{$theme(){if(this.theme instanceof L)return this.theme;const e=Object(l["c"])(this.theme,this.$defaults.theme);return e.color=this.passedProp("color",e.color),e.isDark=this.passedProp("isDark",e.isDark),new L(e)},$locale(){if(this.locale instanceof F["a"])return this.locale;const e=Object(l["l"])(this.locale)?this.locale:{id:this.locale,firstDayOfWeek:this.firstDayOfWeek,masks:this.masks};return new F["a"](e,this.$locales)},format(){var e=this;return function(t,r){return e.$locale?e.$locale.format(t,r):""}},disabledAttribute(){let e=[];this.disabledDates&&(e=Object(l["h"])(this.disabledDates)?this.disabledDates:[this.disabledDates]);const t=this.$locale.toDate(this.minDate),r=this.$locale.toDate(this.maxDate);return t&&e.push({start:null,end:Object(n["a"])(t,-1)}),r&&e.push({start:Object(n["a"])(r,1),end:null}),new z["a"]({key:"disabled",dates:e,excludeDates:this.availableDates,excludeMode:"includes",order:100},this.$theme,this.$locale)}},created(){Object(N["a"])(this.$defaults.screens)}},V={methods:{propOrDefault(e,t,r){return this.passedProp(e,Object(l["d"])(this.$defaults,t),r)},passedProp(e,t,r){if(Object(l["e"])(this.$options.propsData,e)){const o=this[e];return Object(l["l"])(o)&&"merge"===r?Object(l["c"])(o,t):o}return t}}},H={methods:{safeScopedSlot(e,t,r=null){return Object(l["j"])(this.$scopedSlots[e])?this.$scopedSlots[e](t):r}}},W=_,B=R,U=V,G=H;var q={name:"PopoverRow",mixins:[W],props:{attribute:Object},computed:{indicator(){const{highlight:e,dot:t,bar:r,content:o,popover:n}=this.attribute;if(n&&n.hideIndicator)return null;if(e){const{color:t,isDark:r}=e.start;return{class:this.theme.getConfig("bgAccentHigh",{color:t,isDark:!r}),style:{width:"10px",height:"5px",borderRadius:"3px"}}}if(t){const{color:e,isDark:r}=t.start;return{class:this.theme.getConfig("bgAccentHigh",{color:e,isDark:!r}),style:{width:"5px",height:"5px",borderRadius:"50%"}}}if(r){const{color:e,isDark:t}=r.start;return{class:this.theme.getConfig("bgAccentHigh",{color:e,isDark:!t}),style:{width:"10px",height:"3px"}}}if(o){const{color:e,isDark:t}=o.start;return{class:this.theme.getConfig("contentContrast",{color:e,isDark:!t})}}return null}}},K=q,Z=(r("7365"),j(K,M,S,!1,null,"28ced894",null)),X=Z.exports;const J={vLeading:"vertical-leading",vTrailing:"vertical-trailing",hLeading:"horizontal-leading",hTrailing:"horizontal-trailing"};var Q,ee,te,re,oe={name:"Grid",render(e){var t=this;const r=function({nodes:e,position:r,row:o,column:n}){return e.length>=r?e[r-1]:t.$scopedSlots.default?t.$scopedSlots.default({position:r,row:o,column:n}):null},o=function(){const o=[],n=t.$slots.default&&t.$slots.default.filter((function(e){return void 0!==e.tag}))||[];for(let c=1,i=1;c<=t.rows;c++)for(let a=1;a<=t.columns;a++){const s=c-t.rows-1,d=a-t.columns-1;o.push(e("div",{class:["vc-grid-cell","vc-grid-cell-row-"+c,"vc-grid-cell-row-"+s,"vc-grid-cell-col-"+a,"vc-grid-cell-col-"+d],style:{"grid-row":c,"grid-column":a},on:{keydown:function(e){return t.handleCellKeydown({row:c,column:a,event:e})}}},[r({nodes:n,position:i++,row:c,column:a})]))}return o};return e("div",{class:"vc-grid-container",style:this.containerStyle},[...o()])},props:{count:Number,rows:{type:Number,default:1},columns:{type:Number,default:1},gap:{type:String,default:"0px"},autofit:Boolean,columnWidth:{type:String,default:"1fr"},disableFocus:{type:Boolean,default:!1}},computed:{containerStyle(){return{gridTemplateColumns:this.gridTemplateColumns,gridGap:this.gap}},gridTemplateColumns(){return`repeat(${this.autofit?"auto-fit":this.columns}, ${this.columnWidth})`}},methods:{handleCellKeydown({row:e,column:t,event:r}){if(this.disableFocus)return;const o={row:e,column:t,alt:!1,handled:!1};switch(r.key){case"ArrowUp":o.row--;break;case"ArrowDown":o.row++;break;case"ArrowLeft":o.column--;break;case"ArrowRight":o.column++;break;case"Home":o.column=1;break;case"End":o.column=this.columns;break;case"PageUp":o.alt=r.altKey,o.direction=J.vLeading;break;case"PageDown":o.alt=r.altKey,o.direction=J.vTrailing;break;default:return}if(o.row<1?(o.direction=J.vLeading,o.row=this.rows):o.row>this.rows&&(o.direction=J.vTrailing,o.row=1),o.column<1?(o.direction=J.hLeading,o.column=this.columns):o.column>this.columns&&(o.direction=J.hTrailing,o.column=1),o.direction&&this.$emit("rollover",o),!o.handled){const e=`.vc-grid-cell-row-${o.row}.vc-grid-cell-col-${o.column}`,t=this.$el.querySelector(e);t&&this.tryFocus(t)}r.stopPropagation(),r.preventDefault()},tryFocus(e=this.$el){this.$nextTick((function(){const t=[".vc-grid-focus",'button, [href], input, select, textarea, [tabindex="0"]','[tabindex]:not([tabindex="undefined"])'],r=t.map((function(t){return e.querySelector(t)})).find((function(e){return e}));return!!r&&(r.focus(),!0)}))}}},ne=oe,ce=(r("998b"),j(ne,Q,ee,!1,null,"3ca35a05",null)),ie=ce.exports,ae={name:"PopoverRef",mixins:[h],props:{id:{type:String,default:"default"},element:null,args:null,visibility:{type:String,default:"hover-focus",validator:function(e){return-1!==["hover-focus","hover","focus","click","visible","hidden"].indexOf(e)}},placement:{type:String,default:"bottom"},positionFixed:Boolean,modifiers:{type:Object,default:function(){}},isInteractive:Boolean,showDelay:{type:Number,default:10},hideDelay:{type:Number,default:150}},data(){return{reference:null,isHovered:!1,isFocused:!1}},computed:{isActive(){return this.$popoverIsActive(this.id,this.reference)}},render(){return this.$slots.default[0]},watch:{visibility(){this.refreshVisibility()},args(){var e=this;this.$nextTick((function(){e.isActive&&e.update()}))}},mounted(){var e=this;this.reference=this.element||this.$slots.default[0].elm,this.addEvents(),this.$once("beforeDestroy",(function(){return e.removeEvents()})),this.refreshVisibility()},methods:{addEvents(){Object(p["n"])(this.reference,"click",this.onClick),Object(p["n"])(this.reference,"mouseover",this.onMouseOver),Object(p["n"])(this.reference,"mouseleave",this.onMouseLeave),Object(p["n"])(this.reference,"focusin",this.onFocusIn),Object(p["n"])(this.reference,"focusout",this.onFocusOut)},removeEvents(){Object(p["m"])(this.reference,"click",this.onClick),Object(p["m"])(this.reference,"mouseover",this.onMouseOver),Object(p["m"])(this.reference,"mouseleave",this.onMouseLeave),Object(p["m"])(this.reference,"focusin",this.onFocusIn),Object(p["m"])(this.reference,"focusout",this.onFocusOut)},onClick(){"click"===this.visibility&&this.toggle()},onMouseOver(){this.isHovered||(this.isHovered=!0,this.visibility.includes("hover")&&this.refreshVisibility())},onMouseLeave(){this.isHovered&&(this.isHovered=!1,("hover"===this.visibility||"hover-focus"===this.visibility&&!this.isFocused)&&this.refreshVisibility())},onFocusIn(){this.isFocused||(this.isFocused=!0,this.visibility.includes("focus")&&this.refreshVisibility())},onFocusOut(e){this.isFocused&&!Object(p["e"])(this.reference,e.relatedTarget)&&(this.isFocused=!1,this.visibility.includes("focus")&&this.refreshVisibility())},refreshVisibility(){switch(this.visibility){case"hover":this.isHovered?this.show():this.isActive&&this.hide();break;case"focus":this.isFocused?this.show():this.isActive&&this.hide();break;case"hover-focus":this.isHovered||this.isFocused?this.show({visibility:this.isFocused?"focus":"hover"}):this.isActive&&this.hide();break;case"visible":this.show();break;case"hidden":this.isActive&&this.hide();break}},toggle(){var e=this;this.isActive?this.hide():this.$nextTick((function(){e.show()}))},show({visibility:e}={}){this.$showPopover({id:this.id,ref:this.reference,args:this.args,visibility:e||this.visibility,placement:this.placement,positionFixed:this.positionFixed,modifiers:this.modifiers,isInteractive:this.isInteractive,delay:this.showDelay})},hide({delay:e=this.hideDelay}={}){this.$hidePopover({id:this.id,ref:this.reference,delay:e})},update(){this.$updatePopover({id:this.id,ref:this.reference,args:this.args})}}},se=ae,de=j(se,te,re,!1,null,null,null),ue=de.exports,le=function(){var e=this,t=e.$createElement,r=e._self._c||t;return r("div",{staticClass:"vc-nav-container"},[r("grid",{ref:"headerGrid",attrs:{columns:3},on:{rollover:e.onHeaderRollover}},[r("span",{ref:"prevButton",staticClass:"vc-nav-arrow vc-flex vc-justify-center vc-items-center vc-mr-auto",class:e.theme.navArrows,attrs:{role:"button",tabindex:"-1"},on:{click:e.movePrev,keydown:function(t){return e.onSpaceOrEnter(t,e.movePrev)}}},[e._t("nav-left-button",[r("svg-icon",{attrs:{name:"left-arrow",width:"20px",height:"24px"}})])],2),r("span",{ref:"titleButton",staticClass:"vc-nav-title vc-grid-focus",class:e.theme.navTitle,style:{whiteSpace:"nowrap"},attrs:{role:"button",tabindex:"0"},on:{click:e.toggleMode,keydown:function(t){return e.onSpaceOrEnter(t,e.toggleMode)}}},[e._v("\n      "+e._s(e.title)+"\n    ")]),r("span",{ref:"nextButton",staticClass:"vc-nav-arrow vc-flex vc-justify-center vc-items-center vc-ml-auto",class:e.theme.navArrows,attrs:{role:"button",tabindex:"-1"},on:{click:e.moveNext,keydown:function(t){return e.onSpaceOrEnter(t,e.moveNext)}}},[e._t("nav-right-button",[r("svg-icon",{attrs:{name:"right-arrow",width:"20px",height:"24px"}})])],2)]),r("grid",{ref:"itemsGrid",attrs:{rows:4,columns:3,gap:"2px 5px"},on:{rollover:e.onItemsRollover}},e._l(e.activeItems,(function(t){return r("span",{key:t.label,ref:"items",refInFor:!0,class:e.getItemClasses(t),attrs:{role:"button","aria-label":t.ariaLabel,tabindex:t.isDisabled?void 0:t.isActive?0:-1},on:{click:t.click,keydown:function(r){return e.onSpaceOrEnter(r,t.click)}}},[e._v("\n      "+e._s(t.label)+"\n    ")])})),0)],1)},fe=[],ve=function(){var e=this,t=e.$createElement,r=e._self._c||t;return r("svg",e._g({staticClass:"vc-svg-icon",attrs:{width:e.width,height:e.height,viewBox:e.viewBox}},e.$listeners),[r("path",{attrs:{d:e.path}})])},be=[];const he="26px",pe="0 0 32 32",ge={"left-arrow":{viewBox:"0 -1 16 34",path:"M11.196 10c0 0.143-0.071 0.304-0.179 0.411l-7.018 7.018 7.018 7.018c0.107 0.107 0.179 0.268 0.179 0.411s-0.071 0.304-0.179 0.411l-0.893 0.893c-0.107 0.107-0.268 0.179-0.411 0.179s-0.304-0.071-0.411-0.179l-8.321-8.321c-0.107-0.107-0.179-0.268-0.179-0.411s0.071-0.304 0.179-0.411l8.321-8.321c0.107-0.107 0.268-0.179 0.411-0.179s0.304 0.071 0.411 0.179l0.893 0.893c0.107 0.107 0.179 0.25 0.179 0.411z"},"right-arrow":{viewBox:"-5 -1 16 34",path:"M10.625 17.429c0 0.143-0.071 0.304-0.179 0.411l-8.321 8.321c-0.107 0.107-0.268 0.179-0.411 0.179s-0.304-0.071-0.411-0.179l-0.893-0.893c-0.107-0.107-0.179-0.25-0.179-0.411 0-0.143 0.071-0.304 0.179-0.411l7.018-7.018-7.018-7.018c-0.107-0.107-0.179-0.268-0.179-0.411s0.071-0.304 0.179-0.411l0.893-0.893c0.107-0.107 0.268-0.179 0.411-0.179s0.304 0.071 0.411 0.179l8.321 8.321c0.107 0.107 0.179 0.268 0.179 0.411z"}};var me={props:["name"],data(){return{width:he,height:he,viewBox:pe,path:"",isBaseline:!1}},mounted(){this.updateIcon()},watch:{name(){this.updateIcon()}},methods:{updateIcon(){const e=ge[this.name];e&&(this.width=e.width||he,this.height=e.height||he,this.viewBox=e.viewBox,this.path=e.path)}}},ye=me,xe=(r("9010"),j(ye,ve,be,!1,null,"63f7b5ec",null)),we=xe.exports;const ke=12;var Oe={name:"CalendarNav",components:{Grid:ie,SvgIcon:we},mixins:[W],props:{value:{type:Object,default:function(){return{month:0,year:0}}},validator:{type:Function,default:function(){return function(){return!0}}}},data(){return{monthMode:!0,yearIndex:0,yearGroupIndex:0,onSpaceOrEnter:p["o"]}},computed:{month(){return this.value&&this.value.month||0},year(){return this.value&&this.value.year||0},title(){return this.monthMode?this.yearIndex:`${this.firstYear} - ${this.lastYear}`},monthItems(){var e=this;const{month:t,year:r}=Object(p["p"])(new Date);return this.locale.getMonthDates().map((function(o,n){const c=n+1;return{label:e.locale.format(o,e.masks.navMonths),ariaLabel:e.locale.format(o,"MMMM YYYY"),isActive:c===e.month&&e.yearIndex===e.year,isCurrent:c===t&&e.yearIndex===r,isDisabled:!e.validator({month:c,year:e.yearIndex}),click:function(){return e.monthClick(c)}}}))},yearItems(){var e=this;const{_:t,year:r}=Object(p["p"])(new Date),o=this.yearGroupIndex*ke,n=o+ke,c=[];for(let i=o;i<n;i+=1)c.push({year:i,label:i,ariaLabel:i,isActive:i===this.year,isCurrent:i===r,isDisabled:!this.validator({month:this.month,year:i}),click:function(){return e.yearClick(i)}});return c},activeItems(){return this.monthMode?this.monthItems:this.yearItems},firstYear(){return Object(l["g"])(this.yearItems.map((function(e){return e.year})))},lastYear(){return Object(l["o"])(this.yearItems.map((function(e){return e.year})))}},watch:{year(){this.yearIndex=this.year},yearIndex(e){this.yearGroupIndex=this.getYearGroupIndex(e)}},created(){this.yearIndex=this.year},mounted(){this.$refs.itemsGrid.tryFocus()},methods:{getItemClasses({isActive:e,isCurrent:t,isDisabled:r}){const o=[this.theme.navCell];return e?o.push(this.theme.navCellActive,"vc-grid-focus"):t?o.push(this.theme.navCellInactiveCurrent):o.push(this.theme.navCellInactive),r&&o.push("vc-opacity-25 vc-pointer-events-none"),o},getYearGroupIndex(e){return Math.floor(e/ke)},monthClick(e){this.$emit("input",{month:e,year:this.yearIndex})},yearClick(e){this.yearIndex=e,this.monthMode=!0,this.$refs.itemsGrid.tryFocus()},toggleMode(){this.monthMode=!this.monthMode},movePrev(){this.monthMode&&this.movePrevYear(),this.movePrevYearGroup()},moveNext(){this.monthMode&&this.moveNextYear(),this.moveNextYearGroup()},movePrevYear(){this.yearIndex--},moveNextYear(){this.yearIndex++},movePrevYearGroup(){this.yearGroupIndex--},moveNextYearGroup(){this.yearGroupIndex++},onHeaderRollover(e){switch(e.direction){case"vertical-trailing":this.$refs.itemsGrid.tryFocus();break}e.handled=!0},onItemsRollover(e){switch(e.direction){case"horizontal-leading":this.movePrev();break;case"horizontal-trailing":this.moveNext();break;case"vertical-leading":this.$refs.headerGrid.tryFocus(),e.handled=!0;break;case"vertical-trailing":e.handled=!0;break}}}},je=Oe,De=j(je,le,fe,!1,null,null,null),Pe=De.exports;function Me(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function Se(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?Me(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):Me(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}var Ee,_e,Ye={name:"CalendarDay",mixins:[W,G],render(e){var t=this;const r=function(){return t.hasBackgrounds&&e("div",{class:"vc-highlights vc-day-layer"},t.backgrounds.map((function({key:t,wrapperClass:r,class:o}){return e("div",{key:t,class:r},[e("div",{class:o})])})))},o=function(){return t.safeScopedSlot("day-content",{day:t.day,attributes:t.day.attributes,attributesMap:t.day.attributesMap,dayProps:t.dayContentProps,dayEvents:t.dayContentEvents})||e("span",{class:t.dayContentClass,attrs:Se({},t.dayContentProps),on:t.dayContentEvents,ref:"content"},[t.day.label])},n=function(){if(!t.hasPopovers)return o();const{visibility:r,placement:n,isInteractive:c}=t.popoverState;return e(ue,{props:{id:t.dayPopoverId,args:t.dayEvent,visibility:r,placement:n,isInteractive:c}},[o()])},c=function(){return t.hasDots&&e("div",{class:"vc-day-layer vc-day-box-center-bottom"},[e("div",{class:"vc-dots"},t.dots.map((function({key:t,class:r}){return e("span",{class:r,key:t})})))])},i=function(){return t.hasBars&&e("div",{class:"vc-day-layer vc-day-box-center-bottom"},[e("div",{class:"vc-bars"},t.bars.map((function({key:t,class:r}){return e("span",{class:r,key:t})})))])};return e("div",{class:["vc-day",...this.day.classes,{"vc-day-box-center-center":!this.$scopedSlots["day-content"]}]},[e("div",{class:["vc-h-full",{[this.theme.dayNotInMonth]:!this.inMonth}]},[r(),n(),c(),i()])])},inject:["sharedState"],props:{day:{type:Object,required:!0}},data(){return{glyphs:{},popoverState:{}}},computed:{label(){return this.day.label},dateTime(){return this.day.dateTime},inMonth(){return this.day.inMonth},isDisabled(){return this.day.isDisabled},backgrounds(){return this.glyphs.backgrounds},hasBackgrounds(){return!!Object(p["b"])(this.backgrounds)},content(){return this.glyphs.content},dots(){return this.glyphs.dots},hasDots(){return!!Object(p["b"])(this.dots)},bars(){return this.glyphs.bars},hasBars(){return!!Object(p["b"])(this.bars)},popovers(){return this.glyphs.popovers},hasPopovers(){return!!Object(p["b"])(this.popovers)},dayContentClass(){return["vc-day-content vc-focusable",Object(l["d"])(Object(l["o"])(this.content),"class")||"",this.isDisabled?this.theme.dayContentDisabled:"",this.theme.isDark?"vc-is-dark":"",this.theme.dayContent]},dayContentProps(){let e;return this.day.isFocusable?e="0":this.day.inMonth&&(e="-1"),{tabindex:e,"aria-label":this.day.ariaLabel}},dayContentEvents(){return{click:this.click,mouseenter:this.mouseenter,mouseleave:this.mouseleave,focusin:this.focusin,focusout:this.focusout,keydown:this.keydown}},dayEvent(){return Se(Se({},this.day),{},{el:this.$refs.content,popovers:this.popovers})}},watch:{theme(){this.refresh()},popovers(){const e=["click","focus","hover","visible"];let t="",r=!1,o=-1;this.popovers.forEach((function(n){const c=e.indexOf(n.visibility);o=c>o?c:o,t=t||n.placement,r=r||n.isInteractive})),this.popoverState={visibility:o>=0?e[o]:"hidden",placement:t||"bottom",isInteractive:r}}},methods:{getDayEvent(e){return Se(Se({},this.dayEvent),{},{event:e})},click(e){this.$emit("dayclick",this.getDayEvent(e))},mouseenter(e){this.$emit("daymouseenter",this.getDayEvent(e))},mouseleave(e){this.$emit("daymouseleave",this.getDayEvent(e))},focusin(e){this.$emit("dayfocusin",this.getDayEvent(e))},focusout(e){this.$emit("dayfocusout",this.getDayEvent(e))},keydown(e){this.$emit("daykeydown",this.getDayEvent(e))},refresh(){var e=this;if(!this.day.refresh)return;this.day.refresh=!1;const t={backgrounds:[],dots:[],bars:[],popovers:[],content:[]};this.day.attributes=Object.values(this.day.attributesMap||{}).sort((function(e,t){return e.order-t.order})),this.day.attributes.forEach((function(r){const{targetDate:o}=r,{isDate:n,isComplex:c,startTime:i,endTime:a}=o,s=i===e.dateTime,d=a===e.dateTime,u=s&&d,l=s||d,f={isDate:n,isComplex:c,onStart:s,onEnd:d,onStartAndEnd:u,onStartOrEnd:l};e.processHighlight(r,f,t),e.processContent(r,f,t),e.processDot(r,f,t),e.processBar(r,f,t),e.processPopover(r,t)})),this.glyphs=t},processHighlight({key:e,highlight:t},{isDate:r,isComplex:o,onStart:n,onEnd:c,onStartAndEnd:i},{backgrounds:a,content:s}){if(!t)return;const{base:d,start:u,end:l}=t;r||o||i?(a.push({key:e,wrapperClass:"vc-day-layer vc-day-box-center-center",class:"vc-highlight "+u.class}),s.push({key:e+"-content",class:u.contentClass})):n?(a.push({key:e+"-base",wrapperClass:"vc-day-layer vc-day-box-right-center",class:"vc-highlight vc-highlight-base-start "+d.class}),a.push({key:e,wrapperClass:"vc-day-layer vc-day-box-center-center",class:"vc-highlight "+u.class}),s.push({key:e+"-content",class:u.contentClass})):c?(a.push({key:e+"-base",wrapperClass:"vc-day-layer vc-day-box-left-center",class:"vc-highlight vc-highlight-base-end "+d.class}),a.push({key:e,wrapperClass:"vc-day-layer vc-day-box-center-center",class:"vc-highlight "+l.class}),s.push({key:e+"-content",class:l.contentClass})):(a.push({key:e+"-middle",wrapperClass:"vc-day-layer vc-day-box-center-center",class:"vc-highlight vc-highlight-base-middle "+d.class}),s.push({key:e+"-content",class:d.contentClass}))},processContent({key:e,content:t},{isDate:r,onStart:o,onEnd:n},{content:c}){if(!t)return;const{base:i,start:a,end:s}=t;r||o?c.push({key:e,class:a.class}):n?c.push({key:e,class:s.class}):c.push({key:e,class:i.class})},processDot({key:e,dot:t},{isDate:r,onStart:o,onEnd:n},{dots:c}){if(!t)return;const{base:i,start:a,end:s}=t;r||o?c.push({key:e,class:"vc-dot "+a.class}):n?c.push({key:e,class:"vc-dot "+s.class}):c.push({key:e,class:"vc-dot "+i.class})},processBar({key:e,bar:t},{isDate:r,onStart:o,onEnd:n},{bars:c}){if(!t)return;const{base:i,start:a,end:s}=t;r||o?c.push({key:e,class:"vc-bar "+a.class}):n?c.push({key:e,class:"vc-bar "+s.class}):c.push({key:e,class:"vc-bar "+i.class})},processPopover(e,{popovers:t}){const{key:r,customData:o,popover:n}=e;if(!n)return;const c=Object(l["b"])({key:r,customData:o,attribute:e},Se({},n),{visibility:n.label?"hover":"click",placement:"bottom",isInteractive:!n.label});t.splice(0,0,c)}}},Ce=Ye,Ie=(r("d581"),j(Ce,Ee,_e,!1,null,"2aac4f42",null)),$e=Ie.exports;function Ae(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function Te(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?Ae(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):Ae(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}var Le,Fe,Ne,ze,Re={name:"CalendarPane",mixins:[U,W,G],render(e){var t=this;const r=this.safeScopedSlot("header",this.page)||e("div",{class:["vc-header",this.theme.header]},[e("div",{class:"vc-title-layout align-"+this.titlePosition},[e("div",{class:"vc-title-wrapper"},[e(ue,{props:{id:this.navPopoverId,visibility:this.navVisibility_,placement:this.navPlacement,modifiers:{flip:{behavior:["bottom"]}},isInteractive:!0}},[e("div",{class:["vc-title",this.theme.title]},[this.safeScopedSlot("header-title",this.page,this.page.title)])]),e(P,{props:{id:this.navPopoverId,contentClass:this.theme.navPopoverContainer}},[e(Pe,{props:{value:this.page,validator:this.canMove},on:{input:function(e){return t.move(e)}},scopedSlots:this.$scopedSlots})])])])]),o=e(ie,{class:"vc-weeks",props:{rows:7,columns:7,columnWidth:"1fr",disableFocus:!0}},[...this.weekdayLabels.map((function(r,o){return e("div",{key:o+1,class:["vc-weekday",t.theme.weekdays]},[r])})),...this.page.days.map((function(r){return e($e,{attrs:Te(Te({},t.$attrs),{},{day:r}),on:Te({},t.$listeners),scopedSlots:t.$scopedSlots,key:r.id,ref:"days",refInFor:!0})}))]);return e("div",{class:"vc-pane",ref:"pane"},[r,o])},props:{page:Object,titlePosition:String,navVisibility:String,canMove:{type:Function,default:function(){return!0}}},data(){return{navPopoverId:Object(p["c"])()}},computed:{navVisibility_(){return this.propOrDefault("navVisibility","navVisibility")},navPlacement(){switch(this.titlePosition){case"left":return"bottom-start";case"right":return"bottom-end";default:return"bottom"}},weekdayLabels(){var e=this;return this.locale.getWeekdayDates().map((function(t){return e.format(t,e.masks.weekdays)}))}},methods:{move(e){this.$emit("update:page",e)},refresh(){this.$refs.days.forEach((function(e){return e.refresh()}))}}},Ve=Re,He=(r("3d14"),j(Ve,Le,Fe,!1,null,"4a5f2beb",null)),We=He.exports,Be={name:"CustomTransition",render(e){return e("transition",{props:{name:this.name_,appear:this.appear},on:{beforeEnter:this.beforeEnter,afterEnter:this.afterEnter}},[this.$slots.default])},props:{name:String,appear:Boolean},computed:{name_(){return this.name||"none"}},methods:{beforeEnter(e){this.$emit("beforeEnter",e),this.$emit("beforeTransition",e)},afterEnter(e){this.$emit("afterEnter",e),this.$emit("afterTransition",e)}}},Ue=Be,Ge=(r("2285"),j(Ue,Ne,ze,!1,null,"5be4b00c",null)),qe=Ge.exports,Ke=r("93495");r("bdab");function Ze(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function Xe(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?Ze(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):Ze(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}var Je,Qe,et={name:"Calendar",render(e){var t=this;const r=this.pages.map((function(r,o){return e(We,{attrs:Xe(Xe({},t.$attrs),{},{attributes:t.store}),props:{titlePosition:t.titlePosition_,page:r,minPage:t.minPage_,maxPage:t.maxPage_,canMove:t.canMove},on:Xe(Xe({},t.$listeners),{},{"update:page":function(e){return t.refreshPages({page:e,position:o+1})},dayfocusin:function(e){t.lastFocusedDay=e,t.$emit("dayfocusin",e)},dayfocusout:function(e){t.lastFocusedDay=null,t.$emit("dayfocusout",e)}}),scopedSlots:t.$scopedSlots,key:r.key,ref:"pages",refInFor:!0})})),o=function(r){const o=function(){return t.move(r?-t.step_:t.step_)},n=function(e){return Object(p["o"])(e,o)},c=r?!t.canMovePrev:!t.canMoveNext;return e("div",{class:["vc-flex vc-justify-center vc-items-center vc-cursor-pointer vc-select-none "+(c?"vc-opacity-25 vc-pointer-events-none vc-cursor-not-allowed":"vc-pointer-events-auto"),t.$theme.arrows],attrs:{role:"button"},on:{click:o,keydown:n}},[(r?t.safeScopedSlot("header-left-button",{click:o}):t.safeScopedSlot("header-right-button",{click:o}))||e(we,{props:{name:r?"left-arrow":"right-arrow"}})])},n=function(){return e(P,{props:{id:t.sharedState.dayPopoverId,contentClass:t.$theme.dayPopoverContainer},scopedSlots:{default:function({args:r,updateLayout:o,hide:n}){const c=Object.values(r.attributes).filter((function(e){return e.popover})),i=t.$locale.masks,a=t.format,s=a(r.date,i.dayPopover);return t.safeScopedSlot("day-popover",{day:r,attributes:c,masks:i,format:a,dayTitle:s,updateLayout:o,hide:n})||e("div",[i.dayPopover&&e("div",{class:["vc-text-center",t.$theme.dayPopoverHeader]},[s]),c.map((function(t){return e(X,{key:t.key,props:{attribute:t}})}))])}}})},c=function(){return e("div",{attrs:{"data-helptext":"Press the arrow keys to navigate by day, Home and End to navigate to week ends, PageUp and PageDown to navigate by month, Alt+PageUp and Alt+PageDown to navigate by year"},class:["vc-container","vc-reset",{"vc-min-w-full":t.isExpanded},t.$theme.container],on:{keydown:t.handleKeydown,mouseup:function(e){return e.preventDefault()}},ref:"container"},[e("div",{class:["vc-w-full vc-relative",{"vc-overflow-hidden":t.inTransition}]},[e(qe,{props:{name:t.transitionName},on:{beforeEnter:function(){t.inTransition=!0},afterEnter:function(){t.inTransition=!1}}},[e(ie,{class:"grid",props:{rows:t.rows,columns:t.columns,columnWidth:"minmax(256px, 1fr)",disableFocus:!0},attrs:Xe({},t.$attrs),key:Object(p["b"])(t.pages)?t.pages[0].key:""},r)]),e("div",{class:["vc-arrows-container title-"+t.titlePosition_]},[o(!0),o(!1)])]),n()])};return c()},mixins:[U,B,G],provide(){return{sharedState:this.sharedState}},props:{rows:{type:Number,default:1},columns:{type:Number,default:1},step:Number,titlePosition:String,isExpanded:Boolean,fromDate:Date,toDate:Date,fromPage:Object,toPage:Object,minPage:Object,maxPage:Object,transition:String,attributes:[Object,Array],disablePageSwipe:Boolean},data(){return{pages:[],store:null,lastFocusedDay:null,focusableDay:(new Date).getDate(),transitionName:"",inTransition:!1,sharedState:{dayPopoverId:Object(p["c"])(),theme:{},masks:{},locale:{}}}},computed:{titlePosition_(){return this.propOrDefault("titlePosition","titlePosition")},minPage_(){return this.minPage||Object(p["p"])(this.$locale.toDate(this.minDate))},maxPage_(){return this.maxPage||Object(p["p"])(this.$locale.toDate(this.maxDate))},count(){return this.rows*this.columns},step_(){return this.step||this.count},canMovePrev(){return!Object(p["x"])(this.minPage_)||Object(p["t"])(this.pages[0],this.minPage_)},canMoveNext(){return!Object(p["x"])(this.maxPage_)||Object(p["u"])(this.pages[this.pages.length-1],this.maxPage_)}},watch:{$locale(){this.refreshLocale(),this.refreshPages({page:Object(l["g"])(this.pages),ignoreCache:!0}),this.initStore()},$theme(){this.refreshTheme(),this.initStore()},fromDate(){this.refreshPages()},fromPage(e){const t=this.pages&&this.pages[0];Object(p["w"])(e,t)||this.refreshPages()},toPage(e){const t=this.pages&&this.pages[this.pages.length-1];Object(p["w"])(e,t)||this.refreshPages()},count(){this.refreshPages()},attributes(e){const{adds:t,deletes:r}=this.store.refresh(e);this.refreshAttrs(this.pages,t,r)},pages(e){this.refreshAttrs(e,this.store.list,null,!0)},disabledAttribute(){this.refreshDisabledDays()},lastFocusedDay(e){e&&(this.focusableDay=e.day,this.refreshFocusableDays())},inTransition(e){e?this.$emit("transition-start"):(this.$emit("transition-end"),this.transitionPromise&&(this.transitionPromise.resolve(),this.transitionPromise=null))}},created(){this.refreshLocale(),this.refreshTheme(),this.initStore(),this.refreshPages()},mounted(){var e=this;if(!this.disablePageSwipe){const t=Object(g["a"])(this.$refs.container,(function({toLeft:t,toRight:r}){t?e.moveNext():r&&e.movePrev()}),this.$defaults.touch);this.$once("beforeDestroy",(function(){return t()}))}},methods:{refreshLocale(){this.sharedState.locale=this.$locale,this.sharedState.masks=this.$locale.masks},refreshTheme(){this.sharedState.theme=this.$theme},canMove(e){return Object(p["v"])(e,this.minPage_,this.maxPage_)},async movePrev(e){const t=await this.move(-this.step_,e);return t},async moveNext(e){const t=this.move(this.step_,e);return t},async move(e,t){const r=this.$locale.toPage(e,this.pages[0]);if(!r)return null;const o=await this.refreshPages(Xe(Xe({},t),{},{page:r}));return o},async focusDate(e,t={}){const r=Object(p["p"])(e);let o=null;t.position?o=this.getTargetPageRange(r,t.position).fromPage:Object(p["u"])(r,this.pages[0])?o=this.getTargetPageRange(r,-1).fromPage:Object(p["t"])(r,Object(l["o"])(this.pages))&&(o=this.getTargetPageRange(r,1).fromPage),o&&!Object(p["w"])(o,this.pages[0])&&await this.refreshPages(Xe(Xe({},t),{},{position:1,page:o}));const n=this.$el.querySelector(`.id-${this.$locale.format(e,"YYYY-MM-DD")}.in-month .vc-focusable`);n&&n.focus()},async showPageRange(e,t){let r,o;if(Object(l["i"])(e))r=Object(p["p"])(e);else{if(!Object(l["l"])(e))return;{const{month:t,year:n}=e,{from:c,to:i}=e;Object(l["k"])(t)&&Object(l["k"])(n)?r=e:(c||i)&&(r=Object(l["i"])(c)?Object(p["p"])(c):c,o=Object(l["i"])(i)?Object(p["p"])(i):i)}}const n=Object(l["o"])(this.pages);let c=r;Object(p["t"])(o,n)&&(c=Object(p["a"])(o,-(this.pages.length-1))),Object(p["u"])(r,c)&&(c=r),await this.refreshPages(Xe(Xe({},t),{},{page:c}))},getTargetPageRange(e,t){let r=null;if(Object(p["x"])(e)){const o=t>0?1-t:-(this.count+t);r=Object(p["a"])(e,o)}else if(r=this.fromPage||Object(p["p"])(this.$locale.toDate(this.fromDate)),!Object(p["x"])(r)){const e=this.toPage||Object(p["p"])(this.$locale.toDate(this.toPage));r=Object(p["x"])(e)?Object(p["a"])(e,1-this.count):this.getPageForAttributes()}r=Object(p["x"])(r)?r:Object(p["s"])();const o=Object(p["a"])(r,this.count-1);return Object(p["u"])(r,this.minPage_)?r=this.minPage_:Object(p["t"])(o,this.maxPage_)&&(r=Object(p["a"])(this.maxPage_,1-this.count)),{fromPage:r,toPage:o}},async refreshPages({page:e,position:t=1,transition:r,ignoreCache:o}={}){var n=this;return new Promise((function(c,i){const{fromPage:a,toPage:s}=n.getTargetPageRange(e,t),d=[];for(let e=0;e<n.count;e++)d.push(n.buildPage(Object(p["a"])(a,e),o));n.refreshDisabledDays(d),n.refreshFocusableDays(d),n.transitionName=n.getPageTransition(n.pages[0],d[0],r),n.pages=d,n.$emit("update:from-page",a),n.$emit("update:to-page",s),n.transitionName&&"none"!==n.transitionName?n.transitionPromise={resolve:c,reject:i}:c()}))},refreshDisabledDays(e){var t=this;this.getPageDays(e).forEach((function(e){e.isDisabled=!!t.disabledAttribute&&t.disabledAttribute.includesDay(e)}))},refreshFocusableDays(e){var t=this;this.getPageDays(e).forEach((function(e){e.isFocusable=e.inMonth&&e.day===t.focusableDay}))},getPageDays(e=this.pages){return e.reduce((function(e,t){return e.concat(t.days)}),[])},getPageTransition(e,t,r=this.transition){if("none"===r)return r;if("fade"===r||!r&&this.count>1||!Object(p["x"])(e)||!Object(p["x"])(t))return"fade";const o=Object(p["u"])(t,e);return"slide-v"===r?o?"slide-down":"slide-up":o?"slide-right":"slide-left"},getPageForAttributes(){let e=null;const t=this.store.pinAttr;if(t&&t.hasDates){let[r]=t.dates;r=r.start||r.date,e=Object(p["p"])(this.$locale.toDate(r))}return e},buildPage({month:e,year:t},r){var o=this;const n=`${t.toString()}-${e.toString()}`;let c=this.pages.find((function(e){return e.key===n}));if(!c||r){const r=new Date(t,e-1,15),i=this.$locale.getMonthComps(e,t),a=this.$locale.getPrevMonthComps(e,t),s=this.$locale.getNextMonthComps(e,t);c={key:n,month:e,year:t,title:this.$locale.format(r,this.$locale.masks.title),shortMonthLabel:this.$locale.format(r,"MMM"),monthLabel:this.$locale.format(r,"MMMM"),shortYearLabel:t.toString().substring(2),yearLabel:t.toString(),monthComps:i,prevMonthComps:a,nextMonthComps:s,canMove:function(e){return o.canMove(e)},move:function(e){return o.move(e)},moveThisMonth:function(){return o.moveThisMonth()},movePrevMonth:function(){return o.move(a)},moveNextMonth:function(){return o.move(s)},refresh:!0},c.days=this.$locale.getCalendarDays(c)}return c},initStore(){this.store=new Ke["a"](this.$theme,this.$locale,this.attributes),this.refreshAttrs(this.pages,this.store.list,[],!0)},refreshAttrs(e=[],t=[],r=[],o){var n=this;Object(p["b"])(e)&&(e.forEach((function(e){e.days.forEach((function(e){let n={};o?e.refresh=Object(p["b"])(e.attributes):Object(l["f"])(e.attributesMap,r)?(n=Object(l["r"])(e.attributesMap,r),e.refresh=!0):n=e.attributesMap||{},t.forEach((function(t){const r=t.includesDay(e);if(r){const o=Xe(Xe({},t),{},{targetDate:r});n[t.key]=o,e.refresh=!0}})),e.refresh&&(e.attributesMap=n)}))})),this.$nextTick((function(){n.$refs.pages.forEach((function(e){return e.refresh()}))})))},handleKeydown(e){const t=this.lastFocusedDay;null!=t&&(t.event=e,this.handleDayKeydown(t))},handleDayKeydown(e){const{date:t,event:r}=e;let o=null;switch(r.key){case"ArrowLeft":o=Object(n["a"])(t,-1);break;case"ArrowRight":o=Object(n["a"])(t,1);break;case"ArrowUp":o=Object(n["a"])(t,-7);break;case"ArrowDown":o=Object(n["a"])(t,7);break;case"Home":o=Object(n["a"])(t,1-e.weekdayPosition);break;case"End":o=Object(n["a"])(t,e.weekdayPositionFromEnd);break;case"PageUp":o=r.altKey?d(t,-1):s(t,-1);break;case"PageDown":o=r.altKey?d(t,1):s(t,1);break}o&&(r.preventDefault(),this.focusDate(o))}}},tt=et,rt=(r("04d4"),j(tt,Je,Qe,!1,null,null,null)),ot=rt.exports;class nt{constructor({format:e,parse:t}){this._format=e,this._parse=t}hasValue(e){return Object(l["i"])(e)}format(e){return this.hasValue(e)?this._format(e):""}parse(e){const t=this._parse(e);return Object(l["i"])(t)?t:null}normalize(e){return e&&new Date(e)}filterDisabled({value:e,isRequired:t,disabled:r,fallbackValue:o}){return!this.hasValue(e)&&t?o:this.hasValue(e)&&r&&r.intersectsDate(e)?null:e}valuesAreEqual(e,t){return Object(p["d"])(e,t)}getPageRange(e){if(!this.hasValue(e))return null;const t=Object(p["p"])(e);return{from:t,to:t}}handleDayClick(e,t){t.dateIsValid(e.date)&&(this.valuesAreEqual(e.date,t.value_)?t.isRequired||(t.value_=null):(t.doFormatInput=!0,t.doHidePopover=!0,t.value_=e.date))}handleDayMouseEnter(){}}class ct{constructor({format:e,parse:t}){this._format=e,this._parse=t}hasValue(e){return Object(p["b"])(e)}format(e){var t=this;return this.hasValue(e)?e.map((function(e){return t._format(e)})).join(", "):""}parse(e){var t=this;return Object(l["m"])(e)?e.split(",").map((function(e){return t._parse(e)})).filter((function(e){return Object(l["i"])(e)})):[]}normalize(e){return this.hasValue(e)?Object(l["v"])(e).sort((function(e,t){return e.getTime()-t.getTime()})):[]}filterDisabled({value:e,isRequired:t,disabled:r,fallbackValue:o}){if(!this.hasValue(e))return[];if(!r)return e;const n=e.filter((function(e){return!r.intersectsDate(e)}));return!this.hasValue(n)&&t?o:n}valuesAreEqual(e,t){const r=this.hasValue(e),o=this.hasValue(t);return!r&&!o||r===o&&e.length===t.length&&(!e.some((function(e){return!t.includes(e)}))&&!t.some((function(t){return!e.includes(t)})))}getPageRange(e){if(!this.hasValue(e))return null;const t=Object(p["p"])(e[0]),r=Object(p["j"])(Object(p["p"])(Object(l["o"])(e)),Object(p["a"])(t,1));return{from:t,to:r}}handleDayClick(e,t){if(!t.dateIsValid(e.date))return;let r=[];this.hasValue(t.value_)?t.value_.some((function(t){return t.getTime()===e.dateTime}))?(r=t.value_.filter((function(t){return!Object(p["d"])(t,e.date)})),!this.hasValue(r)&&t.isRequired&&(r=[e.date])):r=[...t.value_,e.date]:r=[e.date],this.doFormatInput=!0,this.doHidePopover=!1,t.value_=this.normalize(r)}handleDayMouseEnter(){}}var it=r("cfe5");class at{constructor({locale:e,format:t,parse:r}){this._locale=e,this._format=t,this._parse=r}hasValue(e){return Object(l["l"])(e)&&Object(l["i"])(e.start)&&Object(l["i"])(e.end)}normalize(e){if(!this.hasValue(e))return null;const{start:t,end:r}=new it["a"]({start:new Date(e.start),end:new Date(e.end)},{locale:this._locale});return{start:t,end:r}}format(e){const t=this.normalize(e);if(!t)return"";const{start:r,end:o}=t,n=this._format(r),c=this._format(o);return n&&c?`${n} - ${c}`:""}parse(e){let t,r;const o=[" - ","-"].find((function(t){return e.includes(t)})),n=e.split(o).map((function(e){return e.trim()}));return n.length>=2&&(t=this._parse(n[0]),r=this._parse(n[1])),t&&r?this.normalize({start:t,end:r}):null}filterDisabled({value:e,isRequired:t,disabled:r,fallbackValue:o}){let n=t?o:null;return!this.hasValue(e)||r&&r.intersectsDate(e)||(n=e),n}valuesAreEqual(e,t){const r=this.hasValue(e),o=this.hasValue(t);return!r&&!o||r===o&&(Object(p["d"])(e.start,t.start)&&Object(p["d"])(e.end,t.end))}getPageRange(e){if(!this.hasValue(e))return null;const t=Object(p["p"])(e.start),r=Object(p["j"])(Object(p["p"])(e.end),Object(p["a"])(t,1));return{from:t,to:r}}handleDayClick(e,t){const{dateTime:r}=e;if(t.dragValue){const e=this.normalize({start:new Date(t.dragValue.start.getTime()),end:new Date(r)});t.dateIsValid(e)&&(t.doFormatInput=!0,t.doHidePopover=!0,t.dragValue=null,t.value_=e)}else{const e={start:new Date(r),end:new Date(r)};t.dateIsValid(e)&&(t.dragValue=e)}}handleDayMouseEnter(e,t){const{dateTime:r}=e;if(t.dragValue){const e={start:new Date(t.dragValue.start.getTime()),end:new Date(r)};t.dateIsValid(e)&&(t.dragValue=e)}}}function st(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function dt(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?st(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):st(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}var ut,lt,ft={name:"DatePicker",render(e){var t=this;const r=function(){return e(ot,{attrs:dt(dt({},t.$attrs),{},{attributes:t.attributes_,theme:t.$theme,locale:t.$locale}),props:{minDate:t.minDate,maxDate:t.maxDate,disabledDates:t.disabledDates,availableDates:t.availableDates},on:dt(dt({},t.$listeners),{},{dayclick:t.onDayClick,daymouseenter:t.onDayMouseEnter,daykeydown:t.onDayKeydown,dayfocusin:t.onDayFocusIn}),scopedSlots:t.$scopedSlots,ref:"calendar"})};if(this.isInline)return r();const o=this.safeScopedSlot("default",{inputClass:this.inputClass,inputValue:this.inputValue,inputProps:this.inputProps_,inputEvents:this.inputEvents,isDragging:!!this.dragValue,updateValue:this.updateValue,hidePopover:this.hidePopover})||e("input",{class:this.inputClass,attrs:this.inputProps_,domProps:{value:this.inputValue},on:this.inputEvents});return e("span",[e(ue,{props:dt(dt({},this.popover_),{},{id:this.datePickerPopoverId,isInteractive:!0})},[o]),e(P,{props:{id:this.datePickerPopoverId,placement:"bottom-start",contentClass:this.$theme.container},on:{beforeShow:function(e){return t.$emit("popoverWillShow",e)},afterShow:function(e){return t.$emit("popoverDidShow",e)},beforeHide:function(e){return t.$emit("popoverWillHide",e)},afterHide:function(e){return t.$emit("popoverDidHide",e)}},scopedSlots:{default(){return r()}},ref:"popover"})])},mixins:[B,U,G],props:{mode:{type:String,default:"single"},value:{type:null,required:!0},isRequired:Boolean,isInline:Boolean,updateOnInput:Boolean,inputDebounce:Number,inputProps:{type:Object,default:function(){return{}}},popover:{type:Object,default:function(){return{}}},dragAttribute:Object,selectAttribute:Object,attributes:Array},data(){return{value_:null,dragValue:null,inputValue:"",doFormatInput:!0,doHidePopover:!1,doAdjustPageRange:!1,updateTimeout:null,datePickerPopoverId:Object(p["c"])()}},computed:{updateOnInput_(){return this.propOrDefault("updateOnInput","datePicker.updateOnInput")},inputDebounce_(){return this.propOrDefault("inputDebounce","datePicker.inputDebounce")},inputMasks(){const e=this.$locale.masks.input;return Object(l["h"])(e)&&e||[e]},inputClass(){const e=this.inputProps.class||this.$theme.datePickerInput,t=this.inputProps.dragClass||this.$theme.datePickerInputDrag;return this.picker.hasValue(this.dragValue)&&t||e},inputProps_(){const e=dt(dt({},this.inputProps),{},{value:this.inputValue,type:"input"});return delete e.class,delete e.dragClass,e},inputEvents(){return{input:this.inputInput,change:this.inputChange,keyup:this.inputKeyup}},popover_(){return this.propOrDefault("popover","datePicker.popover","merge")},canHidePopover(){return!(this.popover.keepVisibleOnInput||"visible"!==this.popover_.visibility)},selectAttribute_(){if(!this.picker.hasValue(this.value_))return null;const e=dt(dt({key:"select-drag"},this.selectAttribute),{},{dates:this.value_,pinPage:!0}),{dot:t,bar:r,highlight:o,content:n}=e;return t||r||o||n||(e.highlight=!0),e},dragAttribute_(){if("range"!==this.mode||!this.picker.hasValue(this.dragValue))return null;const e=dt(dt({key:"select-drag"},this.dragAttribute),{},{dates:this.dragValue}),{dot:t,bar:r,highlight:o,content:n}=e;return t||r||o||n||(e.highlight={startEnd:{fillMode:"none"}}),e},attributes_(){const e=Object(l["h"])(this.attributes)?[...this.attributes]:[];return this.dragAttribute_?e.push(this.dragAttribute_):this.selectAttribute_&&e.push(this.selectAttribute_),e},picker(){var e=this;const t={locale:this.$locale,format:function(t){return e.$locale.format(t,e.inputMasks[0])},parse:function(t){return e.$locale.parse(t,e.inputMasks)}};switch(this.mode){case"multiple":return new ct(t);case"range":return new at(t);default:return new nt(t)}}},watch:{mode(){this.value_=null},value:{handler(){this.value_=this.picker.filterDisabled({value:this.value,isRequired:this.isRequired,disabled:this.disabledAttribute,fallbackValue:null}),this.value&&!this.value_&&this.$emit("input",null)},immediate:!0},value_:{handler(e){this.picker.valuesAreEqual(e,this.value)||this.$emit("input",e),this.isInline||(this.doFormatInput&&this.formatInput(),this.doHidePopover&&this.hidePopover(),this.doAdjustPageRange&&this.adjustPageRange()),this.doFormatInput=!0,this.doHidePopover=!1,this.doAdjustPageRange=!1},immediate:!0},dragValue(e){this.formatInput(),this.$emit("drag",this.picker.normalize(e))}},mounted(){var e=this;Object(p["n"])(document,"keydown",this.onDocumentKeyDown);const t=Object(g["b"])(document,(function(t){document.body.contains(t.target)&&!Object(p["e"])(e.$el,t.target)&&e.dragValue&&(e.dragValue=null)}));this.$once("beforeDestroy",(function(){Object(p["m"])(document,"keydown",e.onDocumentKeyDown),t()}))},methods:{dateIsValid(e){return!e||!!this.disabledAttribute&&!this.disabledAttribute.intersectsDate(e)},onDocumentKeyDown(e){this.dragValue&&27===e.keyCode&&(this.dragValue=null)},onDayClick(e){this.picker.handleDayClick(e,this),this.$emit("dayclick",e)},onDayMouseEnter(e){this.picker.handleDayMouseEnter(e,this),this.$emit("daymouseenter",e)},onDayFocusIn(e){this.picker.handleDayMouseEnter(e,this),this.$emit("dayfocusin",e)},onDayKeydown(e){switch(e.event.key){case" ":case"Enter":this.picker.handleDayClick(e,this),e.event.preventDefault();break;case"Escape":this.hidePopover()}this.$emit("daykeydown",e)},inputInput(e){this.inputValue=e.target.value,this.updateOnInput_&&this.updateValue(this.inputValue,{formatInput:!1,hidePopover:!1,adjustPageRange:!0,debounce:this.inputDebounce_})},inputChange(){this.updateValue(this.inputValue,{formatInput:!0,hidePopover:!1,adjustPageRange:!1})},inputKeyup(e){27===e.keyCode&&this.updateValue(this.value_,{formatInput:!0,hidePopover:!0,adjustPageRange:!1})},updateValue(e=this.inputValue,{formatInput:t,hidePopover:r,adjustPageRange:o,debounce:n}={}){var c=this;clearTimeout(this.updateTimeout),void 0===n||n<0?this.forceUpdateValue(e,{formatInput:t,hidePopover:r,adjustPageRange:o}):this.updateTimeout=setTimeout((function(){c.updateTimeout=null,c.forceUpdateValue(e,{formatInput:t,hidePopover:r,adjustPageRange:o})}),n)},forceUpdateValue(e,{formatInput:t,hidePopover:r,adjustPageRange:o}){this.inputValue=Object(l["m"])(e)?e:this.inputValue;const n=Object(l["m"])(e)?this.picker.parse(e):e;this.doFormatInput=t,this.doHidePopover=r,this.doAdjustPageRange=o,this.value_=this.picker.filterDisabled({value:this.picker.normalize(n),disabled:this.disabledAttribute,fallbackValue:this.value_})},formatInput(){var e=this;this.$nextTick((function(){const t=e.picker.hasValue(e.dragValue)?e.dragValue:e.value_;e.inputValue=e.picker.format(t)}))},hidePopover(){const e=this.$refs.popover;e&&e.hide({priority:10,delay:250})},adjustPageRange(){this.picker.hasValue(this.value_)&&this.$refs.calendar&&this.$refs.calendar.showPageRange(this.picker.getPageRange(this.value_))}}},vt=ft,bt=(r("d0d6"),j(vt,ut,lt,!1,null,"56ae83be",null)),ht=bt.exports},"2b03":function(e,t){function r(e,t,r,o){var n=e.length,c=r+(o?1:-1);while(o?c--:++c<n)if(t(e[c],c,e))return c;return-1}e.exports=r},"2b10":function(e,t){function r(e,t,r){var o=-1,n=e.length;t<0&&(t=-t>n?0:n+t),r=r>n?n:r,r<0&&(r+=n),n=t>r?0:r-t>>>0,t>>>=0;var c=Array(n);while(++o<n)c[o]=e[o+t];return c}e.exports=r},"2b3e":function(e,t,r){var o=r("585a"),n="object"==typeof self&&self&&self.Object===Object&&self,c=o||n||Function("return this")();e.exports=c},"2b4c":function(e,t,r){var o=r("5537")("wks"),n=r("ca5a"),c=r("7726").Symbol,i="function"==typeof c,a=e.exports=function(e){return o[e]||(o[e]=i&&c[e]||(i?c:n)("Symbol."+e))};a.store=o},"2c66":function(e,t,r){var o=r("d612"),n=r("8db3"),c=r("5edf"),i=r("c584"),a=r("750a"),s=r("ac41"),d=200;function u(e,t,r){var u=-1,l=n,f=e.length,v=!0,b=[],h=b;if(r)v=!1,l=c;else if(f>=d){var p=t?null:a(e);if(p)return s(p);v=!1,l=i,h=new o}else h=t?[]:b;e:while(++u<f){var g=e[u],m=t?t(g):g;if(g=r||0!==g?g:0,v&&m===m){var y=h.length;while(y--)if(h[y]===m)continue e;t&&h.push(m),b.push(g)}else l(h,m,r)||(h!==b&&h.push(m),b.push(g))}return b}e.exports=u},"2d00":function(e,t){e.exports=!1},"2d7c":function(e,t){function r(e,t){var r=-1,o=null==e?0:e.length,n=0,c=[];while(++r<o){var i=e[r];t(i,r,e)&&(c[n++]=i)}return c}e.exports=r},"2d95":function(e,t){var r={}.toString;e.exports=function(e){return r.call(e).slice(8,-1)}},"2dcb":function(e,t,r){var o=r("91e9"),n=o(Object.getPrototypeOf,Object);e.exports=n},"2ec1":function(e,t,r){var o=r("100e"),n=r("9aff");function c(e){return o((function(t,r){var o=-1,c=r.length,i=c>1?r[c-1]:void 0,a=c>2?r[2]:void 0;i=e.length>3&&"function"==typeof i?(c--,i):void 0,a&&n(r[0],r[1],a)&&(i=c<3?void 0:i,c=1),t=Object(t);while(++o<c){var s=r[o];s&&e(t,s,o,i)}return t}))}e.exports=c},"2fa3":function(e,t,r){"use strict";r.d(t,"h",(function(){return a})),r.d(t,"x",(function(){return s})),r.d(t,"u",(function(){return d})),r.d(t,"t",(function(){return u})),r.d(t,"v",(function(){return l})),r.d(t,"w",(function(){return f})),r.d(t,"p",(function(){return v})),r.d(t,"a",(function(){return b})),r.d(t,"s",(function(){return h})),r.d(t,"q",(function(){return p})),r.d(t,"r",(function(){return g})),r.d(t,"j",(function(){return m})),r.d(t,"d",(function(){return y})),r.d(t,"b",(function(){return x})),r.d(t,"i",(function(){return w})),r.d(t,"f",(function(){return k})),r.d(t,"g",(function(){return O})),r.d(t,"l",(function(){return j})),r.d(t,"n",(function(){return D})),r.d(t,"m",(function(){return P})),r.d(t,"e",(function(){return M})),r.d(t,"o",(function(){return S})),r.d(t,"c",(function(){return E})),r.d(t,"k",(function(){return _}));var o=r("bd86"),n=(r("6b54"),r("ac6a"),r("9404"));function c(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function i(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?c(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):c(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}const a=function(e,t){return Object(n["j"])(e)?e(t):e},s=function(e){return!!(e&&e.month&&e.year)},d=function(e,t){return!(!s(e)||!s(t))&&(e.year===t.year?e.month<t.month:e.year<t.year)},u=function(e,t){return!(!s(e)||!s(t))&&(e.year===t.year?e.month>t.month:e.year>t.year)},l=function(e,t,r){return!!e&&!d(e,t)&&!u(e,r)},f=function(e,t){return!(!e&&t)&&(!(e&&!t)&&(!e&&!t||e.month===t.month&&e.year===t.year))},v=function(e){return e?{month:e.getMonth()+1,year:e.getFullYear()}:null},b=function({month:e,year:t},r){const o=r>0?1:-1;for(let n=0;n<Math.abs(r);n++)e+=o,e>12?(e=1,t++):e<1&&(e=12,t--);return{month:e,year:t}},h=function(){return v(new Date)},p=function(){return b(h(),1)},g=function(){return b(h(),-1)},m=function(...e){return e.reduce((function(e,t){return e?t&&u(t,e)?t:e:t}))};function y(e,t){const r=Object(n["i"])(e),o=Object(n["i"])(t);return!r&&!o||r===o&&e.getTime()===t.getTime()}const x=function(e){return Object(n["h"])(e)&&e.length},w=function e(t,r){return t?r&&r(t)?t:e(t.parentElement,r):null},k=function(e,t){return!!w(e,(function(e){return e===t}))},O=function(e,t){let r=0,o=0;do{r+=e.offsetTop||0,o+=e.offsetLeft||0,e=e.offsetParent}while(e&&e!==t);return{top:r,left:o}},j=function(e,t,r){const o=[];return r.forEach((function(r){const c=r.name||r.toString(),a=r.mixin,s=r.validate;if(Object.prototype.hasOwnProperty.call(e,c)){const r=s?s(e[c]):e[c];t[c]=a&&Object(n["l"])(r)?i(i({},a),r):r,o.push(c)}})),{target:t,assigned:o.length?o:null}},D=function(e,t,r){e&&t&&r&&e.addEventListener(t,r,!1)},P=function(e,t,r){e&&t&&e.removeEventListener(t,r,!1)},M=function(e,t){return!!e&&!!t&&(e===t||e.contains(t))},S=function(e,t){" "!==e.key&&"Enter"!==e.key||(t(e),e.preventDefault())},E=function(){function e(){return(65536*(1+Math.random())|0).toString(16).substring(1)}return`${e()+e()}-${e()}-${e()}-${e()}-${e()}${e()}${e()}`};function _(e){let t,r=0,o=0;if(0===e.length)return r;for(o=0;o<e.length;o++)t=e.charCodeAt(o),r=(r<<5)-r+t,r|=0;return r}},"2fcc":function(e,t){function r(e){var t=this.__data__,r=t["delete"](e);return this.size=t.size,r}e.exports=r},3092:function(e,t,r){var o=r("4284"),n=r("badf"),c=r("361d"),i=r("6747"),a=r("9aff");function s(e,t,r){var s=i(e)?o:c;return r&&a(e,t,r)&&(t=void 0),s(e,n(t,3))}e.exports=s},"30c9":function(e,t,r){var o=r("9520"),n=r("b218");function c(e){return null!=e&&n(e.length)&&!o(e)}e.exports=c},"32b3":function(e,t,r){var o=r("872a"),n=r("9638"),c=Object.prototype,i=c.hasOwnProperty;function a(e,t,r){var c=e[t];i.call(e,t)&&n(c,r)&&(void 0!==r||t in e)||o(e,t,r)}e.exports=a},"32e9":function(e,t,r){var o=r("86cc"),n=r("4630");e.exports=r("9e1e")?function(e,t,r){return o.f(e,t,n(1,r))}:function(e,t,r){return e[t]=r,e}},"32f4":function(e,t,r){var o=r("2d7c"),n=r("d327"),c=Object.prototype,i=c.propertyIsEnumerable,a=Object.getOwnPropertySymbols,s=a?function(e){return null==e?[]:(e=Object(e),o(a(e),(function(t){return i.call(e,t)})))}:n;e.exports=s},"34ac":function(e,t,r){var o=r("9520"),n=r("1368"),c=r("1a8c"),i=r("dc57"),a=/[\\^$.*+?()[\]{}|]/g,s=/^\[object .+?Constructor\]$/,d=Function.prototype,u=Object.prototype,l=d.toString,f=u.hasOwnProperty,v=RegExp("^"+l.call(f).replace(a,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");function b(e){if(!c(e)||n(e))return!1;var t=o(e)?v:s;return t.test(i(e))}e.exports=b},"34e9":function(e,t,r){"use strict";(function(e){var o=r("bd86"),n=(r("ac6a"),r("2af9")),c=r("ed08");function i(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function a(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?i(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):i(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}function s(e,t){if(s.installed)return;s.installed=!0;const r=c["setupCalendar"](t);Object.entries(n).forEach((function([t,o]){e.component(`${r.componentPrefix}${t}`,o)}))}r.d(t,"c",(function(){return n["Calendar"]})),r.d(t,"d",(function(){return n["CalendarNav"]})),r.d(t,"f",(function(){return n["DatePicker"]})),r.d(t,"g",(function(){return n["Grid"]})),r.d(t,"i",(function(){return n["Popover"]})),r.d(t,"j",(function(){return n["PopoverRef"]})),r.d(t,"a",(function(){return c["Attribute"]})),r.d(t,"b",(function(){return c["AttributeStore"]})),r.d(t,"e",(function(){return c["DateInfo"]})),r.d(t,"h",(function(){return c["Locale"]})),r.d(t,"k",(function(){return c["addHorizontalSwipeHandler"]})),r.d(t,"l",(function(){return c["addPages"]})),r.d(t,"m",(function(){return c["addTapOrClickHandler"]})),r.d(t,"n",(function(){return c["arrayHasItems"]})),r.d(t,"o",(function(){return c["createGuid"]})),r.d(t,"p",(function(){return c["datesAreEqual"]})),r.d(t,"r",(function(){return c["elementContains"]})),r.d(t,"s",(function(){return c["elementHasAncestor"]})),r.d(t,"t",(function(){return c["elementPositionInAncestor"]})),r.d(t,"u",(function(){return c["evalFn"]})),r.d(t,"v",(function(){return c["findAncestor"]})),r.d(t,"w",(function(){return c["getMaxPage"]})),r.d(t,"x",(function(){return c["hash"]})),r.d(t,"y",(function(){return c["mixinOptionalProps"]})),r.d(t,"z",(function(){return c["off"]})),r.d(t,"A",(function(){return c["on"]})),r.d(t,"B",(function(){return c["onSpaceOrEnter"]})),r.d(t,"C",(function(){return c["pageForDate"]})),r.d(t,"D",(function(){return c["pageForNextMonth"]})),r.d(t,"E",(function(){return c["pageForPrevMonth"]})),r.d(t,"F",(function(){return c["pageForThisMonth"]})),r.d(t,"G",(function(){return c["pageIsAfterPage"]})),r.d(t,"H",(function(){return c["pageIsBeforePage"]})),r.d(t,"I",(function(){return c["pageIsBetweenPages"]})),r.d(t,"J",(function(){return c["pageIsEqualToPage"]})),r.d(t,"K",(function(){return c["pageIsValid"]})),r.d(t,"L",(function(){return c["setupCalendar"]}));const d=a(a({install:s},n),c);let u=null;"undefined"!==typeof window?u=window.Vue:"undefined"!==typeof e&&(u=e.Vue),u&&u.use(d),t["q"]=d}).call(this,r("c8ba"))},"35e8":function(e,t,r){var o=r("d9f6"),n=r("aebd");e.exports=r("8e60")?function(e,t,r){return o.f(e,t,n(1,r))}:function(e,t,r){return e[t]=r,e}},"361d":function(e,t,r){var o=r("48a0");function n(e,t){var r;return o(e,(function(e,o,n){return r=t(e,o,n),!r})),!!r}e.exports=n},3698:function(e,t){function r(e,t){return null==e?void 0:e[t]}e.exports=r},3729:function(e,t,r){var o=r("9e69"),n=r("00fd"),c=r("29f3"),i="[object Null]",a="[object Undefined]",s=o?o.toStringTag:void 0;function d(e){return null==e?void 0===e?a:i:s&&s in Object(e)?n(e):c(e)}e.exports=d},"375a":function(e,t,r){var o=r("b20a"),n=o((function(e,t,r){return e+(r?"-":"")+t.toLowerCase()}));e.exports=n},3818:function(e,t,r){var o=r("7e64"),n=r("8057"),c=r("32b3"),i=r("5b01"),a=r("0f0f"),s=r("e538"),d=r("4359"),u=r("54eb"),l=r("1041"),f=r("a994"),v=r("1bac"),b=r("42a2"),h=r("c87c"),p=r("c2b6"),g=r("fa21"),m=r("6747"),y=r("0d24"),x=r("cc45"),w=r("1a8c"),k=r("d7ee"),O=r("ec69"),j=1,D=2,P=4,M="[object Arguments]",S="[object Array]",E="[object Boolean]",_="[object Date]",Y="[object Error]",C="[object Function]",I="[object GeneratorFunction]",$="[object Map]",A="[object Number]",T="[object Object]",L="[object RegExp]",F="[object Set]",N="[object String]",z="[object Symbol]",R="[object WeakMap]",V="[object ArrayBuffer]",H="[object DataView]",W="[object Float32Array]",B="[object Float64Array]",U="[object Int8Array]",G="[object Int16Array]",q="[object Int32Array]",K="[object Uint8Array]",Z="[object Uint8ClampedArray]",X="[object Uint16Array]",J="[object Uint32Array]",Q={};function ee(e,t,r,S,E,_){var Y,$=t&j,A=t&D,L=t&P;if(r&&(Y=E?r(e,S,E,_):r(e)),void 0!==Y)return Y;if(!w(e))return e;var F=m(e);if(F){if(Y=h(e),!$)return d(e,Y)}else{var N=b(e),z=N==C||N==I;if(y(e))return s(e,$);if(N==T||N==M||z&&!E){if(Y=A||z?{}:g(e),!$)return A?l(e,a(Y,e)):u(e,i(Y,e))}else{if(!Q[N])return E?e:{};Y=p(e,N,$)}}_||(_=new o);var R=_.get(e);if(R)return R;_.set(e,Y),k(e)?e.forEach((function(o){Y.add(ee(o,t,r,o,e,_))})):x(e)&&e.forEach((function(o,n){Y.set(n,ee(o,t,r,n,e,_))}));var V=L?A?v:f:A?keysIn:O,H=F?void 0:V(e);return n(H||e,(function(o,n){H&&(n=o,o=e[n]),c(Y,n,ee(o,t,r,n,e,_))})),Y}Q[M]=Q[S]=Q[V]=Q[H]=Q[E]=Q[_]=Q[W]=Q[B]=Q[U]=Q[G]=Q[q]=Q[$]=Q[A]=Q[T]=Q[L]=Q[F]=Q[N]=Q[z]=Q[K]=Q[Z]=Q[X]=Q[J]=!0,Q[Y]=Q[C]=Q[R]=!1,e.exports=ee},3846:function(e,t,r){r("9e1e")&&"g"!=/./g.flags&&r("86cc").f(RegExp.prototype,"flags",{configurable:!0,get:r("0bfb")})},3852:function(e,t,r){var o=r("96f3"),n=r("e2c0");function c(e,t){return null!=e&&n(e,t,o)}e.exports=c},"386d":function(e,t,r){"use strict";var o=r("cb7c"),n=r("83a1"),c=r("5f1b");r("214f")("search",1,(function(e,t,r,i){return[function(r){var o=e(this),n=void 0==r?void 0:r[t];return void 0!==n?n.call(r,o):new RegExp(r)[t](String(o))},function(e){var t=i(r,e,this);if(t.done)return t.value;var a=o(e),s=String(this),d=a.lastIndex;n(d,0)||(a.lastIndex=0);var u=c(a,s);return n(a.lastIndex,d)||(a.lastIndex=d),null===u?-1:u.index}]}))},"38fd":function(e,t,r){var o=r("69a8"),n=r("4bf8"),c=r("613b")("IE_PROTO"),i=Object.prototype;e.exports=Object.getPrototypeOf||function(e){return e=n(e),o(e,c)?e[c]:"function"==typeof e.constructor&&e instanceof e.constructor?e.constructor.prototype:e instanceof Object?i:null}},"39ff":function(e,t,r){var o=r("0b07"),n=r("2b3e"),c=o(n,"WeakMap");e.exports=c},"3b2b":function(e,t,r){var o=r("7726"),n=r("5dbc"),c=r("86cc").f,i=r("9093").f,a=r("aae3"),s=r("0bfb"),d=o.RegExp,u=d,l=d.prototype,f=/a/g,v=/a/g,b=new d(f)!==f;if(r("9e1e")&&(!b||r("79e5")((function(){return v[r("2b4c")("match")]=!1,d(f)!=f||d(v)==v||"/a/i"!=d(f,"i")})))){d=function(e,t){var r=this instanceof d,o=a(e),c=void 0===t;return!r&&o&&e.constructor===d&&c?e:n(b?new u(o&&!c?e.source:e,t):u((o=e instanceof d)?e.source:e,o&&c?s.call(e):t),r?this:l,d)};for(var h=function(e){e in d||c(d,e,{configurable:!0,get:function(){return u[e]},set:function(t){u[e]=t}})},p=i(u),g=0;p.length>g;)h(p[g++]);l.constructor=d,d.prototype=l,r("2aba")(o,"RegExp",d)}r("7a56")("RegExp")},"3b4a":function(e,t,r){var o=r("0b07"),n=function(){try{var e=o(Object,"defineProperty");return e({},"",{}),e}catch(t){}}();e.exports=n},"3bb4":function(e,t,r){var o=r("08cc"),n=r("ec69");function c(e){var t=n(e),r=t.length;while(r--){var c=t[r],i=e[c];t[r]=[c,i,o(i)]}return t}e.exports=c},"3d14":function(e,t,r){"use strict";var o=r("c724"),n=r.n(o);n.a},"3eea":function(e,t,r){var o=r("7948"),n=r("3818"),c=r("4bb5"),i=r("e2e4"),a=r("8eeb"),s=r("e0e7"),d=r("c6cf"),u=r("1bac"),l=1,f=2,v=4,b=d((function(e,t){var r={};if(null==e)return r;var d=!1;t=o(t,(function(t){return t=i(t,e),d||(d=t.length>1),t})),a(e,u(e),r),d&&(r=n(r,l|f|v,s));var b=t.length;while(b--)c(r,t[b]);return r}));e.exports=b},"3f84":function(e,t,r){var o=r("85e3"),n=r("100e"),c=r("e031"),i=r("2411"),a=n((function(e){return e.push(void 0,c),o(i,void 0,e)}));e.exports=a},"41a0":function(e,t,r){"use strict";var o=r("2aeb"),n=r("4630"),c=r("7f20"),i={};r("32e9")(i,r("2b4c")("iterator"),(function(){return this})),e.exports=function(e,t,r){e.prototype=o(i,{next:n(1,r)}),c(e,t+" Iterator")}},"41c3":function(e,t,r){var o=r("1a8c"),n=r("eac5"),c=r("ec8c"),i=Object.prototype,a=i.hasOwnProperty;function s(e){if(!o(e))return c(e);var t=n(e),r=[];for(var i in e)("constructor"!=i||!t&&a.call(e,i))&&r.push(i);return r}e.exports=s},4245:function(e,t,r){var o=r("1290");function n(e,t){var r=e.__data__;return o(t)?r["string"==typeof t?"string":"hash"]:r.map}e.exports=n},4284:function(e,t){function r(e,t){var r=-1,o=null==e?0:e.length;while(++r<o)if(t(e[r],r,e))return!0;return!1}e.exports=r},"42a2":function(e,t,r){var o=r("b5a7"),n=r("79bc"),c=r("1cec"),i=r("c869"),a=r("39ff"),s=r("3729"),d=r("dc57"),u="[object Map]",l="[object Object]",f="[object Promise]",v="[object Set]",b="[object WeakMap]",h="[object DataView]",p=d(o),g=d(n),m=d(c),y=d(i),x=d(a),w=s;(o&&w(new o(new ArrayBuffer(1)))!=h||n&&w(new n)!=u||c&&w(c.resolve())!=f||i&&w(new i)!=v||a&&w(new a)!=b)&&(w=function(e){var t=s(e),r=t==l?e.constructor:void 0,o=r?d(r):"";if(o)switch(o){case p:return h;case g:return u;case m:return f;case y:return v;case x:return b}return t}),e.exports=w},4359:function(e,t){function r(e,t){var r=-1,o=e.length;t||(t=Array(o));while(++r<o)t[r]=e[r];return t}e.exports=r},4416:function(e,t){function r(e){var t=null==e?0:e.length;return t?e[t-1]:void 0}e.exports=r},"454f":function(e,t,r){r("46a7");var o=r("584a").Object;e.exports=function(e,t,r){return o.defineProperty(e,t,r)}},4588:function(e,t){var r=Math.ceil,o=Math.floor;e.exports=function(e){return isNaN(e=+e)?0:(e>0?o:r)(e)}},4630:function(e,t){e.exports=function(e,t){return{enumerable:!(1&e),configurable:!(2&e),writable:!(4&e),value:t}}},"46a7":function(e,t,r){var o=r("63b6");o(o.S+o.F*!r("8e60"),"Object",{defineProperty:r("d9f6").f})},"47f5":function(e,t,r){var o=r("2b03"),n=r("d9a8"),c=r("099a");function i(e,t,r){return t===t?c(e,t,r):o(e,n,r)}e.exports=i},"48a0":function(e,t,r){var o=r("242e"),n=r("950a"),c=n(o);e.exports=c},4917:function(e,t,r){"use strict";var o=r("cb7c"),n=r("9def"),c=r("0390"),i=r("5f1b");r("214f")("match",1,(function(e,t,r,a){return[function(r){var o=e(this),n=void 0==r?void 0:r[t];return void 0!==n?n.call(r,o):new RegExp(r)[t](String(o))},function(e){var t=a(r,e,this);if(t.done)return t.value;var s=o(e),d=String(this);if(!s.global)return i(s,d);var u=s.unicode;s.lastIndex=0;var l,f=[],v=0;while(null!==(l=i(s,d))){var b=String(l[0]);f[v]=b,""===b&&(s.lastIndex=c(d,n(s.lastIndex),u)),v++}return 0===v?null:f}]}))},"499e":function(e,t,r){"use strict";function o(e,t){for(var r=[],o={},n=0;n<t.length;n++){var c=t[n],i=c[0],a=c[1],s=c[2],d=c[3],u={id:e+":"+n,css:a,media:s,sourceMap:d};o[i]?o[i].parts.push(u):r.push(o[i]={id:i,parts:[u]})}return r}r.r(t),r.d(t,"default",(function(){return b}));var n="undefined"!==typeof document;if("undefined"!==typeof DEBUG&&DEBUG&&!n)throw new Error("vue-style-loader cannot be used in a non-browser environment. Use { target: 'node' } in your Webpack config to indicate a server-rendering environment.");var c={},i=n&&(document.head||document.getElementsByTagName("head")[0]),a=null,s=0,d=!1,u=function(){},l=null,f="data-vue-ssr-id",v="undefined"!==typeof navigator&&/msie [6-9]\b/.test(navigator.userAgent.toLowerCase());function b(e,t,r,n){d=r,l=n||{};var i=o(e,t);return h(i),function(t){for(var r=[],n=0;n<i.length;n++){var a=i[n],s=c[a.id];s.refs--,r.push(s)}t?(i=o(e,t),h(i)):i=[];for(n=0;n<r.length;n++){s=r[n];if(0===s.refs){for(var d=0;d<s.parts.length;d++)s.parts[d]();delete c[s.id]}}}}function h(e){for(var t=0;t<e.length;t++){var r=e[t],o=c[r.id];if(o){o.refs++;for(var n=0;n<o.parts.length;n++)o.parts[n](r.parts[n]);for(;n<r.parts.length;n++)o.parts.push(g(r.parts[n]));o.parts.length>r.parts.length&&(o.parts.length=r.parts.length)}else{var i=[];for(n=0;n<r.parts.length;n++)i.push(g(r.parts[n]));c[r.id]={id:r.id,refs:1,parts:i}}}}function p(){var e=document.createElement("style");return e.type="text/css",i.appendChild(e),e}function g(e){var t,r,o=document.querySelector("style["+f+'~="'+e.id+'"]');if(o){if(d)return u;o.parentNode.removeChild(o)}if(v){var n=s++;o=a||(a=p()),t=y.bind(null,o,n,!1),r=y.bind(null,o,n,!0)}else o=p(),t=x.bind(null,o),r=function(){o.parentNode.removeChild(o)};return t(e),function(o){if(o){if(o.css===e.css&&o.media===e.media&&o.sourceMap===e.sourceMap)return;t(e=o)}else r()}}var m=function(){var e=[];return function(t,r){return e[t]=r,e.filter(Boolean).join("\n")}}();function y(e,t,r,o){var n=r?"":o.css;if(e.styleSheet)e.styleSheet.cssText=m(t,n);else{var c=document.createTextNode(n),i=e.childNodes;i[t]&&e.removeChild(i[t]),i.length?e.insertBefore(c,i[t]):e.appendChild(c)}}function x(e,t){var r=t.css,o=t.media,n=t.sourceMap;if(o&&e.setAttribute("media",o),l.ssrId&&e.setAttribute(f,t.id),n&&(r+="\n/*# sourceURL="+n.sources[0]+" */",r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(n))))+" */"),e.styleSheet)e.styleSheet.cssText=r;else{while(e.firstChild)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(r))}}},"49e7":function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".vc-svg-icon[data-v-63f7b5ec]{display:inline-block;stroke:currentColor;stroke-width:0}.vc-svg-icon path[data-v-63f7b5ec]{fill:currentColor}",""])},"49f4":function(e,t,r){var o=r("6044");function n(){this.__data__=o?o(null):{},this.size=0}e.exports=n},"4bb5":function(e,t,r){var o=r("e2e4"),n=r("4416"),c=r("8296"),i=r("f4d6");function a(e,t){return t=o(t,e),e=c(e,t),null==e||delete e[i(n(t))]}e.exports=a},"4bf8":function(e,t,r){var o=r("be13");e.exports=function(e){return Object(o(e))}},"4caa":function(e,t,r){var o=r("a919"),n=r("76dd"),c=/[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g,i="\\u0300-\\u036f",a="\\ufe20-\\ufe2f",s="\\u20d0-\\u20ff",d=i+a+s,u="["+d+"]",l=RegExp(u,"g");function f(e){return e=n(e),e&&e.replace(c,o).replace(l,"")}e.exports=f},"4cfe":function(e,t){function r(e){return void 0===e}e.exports=r},"4d8c":function(e,t,r){var o=r("5c69");function n(e){var t=null==e?0:e.length;return t?o(e,1):[]}e.exports=n},"4f50":function(e,t,r){var o=r("b760"),n=r("e538"),c=r("c8fe"),i=r("4359"),a=r("fa21"),s=r("d370"),d=r("6747"),u=r("dcbe"),l=r("0d24"),f=r("9520"),v=r("1a8c"),b=r("60ed"),h=r("73ac"),p=r("8adb"),g=r("8de2");function m(e,t,r,m,y,x,w){var k=p(e,r),O=p(t,r),j=w.get(O);if(j)o(e,r,j);else{var D=x?x(k,O,r+"",e,t,w):void 0,P=void 0===D;if(P){var M=d(O),S=!M&&l(O),E=!M&&!S&&h(O);D=O,M||S||E?d(k)?D=k:u(k)?D=i(k):S?(P=!1,D=n(O,!0)):E?(P=!1,D=c(O,!0)):D=[]:b(O)||s(O)?(D=k,s(k)?D=g(k):v(k)&&!f(k)||(D=a(O))):P=!1}P&&(w.set(O,D),y(D,O,m,x,w),w["delete"](O)),o(e,r,D)}}e.exports=m},"501e":function(e,t,r){var o=r("3729"),n=r("1310"),c="[object Number]";function i(e){return"number"==typeof e||n(e)&&o(e)==c}e.exports=i},"50d8":function(e,t){function r(e,t){var r=-1,o=Array(e);while(++r<e)o[r]=t(r);return o}e.exports=r},"51ec":function(e,t,r){"use strict";r.d(t,"b",(function(){return v})),r.d(t,"a",(function(){return b}));var o=r("8bbf"),n=r.n(o),c=r("9404"),i=r("23a5"),a=r("7efe"),s=r("85a9"),d=r("5ca5"),u=r("f15d");const l={componentPrefix:"v",navVisibility:"click",titlePosition:"center",transition:"slide-h",touch:i,masks:a,screens:s,theme:d["a"],locales:u["a"],datePicker:{updateOnInput:!0,inputDebounce:1e3,popover:{visibility:"hover-focus",placement:"bottom-start",keepVisibleOnInput:!1}}};let f=null;const v=function(e){return f||(f=new n.a({data(){return{defaults:Object(c["c"])(e,l)}},computed:{locales(){var e=this;return Object(c["q"])(this.defaults.locales,(function(t){return t.masks=Object(c["c"])(t.masks,e.defaults.masks),t}))}}})),f.defaults},b={beforeCreate(){v()},computed:{$defaults(){return f.defaults},$locales(){return f.locales}}}},"520a":function(e,t,r){"use strict";var o=r("0bfb"),n=RegExp.prototype.exec,c=String.prototype.replace,i=n,a="lastIndex",s=function(){var e=/a/,t=/b*/g;return n.call(e,"a"),n.call(t,"a"),0!==e[a]||0!==t[a]}(),d=void 0!==/()??/.exec("")[1],u=s||d;u&&(i=function(e){var t,r,i,u,l=this;return d&&(r=new RegExp("^"+l.source+"$(?!\\s)",o.call(l))),s&&(t=l[a]),i=n.call(l,e),s&&i&&(l[a]=l.global?i.index+i[0].length:t),d&&i&&i.length>1&&c.call(i[0],r,(function(){for(u=1;u<arguments.length-2;u++)void 0===arguments[u]&&(i[u]=void 0)})),i}),e.exports=i},"52a7":function(e,t){t.f={}.propertyIsEnumerable},"54eb":function(e,t,r){var o=r("8eeb"),n=r("32f4");function c(e,t){return o(e,n(e),t)}e.exports=c},5537:function(e,t,r){var o=r("8378"),n=r("7726"),c="__core-js_shared__",i=n[c]||(n[c]={});(e.exports=function(e,t){return i[e]||(i[e]=void 0!==t?t:{})})("versions",[]).push({version:o.version,mode:r("2d00")?"pure":"global",copyright:"© 2019 Denis Pushkarev (zloirock.ru)"})},"55a3":function(e,t){function r(e){return this.__data__.has(e)}e.exports=r},"57a5":function(e,t,r){var o=r("91e9"),n=o(Object.keys,Object);e.exports=n},"584a":function(e,t){var r=e.exports={version:"2.6.11"};"number"==typeof __e&&(__e=r)},"585a":function(e,t,r){(function(t){var r="object"==typeof t&&t&&t.Object===Object&&t;e.exports=r}).call(this,r("c8ba"))},"5b01":function(e,t,r){var o=r("8eeb"),n=r("ec69");function c(e,t){return e&&o(t,n(t),e)}e.exports=c},"5c69":function(e,t,r){var o=r("087d"),n=r("0621");function c(e,t,r,i,a){var s=-1,d=e.length;r||(r=n),a||(a=[]);while(++s<d){var u=e[s];t>0&&r(u)?t>1?c(u,t-1,r,i,a):o(a,u):i||(a[a.length]=u)}return a}e.exports=c},"5ca1":function(e,t,r){var o=r("7726"),n=r("8378"),c=r("32e9"),i=r("2aba"),a=r("9b43"),s="prototype",d=function(e,t,r){var u,l,f,v,b=e&d.F,h=e&d.G,p=e&d.S,g=e&d.P,m=e&d.B,y=h?o:p?o[t]||(o[t]={}):(o[t]||{})[s],x=h?n:n[t]||(n[t]={}),w=x[s]||(x[s]={});for(u in h&&(r=t),r)l=!b&&y&&void 0!==y[u],f=(l?y:r)[u],v=m&&l?a(f,o):g&&"function"==typeof f?a(Function.call,f):f,y&&i(y,u,f,e&d.U),x[u]!=f&&c(x,u,v),g&&w[u]!=f&&(w[u]=f)};o.core=n,d.F=1,d.G=2,d.S=4,d.P=8,d.B=16,d.W=32,d.U=64,d.R=128,e.exports=d},"5ca5":function(e,t,r){"use strict";t["a"]={color:"blue",isDark:!1,container:{light:"vc-text-gray-900 vc-bg-white vc-border vc-border-gray-400 vc-rounded-lg",dark:"vc-text-gray-200 vc-bg-gray-900 vc-border vc-border-gray-700 vc-rounded-lg"},header:{light:"vc-text-gray-900",dark:"vc-text-gray-200"},title:{light:"vc-text-lg vc-text-gray-800 vc-font-semibold hover:vc-opacity-75",dark:"vc-text-lg vc-text-gray-100 vc-font-semibold hover:vc-opacity-75"},arrows:{light:"vc-text-gray-600 vc-rounded vc-border-2 vc-border-transparent hover:vc-opacity-50 hover:vc-bg-gray-300 focus:vc-border-gray-300",dark:"vc-text-white vc-rounded vc-border-2 vc-border-transparent hover:vc-opacity-50 focus:vc-border-gray-700"},weekdays:{light:"vc-text-sm vc-font-bold vc-text-gray-500",dark:"vc-text-sm vc-font-bold vc-text-{color}-200"},navPopoverContainer:{light:"vc-rounded-lg vc-text-sm vc-font-semibold vc-text-white vc-bg-gray-800 vc-border vc-border-gray-700 vc-p-1 vc-shadow",dark:"vc-rounded-lg vc-text-sm vc-font-semibold vc-text-gray-800 vc-bg-white vc-border vc-border-gray-100 vc-p-1 vc-shadow"},navTitle:{light:"vc-text-{color}-100 vc-font-bold vc-leading-snug vc-px-2 vc-py-1 vc-rounded vc-border-2 vc-border-transparent hover:vc-bg-gray-900 focus:vc-border-{color}-600",dark:"vc-text-gray-900 vc-font-bold vc-leading-snug vc-px-2 vc-py-1 vc-rounded vc-border-2 vc-border-transparent hover:vc-bg-gray-200 focus:vc-border-{color}-400"},navArrows:{light:"vc-leading-snug vc-rounded vc-border-2 vc-border-transparent hover:vc-bg-gray-900 focus:vc-border-{color}-600",dark:"vc-leading-snug vc-rounded vc-border-2 vc-border-transparent hover:vc-bg-gray-200 focus:vc-border-{color}-400"},navCell:{light:"vc-w-12 vc-font-semibold vc-cursor-pointer vc-text-center vc-leading-snug vc-py-1 vc-rounded vc-border-2 vc-border-transparent hover:vc-bg-gray-900 hover:vc-shadow-inner hover:vc-text-white focus:vc-border-{color}-600",dark:"vc-w-12 vc-font-semibold vc-cursor-pointer vc-text-center vc-leading-snug vc-py-1 vc-rounded vc-border-2 vc-border-transparent hover:vc-bg-gray-200 hover:vc-text-gray-900 focus:vc-border-{color}-400"},navCellInactive:"vc-border-transparent",navCellInactiveCurrent:{light:"vc-text-{color}-100 vc-font-bold vc-border-{color}-100",dark:"vc-text-{color}-600 vc-font-bold vc-border-{color}-500"},navCellActive:{light:"vc-bg-{color}-100 vc-text-{color}-900 vc-border-transparent vc-font-bold vc-shadow",dark:"vc-bg-{color}-500 vc-text-white vc-border-transparent vc-font-bold vc-shadow"},dayNotInMonth:"vc-opacity-0 vc-pointer-events-none",dayContent:"vc-font-medium vc-text-sm vc-cursor-pointer focus:vc-font-bold vc-rounded-full",dayContentDisabled:{light:"vc-text-gray-400",dark:"vc-text-gray-600"},dayPopoverContainer:{light:"vc-rounded vc-text-xs vc-text-white vc-font-medium vc-bg-gray-800 vc-border vc-border-gray-700 vc-px-2 vc-py-1 vc-shadow",dark:"vc-rounded vc-text-xs vc-text-gray-900 vc-font-medium vc-bg-white vc-border vc-border-gray-200 vc-px-2 vc-py-1 vc-shadow"},dayPopoverHeader:{light:"vc-text-xs vc-text-gray-300 vc-font-semibold",dark:"vc-text-xs vc-text-gray-700 vc-font-semibold"},highlightBaseFillMode:"light",highlightStartEndFillMode:"solid",highlightStartEndClass:"vc-rounded-full",bgLow:{light:"vc-bg-white vc-border-2 vc-border-{color}-700",dark:"vc-bg-gray-900 vc-border-2 vc-border-{color}-200"},bgAccentLow:{light:"vc-bg-{color}-200",dark:"vc-bg-{color}-800 vc-opacity-75"},bgAccentHigh:{light:"vc-bg-{color}-600",dark:"vc-bg-{color}-500"},contentAccent:{light:"vc-font-bold vc-text-{color}-900",dark:"vc-font-bold vc-text-{color}-100"},contentAccentContrast:"vc-font-bold vc-text-white",datePickerInput:"vc-appearance-none vc-text-base vc-text-gray-800 vc-bg-white vc-border vc-border-gray-400 vc-rounded vc-w-full vc-py-2 vc-px-3 vc-leading-tight focus:vc-outline-none focus:vc-shadow",datePickerInputDrag:"vc-appearance-none vc-text-base vc-text-gray-500 vc-bg-white vc-border vc-border-gray-400 vc-rounded vc-w-full vc-py-2 vc-px-3 vc-leading-tight focus:vc-outline-none focus:vc-shadow"}},"5cab":function(e,t,r){var o=r("961c");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("bce10684",o,!0,{sourceMap:!1,shadowMode:!1})},"5d89":function(e,t,r){var o=r("f8af");function n(e,t){var r=t?o(e.buffer):e.buffer;return new e.constructor(r,e.byteOffset,e.byteLength)}e.exports=n},"5dbc":function(e,t,r){var o=r("d3f4"),n=r("8b97").set;e.exports=function(e,t,r){var c,i=t.constructor;return i!==r&&"function"==typeof i&&(c=i.prototype)!==r.prototype&&o(c)&&n&&n(e,c),e}},"5e2e":function(e,t,r){var o=r("28c9"),n=r("69d5"),c=r("b4c0"),i=r("fba5"),a=r("67ca");function s(e){var t=-1,r=null==e?0:e.length;this.clear();while(++t<r){var o=e[t];this.set(o[0],o[1])}}s.prototype.clear=o,s.prototype["delete"]=n,s.prototype.get=c,s.prototype.has=i,s.prototype.set=a,e.exports=s},"5edf":function(e,t){function r(e,t,r){var o=-1,n=null==e?0:e.length;while(++o<n)if(r(t,e[o]))return!0;return!1}e.exports=r},"5f1b":function(e,t,r){"use strict";var o=r("23c6"),n=RegExp.prototype.exec;e.exports=function(e,t){var r=e.exec;if("function"===typeof r){var c=r.call(e,t);if("object"!==typeof c)throw new TypeError("RegExp exec method returned something other than an Object or null");return c}if("RegExp"!==o(e))throw new TypeError("RegExp#exec called on incompatible receiver");return n.call(e,t)}},"5fa8":function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,"[data-v-56ae83be] .vc-container{border:none}",""])},6044:function(e,t,r){var o=r("0b07"),n=o(Object,"create");e.exports=n},"60ed":function(e,t,r){var o=r("3729"),n=r("2dcb"),c=r("1310"),i="[object Object]",a=Function.prototype,s=Object.prototype,d=a.toString,u=s.hasOwnProperty,l=d.call(Object);function f(e){if(!c(e)||o(e)!=i)return!1;var t=n(e);if(null===t)return!0;var r=u.call(t,"constructor")&&t.constructor;return"function"==typeof r&&r instanceof r&&d.call(r)==l}e.exports=f},"613b":function(e,t,r){var o=r("5537")("keys"),n=r("ca5a");e.exports=function(e){return o[e]||(o[e]=n(e))}},6220:function(e,t,r){var o=r("b1d2"),n=r("b047"),c=r("99d3"),i=c&&c.isDate,a=i?n(i):o;e.exports=a},"626a":function(e,t,r){var o=r("2d95");e.exports=Object("z").propertyIsEnumerable(0)?Object:function(e){return"String"==o(e)?e.split(""):Object(e)}},"62e4":function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},6300:function(e,t,r){var o=r("5fa8");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("896f0928",o,!0,{sourceMap:!1,shadowMode:!1})},"63b6":function(e,t,r){var o=r("e53d"),n=r("584a"),c=r("d864"),i=r("35e8"),a=r("07e3"),s="prototype",d=function(e,t,r){var u,l,f,v=e&d.F,b=e&d.G,h=e&d.S,p=e&d.P,g=e&d.B,m=e&d.W,y=b?n:n[t]||(n[t]={}),x=y[s],w=b?o:h?o[t]:(o[t]||{})[s];for(u in b&&(r=t),r)l=!v&&w&&void 0!==w[u],l&&a(y,u)||(f=l?w[u]:r[u],y[u]=b&&"function"!=typeof w[u]?r[u]:g&&l?c(f,o):m&&w[u]==f?function(e){var t=function(t,r,o){if(this instanceof e){switch(arguments.length){case 0:return new e;case 1:return new e(t);case 2:return new e(t,r)}return new e(t,r,o)}return e.apply(this,arguments)};return t[s]=e[s],t}(f):p&&"function"==typeof f?c(Function.call,f):f,p&&((y.virtual||(y.virtual={}))[u]=f,e&d.R&&x&&!x[u]&&i(x,u,f)))};d.F=1,d.G=2,d.S=4,d.P=8,d.B=16,d.W=32,d.U=64,d.R=128,e.exports=d},"642a":function(e,t,r){var o=r("966f"),n=r("3bb4"),c=r("20ec");function i(e){var t=n(e);return 1==t.length&&t[0][2]?c(t[0][0],t[0][1]):function(r){return r===e||o(r,e,t)}}e.exports=i},"656b":function(e,t,r){var o=r("e2e4"),n=r("f4d6");function c(e,t){t=o(t,e);var r=0,c=t.length;while(null!=e&&r<c)e=e[n(t[r++])];return r&&r==c?e:void 0}e.exports=c},6679:function(e,t,r){var o=r("3729"),n=r("1310"),c="[object Boolean]";function i(e){return!0===e||!1===e||n(e)&&o(e)==c}e.exports=i},6747:function(e,t){var r=Array.isArray;e.exports=r},"67ca":function(e,t,r){var o=r("cb5a");function n(e,t){var r=this.__data__,n=o(r,e);return n<0?(++this.size,r.push([e,t])):r[n][1]=t,this}e.exports=n},6821:function(e,t,r){var o=r("626a"),n=r("be13");e.exports=function(e){return o(n(e))}},"694d":function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".vc-container{--slide-translate:22px;--slide-duration:0.15s;--slide-timing:ease;--header-padding:10px 10px 0 10px;--title-padding:0 8px;--arrows-padding:8px 10px;--arrow-font-size:26px;--weekday-padding:5px 0;--weeks-padding:5px 6px 7px 6px;--nav-container-width:170px;--day-min-height:28px;--day-content-width:28px;--day-content-height:28px;--day-content-margin:1.6px auto;--day-content-transition-time:0.13s ease-in;--day-content-bg-color-hover:rgba(204,214,224,0.3);--day-content-dark-bg-color-hover:rgba(114,129,151,0.3);--day-content-bg-color-focus:rgba(204,214,224,0.4);--day-content-dark-bg-color-focus:rgba(114,129,151,0.4);--highlight-height:28px;--dot-diameter:5px;--dot-border-radius:50%;--dot-spacing:3px;--bar-height:3px;--bars-width:75%;font-family:BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;width:-webkit-max-content;width:max-content;-webkit-tap-highlight-color:transparent}.vc-arrows-container{width:100%;position:absolute;top:0;display:flex;justify-content:space-between;padding:var(--arrows-padding);pointer-events:none}.vc-arrows-container.title-left{justify-content:flex-end}.vc-arrows-container.title-right{justify-content:flex-start}",""])},"69a8":function(e,t){var r={}.hasOwnProperty;e.exports=function(e,t){return r.call(e,t)}},"69d5":function(e,t,r){var o=r("cb5a"),n=Array.prototype,c=n.splice;function i(e){var t=this.__data__,r=o(t,e);if(r<0)return!1;var n=t.length-1;return r==n?t.pop():c.call(t,r,1),--this.size,!0}e.exports=i},"6a99":function(e,t,r){var o=r("d3f4");e.exports=function(e,t){if(!o(e))return e;var r,n;if(t&&"function"==typeof(r=e.toString)&&!o(n=r.call(e)))return n;if("function"==typeof(r=e.valueOf)&&!o(n=r.call(e)))return n;if(!t&&"function"==typeof(r=e.toString)&&!o(n=r.call(e)))return n;throw TypeError("Can't convert object to primitive value")}},"6ac0":function(e,t){function r(e,t,r,o){var n=-1,c=null==e?0:e.length;o&&c&&(r=e[++n]);while(++n<c)r=t(r,e[n],n,e);return r}e.exports=r},"6b54":function(e,t,r){"use strict";r("3846");var o=r("cb7c"),n=r("0bfb"),c=r("9e1e"),i="toString",a=/./[i],s=function(e){r("2aba")(RegExp.prototype,i,e,!0)};r("79e5")((function(){return"/a/b"!=a.call({source:"a",flags:"b"})}))?s((function(){var e=o(this);return"/".concat(e.source,"/","flags"in e?e.flags:!c&&e instanceof RegExp?n.call(e):void 0)})):a.name!=i&&s((function(){return a.call(this)}))},"6da8":function(e,t){function r(e){return e.split("")}e.exports=r},"6f6a":function(e,t,r){var o=r("ee59");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("5ac13234",o,!0,{sourceMap:!1,shadowMode:!1})},"6f6c":function(e,t){var r=/\w*$/;function o(e){var t=new e.constructor(e.source,r.exec(e));return t.lastIndex=e.lastIndex,t}e.exports=o},"6fcd":function(e,t,r){var o=r("50d8"),n=r("d370"),c=r("6747"),i=r("0d24"),a=r("c098"),s=r("73ac"),d=Object.prototype,u=d.hasOwnProperty;function l(e,t){var r=c(e),d=!r&&n(e),l=!r&&!d&&i(e),f=!r&&!d&&!l&&s(e),v=r||d||l||f,b=v?o(e.length,String):[],h=b.length;for(var p in e)!t&&!u.call(e,p)||v&&("length"==p||l&&("offset"==p||"parent"==p)||f&&("buffer"==p||"byteLength"==p||"byteOffset"==p)||a(p,h))||b.push(p);return b}e.exports=l},"72af":function(e,t,r){var o=r("99cd"),n=o();e.exports=n},"72f0":function(e,t){function r(e){return function(){return e}}e.exports=r},7365:function(e,t,r){"use strict";var o=r("87e8"),n=r.n(o);n.a},"73ac":function(e,t,r){var o=r("743f"),n=r("b047"),c=r("99d3"),i=c&&c.isTypedArray,a=i?n(i):o;e.exports=a},"743f":function(e,t,r){var o=r("3729"),n=r("b218"),c=r("1310"),i="[object Arguments]",a="[object Array]",s="[object Boolean]",d="[object Date]",u="[object Error]",l="[object Function]",f="[object Map]",v="[object Number]",b="[object Object]",h="[object RegExp]",p="[object Set]",g="[object String]",m="[object WeakMap]",y="[object ArrayBuffer]",x="[object DataView]",w="[object Float32Array]",k="[object Float64Array]",O="[object Int8Array]",j="[object Int16Array]",D="[object Int32Array]",P="[object Uint8Array]",M="[object Uint8ClampedArray]",S="[object Uint16Array]",E="[object Uint32Array]",_={};function Y(e){return c(e)&&n(e.length)&&!!_[o(e)]}_[w]=_[k]=_[O]=_[j]=_[D]=_[P]=_[M]=_[S]=_[E]=!0,_[i]=_[a]=_[y]=_[s]=_[x]=_[d]=_[u]=_[l]=_[f]=_[v]=_[b]=_[h]=_[p]=_[g]=_[m]=!1,e.exports=Y},"750a":function(e,t,r){var o=r("c869"),n=r("bcdf"),c=r("ac41"),i=1/0,a=o&&1/c(new o([,-0]))[1]==i?function(e){return new o(e)}:n;e.exports=a},7530:function(e,t,r){var o=r("1a8c"),n=Object.create,c=function(){function e(){}return function(t){if(!o(t))return{};if(n)return n(t);e.prototype=t;var r=new e;return e.prototype=void 0,r}}();e.exports=c},7559:function(e,t){var r=/[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;function o(e){return e.match(r)||[]}e.exports=o},"76dd":function(e,t,r){var o=r("ce86");function n(e){return null==e?"":o(e)}e.exports=n},7726:function(e,t){var r=e.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=r)},"77f1":function(e,t,r){var o=r("4588"),n=Math.max,c=Math.min;e.exports=function(e,t){return e=o(e),e<0?n(e+t,0):c(e,t)}},7948:function(e,t){function r(e,t){var r=-1,o=null==e?0:e.length,n=Array(o);while(++r<o)n[r]=t(e[r],r,e);return n}e.exports=r},"794b":function(e,t,r){e.exports=!r("8e60")&&!r("294c")((function(){return 7!=Object.defineProperty(r("1ec9")("div"),"a",{get:function(){return 7}}).a}))},"79aa":function(e,t){e.exports=function(e){if("function"!=typeof e)throw TypeError(e+" is not a function!");return e}},"79bc":function(e,t,r){var o=r("0b07"),n=r("2b3e"),c=o(n,"Map");e.exports=c},"79e5":function(e,t){e.exports=function(e){try{return!!e()}catch(t){return!0}}},"7a48":function(e,t,r){var o=r("6044"),n=Object.prototype,c=n.hasOwnProperty;function i(e){var t=this.__data__;return o?void 0!==t[e]:c.call(t,e)}e.exports=i},"7a56":function(e,t,r){"use strict";var o=r("7726"),n=r("86cc"),c=r("9e1e"),i=r("2b4c")("species");e.exports=function(e){var t=o[e];c&&t&&!t[i]&&n.f(t,i,{configurable:!0,get:function(){return this}})}},"7b83":function(e,t,r){var o=r("7c64"),n=r("93ed"),c=r("2478"),i=r("a524"),a=r("1fc8");function s(e){var t=-1,r=null==e?0:e.length;this.clear();while(++t<r){var o=e[t];this.set(o[0],o[1])}}s.prototype.clear=o,s.prototype["delete"]=n,s.prototype.get=c,s.prototype.has=i,s.prototype.set=a,e.exports=s},"7b97":function(e,t,r){var o=r("7e64"),n=r("a2be"),c=r("1c3c"),i=r("b1e5"),a=r("42a2"),s=r("6747"),d=r("0d24"),u=r("73ac"),l=1,f="[object Arguments]",v="[object Array]",b="[object Object]",h=Object.prototype,p=h.hasOwnProperty;function g(e,t,r,h,g,m){var y=s(e),x=s(t),w=y?v:a(e),k=x?v:a(t);w=w==f?b:w,k=k==f?b:k;var O=w==b,j=k==b,D=w==k;if(D&&d(e)){if(!d(t))return!1;y=!0,O=!1}if(D&&!O)return m||(m=new o),y||u(e)?n(e,t,r,h,g,m):c(e,t,w,r,h,g,m);if(!(r&l)){var P=O&&p.call(e,"__wrapped__"),M=j&&p.call(t,"__wrapped__");if(P||M){var S=P?e.value():e,E=M?t.value():t;return m||(m=new o),g(S,E,r,h,m)}}return!!D&&(m||(m=new o),i(e,t,r,h,g,m))}e.exports=g},"7c64":function(e,t,r){var o=r("e24b"),n=r("5e2e"),c=r("79bc");function i(){this.size=0,this.__data__={hash:new o,map:new(c||n),string:new o}}e.exports=i},"7d1f":function(e,t,r){var o=r("087d"),n=r("6747");function c(e,t,r){var c=t(e);return n(e)?c:o(c,r(e))}e.exports=c},"7e64":function(e,t,r){var o=r("5e2e"),n=r("efb6"),c=r("2fcc"),i=r("802a"),a=r("55a3"),s=r("d02c");function d(e){var t=this.__data__=new o(e);this.size=t.size}d.prototype.clear=n,d.prototype["delete"]=c,d.prototype.get=i,d.prototype.has=a,d.prototype.set=s,e.exports=d},"7e8e":function(e,t){var r=/[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;function o(e){return r.test(e)}e.exports=o},"7ed2":function(e,t){var r="__lodash_hash_undefined__";function o(e){return this.__data__.set(e,r),this}e.exports=o},"7efe":function(e){e.exports=JSON.parse('{"title":"MMMM YYYY","weekdays":"W","navMonths":"MMM","input":["L","YYYY-MM-DD","YYYY/MM/DD"],"dayPopover":"WWW, MMM D, YYYY","data":["L","YYYY-MM-DD","YYYY/MM/DD"]}')},"7f20":function(e,t,r){var o=r("86cc").f,n=r("69a8"),c=r("2b4c")("toStringTag");e.exports=function(e,t,r){e&&!n(e=r?e:e.prototype,c)&&o(e,c,{configurable:!0,value:t})}},"802a":function(e,t){function r(e){return this.__data__.get(e)}e.exports=r},8057:function(e,t){function r(e,t){var r=-1,o=null==e?0:e.length;while(++r<o)if(!1===t(e[r],r,e))break;return e}e.exports=r},8103:function(e,t,r){var o=r("d194"),n=o("toUpperCase");e.exports=n},8296:function(e,t,r){var o=r("656b"),n=r("2b10");function c(e,t){return t.length<2?e:o(e,n(t,0,-1))}e.exports=c},8378:function(e,t){var r=e.exports={version:"2.6.11"};"number"==typeof __e&&(__e=r)},8384:function(e,t){function r(e,t,r){return e===e&&(void 0!==r&&(e=e<=r?e:r),void 0!==t&&(e=e>=t?e:t)),e}e.exports=r},"83a1":function(e,t){e.exports=Object.is||function(e,t){return e===t?0!==e||1/e===1/t:e!=e&&t!=t}},"84f2":function(e,t){e.exports={}},"85a9":function(e){e.exports=JSON.parse('{"sm":"640px","md":"768px","lg":"1024px","xl":"1280px"}')},"85e3":function(e,t){function r(e,t,r){switch(r.length){case 0:return e.call(t);case 1:return e.call(t,r[0]);case 2:return e.call(t,r[0],r[1]);case 3:return e.call(t,r[0],r[1],r[2])}return e.apply(t,r)}e.exports=r},"85f2":function(e,t,r){e.exports=r("454f")},8604:function(e,t,r){var o=r("26e8"),n=r("e2c0");function c(e,t){return null!=e&&n(e,t,o)}e.exports=c},"86aa":function(e,t,r){"use strict";var o=r("9349"),n=r.n(o);n.a},"86cc":function(e,t,r){var o=r("cb7c"),n=r("c69a"),c=r("6a99"),i=Object.defineProperty;t.f=r("9e1e")?Object.defineProperty:function(e,t,r){if(o(e),t=c(t,!0),o(r),n)try{return i(e,t,r)}catch(a){}if("get"in r||"set"in r)throw TypeError("Accessors not supported!");return"value"in r&&(e[t]=r.value),e}},"872a":function(e,t,r){var o=r("3b4a");function n(e,t,r){"__proto__"==t&&o?o(e,t,{configurable:!0,enumerable:!0,value:r,writable:!0}):e[t]=r}e.exports=n},"87e8":function(e,t,r){var o=r("c631");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("475a7ea0",o,!0,{sourceMap:!1,shadowMode:!1})},"89d9":function(e,t,r){var o=r("656b"),n=r("159a"),c=r("e2e4");function i(e,t,r){var i=-1,a=t.length,s={};while(++i<a){var d=t[i],u=o(e,d);r(u,d)&&n(s,c(d,e),u)}return s}e.exports=i},"8adb":function(e,t){function r(e,t){if(("constructor"!==t||"function"!==typeof e[t])&&"__proto__"!=t)return e[t]}e.exports=r},"8b97":function(e,t,r){var o=r("d3f4"),n=r("cb7c"),c=function(e,t){if(n(e),!o(t)&&null!==t)throw TypeError(t+": can't set as prototype!")};e.exports={set:Object.setPrototypeOf||("__proto__"in{}?function(e,t,o){try{o=r("9b43")(Function.call,r("11e9").f(Object.prototype,"__proto__").set,2),o(e,[]),t=!(e instanceof Array)}catch(n){t=!0}return function(e,r){return c(e,r),t?e.__proto__=r:o(e,r),e}}({},!1):void 0),check:c}},"8bbf":function(t,r){t.exports=e},"8c86":function(e,t,r){"use strict";function o(e,t){if(t.length<e)throw new TypeError(e+" argument"+(e>1?"s":"")+" required, but only "+t.length+" present")}r.d(t,"a",(function(){return o}))},"8db3":function(e,t,r){var o=r("47f5");function n(e,t){var r=null==e?0:e.length;return!!r&&o(e,t,0)>-1}e.exports=n},"8de2":function(e,t,r){var o=r("8eeb"),n=r("9934");function c(e){return o(e,n(e))}e.exports=c},"8e60":function(e,t,r){e.exports=!r("294c")((function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a}))},"8eeb":function(e,t,r){var o=r("32b3"),n=r("872a");function c(e,t,r,c){var i=!r;r||(r={});var a=-1,s=t.length;while(++a<s){var d=t[a],u=c?c(r[d],e[d],d,r,e):void 0;void 0===u&&(u=e[d]),i?n(r,d,u):o(r,d,u)}return r}e.exports=c},9010:function(e,t,r){"use strict";var o=r("9740"),n=r.n(o);n.a},9093:function(e,t,r){var o=r("ce10"),n=r("e11e").concat("length","prototype");t.f=Object.getOwnPropertyNames||function(e){return o(e,n)}},"91e9":function(e,t){function r(e,t){return function(r){return e(t(r))}}e.exports=r},9349:function(e,t,r){var o=r("b6dd");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("f4e80066",o,!0,{sourceMap:!1,shadowMode:!1})},93495:function(e,t,r){"use strict";r.d(t,"a",(function(){return s}));var o=r("bd86"),n=(r("6b54"),r("ac6a"),r("22f3")),c=r("2fa3");function i(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function a(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?i(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):i(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}class s{constructor(e,t,r){this.theme=e,this.locale=t,this.map={},this.refresh(r,!0)}refresh(e,t){var r=this;const o={},i=[];let s=null;const d=[],u=t?new Set:new Set(Object.keys(this.map));return Object(c["b"])(e)&&e.forEach((function(e,l){if(!e||!e.dates)return;const f=e.key?e.key.toString():l.toString(),v=e.order||0,b=Object(c["k"])(JSON.stringify(e));let h=r.map[f];!t&&h&&h.hashcode===b?u.delete(f):(h=new n["a"](a({key:f,order:v,hashcode:b},e),r.theme,r.locale),d.push(h)),h&&h.pinPage&&(s=h),o[f]=h,i.push(h)})),this.map=o,this.list=i,this.pinAttr=s,{adds:d,deletes:Array.from(u)}}}},"93ed":function(e,t,r){var o=r("4245");function n(e){var t=o(this,e)["delete"](e);return this.size-=t?1:0,t}e.exports=n},9404:function(e,t,r){"use strict";r.d(t,"i",(function(){return U})),r.d(t,"l",(function(){return G})),r.d(t,"e",(function(){return q})),r.d(t,"f",(function(){return K})),r.d(t,"t",(function(){return Z}));r("6b54"),r("6679");var o=r("501e"),n=r.n(o);r.d(t,"k",(function(){return n.a}));var c=r("e2a0"),i=r.n(c);r.d(t,"m",(function(){return i.a}));var a=r("dcbe"),s=r.n(a);r.d(t,"h",(function(){return s.a}));var d=r("9520"),u=r.n(d);r.d(t,"j",(function(){return u.a}));var l=r("4cfe"),f=r.n(l);r.d(t,"n",(function(){return f.a}));r("2768");var v=r("6220"),b=r.n(v),h=r("f678"),p=r.n(h);r.d(t,"a",(function(){return p.a}));r("375a"),r("e9a7");var g=r("8103"),m=r.n(g);r.d(t,"w",(function(){return m.a}));var y=r("9b02"),x=r.n(y);r.d(t,"d",(function(){return x.a}));var w=r("0f5c"),k=r.n(w);r.d(t,"s",(function(){return k.a}));var O=r("9e86"),j=r.n(O);r.d(t,"q",(function(){return j.a}));var D=r("f542"),P=r.n(D);r.d(t,"u",(function(){return P.a}));var M=r("95ae"),S=r.n(M);r.d(t,"b",(function(){return S.a}));var E=r("3f84"),_=r.n(E);r.d(t,"c",(function(){return _.a}));r("2593");var Y=r("3eea"),C=r.n(Y);r.d(t,"r",(function(){return C.a}));var I=r("3852"),$=r.n(I),A=r("dd61"),T=r.n(A);r.d(t,"p",(function(){return T.a}));var L=r("a59b"),F=r.n(L);r.d(t,"g",(function(){return F.a}));var N=r("4416"),z=r.n(N);r.d(t,"o",(function(){return z.a}));var R=r("eed6"),V=r.n(R);r.d(t,"v",(function(){return V.a}));var H=r("3092"),W=r.n(H);const B=function(e){return Object.prototype.toString.call(e).slice(8,-1)},U=function(e){return b()(e)&&!isNaN(e.getTime())},G=function(e){return"Object"===B(e)},q=$.a,K=function(e,t){return W()(t,(function(t){return $()(e,t)}))},Z=W.a},"950a":function(e,t,r){var o=r("30c9");function n(e,t){return function(r,n){if(null==r)return r;if(!o(r))return e(r,n);var c=r.length,i=t?c:-1,a=Object(r);while(t?i--:++i<c)if(!1===n(a[i],i,a))break;return r}}e.exports=n},9520:function(e,t,r){var o=r("3729"),n=r("1a8c"),c="[object AsyncFunction]",i="[object Function]",a="[object GeneratorFunction]",s="[object Proxy]";function d(e){if(!n(e))return!1;var t=o(e);return t==i||t==a||t==c||t==s}e.exports=d},"95ae":function(e,t,r){var o=r("100e"),n=r("9638"),c=r("9aff"),i=r("9934"),a=Object.prototype,s=a.hasOwnProperty,d=o((function(e,t){e=Object(e);var r=-1,o=t.length,d=o>2?t[2]:void 0;d&&c(t[0],t[1],d)&&(o=1);while(++r<o){var u=t[r],l=i(u),f=-1,v=l.length;while(++f<v){var b=l[f],h=e[b];(void 0===h||n(h,a[b])&&!s.call(e,b))&&(e[b]=u[b])}}return e}));e.exports=d},"961c":function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".vc-day[data-v-2aac4f42]{position:relative;min-height:var(--day-min-height);width:100%;height:100%;z-index:1}.vc-day-layer[data-v-2aac4f42]{position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none}.vc-day-box-center-center[data-v-2aac4f42]{display:flex;justify-content:center;align-items:center;height:100%;transform-origin:50% 50%}.vc-day-box-left-center[data-v-2aac4f42]{display:flex;justify-content:flex-start;align-items:center;height:100%;transform-origin:0 50%}.vc-day-box-right-center[data-v-2aac4f42]{display:flex;justify-content:flex-end;align-items:center;height:100%;transform-origin:100% 50%}.vc-day-box-center-bottom[data-v-2aac4f42]{display:flex;justify-content:center;align-items:flex-end}.vc-day-content[data-v-2aac4f42]{display:flex;justify-content:center;align-items:center;width:var(--day-content-width);height:var(--day-content-height);margin:var(--day-content-margin);-webkit-user-select:none;-ms-user-select:none;user-select:none}.vc-day-content[data-v-2aac4f42]:hover{background-color:var(--day-content-bg-color-hover)}.vc-day-content:hover.vc-is-dark[data-v-2aac4f42]{background-color:var(--day-content-dark-bg-color-hover)}.vc-day-content[data-v-2aac4f42]:focus{background-color:var(--day-content-bg-color-focus)}.vc-day-content:focus.vc-is-dark[data-v-2aac4f42]{background-color:var(--day-content-dark-bg-color-focus)}.vc-highlights[data-v-2aac4f42]{overflow:hidden;pointer-events:none;z-index:-1}.vc-highlight[data-v-2aac4f42]{width:var(--highlight-height);height:var(--highlight-height)}.vc-highlight.vc-highlight-base-start[data-v-2aac4f42]{width:50%!important;border-radius:0!important;border-right-width:0!important}.vc-highlight.vc-highlight-base-end[data-v-2aac4f42]{width:50%!important;border-radius:0!important;border-left-width:0!important}.vc-highlight.vc-highlight-base-middle[data-v-2aac4f42]{width:100%;border-radius:0!important;border-left-width:0!important;border-right-width:0!important;margin:0 -1px}.vc-dots[data-v-2aac4f42]{display:flex;justify-content:center;align-items:center}.vc-dot[data-v-2aac4f42]{width:var(--dot-diameter);height:var(--dot-diameter);border-radius:var(--dot-border-radius);transition:all var(--day-content-transition-time)}.vc-dot[data-v-2aac4f42]:not(:last-child){margin-right:var(--dot-spacing)}.vc-bars[data-v-2aac4f42]{display:flex;justify-content:flex-start;align-items:center;width:var(--bars-width)}.vc-bar[data-v-2aac4f42]{flex-grow:1;height:var(--bar-height);transition:all var(--day-content-transition-time)}",""])},9638:function(e,t){function r(e,t){return e===t||e!==e&&t!==t}e.exports=r},"966f":function(e,t,r){var o=r("7e64"),n=r("c05f"),c=1,i=2;function a(e,t,r,a){var s=r.length,d=s,u=!a;if(null==e)return!d;e=Object(e);while(s--){var l=r[s];if(u&&l[2]?l[1]!==e[l[0]]:!(l[0]in e))return!1}while(++s<d){l=r[s];var f=l[0],v=e[f],b=l[1];if(u&&l[2]){if(void 0===v&&!(f in e))return!1}else{var h=new o;if(a)var p=a(v,b,f,e,t,h);if(!(void 0===p?n(b,v,c|i,a,h):p))return!1}}return!0}e.exports=a},"96f3":function(e,t){var r=Object.prototype,o=r.hasOwnProperty;function n(e,t){return null!=e&&o.call(e,t)}e.exports=n},9740:function(e,t,r){var o=r("49e7");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("90070284",o,!0,{sourceMap:!1,shadowMode:!1})},"97d3":function(e,t,r){var o=r("48a0"),n=r("30c9");function c(e,t){var r=-1,c=n(e)?Array(e.length):[];return o(e,(function(e,o,n){c[++r]=t(e,o,n)})),c}e.exports=c},9934:function(e,t,r){var o=r("6fcd"),n=r("41c3"),c=r("30c9");function i(e){return c(e)?o(e,!0):n(e)}e.exports=i},"998b":function(e,t,r){"use strict";var o=r("1349"),n=r.n(o);n.a},"99cd":function(e,t){function r(e){return function(t,r,o){var n=-1,c=Object(t),i=o(t),a=i.length;while(a--){var s=i[e?a:++n];if(!1===r(c[s],s,c))break}return t}}e.exports=r},"99d3":function(e,t,r){(function(e){var o=r("585a"),n=t&&!t.nodeType&&t,c=n&&"object"==typeof e&&e&&!e.nodeType&&e,i=c&&c.exports===n,a=i&&o.process,s=function(){try{var e=c&&c.require&&c.require("util").types;return e||a&&a.binding&&a.binding("util")}catch(t){}}();e.exports=s}).call(this,r("62e4")(e))},"9aff":function(e,t,r){var o=r("9638"),n=r("30c9"),c=r("c098"),i=r("1a8c");function a(e,t,r){if(!i(r))return!1;var a=typeof t;return!!("number"==a?n(r)&&c(t,r.length):"string"==a&&t in r)&&o(r[t],e)}e.exports=a},"9b02":function(e,t,r){var o=r("656b");function n(e,t,r){var n=null==e?void 0:o(e,t);return void 0===n?r:n}e.exports=n},"9b43":function(e,t,r){var o=r("d8e8");e.exports=function(e,t,r){if(o(e),void 0===t)return e;switch(r){case 1:return function(r){return e.call(t,r)};case 2:return function(r,o){return e.call(t,r,o)};case 3:return function(r,o,n){return e.call(t,r,o,n)}}return function(){return e.apply(t,arguments)}}},"9c6c":function(e,t,r){var o=r("2b4c")("unscopables"),n=Array.prototype;void 0==n[o]&&r("32e9")(n,o,{}),e.exports=function(e){n[o][e]=!0}},"9def":function(e,t,r){var o=r("4588"),n=Math.min;e.exports=function(e){return e>0?n(o(e),9007199254740991):0}},"9e1e":function(e,t,r){e.exports=!r("79e5")((function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a}))},"9e69":function(e,t,r){var o=r("2b3e"),n=o.Symbol;e.exports=n},"9e86":function(e,t,r){var o=r("872a"),n=r("242e"),c=r("badf");function i(e,t){var r={};return t=c(t,3),n(e,(function(e,n,c){o(r,n,t(e,n,c))})),r}e.exports=i},a029:function(e,t,r){var o=r("087d"),n=r("2dcb"),c=r("32f4"),i=r("d327"),a=Object.getOwnPropertySymbols,s=a?function(e){var t=[];while(e)o(t,c(e)),e=n(e);return t}:i;e.exports=s},a2be:function(e,t,r){var o=r("d612"),n=r("4284"),c=r("c584"),i=1,a=2;function s(e,t,r,s,d,u){var l=r&i,f=e.length,v=t.length;if(f!=v&&!(l&&v>f))return!1;var b=u.get(e);if(b&&u.get(t))return b==t;var h=-1,p=!0,g=r&a?new o:void 0;u.set(e,t),u.set(t,e);while(++h<f){var m=e[h],y=t[h];if(s)var x=l?s(y,m,h,t,e,u):s(m,y,h,e,t,u);if(void 0!==x){if(x)continue;p=!1;break}if(g){if(!n(t,(function(e,t){if(!c(g,t)&&(m===e||d(m,e,r,s,u)))return g.push(t)}))){p=!1;break}}else if(m!==y&&!d(m,y,r,s,u)){p=!1;break}}return u["delete"](e),u["delete"](t),p}e.exports=s},a2db:function(e,t,r){var o=r("9e69"),n=o?o.prototype:void 0,c=n?n.valueOf:void 0;function i(e){return c?Object(c.call(e)):{}}e.exports=i},a3fd:function(e,t,r){var o=r("7948");function n(e,t){return o(t,(function(t){return[t,e[t]]}))}e.exports=n},a454:function(e,t,r){var o=r("72f0"),n=r("3b4a"),c=r("cd9d"),i=n?function(e,t){return n(e,"toString",{configurable:!0,enumerable:!1,value:o(t),writable:!0})}:c;e.exports=i},a481:function(e,t,r){"use strict";var o=r("cb7c"),n=r("4bf8"),c=r("9def"),i=r("4588"),a=r("0390"),s=r("5f1b"),d=Math.max,u=Math.min,l=Math.floor,f=/\$([$&`']|\d\d?|<[^>]*>)/g,v=/\$([$&`']|\d\d?)/g,b=function(e){return void 0===e?e:String(e)};r("214f")("replace",2,(function(e,t,r,h){return[function(o,n){var c=e(this),i=void 0==o?void 0:o[t];return void 0!==i?i.call(o,c,n):r.call(String(c),o,n)},function(e,t){var n=h(r,e,this,t);if(n.done)return n.value;var l=o(e),f=String(this),v="function"===typeof t;v||(t=String(t));var g=l.global;if(g){var m=l.unicode;l.lastIndex=0}var y=[];while(1){var x=s(l,f);if(null===x)break;if(y.push(x),!g)break;var w=String(x[0]);""===w&&(l.lastIndex=a(f,c(l.lastIndex),m))}for(var k="",O=0,j=0;j<y.length;j++){x=y[j];for(var D=String(x[0]),P=d(u(i(x.index),f.length),0),M=[],S=1;S<x.length;S++)M.push(b(x[S]));var E=x.groups;if(v){var _=[D].concat(M,P,f);void 0!==E&&_.push(E);var Y=String(t.apply(void 0,_))}else Y=p(D,f,P,M,E,t);P>=O&&(k+=f.slice(O,P)+Y,O=P+D.length)}return k+f.slice(O)}];function p(e,t,o,c,i,a){var s=o+e.length,d=c.length,u=v;return void 0!==i&&(i=n(i),u=f),r.call(a,u,(function(r,n){var a;switch(n.charAt(0)){case"$":return"$";case"&":return e;case"`":return t.slice(0,o);case"'":return t.slice(s);case"<":a=i[n.slice(1,-1)];break;default:var u=+n;if(0===u)return r;if(u>d){var f=l(u/10);return 0===f?r:f<=d?void 0===c[f-1]?n.charAt(1):c[f-1]+n.charAt(1):r}a=c[u-1]}return void 0===a?"":a}))}}))},a524:function(e,t,r){var o=r("4245");function n(e){return o(this,e).has(e)}e.exports=n},a59b:function(e,t){function r(e){return e&&e.length?e[0]:void 0}e.exports=r},a919:function(e,t,r){var o=r("ddc6"),n={"À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","Ç":"C","ç":"c","Ð":"D","ð":"d","È":"E","É":"E","Ê":"E","Ë":"E","è":"e","é":"e","ê":"e","ë":"e","Ì":"I","Í":"I","Î":"I","Ï":"I","ì":"i","í":"i","î":"i","ï":"i","Ñ":"N","ñ":"n","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","Ù":"U","Ú":"U","Û":"U","Ü":"U","ù":"u","ú":"u","û":"u","ü":"u","Ý":"Y","ý":"y","ÿ":"y","Æ":"Ae","æ":"ae","Þ":"Th","þ":"th","ß":"ss","Ā":"A","Ă":"A","Ą":"A","ā":"a","ă":"a","ą":"a","Ć":"C","Ĉ":"C","Ċ":"C","Č":"C","ć":"c","ĉ":"c","ċ":"c","č":"c","Ď":"D","Đ":"D","ď":"d","đ":"d","Ē":"E","Ĕ":"E","Ė":"E","Ę":"E","Ě":"E","ē":"e","ĕ":"e","ė":"e","ę":"e","ě":"e","Ĝ":"G","Ğ":"G","Ġ":"G","Ģ":"G","ĝ":"g","ğ":"g","ġ":"g","ģ":"g","Ĥ":"H","Ħ":"H","ĥ":"h","ħ":"h","Ĩ":"I","Ī":"I","Ĭ":"I","Į":"I","İ":"I","ĩ":"i","ī":"i","ĭ":"i","į":"i","ı":"i","Ĵ":"J","ĵ":"j","Ķ":"K","ķ":"k","ĸ":"k","Ĺ":"L","Ļ":"L","Ľ":"L","Ŀ":"L","Ł":"L","ĺ":"l","ļ":"l","ľ":"l","ŀ":"l","ł":"l","Ń":"N","Ņ":"N","Ň":"N","Ŋ":"N","ń":"n","ņ":"n","ň":"n","ŋ":"n","Ō":"O","Ŏ":"O","Ő":"O","ō":"o","ŏ":"o","ő":"o","Ŕ":"R","Ŗ":"R","Ř":"R","ŕ":"r","ŗ":"r","ř":"r","Ś":"S","Ŝ":"S","Ş":"S","Š":"S","ś":"s","ŝ":"s","ş":"s","š":"s","Ţ":"T","Ť":"T","Ŧ":"T","ţ":"t","ť":"t","ŧ":"t","Ũ":"U","Ū":"U","Ŭ":"U","Ů":"U","Ű":"U","Ų":"U","ũ":"u","ū":"u","ŭ":"u","ů":"u","ű":"u","ų":"u","Ŵ":"W","ŵ":"w","Ŷ":"Y","ŷ":"y","Ÿ":"Y","Ź":"Z","Ż":"Z","Ž":"Z","ź":"z","ż":"z","ž":"z","Ĳ":"IJ","ĳ":"ij","Œ":"Oe","œ":"oe","ŉ":"'n","ſ":"s"},c=o(n);e.exports=c},a994:function(e,t,r){var o=r("7d1f"),n=r("32f4"),c=r("ec69");function i(e){return o(e,c,n)}e.exports=i},aae3:function(e,t,r){var o=r("d3f4"),n=r("2d95"),c=r("2b4c")("match");e.exports=function(e){var t;return o(e)&&(void 0!==(t=e[c])?!!t:"RegExp"==n(e))}},aaec:function(e,t){var r="\\ud800-\\udfff",o="\\u0300-\\u036f",n="\\ufe20-\\ufe2f",c="\\u20d0-\\u20ff",i=o+n+c,a="\\ufe0e\\ufe0f",s="\\u200d",d=RegExp("["+s+r+i+a+"]");function u(e){return d.test(e)}e.exports=u},ac41:function(e,t){function r(e){var t=-1,r=Array(e.size);return e.forEach((function(e){r[++t]=e})),r}e.exports=r},ac6a:function(e,t,r){for(var o=r("cadf"),n=r("0d58"),c=r("2aba"),i=r("7726"),a=r("32e9"),s=r("84f2"),d=r("2b4c"),u=d("iterator"),l=d("toStringTag"),f=s.Array,v={CSSRuleList:!0,CSSStyleDeclaration:!1,CSSValueList:!1,ClientRectList:!1,DOMRectList:!1,DOMStringList:!1,DOMTokenList:!0,DataTransferItemList:!1,FileList:!1,HTMLAllCollection:!1,HTMLCollection:!1,HTMLFormElement:!1,HTMLSelectElement:!1,MediaList:!0,MimeTypeArray:!1,NamedNodeMap:!1,NodeList:!0,PaintRequestList:!1,Plugin:!1,PluginArray:!1,SVGLengthList:!1,SVGNumberList:!1,SVGPathSegList:!1,SVGPointList:!1,SVGStringList:!1,SVGTransformList:!1,SourceBufferList:!1,StyleSheetList:!0,TextTrackCueList:!1,TextTrackList:!1,TouchList:!1},b=n(v),h=0;h<b.length;h++){var p,g=b[h],m=v[g],y=i[g],x=y&&y.prototype;if(x&&(x[u]||a(x,u,f),x[l]||a(x,l,g),s[g]=f,m))for(p in o)x[p]||c(x,p,o[p],!0)}},aeb4:function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".vc-pane[data-v-4a5f2beb]{flex-grow:1;flex-shrink:1;display:flex;flex-direction:column;justify-content:center;align-items:stretch}.vc-horizontal-divider[data-v-4a5f2beb]{align-self:center}.vc-header[data-v-4a5f2beb]{flex-shrink:0;display:flex;align-items:stretch;-webkit-user-select:none;-ms-user-select:none;user-select:none;padding:var(--header-padding)}.vc-header.align-left[data-v-4a5f2beb]{order:-1;justify-content:flex-start}.vc-header.align-right[data-v-4a5f2beb]{order:1;justify-content:flex-end}.vc-title-layout[data-v-4a5f2beb]{display:flex;justify-content:center;align-items:center;flex-grow:1}.vc-title-layout.align-left[data-v-4a5f2beb]{justify-content:flex-start}.vc-title-layout.align-right[data-v-4a5f2beb]{justify-content:flex-end}.vc-title-wrapper[data-v-4a5f2beb]{position:relative}.vc-title[data-v-4a5f2beb]{cursor:pointer;white-space:nowrap;padding:var(--title-padding)}.vc-title[data-v-4a5f2beb],.vc-weekday[data-v-4a5f2beb]{-webkit-user-select:none;-ms-user-select:none;user-select:none}.vc-weekday[data-v-4a5f2beb]{display:flex;justify-content:center;align-items:center;flex:1;padding:var(--weekday-padding);cursor:default}.vc-weeks[data-v-4a5f2beb]{flex-shrink:1;flex-grow:1;padding:var(--weeks-padding)}",""])},aebd:function(e,t){e.exports=function(e,t){return{enumerable:!(1&e),configurable:!(2&e),writable:!(4&e),value:t}}},b047:function(e,t){function r(e){return function(t){return e(t)}}e.exports=r},b0c5:function(e,t,r){"use strict";var o=r("520a");r("5ca1")({target:"RegExp",proto:!0,forced:o!==/./.exec},{exec:o})},b1d2:function(e,t,r){var o=r("3729"),n=r("1310"),c="[object Date]";function i(e){return n(e)&&o(e)==c}e.exports=i},b1e5:function(e,t,r){var o=r("a994"),n=1,c=Object.prototype,i=c.hasOwnProperty;function a(e,t,r,c,a,s){var d=r&n,u=o(e),l=u.length,f=o(t),v=f.length;if(l!=v&&!d)return!1;var b=l;while(b--){var h=u[b];if(!(d?h in t:i.call(t,h)))return!1}var p=s.get(e);if(p&&s.get(t))return p==t;var g=!0;s.set(e,t),s.set(t,e);var m=d;while(++b<l){h=u[b];var y=e[h],x=t[h];if(c)var w=d?c(x,y,h,t,e,s):c(y,x,h,e,t,s);if(!(void 0===w?y===x||a(y,x,r,c,s):w)){g=!1;break}m||(m="constructor"==h)}if(g&&!m){var k=e.constructor,O=t.constructor;k==O||!("constructor"in e)||!("constructor"in t)||"function"==typeof k&&k instanceof k&&"function"==typeof O&&O instanceof O||(g=!1)}return s["delete"](e),s["delete"](t),g}e.exports=a},b20a:function(e,t,r){var o=r("6ac0"),n=r("4caa"),c=r("ea72"),i="['’]",a=RegExp(i,"g");function s(e){return function(t){return o(c(n(t).replace(a,"")),e,"")}}e.exports=s},b218:function(e,t){var r=9007199254740991;function o(e){return"number"==typeof e&&e>-1&&e%1==0&&e<=r}e.exports=o},b4b0:function(e,t,r){var o=r("1a8c"),n=r("ffd6"),c=NaN,i=/^\s+|\s+$/g,a=/^[-+]0x[0-9a-f]+$/i,s=/^0b[01]+$/i,d=/^0o[0-7]+$/i,u=parseInt;function l(e){if("number"==typeof e)return e;if(n(e))return c;if(o(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=o(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(i,"");var r=s.test(e);return r||d.test(e)?u(e.slice(2),r?2:8):a.test(e)?c:+e}e.exports=l},b4c0:function(e,t,r){var o=r("cb5a");function n(e){var t=this.__data__,r=o(t,e);return r<0?void 0:t[r][1]}e.exports=n},b5a7:function(e,t,r){var o=r("0b07"),n=r("2b3e"),c=o(n,"DataView");e.exports=c},b6dd:function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,'.vc-popover-content-wrapper[data-v-7605e1b2]{--popover-horizontal-content-offset:8px;--popover-vertical-content-offset:10px;--popover-slide-translation:15px;--popover-transition-time:0.14s ease-in-out;--popover-caret-horizontal-offset:18px;--popover-caret-vertical-offset:8px;position:absolute;display:block;outline:none;z-index:10}.vc-popover-content-wrapper[data-v-7605e1b2]:not(.is-interactive){pointer-events:none}.vc-popover-content[data-v-7605e1b2]{position:relative;outline:none;z-index:10}.vc-popover-content.direction-bottom[data-v-7605e1b2]{margin-top:var(--popover-vertical-content-offset)}.vc-popover-content.direction-top[data-v-7605e1b2]{margin-bottom:var(--popover-vertical-content-offset)}.vc-popover-content.direction-left[data-v-7605e1b2]{margin-right:var(--popover-horizontal-content-offset)}.vc-popover-content.direction-right[data-v-7605e1b2]{margin-left:var(--popover-horizontal-content-offset)}.vc-popover-caret[data-v-7605e1b2]{content:"";position:absolute;display:block;width:12px;height:12px;border-top:inherit;border-left:inherit;background:inherit;z-index:-1}.vc-popover-caret.direction-bottom[data-v-7605e1b2]{top:0}.vc-popover-caret.direction-bottom.align-left[data-v-7605e1b2]{transform:translateY(-50%) rotate(45deg)}.vc-popover-caret.direction-bottom.align-center[data-v-7605e1b2]{transform:translateX(-50%) translateY(-50%) rotate(45deg)}.vc-popover-caret.direction-bottom.align-right[data-v-7605e1b2]{transform:translateY(-50%) rotate(45deg)}.vc-popover-caret.direction-top[data-v-7605e1b2]{top:100%}.vc-popover-caret.direction-top.align-left[data-v-7605e1b2]{transform:translateY(-50%) rotate(-135deg)}.vc-popover-caret.direction-top.align-center[data-v-7605e1b2]{transform:translateX(-50%) translateY(-50%) rotate(-135deg)}.vc-popover-caret.direction-top.align-right[data-v-7605e1b2]{transform:translateY(-50%) rotate(-135deg)}.vc-popover-caret.direction-left[data-v-7605e1b2]{left:100%}.vc-popover-caret.direction-left.align-top[data-v-7605e1b2]{transform:translateX(-50%) rotate(135deg)}.vc-popover-caret.direction-left.align-middle[data-v-7605e1b2]{transform:translateY(-50%) translateX(-50%) rotate(135deg)}.vc-popover-caret.direction-left.align-bottom[data-v-7605e1b2]{transform:translateX(-50%) rotate(135deg)}.vc-popover-caret.direction-right[data-v-7605e1b2]{left:0}.vc-popover-caret.direction-right.align-top[data-v-7605e1b2]{transform:translateX(-50%) rotate(-45deg)}.vc-popover-caret.direction-right.align-middle[data-v-7605e1b2]{transform:translateY(-50%) translateX(-50%) rotate(-45deg)}.vc-popover-caret.direction-right.align-bottom[data-v-7605e1b2]{transform:translateX(-50%) rotate(-45deg)}.vc-popover-caret.align-left[data-v-7605e1b2]{left:var(--popover-caret-horizontal-offset)}.vc-popover-caret.align-center[data-v-7605e1b2]{left:50%}.vc-popover-caret.align-right[data-v-7605e1b2]{right:var(--popover-caret-horizontal-offset)}.vc-popover-caret.align-top[data-v-7605e1b2]{top:var(--popover-caret-vertical-offset)}.vc-popover-caret.align-middle[data-v-7605e1b2]{top:50%}.vc-popover-caret.align-bottom[data-v-7605e1b2]{bottom:var(--popover-caret-vertical-offset)}.fade-enter-active[data-v-7605e1b2],.fade-leave-active[data-v-7605e1b2],.slide-fade-enter-active[data-v-7605e1b2],.slide-fade-leave-active[data-v-7605e1b2]{transition:all var(--popover-transition-time);pointer-events:none}.fade-enter[data-v-7605e1b2],.fade-leave-to[data-v-7605e1b2],.slide-fade-enter[data-v-7605e1b2],.slide-fade-leave-to[data-v-7605e1b2]{opacity:0}.slide-fade-enter.direction-bottom[data-v-7605e1b2],.slide-fade-leave-to.direction-bottom[data-v-7605e1b2]{transform:translateY(calc(-1*var(--popover-slide-translation)))}.slide-fade-enter.direction-top[data-v-7605e1b2],.slide-fade-leave-to.direction-top[data-v-7605e1b2]{transform:translateY(var(--popover-slide-translation))}.slide-fade-enter.direction-left[data-v-7605e1b2],.slide-fade-leave-to.direction-left[data-v-7605e1b2]{transform:translateX(var(--popover-slide-translation))}.slide-fade-enter.direction-right[data-v-7605e1b2],.slide-fade-leave-to.direction-right[data-v-7605e1b2]{transform:translateX(calc(-1*var(--popover-slide-translation)))}',""])},b760:function(e,t,r){var o=r("872a"),n=r("9638");function c(e,t,r){(void 0!==r&&!n(e[t],r)||void 0===r&&!(t in e))&&o(e,t,r)}e.exports=c},badf:function(e,t,r){var o=r("642a"),n=r("1838"),c=r("cd9d"),i=r("6747"),a=r("f9ce");function s(e){return"function"==typeof e?e:null==e?c:"object"==typeof e?i(e)?n(e[0],e[1]):o(e):a(e)}e.exports=s},bbc0:function(e,t,r){var o=r("6044"),n="__lodash_hash_undefined__",c=Object.prototype,i=c.hasOwnProperty;function a(e){var t=this.__data__;if(o){var r=t[e];return r===n?void 0:r}return i.call(t,e)?t[e]:void 0}e.exports=a},bcdf:function(e,t){function r(){}e.exports=r},bd86:function(e,t,r){"use strict";r.d(t,"a",(function(){return c}));var o=r("85f2"),n=r.n(o);function c(e,t,r){return t in e?n()(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}},bdab:function(e,t,r){var o=r("f498");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("1ee16f20",o,!0,{sourceMap:!1,shadowMode:!1})},be13:function(e,t){e.exports=function(e){if(void 0==e)throw TypeError("Can't call method on  "+e);return e}},c05f:function(e,t,r){var o=r("7b97"),n=r("1310");function c(e,t,r,i,a){return e===t||(null==e||null==t||!n(e)&&!n(t)?e!==e&&t!==t:o(e,t,r,i,c,a))}e.exports=c},c098:function(e,t){var r=9007199254740991,o=/^(?:0|[1-9]\d*)$/;function n(e,t){var n=typeof e;return t=null==t?r:t,!!t&&("number"==n||"symbol"!=n&&o.test(e))&&e>-1&&e%1==0&&e<t}e.exports=n},c1c9:function(e,t,r){var o=r("a454"),n=r("f3c1"),c=n(o);e.exports=c},c2b6:function(e,t,r){var o=r("f8af"),n=r("5d89"),c=r("6f6c"),i=r("a2db"),a=r("c8fe"),s="[object Boolean]",d="[object Date]",u="[object Map]",l="[object Number]",f="[object RegExp]",v="[object Set]",b="[object String]",h="[object Symbol]",p="[object ArrayBuffer]",g="[object DataView]",m="[object Float32Array]",y="[object Float64Array]",x="[object Int8Array]",w="[object Int16Array]",k="[object Int32Array]",O="[object Uint8Array]",j="[object Uint8ClampedArray]",D="[object Uint16Array]",P="[object Uint32Array]";function M(e,t,r){var M=e.constructor;switch(t){case p:return o(e);case s:case d:return new M(+e);case g:return n(e,r);case m:case y:case x:case w:case k:case O:case j:case D:case P:return a(e,r);case u:return new M;case l:case b:return new M(e);case f:return c(e);case v:return new M;case h:return i(e)}}e.exports=M},c32f:function(e,t,r){var o=r("2b10");function n(e,t,r){var n=e.length;return r=void 0===r?n:r,!t&&r>=n?e:o(e,t,r)}e.exports=n},c366:function(e,t,r){var o=r("6821"),n=r("9def"),c=r("77f1");e.exports=function(e){return function(t,r,i){var a,s=o(t),d=n(s.length),u=c(i,d);if(e&&r!=r){while(d>u)if(a=s[u++],a!=a)return!0}else for(;d>u;u++)if((e||u in s)&&s[u]===r)return e||u||0;return!e&&-1}}},c3fc:function(e,t,r){var o=r("42a2"),n=r("1310"),c="[object Set]";function i(e){return n(e)&&o(e)==c}e.exports=i},c539:function(e,t,r){var o=r("694d");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("19ad7201",o,!0,{sourceMap:!1,shadowMode:!1})},c584:function(e,t){function r(e,t){return e.has(t)}e.exports=r},c631:function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".vc-day-popover-row[data-v-28ced894]{--day-content-transition-time:0.13s ease-in;display:flex;align-items:center;transition:all var(--day-content-transition-time)}.vc-day-popover-row[data-v-28ced894]:not(:first-child){margin-top:3px}.vc-day-popover-row-indicator[data-v-28ced894]{display:flex;justify-content:center;align-items:center;flex-grow:0;width:15px;margin-right:3px}.vc-day-popover-row-indicator span[data-v-28ced894]{transition:all var(--day-content-transition-time)}.vc-day-popover-row-content[data-v-28ced894]{display:flex;align-items:center;flex-wrap:none;flex-grow:1;width:-webkit-max-content;width:max-content}",""])},c69a:function(e,t,r){e.exports=!r("9e1e")&&!r("79e5")((function(){return 7!=Object.defineProperty(r("230e")("div"),"a",{get:function(){return 7}}).a}))},c6cf:function(e,t,r){var o=r("4d8c"),n=r("2286"),c=r("c1c9");function i(e){return c(n(e,void 0,o),e+"")}e.exports=i},c724:function(e,t,r){var o=r("aeb4");"string"===typeof o&&(o=[[e.i,o,""]]),o.locals&&(e.exports=o.locals);var n=r("499e").default;n("f2c4f118",o,!0,{sourceMap:!1,shadowMode:!1})},c869:function(e,t,r){var o=r("0b07"),n=r("2b3e"),c=o(n,"Set");e.exports=c},c87c:function(e,t){var r=Object.prototype,o=r.hasOwnProperty;function n(e){var t=e.length,r=new e.constructor(t);return t&&"string"==typeof e[0]&&o.call(e,"index")&&(r.index=e.index,r.input=e.input),r}e.exports=n},c8ba:function(e,t){var r;r=function(){return this}();try{r=r||new Function("return this")()}catch(o){"object"===typeof window&&(r=window)}e.exports=r},c8fe:function(e,t,r){var o=r("f8af");function n(e,t){var r=t?o(e.buffer):e.buffer;return new e.constructor(r,e.byteOffset,e.length)}e.exports=n},ca5a:function(e,t){var r=0,o=Math.random();e.exports=function(e){return"Symbol(".concat(void 0===e?"":e,")_",(++r+o).toString(36))}},cadf:function(e,t,r){"use strict";var o=r("9c6c"),n=r("d53b"),c=r("84f2"),i=r("6821");e.exports=r("01f9")(Array,"Array",(function(e,t){this._t=i(e),this._i=0,this._k=t}),(function(){var e=this._t,t=this._k,r=this._i++;return!e||r>=e.length?(this._t=void 0,n(1)):n(0,"keys"==t?r:"values"==t?e[r]:[r,e[r]])}),"values"),c.Arguments=c.Array,o("keys"),o("values"),o("entries")},cb5a:function(e,t,r){var o=r("9638");function n(e,t){var r=e.length;while(r--)if(o(e[r][0],t))return r;return-1}e.exports=n},cb7c:function(e,t,r){var o=r("d3f4");e.exports=function(e){if(!o(e))throw TypeError(e+" is not an object!");return e}},cc45:function(e,t,r){var o=r("1a2d"),n=r("b047"),c=r("99d3"),i=c&&c.isMap,a=i?n(i):o;e.exports=a},cd9d:function(e,t){function r(e){return e}e.exports=r},ce10:function(e,t,r){var o=r("69a8"),n=r("6821"),c=r("c366")(!1),i=r("613b")("IE_PROTO");e.exports=function(e,t){var r,a=n(e),s=0,d=[];for(r in a)r!=i&&o(a,r)&&d.push(r);while(t.length>s)o(a,r=t[s++])&&(~c(d,r)||d.push(r));return d}},ce86:function(e,t,r){var o=r("9e69"),n=r("7948"),c=r("6747"),i=r("ffd6"),a=1/0,s=o?o.prototype:void 0,d=s?s.toString:void 0;function u(e){if("string"==typeof e)return e;if(c(e))return n(e,u)+"";if(i(e))return d?d.call(e):"";var t=e+"";return"0"==t&&1/e==-a?"-0":t}e.exports=u},cebd:function(e,t){function r(e){var t=-1,r=Array(e.size);return e.forEach((function(e){r[++t]=[e,e]})),r}e.exports=r},cfe5:function(e,t,r){"use strict";r.d(t,"a",(function(){return l}));r("ac6a");var o=r("bd86"),n=r("f7f1"),c=r("2fa3"),i=r("9404"),a=r("29ae");function s(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,o)}return r}function d(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?s(Object(r),!0).forEach((function(t){Object(o["a"])(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):s(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return e}const u=864e5;class l{constructor(e,{order:t=0,locale:r=new a["a"]}={}){if(this.isDateInfo=!0,this.isRange=Object(i["l"])(e)||Object(i["j"])(e),this.isDate=!this.isRange,this.order=t,this.locale=r,this.mask=r.masks.data,this.getMonthComps=r.getMonthComps,this.firstDayOfWeek=r.firstDayOfWeek,this.opts={order:t,locale:r},this.isDate){this.type="date";let t=this.toDate(e);t=Object(i["i"])(t)?t:new Date,t.setHours(0,0,0,0),this.date=t,this.dateTime=t.getTime()}if(this.isRange){if(this.type="range",Object(i["j"])(e))this.on={and:e};else{let t=this.toDate(e.start),r=this.toDate(e.end);if(t&&r&&t>r){const e=t;t=r,r=e}else t&&e.span>=1&&(r=Object(n["a"])(t,e.span-1));t&&(Object(i["i"])(t)?t.setHours(0,0,0,0):t=null),r&&(Object(i["i"])(r)?r.setHours(0,0,0,0):r=null),this.start=t,this.end=r,this.startTime=t&&t.getTime(),this.endTime=r&&r.getTime(),t&&r&&(this.daySpan=this.diffInDays(t,r),this.weekSpan=this.diffInWeeks(t,r),this.monthSpan=this.diffInMonths(t,r),this.yearSpan=this.diffInYears(t,r));const o=Object(c["l"])(e,{},l.patternProps);if(o.assigned&&(this.on={and:o.target}),e.on){const t=(Object(i["h"])(e.on)?e.on:[e.on]).map((function(e){if(Object(i["j"])(e))return e;const t=Object(c["l"])(e,{},l.patternProps);return t.assigned?t.target:null})).filter((function(e){return e}));t.length&&(this.on=d(d({},this.on),{},{or:t}))}}this.isComplex=!!this.on}}toDate(e){const t=this.locale.masks.data;return this.locale.toDate(e,t)}toDateInfo(e){return e.isDateInfo?e:new l(e,this.opts)}startOfWeek(e){const t=e.getDay()+1,r=t>=this.firstDayOfWeek?this.firstDayOfWeek-t:-(7-(this.firstDayOfWeek-t));return Object(n["a"])(e,r)}diffInDays(e,t){return Math.round((t-e)/u)}diffInWeeks(e,t){return this.diffInDays(this.startOfWeek(e),this.startOfWeek(t))}diffInYears(e,t){return t.getUTCFullYear()-e.getUTCFullYear()}diffInMonths(e,t){return 12*this.diffInYears(e,t)+(t.getMonth()-e.getMonth())}static get patterns(){return{dailyInterval:{test:function(e,t,r){return r.diffInDays(r.start||new Date,e.date)%t===0}},weeklyInterval:{test:function(e,t,r){return r.diffInWeeks(r.start||new Date,e.date)%t===0}},monthlyInterval:{test:function(e,t,r){return r.diffInMonths(r.start||new Date,e.date)%t===0}},yearlyInterval:{test:function(){return function(e,t,r){return r.diffInYears(r.start||new Date,e.date)%t===0}}},days:{validate:function(e){return Object(i["h"])(e)?e:[parseInt(e,10)]},test:function(e,t){return t.includes(e.day)||t.includes(-e.dayFromEnd)}},weekdays:{validate:function(e){return Object(i["h"])(e)?e:[parseInt(e,10)]},test:function(e,t){return t.includes(e.weekday)}},ordinalWeekdays:{validate:function(e){return Object.keys(e).reduce((function(t,r){const o=e[r];return o?(t[r]=Object(i["h"])(o)?o:[parseInt(o,10)],t):t}),{})},test:function(e,t){return Object.keys(t).map((function(e){return parseInt(e,10)})).find((function(r){return t[r].includes(e.weekday)&&(r===e.weekdayOrdinal||r===-e.weekdayOrdinalFromEnd)}))}},weekends:{validate:function(e){return e},test:function(e){return 1===e.weekday||7===e.weekday}},workweek:{validate:function(e){return e},test:function(e){return e.weekday>=2&&e.weekday<=6}},weeks:{validate:function(e){return Object(i["h"])(e)?e:[parseInt(e,10)]},test:function(e,t){return t.includes(e.week)||t.includes(-e.weekFromEnd)}},months:{validate:function(e){return Object(i["h"])(e)?e:[parseInt(e,10)]},test:function(e,t){return t.includes(e.month)}},years:{validate:function(e){return Object(i["h"])(e)?e:[parseInt(e,10)]},test:function(e,t){return t.includes(e.year)}}}}static get patternProps(){return Object.keys(l.patterns).map((function(e){return{name:e,validate:l.patterns[e].validate}}))}static testConfig(e,t,r){return Object(i["j"])(e)?e(t):Object(i["l"])(e)?Object.keys(e).every((function(o){return l.patterns[o].test(t,e[o],r)})):null}iterateDatesInRange({start:e,end:t},r){if(!e||!t||!Object(i["j"])(r))return null;const o={i:0,date:e,day:this.locale.getDayFromDate(e),finished:!1};let c=null;for(;!o.finished&&o.date<=t;o.i++)c=r(o),o.date=Object(n["a"])(o.date,1),o.day=this.locale.getDayFromDate(o.date);return c}shallowIntersectingRange(e){return this.rangeShallowIntersectingRange(this,e)}rangeShallowIntersectingRange(e,t){if(e=this.toDateInfo(e),t=this.toDateInfo(t),!this.dateShallowIntersectsDate(e,t))return null;const r=e.toRange(),o=t.toRange();let n=null,c=null;return r.start?n=o.start?r.start>o.start?r.start:o.start:r.start:o.start&&(n=o.start),r.end?c=o.end?r.end<o.end?r.end:o.end:r.end:o.end&&(c=o.end),{start:n,end:c}}intersectsDate(e){var t=this;const r=this.toDateInfo(e);if(!this.shallowIntersectsDate(r))return null;if(!this.on)return this;const o=this.rangeShallowIntersectingRange(this,r);let n=!1;return this.iterateDatesInRange(o,(function(e){t.matchesDay(e.day)&&(n=n||r.matchesDay(e.day),e.finished=n)})),n}shallowIntersectsDate(e){return this.dateShallowIntersectsDate(this,this.toDateInfo(e))}dateShallowIntersectsDate(e,t){return e.isDate?t.isDate?e.dateTime===t.dateTime:this.dateShallowIncludesDate(t,e):t.isDate?this.dateShallowIncludesDate(e,t):!(e.start&&t.end&&e.start>t.end)&&!(e.end&&t.start&&e.end<t.start)}includesDate(e){var t=this;const r=this.toDateInfo(e);if(!this.shallowIncludesDate(r))return!1;if(!this.on)return!0;const o=this.rangeShallowIntersectingRange(this,r);let n=!0;return this.iterateDatesInRange(o,(function(e){t.matchesDay(e.day)&&(n=n&&r.matchesDay(e.day),e.finished=!n)})),n}shallowIncludesDate(e){return this.dateShallowIncludesDate(this,e.isDate?e:new l(e,this.opts))}dateShallowIncludesDate(e,t){return e.isDate?t.isDate?e.dateTime===t.dateTime:!(!t.startTime||!t.endTime)&&(e.dateTime===t.startTime&&e.dateTime===t.endTime):t.isDate?!(e.start&&t.date<e.start)&&!(e.end&&t.date>e.end):!(e.start&&(!t.start||t.start<e.start))&&!(e.end&&(!t.end||t.end>e.end))}includesDay(e){return this.shallowIncludesDate(e.date)&&this.matchesDay(e)?this:null}matchesDay(e){var t=this;return!this.on||!(this.on.and&&!l.testConfig(this.on.and,e,this))&&!(this.on.or&&!this.on.or.some((function(r){return l.testConfig(r,e,t)})))}toRange(){return this.isDate?new l({start:this.date,end:this.date},this.opts):new l({start:this.start,end:this.end},this.opts)}compare(e){if(this.order!==e.order)return this.order-e.order;if(this.type!==e.type)return this.isDate?1:-1;if(this.isDate)return 0;const t=this.start-e.start;return 0!==t?t:this.end-e.end}}},d02c:function(e,t,r){var o=r("5e2e"),n=r("79bc"),c=r("7b83"),i=200;function a(e,t){var r=this.__data__;if(r instanceof o){var a=r.__data__;if(!n||a.length<i-1)return a.push([e,t]),this.size=++r.size,this;r=this.__data__=new c(a)}return r.set(e,t),this.size=r.size,this}e.exports=a},d094:function(e,t){var r="\\ud800-\\udfff",o="\\u0300-\\u036f",n="\\ufe20-\\ufe2f",c="\\u20d0-\\u20ff",i=o+n+c,a="\\ufe0e\\ufe0f",s="["+r+"]",d="["+i+"]",u="\\ud83c[\\udffb-\\udfff]",l="(?:"+d+"|"+u+")",f="[^"+r+"]",v="(?:\\ud83c[\\udde6-\\uddff]){2}",b="[\\ud800-\\udbff][\\udc00-\\udfff]",h="\\u200d",p=l+"?",g="["+a+"]?",m="(?:"+h+"(?:"+[f,v,b].join("|")+")"+g+p+")*",y=g+p+m,x="(?:"+[f+d+"?",d,v,b,s].join("|")+")",w=RegExp(u+"(?="+u+")|"+x+y,"g");function k(e){return e.match(w)||[]}e.exports=k},d0d6:function(e,t,r){"use strict";var o=r("6300"),n=r.n(o);n.a},d194:function(e,t,r){var o=r("c32f"),n=r("aaec"),c=r("126d"),i=r("76dd");function a(e){return function(t){t=i(t);var r=n(t)?c(t):void 0,a=r?r[0]:t.charAt(0),s=r?o(r,1).join(""):t.slice(1);return a[e]()+s}}e.exports=a},d327:function(e,t){function r(){return[]}e.exports=r},d370:function(e,t,r){var o=r("253c"),n=r("1310"),c=Object.prototype,i=c.hasOwnProperty,a=c.propertyIsEnumerable,s=o(function(){return arguments}())?o:function(e){return n(e)&&i.call(e,"callee")&&!a.call(e,"callee")};e.exports=s},d3f4:function(e,t){e.exports=function(e){return"object"===typeof e?null!==e:"function"===typeof e}},d53b:function(e,t){e.exports=function(e,t){return{value:t,done:!!e}}},d581:function(e,t,r){"use strict";var o=r("5cab"),n=r.n(o);n.a},d612:function(e,t,r){var o=r("7b83"),n=r("7ed2"),c=r("dc0f");function i(e){var t=-1,r=null==e?0:e.length;this.__data__=new o;while(++t<r)this.add(e[t])}i.prototype.add=i.prototype.push=n,i.prototype.has=c,e.exports=i},d7ee:function(e,t,r){var o=r("c3fc"),n=r("b047"),c=r("99d3"),i=c&&c.isSet,a=i?n(i):o;e.exports=a},d864:function(e,t,r){var o=r("79aa");e.exports=function(e,t,r){if(o(e),void 0===t)return e;switch(r){case 1:return function(r){return e.call(t,r)};case 2:return function(r,o){return e.call(t,r,o)};case 3:return function(r,o,n){return e.call(t,r,o,n)}}return function(){return e.apply(t,arguments)}}},d8e8:function(e,t){e.exports=function(e){if("function"!=typeof e)throw TypeError(e+" is not a function!");return e}},d9a8:function(e,t){function r(e){return e!==e}e.exports=r},d9f6:function(e,t,r){var o=r("e4ae"),n=r("794b"),c=r("1bc3"),i=Object.defineProperty;t.f=r("8e60")?Object.defineProperty:function(e,t,r){if(o(e),t=c(t,!0),o(r),n)try{return i(e,t,r)}catch(a){}if("get"in r||"set"in r)throw TypeError("Accessors not supported!");return"value"in r&&(e[t]=r.value),e}},da03:function(e,t,r){var o=r("2b3e"),n=o["__core-js_shared__"];e.exports=n},dc0f:function(e,t){function r(e){return this.__data__.has(e)}e.exports=r},dc57:function(e,t){var r=Function.prototype,o=r.toString;function n(e){if(null!=e){try{return o.call(e)}catch(t){}try{return e+""}catch(t){}}return""}e.exports=n},dcbe:function(e,t,r){var o=r("30c9"),n=r("1310");function c(e){return n(e)&&o(e)}e.exports=c},dd61:function(e,t,r){var o=r("7948"),n=r("badf"),c=r("97d3"),i=r("6747");function a(e,t){var r=i(e)?o:c;return r(e,n(t,3))}e.exports=a},ddc6:function(e,t){function r(e){return function(t){return null==e?void 0:e[t]}}e.exports=r},e031:function(e,t,r){var o=r("f909"),n=r("1a8c");function c(e,t,r,i,a,s){return n(e)&&n(t)&&(s.set(t,e),o(e,t,void 0,c,s),s["delete"](t)),e}e.exports=c},e0e7:function(e,t,r){var o=r("60ed");function n(e){return o(e)?void 0:e}e.exports=n},e11e:function(e,t){e.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},e24b:function(e,t,r){var o=r("49f4"),n=r("1efc"),c=r("bbc0"),i=r("7a48"),a=r("2524");function s(e){var t=-1,r=null==e?0:e.length;this.clear();while(++t<r){var o=e[t];this.set(o[0],o[1])}}s.prototype.clear=o,s.prototype["delete"]=n,s.prototype.get=c,s.prototype.has=i,s.prototype.set=a,e.exports=s},e2a0:function(e,t,r){var o=r("3729"),n=r("6747"),c=r("1310"),i="[object String]";function a(e){return"string"==typeof e||!n(e)&&c(e)&&o(e)==i}e.exports=a},e2c0:function(e,t,r){var o=r("e2e4"),n=r("d370"),c=r("6747"),i=r("c098"),a=r("b218"),s=r("f4d6");function d(e,t,r){t=o(t,e);var d=-1,u=t.length,l=!1;while(++d<u){var f=s(t[d]);if(!(l=null!=e&&r(e,f)))break;e=e[f]}return l||++d!=u?l:(u=null==e?0:e.length,!!u&&a(u)&&i(f,u)&&(c(e)||n(e)))}e.exports=d},e2e4:function(e,t,r){var o=r("6747"),n=r("f608"),c=r("18d8"),i=r("76dd");function a(e,t){return o(e)?e:n(e,t)?[e]:c(i(e))}e.exports=a},e380:function(e,t,r){var o=r("7b83"),n="Expected a function";function c(e,t){if("function"!=typeof e||null!=t&&"function"!=typeof t)throw new TypeError(n);var r=function(){var o=arguments,n=t?t.apply(this,o):o[0],c=r.cache;if(c.has(n))return c.get(n);var i=e.apply(this,o);return r.cache=c.set(n,i)||c,i};return r.cache=new(c.Cache||o),r}c.Cache=o,e.exports=c},e3f8:function(e,t,r){var o=r("656b");function n(e){return function(t){return o(t,e)}}e.exports=n},e4ae:function(e,t,r){var o=r("f772");e.exports=function(e){if(!o(e))throw TypeError(e+" is not an object!");return e}},e538:function(e,t,r){(function(e){var o=r("2b3e"),n=t&&!t.nodeType&&t,c=n&&"object"==typeof e&&e&&!e.nodeType&&e,i=c&&c.exports===n,a=i?o.Buffer:void 0,s=a?a.allocUnsafe:void 0;function d(e,t){if(t)return e.slice();var r=e.length,o=s?s(r):new e.constructor(r);return e.copy(o),o}e.exports=d}).call(this,r("62e4")(e))},e53d:function(e,t){var r=e.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=r)},e9a7:function(e,t,r){var o=r("76dd"),n=r("8103");function c(e){return n(o(e).toLowerCase())}e.exports=c},ea72:function(e,t,r){var o=r("7559"),n=r("7e8e"),c=r("76dd"),i=r("f4d9");function a(e,t,r){return e=c(e),t=r?void 0:t,void 0===t?n(e)?i(e):o(e):e.match(t)||[]}e.exports=a},eac5:function(e,t){var r=Object.prototype;function o(e){var t=e&&e.constructor,o="function"==typeof t&&t.prototype||r;return e===o}e.exports=o},ebd6:function(e,t,r){var o=r("cb7c"),n=r("d8e8"),c=r("2b4c")("species");e.exports=function(e,t){var r,i=o(e).constructor;return void 0===i||void 0==(r=o(i)[c])?t:n(r)}},ec47:function(e,t,r){var o=r("a3fd"),n=r("42a2"),c=r("edfa"),i=r("cebd"),a="[object Map]",s="[object Set]";function d(e){return function(t){var r=n(t);return r==a?c(t):r==s?i(t):o(t,e(t))}}e.exports=d},ec69:function(e,t,r){var o=r("6fcd"),n=r("03dd"),c=r("30c9");function i(e){return c(e)?o(e):n(e)}e.exports=i},ec8c:function(e,t){function r(e){var t=[];if(null!=e)for(var r in Object(e))t.push(r);return t}e.exports=r},ed08:function(e,t,r){"use strict";r.r(t),r.d(t,"Locale",(function(){return o["a"]})),r.d(t,"DateInfo",(function(){return n["a"]})),r.d(t,"Attribute",(function(){return c["a"]})),r.d(t,"AttributeStore",(function(){return i["a"]})),r.d(t,"setupCalendar",(function(){return d})),r.d(t,"evalFn",(function(){return u["h"]})),r.d(t,"pageIsValid",(function(){return u["x"]})),r.d(t,"pageIsBeforePage",(function(){return u["u"]})),r.d(t,"pageIsAfterPage",(function(){return u["t"]})),r.d(t,"pageIsBetweenPages",(function(){return u["v"]})),r.d(t,"pageIsEqualToPage",(function(){return u["w"]})),r.d(t,"pageForDate",(function(){return u["p"]})),r.d(t,"addPages",(function(){return u["a"]})),r.d(t,"pageForThisMonth",(function(){return u["s"]})),r.d(t,"pageForNextMonth",(function(){return u["q"]})),r.d(t,"pageForPrevMonth",(function(){return u["r"]})),r.d(t,"getMaxPage",(function(){return u["j"]})),r.d(t,"datesAreEqual",(function(){return u["d"]})),r.d(t,"arrayHasItems",(function(){return u["b"]})),r.d(t,"findAncestor",(function(){return u["i"]})),r.d(t,"elementHasAncestor",(function(){return u["f"]})),r.d(t,"elementPositionInAncestor",(function(){return u["g"]})),r.d(t,"mixinOptionalProps",(function(){return u["l"]})),r.d(t,"on",(function(){return u["n"]})),r.d(t,"off",(function(){return u["m"]})),r.d(t,"elementContains",(function(){return u["e"]})),r.d(t,"onSpaceOrEnter",(function(){return u["o"]})),r.d(t,"createGuid",(function(){return u["c"]})),r.d(t,"hash",(function(){return u["k"]})),r.d(t,"addTapOrClickHandler",(function(){return l["b"]})),r.d(t,"addHorizontalSwipeHandler",(function(){return l["a"]}));var o=r("29ae"),n=r("cfe5"),c=r("22f3"),i=r("93495"),a=r("51ec"),s=r("1315"),d=function(e){const t=Object(a["b"])(e);return Object(s["a"])(t.screens,!0),t},u=r("2fa3"),l=r("0733")},edfa:function(e,t){function r(e){var t=-1,r=Array(e.size);return e.forEach((function(e,o){r[++t]=[o,e]})),r}e.exports=r},ee59:function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".none-enter-active[data-v-5be4b00c],.none-leave-active[data-v-5be4b00c]{transition-duration:0s}.fade-enter-active[data-v-5be4b00c],.fade-leave-active[data-v-5be4b00c],.slide-down-enter-active[data-v-5be4b00c],.slide-down-leave-active[data-v-5be4b00c],.slide-left-enter-active[data-v-5be4b00c],.slide-left-leave-active[data-v-5be4b00c],.slide-right-enter-active[data-v-5be4b00c],.slide-right-leave-active[data-v-5be4b00c],.slide-up-enter-active[data-v-5be4b00c],.slide-up-leave-active[data-v-5be4b00c]{transition:transform var(--slide-duration) var(--slide-timing),opacity var(--slide-duration) var(--slide-timing);-webkit-backface-visibility:hidden;backface-visibility:hidden}.fade-leave-active[data-v-5be4b00c],.none-leave-active[data-v-5be4b00c],.slide-down-leave-active[data-v-5be4b00c],.slide-left-leave-active[data-v-5be4b00c],.slide-right-leave-active[data-v-5be4b00c],.slide-up-leave-active[data-v-5be4b00c]{position:absolute;width:100%}.fade-enter[data-v-5be4b00c],.fade-leave-to[data-v-5be4b00c],.none-enter[data-v-5be4b00c],.none-leave-to[data-v-5be4b00c],.slide-down-enter[data-v-5be4b00c],.slide-down-leave-to[data-v-5be4b00c],.slide-left-enter[data-v-5be4b00c],.slide-left-leave-to[data-v-5be4b00c],.slide-right-enter[data-v-5be4b00c],.slide-right-leave-to[data-v-5be4b00c],.slide-up-enter[data-v-5be4b00c],.slide-up-leave-to[data-v-5be4b00c]{opacity:0}.slide-left-enter[data-v-5be4b00c],.slide-right-leave-to[data-v-5be4b00c]{transform:translateX(var(--slide-translate))}.slide-left-leave-to[data-v-5be4b00c],.slide-right-enter[data-v-5be4b00c]{transform:translateX(calc(-1*var(--slide-translate)))}.slide-down-leave-to[data-v-5be4b00c],.slide-up-enter[data-v-5be4b00c]{transform:translateY(var(--slide-translate))}.slide-down-enter[data-v-5be4b00c],.slide-up-leave-to[data-v-5be4b00c]{transform:translateY(calc(-1*var(--slide-translate)))}",""])},eed6:function(e,t,r){var o=r("2c66");function n(e){return e&&e.length?o(e):[]}e.exports=n},ef5d:function(e,t){function r(e){return function(t){return null==t?void 0:t[e]}}e.exports=r},efb6:function(e,t,r){var o=r("5e2e");function n(){this.__data__=new o,this.size=0}e.exports=n},f064:function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".vc-grid-container[data-v-3ca35a05]{position:relative;flex-shrink:1;display:grid;overflow:auto;-webkit-overflow-scrolling:touch}.vc-grid-cell[data-v-3ca35a05]{display:flex;justify-content:center;align-items:center}",""])},f0bd:function(e,t,r){"use strict";(function(e){
+/**!
+ * @fileOverview Kickass library to create and place poppers near their reference elements.
+ * @version 1.16.1
+ * @license
+ * Copyright (c) 2016 Federico Zivolo and contributors
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+var r="undefined"!==typeof window&&"undefined"!==typeof document&&"undefined"!==typeof navigator,o=function(){for(var e=["Edge","Trident","Firefox"],t=0;t<e.length;t+=1)if(r&&navigator.userAgent.indexOf(e[t])>=0)return 1;return 0}();function n(e){var t=!1;return function(){t||(t=!0,window.Promise.resolve().then((function(){t=!1,e()})))}}function c(e){var t=!1;return function(){t||(t=!0,setTimeout((function(){t=!1,e()}),o))}}var i=r&&window.Promise,a=i?n:c;function s(e){var t={};return e&&"[object Function]"===t.toString.call(e)}function d(e,t){if(1!==e.nodeType)return[];var r=e.ownerDocument.defaultView,o=r.getComputedStyle(e,null);return t?o[t]:o}function u(e){return"HTML"===e.nodeName?e:e.parentNode||e.host}function l(e){if(!e)return document.body;switch(e.nodeName){case"HTML":case"BODY":return e.ownerDocument.body;case"#document":return e.body}var t=d(e),r=t.overflow,o=t.overflowX,n=t.overflowY;return/(auto|scroll|overlay)/.test(r+n+o)?e:l(u(e))}function f(e){return e&&e.referenceNode?e.referenceNode:e}var v=r&&!(!window.MSInputMethodContext||!document.documentMode),b=r&&/MSIE 10/.test(navigator.userAgent);function h(e){return 11===e?v:10===e?b:v||b}function p(e){if(!e)return document.documentElement;var t=h(10)?document.body:null,r=e.offsetParent||null;while(r===t&&e.nextElementSibling)r=(e=e.nextElementSibling).offsetParent;var o=r&&r.nodeName;return o&&"BODY"!==o&&"HTML"!==o?-1!==["TH","TD","TABLE"].indexOf(r.nodeName)&&"static"===d(r,"position")?p(r):r:e?e.ownerDocument.documentElement:document.documentElement}function g(e){var t=e.nodeName;return"BODY"!==t&&("HTML"===t||p(e.firstElementChild)===e)}function m(e){return null!==e.parentNode?m(e.parentNode):e}function y(e,t){if(!e||!e.nodeType||!t||!t.nodeType)return document.documentElement;var r=e.compareDocumentPosition(t)&Node.DOCUMENT_POSITION_FOLLOWING,o=r?e:t,n=r?t:e,c=document.createRange();c.setStart(o,0),c.setEnd(n,0);var i=c.commonAncestorContainer;if(e!==i&&t!==i||o.contains(n))return g(i)?i:p(i);var a=m(e);return a.host?y(a.host,t):y(e,m(t).host)}function x(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"top",r="top"===t?"scrollTop":"scrollLeft",o=e.nodeName;if("BODY"===o||"HTML"===o){var n=e.ownerDocument.documentElement,c=e.ownerDocument.scrollingElement||n;return c[r]}return e[r]}function w(e,t){var r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],o=x(t,"top"),n=x(t,"left"),c=r?-1:1;return e.top+=o*c,e.bottom+=o*c,e.left+=n*c,e.right+=n*c,e}function k(e,t){var r="x"===t?"Left":"Top",o="Left"===r?"Right":"Bottom";return parseFloat(e["border"+r+"Width"])+parseFloat(e["border"+o+"Width"])}function O(e,t,r,o){return Math.max(t["offset"+e],t["scroll"+e],r["client"+e],r["offset"+e],r["scroll"+e],h(10)?parseInt(r["offset"+e])+parseInt(o["margin"+("Height"===e?"Top":"Left")])+parseInt(o["margin"+("Height"===e?"Bottom":"Right")]):0)}function j(e){var t=e.body,r=e.documentElement,o=h(10)&&getComputedStyle(r);return{height:O("Height",t,r,o),width:O("Width",t,r,o)}}var D=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")},P=function(){function e(e,t){for(var r=0;r<t.length;r++){var o=t[r];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,r,o){return r&&e(t.prototype,r),o&&e(t,o),t}}(),M=function(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e},S=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var o in r)Object.prototype.hasOwnProperty.call(r,o)&&(e[o]=r[o])}return e};function E(e){return S({},e,{right:e.left+e.width,bottom:e.top+e.height})}function _(e){var t={};try{if(h(10)){t=e.getBoundingClientRect();var r=x(e,"top"),o=x(e,"left");t.top+=r,t.left+=o,t.bottom+=r,t.right+=o}else t=e.getBoundingClientRect()}catch(f){}var n={left:t.left,top:t.top,width:t.right-t.left,height:t.bottom-t.top},c="HTML"===e.nodeName?j(e.ownerDocument):{},i=c.width||e.clientWidth||n.width,a=c.height||e.clientHeight||n.height,s=e.offsetWidth-i,u=e.offsetHeight-a;if(s||u){var l=d(e);s-=k(l,"x"),u-=k(l,"y"),n.width-=s,n.height-=u}return E(n)}function Y(e,t){var r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],o=h(10),n="HTML"===t.nodeName,c=_(e),i=_(t),a=l(e),s=d(t),u=parseFloat(s.borderTopWidth),f=parseFloat(s.borderLeftWidth);r&&n&&(i.top=Math.max(i.top,0),i.left=Math.max(i.left,0));var v=E({top:c.top-i.top-u,left:c.left-i.left-f,width:c.width,height:c.height});if(v.marginTop=0,v.marginLeft=0,!o&&n){var b=parseFloat(s.marginTop),p=parseFloat(s.marginLeft);v.top-=u-b,v.bottom-=u-b,v.left-=f-p,v.right-=f-p,v.marginTop=b,v.marginLeft=p}return(o&&!r?t.contains(a):t===a&&"BODY"!==a.nodeName)&&(v=w(v,t)),v}function C(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=e.ownerDocument.documentElement,o=Y(e,r),n=Math.max(r.clientWidth,window.innerWidth||0),c=Math.max(r.clientHeight,window.innerHeight||0),i=t?0:x(r),a=t?0:x(r,"left"),s={top:i-o.top+o.marginTop,left:a-o.left+o.marginLeft,width:n,height:c};return E(s)}function I(e){var t=e.nodeName;if("BODY"===t||"HTML"===t)return!1;if("fixed"===d(e,"position"))return!0;var r=u(e);return!!r&&I(r)}function $(e){if(!e||!e.parentElement||h())return document.documentElement;var t=e.parentElement;while(t&&"none"===d(t,"transform"))t=t.parentElement;return t||document.documentElement}function A(e,t,r,o){var n=arguments.length>4&&void 0!==arguments[4]&&arguments[4],c={top:0,left:0},i=n?$(e):y(e,f(t));if("viewport"===o)c=C(i,n);else{var a=void 0;"scrollParent"===o?(a=l(u(t)),"BODY"===a.nodeName&&(a=e.ownerDocument.documentElement)):a="window"===o?e.ownerDocument.documentElement:o;var s=Y(a,i,n);if("HTML"!==a.nodeName||I(i))c=s;else{var d=j(e.ownerDocument),v=d.height,b=d.width;c.top+=s.top-s.marginTop,c.bottom=v+s.top,c.left+=s.left-s.marginLeft,c.right=b+s.left}}r=r||0;var h="number"===typeof r;return c.left+=h?r:r.left||0,c.top+=h?r:r.top||0,c.right-=h?r:r.right||0,c.bottom-=h?r:r.bottom||0,c}function T(e){var t=e.width,r=e.height;return t*r}function L(e,t,r,o,n){var c=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0;if(-1===e.indexOf("auto"))return e;var i=A(r,o,c,n),a={top:{width:i.width,height:t.top-i.top},right:{width:i.right-t.right,height:i.height},bottom:{width:i.width,height:i.bottom-t.bottom},left:{width:t.left-i.left,height:i.height}},s=Object.keys(a).map((function(e){return S({key:e},a[e],{area:T(a[e])})})).sort((function(e,t){return t.area-e.area})),d=s.filter((function(e){var t=e.width,o=e.height;return t>=r.clientWidth&&o>=r.clientHeight})),u=d.length>0?d[0].key:s[0].key,l=e.split("-")[1];return u+(l?"-"+l:"")}function F(e,t,r){var o=arguments.length>3&&void 0!==arguments[3]?arguments[3]:null,n=o?$(t):y(t,f(r));return Y(r,n,o)}function N(e){var t=e.ownerDocument.defaultView,r=t.getComputedStyle(e),o=parseFloat(r.marginTop||0)+parseFloat(r.marginBottom||0),n=parseFloat(r.marginLeft||0)+parseFloat(r.marginRight||0),c={width:e.offsetWidth+n,height:e.offsetHeight+o};return c}function z(e){var t={left:"right",right:"left",bottom:"top",top:"bottom"};return e.replace(/left|right|bottom|top/g,(function(e){return t[e]}))}function R(e,t,r){r=r.split("-")[0];var o=N(e),n={width:o.width,height:o.height},c=-1!==["right","left"].indexOf(r),i=c?"top":"left",a=c?"left":"top",s=c?"height":"width",d=c?"width":"height";return n[i]=t[i]+t[s]/2-o[s]/2,n[a]=r===a?t[a]-o[d]:t[z(a)],n}function V(e,t){return Array.prototype.find?e.find(t):e.filter(t)[0]}function H(e,t,r){if(Array.prototype.findIndex)return e.findIndex((function(e){return e[t]===r}));var o=V(e,(function(e){return e[t]===r}));return e.indexOf(o)}function W(e,t,r){var o=void 0===r?e:e.slice(0,H(e,"name",r));return o.forEach((function(e){e["function"]&&console.warn("`modifier.function` is deprecated, use `modifier.fn`!");var r=e["function"]||e.fn;e.enabled&&s(r)&&(t.offsets.popper=E(t.offsets.popper),t.offsets.reference=E(t.offsets.reference),t=r(t,e))})),t}function B(){if(!this.state.isDestroyed){var e={instance:this,styles:{},arrowStyles:{},attributes:{},flipped:!1,offsets:{}};e.offsets.reference=F(this.state,this.popper,this.reference,this.options.positionFixed),e.placement=L(this.options.placement,e.offsets.reference,this.popper,this.reference,this.options.modifiers.flip.boundariesElement,this.options.modifiers.flip.padding),e.originalPlacement=e.placement,e.positionFixed=this.options.positionFixed,e.offsets.popper=R(this.popper,e.offsets.reference,e.placement),e.offsets.popper.position=this.options.positionFixed?"fixed":"absolute",e=W(this.modifiers,e),this.state.isCreated?this.options.onUpdate(e):(this.state.isCreated=!0,this.options.onCreate(e))}}function U(e,t){return e.some((function(e){var r=e.name,o=e.enabled;return o&&r===t}))}function G(e){for(var t=[!1,"ms","Webkit","Moz","O"],r=e.charAt(0).toUpperCase()+e.slice(1),o=0;o<t.length;o++){var n=t[o],c=n?""+n+r:e;if("undefined"!==typeof document.body.style[c])return c}return null}function q(){return this.state.isDestroyed=!0,U(this.modifiers,"applyStyle")&&(this.popper.removeAttribute("x-placement"),this.popper.style.position="",this.popper.style.top="",this.popper.style.left="",this.popper.style.right="",this.popper.style.bottom="",this.popper.style.willChange="",this.popper.style[G("transform")]=""),this.disableEventListeners(),this.options.removeOnDestroy&&this.popper.parentNode.removeChild(this.popper),this}function K(e){var t=e.ownerDocument;return t?t.defaultView:window}function Z(e,t,r,o){var n="BODY"===e.nodeName,c=n?e.ownerDocument.defaultView:e;c.addEventListener(t,r,{passive:!0}),n||Z(l(c.parentNode),t,r,o),o.push(c)}function X(e,t,r,o){r.updateBound=o,K(e).addEventListener("resize",r.updateBound,{passive:!0});var n=l(e);return Z(n,"scroll",r.updateBound,r.scrollParents),r.scrollElement=n,r.eventsEnabled=!0,r}function J(){this.state.eventsEnabled||(this.state=X(this.reference,this.options,this.state,this.scheduleUpdate))}function Q(e,t){return K(e).removeEventListener("resize",t.updateBound),t.scrollParents.forEach((function(e){e.removeEventListener("scroll",t.updateBound)})),t.updateBound=null,t.scrollParents=[],t.scrollElement=null,t.eventsEnabled=!1,t}function ee(){this.state.eventsEnabled&&(cancelAnimationFrame(this.scheduleUpdate),this.state=Q(this.reference,this.state))}function te(e){return""!==e&&!isNaN(parseFloat(e))&&isFinite(e)}function re(e,t){Object.keys(t).forEach((function(r){var o="";-1!==["width","height","top","right","bottom","left"].indexOf(r)&&te(t[r])&&(o="px"),e.style[r]=t[r]+o}))}function oe(e,t){Object.keys(t).forEach((function(r){var o=t[r];!1!==o?e.setAttribute(r,t[r]):e.removeAttribute(r)}))}function ne(e){return re(e.instance.popper,e.styles),oe(e.instance.popper,e.attributes),e.arrowElement&&Object.keys(e.arrowStyles).length&&re(e.arrowElement,e.arrowStyles),e}function ce(e,t,r,o,n){var c=F(n,t,e,r.positionFixed),i=L(r.placement,c,t,e,r.modifiers.flip.boundariesElement,r.modifiers.flip.padding);return t.setAttribute("x-placement",i),re(t,{position:r.positionFixed?"fixed":"absolute"}),r}function ie(e,t){var r=e.offsets,o=r.popper,n=r.reference,c=Math.round,i=Math.floor,a=function(e){return e},s=c(n.width),d=c(o.width),u=-1!==["left","right"].indexOf(e.placement),l=-1!==e.placement.indexOf("-"),f=s%2===d%2,v=s%2===1&&d%2===1,b=t?u||l||f?c:i:a,h=t?c:a;return{left:b(v&&!l&&t?o.left-1:o.left),top:h(o.top),bottom:h(o.bottom),right:b(o.right)}}var ae=r&&/Firefox/i.test(navigator.userAgent);function se(e,t){var r=t.x,o=t.y,n=e.offsets.popper,c=V(e.instance.modifiers,(function(e){return"applyStyle"===e.name})).gpuAcceleration;void 0!==c&&console.warn("WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!");var i=void 0!==c?c:t.gpuAcceleration,a=p(e.instance.popper),s=_(a),d={position:n.position},u=ie(e,window.devicePixelRatio<2||!ae),l="bottom"===r?"top":"bottom",f="right"===o?"left":"right",v=G("transform"),b=void 0,h=void 0;if(h="bottom"===l?"HTML"===a.nodeName?-a.clientHeight+u.bottom:-s.height+u.bottom:u.top,b="right"===f?"HTML"===a.nodeName?-a.clientWidth+u.right:-s.width+u.right:u.left,i&&v)d[v]="translate3d("+b+"px, "+h+"px, 0)",d[l]=0,d[f]=0,d.willChange="transform";else{var g="bottom"===l?-1:1,m="right"===f?-1:1;d[l]=h*g,d[f]=b*m,d.willChange=l+", "+f}var y={"x-placement":e.placement};return e.attributes=S({},y,e.attributes),e.styles=S({},d,e.styles),e.arrowStyles=S({},e.offsets.arrow,e.arrowStyles),e}function de(e,t,r){var o=V(e,(function(e){var r=e.name;return r===t})),n=!!o&&e.some((function(e){return e.name===r&&e.enabled&&e.order<o.order}));if(!n){var c="`"+t+"`",i="`"+r+"`";console.warn(i+" modifier is required by "+c+" modifier in order to work, be sure to include it before "+c+"!")}return n}function ue(e,t){var r;if(!de(e.instance.modifiers,"arrow","keepTogether"))return e;var o=t.element;if("string"===typeof o){if(o=e.instance.popper.querySelector(o),!o)return e}else if(!e.instance.popper.contains(o))return console.warn("WARNING: `arrow.element` must be child of its popper element!"),e;var n=e.placement.split("-")[0],c=e.offsets,i=c.popper,a=c.reference,s=-1!==["left","right"].indexOf(n),u=s?"height":"width",l=s?"Top":"Left",f=l.toLowerCase(),v=s?"left":"top",b=s?"bottom":"right",h=N(o)[u];a[b]-h<i[f]&&(e.offsets.popper[f]-=i[f]-(a[b]-h)),a[f]+h>i[b]&&(e.offsets.popper[f]+=a[f]+h-i[b]),e.offsets.popper=E(e.offsets.popper);var p=a[f]+a[u]/2-h/2,g=d(e.instance.popper),m=parseFloat(g["margin"+l]),y=parseFloat(g["border"+l+"Width"]),x=p-e.offsets.popper[f]-m-y;return x=Math.max(Math.min(i[u]-h,x),0),e.arrowElement=o,e.offsets.arrow=(r={},M(r,f,Math.round(x)),M(r,v,""),r),e}function le(e){return"end"===e?"start":"start"===e?"end":e}var fe=["auto-start","auto","auto-end","top-start","top","top-end","right-start","right","right-end","bottom-end","bottom","bottom-start","left-end","left","left-start"],ve=fe.slice(3);function be(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=ve.indexOf(e),o=ve.slice(r+1).concat(ve.slice(0,r));return t?o.reverse():o}var he={FLIP:"flip",CLOCKWISE:"clockwise",COUNTERCLOCKWISE:"counterclockwise"};function pe(e,t){if(U(e.instance.modifiers,"inner"))return e;if(e.flipped&&e.placement===e.originalPlacement)return e;var r=A(e.instance.popper,e.instance.reference,t.padding,t.boundariesElement,e.positionFixed),o=e.placement.split("-")[0],n=z(o),c=e.placement.split("-")[1]||"",i=[];switch(t.behavior){case he.FLIP:i=[o,n];break;case he.CLOCKWISE:i=be(o);break;case he.COUNTERCLOCKWISE:i=be(o,!0);break;default:i=t.behavior}return i.forEach((function(a,s){if(o!==a||i.length===s+1)return e;o=e.placement.split("-")[0],n=z(o);var d=e.offsets.popper,u=e.offsets.reference,l=Math.floor,f="left"===o&&l(d.right)>l(u.left)||"right"===o&&l(d.left)<l(u.right)||"top"===o&&l(d.bottom)>l(u.top)||"bottom"===o&&l(d.top)<l(u.bottom),v=l(d.left)<l(r.left),b=l(d.right)>l(r.right),h=l(d.top)<l(r.top),p=l(d.bottom)>l(r.bottom),g="left"===o&&v||"right"===o&&b||"top"===o&&h||"bottom"===o&&p,m=-1!==["top","bottom"].indexOf(o),y=!!t.flipVariations&&(m&&"start"===c&&v||m&&"end"===c&&b||!m&&"start"===c&&h||!m&&"end"===c&&p),x=!!t.flipVariationsByContent&&(m&&"start"===c&&b||m&&"end"===c&&v||!m&&"start"===c&&p||!m&&"end"===c&&h),w=y||x;(f||g||w)&&(e.flipped=!0,(f||g)&&(o=i[s+1]),w&&(c=le(c)),e.placement=o+(c?"-"+c:""),e.offsets.popper=S({},e.offsets.popper,R(e.instance.popper,e.offsets.reference,e.placement)),e=W(e.instance.modifiers,e,"flip"))})),e}function ge(e){var t=e.offsets,r=t.popper,o=t.reference,n=e.placement.split("-")[0],c=Math.floor,i=-1!==["top","bottom"].indexOf(n),a=i?"right":"bottom",s=i?"left":"top",d=i?"width":"height";return r[a]<c(o[s])&&(e.offsets.popper[s]=c(o[s])-r[d]),r[s]>c(o[a])&&(e.offsets.popper[s]=c(o[a])),e}function me(e,t,r,o){var n=e.match(/((?:\-|\+)?\d*\.?\d*)(.*)/),c=+n[1],i=n[2];if(!c)return e;if(0===i.indexOf("%")){var a=void 0;switch(i){case"%p":a=r;break;case"%":case"%r":default:a=o}var s=E(a);return s[t]/100*c}if("vh"===i||"vw"===i){var d=void 0;return d="vh"===i?Math.max(document.documentElement.clientHeight,window.innerHeight||0):Math.max(document.documentElement.clientWidth,window.innerWidth||0),d/100*c}return c}function ye(e,t,r,o){var n=[0,0],c=-1!==["right","left"].indexOf(o),i=e.split(/(\+|\-)/).map((function(e){return e.trim()})),a=i.indexOf(V(i,(function(e){return-1!==e.search(/,|\s/)})));i[a]&&-1===i[a].indexOf(",")&&console.warn("Offsets separated by white space(s) are deprecated, use a comma (,) instead.");var s=/\s*,\s*|\s+/,d=-1!==a?[i.slice(0,a).concat([i[a].split(s)[0]]),[i[a].split(s)[1]].concat(i.slice(a+1))]:[i];return d=d.map((function(e,o){var n=(1===o?!c:c)?"height":"width",i=!1;return e.reduce((function(e,t){return""===e[e.length-1]&&-1!==["+","-"].indexOf(t)?(e[e.length-1]=t,i=!0,e):i?(e[e.length-1]+=t,i=!1,e):e.concat(t)}),[]).map((function(e){return me(e,n,t,r)}))})),d.forEach((function(e,t){e.forEach((function(r,o){te(r)&&(n[t]+=r*("-"===e[o-1]?-1:1))}))})),n}function xe(e,t){var r=t.offset,o=e.placement,n=e.offsets,c=n.popper,i=n.reference,a=o.split("-")[0],s=void 0;return s=te(+r)?[+r,0]:ye(r,c,i,a),"left"===a?(c.top+=s[0],c.left-=s[1]):"right"===a?(c.top+=s[0],c.left+=s[1]):"top"===a?(c.left+=s[0],c.top-=s[1]):"bottom"===a&&(c.left+=s[0],c.top+=s[1]),e.popper=c,e}function we(e,t){var r=t.boundariesElement||p(e.instance.popper);e.instance.reference===r&&(r=p(r));var o=G("transform"),n=e.instance.popper.style,c=n.top,i=n.left,a=n[o];n.top="",n.left="",n[o]="";var s=A(e.instance.popper,e.instance.reference,t.padding,r,e.positionFixed);n.top=c,n.left=i,n[o]=a,t.boundaries=s;var d=t.priority,u=e.offsets.popper,l={primary:function(e){var r=u[e];return u[e]<s[e]&&!t.escapeWithReference&&(r=Math.max(u[e],s[e])),M({},e,r)},secondary:function(e){var r="right"===e?"left":"top",o=u[r];return u[e]>s[e]&&!t.escapeWithReference&&(o=Math.min(u[r],s[e]-("right"===e?u.width:u.height))),M({},r,o)}};return d.forEach((function(e){var t=-1!==["left","top"].indexOf(e)?"primary":"secondary";u=S({},u,l[t](e))})),e.offsets.popper=u,e}function ke(e){var t=e.placement,r=t.split("-")[0],o=t.split("-")[1];if(o){var n=e.offsets,c=n.reference,i=n.popper,a=-1!==["bottom","top"].indexOf(r),s=a?"left":"top",d=a?"width":"height",u={start:M({},s,c[s]),end:M({},s,c[s]+c[d]-i[d])};e.offsets.popper=S({},i,u[o])}return e}function Oe(e){if(!de(e.instance.modifiers,"hide","preventOverflow"))return e;var t=e.offsets.reference,r=V(e.instance.modifiers,(function(e){return"preventOverflow"===e.name})).boundaries;if(t.bottom<r.top||t.left>r.right||t.top>r.bottom||t.right<r.left){if(!0===e.hide)return e;e.hide=!0,e.attributes["x-out-of-boundaries"]=""}else{if(!1===e.hide)return e;e.hide=!1,e.attributes["x-out-of-boundaries"]=!1}return e}function je(e){var t=e.placement,r=t.split("-")[0],o=e.offsets,n=o.popper,c=o.reference,i=-1!==["left","right"].indexOf(r),a=-1===["top","left"].indexOf(r);return n[i?"left":"top"]=c[r]-(a?n[i?"width":"height"]:0),e.placement=z(t),e.offsets.popper=E(n),e}var De={shift:{order:100,enabled:!0,fn:ke},offset:{order:200,enabled:!0,fn:xe,offset:0},preventOverflow:{order:300,enabled:!0,fn:we,priority:["left","right","top","bottom"],padding:5,boundariesElement:"scrollParent"},keepTogether:{order:400,enabled:!0,fn:ge},arrow:{order:500,enabled:!0,fn:ue,element:"[x-arrow]"},flip:{order:600,enabled:!0,fn:pe,behavior:"flip",padding:5,boundariesElement:"viewport",flipVariations:!1,flipVariationsByContent:!1},inner:{order:700,enabled:!1,fn:je},hide:{order:800,enabled:!0,fn:Oe},computeStyle:{order:850,enabled:!0,fn:se,gpuAcceleration:!0,x:"bottom",y:"right"},applyStyle:{order:900,enabled:!0,fn:ne,onLoad:ce,gpuAcceleration:void 0}},Pe={placement:"bottom",positionFixed:!1,eventsEnabled:!0,removeOnDestroy:!1,onCreate:function(){},onUpdate:function(){},modifiers:De},Me=function(){function e(t,r){var o=this,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};D(this,e),this.scheduleUpdate=function(){return requestAnimationFrame(o.update)},this.update=a(this.update.bind(this)),this.options=S({},e.Defaults,n),this.state={isDestroyed:!1,isCreated:!1,scrollParents:[]},this.reference=t&&t.jquery?t[0]:t,this.popper=r&&r.jquery?r[0]:r,this.options.modifiers={},Object.keys(S({},e.Defaults.modifiers,n.modifiers)).forEach((function(t){o.options.modifiers[t]=S({},e.Defaults.modifiers[t]||{},n.modifiers?n.modifiers[t]:{})})),this.modifiers=Object.keys(this.options.modifiers).map((function(e){return S({name:e},o.options.modifiers[e])})).sort((function(e,t){return e.order-t.order})),this.modifiers.forEach((function(e){e.enabled&&s(e.onLoad)&&e.onLoad(o.reference,o.popper,o.options,e,o.state)})),this.update();var c=this.options.eventsEnabled;c&&this.enableEventListeners(),this.state.eventsEnabled=c}return P(e,[{key:"update",value:function(){return B.call(this)}},{key:"destroy",value:function(){return q.call(this)}},{key:"enableEventListeners",value:function(){return J.call(this)}},{key:"disableEventListeners",value:function(){return ee.call(this)}}]),e}();Me.Utils=("undefined"!==typeof window?window:e).PopperUtils,Me.placements=fe,Me.Defaults=Pe,t["a"]=Me}).call(this,r("c8ba"))},f15d:function(e,t,r){"use strict";r("ac6a");var o=r("9404");const n={ar:{dow:7,L:"D/‏M/‏YYYY"},bg:{dow:2,L:"D.MM.YYYY"},ca:{dow:2,L:"DD/MM/YYYY"},"zh-CN":{dow:2,L:"YYYY/MM/DD"},"zh-TW":{dow:1,L:"YYYY/MM/DD"},hr:{dow:2,L:"DD.MM.YYYY"},cs:{dow:2,L:"DD.MM.YYYY"},da:{dow:2,L:"DD.MM.YYYY"},nl:{dow:2,L:"DD-MM-YYYY"},"en-US":{dow:1,L:"MM/DD/YYYY"},"en-AU":{dow:2,L:"DD/MM/YYYY"},"en-CA":{dow:1,L:"YYYY-MM-DD"},"en-GB":{dow:2,L:"DD/MM/YYYY"},"en-IE":{dow:2,L:"DD-MM-YYYY"},"en-NZ":{dow:2,L:"DD/MM/YYYY"},"en-ZA":{dow:1,L:"YYYY/MM/DD"},eo:{dow:2,L:"YYYY-MM-DD"},et:{dow:2,L:"DD.MM.YYYY"},fi:{dow:2,L:"DD.MM.YYYY"},fr:{dow:2,L:"DD/MM/YYYY"},"fr-CA":{dow:1,L:"YYYY-MM-DD"},"fr-CH":{dow:2,L:"DD.MM.YYYY"},de:{dow:2,L:"DD.MM.YYYY"},he:{dow:1,L:"DD.MM.YYYY"},id:{dow:2,L:"DD/MM/YYYY"},it:{dow:2,L:"DD/MM/YYYY"},ja:{dow:1,L:"YYYY年M月D日"},ko:{dow:1,L:"YYYY.MM.DD"},lv:{dow:2,L:"DD.MM.YYYY"},lt:{dow:2,L:"DD.MM.YYYY"},mk:{dow:2,L:"D.MM.YYYY"},nb:{dow:2,L:"D. MMMM YYYY"},nn:{dow:2,L:"D. MMMM YYYY"},pl:{dow:2,L:"DD.MM.YYYY"},pt:{dow:2,L:"DD/MM/YYYY"},ro:{dow:2,L:"DD.MM.YYYY"},ru:{dow:2,L:"DD.MM.YYYY"},sk:{dow:2,L:"DD.MM.YYYY"},"es-ES":{dow:2,L:"DD/MM/YYYY"},"es-MX":{dow:2,L:"DD/MM/YYYY"},sv:{dow:2,L:"YYYY-MM-DD"},th:{dow:1,L:"DD/MM/YYYY"},tr:{dow:2,L:"DD.MM.YYYY"},uk:{dow:2,L:"DD.MM.YYYY"},vi:{dow:2,L:"DD/MM/YYYY"}};n.en=n["en-US"],n.es=n["es-ES"],n.no=n.nb,n.zh=n["zh-CN"],Object(o["u"])(n).forEach((function([e,{dow:t,L:r}]){n[e]={id:e,firstDayOfWeek:t,masks:{L:r}}})),t["a"]=n},f3c1:function(e,t){var r=800,o=16,n=Date.now;function c(e){var t=0,c=0;return function(){var i=n(),a=o-(i-c);if(c=i,a>0){if(++t>=r)return arguments[0]}else t=0;return e.apply(void 0,arguments)}}e.exports=c},f498:function(e,t,r){t=e.exports=r("2350")(!1),t.push([e.i,".vc-reset,.vc-reset *{line-height:1.5;box-sizing:border-box}.vc-reset:focus,.vc-reset :focus{outline:none}.vc-reset [role=button],.vc-reset button{cursor:pointer}.vc-border,.vc-border-2,.vc-border-3{border-style:solid}.vc-appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.vc-bg-fixed{background-attachment:fixed}.vc-bg-local{background-attachment:local}.vc-bg-scroll{background-attachment:scroll}.vc-bg-transparent{background-color:initial}.vc-bg-black{background-color:#000}.vc-bg-white{background-color:#fff}.vc-bg-gray-100{background-color:#f7fafc}.vc-bg-gray-200{background-color:#edf2f7}.vc-bg-gray-300{background-color:#e2e8f0}.vc-bg-gray-400{background-color:#cbd5e0}.vc-bg-gray-500{background-color:#a0aec0}.vc-bg-gray-600{background-color:#718096}.vc-bg-gray-700{background-color:#4a5568}.vc-bg-gray-800{background-color:#2d3748}.vc-bg-gray-900{background-color:#1a202c}.vc-bg-red-100{background-color:#fff5f5}.vc-bg-red-200{background-color:#fed7d7}.vc-bg-red-300{background-color:#feb2b2}.vc-bg-red-400{background-color:#fc8181}.vc-bg-red-500{background-color:#f56565}.vc-bg-red-600{background-color:#e53e3e}.vc-bg-red-700{background-color:#c53030}.vc-bg-red-800{background-color:#9b2c2c}.vc-bg-red-900{background-color:#742a2a}.vc-bg-orange-100{background-color:#fffaf0}.vc-bg-orange-200{background-color:#feebc8}.vc-bg-orange-300{background-color:#fbd38d}.vc-bg-orange-400{background-color:#f6ad55}.vc-bg-orange-500{background-color:#ed8936}.vc-bg-orange-600{background-color:#dd6b20}.vc-bg-orange-700{background-color:#c05621}.vc-bg-orange-800{background-color:#9c4221}.vc-bg-orange-900{background-color:#7b341e}.vc-bg-yellow-100{background-color:ivory}.vc-bg-yellow-200{background-color:#fefcbf}.vc-bg-yellow-300{background-color:#faf089}.vc-bg-yellow-400{background-color:#f6e05e}.vc-bg-yellow-500{background-color:#ecc94b}.vc-bg-yellow-600{background-color:#d69e2e}.vc-bg-yellow-700{background-color:#b7791f}.vc-bg-yellow-800{background-color:#975a16}.vc-bg-yellow-900{background-color:#744210}.vc-bg-green-100{background-color:#f0fff4}.vc-bg-green-200{background-color:#c6f6d5}.vc-bg-green-300{background-color:#9ae6b4}.vc-bg-green-400{background-color:#68d391}.vc-bg-green-500{background-color:#48bb78}.vc-bg-green-600{background-color:#38a169}.vc-bg-green-700{background-color:#2f855a}.vc-bg-green-800{background-color:#276749}.vc-bg-green-900{background-color:#22543d}.vc-bg-teal-100{background-color:#e6fffa}.vc-bg-teal-200{background-color:#b2f5ea}.vc-bg-teal-300{background-color:#81e6d9}.vc-bg-teal-400{background-color:#4fd1c5}.vc-bg-teal-500{background-color:#38b2ac}.vc-bg-teal-600{background-color:#319795}.vc-bg-teal-700{background-color:#2c7a7b}.vc-bg-teal-800{background-color:#285e61}.vc-bg-teal-900{background-color:#234e52}.vc-bg-blue-100{background-color:#ebf8ff}.vc-bg-blue-200{background-color:#bee3f8}.vc-bg-blue-300{background-color:#90cdf4}.vc-bg-blue-400{background-color:#63b3ed}.vc-bg-blue-500{background-color:#4299e1}.vc-bg-blue-600{background-color:#3182ce}.vc-bg-blue-700{background-color:#2b6cb0}.vc-bg-blue-800{background-color:#2c5282}.vc-bg-blue-900{background-color:#2a4365}.vc-bg-indigo-100{background-color:#ebf4ff}.vc-bg-indigo-200{background-color:#c3dafe}.vc-bg-indigo-300{background-color:#a3bffa}.vc-bg-indigo-400{background-color:#7f9cf5}.vc-bg-indigo-500{background-color:#667eea}.vc-bg-indigo-600{background-color:#5a67d8}.vc-bg-indigo-700{background-color:#4c51bf}.vc-bg-indigo-800{background-color:#434190}.vc-bg-indigo-900{background-color:#3c366b}.vc-bg-purple-100{background-color:#faf5ff}.vc-bg-purple-200{background-color:#e9d8fd}.vc-bg-purple-300{background-color:#d6bcfa}.vc-bg-purple-400{background-color:#b794f4}.vc-bg-purple-500{background-color:#9f7aea}.vc-bg-purple-600{background-color:#805ad5}.vc-bg-purple-700{background-color:#6b46c1}.vc-bg-purple-800{background-color:#553c9a}.vc-bg-purple-900{background-color:#44337a}.vc-bg-pink-100{background-color:#fff5f7}.vc-bg-pink-200{background-color:#fed7e2}.vc-bg-pink-300{background-color:#fbb6ce}.vc-bg-pink-400{background-color:#f687b3}.vc-bg-pink-500{background-color:#ed64a6}.vc-bg-pink-600{background-color:#d53f8c}.vc-bg-pink-700{background-color:#b83280}.vc-bg-pink-800{background-color:#97266d}.vc-bg-pink-900{background-color:#702459}.hover\\:vc-bg-transparent:hover{background-color:initial}.hover\\:vc-bg-black:hover{background-color:#000}.hover\\:vc-bg-white:hover{background-color:#fff}.hover\\:vc-bg-gray-100:hover{background-color:#f7fafc}.hover\\:vc-bg-gray-200:hover{background-color:#edf2f7}.hover\\:vc-bg-gray-300:hover{background-color:#e2e8f0}.hover\\:vc-bg-gray-400:hover{background-color:#cbd5e0}.hover\\:vc-bg-gray-500:hover{background-color:#a0aec0}.hover\\:vc-bg-gray-600:hover{background-color:#718096}.hover\\:vc-bg-gray-700:hover{background-color:#4a5568}.hover\\:vc-bg-gray-800:hover{background-color:#2d3748}.hover\\:vc-bg-gray-900:hover{background-color:#1a202c}.hover\\:vc-bg-red-100:hover{background-color:#fff5f5}.hover\\:vc-bg-red-200:hover{background-color:#fed7d7}.hover\\:vc-bg-red-300:hover{background-color:#feb2b2}.hover\\:vc-bg-red-400:hover{background-color:#fc8181}.hover\\:vc-bg-red-500:hover{background-color:#f56565}.hover\\:vc-bg-red-600:hover{background-color:#e53e3e}.hover\\:vc-bg-red-700:hover{background-color:#c53030}.hover\\:vc-bg-red-800:hover{background-color:#9b2c2c}.hover\\:vc-bg-red-900:hover{background-color:#742a2a}.hover\\:vc-bg-orange-100:hover{background-color:#fffaf0}.hover\\:vc-bg-orange-200:hover{background-color:#feebc8}.hover\\:vc-bg-orange-300:hover{background-color:#fbd38d}.hover\\:vc-bg-orange-400:hover{background-color:#f6ad55}.hover\\:vc-bg-orange-500:hover{background-color:#ed8936}.hover\\:vc-bg-orange-600:hover{background-color:#dd6b20}.hover\\:vc-bg-orange-700:hover{background-color:#c05621}.hover\\:vc-bg-orange-800:hover{background-color:#9c4221}.hover\\:vc-bg-orange-900:hover{background-color:#7b341e}.hover\\:vc-bg-yellow-100:hover{background-color:ivory}.hover\\:vc-bg-yellow-200:hover{background-color:#fefcbf}.hover\\:vc-bg-yellow-300:hover{background-color:#faf089}.hover\\:vc-bg-yellow-400:hover{background-color:#f6e05e}.hover\\:vc-bg-yellow-500:hover{background-color:#ecc94b}.hover\\:vc-bg-yellow-600:hover{background-color:#d69e2e}.hover\\:vc-bg-yellow-700:hover{background-color:#b7791f}.hover\\:vc-bg-yellow-800:hover{background-color:#975a16}.hover\\:vc-bg-yellow-900:hover{background-color:#744210}.hover\\:vc-bg-green-100:hover{background-color:#f0fff4}.hover\\:vc-bg-green-200:hover{background-color:#c6f6d5}.hover\\:vc-bg-green-300:hover{background-color:#9ae6b4}.hover\\:vc-bg-green-400:hover{background-color:#68d391}.hover\\:vc-bg-green-500:hover{background-color:#48bb78}.hover\\:vc-bg-green-600:hover{background-color:#38a169}.hover\\:vc-bg-green-700:hover{background-color:#2f855a}.hover\\:vc-bg-green-800:hover{background-color:#276749}.hover\\:vc-bg-green-900:hover{background-color:#22543d}.hover\\:vc-bg-teal-100:hover{background-color:#e6fffa}.hover\\:vc-bg-teal-200:hover{background-color:#b2f5ea}.hover\\:vc-bg-teal-300:hover{background-color:#81e6d9}.hover\\:vc-bg-teal-400:hover{background-color:#4fd1c5}.hover\\:vc-bg-teal-500:hover{background-color:#38b2ac}.hover\\:vc-bg-teal-600:hover{background-color:#319795}.hover\\:vc-bg-teal-700:hover{background-color:#2c7a7b}.hover\\:vc-bg-teal-800:hover{background-color:#285e61}.hover\\:vc-bg-teal-900:hover{background-color:#234e52}.hover\\:vc-bg-blue-100:hover{background-color:#ebf8ff}.hover\\:vc-bg-blue-200:hover{background-color:#bee3f8}.hover\\:vc-bg-blue-300:hover{background-color:#90cdf4}.hover\\:vc-bg-blue-400:hover{background-color:#63b3ed}.hover\\:vc-bg-blue-500:hover{background-color:#4299e1}.hover\\:vc-bg-blue-600:hover{background-color:#3182ce}.hover\\:vc-bg-blue-700:hover{background-color:#2b6cb0}.hover\\:vc-bg-blue-800:hover{background-color:#2c5282}.hover\\:vc-bg-blue-900:hover{background-color:#2a4365}.hover\\:vc-bg-indigo-100:hover{background-color:#ebf4ff}.hover\\:vc-bg-indigo-200:hover{background-color:#c3dafe}.hover\\:vc-bg-indigo-300:hover{background-color:#a3bffa}.hover\\:vc-bg-indigo-400:hover{background-color:#7f9cf5}.hover\\:vc-bg-indigo-500:hover{background-color:#667eea}.hover\\:vc-bg-indigo-600:hover{background-color:#5a67d8}.hover\\:vc-bg-indigo-700:hover{background-color:#4c51bf}.hover\\:vc-bg-indigo-800:hover{background-color:#434190}.hover\\:vc-bg-indigo-900:hover{background-color:#3c366b}.hover\\:vc-bg-purple-100:hover{background-color:#faf5ff}.hover\\:vc-bg-purple-200:hover{background-color:#e9d8fd}.hover\\:vc-bg-purple-300:hover{background-color:#d6bcfa}.hover\\:vc-bg-purple-400:hover{background-color:#b794f4}.hover\\:vc-bg-purple-500:hover{background-color:#9f7aea}.hover\\:vc-bg-purple-600:hover{background-color:#805ad5}.hover\\:vc-bg-purple-700:hover{background-color:#6b46c1}.hover\\:vc-bg-purple-800:hover{background-color:#553c9a}.hover\\:vc-bg-purple-900:hover{background-color:#44337a}.hover\\:vc-bg-pink-100:hover{background-color:#fff5f7}.hover\\:vc-bg-pink-200:hover{background-color:#fed7e2}.hover\\:vc-bg-pink-300:hover{background-color:#fbb6ce}.hover\\:vc-bg-pink-400:hover{background-color:#f687b3}.hover\\:vc-bg-pink-500:hover{background-color:#ed64a6}.hover\\:vc-bg-pink-600:hover{background-color:#d53f8c}.hover\\:vc-bg-pink-700:hover{background-color:#b83280}.hover\\:vc-bg-pink-800:hover{background-color:#97266d}.hover\\:vc-bg-pink-900:hover{background-color:#702459}.vc-bg-bottom{background-position:bottom}.vc-bg-center{background-position:50%}.vc-bg-left{background-position:0}.vc-bg-left-bottom{background-position:0 100%}.vc-bg-left-top{background-position:0 0}.vc-bg-right{background-position:100%}.vc-bg-right-bottom{background-position:100% 100%}.vc-bg-right-top{background-position:100% 0}.vc-bg-top{background-position:top}.vc-bg-repeat{background-repeat:repeat}.vc-bg-no-repeat{background-repeat:no-repeat}.vc-bg-repeat-x{background-repeat:repeat-x}.vc-bg-repeat-y{background-repeat:repeat-y}.vc-bg-repeat-round{background-repeat:round}.vc-bg-repeat-space{background-repeat:space}.vc-bg-auto{background-size:auto}.vc-bg-cover{background-size:cover}.vc-bg-contain{background-size:contain}.vc-border-collapse{border-collapse:collapse}.vc-border-separate{border-collapse:initial}.vc-border-transparent{border-color:transparent}.vc-border-black{border-color:#000}.vc-border-white{border-color:#fff}.vc-border-gray-100{border-color:#f7fafc}.vc-border-gray-200{border-color:#edf2f7}.vc-border-gray-300{border-color:#e2e8f0}.vc-border-gray-400{border-color:#cbd5e0}.vc-border-gray-500{border-color:#a0aec0}.vc-border-gray-600{border-color:#718096}.vc-border-gray-700{border-color:#4a5568}.vc-border-gray-800{border-color:#2d3748}.vc-border-gray-900{border-color:#1a202c}.vc-border-red-100{border-color:#fff5f5}.vc-border-red-200{border-color:#fed7d7}.vc-border-red-300{border-color:#feb2b2}.vc-border-red-400{border-color:#fc8181}.vc-border-red-500{border-color:#f56565}.vc-border-red-600{border-color:#e53e3e}.vc-border-red-700{border-color:#c53030}.vc-border-red-800{border-color:#9b2c2c}.vc-border-red-900{border-color:#742a2a}.vc-border-orange-100{border-color:#fffaf0}.vc-border-orange-200{border-color:#feebc8}.vc-border-orange-300{border-color:#fbd38d}.vc-border-orange-400{border-color:#f6ad55}.vc-border-orange-500{border-color:#ed8936}.vc-border-orange-600{border-color:#dd6b20}.vc-border-orange-700{border-color:#c05621}.vc-border-orange-800{border-color:#9c4221}.vc-border-orange-900{border-color:#7b341e}.vc-border-yellow-100{border-color:ivory}.vc-border-yellow-200{border-color:#fefcbf}.vc-border-yellow-300{border-color:#faf089}.vc-border-yellow-400{border-color:#f6e05e}.vc-border-yellow-500{border-color:#ecc94b}.vc-border-yellow-600{border-color:#d69e2e}.vc-border-yellow-700{border-color:#b7791f}.vc-border-yellow-800{border-color:#975a16}.vc-border-yellow-900{border-color:#744210}.vc-border-green-100{border-color:#f0fff4}.vc-border-green-200{border-color:#c6f6d5}.vc-border-green-300{border-color:#9ae6b4}.vc-border-green-400{border-color:#68d391}.vc-border-green-500{border-color:#48bb78}.vc-border-green-600{border-color:#38a169}.vc-border-green-700{border-color:#2f855a}.vc-border-green-800{border-color:#276749}.vc-border-green-900{border-color:#22543d}.vc-border-teal-100{border-color:#e6fffa}.vc-border-teal-200{border-color:#b2f5ea}.vc-border-teal-300{border-color:#81e6d9}.vc-border-teal-400{border-color:#4fd1c5}.vc-border-teal-500{border-color:#38b2ac}.vc-border-teal-600{border-color:#319795}.vc-border-teal-700{border-color:#2c7a7b}.vc-border-teal-800{border-color:#285e61}.vc-border-teal-900{border-color:#234e52}.vc-border-blue-100{border-color:#ebf8ff}.vc-border-blue-200{border-color:#bee3f8}.vc-border-blue-300{border-color:#90cdf4}.vc-border-blue-400{border-color:#63b3ed}.vc-border-blue-500{border-color:#4299e1}.vc-border-blue-600{border-color:#3182ce}.vc-border-blue-700{border-color:#2b6cb0}.vc-border-blue-800{border-color:#2c5282}.vc-border-blue-900{border-color:#2a4365}.vc-border-indigo-100{border-color:#ebf4ff}.vc-border-indigo-200{border-color:#c3dafe}.vc-border-indigo-300{border-color:#a3bffa}.vc-border-indigo-400{border-color:#7f9cf5}.vc-border-indigo-500{border-color:#667eea}.vc-border-indigo-600{border-color:#5a67d8}.vc-border-indigo-700{border-color:#4c51bf}.vc-border-indigo-800{border-color:#434190}.vc-border-indigo-900{border-color:#3c366b}.vc-border-purple-100{border-color:#faf5ff}.vc-border-purple-200{border-color:#e9d8fd}.vc-border-purple-300{border-color:#d6bcfa}.vc-border-purple-400{border-color:#b794f4}.vc-border-purple-500{border-color:#9f7aea}.vc-border-purple-600{border-color:#805ad5}.vc-border-purple-700{border-color:#6b46c1}.vc-border-purple-800{border-color:#553c9a}.vc-border-purple-900{border-color:#44337a}.vc-border-pink-100{border-color:#fff5f7}.vc-border-pink-200{border-color:#fed7e2}.vc-border-pink-300{border-color:#fbb6ce}.vc-border-pink-400{border-color:#f687b3}.vc-border-pink-500{border-color:#ed64a6}.vc-border-pink-600{border-color:#d53f8c}.vc-border-pink-700{border-color:#b83280}.vc-border-pink-800{border-color:#97266d}.vc-border-pink-900{border-color:#702459}.hover\\:vc-border-transparent:hover{border-color:transparent}.hover\\:vc-border-black:hover{border-color:#000}.hover\\:vc-border-white:hover{border-color:#fff}.hover\\:vc-border-gray-100:hover{border-color:#f7fafc}.hover\\:vc-border-gray-200:hover{border-color:#edf2f7}.hover\\:vc-border-gray-300:hover{border-color:#e2e8f0}.hover\\:vc-border-gray-400:hover{border-color:#cbd5e0}.hover\\:vc-border-gray-500:hover{border-color:#a0aec0}.hover\\:vc-border-gray-600:hover{border-color:#718096}.hover\\:vc-border-gray-700:hover{border-color:#4a5568}.hover\\:vc-border-gray-800:hover{border-color:#2d3748}.hover\\:vc-border-gray-900:hover{border-color:#1a202c}.hover\\:vc-border-red-100:hover{border-color:#fff5f5}.hover\\:vc-border-red-200:hover{border-color:#fed7d7}.hover\\:vc-border-red-300:hover{border-color:#feb2b2}.hover\\:vc-border-red-400:hover{border-color:#fc8181}.hover\\:vc-border-red-500:hover{border-color:#f56565}.hover\\:vc-border-red-600:hover{border-color:#e53e3e}.hover\\:vc-border-red-700:hover{border-color:#c53030}.hover\\:vc-border-red-800:hover{border-color:#9b2c2c}.hover\\:vc-border-red-900:hover{border-color:#742a2a}.hover\\:vc-border-orange-100:hover{border-color:#fffaf0}.hover\\:vc-border-orange-200:hover{border-color:#feebc8}.hover\\:vc-border-orange-300:hover{border-color:#fbd38d}.hover\\:vc-border-orange-400:hover{border-color:#f6ad55}.hover\\:vc-border-orange-500:hover{border-color:#ed8936}.hover\\:vc-border-orange-600:hover{border-color:#dd6b20}.hover\\:vc-border-orange-700:hover{border-color:#c05621}.hover\\:vc-border-orange-800:hover{border-color:#9c4221}.hover\\:vc-border-orange-900:hover{border-color:#7b341e}.hover\\:vc-border-yellow-100:hover{border-color:ivory}.hover\\:vc-border-yellow-200:hover{border-color:#fefcbf}.hover\\:vc-border-yellow-300:hover{border-color:#faf089}.hover\\:vc-border-yellow-400:hover{border-color:#f6e05e}.hover\\:vc-border-yellow-500:hover{border-color:#ecc94b}.hover\\:vc-border-yellow-600:hover{border-color:#d69e2e}.hover\\:vc-border-yellow-700:hover{border-color:#b7791f}.hover\\:vc-border-yellow-800:hover{border-color:#975a16}.hover\\:vc-border-yellow-900:hover{border-color:#744210}.hover\\:vc-border-green-100:hover{border-color:#f0fff4}.hover\\:vc-border-green-200:hover{border-color:#c6f6d5}.hover\\:vc-border-green-300:hover{border-color:#9ae6b4}.hover\\:vc-border-green-400:hover{border-color:#68d391}.hover\\:vc-border-green-500:hover{border-color:#48bb78}.hover\\:vc-border-green-600:hover{border-color:#38a169}.hover\\:vc-border-green-700:hover{border-color:#2f855a}.hover\\:vc-border-green-800:hover{border-color:#276749}.hover\\:vc-border-green-900:hover{border-color:#22543d}.hover\\:vc-border-teal-100:hover{border-color:#e6fffa}.hover\\:vc-border-teal-200:hover{border-color:#b2f5ea}.hover\\:vc-border-teal-300:hover{border-color:#81e6d9}.hover\\:vc-border-teal-400:hover{border-color:#4fd1c5}.hover\\:vc-border-teal-500:hover{border-color:#38b2ac}.hover\\:vc-border-teal-600:hover{border-color:#319795}.hover\\:vc-border-teal-700:hover{border-color:#2c7a7b}.hover\\:vc-border-teal-800:hover{border-color:#285e61}.hover\\:vc-border-teal-900:hover{border-color:#234e52}.hover\\:vc-border-blue-100:hover{border-color:#ebf8ff}.hover\\:vc-border-blue-200:hover{border-color:#bee3f8}.hover\\:vc-border-blue-300:hover{border-color:#90cdf4}.hover\\:vc-border-blue-400:hover{border-color:#63b3ed}.hover\\:vc-border-blue-500:hover{border-color:#4299e1}.hover\\:vc-border-blue-600:hover{border-color:#3182ce}.hover\\:vc-border-blue-700:hover{border-color:#2b6cb0}.hover\\:vc-border-blue-800:hover{border-color:#2c5282}.hover\\:vc-border-blue-900:hover{border-color:#2a4365}.hover\\:vc-border-indigo-100:hover{border-color:#ebf4ff}.hover\\:vc-border-indigo-200:hover{border-color:#c3dafe}.hover\\:vc-border-indigo-300:hover{border-color:#a3bffa}.hover\\:vc-border-indigo-400:hover{border-color:#7f9cf5}.hover\\:vc-border-indigo-500:hover{border-color:#667eea}.hover\\:vc-border-indigo-600:hover{border-color:#5a67d8}.hover\\:vc-border-indigo-700:hover{border-color:#4c51bf}.hover\\:vc-border-indigo-800:hover{border-color:#434190}.hover\\:vc-border-indigo-900:hover{border-color:#3c366b}.hover\\:vc-border-purple-100:hover{border-color:#faf5ff}.hover\\:vc-border-purple-200:hover{border-color:#e9d8fd}.hover\\:vc-border-purple-300:hover{border-color:#d6bcfa}.hover\\:vc-border-purple-400:hover{border-color:#b794f4}.hover\\:vc-border-purple-500:hover{border-color:#9f7aea}.hover\\:vc-border-purple-600:hover{border-color:#805ad5}.hover\\:vc-border-purple-700:hover{border-color:#6b46c1}.hover\\:vc-border-purple-800:hover{border-color:#553c9a}.hover\\:vc-border-purple-900:hover{border-color:#44337a}.hover\\:vc-border-pink-100:hover{border-color:#fff5f7}.hover\\:vc-border-pink-200:hover{border-color:#fed7e2}.hover\\:vc-border-pink-300:hover{border-color:#fbb6ce}.hover\\:vc-border-pink-400:hover{border-color:#f687b3}.hover\\:vc-border-pink-500:hover{border-color:#ed64a6}.hover\\:vc-border-pink-600:hover{border-color:#d53f8c}.hover\\:vc-border-pink-700:hover{border-color:#b83280}.hover\\:vc-border-pink-800:hover{border-color:#97266d}.hover\\:vc-border-pink-900:hover{border-color:#702459}.focus\\:vc-border-transparent:focus{border-color:transparent}.focus\\:vc-border-black:focus{border-color:#000}.focus\\:vc-border-white:focus{border-color:#fff}.focus\\:vc-border-gray-100:focus{border-color:#f7fafc}.focus\\:vc-border-gray-200:focus{border-color:#edf2f7}.focus\\:vc-border-gray-300:focus{border-color:#e2e8f0}.focus\\:vc-border-gray-400:focus{border-color:#cbd5e0}.focus\\:vc-border-gray-500:focus{border-color:#a0aec0}.focus\\:vc-border-gray-600:focus{border-color:#718096}.focus\\:vc-border-gray-700:focus{border-color:#4a5568}.focus\\:vc-border-gray-800:focus{border-color:#2d3748}.focus\\:vc-border-gray-900:focus{border-color:#1a202c}.focus\\:vc-border-red-100:focus{border-color:#fff5f5}.focus\\:vc-border-red-200:focus{border-color:#fed7d7}.focus\\:vc-border-red-300:focus{border-color:#feb2b2}.focus\\:vc-border-red-400:focus{border-color:#fc8181}.focus\\:vc-border-red-500:focus{border-color:#f56565}.focus\\:vc-border-red-600:focus{border-color:#e53e3e}.focus\\:vc-border-red-700:focus{border-color:#c53030}.focus\\:vc-border-red-800:focus{border-color:#9b2c2c}.focus\\:vc-border-red-900:focus{border-color:#742a2a}.focus\\:vc-border-orange-100:focus{border-color:#fffaf0}.focus\\:vc-border-orange-200:focus{border-color:#feebc8}.focus\\:vc-border-orange-300:focus{border-color:#fbd38d}.focus\\:vc-border-orange-400:focus{border-color:#f6ad55}.focus\\:vc-border-orange-500:focus{border-color:#ed8936}.focus\\:vc-border-orange-600:focus{border-color:#dd6b20}.focus\\:vc-border-orange-700:focus{border-color:#c05621}.focus\\:vc-border-orange-800:focus{border-color:#9c4221}.focus\\:vc-border-orange-900:focus{border-color:#7b341e}.focus\\:vc-border-yellow-100:focus{border-color:ivory}.focus\\:vc-border-yellow-200:focus{border-color:#fefcbf}.focus\\:vc-border-yellow-300:focus{border-color:#faf089}.focus\\:vc-border-yellow-400:focus{border-color:#f6e05e}.focus\\:vc-border-yellow-500:focus{border-color:#ecc94b}.focus\\:vc-border-yellow-600:focus{border-color:#d69e2e}.focus\\:vc-border-yellow-700:focus{border-color:#b7791f}.focus\\:vc-border-yellow-800:focus{border-color:#975a16}.focus\\:vc-border-yellow-900:focus{border-color:#744210}.focus\\:vc-border-green-100:focus{border-color:#f0fff4}.focus\\:vc-border-green-200:focus{border-color:#c6f6d5}.focus\\:vc-border-green-300:focus{border-color:#9ae6b4}.focus\\:vc-border-green-400:focus{border-color:#68d391}.focus\\:vc-border-green-500:focus{border-color:#48bb78}.focus\\:vc-border-green-600:focus{border-color:#38a169}.focus\\:vc-border-green-700:focus{border-color:#2f855a}.focus\\:vc-border-green-800:focus{border-color:#276749}.focus\\:vc-border-green-900:focus{border-color:#22543d}.focus\\:vc-border-teal-100:focus{border-color:#e6fffa}.focus\\:vc-border-teal-200:focus{border-color:#b2f5ea}.focus\\:vc-border-teal-300:focus{border-color:#81e6d9}.focus\\:vc-border-teal-400:focus{border-color:#4fd1c5}.focus\\:vc-border-teal-500:focus{border-color:#38b2ac}.focus\\:vc-border-teal-600:focus{border-color:#319795}.focus\\:vc-border-teal-700:focus{border-color:#2c7a7b}.focus\\:vc-border-teal-800:focus{border-color:#285e61}.focus\\:vc-border-teal-900:focus{border-color:#234e52}.focus\\:vc-border-blue-100:focus{border-color:#ebf8ff}.focus\\:vc-border-blue-200:focus{border-color:#bee3f8}.focus\\:vc-border-blue-300:focus{border-color:#90cdf4}.focus\\:vc-border-blue-400:focus{border-color:#63b3ed}.focus\\:vc-border-blue-500:focus{border-color:#4299e1}.focus\\:vc-border-blue-600:focus{border-color:#3182ce}.focus\\:vc-border-blue-700:focus{border-color:#2b6cb0}.focus\\:vc-border-blue-800:focus{border-color:#2c5282}.focus\\:vc-border-blue-900:focus{border-color:#2a4365}.focus\\:vc-border-indigo-100:focus{border-color:#ebf4ff}.focus\\:vc-border-indigo-200:focus{border-color:#c3dafe}.focus\\:vc-border-indigo-300:focus{border-color:#a3bffa}.focus\\:vc-border-indigo-400:focus{border-color:#7f9cf5}.focus\\:vc-border-indigo-500:focus{border-color:#667eea}.focus\\:vc-border-indigo-600:focus{border-color:#5a67d8}.focus\\:vc-border-indigo-700:focus{border-color:#4c51bf}.focus\\:vc-border-indigo-800:focus{border-color:#434190}.focus\\:vc-border-indigo-900:focus{border-color:#3c366b}.focus\\:vc-border-purple-100:focus{border-color:#faf5ff}.focus\\:vc-border-purple-200:focus{border-color:#e9d8fd}.focus\\:vc-border-purple-300:focus{border-color:#d6bcfa}.focus\\:vc-border-purple-400:focus{border-color:#b794f4}.focus\\:vc-border-purple-500:focus{border-color:#9f7aea}.focus\\:vc-border-purple-600:focus{border-color:#805ad5}.focus\\:vc-border-purple-700:focus{border-color:#6b46c1}.focus\\:vc-border-purple-800:focus{border-color:#553c9a}.focus\\:vc-border-purple-900:focus{border-color:#44337a}.focus\\:vc-border-pink-100:focus{border-color:#fff5f7}.focus\\:vc-border-pink-200:focus{border-color:#fed7e2}.focus\\:vc-border-pink-300:focus{border-color:#fbb6ce}.focus\\:vc-border-pink-400:focus{border-color:#f687b3}.focus\\:vc-border-pink-500:focus{border-color:#ed64a6}.focus\\:vc-border-pink-600:focus{border-color:#d53f8c}.focus\\:vc-border-pink-700:focus{border-color:#b83280}.focus\\:vc-border-pink-800:focus{border-color:#97266d}.focus\\:vc-border-pink-900:focus{border-color:#702459}.vc-rounded-none{border-radius:0}.vc-rounded-sm{border-radius:18px}.vc-rounded{border-radius:4px}.vc-rounded-lg{border-radius:8px}.vc-rounded-full{border-radius:9999px}.vc-rounded-t-none{border-top-left-radius:0;border-top-right-radius:0}.vc-rounded-r-none{border-top-right-radius:0;border-bottom-right-radius:0}.vc-rounded-b-none{border-bottom-right-radius:0;border-bottom-left-radius:0}.vc-rounded-l-none{border-top-left-radius:0;border-bottom-left-radius:0}.vc-rounded-t-sm{border-top-left-radius:18px;border-top-right-radius:18px}.vc-rounded-r-sm{border-top-right-radius:18px;border-bottom-right-radius:18px}.vc-rounded-b-sm{border-bottom-right-radius:18px;border-bottom-left-radius:18px}.vc-rounded-l-sm{border-top-left-radius:18px;border-bottom-left-radius:18px}.vc-rounded-t{border-top-left-radius:4px;border-top-right-radius:4px}.vc-rounded-r{border-top-right-radius:4px}.vc-rounded-b,.vc-rounded-r{border-bottom-right-radius:4px}.vc-rounded-b,.vc-rounded-l{border-bottom-left-radius:4px}.vc-rounded-l{border-top-left-radius:4px}.vc-rounded-t-lg{border-top-left-radius:8px;border-top-right-radius:8px}.vc-rounded-r-lg{border-top-right-radius:8px;border-bottom-right-radius:8px}.vc-rounded-b-lg{border-bottom-right-radius:8px;border-bottom-left-radius:8px}.vc-rounded-l-lg{border-top-left-radius:8px;border-bottom-left-radius:8px}.vc-rounded-t-full{border-top-left-radius:9999px;border-top-right-radius:9999px}.vc-rounded-r-full{border-top-right-radius:9999px;border-bottom-right-radius:9999px}.vc-rounded-b-full{border-bottom-right-radius:9999px;border-bottom-left-radius:9999px}.vc-rounded-l-full{border-top-left-radius:9999px;border-bottom-left-radius:9999px}.vc-rounded-tl-none{border-top-left-radius:0}.vc-rounded-tr-none{border-top-right-radius:0}.vc-rounded-br-none{border-bottom-right-radius:0}.vc-rounded-bl-none{border-bottom-left-radius:0}.vc-rounded-tl-sm{border-top-left-radius:18px}.vc-rounded-tr-sm{border-top-right-radius:18px}.vc-rounded-br-sm{border-bottom-right-radius:18px}.vc-rounded-bl-sm{border-bottom-left-radius:18px}.vc-rounded-tl{border-top-left-radius:4px}.vc-rounded-tr{border-top-right-radius:4px}.vc-rounded-br{border-bottom-right-radius:4px}.vc-rounded-bl{border-bottom-left-radius:4px}.vc-rounded-tl-lg{border-top-left-radius:8px}.vc-rounded-tr-lg{border-top-right-radius:8px}.vc-rounded-br-lg{border-bottom-right-radius:8px}.vc-rounded-bl-lg{border-bottom-left-radius:8px}.vc-rounded-tl-full{border-top-left-radius:9999px}.vc-rounded-tr-full{border-top-right-radius:9999px}.vc-rounded-br-full{border-bottom-right-radius:9999px}.vc-rounded-bl-full{border-bottom-left-radius:9999px}.vc-border-solid{border-style:solid}.vc-border-dashed{border-style:dashed}.vc-border-dotted{border-style:dotted}.vc-border-double{border-style:double}.vc-border-none{border-style:none}.vc-border-0{border-width:0}.vc-border-2{border-width:2px}.vc-border-4{border-width:4px}.vc-border-8{border-width:8px}.vc-border{border-width:1px}.vc-border-t-0{border-top-width:0}.vc-border-r-0{border-right-width:0}.vc-border-b-0{border-bottom-width:0}.vc-border-l-0{border-left-width:0}.vc-border-t-2{border-top-width:2px}.vc-border-r-2{border-right-width:2px}.vc-border-b-2{border-bottom-width:2px}.vc-border-l-2{border-left-width:2px}.vc-border-t-4{border-top-width:4px}.vc-border-r-4{border-right-width:4px}.vc-border-b-4{border-bottom-width:4px}.vc-border-l-4{border-left-width:4px}.vc-border-t-8{border-top-width:8px}.vc-border-r-8{border-right-width:8px}.vc-border-b-8{border-bottom-width:8px}.vc-border-l-8{border-left-width:8px}.vc-border-t{border-top-width:1px}.vc-border-r{border-right-width:1px}.vc-border-b{border-bottom-width:1px}.vc-border-l{border-left-width:1px}.vc-cursor-pointer{cursor:pointer}.vc-cursor-not-allowed{cursor:not-allowed}.vc-flex{display:flex}.vc-items-center{align-items:center}.vc-justify-center{justify-content:center}.vc-font-medium{font-weight:500}.vc-font-semibold{font-weight:600}.focus\\:vc-font-bold:focus,.vc-font-bold{font-weight:700}.vc-h-full{height:100%}.vc-leading-tight{line-height:1.25}.vc-leading-snug{line-height:1.375}.vc-mr-auto{margin-right:auto}.vc-ml-auto{margin-left:auto}.vc-min-w-full{min-width:100%}.vc-opacity-0{opacity:0}.vc-opacity-25{opacity:.25}.vc-opacity-75{opacity:.75}.hover\\:vc-opacity-50:hover{opacity:.5}.hover\\:vc-opacity-75:hover{opacity:.75}.focus\\:vc-outline-none:focus{outline:0}.vc-overflow-hidden{overflow:hidden}.vc-p-1{padding:4px}.vc-py-1{padding-top:4px;padding-bottom:4px}.vc-py-2{padding-top:8px;padding-bottom:8px}.vc-px-2{padding-left:8px;padding-right:8px}.vc-px-3{padding-left:12px;padding-right:12px}.vc-pointer-events-none{pointer-events:none}.vc-pointer-events-auto{pointer-events:auto}.vc-relative{position:relative}.vc-shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.hover\\:vc-shadow-inner:hover{box-shadow:inset 0 2px 4px 0 rgba(0,0,0,.06)}.focus\\:vc-shadow:focus{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.vc-text-left{text-align:left}.vc-text-center{text-align:center}.vc-text-right{text-align:right}.vc-text-justify{text-align:justify}.vc-text-transparent{color:transparent}.vc-text-black{color:#000}.vc-text-white{color:#fff}.vc-text-gray-100{color:#f7fafc}.vc-text-gray-200{color:#edf2f7}.vc-text-gray-300{color:#e2e8f0}.vc-text-gray-400{color:#cbd5e0}.vc-text-gray-500{color:#a0aec0}.vc-text-gray-600{color:#718096}.vc-text-gray-700{color:#4a5568}.vc-text-gray-800{color:#2d3748}.vc-text-gray-900{color:#1a202c}.vc-text-red-100{color:#fff5f5}.vc-text-red-200{color:#fed7d7}.vc-text-red-300{color:#feb2b2}.vc-text-red-400{color:#fc8181}.vc-text-red-500{color:#f56565}.vc-text-red-600{color:#e53e3e}.vc-text-red-700{color:#c53030}.vc-text-red-800{color:#9b2c2c}.vc-text-red-900{color:#742a2a}.vc-text-orange-100{color:#fffaf0}.vc-text-orange-200{color:#feebc8}.vc-text-orange-300{color:#fbd38d}.vc-text-orange-400{color:#f6ad55}.vc-text-orange-500{color:#ed8936}.vc-text-orange-600{color:#dd6b20}.vc-text-orange-700{color:#c05621}.vc-text-orange-800{color:#9c4221}.vc-text-orange-900{color:#7b341e}.vc-text-yellow-100{color:ivory}.vc-text-yellow-200{color:#fefcbf}.vc-text-yellow-300{color:#faf089}.vc-text-yellow-400{color:#f6e05e}.vc-text-yellow-500{color:#ecc94b}.vc-text-yellow-600{color:#d69e2e}.vc-text-yellow-700{color:#b7791f}.vc-text-yellow-800{color:#975a16}.vc-text-yellow-900{color:#744210}.vc-text-green-100{color:#f0fff4}.vc-text-green-200{color:#c6f6d5}.vc-text-green-300{color:#9ae6b4}.vc-text-green-400{color:#68d391}.vc-text-green-500{color:#48bb78}.vc-text-green-600{color:#38a169}.vc-text-green-700{color:#2f855a}.vc-text-green-800{color:#276749}.vc-text-green-900{color:#22543d}.vc-text-teal-100{color:#e6fffa}.vc-text-teal-200{color:#b2f5ea}.vc-text-teal-300{color:#81e6d9}.vc-text-teal-400{color:#4fd1c5}.vc-text-teal-500{color:#38b2ac}.vc-text-teal-600{color:#319795}.vc-text-teal-700{color:#2c7a7b}.vc-text-teal-800{color:#285e61}.vc-text-teal-900{color:#234e52}.vc-text-blue-100{color:#ebf8ff}.vc-text-blue-200{color:#bee3f8}.vc-text-blue-300{color:#90cdf4}.vc-text-blue-400{color:#63b3ed}.vc-text-blue-500{color:#4299e1}.vc-text-blue-600{color:#3182ce}.vc-text-blue-700{color:#2b6cb0}.vc-text-blue-800{color:#2c5282}.vc-text-blue-900{color:#2a4365}.vc-text-indigo-100{color:#ebf4ff}.vc-text-indigo-200{color:#c3dafe}.vc-text-indigo-300{color:#a3bffa}.vc-text-indigo-400{color:#7f9cf5}.vc-text-indigo-500{color:#667eea}.vc-text-indigo-600{color:#5a67d8}.vc-text-indigo-700{color:#4c51bf}.vc-text-indigo-800{color:#434190}.vc-text-indigo-900{color:#3c366b}.vc-text-purple-100{color:#faf5ff}.vc-text-purple-200{color:#e9d8fd}.vc-text-purple-300{color:#d6bcfa}.vc-text-purple-400{color:#b794f4}.vc-text-purple-500{color:#9f7aea}.vc-text-purple-600{color:#805ad5}.vc-text-purple-700{color:#6b46c1}.vc-text-purple-800{color:#553c9a}.vc-text-purple-900{color:#44337a}.vc-text-pink-100{color:#fff5f7}.vc-text-pink-200{color:#fed7e2}.vc-text-pink-300{color:#fbb6ce}.vc-text-pink-400{color:#f687b3}.vc-text-pink-500{color:#ed64a6}.vc-text-pink-600{color:#d53f8c}.vc-text-pink-700{color:#b83280}.vc-text-pink-800{color:#97266d}.vc-text-pink-900{color:#702459}.hover\\:vc-text-transparent:hover{color:transparent}.hover\\:vc-text-black:hover{color:#000}.hover\\:vc-text-white:hover{color:#fff}.hover\\:vc-text-gray-100:hover{color:#f7fafc}.hover\\:vc-text-gray-200:hover{color:#edf2f7}.hover\\:vc-text-gray-300:hover{color:#e2e8f0}.hover\\:vc-text-gray-400:hover{color:#cbd5e0}.hover\\:vc-text-gray-500:hover{color:#a0aec0}.hover\\:vc-text-gray-600:hover{color:#718096}.hover\\:vc-text-gray-700:hover{color:#4a5568}.hover\\:vc-text-gray-800:hover{color:#2d3748}.hover\\:vc-text-gray-900:hover{color:#1a202c}.hover\\:vc-text-red-100:hover{color:#fff5f5}.hover\\:vc-text-red-200:hover{color:#fed7d7}.hover\\:vc-text-red-300:hover{color:#feb2b2}.hover\\:vc-text-red-400:hover{color:#fc8181}.hover\\:vc-text-red-500:hover{color:#f56565}.hover\\:vc-text-red-600:hover{color:#e53e3e}.hover\\:vc-text-red-700:hover{color:#c53030}.hover\\:vc-text-red-800:hover{color:#9b2c2c}.hover\\:vc-text-red-900:hover{color:#742a2a}.hover\\:vc-text-orange-100:hover{color:#fffaf0}.hover\\:vc-text-orange-200:hover{color:#feebc8}.hover\\:vc-text-orange-300:hover{color:#fbd38d}.hover\\:vc-text-orange-400:hover{color:#f6ad55}.hover\\:vc-text-orange-500:hover{color:#ed8936}.hover\\:vc-text-orange-600:hover{color:#dd6b20}.hover\\:vc-text-orange-700:hover{color:#c05621}.hover\\:vc-text-orange-800:hover{color:#9c4221}.hover\\:vc-text-orange-900:hover{color:#7b341e}.hover\\:vc-text-yellow-100:hover{color:ivory}.hover\\:vc-text-yellow-200:hover{color:#fefcbf}.hover\\:vc-text-yellow-300:hover{color:#faf089}.hover\\:vc-text-yellow-400:hover{color:#f6e05e}.hover\\:vc-text-yellow-500:hover{color:#ecc94b}.hover\\:vc-text-yellow-600:hover{color:#d69e2e}.hover\\:vc-text-yellow-700:hover{color:#b7791f}.hover\\:vc-text-yellow-800:hover{color:#975a16}.hover\\:vc-text-yellow-900:hover{color:#744210}.hover\\:vc-text-green-100:hover{color:#f0fff4}.hover\\:vc-text-green-200:hover{color:#c6f6d5}.hover\\:vc-text-green-300:hover{color:#9ae6b4}.hover\\:vc-text-green-400:hover{color:#68d391}.hover\\:vc-text-green-500:hover{color:#48bb78}.hover\\:vc-text-green-600:hover{color:#38a169}.hover\\:vc-text-green-700:hover{color:#2f855a}.hover\\:vc-text-green-800:hover{color:#276749}.hover\\:vc-text-green-900:hover{color:#22543d}.hover\\:vc-text-teal-100:hover{color:#e6fffa}.hover\\:vc-text-teal-200:hover{color:#b2f5ea}.hover\\:vc-text-teal-300:hover{color:#81e6d9}.hover\\:vc-text-teal-400:hover{color:#4fd1c5}.hover\\:vc-text-teal-500:hover{color:#38b2ac}.hover\\:vc-text-teal-600:hover{color:#319795}.hover\\:vc-text-teal-700:hover{color:#2c7a7b}.hover\\:vc-text-teal-800:hover{color:#285e61}.hover\\:vc-text-teal-900:hover{color:#234e52}.hover\\:vc-text-blue-100:hover{color:#ebf8ff}.hover\\:vc-text-blue-200:hover{color:#bee3f8}.hover\\:vc-text-blue-300:hover{color:#90cdf4}.hover\\:vc-text-blue-400:hover{color:#63b3ed}.hover\\:vc-text-blue-500:hover{color:#4299e1}.hover\\:vc-text-blue-600:hover{color:#3182ce}.hover\\:vc-text-blue-700:hover{color:#2b6cb0}.hover\\:vc-text-blue-800:hover{color:#2c5282}.hover\\:vc-text-blue-900:hover{color:#2a4365}.hover\\:vc-text-indigo-100:hover{color:#ebf4ff}.hover\\:vc-text-indigo-200:hover{color:#c3dafe}.hover\\:vc-text-indigo-300:hover{color:#a3bffa}.hover\\:vc-text-indigo-400:hover{color:#7f9cf5}.hover\\:vc-text-indigo-500:hover{color:#667eea}.hover\\:vc-text-indigo-600:hover{color:#5a67d8}.hover\\:vc-text-indigo-700:hover{color:#4c51bf}.hover\\:vc-text-indigo-800:hover{color:#434190}.hover\\:vc-text-indigo-900:hover{color:#3c366b}.hover\\:vc-text-purple-100:hover{color:#faf5ff}.hover\\:vc-text-purple-200:hover{color:#e9d8fd}.hover\\:vc-text-purple-300:hover{color:#d6bcfa}.hover\\:vc-text-purple-400:hover{color:#b794f4}.hover\\:vc-text-purple-500:hover{color:#9f7aea}.hover\\:vc-text-purple-600:hover{color:#805ad5}.hover\\:vc-text-purple-700:hover{color:#6b46c1}.hover\\:vc-text-purple-800:hover{color:#553c9a}.hover\\:vc-text-purple-900:hover{color:#44337a}.hover\\:vc-text-pink-100:hover{color:#fff5f7}.hover\\:vc-text-pink-200:hover{color:#fed7e2}.hover\\:vc-text-pink-300:hover{color:#fbb6ce}.hover\\:vc-text-pink-400:hover{color:#f687b3}.hover\\:vc-text-pink-500:hover{color:#ed64a6}.hover\\:vc-text-pink-600:hover{color:#d53f8c}.hover\\:vc-text-pink-700:hover{color:#b83280}.hover\\:vc-text-pink-800:hover{color:#97266d}.hover\\:vc-text-pink-900:hover{color:#702459}.vc-text-xs{font-size:12px}.vc-text-sm{font-size:14px}.vc-text-base{font-size:16px}.vc-text-lg{font-size:18px}.vc-text-xl{font-size:20px}.vc-text-2xl{font-size:24px}.vc-select-none{-webkit-user-select:none;-ms-user-select:none;user-select:none}.vc-w-12{width:48px}.vc-w-full{width:100%}@media (min-width:640px){.sm\\:vc-bg-fixed{background-attachment:fixed}.sm\\:vc-bg-local{background-attachment:local}.sm\\:vc-bg-scroll{background-attachment:scroll}.sm\\:vc-bg-bottom{background-position:bottom}.sm\\:vc-bg-center{background-position:50%}.sm\\:vc-bg-left{background-position:0}.sm\\:vc-bg-left-bottom{background-position:0 100%}.sm\\:vc-bg-left-top{background-position:0 0}.sm\\:vc-bg-right{background-position:100%}.sm\\:vc-bg-right-bottom{background-position:100% 100%}.sm\\:vc-bg-right-top{background-position:100% 0}.sm\\:vc-bg-top{background-position:top}.sm\\:vc-bg-repeat{background-repeat:repeat}.sm\\:vc-bg-no-repeat{background-repeat:no-repeat}.sm\\:vc-bg-repeat-x{background-repeat:repeat-x}.sm\\:vc-bg-repeat-y{background-repeat:repeat-y}.sm\\:vc-bg-repeat-round{background-repeat:round}.sm\\:vc-bg-repeat-space{background-repeat:space}.sm\\:vc-bg-auto{background-size:auto}.sm\\:vc-bg-cover{background-size:cover}.sm\\:vc-bg-contain{background-size:contain}.sm\\:vc-border-collapse{border-collapse:collapse}.sm\\:vc-border-separate{border-collapse:initial}.sm\\:vc-border-solid{border-style:solid}.sm\\:vc-border-dashed{border-style:dashed}.sm\\:vc-border-dotted{border-style:dotted}.sm\\:vc-border-double{border-style:double}.sm\\:vc-border-none{border-style:none}.sm\\:vc-border-0{border-width:0}.sm\\:vc-border-2{border-width:2px}.sm\\:vc-border-4{border-width:4px}.sm\\:vc-border-8{border-width:8px}.sm\\:vc-border{border-width:1px}.sm\\:vc-border-t-0{border-top-width:0}.sm\\:vc-border-r-0{border-right-width:0}.sm\\:vc-border-b-0{border-bottom-width:0}.sm\\:vc-border-l-0{border-left-width:0}.sm\\:vc-border-t-2{border-top-width:2px}.sm\\:vc-border-r-2{border-right-width:2px}.sm\\:vc-border-b-2{border-bottom-width:2px}.sm\\:vc-border-l-2{border-left-width:2px}.sm\\:vc-border-t-4{border-top-width:4px}.sm\\:vc-border-r-4{border-right-width:4px}.sm\\:vc-border-b-4{border-bottom-width:4px}.sm\\:vc-border-l-4{border-left-width:4px}.sm\\:vc-border-t-8{border-top-width:8px}.sm\\:vc-border-r-8{border-right-width:8px}.sm\\:vc-border-b-8{border-bottom-width:8px}.sm\\:vc-border-l-8{border-left-width:8px}.sm\\:vc-border-t{border-top-width:1px}.sm\\:vc-border-r{border-right-width:1px}.sm\\:vc-border-b{border-bottom-width:1px}.sm\\:vc-border-l{border-left-width:1px}.sm\\:vc-text-left{text-align:left}.sm\\:vc-text-center{text-align:center}.sm\\:vc-text-right{text-align:right}.sm\\:vc-text-justify{text-align:justify}.sm\\:vc-text-xs{font-size:12px}.sm\\:vc-text-sm{font-size:14px}.sm\\:vc-text-base{font-size:16px}.sm\\:vc-text-lg{font-size:18px}.sm\\:vc-text-xl{font-size:20px}.sm\\:vc-text-2xl{font-size:24px}}@media (min-width:768px){.md\\:vc-bg-fixed{background-attachment:fixed}.md\\:vc-bg-local{background-attachment:local}.md\\:vc-bg-scroll{background-attachment:scroll}.md\\:vc-bg-bottom{background-position:bottom}.md\\:vc-bg-center{background-position:50%}.md\\:vc-bg-left{background-position:0}.md\\:vc-bg-left-bottom{background-position:0 100%}.md\\:vc-bg-left-top{background-position:0 0}.md\\:vc-bg-right{background-position:100%}.md\\:vc-bg-right-bottom{background-position:100% 100%}.md\\:vc-bg-right-top{background-position:100% 0}.md\\:vc-bg-top{background-position:top}.md\\:vc-bg-repeat{background-repeat:repeat}.md\\:vc-bg-no-repeat{background-repeat:no-repeat}.md\\:vc-bg-repeat-x{background-repeat:repeat-x}.md\\:vc-bg-repeat-y{background-repeat:repeat-y}.md\\:vc-bg-repeat-round{background-repeat:round}.md\\:vc-bg-repeat-space{background-repeat:space}.md\\:vc-bg-auto{background-size:auto}.md\\:vc-bg-cover{background-size:cover}.md\\:vc-bg-contain{background-size:contain}.md\\:vc-border-collapse{border-collapse:collapse}.md\\:vc-border-separate{border-collapse:initial}.md\\:vc-border-solid{border-style:solid}.md\\:vc-border-dashed{border-style:dashed}.md\\:vc-border-dotted{border-style:dotted}.md\\:vc-border-double{border-style:double}.md\\:vc-border-none{border-style:none}.md\\:vc-border-0{border-width:0}.md\\:vc-border-2{border-width:2px}.md\\:vc-border-4{border-width:4px}.md\\:vc-border-8{border-width:8px}.md\\:vc-border{border-width:1px}.md\\:vc-border-t-0{border-top-width:0}.md\\:vc-border-r-0{border-right-width:0}.md\\:vc-border-b-0{border-bottom-width:0}.md\\:vc-border-l-0{border-left-width:0}.md\\:vc-border-t-2{border-top-width:2px}.md\\:vc-border-r-2{border-right-width:2px}.md\\:vc-border-b-2{border-bottom-width:2px}.md\\:vc-border-l-2{border-left-width:2px}.md\\:vc-border-t-4{border-top-width:4px}.md\\:vc-border-r-4{border-right-width:4px}.md\\:vc-border-b-4{border-bottom-width:4px}.md\\:vc-border-l-4{border-left-width:4px}.md\\:vc-border-t-8{border-top-width:8px}.md\\:vc-border-r-8{border-right-width:8px}.md\\:vc-border-b-8{border-bottom-width:8px}.md\\:vc-border-l-8{border-left-width:8px}.md\\:vc-border-t{border-top-width:1px}.md\\:vc-border-r{border-right-width:1px}.md\\:vc-border-b{border-bottom-width:1px}.md\\:vc-border-l{border-left-width:1px}.md\\:vc-text-left{text-align:left}.md\\:vc-text-center{text-align:center}.md\\:vc-text-right{text-align:right}.md\\:vc-text-justify{text-align:justify}.md\\:vc-text-xs{font-size:12px}.md\\:vc-text-sm{font-size:14px}.md\\:vc-text-base{font-size:16px}.md\\:vc-text-lg{font-size:18px}.md\\:vc-text-xl{font-size:20px}.md\\:vc-text-2xl{font-size:24px}}@media (min-width:1024px){.lg\\:vc-bg-fixed{background-attachment:fixed}.lg\\:vc-bg-local{background-attachment:local}.lg\\:vc-bg-scroll{background-attachment:scroll}.lg\\:vc-bg-bottom{background-position:bottom}.lg\\:vc-bg-center{background-position:50%}.lg\\:vc-bg-left{background-position:0}.lg\\:vc-bg-left-bottom{background-position:0 100%}.lg\\:vc-bg-left-top{background-position:0 0}.lg\\:vc-bg-right{background-position:100%}.lg\\:vc-bg-right-bottom{background-position:100% 100%}.lg\\:vc-bg-right-top{background-position:100% 0}.lg\\:vc-bg-top{background-position:top}.lg\\:vc-bg-repeat{background-repeat:repeat}.lg\\:vc-bg-no-repeat{background-repeat:no-repeat}.lg\\:vc-bg-repeat-x{background-repeat:repeat-x}.lg\\:vc-bg-repeat-y{background-repeat:repeat-y}.lg\\:vc-bg-repeat-round{background-repeat:round}.lg\\:vc-bg-repeat-space{background-repeat:space}.lg\\:vc-bg-auto{background-size:auto}.lg\\:vc-bg-cover{background-size:cover}.lg\\:vc-bg-contain{background-size:contain}.lg\\:vc-border-collapse{border-collapse:collapse}.lg\\:vc-border-separate{border-collapse:initial}.lg\\:vc-border-solid{border-style:solid}.lg\\:vc-border-dashed{border-style:dashed}.lg\\:vc-border-dotted{border-style:dotted}.lg\\:vc-border-double{border-style:double}.lg\\:vc-border-none{border-style:none}.lg\\:vc-border-0{border-width:0}.lg\\:vc-border-2{border-width:2px}.lg\\:vc-border-4{border-width:4px}.lg\\:vc-border-8{border-width:8px}.lg\\:vc-border{border-width:1px}.lg\\:vc-border-t-0{border-top-width:0}.lg\\:vc-border-r-0{border-right-width:0}.lg\\:vc-border-b-0{border-bottom-width:0}.lg\\:vc-border-l-0{border-left-width:0}.lg\\:vc-border-t-2{border-top-width:2px}.lg\\:vc-border-r-2{border-right-width:2px}.lg\\:vc-border-b-2{border-bottom-width:2px}.lg\\:vc-border-l-2{border-left-width:2px}.lg\\:vc-border-t-4{border-top-width:4px}.lg\\:vc-border-r-4{border-right-width:4px}.lg\\:vc-border-b-4{border-bottom-width:4px}.lg\\:vc-border-l-4{border-left-width:4px}.lg\\:vc-border-t-8{border-top-width:8px}.lg\\:vc-border-r-8{border-right-width:8px}.lg\\:vc-border-b-8{border-bottom-width:8px}.lg\\:vc-border-l-8{border-left-width:8px}.lg\\:vc-border-t{border-top-width:1px}.lg\\:vc-border-r{border-right-width:1px}.lg\\:vc-border-b{border-bottom-width:1px}.lg\\:vc-border-l{border-left-width:1px}.lg\\:vc-text-left{text-align:left}.lg\\:vc-text-center{text-align:center}.lg\\:vc-text-right{text-align:right}.lg\\:vc-text-justify{text-align:justify}.lg\\:vc-text-xs{font-size:12px}.lg\\:vc-text-sm{font-size:14px}.lg\\:vc-text-base{font-size:16px}.lg\\:vc-text-lg{font-size:18px}.lg\\:vc-text-xl{font-size:20px}.lg\\:vc-text-2xl{font-size:24px}}@media (min-width:1280px){.xl\\:vc-bg-fixed{background-attachment:fixed}.xl\\:vc-bg-local{background-attachment:local}.xl\\:vc-bg-scroll{background-attachment:scroll}.xl\\:vc-bg-bottom{background-position:bottom}.xl\\:vc-bg-center{background-position:50%}.xl\\:vc-bg-left{background-position:0}.xl\\:vc-bg-left-bottom{background-position:0 100%}.xl\\:vc-bg-left-top{background-position:0 0}.xl\\:vc-bg-right{background-position:100%}.xl\\:vc-bg-right-bottom{background-position:100% 100%}.xl\\:vc-bg-right-top{background-position:100% 0}.xl\\:vc-bg-top{background-position:top}.xl\\:vc-bg-repeat{background-repeat:repeat}.xl\\:vc-bg-no-repeat{background-repeat:no-repeat}.xl\\:vc-bg-repeat-x{background-repeat:repeat-x}.xl\\:vc-bg-repeat-y{background-repeat:repeat-y}.xl\\:vc-bg-repeat-round{background-repeat:round}.xl\\:vc-bg-repeat-space{background-repeat:space}.xl\\:vc-bg-auto{background-size:auto}.xl\\:vc-bg-cover{background-size:cover}.xl\\:vc-bg-contain{background-size:contain}.xl\\:vc-border-collapse{border-collapse:collapse}.xl\\:vc-border-separate{border-collapse:initial}.xl\\:vc-border-solid{border-style:solid}.xl\\:vc-border-dashed{border-style:dashed}.xl\\:vc-border-dotted{border-style:dotted}.xl\\:vc-border-double{border-style:double}.xl\\:vc-border-none{border-style:none}.xl\\:vc-border-0{border-width:0}.xl\\:vc-border-2{border-width:2px}.xl\\:vc-border-4{border-width:4px}.xl\\:vc-border-8{border-width:8px}.xl\\:vc-border{border-width:1px}.xl\\:vc-border-t-0{border-top-width:0}.xl\\:vc-border-r-0{border-right-width:0}.xl\\:vc-border-b-0{border-bottom-width:0}.xl\\:vc-border-l-0{border-left-width:0}.xl\\:vc-border-t-2{border-top-width:2px}.xl\\:vc-border-r-2{border-right-width:2px}.xl\\:vc-border-b-2{border-bottom-width:2px}.xl\\:vc-border-l-2{border-left-width:2px}.xl\\:vc-border-t-4{border-top-width:4px}.xl\\:vc-border-r-4{border-right-width:4px}.xl\\:vc-border-b-4{border-bottom-width:4px}.xl\\:vc-border-l-4{border-left-width:4px}.xl\\:vc-border-t-8{border-top-width:8px}.xl\\:vc-border-r-8{border-right-width:8px}.xl\\:vc-border-b-8{border-bottom-width:8px}.xl\\:vc-border-l-8{border-left-width:8px}.xl\\:vc-border-t{border-top-width:1px}.xl\\:vc-border-r{border-right-width:1px}.xl\\:vc-border-b{border-bottom-width:1px}.xl\\:vc-border-l{border-left-width:1px}.xl\\:vc-text-left{text-align:left}.xl\\:vc-text-center{text-align:center}.xl\\:vc-text-right{text-align:right}.xl\\:vc-text-justify{text-align:justify}.xl\\:vc-text-xs{font-size:12px}.xl\\:vc-text-sm{font-size:14px}.xl\\:vc-text-base{font-size:16px}.xl\\:vc-text-lg{font-size:18px}.xl\\:vc-text-xl{font-size:20px}.xl\\:vc-text-2xl{font-size:24px}}",""])},f4d6:function(e,t,r){var o=r("ffd6"),n=1/0;function c(e){if("string"==typeof e||o(e))return e;var t=e+"";return"0"==t&&1/e==-n?"-0":t}e.exports=c},f4d9:function(e,t){var r="\\ud800-\\udfff",o="\\u0300-\\u036f",n="\\ufe20-\\ufe2f",c="\\u20d0-\\u20ff",i=o+n+c,a="\\u2700-\\u27bf",s="a-z\\xdf-\\xf6\\xf8-\\xff",d="\\xac\\xb1\\xd7\\xf7",u="\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf",l="\\u2000-\\u206f",f=" \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000",v="A-Z\\xc0-\\xd6\\xd8-\\xde",b="\\ufe0e\\ufe0f",h=d+u+l+f,p="['’]",g="["+h+"]",m="["+i+"]",y="\\d+",x="["+a+"]",w="["+s+"]",k="[^"+r+h+y+a+s+v+"]",O="\\ud83c[\\udffb-\\udfff]",j="(?:"+m+"|"+O+")",D="[^"+r+"]",P="(?:\\ud83c[\\udde6-\\uddff]){2}",M="[\\ud800-\\udbff][\\udc00-\\udfff]",S="["+v+"]",E="\\u200d",_="(?:"+w+"|"+k+")",Y="(?:"+S+"|"+k+")",C="(?:"+p+"(?:d|ll|m|re|s|t|ve))?",I="(?:"+p+"(?:D|LL|M|RE|S|T|VE))?",$=j+"?",A="["+b+"]?",T="(?:"+E+"(?:"+[D,P,M].join("|")+")"+A+$+")*",L="\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])",F="\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])",N=A+$+T,z="(?:"+[x,P,M].join("|")+")"+N,R=RegExp([S+"?"+w+"+"+C+"(?="+[g,S,"$"].join("|")+")",Y+"+"+I+"(?="+[g,S+_,"$"].join("|")+")",S+"?"+_+"+"+C,S+"+"+I,F,L,y,z].join("|"),"g");function V(e){return e.match(R)||[]}e.exports=V},f542:function(e,t,r){var o=r("ec47"),n=r("ec69"),c=o(n);e.exports=c},f608:function(e,t,r){var o=r("6747"),n=r("ffd6"),c=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,i=/^\w*$/;function a(e,t){if(o(e))return!1;var r=typeof e;return!("number"!=r&&"symbol"!=r&&"boolean"!=r&&null!=e&&!n(e))||(i.test(e)||!c.test(e)||null!=t&&e in Object(t))}e.exports=a},f678:function(e,t,r){var o=r("8384"),n=r("b4b0");function c(e,t,r){return void 0===r&&(r=t,t=void 0),void 0!==r&&(r=n(r),r=r===r?r:0),void 0!==t&&(t=n(t),t=t===t?t:0),o(n(e),t,r)}e.exports=c},f772:function(e,t){e.exports=function(e){return"object"===typeof e?null!==e:"function"===typeof e}},f7f1:function(e,t,r){"use strict";r.d(t,"a",(function(){return i}));var o=r("fe1f"),n=r("fd3a"),c=r("8c86");function i(e,t){Object(c["a"])(2,arguments);var r=Object(n["a"])(e),i=Object(o["a"])(t);return isNaN(i)?new Date(NaN):i?(r.setDate(r.getDate()+i),r):r}},f8af:function(e,t,r){var o=r("2474");function n(e){var t=new e.constructor(e.byteLength);return new o(t).set(new o(e)),t}e.exports=n},f909:function(e,t,r){var o=r("7e64"),n=r("b760"),c=r("72af"),i=r("4f50"),a=r("1a8c"),s=r("9934"),d=r("8adb");function u(e,t,r,l,f){e!==t&&c(t,(function(c,s){if(f||(f=new o),a(c))i(e,t,s,r,u,l,f);else{var v=l?l(d(e,s),c,s+"",e,t,f):void 0;void 0===v&&(v=c),n(e,s,v)}}),s)}e.exports=u},f9ce:function(e,t,r){var o=r("ef5d"),n=r("e3f8"),c=r("f608"),i=r("f4d6");function a(e){return c(e)?o(i(e)):n(e)}e.exports=a},fa21:function(e,t,r){var o=r("7530"),n=r("2dcb"),c=r("eac5");function i(e){return"function"!=typeof e.constructor||c(e)?{}:o(n(e))}e.exports=i},fa5b:function(e,t,r){e.exports=r("5537")("native-function-to-string",Function.toString)},fab2:function(e,t,r){var o=r("7726").document;e.exports=o&&o.documentElement},fb15:function(e,t,r){"use strict";var o;(r.r(t),r.d(t,"Calendar",(function(){return n["c"]})),r.d(t,"CalendarNav",(function(){return n["d"]})),r.d(t,"DatePicker",(function(){return n["f"]})),r.d(t,"Popover",(function(){return n["i"]})),r.d(t,"PopoverRef",(function(){return n["j"]})),r.d(t,"Grid",(function(){return n["g"]})),r.d(t,"Locale",(function(){return n["h"]})),r.d(t,"DateInfo",(function(){return n["e"]})),r.d(t,"Attribute",(function(){return n["a"]})),r.d(t,"AttributeStore",(function(){return n["b"]})),r.d(t,"setupCalendar",(function(){return n["L"]})),r.d(t,"evalFn",(function(){return n["u"]})),r.d(t,"pageIsValid",(function(){return n["K"]})),r.d(t,"pageIsBeforePage",(function(){return n["H"]})),r.d(t,"pageIsAfterPage",(function(){return n["G"]})),r.d(t,"pageIsBetweenPages",(function(){return n["I"]})),r.d(t,"pageIsEqualToPage",(function(){return n["J"]})),r.d(t,"pageForDate",(function(){return n["C"]})),r.d(t,"addPages",(function(){return n["l"]})),r.d(t,"pageForThisMonth",(function(){return n["F"]})),r.d(t,"pageForNextMonth",(function(){return n["D"]})),r.d(t,"pageForPrevMonth",(function(){return n["E"]})),r.d(t,"getMaxPage",(function(){return n["w"]})),r.d(t,"datesAreEqual",(function(){return n["p"]})),r.d(t,"arrayHasItems",(function(){return n["n"]})),r.d(t,"findAncestor",(function(){return n["v"]})),r.d(t,"elementHasAncestor",(function(){return n["s"]})),r.d(t,"elementPositionInAncestor",(function(){return n["t"]})),r.d(t,"mixinOptionalProps",(function(){return n["y"]})),r.d(t,"on",(function(){return n["A"]})),r.d(t,"off",(function(){return n["z"]})),r.d(t,"elementContains",(function(){return n["r"]})),r.d(t,"onSpaceOrEnter",(function(){return n["B"]})),r.d(t,"createGuid",(function(){return n["o"]})),r.d(t,"hash",(function(){return n["x"]})),r.d(t,"addTapOrClickHandler",(function(){return n["m"]})),r.d(t,"addHorizontalSwipeHandler",(function(){return n["k"]})),"undefined"!==typeof window)&&((o=window.document.currentScript)&&(o=o.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))&&(r.p=o[1]));var n=r("34e9");t["default"]=n["q"]},fba5:function(e,t,r){var o=r("cb5a");function n(e){return o(this.__data__,e)>-1}e.exports=n},fd3a:function(e,t,r){"use strict";r.d(t,"a",(function(){return n}));var o=r("8c86");function n(e){Object(o["a"])(1,arguments);var t=Object.prototype.toString.call(e);return e instanceof Date||"object"===typeof e&&"[object Date]"===t?new Date(e.getTime()):"number"===typeof e||"[object Number]"===t?new Date(e):("string"!==typeof e&&"[object String]"!==t||"undefined"===typeof console||(console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule"),console.warn((new Error).stack)),new Date(NaN))}},fe1f:function(e,t,r){"use strict";function o(e){if(null===e||!0===e||!1===e)return NaN;var t=Number(e);return isNaN(t)?t:t<0?Math.ceil(t):Math.floor(t)}r.d(t,"a",(function(){return o}))},ffd6:function(e,t,r){var o=r("3729"),n=r("1310"),c="[object Symbol]";function i(e){return"symbol"==typeof e||n(e)&&o(e)==c}e.exports=i}})}));
+//# sourceMappingURL=v-calendar.umd.min.js.map
+
+/***/ }),
+
 /***/ "./node_modules/vue-awesome-swiper/dist/vue-awesome-swiper.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-awesome-swiper/dist/vue-awesome-swiper.js ***!
@@ -50661,6 +64172,207 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=template&id=75145b55&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FullcalendarComponent.vue?vue&type=template&id=75145b55& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "event_name" } }, [
+                _vm._v("Event Name")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.newEvent.event_name,
+                    expression: "newEvent.event_name"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", id: "event_name" },
+                domProps: { value: _vm.newEvent.event_name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.newEvent, "event_name", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "row" },
+              [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "start_date" } }, [
+                      _vm._v("Start Date")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.newEvent.start_date,
+                          expression: "newEvent.start_date"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "date", id: "start_date" },
+                      domProps: { value: _vm.newEvent.start_date },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.newEvent,
+                            "start_date",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", { attrs: { for: "end_date" } }, [
+                      _vm._v("End Date")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.newEvent.end_date,
+                          expression: "newEvent.end_date"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "date", id: "end_date" },
+                      domProps: { value: _vm.newEvent.end_date },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.newEvent,
+                            "end_date",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm.addingMode
+                  ? _c("div", { staticClass: "col-md-6 mb-4" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-sm btn-primary",
+                          on: { click: _vm.addNewEvent }
+                        },
+                        [_vm._v("Save Event")]
+                      )
+                    ])
+                  : [
+                      _c("div", { staticClass: "col-md-6 mb-4" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-sm btn-success",
+                            on: { click: _vm.updateEvent }
+                          },
+                          [_vm._v("Update")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-sm btn-danger",
+                            on: { click: _vm.deleteEvent }
+                          },
+                          [_vm._v("Delete")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-sm btn-secondary",
+                            on: {
+                              click: function($event) {
+                                _vm.addingMode = !_vm.addingMode
+                              }
+                            }
+                          },
+                          [_vm._v("Cancel")]
+                        )
+                      ])
+                    ]
+              ],
+              2
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-8" },
+        [
+          _c("Fullcalendar", {
+            attrs: { plugins: _vm.calendarPlugins, events: _vm.events },
+            on: { eventClick: _vm.showEvent }
+          })
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LikeComponent.vue?vue&type=template&id=8499806a&":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/LikeComponent.vue?vue&type=template&id=8499806a& ***!
@@ -50768,6 +64480,38 @@ var render = function() {
       })
     ],
     2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("v-calendar", {
+        attrs: { attributes: _vm.attrs, "nav-visibility": "visible" }
+      })
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -55693,6 +69437,18 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })));
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/vue-star/dist/VueStar.js":
+/*!***********************************************!*\
+  !*** ./node_modules/vue-star/dist/VueStar.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(A,t){ true?module.exports=t():undefined}(this,function(){return function(A){function t(r){if(e[r])return e[r].exports;var n=e[r]={exports:{},id:r,loaded:!1};return A[r].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var e={};return t.m=A,t.c=e,t.p="",t(0)}([function(A,t,e){"use strict";function r(A){return A&&A.__esModule?A:{default:A}}var n=e(5),a=r(n);A.exports=a.default},function(A,t){"use strict";function e(A){return r.test(A)||n.test(A)}Object.defineProperty(t,"__esModule",{value:!0}),t.isColors=e;var r=/^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/,n=/^[rR][gG][Bb][Aa]?[\(]([\s]*(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?),){2}[\s]*(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?),?[\s]*(0\.\d{1,2}|1|0)?[\)]{1}$/g},function(A,t,e){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=e(1);t.default={name:"VueStar",props:{animate:String,color:String},methods:{toggle:function(){this.active=!this.active,this.toggleAnimate=!this.toggleAnimate,this.toggleColor=!this.toggleColor}},data:function(){return{active:!1,toggleAnimate:!1,toggleColor:!1}},computed:{AnimateClass:function(){return this.toggleAnimate?this.animate:""},ColorValue:function(){return this.toggleColor?this.color:""}},mounted:function(){this.color&&((0,r.isColors)(this.color)||console.error("this color must be hexcolor or rgbcolor  ---VueStar"))}}},function(A,t,e){t=A.exports=e(4)(),t.push([A.id,'.VueStar{position:absolute}.VueStar__ground{width:100px;height:100px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.VueStar__icon{z-index:888}.VueStar__decoration{width:100px;height:100px;position:absolute;left:0;top:0;bottom:0;right:0;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABqUAAABkCAYAAAAPKjqIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA25pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1ZmMyNTFlNy02ZmI3LTg3NDMtYWFkNy1kZWQ2ZWY1NzIzYWUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDIyMEQ0QjBFNTE2MTFFNkFGREZCRkYzMDQ2QkI0RDciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDIyMEQ0QUZFNTE2MTFFNkFGREZCRkYzMDQ2QkI0RDciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUU1NkMyNUZFNTAzMTFFNkI1RjJFOTE0NTRGREQ2MDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUU1NkMyNjBFNTAzMTFFNkI1RjJFOTE0NTRGREQ2MDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5nGnsGAABRHklEQVR42uydB3xUVfbH731TMiUNkkACCQRQOrYkoq4gYEVFZUXsfQUbCuta1nV33f/adQVFRVwrdnFlEV2wgQYVIYmutABSQnqAEFJmMsnMvPt/Z5LJDggkwMy8Mr/v5zO8kmHeuee8W94975zLhRAMAAAAAAAAAAAAAAAAAAAAgEgiQQUAAAAAAAAAAAAAAAAAAAAg0sApBQAAAAAAAAAAAAAAAAAAACIOnFIAAAAAAAAAAAAAAAAAAAAg4sApBQAAAAAAAAAAAAAAAAAAACIOnFIAAAAAAAAAAAAAAAAAAAAg4pj1KjjnHNYDAAAAAAAAAAAAAAAAAEBM8sela9NO2tnSeOGlOR61ZRFCdOl7vKtf1BpwSgEAAAAAAAAAAAAcOkXP1mYJbjuT+fg3uTMcW6ARdfnwnWVnZfOEycX9j/rX1SOTF0Mj6vL61vwJybVsakU6y78ta/QT0Ii6vFix/Bqv5L/VLKSNmd85bpxwSa4PWlHXHk0m9kac8K/sk58wRguOkFhvrxpM1o9MptbKzO+cg9S2R1d9TWaYDgAAAAAAAAAAAJGi4LnaVMlrf0kwNohzsaiyd/EDmFRU0R4zm4bZHWwNYzRxJFjBLNcpedOdP0Az6jB7wdahSQnyZ3XKfnrjrhvfXLnnXDim1OO5dfOT4j22f/ucjPVsZONf35pffF3/0YugGfXwC/H3FKs7S9k9sTaHfahsYQ8VIQchYybWwk0jS0/claecWg6tqIewyqNazV4zY7zPD2lxCcopXTgJ4ZQCAAAAAAAAAGAoCme6znP3trxI+/Yq74t5dzofhlbUQ2q1/8OeKF/Ufjgko3rIJmX7KjSjlkH4RW0OqfZDxsg2cEqpRG9L5WmMpXccm7auGaNs4JRSiYqaIdb0dHfHsSeOd4NW1EU2yVXKhpxSrFVybYJG1MUim15oMbGRgUipVakF0Ii6uOp3PpySlEZOwrV/GDd8p17khlMKAAAAAAAAAI6Ql1e0XttrpzyG9tNKXXfn3Z6yC1pRh4XvF9laZMsik7/tuLWH5e+rZjcuOXFaQhG0oxKc9drr0M8GQikqmkOIbXudkFgFtKIeWSVD5jcNrvuzj7EMOnb2dX0ArajHo+OG73y+LP+PvUtNdzOrf2XGGifsoTIZovziGnefK2Vf84pp/c7eCI2oy829R81TNvOgCW1w+7BL6pXNPXqTG04pAAAAAAAAADgC3ly5Z3xCLXul1SwFjhvSEwYom9HQjDp0K+1lZpl7n5P8pj7KBk4plRBm8a6yOT147DfJ86EV9ajqveGD9Moh/SSZj2FcFFX2Lp4DragHvcRQ8FztMRvyTHlNdTvW3XLKOaXQirq0ryOFtaQ0wqReV1XAHgAYC97Vxac0JzjnsB4AAAAAAIhJyAniEY7naL/F7v+i76Z1t2N9luiQ/2RVPG1H353RFDz3n489r7WapatDv9d9XW1y6HdAZCic6R7ATc2tOXeklIWe/+rD1nybl51K+34Tq7DvaDwe0WuRZ9Xsxhza7i8qrWimaywzseGyXyzNmxG/DtqKTl9BW6xPpA1erFh+DW3bowwA7AFgD83yUsniQbSdkj0ekWkagLIA0PbCS3M0v15UV31NcEoBAAAAAIAOKAWZ4OwvbQNF9n+/O9n6BrSirj1S69grtL+rG7uR7EFOkS2npjSEfs/P2PWwVeQpnO26oSXV8jLtx+3y/i53mvPVfe1EdG9iVaMnW7Ogscjbw2EXAXu4m9hVudPj3wl9eO+9Y/AVSjvmZMzz732dViAC9pjpOs+RIAKLz7sb+YTcGc5PoRX1mL1g69DBCXLA+behURo2bWL/9dCKuny4flUgqeikoSeaoA31mVOZHxg33dJr9LXQhvrACQKAMeiqrwnp+wAAAAAAQIDn19TlmJrYayFrn782e8HWgmzf7k2lRw25V0hSFpflsj6bix9HVE7kIefT7hBHBzk9Fr5f9P6aobZBjn3ibzwO/8nKBk6pCOPuaflbcJ0i2lc2AadUz/LVb5viho+haKkEN/t+zRDXDGgr8nAfP5+1N1hcSJOUTYdTqv1N0lehpShiZj33uw9U4aSKpB1Ng+uqgvvQiPo02TwXQQvaAc4obQFnFACxNmwEAAAAAABAIa7JOXzfc/b0zLztjow7/Nw0NXDCZGLbBw6jCJCbobHIsm5EY/cMOWWvc712Zsez9VvX7eg7YptZsH7B8za3aQU0Fnm8Ettm8rPewf3g+XYn7fXtHxAlBGdvKpuLQvaBilT02PBOr+rBGbRf3asY6Zf2w9dXrUyrn2BujEb6HUpXuWh+Ia2lxsbefhReJNkHevGj5Js9J2SflvxjtFKtXtd/9CJofv8svuyn/jubbJlJV7tX6SE9ldF5La90Im2vL+izANpQF4r89r5nu8ntlX6+5pMh+dCI+v34Llf8ZbDHkYP0fQAAAABQlTlLNvWRe/YOrMUi1VS8ecs5A7G4s0pQqp/49My1oeeaqsuHywMyf7X2x53HWDEYiwKhaxVZffKb515gCzg9KKqNSdKT1kZ739Y476u3He98GNqKPLR+0Y4B0gO037PE9RekhFOfgudqU2mL9aJ+zS8PLR3OnNbHA/2ro+m1AVPP+RBaUQdygKSWb/7a7LSdQMf+2urTh8ydsAyaUa9u1GxI/Yn2vbK3xCNLZ49/7/it0Iw6kAMkNcH3UfvhGnbL7hMQka8erxxb9lfOxV9pXwj+txt/zvobtKIe8/K2vefzmibTvjnTNQaOEJXbq6kF33HGT6T9lDOYHW3Vr0H6PgAAAABoHpqk+alX95WM8fTAiV59b39u3fzBtw+7pB7aiT603sSbK/ec1+A0PUbHiS7/fXTumdUt1R02ahtqVkNb0YGcUKtmNz5XMMbHbhvRrSh4vn1/HDQUXXJnOLYwREMdkMA6TrJ4zm9puT7Olbhqs2XXXyddMfbzSF4Tzqj9s2h+oVnsEB9aRWtgjQ7mTTj3l4eWjjj6gXFroZ3ok1L+y1Sz035CRy9qS36SmhRoRh08laYbg/sWyZLdI20PRYX8A5pRBxPzXxpyOML8LxNF+MFJqBIWq2+Iz9u27JnExRXKBk4pjeCvcaZAC+rCGaP1GU8UTKyacEkeHFJHAJxSAAAAAFCN7aPto/Z2dvD0pKYzT1F2FkM70YMiDYSw9jX5pET2PfMIxu5vG3RLnqKZrrE/+H3P+UyWh4Lfd7r4fdBa9DhxWkIRtHBgyBHS2s39JufsRHOyWMO97r9eeMo50JkK+J3N1/s9POC0a3E2nJjFrIsXzS+Mw1uk0adXVb8Mq7RhUOg5Ka11sLKBUwrEPJKFl+/VdnkZXrZREUem+ztWbw86ptb4LvaXsvegF9X6cmZ6X9kEInOYhWHMrzJpA/bcv3NLMvO2movT7qlZxC6BTtSk2zhpWv2bjjf7JDcUQxtHBtL3AQAAiAnojeGM8qF9ORN9lJ7PofSASYE/CF6v9ChuwXhpVeb67Zg4iywFM5uGcTMfyf1soKL7gYotBn13unlo6Hd+85VvvWKTjYqNNgkT2yR8YmXejPh10F746kLP6kHHSj4p/VDufUqzaEnKHnvcylYv1RvZLFfXpG/8OZbrzHPr5ieZk9MvtLWIum4Fzi+wBoI6fFGw8DF3c+q9wWNvi1wat8c+AO159Cl8t/BlipIKPSdVD+6JaCZ12vrBVeYKi+Tq0VE39rQgUkolaA2KHimti4Pp+zx7mq8+5oXRb0Mz6kCR+vGbN79U3+jIS01u+qRkrPNu9BnqQin8EjIbM1OdTe+NeWvkTmhE/TpC22ittwYAMA5d9TXBKQUAAGGGIg641zaSm1h/4WdDeFsUSILS3ia3t197lE2jYKJa+U6x8p2twuJZiQmb8FL0bG2WkONGcVk6W3CWq/SM9LawqZP/5lcMtJELVigk+TMutSzHeiFHRiCVU9WQ8YpOr1bqwGjl1K9SDpQPtvi3Z7bZpm8583er9Jj+e6KNBY8zNwTyR9QqdSefFrKvyChejMn/Q4fWwlGGiIOVtqckXE6+gJOR8WylZdvQntYsZviw8q3eNXKf761NPJOOPUn+gj75CWNwb0affxfkf8KbTeeFnvMetS1zUq+rKqCdKNeLd5adlWW1dkS6Ugq/464dcTI0ow5YU0pbBByFGxsG70k+thrjfgAAAAAYETilAIghaNJ34NLKk2Vb0gmyV2R6/VJPi8nf02QxBSJB/F5/vddvqrGY5BpKVSB56n/cNK7XCkychQ+amJU4v1rI7HR2+PnhC7nEvpKFeBNRIYcHvdHlsCVO5j5+udK/nRGm/uZLYRbvuj0NH+BNsa4TcAr6bX9kIpD6IdQRFXAuBaKgmFjNBa/ym+UGyWciZy2Tzf7kFadZPwlN6RfimOr4DcbZB9zkeTRWnYazt302SjLbT5Z9zSum9Tt7+cG+u2p2Yw5FRVVlFn8WqbeA2yIRh5xN0VOxkmrutfKvn/A1me4KPedPYNff3HvUPLQA0WXfSClhYrtMlXEZeOtdHbbMXTKpLjH1nIAtavvdh8l3AAAAAAAAYgM4pQAwOJQCIi2l5RrZK5/LmfiNciruEH+iRTD+nWSR/rOzNm4eQuQPnUAEyI7BVzAvu4WFf6HiQmZhcyp6bHgHzsPOoeg05rdN5X42g+0nEidM1AoTm8lMnrmYYDsw5IxiPvtDgokrWTAyjfP1QhLvMFn8uzOH6x+Xrk1LTx24I/ScSfjnjlzqn80kfhGX+RXKKCeY7s/PGX+bmZsfiCXn1PNl+fc0W/jjwWO7V9x7W9boJ37ViLRHRkXSGbUvQedULEROwSmlHSiNYs+K9JctTmmMzy27LU7Xb7GmFAAAAAAAAABEFzilADAoxVMXjfWZEh7gTIwLa6PB+FKzv/GhIXMnLIOWD05g0rV6yDXMyx5UDrMifLkyZmEPVqUXz8Mb3/u3Ra+qIbcIH39MuYsdUeqB3Nws7qvMKJ4Dm+xti/TKIfdyP7+/3RZ+pa/+WObiibzpzh8O5beeX1e/1Oe3jw0ed292n3v1yOSOdFAFs1wnSYLfo4xhLmABxxd3C5N4pLpX8eNGtwk5w385zd2873lbbXXy7cMuqe9oo8qHnK1mWtBgGtNoOsSibovvl+Ts6O5cFXquW+L2PkgZBwAAAAAAAAAgFoFTCgCDQc4oYUt+Uvb6ciJ5HcliLuKePXfDObV/AmmwvNKLLPyRUZ1RKFvkm2MlLVaXbeEzzQuJmol2R7ReNvuvgU3aI3KEeC9YL5Q+eoHM5D8fbhpKipbK7NZvipCkrCRPy8JQh1QogbSZTPq7MpaZGBRFufhlRo7QId2kDK3bse/52vXdejw6bvjOQKSa33ZUzgynJtrwopmusczk2WzUSDZKo2iOs//OJss1Xl/zK1Oyx29E6wwAAAAAAAAAIBaBUwqoQvlxl1hom/nf+V5oIzxQmr5EZ+szVpPv8mhet9VvfrfBZb0Taf3a+F8UCPsbC6Ykiz5+YWJ/jYVokM4oetY1TfjYTBVt0WETbmYzcu5wzo5VWxTOarqCydI/26Ojyhhnt+TOcH4aVRlmus5jgs1hgchF7maSfFPu9Ph3jKrz2VVf/9DCTSODx3HCv3JaxpiT2h21e7TmlCOnJa0Vtq8Dd81LRffbXM2/8Tjt321NYk8jVam67PrPM7lse+pdbs5LrAM2zUo/88EaaEU9di9+IIFJBbf56rOPd2dn/CX7xAfh8FTbJp+dfV9rNznX3tQwM2ncyu+gkUObeAj3c3zJqgcH2dh3D0ueYW/3GD1rASyh/rPSbxL/9Afa7372Z49BI+qzI3/6xG1DMweNTP0D7KEBPqx8q3eWtfrq6q/GzsKYVxus3PXUfQU1fecEs00A9Z9Fvj4upQpZJ7QDZWk5nPYKTikQUUqHTEr1ZeaeLjjLVSyRq9xF/VnbOi7O9q+4GC1mz9hW5W+FXLBCc3nhV32KP8Q6LIcARUfJ5oS3lXqaoVI9q5J8jVfGetQUpaGSvPZ3FTucoZH270vZ0nx5LK5rRJ1iZsWQuYKJazTVJzE+r7x38dRYecCgh6qdrM8jsszGDNzQq0+31RltqfoszVPUTBen1NOXglFTwsQeyLvT+bCR9P5SyeJBVtk5sFVybfJbnff7uDzILKSN/rqaO07+/NwTZItnjVbbhTb72EYEI7jIIcW81oeCf2/p3vJq7uW5v9NVe/T9kkDkslSR+rPeXxSo/uLBnp6KPh0PgLaklm/SJ95yul7kp8lQufeuYzML83YYJSpvxwdT31c2wShQ1mPyXKue7DF4Y8Pg9UcnbTZKv1i/dORvTL6W/ODxsvqX4/RS7/OfrIrPaCnOPvqBcWvD+btHOo9wpM/zjcuO+4l72TG03+o/P7n7+Ica9/c9emnypz/dK7RiL3rhUDq2T/PouzOaInmdQ7FPOOZWyAHiSdr8Ee1bd+SmH+jFBnK4m+K+OKbZP36zFl5+IHs0Xmiqi9T9oZbTNjD22vHntXb3zmGpv6Qf0B7UXo9OuS3wopMWnO1kD6O+FPvNjlmnOpgvf7svPetgk+7kcN+enZzW8M2pP6jdbtH9YeSXYckp1fenptcO1hZRm7UmJ/XYEUW7fj5QPwNbhG+uR5KEr7NyUl3a6UvdBueVNqA2i7ahL9DBKQXCDg3oW3rmXMcFu0K5a8Yclt2UcYbg7J24mqLXEU11cNbdmX+X8Pqf0kR9s5j+MOyZ0f+IRTtQKizhty9RLUXcgRvB9dzUfI5RU2IdaFLFaU5aEB7nIHcrXWVt+35KONajImehy1c/MdKTDFpg30idbvVpX9w4aPBZWpCt4BnXn7ifBZwdXGKPy2bPU8xvmxo4lvl7ek3t93xZ/j1WF3+0Y6BnaxoaTBVHKfJcvoYCrd97bXU4MY8cU/99Y80KUxPruIdsfv/Oo+84rqde7PFFwcLH3M2p9wZsYfd/elHe6PP1XKfpzcSmHQl7rf2Wfd0NZr3IX/hu4ct+S8v1tJ9a23jpgKnnfKj3drYzpxRNTpzs/O44n6WuTEtRbSTXoB1irVW0Dmrl1o3FqdJxRnBM7euU2nPP0bZ9n2XoodxRUvV/gYN0+3taiN6hdjelZOMmS5Iz3etqvjsc4/lwzx8c7nN99aozP4zfs3OisLDV9TOOPnF/z5YU3WblNYEXVFpFzz+pHcFDE+5mZq+k/Uaff9D4947fGs7fD4dtDtseXzzYkyV993xgLLb90cv2N6lI33Ga/70k6Ex028ZMUrOeLL7sp/6+HUlb6hr5+9cU9LtMS3Y4Elvs1SZ59gw9mI6pHrXGxV1M+/HV3j+qWUfmnV882lfu/Nqc6RpzzSdD8sP9+0dil2jNP5Jzd0cfT8C52+xIW5fX4+/D1bLHa3mlE03Mf2k464beIIfUlhy+grGkocpIYH3lsoty1RrTUP1Ii/eUh7vf0BvkSJRk9gjtd+bgjSSHG0FkNILO9kCfzsyjT+sx/dtDaW8lBkAnkDNqy1mP39XSI2czE+ylw3VIBW5M+r/Kb9Bv0W8G0/2BvVlz6zczteKQCthNkYVkijU7UMop4bN9pzmHVFsrP5RkC6zlEwNQp38EDqlaimRiFnajbJFz3f6GhNzfO5y5v3f2afs4nHSO/kbfCXxX+T+H8aBzBslIshpN/zTJSGvn0Oe5dfOTQh1SgQFIYnWiVmQNREdJ4kpG6S5ldi9vtW0gJ1XAUSXESorY0aMNQh1SBEVKBSZ+ZrlO0oNDiiAZSVaS2Wdt2Wu9MVeSaaue2qOgQyowUdFsOo+i2PRcx8mxEXoc3xw3P7j/y0NLh1NkG320WH9IpqBDiqhLTD3HEA1vuv294K45qeQvoX+iid0RrtUeciRShFvpi+88qhWxe1X1yyCHVKDdUrZDf6k/KvxDIHHInyOFIgjIqdGUnLbAb44bva8DhCauHCVVa1ibI3Eiq25+P5ASU2UoQoocUgF7ZEvjwqH3SNnzkNutKcmXky1cvovO2Z9DiupJ0CEVKL+yT85FNe3R7LMmROaxIHy2OdzfIud4+olfTKLPgd5yt8orrg86pAi7/+u/aOHR25Hp/k5rdgjH79Fb6wd1SCl1JOiQIprSLar2JdmnJf+Y2K/xzqSr3asi0V9o4Xc6Q7atu7Kjfrh3Dgs4e1Xi+oI+CyLtkIp2X37IjUNO6rFtDqnASGBo8tjlqvXr5KiNdYcUIcn1VwX341xNp6glBxxSbTTU2zqyejk2Jww7ZHtCheBgUPq4gDOKCXKQ9AnjT/eh36TfpmtA0yEd363fzORMnq41uUimWHJMBSbehKA0U1kaFjOLZNTrJHtXIYdIZuWQdw7VIUWRS8qNe35VVnF6zu8d1+ZOc75Ka9rsb/KeztHf6Dv0Xfo/9H8Dv3FoA+szSFaS2Uj6Lzm16dsWuyOfPjyp52pri2WvyQZKIaclmQPrSUn8EmXXz9pSywZJ4b64s4xiG3JKS5KnQk/ReSQrySxqhrzsj2crAw8UzLOptSH7dlorruhp9xu01XIdorQSwsT2SpPo3zCgWc/3Ek0mesuzj5M8ticDn+ziKXSeHFKebmmrA6kWlU8S3/otRV5oSfbqntv2hB7HNXJDPLDTRKLcLSOLPvu+ud66ZeBe40TZ5rlbzYmrUCiC2+sV/wnIya0bKYVfuH77SCalwjGhRXagCff9pbiSRdqvHNOS6T+qp32mlH0UIcXTWhYzV+u9R6L7SHOo1yBHFNniQJGCniSWvO+5FvPJPdS0B00o9hy863j6hGtyMVK20WtGnUO1x4Sl/Y+ZtGDY7CPVVST1FanfL9hzPr2EVxpyqlTtMSLZIhyTvZG0SSR/e3v/swuD+xQp1W4jQ3EkTqZoO6j2LBtVSBFSbUf16ymlIgPqjvvre/+NbFHSal8g/5i3yMhl1bLDtoP/5i6QJXY/fSrLjnvjUP870veB/UKTQUP/+SW9KfOHKF3yqfU3nfFHo+dI7Qwtpew7YN2LgVR+9BZ874rBy5XdXJ2IXFjRe8Moo76tUTTL9RhFvByKPoTEpuVNd4Zl0EhRHVxmsw/lfqC0cTnTnfcZQf8UHUXOqNBzx67NYMVH7/K1xnnNccK/Mq6l+dpgKjktEZrKr2NwJ7GTw3VvRJPXyr9+wtdkuit4bLGKi4Z+enwlOVP1eF+tmt2Y4/E0bazPrvBQ30/OqNC14ihikRzEWpX/9a35E5KrTK/Svlwn/vLb80+dE66HDy2NhSktXtzuuBtCz7V4+10VcPxqqZ94tjbLaiu5+pdezXUml/21cPWHh/OcFA277Jrz9rtN9pZL9jo5tHRYaC53LdikMmNbVTjG9pF4Xg23ncgpKNVV7Z1SOd1+qRZS+GlR/9GyTei6U5Tmz+s5f7Saa4Lo0TbhtAdFFFpsn+QHbUKRblpYxyhW6wdB0YPN8YkzaN/e1DAT9lDfJpTCb9vQzEGdrXUE20Rn3EVzoyP6fjJgzfbzt8T6fCXQRz3Rgr8Ea0qBw6Z84MXxrdl5i44kTd9h2ZSxr60lBRMyN/2rKRb1vvrW/Csl5n9LD7LKzHTVMS+Mftuotiic6XqBCXaLvhpFNid3hvNWA9riPMUWn3RRCW5mEdMo2ikissx23cC8fHaX15/i7HzFJp/q3Qb7c0oNXZX3+rkX2K6nVH63D7ukXsvyF810fxGMstO7s5BsYbE6+kneppUnLBh9lN7vL6rfVAaK9uSttl8tak1pNWNhjbYjfQCJ5Jh4f04ph7lishHWbIrkw2CkbbNl7pJJprjKjvR+tqSWb9In3nI6bKGujWgikdL20T6lXFR7/SK92CCSdiEnCJMKbqP9VulkTPBqpC0jJy5FgOh9glfv9QP9BexiFPtA99G3E3Su/Tqipo3glAKHhVoOqQ67xqhjihZZzeq+h8KC43QickvZ7uShRsxpWzjLPZHJ4iNdCi/x3+ZOdywwii3aJ6o3sL3Trx2IMsHF+LwZ8esiKtPMpmFc8MWsa2kda4XVMzjv9pRderfFnMr8N1wSD0SxJLm61fQobMnWS2ReIPKxckhR+9pwtcLEZgbWndJz3ZjlOqm6d3Gh3idz6M3D9Iohuczs2bwfp5Tf7W9INrpTSusOkI70fe1QqsVqd2auEe0SyWeiSNiGHFNJcu3Fbs5L4vuuf8RI0R+RtgeeK7VnA9hF+7aBPVA/YAvYReu2gf7VsRH0HlvPIOEsE5xSoIPy4y6xtPbI+Vwth1SHbckxtaPorP0tWGtU1t+5vFD2+nL0JLNkMRcNfWZUrpHsQOtkOEyJJaxrThAtUuv2N2QbZbLwECLWCoXVMz5azp92Zxk5pjq//w0SwVY00zW2KcG/lPYdjdLwSDv/wm8v+/a9ItwkcaXW0o91FXKyZewYOEyvafv2hdL4VfXYtC6zYsjc0PR9Ro3+1OPDB61dFucsvpT26+p7PQuHFJ5djGAP2EebdoBNtG0X2EQbdQP20J4tYBft2Ab6V88+0D2eQQ61XBJuARCkpUfOP9V2SAVuXkUGkiVW9E5p+/TmkCJIZpLdSLZwmBOfYPp1SBEp7WXQPTRR3SWHFOfro+mQIuhadE26dhcatFsCZdH7YInx55wNJhbfZHpcTw6pwEDHaxvxq5SLgp+qV1v0rhx8ulEcUgSVhcpUmbX+RmZhN5IzirZVmcV34OFDG7+fO8OxZcSUnEfoYzSHVDQXB1Z9IWLUD01eF3aATfSkE9hEWzqIdXtotfyoJ+rqAPpXT0fQvTb1pWW7wCkFAmw98zF6A1ZLC4pf2y6ToaHIHBOXn9Sr/CQ7lcEItqA3wZlgU/Tfs7EpgbLoHJPP1JV1GGq5qfkcNdLj0TXp2iRDmMqi3bpBKS3bUt+VubwND+nvZvJsVv71h57igjv1aAuKkhJMlERywNrZJzLNliiRZW6m9eAoOoq2Rl1IGA8fsWcL2EY/uoFttKcH2ASgbqCO6LHcsdx24aWG2LYPdK9NPWnVLnBKAVY6ZFKq4OwVzVVSRSaSzci6Tyn/ZarSOGTouCHNoDIYpFu4S/nHZICCmNrLolsoski5t87o9IucXZtzR0qZWnIGrs07d+ZTWXQdLSWL+wPlMLG5eoySCNjJQg5n7u6wCQs42XQHRRRFIlLtUBxOkXBOUZmobHj4wENhrOgGttGuTmAbgDqCOgJQF1BX9F9mtFWRf4bTwrVQT/RdJyS9V6hwfGIdb1buU8pGi2+NO9tlMyT0xjvzyXfpviBKGQJl0TG05owhoqQ6Gkg2JVAmnWLymjpN28UZn5c7w/mp2rKSDCRLOMqkyboxy3USa1s7q7a5teEZvd5TgQic3zucwupJY23RbbntZdMVnDG3Vgan4R4/RaJsAGj5gQzPIAD1A3VFrzrAZDtkAwAAoL/2Wmv9BSKlYpztgy7sx7SVtm9frm2X0XD0+8Z1sZ6jpEIatQwqi57LIMm2y5kxoqSCmNrLpDsoHaTSTU7q5Gu1srVZMw7ddlkOmsaPyqTHVJdcsGvadtgHRlhLJpDqUSnLXmXTCZSWszKzeLmWBqXhHNRS2YyQelRrDwCYqAKoH6g3QN+UDrrAAS0AoM/2OZb6E7zUANtA/+BQgVMqxvH1PfmvkFEdOJNvQFk00kn79DU5beQyOSwJFyjSH/Thm0vsZTXWkToQgfWlFJk6sYijrWz6YdH8QjMTbHJAes7mGaZuBMuilC1QRv1IPjic6yyF6yEhXL/TVjYxGA+CeCCMJV3ANgCALjQUNigBAP32mejrAZ5DgJZ0oSWbwCkVw5QPvJje2p+kA1EntctqGL6+amUaZ2KcUcpDZaEy6VH2omdrs1hbejKjkdteNn3dS0LqpE3ibtns0VxazzaZuPvIyqYt0iuGUL1IUT5ledOdPxilYrSXhdYiS2kvo07aWeOnt0MKPxCLD8Wx/rAOu6DMsMfBydr48W7YBGWFPQDuP9QNgDpiNHnglIphWvvmnce0uZbUvjjbZTUM3RNbzjLa/aTXMgk5bpRhOz4dlk3pHEcf7O+cs8+0FCUVJBAtpch2JGXTHJyd3rbhyyI9IIr2mo8dZWovo9ah1I+yxbNGq4PQcP0elVGPaS4BAACASFA28MLu0AIAAAAtPPPpXQ6gPeCUiuUGirPxkFUdOBOGi8zRa5m4LJ1t1Dqut7IVzGwaxtoicw7SFsgfared6lS2lPYy6mOAIPMxgXJJ8meRGpx2NkCNlHMqWKZgGbWO3ZI4XIvO2HBDZaSy4mEQD4MgRp5FNH5fot4A9ZFN0AEA+m+PjdyfIJIQAHC4wCkV24yFrKp1i8cYcDiiyzIJJoYadoCos7Jxzo7ttEzmls81q+8uyNaVMmpo8D6obct+VvvBIPyRPW1lCpZR83VDHNxZq4WHsnD9bjjLCkCk7/tYkQ8AoBoeqAAAAIDex5axPNZFquoDA6dUjFI6ZFKqsumjI5H7tMtsCCTOhhjtntJvmfhQ49Z0fZVNcN7v4MXh67UcLRKQTZHxiMqoEdpTqNGaZP7qzA0btTD4Ceegqb1Mfioj0sUBAAAAQJMjeQGnFAAAAACMCZxSMYpr9LUjILM6fH3VyjQhRIbR7ikqE5VNTzIXPFebqkjuMG5NF462MuqkQ/LzgQd9MGdso9bL0JmMnZVRK9jNCX3bdysnXJLrM1rNaC9T5T5lBQAAAADQDL03feyFFgAAAABgROCUilHitq7rAZnVodlnTTDqfaW3snGvPcnodV1XZeTsoPePYKJa60XoVMZOyqgdW/CgnDVh1c8RRjuFOcS8Zp+yarhqMHesjE9iqawAAADAwYdjHEoAAAAAgCGBUypGERJLhMzqcNTwOsNG5uitbLLZn2z0uq6zMiYc/MGcNWi9AF2QURdOqeC6PpzzPUatG8Gy6WENI5mz5lgZn8RSWQEAAAAAAAAAgFgETqlYRfBEyKwOvjJXmlFvK72VzeSTEo1e1Y1URpmzRsgYJTi3uhL9bE+WOW7h+0U2Q1cSpaxaEuePS9emPb+mLsfwetc4sxdsHUq2gCbU5cPKt3o/t25+EjShLovmF5phBwAAAAAAAEC4MEMFMQoXDUzoUGYjVLos505/pUEbFKVsepLXb5YbJK+xffNURqOURRLajzIiGYUBdP3DWH62nwd8IqMYG75t9oKtp0+b2H+9MbtDoZlosJdXtF7rcrLXfcpNVDJkePXza+rOv21EtyIMWqIHOaIye/T9kpvdx2QxJ3v+J9cDtx3vfBiaiS7kALGbR8xv9DWf4VRa/hcrll93c+9R86CZ6PP61vwJjUk7FnZX6sO7lfN+rK2zn377sEvqoZno882OWafWxTveUXZ7eHd7P7WtGHmpEdd91APkqDUPLp67J0Uca5Ybt9fU97gB9UI98p+sii/P3PxnX2NrliNeen3SFWM/h1bUtceO73dfT/uWyzz/vPDSHA+0oq49tnzgPTN9QO3P4987fis0oi704qF1gdQLtgAAkVIxC5dZA2RWh81ruxl2vQy9lU3ymfYYva7rrIwHjTISQvspPLsgo+YjqWhS3s9NU0Na33TeP+MOo9UNIUQgtaVW0sWR3skhFap3xs2vBuqxYPaYGZiqXNbeKQP+Tg6pDivYmx6iqCmMHKOLMyntT5K9+YzgcZw//nWKmoJmogtNvFuTmhZ2tJtxqSeQbaAZdWh3SGVRlbB0t/y2ecS6W6AVdSDdt0jSDfY6U46lPvm3A2TP09CKepBDinsa77ZYWi7ztjQvmbNkU5+wzkPoYG0vLcm4ZXP5Z009mp+mT91SeTbuUJXt8ba3SHjZv6o2pGxefNlP/aER9SAH4e5H034mW8zL2/YeNKIuVB+WXVH0C31QN1R69ocKYhNL2cqNkFkdnDnpO4x6X+mtbMLSbPg3GvVURsFE9UEfthg/WvMPhJ3I2FkZtUCvesevUpZxc+tAA1aPnm1GEZpwFGam9f7VBIpPjjum7b5hhl2L8Nd1RN2y7u9eT+7VvS9GjtHFI0k9fzUOLElNh2aiy/ah25xdsQ2IPOQgZG0OqQ76pu50QjPqkOCVjgs9burWkAytqIc5UR4Xepy2u2IwtKLq89CJIeM6vNijIl9ftTJNsUHH82n1lpRjoRX1KPlmzwlBe/i9puOhEXXp3b3xZItkyaaPq8V6HjQSfeCUitWBgixthszqMPrujCbOeZXh7imlTFQ2Pcmcd3vKLmVTa+CqXtteRl0gJFZx0L8LMUjzZehExs7KqAUoTZ9Zalkdei6uwf6GkSoGvaXmSvRnVeT+lxVe+uM9s7d9Nkr9+/9LpY/b22lpNjUvi0BbHak+IKy/R+nbVImMaTV/FXooS76G9a7yQq3pW69ydFlewfeyg89r2cHK0tZhBB9dKB0Zb9n1Y+g5u4d9CM1EH0rT593t/SjkVMvPTcMWxEo7oTXZHD1rX9urD2+K/zrW2m8tyWUWplc7unGvVNqjYvD3aDVUHdW+HtxL2OF4z8j1QOvyj3lr5E6zxf9BQAbGfuk3qOpb3J/q0e1a1/dBeyT0a3wOGlGX3Q1xnzuc9fOTEnfnpzqbELmmyjOfEFCCzju4w2XLWY9tVzZ9dCJu6YDP7zPMm8prbv36K87EOEMNPRlfOuKFMafrTe6ime4vlHbwDIO2bV/mzHCcqRd5C2e5JzJZfHTQMpk9fXLuSCnT5L30bG2W8NlKD/olif82d7pjgdZtQenKsuIyA46pigzvX8O1pk44xhzh6LMLZrlOWjFxzfLWOG/H2pq167v1eHTccFXXxXtz5Z7xu+32Vyl1HzkG5V92Xk5OwsKZrvNyZzg/DVt7HYGxX7jGUlTWwsk/pphamwMTGh6bdRXfvfPsaK3VQdEIpUcNuZdZ5MmMy7VMlu8+0nW9tDDWPhL7kE5s2RUP7epdf0ZyLf+5df3Q26KxPsSLFcuvsTSlXdWasKPK1Op6ZEr2+I16t0O47FP9xYM9y5xZFwX2K459JZLrCpGDmFL2UYQUOaSu6z96kZbbIrVsQzYxe7tlpZ57Z2GkZKF1KFqOXXsTRUhVbxr+xYWnnBP2NQe1ahMtPq8v/H5JTkv3mlN6dq/76bQe0yM60atFu2jNJmQPb0lcSvWxu1ZGasyA+tF1gqmwwrlujp7nLtW2EUVMkYMqluqFHupJpNGSbWJ13t1ozyDhLrOZgViG3sC+VkeyGgi+mhnMKdVWJh12EEz8omwM6ZRqL5ueBO70HhLcRk62VzUpfptsR1xGtSmc1XQF28bnMeY10XHvMN5FNOg5kkFZuAZNv/T8cWJr3N5joEHZu09SNovU1P3VI5MXK5sMmnjsXTVkPDP1PKngudodspDDmvbxSO0QycGs4KzW1NrcYQebp/XE1sSetMbZE9GwQfvk/sPtnw4ouo62eosIDge0dorfb77XXmdiLRLLcfYvp0mN+yJ93Zt7j1LaITYPw/VfU2bv8amfSScE6kh2Rb9I2qN9cveeSD0IG+FBfdd/nsltktgqFsdY1ZczX8w4Y8atkZCn3RmM9Vm6wNZlT99T7fU/lG4xPdB/7O8j0n+0OwWLoO3OIec2byy9Py05tXzy4GtnR9AeoItQNPqz2xvS80++NSJ6C6czKlag8X+kXvqJlENKD315uJ9VAADhA+n7Yhgu2GLIqg5mf8PHRrufdFsmzr8wbiXXV9lyZzi2KJuDRkFxH79cs+ruXLay9jJqG5k/pvxr6iiXzK8wWtXos+P47H3PtUquTVqRL6V60BvlXHxULrNXKvy21ZLPtIci8Yw+LqEy/nRRft2+5x1cTlVTrifm7nh8hTO+nj5Pzqm7UW8Pwkd6/W6NyXulUfTZGtLULM8Vr1XcfdM/d64+//WdM9vX2Yk5/JL9hOB+ckuFqi/WnPp67cVkkz8uXZvGYpQGu39cSIU7R01ZyA5HYgstTtwdjkzkkArd6n9Iz3UtT19r7Vmyh/2+pnrX0+Sggh3Ul2lmWc2cXj7vipdKFg+C/tWXe/SKF3L+2O/rJtoyoAnG/vD0I3q3h5HSiFPfoVd7GDUNLznSj1QGOKViGOvOIkqTVaoDUUvbZTUMm8b1WqFsWgxUpJb2MukOYW5ermz8Bqzi/vay6avDZvygUZFCiLGFM90DtCY3yUSyHUnZNIRjb6Wz7HBO/B7u4Cccg7nny/Lveb48f/uPF6397bFrM5jdJ0rjhH9lvJ9de6SpwcIFOWZ2MT455FSGkMRlzG87SouD47AOspUykh0oZV/o6SZvi2oRbJTKUvjtfwgey8L8kp4eRsJxXbc3bn7osc/mWqKWPa56Y9tYqzfxMa+wDUtttd3xuKvfhbH4QFiXYP7fejZS3D/Vkp0cUs1Cmr+ROR7/vKz367H6oC45GxbGMVFC+82S/KKa9vi8PrGKPnOWbNJLivaIQBFSoVu12qtLPl9WeMHyV29Uq63QSpu1vTXl8/SjbB9LNvZ0tNLx/qo/3/bZKBoHHumYVktt1pHIktLabWGNxf9URkGaKi/MUaTW4awdqrs1Mrso7+TEtM09Zf4EbfXY5hpxTUK/sP1Lr/YwIn3X93P9pnl0KTShHcIR2Yn0fTFM5n/ne7eclUOL7P1B46J+QLIarfL+OHX5R1aT73IjlKfVb/4oGutLRIK821N2Fc10LzPaulLK4GtZrlI2vcktuPiACXbNQb5iUr51l7K9VWOS38VCoosOWDY92MDEZnI/C75Z7FfOODLKh5yt7H8axvvzkNI8hONB5/Wt+RN2WfjjbaMfL/t5eBVL9LjOmpKpDWdUp3bZ11mogh0i/QAaLCOtIUUp+yhCihxS0/qdrTsHu6HGLKecU7Tw+yW5tHZK3O6e30845UrVUiSViMTuod7ZPsLTP5r3fCTq4OEwfsTVNyo2eeFY8w9N2Sc+qFobRvrf2N40CZkNidU6QjZY+H7R0JHdFyWln/5gjVpyJDP51Ob2/berU/LYYb58qKV6crh1pD1l3xNqyt6Uve0Kp8uSw5r73aIcvhLL/Ui7I+piNWUwx9l/V9q4+xo5t5lepFx+pPel2nXkSMdgH4+6IXBPqvXGnJfJC81y43a17wuN1ZH71bLHu5XzCi1MunBSr6sqYI02KLVlvkrXpufWcK3hqXZ7Fa7nxfYU61Ff/5migSRJ+CK5fmssg0ipGMdSVkgTdC4Ni+hql9Fw2Nmef6Is2kBw+TWj3V96LVNVZvFnyqb24IVjU7QULRWQRZGpk6/VtpdN8+Td6XxYSOxkJokrGWeBqBAu9orcCdsAtbNBale+0/XO5NcTprIlfqTW9J9zR0pZpszmhFYLZvLM5SbP6uC6Rlp4UAi3Q4rKRmUMrDuR2HOqZGLDWrhprdoOqWkT+6/fZq7viAySuG9KtHWtheuRY4rWAVF7zY677SWf2libPSzcs+7mXdKcWB3Dky3UdEgRffvWva48TS4WjJU4uHy3XupGJOShl7PSz1TPIUWM6FPzCGtI+Cyj3j77Xue2hVppP4xyXxwqZzdn/t3l9L5ck1A81Sg60bNNTK2uR/rGp1ybXZiyQu+6MML6OI2taVdyKekOI5dfT3YKh0PKSOkt1SalyLHYCHowQltF47twOKSMMNaNiBxaX5AOFSXybDnrsSeZdqOlnhrw+X13G1X36277ulKpgxk6rz9Vw54f00vPZaDJUIcpsYT6f4PcWrVuf0P26LszmvQofOFM1wtMsFs6ue++zJnhOFML8hbNdH/RaaQdZ3NyZzhv1Z8tyOEmNisFcAtrc988HUbfBQlESjn4XmvfxTW7R2s1CqdgZtMwifEeLl9DQbAuF810jc2Z4YzYS5RdGRNGasxEZavMLF5ecmrTty3c1OEstHvFvbdljX5CbXtQKqxSa2vzo+OG74yGnrU4tqV1agZl7z6J1l/TSrpLLdsAzx/6swlsoy2bwA7asg3soQ1bwA7a7DdgJ23aBPUF/QbsoI5dulpOREoBFldS8DemzbWlSttlMyx+Id2NMqgPTfhSyjLDdHRKWfTqkAp0kibPo6yTdb7ICVT0rGua2rKSDF1I/ehvL5PuyJ3h2EIOQErhJ/lsf9BzvaAUCN3q076wtlh89KF1pLScFi5vRvw6ckBFsy4HI9MO9okkJbm1J4c6pNqEYrdpwR63nDOwNBwOqWg8CETi98mp279fZY2XexZyYSqmdTn03B4YKdqA1uSgtVIoyhA2MY4csa4L2EFb+oE9tKEb2EEf+ohlOxllzTWj2iZaOonmtYC+gVMKsMxN/2pq7TfsOq3JRTKRbEbWfffvZ39AkUY67tiqqAyGMIbJM5eiQQww3HC3lUW/UPoyZRjzdmffEz7+WMEs10lqyUnXJhk6tYhSFiqTXu0hc/HngL5lPq3gudpUvZaDZD/20z6/OeVfI8wnLxgx6ubeo+bprm7McC5T856PZF2KZARYrDwYRvIBsNEu/yn02OrzPAYniPrX/WDDG9PMdbw8y70rP0uWShd+vyQHNlH/+iWrHhxU8P0rUxf98uIli+YXmmETfd0HsA3soaX+Nxq/j3qA+mI0HcAO6ukGuo+NsW64kPRsyHB9AGND5k5YpmhVQ2/B8z+0yWRsMv873yv5Gq/Uq/wkO5XBCLagtGTCJB7RezmoDHpOsdZRDs7+r3MnoXBwmX2ixvpSdE26NsnQSVvmbiuLjuvGdOcPHdFSrfZ/6La9Csiu3DNKWahMui2HYHaj9YXBMtE6D3HCv3Lvas6eN/qDyZGORaMxnpX80q9SDad3a4mH/tW7Fjk74rzxD3VUFcmTKCyOvxnBJnq+LjkGq319i/1MmpO2M+598+DiubCJuteiRcqrvpz5QtVXs7ZWL5jzVfUXD/Y0Uh+ix98nm5Djduuyp+8hJy76dPX7KHrRRK9Rt4i0hU1gB23oCLqPjbFuWJ8xcTuAIAM+v5cmG9/QgChvtMsSE5DzrdVvfldvcpPMRnMcVvcqflxpqdfruHdbHyiDAaC0cV10EqYwIVaumt0YtbfDA9dSrsm6sAYZlYHKond7CMZuZpStk4lraO0fvclPMpPsbWUIlEW3UESRHm1wMNsEo6RoEVm+e+fZtI6UUxbzUt3iAi2sJxWth4RDfVCI5mSVg8nvhx57bNZVR7ogdiw9HEbi92WZm8kRFXquuXdJOuyh7vWsCTv3Wj+yW6Pver1HS0XLJpG6xoge39zRwqWbWxjP9iS2jmVNPd8xWv+hN5ufmJL/tLdp9+xqr/+hyj3ONUZyFIb2z4ejQzVenn6pZPEgsbN0F9u+dilt6TgWxlFavvYFy1+98bLlz7TSZ/SKF3L0Wg+Mck1y1v5m5T8+po9e7RHJ+1aN+kd2GPvD04/QmreoH9q4HtmEXjo5lP8DpxTYi/U3nfE7pq5j6o12GWKKBpf1Tj2l8SNZSWaj2YEmRAUXN7JO1jPSKH6SncpgFHtUpm/4RxedhCmSV/qscJZ7YqRlomvQtVgXHFIke6AMBiCwtpTEnqJ9IdgbekrjR7KSzAGTKGUwgpNQZmJH/pNVuo9SoTJQWULP3T7sknpyRN3Sa/S1tA5YrI0HtBrpn7oi/v5Ws+0+ckaZLdanKotTJxhV91r/zSAXXprjiZPlV0PPmRrEG0ayhx6vY/Yk7mQGJVL3c6TbNLufZ4cei8SWfrCNevYgtsm+vZ73y5xZFxm53pQOviipfNAFeWWDLhimfFKVj4U+yrlE5W9WtbP4eKvX33CwY7RT0b0WTeo6WOOcjod8qfmvsIe61/lXY9m9dZydSx8926OzZ49o/L9wQI6oXabmlTWSuCff+dkrGOuqfx1yEPbyeVe81a3h20P5f3BKgb2gCe0Bn993nbL7lAqXf4qubaRJ9a4y5q2RO9vT+LXoQNwWkpVkNqItKK2XMDHdDTRIZj2nJNsfNOEmmDy5i2t9pTBZfFQ40/VCJCbr6Tfpt+karCsOKUrbp8hOZTCKPcozNjyobAqVT5bktb+rhze/SUaSlWQm2dvLoP92akb8Ooc58TS9l4PKQGXB6Esf40NyFk7LGHPS9Zlj7nl03HDDT7wf7gNcNB/SW9cPva3V5LuDnFMma+PkyYOvnW1EW+jpt+t7N842yc0/Bo9NTL7FaM824dJdtOqJybr9i70HzWIJ2i/12i3C4nCuDj3ut6epyMh9aN+NC+uzNi0qkASjZ5T7lM+jQogRyrkG5W+tasvXJ8VZGHqclpxajnZKvbZLksRefYZV8LVGsIcefzvW0OMyOOQoRN1Qv360cjE8MOayrz7mUNLAcqUzhOHAftl65mOXCs7I6+yM8KVcXLAb+39x3/uxrvPVt+ZfKTH/W1qWUWamq455YfTbRrdF0Uz3R0r7OFEPsirt4YKcGY7fGtUWhbNdNzAvO5Q3YMqYhT1YlV4870gngsipkVE95Brl+g+yNsdGF5+22Y2505yvGs4WtH5XMHUhZ3NyZzhv1ba8rheYYLcou7VKRRlphCip0HuzV/mQUcHUd/prY11jKzOLl8fiiygAgMMjHM+t0XiGDKQuydo5bKTrh/L0Mx+sgV3Uf47fkT99or+175nNJlGybtfop2Op79k+6EJat9HXd+NCzawDTOtIxTUk3VluizuRSXH/zDvlxrkMqMrzP/zj8R6ZtqN2lHs29yk77U9GrCNH0oeokZqMInLIIXVxQtbjlEkAdlDPJjTJ/m5T6Zu0b5Ltf8s/+dYitBrqQikua611FxrFHpHwzUSzjlCb1b118M2yVPLDx6NueKWr5YFTChyU0kEXZHj7nvKosntthC7xhmX793/ss/HjKmi7jXV35t8lvP6nNFnvLKY/DHtmdEys90UTCpmVQxYpbeQZGm8LvyzvVTzBSBE5+6NolusxIbN7D/G/lQkTmytxz7ycO1LKDul6z9ZmycJ2DfezqexQnFEskCLu8ZzpzvsMawtan0kweuvYpOj3gbw7nQ9rUc6CZ1x/Uuz3kLLrV4YMZ+rVeXPQMlIaRW9cT71FGxXMbBrGLC01eben7EKvDwCIxoM7nh0BAAAAfffn6MsB6oQ+6gmcUiCsFE9dNDZu27q/KHfLmLDYj7GvW/oN+78hcycsg3Z/TXvEFEWGxGlEpBaZmW6MhQipUChlm8OUSPdorkZFLHT7G8aOvjujKRbsERL1cjidxnrOxSJhYpuEn63ngu8UlubAG2fca08SXKRxExvK/WygEHyC0osOPczGTfPRQ2GxxaymK5jMA+2BFp1wezkxJXFl7vT4d4xbL9wDaKuXKDC9yQsAAAAAAAAAAESTQ/HXaM1HAqcUiAhlgy4a3tr3JIqamqx8+hzify9VPh9Yt//wRtbGf6+FNg8OOQJlc8LbSh3NULmuVdEaUrHqQCTHlNOctEBrEVMUIeXy1U+MFYdUkMOMmIqOTQweIbUv7WkVX1J2TZzxeT+MFZuY1Xe68Fk3marKHrnlnIGl4brWLw8tHS6ltQ6Wd1o3HP3AuLUHra+mpOcFE9coh35mYVOMmEZxX1bNbswxidYdhxoRGPX6+2xtlp9be5w4LQEpLwAAAAAAAAAAAIMBpxSIOGUDLzy6td/JY5hgA3l7JIlyN/UP2Iexre3HhcrBJuu2FV9nbVr4C7R2aCy+7Kf+fXs2fSB7fTlqXF+ymIu218RPHv/e8Vtj2Q6Uyq935eCnDztKJ+wNIJtT0WvD742esu9AtKdl+xuj9cO1gV+Y2F+1msYukhTOdJ3HBP+gfLA5bntmqD1Edf+Na7LCkY9+y9wlk3q66uZ39D0b48ftz0lOKeE4kz5oi3LjbmWEMzl3hvPTmKkXbeX3aDUCiSKkBJNteks1CAAAAAAAAAAAgK4BpxQABoEWs+//rftO4fXThHe00vm1cIvpT1tPdTyDRej/R+Es90Qmi38quykqiVDLJH5T7nTHgli3Rfu6Rm+wQ1zvKQKUKd3RtUZcr6irUJTOuty4ggYn26tjNnNX7m0juh1xRMyuOW+/a2uWLgsee+zye6m3XHl58Jicxr2qB9/F/fx+ZfjjIJvIFnliLEbjBNZCk22986Y7f9CSXAWzXCdJkqdC65FcAAAAAAAAAAAAOHy66muSoCoAtA05hYY9M/ofuxocWYJJs5RTLRG8XAtdg65F14RDam/IGSSsnsGUqiza16Zr0rXhkGqDnECKPk5Qwxb72OSEWHZIEeT8cTn8L+17fuTX1mPD8ftuzksOdLzmpaL7h9aYtrdFzgmHxyQ+cPsbhsZqejhy+lRmbPgvOdDphQa15SEZSBaSCQ4pAAAAAAAAAAAAEIiUAkBnfH3VyrSURM/9EheXhmu9KVo3Shb8/doG2yNj3hq5E1runMCb/4L/PdJrTdHaUTIXf9Za5IOWCERNMf5cW9q2qHRA6zkTt8e6MyqUOUs29ZEzMxb55Lhj6LhvOfPXdWt78WX4Ku+fm1sbnjnc9c92L34gQS4Z8pKt2Xyqx+77dpv/nGlc2C5IEr88muEr7hH83rb4gX8aMSXnkVi3g6/ZHJ/t272pV/mQUTITO9RKl0fpBCXGe6CeAAAAAAAAAAAAsQHS9wFgcOgN9KO+rBrlMyVeYLJIow513SlaL8rvlZeb/Q0fbz4jYzmiog4PSl1m8pruUFrSSe2pw8LRwrmVFu5Dv8X/bKxGfBxOfcioGDqByeJ+1r7GXQQoZBJ/pKr3+kWoL/sn4JzqnZbmE87C0PO/+dIXuKeFJH/GpZblhxo1Q2nphBw3isvS2cG6lmr9L0ttLe34zr5p/WKN535uftHPTVNp3yy1rJbKqyYMW5Ow22FJOlOYm5fn3Z6yK5zX++WhpcPjUquv9PLuReu7p/47WCcKnqtN5T77KLe3/ovDdUQCAAAAAAAAAABAf8ApBUCMQRFUPZ07hntNSb04E4FJea9f6klbi0muCTQMjBda/PWVNa4eaxERFV7yn6yKd1gSLmibNBdj2aGvdVTGGV9Gk/Zub+PHmMw9fMhRKPmkG5UbfjI78vW/ahlnH8hm+RU4CLvGyytar3U52euh545b5WHOBlNoJ75e6cU3KqOQTUxiFYIzF/PzusDfTKIbF8zJZNabCT5QGaUM2k8UXOFg9kk6Y3Jm8EQsO6XeXLln/G674z+h50zCP/f2Y+03037QUcSl5sJwpNEjh1SGo2ZNqO63e8+5R8j2XNnkL023LJpE53e2nv1CLKbtIyd5eUJir8zGhkotOLBp3TXaXnhpjgctFAAAAAAAAACASAGnFAAAqAhFdjC/7ShmYsNpcl1pahO54M5AA82FS2nCGmgynvnZWmbybMZ6K5EhkELMxMc1C3Gqzc/7K73H0ANHtHG38rf1HpPYauf8W9kvlqqV+kzPPL+mLmfvSClRffI3redzWTpHkvkYpS6ccuhRhdyt1JnvZUl8zWX+Xu4Mx5Zd/3km17YhfUGbY0oqr3KnjT/6gXFrY1LnP7n+5DNZHgo9R9FSmes2jSwbPHQWN/lOtlkqatzrrdNPKekZeFlBtnjWHG70VOmL7zza3c3vCz1XbD0rzfXDZt79hJ1Voef3+HOSY8nJTve/iHMvlWRzoiz5GniLY9xtI7p1OLQpmtA+sPrYeFvpj5N6XVURzmvTyykJJx5lC+1PZr249aJ4ufpftO/o5n/qistH3YtWSl1Ofb324j7C0//k5JZPp03svx4aUR9yJCMCGgAAAAAAgCMHTikAAABgPwSiRrz2JMHkQPQAZ5JHWJrrw53eLJahaKmWhJbfMy7XMlm+O3RSnqI2MnYMHCb5+SDO+DFM5hmKERKUPyW0f6WRCeUjiSrBxGrZJDZW9di0bn9RHuXHXWJpnnTLIPuHczZm/ne+N1b1/WtHYFukFJflMm5v6nBWCb9t2W3DksbRPkV3Os2Jecoo0KGMqNy0/lSzr3H7gRxI9H27OaEvrRPV1/bvKbZm6bL//VUqj//9pVlb5i6Z5HL53gv9f06n+bIBU8/5MGZssbbxZ252H9Ohc59j9W3DE46l/dnbPhsVb+rxTfBv3ctr8i485ZywRGCuuzP/Ln/fhsdp386TP9uQabuQJtlffuF7f+j3mjPSR8SKI4TamqpT3ZP9ski3+F0Lp2SP37jv33f/pvH/bFLpuHrR79mbe4+aF2mZrnit4u4Ef9NjweNzE5qciGD7Hx9WvtU7zbyr32k9pn8bjeuRM+pB94CFTGbjM7jvmU+uS5sBK6jL7AVbh35Wn3BTMm/6+K1r+2FNQgAAAAAAnQGnFAAAAABAjNCWNlE8poyQ0s2m5mWCfT6Rs7MWcJNnbOj3bh3c84ADqEAaUnNSz4DDlvOE9hFlIzlu3b76mqDDavfiBxLkkiEvtTmmpPIaZ9IMcjwVT1001juIfxH6m3a347hYiWCjCe6yEVm/co5mrSmzkINoTmX+GzZfwtUdf5Dqn7o+c8w94bhu37LqvRwb5Ayktb5qdra2hJ6PFacU6WTHMfH/kezNZwTP7esEfL4s/55ujv85iJoa+ZB9HVdHAkXFtZSYT4jL9v14yzkDAwvgnf/6zpm9fbvvCH5neIolZpyEL5UsHtQipB59VqUW7M8R982OWafWxTu+VHbjvLu9H12SedvFkZbpqje2jS2Wk78KHp/Vt6Lno+OGI701a3PaWoeuf572t0i2398+7JL6aFz3hNfqtiqdVLZgrOTH67v1hyX2blNKra3N0bxHqY6YW1K/tLH6JS9OyTwPVlCfJ+fU3Timxboub7rzB2gDAACAFumqr0mCqgAAAAAA9M3vTra+cecxcRnZxWvsFA0VmEBsNX+11+DQbzvoW+fkdKLUiJS2kiY7Ah9ln86FRlB1H/9QI63f1TRiY/qyrAH9gpFQQ+ZOWJbsaHgy+D3aj6WUiuR42lfHdBxMC2aT29Z3DOIW0q5wXfdA57v3kW8PHlvNze/HigOkKm/ngFCHFFGZ7bgj9NjB5dTQ456VPD5c1//wnWVnWbbu2kapE2lLx4E6wZs+Dn6Hy84lsWKP18q/fiI+QRSnJPq/Kf+NayNFRO37HZvkO1XZxNG+pbslLxpyZWW51pLzI1BXle0ptZ66WLAH6f+DDW9MW/j9kpwDThKcUDChRZJuoE8Pk/uaaMnGJVaMHv3XUARZctXmkmO2l9Y8t25+UrSuK8vWwDrFfh6XBSv8D3Lavj614J+v5ZVOjOZ1yTEpC/NLKyy+F2GFvaEUxmpct3Cm64Vvn2l6HxbQBrSEQsEs10nQBAD6AE4pAAAAAACDEBqBkLlpwz/klsS5lEIujtd9IZXVXBfOa6Wf+WDNvg6RPjdf8UdaR4o+tB9zA2tFx+SIovWkaBuqc1f9zoflZvuXPq9lh8fc+KZoqJkbruvy+Iy/BPcpfd/a5LRPaP+35586Z8vgxHRv/9R+10w5/YpYrhv7OgUTpPJneMuuH2m/viX+zXClUiTcTfJ1+zumdGTd+3vTXRbrGed1q74wFvROk7dxdvcfgsfd7E1ZjXLmnft+7+emYQuUTWA9tAx3wwvhloOi1Ka+vNF/0z93rqYJfjpHESdn960YaefyJbSNhXWlKCLNnOzeYu3T8qw4rrRw0S8vXrK/71VZ+q4O7vfsXvdTtOQ7K6viOrLHTRk7x8RC/SAH4eI1b74yv/z5fx3IFmpyqaN6dqul4b5ma9OdsWAPirKllwjoQ/sH+p51gdRL6XmvYyfU/CGa8lHUrcR9U2RT7YMY8f4PckhtXZtR8+HEddOifnEuvrVJ/DNYYW9eObbsrwerQ5HCz609JInlwQK/btvUujald4cFtDUu15I8SN8HAAAAAACAzvnloaXDabthUOKGWJhc74zQdInkCBSmstPCmZ7vYLzz7vLH3XWmjslKRzf/U1dcPureWLQDRXV0T3fuFYHU0uzYb+pKmjTZPnSbM9yp4igFmdPb+mXHc6TsjNlUZOT8sHS3/DZ43LzHVnR5r2tyD2S79G4t8ZN6XVURbjlofbWNzPE4Rag5uHz3t9el/CsW7fFu5bxCe52pI2Jth7P74AO1U+RMNdt9TcF0oOHm1NdrAykz73VuWxirfci8l756x2JpCayZ6fXGvXewlznmnV88Oi3eUz7+veO3YgQSGcjJ1NSj+WnBxKr0evPVB9M1Ra31G1T17Zi3RiIFa4RYfNlP/SuLU6+WrGL19QV9FnRmu7grmudgPBp5m3SlDVp9a/6Vx7ww+m1oTBuQY8joa8piTSkAAAAAAABAzPL61vwJnjjebfvGboujuQ4Lrc9WkrT+JcG8p3Bm+T67fuiU0BSYsQY5CJPimjrWUwv3+l2dAafU/zgUp1SkoMmY/3P3dwePY3n9qH+ve3uvyRiTtXHyhKNvnh9tOSiSsEqY26KhJLa46NpuMVc/yCne1LSjNfRc713HJ6rRdpMDcvWuhPe8wjZsmN835e5bur0Sa/agdqJuqWj83xnx+nVz825SSx5ay0tI3oEJffc8HynHsNbrx66He6xTGqyj6dic6RpzzSdD8tWSh8ZZdnNCX0ozHqtjq3l5297zeU2TzRb/B9cU9LsMo351IUds/x67T66pj38ALyt03Sllxq0DAAAAAAAAMBrX9R+9SI3rtk9iXgELtJH5nePG2hz2oaN1W7aUaPpoSnb4I28OxqWO2uWf1qUvEZLrHDpuivM+Fau24FLSHYy5KbURrRFU1su8e3q0ZZAkgTfn2/Em7fnIUp/c4SRsccZ/r4YclcJ8YccrvzIbH4u2oIiON15aUmq1yH3ouNUrlar1MsFn9Qk3pQrbMNpfZzK/pGxizimlpXZi1otbL2qRFTv4zcy7Je5s5dRxsWaPpJLetp3Me3Tw2F/jTFFLFnJIOUyJ65lgvYpmuZ7Kme68L9bs0Zay0jSZ9skxpejkd2q+/FT0rGuaKWnrFf7d/e/PmeFcFov2MDP/025XEuuZFAj2V/UZoOC52tTuloIxFQ3HLtH6S3FYUwoAAAAAAAAAQESgyV5yEE4efO3sSKSC68r1KTKK1vM6N6HJSWt7xaotSP+mT0/o79vjyOSLcgae1mP6t2rYg9aNogipYPq+WLVHTX2PG1pNvjuc7vjHeX1Krhr1g+jFfQs7DiS2OFbt0ZA28FxK20cf2ldLjkTRWhnct3BPTEaCUDshVThPp9R99Ml2yferJYtXdEthMQ5NbAvB/8YZ+4UicwZMtnyhliw2W/wgarZoX8js9Fi0B6WpJDvQPm3VdjzYHeIZq7ffSFP3rY/Eoj0aLzTVeWVvCe1v3dF9hdryWBIqF+1KSXjfkVkxS+u6Q/o+AAAAAAAAAAAAgBiEUnM97up3Ie3fbS/51OhrXWgdSl33vjt9WgO39jovvW5mLKaL01r9KN7d52GbL+7sk2TpxhOnJRRBK+pSONP1AhMsj3H2YO4M56fQiPr2iLNuvblF7v+73GnOV2O1nUhY6O+mhXXtCt8tfNlvabnesdv25xFTclRxFHbZ10Rf1OMHAAAAAAAAAAAAAAAAAAAAtKXwU/P6XfXtcDh4AAAAAAAAAAAAAAAAAAAAQKTBmlIAAAAAAAAAAAAAAAAAAAAg4sApBQAAAAAAAAAAAAAAAAAAACIOnFIAAAAAAAAAAAAAAAAAAAAg4sApBQAAAAAAAAAAAAAAAAAAACIOnFIAAAAAAAAAAAAAAAAAAAAg4sApBQAAAAAAAAAAAAAAAAAAACIOnFIAAAAAAAAAAAAAAAAAAAAg4sApBQAAAAAAAAAAAAAAAAAAACIOnFIAAAAAAAAAAAAAAAAAAAAg4sApBQAAAAAAAAAAAAAAAAAAACIOnFIAAAAAAAAAAAAAAAAAAAAg4sApBQAAAAAAAAAAAAAAAAAAACLO/wswAA1Niv+YaMCdAAAAAElFTkSuQmCC") no-repeat;background-position:0 0;-webkit-transition:background-position 1s steps(25);transition:background-position 1s steps(25);-webkit-transition-duration:0s;transition-duration:0s}.VueStar__decoration--active{-webkit-transition-duration:1s;transition-duration:1s;background-position:-2500px 0}',""])},function(A,t){A.exports=function(){var A=[];return A.toString=function(){for(var A=[],t=0;t<this.length;t++){var e=this[t];e[2]?A.push("@media "+e[2]+"{"+e[1]+"}"):A.push(e[1])}return A.join("")},A.i=function(t,e){"string"==typeof t&&(t=[[null,t,""]]);for(var r={},n=0;n<this.length;n++){var a=this[n][0];"number"==typeof a&&(r[a]=!0)}for(n=0;n<t.length;n++){var i=t[n];"number"==typeof i[0]&&r[i[0]]||(e&&!i[2]?i[2]=e:e&&(i[2]="("+i[2]+") and ("+e+")"),A.push(i))}},A}},function(A,t,e){e(8);var r=e(6)(e(2),e(7),null,null);A.exports=r.exports},function(A,t){A.exports=function(A,t,e,r){var n,a=A=A||{},i=typeof A.default;"object"!==i&&"function"!==i||(n=A,a=A.default);var o="function"==typeof a?a.options:a;if(t&&(o.render=t.render,
+o.staticRenderFns=t.staticRenderFns),e&&(o._scopeId=e),r){var s=o.computed||(o.computed={});Object.keys(r).forEach(function(A){var t=r[A];s[A]=function(){return t}})}return{esModule:n,exports:a,options:o}}},function(A,t){A.exports={render:function(){var A=this,t=A.$createElement,e=A._self._c||t;return e("div",{staticClass:"VueStar"},[e("div",{staticClass:"VueStar__ground"},[e("div",{staticClass:"VueStar__icon",class:A.AnimateClass,style:{color:A.ColorValue},on:{click:A.toggle}},[A._t("icon")],2),A._v(" "),e("div",{staticClass:"VueStar__decoration",class:{"VueStar__decoration--active":A.active}})])])},staticRenderFns:[]}},function(A,t,e){var r=e(3);"string"==typeof r&&(r=[[A.id,r,""]]),r.locals&&(A.exports=r.locals);e(9)("320fad4a",r,!0)},function(A,t,e){function r(A){for(var t=0;t<A.length;t++){var e=A[t],r=p[e.id];if(r){r.refs++;for(var n=0;n<r.parts.length;n++)r.parts[n](e.parts[n]);for(;n<e.parts.length;n++)r.parts.push(i(e.parts[n]));r.parts.length>e.parts.length&&(r.parts.length=e.parts.length)}else{for(var a=[],n=0;n<e.parts.length;n++)a.push(i(e.parts[n]));p[e.id]={id:e.id,refs:1,parts:a}}}}function n(A,t){for(var e=[],r={},n=0;n<t.length;n++){var a=t[n],i=a[0],o=a[1],s=a[2],f=a[3],p={css:o,media:s,sourceMap:f};r[i]?(p.id=A+":"+r[i].parts.length,r[i].parts.push(p)):(p.id=A+":0",e.push(r[i]={id:i,parts:[p]}))}return e}function a(){var A=document.createElement("style");return A.type="text/css",u.appendChild(A),A}function i(A){var t,e,r=document.querySelector('style[data-vue-ssr-id~="'+A.id+'"]'),n=null!=r;if(n&&v)return c;if(b){var i=d++;r=l||(l=a()),t=o.bind(null,r,i,!1),e=o.bind(null,r,i,!0)}else r=r||a(),t=s.bind(null,r),e=function(){r.parentNode.removeChild(r)};return n||t(A),function(r){if(r){if(r.css===A.css&&r.media===A.media&&r.sourceMap===A.sourceMap)return;t(A=r)}else e()}}function o(A,t,e,r){var n=e?"":r.css;if(A.styleSheet)A.styleSheet.cssText=m(t,n);else{var a=document.createTextNode(n),i=A.childNodes;i[t]&&A.removeChild(i[t]),i.length?A.insertBefore(a,i[t]):A.appendChild(a)}}function s(A,t){var e=t.css,r=t.media,n=t.sourceMap;if(r&&A.setAttribute("media",r),n&&(e+="\n/*# sourceURL="+n.sources[0]+" */",e+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(n))))+" */"),A.styleSheet)A.styleSheet.cssText=e;else{for(;A.firstChild;)A.removeChild(A.firstChild);A.appendChild(document.createTextNode(e))}}var f="undefined"!=typeof document,n=e(10),p={},u=f&&(document.head||document.getElementsByTagName("head")[0]),l=null,d=0,v=!1,c=function(){},b="undefined"!=typeof navigator&&/msie [6-9]\b/.test(navigator.userAgent.toLowerCase());A.exports=function(A,t,e){v=e;var a=n(A,t);return r(a),function(t){for(var e=[],i=0;i<a.length;i++){var o=a[i],s=p[o.id];s.refs--,e.push(s)}t?(a=n(A,t),r(a)):a=[];for(var i=0;i<e.length;i++){var s=e[i];if(0===s.refs){for(var f=0;f<s.parts.length;f++)s.parts[f]();delete p[s.id]}}}};var m=function(){var A=[];return function(t,e){return A[t]=e,A.filter(Boolean).join("\n")}}()},function(A,t){A.exports=function(A,t){for(var e=[],r={},n=0;n<t.length;n++){var a=t[n],i=a[0],o=a[1],s=a[2],f=a[3],p={id:A+":"+n,css:o,media:s,sourceMap:f};r[i]?r[i].parts.push(p):e.push(r[i]={id:i,parts:[p]})}return e}}])});
 
 /***/ }),
 
@@ -67757,6 +81513,10 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-awesome-swiper */ "./node_modules/vue-awesome-swiper/dist/vue-awesome-swiper.js");
 /* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var v_calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! v-calendar */ "./node_modules/v-calendar/lib/v-calendar.umd.min.js");
+/* harmony import */ var v_calendar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(v_calendar__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_star__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-star */ "./node_modules/vue-star/dist/VueStar.js");
+/* harmony import */ var vue_star__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_star__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -67768,9 +81528,12 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
  // VueAwesomeSwiperの読み込み
 
+
+
 Vue.use(vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0___default.a); // Vue.jsで、VueAwesomeSwiperを使うように設定
 
 Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vue-moment.js"));
+Vue.use(v_calendar__WEBPACK_IMPORTED_MODULE_1___default.a);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -67785,6 +81548,8 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 Vue.component('like-component', __webpack_require__(/*! ./components/LikeComponent.vue */ "./resources/js/components/LikeComponent.vue")["default"]);
 Vue.component('dislike-component', __webpack_require__(/*! ./components/DislikeComponent.vue */ "./resources/js/components/DislikeComponent.vue")["default"]);
 Vue.component('swiper-component', __webpack_require__(/*! ./components/SwiperComponent.vue */ "./resources/js/components/SwiperComponent.vue")["default"]);
+Vue.component('fullcalendar-component', __webpack_require__(/*! ./components/FullcalendarComponent.vue */ "./resources/js/components/FullcalendarComponent.vue")["default"]);
+Vue.component('vcalendar-component', __webpack_require__(/*! ./components/vcalendarComponent.vue */ "./resources/js/components/vcalendarComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -67982,6 +81747,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/FullcalendarComponent.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/FullcalendarComponent.vue ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FullcalendarComponent_vue_vue_type_template_id_75145b55___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FullcalendarComponent.vue?vue&type=template&id=75145b55& */ "./resources/js/components/FullcalendarComponent.vue?vue&type=template&id=75145b55&");
+/* harmony import */ var _FullcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FullcalendarComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/FullcalendarComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _FullcalendarComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FullcalendarComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _FullcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FullcalendarComponent_vue_vue_type_template_id_75145b55___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FullcalendarComponent_vue_vue_type_template_id_75145b55___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/FullcalendarComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/FullcalendarComponent.vue?vue&type=script&lang=js&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/FullcalendarComponent.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FullcalendarComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./FullcalendarComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/FullcalendarComponent.vue?vue&type=template&id=75145b55&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/FullcalendarComponent.vue?vue&type=template&id=75145b55& ***!
+  \******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_template_id_75145b55___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FullcalendarComponent.vue?vue&type=template&id=75145b55& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=template&id=75145b55&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_template_id_75145b55___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FullcalendarComponent_vue_vue_type_template_id_75145b55___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/LikeComponent.vue":
 /*!***************************************************!*\
   !*** ./resources/js/components/LikeComponent.vue ***!
@@ -68133,6 +81985,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SwiperComponent_vue_vue_type_template_id_5415256c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SwiperComponent_vue_vue_type_template_id_5415256c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/vcalendarComponent.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/vcalendarComponent.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vcalendarComponent.vue?vue&type=template&id=529482b4& */ "./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&");
+/* harmony import */ var _vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vcalendarComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/vcalendarComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./vcalendarComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./vcalendarComponent.vue?vue&type=template&id=529482b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
