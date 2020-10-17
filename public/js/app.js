@@ -12670,6 +12670,1781 @@ var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"
 
 /***/ }),
 
+/***/ "./node_modules/@fullcalendar/list/main.esm.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@fullcalendar/list/main.esm.js ***!
+  \*****************************************************/
+/*! exports provided: default, ListView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListView", function() { return ListView; });
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
+/*!
+FullCalendar List View Plugin v4.4.2
+Docs & License: https://fullcalendar.io/
+(c) 2019 Adam Shaw
+*/
+
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var ListEventRenderer = /** @class */ (function (_super) {
+    __extends(ListEventRenderer, _super);
+    function ListEventRenderer(listView) {
+        var _this = _super.call(this) || this;
+        _this.listView = listView;
+        return _this;
+    }
+    ListEventRenderer.prototype.attachSegs = function (segs) {
+        if (!segs.length) {
+            this.listView.renderEmptyMessage();
+        }
+        else {
+            this.listView.renderSegList(segs);
+        }
+    };
+    ListEventRenderer.prototype.detachSegs = function () {
+    };
+    // generates the HTML for a single event row
+    ListEventRenderer.prototype.renderSegHtml = function (seg) {
+        var _a = this.context, theme = _a.theme, options = _a.options;
+        var eventRange = seg.eventRange;
+        var eventDef = eventRange.def;
+        var eventInstance = eventRange.instance;
+        var eventUi = eventRange.ui;
+        var url = eventDef.url;
+        var classes = ['fc-list-item'].concat(eventUi.classNames);
+        var bgColor = eventUi.backgroundColor;
+        var timeHtml;
+        if (eventDef.allDay) {
+            timeHtml = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getAllDayHtml"])(options);
+        }
+        else if (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["isMultiDayRange"])(eventRange.range)) {
+            if (seg.isStart) {
+                timeHtml = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(this._getTimeText(eventInstance.range.start, seg.end, false // allDay
+                ));
+            }
+            else if (seg.isEnd) {
+                timeHtml = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(this._getTimeText(seg.start, eventInstance.range.end, false // allDay
+                ));
+            }
+            else { // inner segment that lasts the whole day
+                timeHtml = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getAllDayHtml"])(options);
+            }
+        }
+        else {
+            // Display the normal time text for the *event's* times
+            timeHtml = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(this.getTimeText(eventRange));
+        }
+        if (url) {
+            classes.push('fc-has-url');
+        }
+        return '<tr class="' + classes.join(' ') + '">' +
+            (this.displayEventTime ?
+                '<td class="fc-list-item-time ' + theme.getClass('widgetContent') + '">' +
+                    (timeHtml || '') +
+                    '</td>' :
+                '') +
+            '<td class="fc-list-item-marker ' + theme.getClass('widgetContent') + '">' +
+            '<span class="fc-event-dot"' +
+            (bgColor ?
+                ' style="background-color:' + bgColor + '"' :
+                '') +
+            '></span>' +
+            '</td>' +
+            '<td class="fc-list-item-title ' + theme.getClass('widgetContent') + '">' +
+            '<a' + (url ? ' href="' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(url) + '"' : '') + '>' +
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(eventDef.title || '') +
+            '</a>' +
+            '</td>' +
+            '</tr>';
+    };
+    // like "4:00am"
+    ListEventRenderer.prototype.computeEventTimeFormat = function () {
+        return {
+            hour: 'numeric',
+            minute: '2-digit',
+            meridiem: 'short'
+        };
+    };
+    return ListEventRenderer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["FgEventRenderer"]));
+
+/*
+Responsible for the scroller, and forwarding event-related actions into the "grid".
+*/
+var ListView = /** @class */ (function (_super) {
+    __extends(ListView, _super);
+    function ListView(viewSpec, parentEl) {
+        var _this = _super.call(this, viewSpec, parentEl) || this;
+        _this.computeDateVars = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(computeDateVars);
+        _this.eventStoreToSegs = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(_this._eventStoreToSegs);
+        _this.renderSkeleton = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderSkeleton, _this._unrenderSkeleton);
+        var eventRenderer = _this.eventRenderer = new ListEventRenderer(_this);
+        _this.renderContent = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [_this.renderSkeleton]);
+        return _this;
+    }
+    ListView.prototype.firstContext = function (context) {
+        context.calendar.registerInteractiveComponent(this, {
+            el: this.el
+            // TODO: make aware that it doesn't do Hits
+        });
+    };
+    ListView.prototype.render = function (props, context) {
+        _super.prototype.render.call(this, props, context);
+        var _a = this.computeDateVars(props.dateProfile), dayDates = _a.dayDates, dayRanges = _a.dayRanges;
+        this.dayDates = dayDates;
+        this.renderSkeleton(context);
+        this.renderContent(context, this.eventStoreToSegs(props.eventStore, props.eventUiBases, dayRanges));
+    };
+    ListView.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderSkeleton.unrender();
+        this.renderContent.unrender();
+        this.context.calendar.unregisterInteractiveComponent(this);
+    };
+    ListView.prototype._renderSkeleton = function (context) {
+        var theme = context.theme;
+        this.el.classList.add('fc-list-view');
+        var listViewClassNames = (theme.getClass('listView') || '').split(' '); // wish we didn't have to do this
+        for (var _i = 0, listViewClassNames_1 = listViewClassNames; _i < listViewClassNames_1.length; _i++) {
+            var listViewClassName = listViewClassNames_1[_i];
+            if (listViewClassName) { // in case input was empty string
+                this.el.classList.add(listViewClassName);
+            }
+        }
+        this.scroller = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ScrollComponent"]('hidden', // overflow x
+        'auto' // overflow y
+        );
+        this.el.appendChild(this.scroller.el);
+        this.contentEl = this.scroller.el; // shortcut
+    };
+    ListView.prototype._unrenderSkeleton = function () {
+        // TODO: remove classNames
+        this.scroller.destroy(); // will remove the Grid too
+    };
+    ListView.prototype.updateSize = function (isResize, viewHeight, isAuto) {
+        _super.prototype.updateSize.call(this, isResize, viewHeight, isAuto);
+        this.eventRenderer.computeSizes(isResize);
+        this.eventRenderer.assignSizes(isResize);
+        this.scroller.clear(); // sets height to 'auto' and clears overflow
+        if (!isAuto) {
+            this.scroller.setHeight(this.computeScrollerHeight(viewHeight));
+        }
+    };
+    ListView.prototype.computeScrollerHeight = function (viewHeight) {
+        return viewHeight -
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["subtractInnerElHeight"])(this.el, this.scroller.el); // everything that's NOT the scroller
+    };
+    ListView.prototype._eventStoreToSegs = function (eventStore, eventUiBases, dayRanges) {
+        return this.eventRangesToSegs(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["sliceEventStore"])(eventStore, eventUiBases, this.props.dateProfile.activeRange, this.context.nextDayThreshold).fg, dayRanges);
+    };
+    ListView.prototype.eventRangesToSegs = function (eventRanges, dayRanges) {
+        var segs = [];
+        for (var _i = 0, eventRanges_1 = eventRanges; _i < eventRanges_1.length; _i++) {
+            var eventRange = eventRanges_1[_i];
+            segs.push.apply(segs, this.eventRangeToSegs(eventRange, dayRanges));
+        }
+        return segs;
+    };
+    ListView.prototype.eventRangeToSegs = function (eventRange, dayRanges) {
+        var _a = this.context, dateEnv = _a.dateEnv, nextDayThreshold = _a.nextDayThreshold;
+        var range = eventRange.range;
+        var allDay = eventRange.def.allDay;
+        var dayIndex;
+        var segRange;
+        var seg;
+        var segs = [];
+        for (dayIndex = 0; dayIndex < dayRanges.length; dayIndex++) {
+            segRange = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["intersectRanges"])(range, dayRanges[dayIndex]);
+            if (segRange) {
+                seg = {
+                    component: this,
+                    eventRange: eventRange,
+                    start: segRange.start,
+                    end: segRange.end,
+                    isStart: eventRange.isStart && segRange.start.valueOf() === range.start.valueOf(),
+                    isEnd: eventRange.isEnd && segRange.end.valueOf() === range.end.valueOf(),
+                    dayIndex: dayIndex
+                };
+                segs.push(seg);
+                // detect when range won't go fully into the next day,
+                // and mutate the latest seg to the be the end.
+                if (!seg.isEnd && !allDay &&
+                    dayIndex + 1 < dayRanges.length &&
+                    range.end <
+                        dateEnv.add(dayRanges[dayIndex + 1].start, nextDayThreshold)) {
+                    seg.end = range.end;
+                    seg.isEnd = true;
+                    break;
+                }
+            }
+        }
+        return segs;
+    };
+    ListView.prototype.renderEmptyMessage = function () {
+        this.contentEl.innerHTML =
+            '<div class="fc-list-empty-wrap2">' + // TODO: try less wraps
+                '<div class="fc-list-empty-wrap1">' +
+                '<div class="fc-list-empty">' +
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(this.context.options.noEventsMessage) +
+                '</div>' +
+                '</div>' +
+                '</div>';
+    };
+    // called by ListEventRenderer
+    ListView.prototype.renderSegList = function (allSegs) {
+        var theme = this.context.theme;
+        var segsByDay = this.groupSegsByDay(allSegs); // sparse array
+        var dayIndex;
+        var daySegs;
+        var i;
+        var tableEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlToElement"])('<table class="fc-list-table ' + theme.getClass('tableList') + '"><tbody></tbody></table>');
+        var tbodyEl = tableEl.querySelector('tbody');
+        for (dayIndex = 0; dayIndex < segsByDay.length; dayIndex++) {
+            daySegs = segsByDay[dayIndex];
+            if (daySegs) { // sparse array, so might be undefined
+                // append a day header
+                tbodyEl.appendChild(this.buildDayHeaderRow(this.dayDates[dayIndex]));
+                daySegs = this.eventRenderer.sortEventSegs(daySegs);
+                for (i = 0; i < daySegs.length; i++) {
+                    tbodyEl.appendChild(daySegs[i].el); // append event row
+                }
+            }
+        }
+        this.contentEl.innerHTML = '';
+        this.contentEl.appendChild(tableEl);
+    };
+    // Returns a sparse array of arrays, segs grouped by their dayIndex
+    ListView.prototype.groupSegsByDay = function (segs) {
+        var segsByDay = []; // sparse array
+        var i;
+        var seg;
+        for (i = 0; i < segs.length; i++) {
+            seg = segs[i];
+            (segsByDay[seg.dayIndex] || (segsByDay[seg.dayIndex] = []))
+                .push(seg);
+        }
+        return segsByDay;
+    };
+    // generates the HTML for the day headers that live amongst the event rows
+    ListView.prototype.buildDayHeaderRow = function (dayDate) {
+        var _a = this.context, theme = _a.theme, dateEnv = _a.dateEnv, options = _a.options;
+        var mainFormat = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])(options.listDayFormat); // TODO: cache
+        var altFormat = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])(options.listDayAltFormat); // TODO: cache
+        return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('tr', {
+            className: 'fc-list-heading',
+            'data-date': dateEnv.formatIso(dayDate, { omitTime: true })
+        }, '<td class="' + (theme.getClass('tableListHeading') ||
+            theme.getClass('widgetHeader')) + '" colspan="3">' +
+            (mainFormat ?
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(options, dateEnv, dayDate, { 'class': 'fc-list-heading-main' }, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(dateEnv.format(dayDate, mainFormat)) // inner HTML
+                ) :
+                '') +
+            (altFormat ?
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(options, dateEnv, dayDate, { 'class': 'fc-list-heading-alt' }, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(dateEnv.format(dayDate, altFormat)) // inner HTML
+                ) :
+                '') +
+            '</td>');
+    };
+    return ListView;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["View"]));
+ListView.prototype.fgSegSelector = '.fc-list-item'; // which elements accept event actions
+function computeDateVars(dateProfile) {
+    var dayStart = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["startOfDay"])(dateProfile.renderRange.start);
+    var viewEnd = dateProfile.renderRange.end;
+    var dayDates = [];
+    var dayRanges = [];
+    while (dayStart < viewEnd) {
+        dayDates.push(dayStart);
+        dayRanges.push({
+            start: dayStart,
+            end: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDays"])(dayStart, 1)
+        });
+        dayStart = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDays"])(dayStart, 1);
+    }
+    return { dayDates: dayDates, dayRanges: dayRanges };
+}
+
+var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"])({
+    views: {
+        list: {
+            class: ListView,
+            buttonTextKey: 'list',
+            listDayFormat: { month: 'long', day: 'numeric', year: 'numeric' } // like "January 1, 2016"
+        },
+        listDay: {
+            type: 'list',
+            duration: { days: 1 },
+            listDayFormat: { weekday: 'long' } // day-of-week is all we need. full date is probably in header
+        },
+        listWeek: {
+            type: 'list',
+            duration: { weeks: 1 },
+            listDayFormat: { weekday: 'long' },
+            listDayAltFormat: { month: 'long', day: 'numeric', year: 'numeric' }
+        },
+        listMonth: {
+            type: 'list',
+            duration: { month: 1 },
+            listDayAltFormat: { weekday: 'long' } // day-of-week is nice-to-have
+        },
+        listYear: {
+            type: 'list',
+            duration: { year: 1 },
+            listDayAltFormat: { weekday: 'long' } // day-of-week is nice-to-have
+        }
+    }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (main);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/timegrid/main.esm.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@fullcalendar/timegrid/main.esm.js ***!
+  \*********************************************************/
+/*! exports provided: default, AbstractTimeGridView, TimeGrid, TimeGridSlicer, TimeGridView, buildDayRanges, buildDayTable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractTimeGridView", function() { return AbstractTimeGridView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeGrid", function() { return TimeGrid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeGridSlicer", function() { return TimeGridSlicer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeGridView", function() { return TimeGridView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDayRanges", function() { return buildDayRanges; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDayTable", function() { return buildDayTable; });
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.esm.js");
+/*!
+FullCalendar Time Grid Plugin v4.4.2
+Docs & License: https://fullcalendar.io/
+(c) 2019 Adam Shaw
+*/
+
+
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+/*
+Only handles foreground segs.
+Does not own rendering. Use for low-level util methods by TimeGrid.
+*/
+var TimeGridEventRenderer = /** @class */ (function (_super) {
+    __extends(TimeGridEventRenderer, _super);
+    function TimeGridEventRenderer(timeGrid) {
+        var _this = _super.call(this) || this;
+        _this.timeGrid = timeGrid;
+        return _this;
+    }
+    TimeGridEventRenderer.prototype.renderSegs = function (context, segs, mirrorInfo) {
+        _super.prototype.renderSegs.call(this, context, segs, mirrorInfo);
+        // TODO: dont do every time. memoize
+        this.fullTimeFormat = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])({
+            hour: 'numeric',
+            minute: '2-digit',
+            separator: this.context.options.defaultRangeSeparator
+        });
+    };
+    // Given an array of foreground segments, render a DOM element for each, computes position,
+    // and attaches to the column inner-container elements.
+    TimeGridEventRenderer.prototype.attachSegs = function (segs, mirrorInfo) {
+        var segsByCol = this.timeGrid.groupSegsByCol(segs);
+        // order the segs within each column
+        // TODO: have groupSegsByCol do this?
+        for (var col = 0; col < segsByCol.length; col++) {
+            segsByCol[col] = this.sortEventSegs(segsByCol[col]);
+        }
+        this.segsByCol = segsByCol;
+        this.timeGrid.attachSegsByCol(segsByCol, this.timeGrid.fgContainerEls);
+    };
+    TimeGridEventRenderer.prototype.detachSegs = function (segs) {
+        segs.forEach(function (seg) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(seg.el);
+        });
+        this.segsByCol = null;
+    };
+    TimeGridEventRenderer.prototype.computeSegSizes = function (allSegs) {
+        var _a = this, timeGrid = _a.timeGrid, segsByCol = _a.segsByCol;
+        var colCnt = timeGrid.colCnt;
+        timeGrid.computeSegVerticals(allSegs); // horizontals relies on this
+        if (segsByCol) {
+            for (var col = 0; col < colCnt; col++) {
+                this.computeSegHorizontals(segsByCol[col]); // compute horizontal coordinates, z-index's, and reorder the array
+            }
+        }
+    };
+    TimeGridEventRenderer.prototype.assignSegSizes = function (allSegs) {
+        var _a = this, timeGrid = _a.timeGrid, segsByCol = _a.segsByCol;
+        var colCnt = timeGrid.colCnt;
+        timeGrid.assignSegVerticals(allSegs); // horizontals relies on this
+        if (segsByCol) {
+            for (var col = 0; col < colCnt; col++) {
+                this.assignSegCss(segsByCol[col]);
+            }
+        }
+    };
+    // Computes a default event time formatting string if `eventTimeFormat` is not explicitly defined
+    TimeGridEventRenderer.prototype.computeEventTimeFormat = function () {
+        return {
+            hour: 'numeric',
+            minute: '2-digit',
+            meridiem: false
+        };
+    };
+    // Computes a default `displayEventEnd` value if one is not expliclty defined
+    TimeGridEventRenderer.prototype.computeDisplayEventEnd = function () {
+        return true;
+    };
+    // Renders the HTML for a single event segment's default rendering
+    TimeGridEventRenderer.prototype.renderSegHtml = function (seg, mirrorInfo) {
+        var eventRange = seg.eventRange;
+        var eventDef = eventRange.def;
+        var eventUi = eventRange.ui;
+        var allDay = eventDef.allDay;
+        var isDraggable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventDraggable"])(this.context, eventDef, eventUi);
+        var isResizableFromStart = seg.isStart && Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventStartResizable"])(this.context, eventDef, eventUi);
+        var isResizableFromEnd = seg.isEnd && Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventEndResizable"])(this.context, eventDef, eventUi);
+        var classes = this.getSegClasses(seg, isDraggable, isResizableFromStart || isResizableFromEnd, mirrorInfo);
+        var skinCss = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["cssToStr"])(this.getSkinCss(eventUi));
+        var timeText;
+        var fullTimeText; // more verbose time text. for the print stylesheet
+        var startTimeText; // just the start time text
+        classes.unshift('fc-time-grid-event');
+        // if the event appears to span more than one day...
+        if (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["isMultiDayRange"])(eventRange.range)) {
+            // Don't display time text on segments that run entirely through a day.
+            // That would appear as midnight-midnight and would look dumb.
+            // Otherwise, display the time text for the *segment's* times (like 6pm-midnight or midnight-10am)
+            if (seg.isStart || seg.isEnd) {
+                var unzonedStart = seg.start;
+                var unzonedEnd = seg.end;
+                timeText = this._getTimeText(unzonedStart, unzonedEnd, allDay); // TODO: give the timezones
+                fullTimeText = this._getTimeText(unzonedStart, unzonedEnd, allDay, this.fullTimeFormat);
+                startTimeText = this._getTimeText(unzonedStart, unzonedEnd, allDay, null, false); // displayEnd=false
+            }
+        }
+        else {
+            // Display the normal time text for the *event's* times
+            timeText = this.getTimeText(eventRange);
+            fullTimeText = this.getTimeText(eventRange, this.fullTimeFormat);
+            startTimeText = this.getTimeText(eventRange, null, false); // displayEnd=false
+        }
+        return '<a class="' + classes.join(' ') + '"' +
+            (eventDef.url ?
+                ' href="' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(eventDef.url) + '"' :
+                '') +
+            (skinCss ?
+                ' style="' + skinCss + '"' :
+                '') +
+            '>' +
+            '<div class="fc-content">' +
+            (timeText ?
+                '<div class="fc-time"' +
+                    ' data-start="' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(startTimeText) + '"' +
+                    ' data-full="' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(fullTimeText) + '"' +
+                    '>' +
+                    '<span>' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(timeText) + '</span>' +
+                    '</div>' :
+                '') +
+            (eventDef.title ?
+                '<div class="fc-title">' +
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(eventDef.title) +
+                    '</div>' :
+                '') +
+            '</div>' +
+            /* TODO: write CSS for this
+            (isResizableFromStart ?
+              '<div class="fc-resizer fc-start-resizer"></div>' :
+              ''
+              ) +
+            */
+            (isResizableFromEnd ?
+                '<div class="fc-resizer fc-end-resizer"></div>' :
+                '') +
+            '</a>';
+    };
+    // Given an array of segments that are all in the same column, sets the backwardCoord and forwardCoord on each.
+    // Assumed the segs are already ordered.
+    // NOTE: Also reorders the given array by date!
+    TimeGridEventRenderer.prototype.computeSegHorizontals = function (segs) {
+        var levels;
+        var level0;
+        var i;
+        levels = buildSlotSegLevels(segs);
+        computeForwardSlotSegs(levels);
+        if ((level0 = levels[0])) {
+            for (i = 0; i < level0.length; i++) {
+                computeSlotSegPressures(level0[i]);
+            }
+            for (i = 0; i < level0.length; i++) {
+                this.computeSegForwardBack(level0[i], 0, 0);
+            }
+        }
+    };
+    // Calculate seg.forwardCoord and seg.backwardCoord for the segment, where both values range
+    // from 0 to 1. If the calendar is left-to-right, the seg.backwardCoord maps to "left" and
+    // seg.forwardCoord maps to "right" (via percentage). Vice-versa if the calendar is right-to-left.
+    //
+    // The segment might be part of a "series", which means consecutive segments with the same pressure
+    // who's width is unknown until an edge has been hit. `seriesBackwardPressure` is the number of
+    // segments behind this one in the current series, and `seriesBackwardCoord` is the starting
+    // coordinate of the first segment in the series.
+    TimeGridEventRenderer.prototype.computeSegForwardBack = function (seg, seriesBackwardPressure, seriesBackwardCoord) {
+        var forwardSegs = seg.forwardSegs;
+        var i;
+        if (seg.forwardCoord === undefined) { // not already computed
+            if (!forwardSegs.length) {
+                // if there are no forward segments, this segment should butt up against the edge
+                seg.forwardCoord = 1;
+            }
+            else {
+                // sort highest pressure first
+                this.sortForwardSegs(forwardSegs);
+                // this segment's forwardCoord will be calculated from the backwardCoord of the
+                // highest-pressure forward segment.
+                this.computeSegForwardBack(forwardSegs[0], seriesBackwardPressure + 1, seriesBackwardCoord);
+                seg.forwardCoord = forwardSegs[0].backwardCoord;
+            }
+            // calculate the backwardCoord from the forwardCoord. consider the series
+            seg.backwardCoord = seg.forwardCoord -
+                (seg.forwardCoord - seriesBackwardCoord) / // available width for series
+                    (seriesBackwardPressure + 1); // # of segments in the series
+            // use this segment's coordinates to computed the coordinates of the less-pressurized
+            // forward segments
+            for (i = 0; i < forwardSegs.length; i++) {
+                this.computeSegForwardBack(forwardSegs[i], 0, seg.forwardCoord);
+            }
+        }
+    };
+    TimeGridEventRenderer.prototype.sortForwardSegs = function (forwardSegs) {
+        var objs = forwardSegs.map(buildTimeGridSegCompareObj);
+        var specs = [
+            // put higher-pressure first
+            { field: 'forwardPressure', order: -1 },
+            // put segments that are closer to initial edge first (and favor ones with no coords yet)
+            { field: 'backwardCoord', order: 1 }
+        ].concat(this.context.eventOrderSpecs);
+        objs.sort(function (obj0, obj1) {
+            return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["compareByFieldSpecs"])(obj0, obj1, specs);
+        });
+        return objs.map(function (c) {
+            return c._seg;
+        });
+    };
+    // Given foreground event segments that have already had their position coordinates computed,
+    // assigns position-related CSS values to their elements.
+    TimeGridEventRenderer.prototype.assignSegCss = function (segs) {
+        for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
+            var seg = segs_1[_i];
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(seg.el, this.generateSegCss(seg));
+            if (seg.level > 0) {
+                seg.el.classList.add('fc-time-grid-event-inset');
+            }
+            // if the event is short that the title will be cut off,
+            // attach a className that condenses the title into the time area.
+            if (seg.eventRange.def.title && seg.bottom - seg.top < 30) {
+                seg.el.classList.add('fc-short'); // TODO: "condensed" is a better name
+            }
+        }
+    };
+    // Generates an object with CSS properties/values that should be applied to an event segment element.
+    // Contains important positioning-related properties that should be applied to any event element, customized or not.
+    TimeGridEventRenderer.prototype.generateSegCss = function (seg) {
+        var shouldOverlap = this.context.options.slotEventOverlap;
+        var backwardCoord = seg.backwardCoord; // the left side if LTR. the right side if RTL. floating-point
+        var forwardCoord = seg.forwardCoord; // the right side if LTR. the left side if RTL. floating-point
+        var props = this.timeGrid.generateSegVerticalCss(seg); // get top/bottom first
+        var isRtl = this.context.isRtl;
+        var left; // amount of space from left edge, a fraction of the total width
+        var right; // amount of space from right edge, a fraction of the total width
+        if (shouldOverlap) {
+            // double the width, but don't go beyond the maximum forward coordinate (1.0)
+            forwardCoord = Math.min(1, backwardCoord + (forwardCoord - backwardCoord) * 2);
+        }
+        if (isRtl) {
+            left = 1 - forwardCoord;
+            right = backwardCoord;
+        }
+        else {
+            left = backwardCoord;
+            right = 1 - forwardCoord;
+        }
+        props.zIndex = seg.level + 1; // convert from 0-base to 1-based
+        props.left = left * 100 + '%';
+        props.right = right * 100 + '%';
+        if (shouldOverlap && seg.forwardPressure) {
+            // add padding to the edge so that forward stacked events don't cover the resizer's icon
+            props[isRtl ? 'marginLeft' : 'marginRight'] = 10 * 2; // 10 is a guesstimate of the icon's width
+        }
+        return props;
+    };
+    return TimeGridEventRenderer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["FgEventRenderer"]));
+// Builds an array of segments "levels". The first level will be the leftmost tier of segments if the calendar is
+// left-to-right, or the rightmost if the calendar is right-to-left. Assumes the segments are already ordered by date.
+function buildSlotSegLevels(segs) {
+    var levels = [];
+    var i;
+    var seg;
+    var j;
+    for (i = 0; i < segs.length; i++) {
+        seg = segs[i];
+        // go through all the levels and stop on the first level where there are no collisions
+        for (j = 0; j < levels.length; j++) {
+            if (!computeSlotSegCollisions(seg, levels[j]).length) {
+                break;
+            }
+        }
+        seg.level = j;
+        (levels[j] || (levels[j] = [])).push(seg);
+    }
+    return levels;
+}
+// For every segment, figure out the other segments that are in subsequent
+// levels that also occupy the same vertical space. Accumulate in seg.forwardSegs
+function computeForwardSlotSegs(levels) {
+    var i;
+    var level;
+    var j;
+    var seg;
+    var k;
+    for (i = 0; i < levels.length; i++) {
+        level = levels[i];
+        for (j = 0; j < level.length; j++) {
+            seg = level[j];
+            seg.forwardSegs = [];
+            for (k = i + 1; k < levels.length; k++) {
+                computeSlotSegCollisions(seg, levels[k], seg.forwardSegs);
+            }
+        }
+    }
+}
+// Figure out which path forward (via seg.forwardSegs) results in the longest path until
+// the furthest edge is reached. The number of segments in this path will be seg.forwardPressure
+function computeSlotSegPressures(seg) {
+    var forwardSegs = seg.forwardSegs;
+    var forwardPressure = 0;
+    var i;
+    var forwardSeg;
+    if (seg.forwardPressure === undefined) { // not already computed
+        for (i = 0; i < forwardSegs.length; i++) {
+            forwardSeg = forwardSegs[i];
+            // figure out the child's maximum forward path
+            computeSlotSegPressures(forwardSeg);
+            // either use the existing maximum, or use the child's forward pressure
+            // plus one (for the forwardSeg itself)
+            forwardPressure = Math.max(forwardPressure, 1 + forwardSeg.forwardPressure);
+        }
+        seg.forwardPressure = forwardPressure;
+    }
+}
+// Find all the segments in `otherSegs` that vertically collide with `seg`.
+// Append into an optionally-supplied `results` array and return.
+function computeSlotSegCollisions(seg, otherSegs, results) {
+    if (results === void 0) { results = []; }
+    for (var i = 0; i < otherSegs.length; i++) {
+        if (isSlotSegCollision(seg, otherSegs[i])) {
+            results.push(otherSegs[i]);
+        }
+    }
+    return results;
+}
+// Do these segments occupy the same vertical space?
+function isSlotSegCollision(seg1, seg2) {
+    return seg1.bottom > seg2.top && seg1.top < seg2.bottom;
+}
+function buildTimeGridSegCompareObj(seg) {
+    var obj = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildSegCompareObj"])(seg);
+    obj.forwardPressure = seg.forwardPressure;
+    obj.backwardCoord = seg.backwardCoord;
+    return obj;
+}
+
+var TimeGridMirrorRenderer = /** @class */ (function (_super) {
+    __extends(TimeGridMirrorRenderer, _super);
+    function TimeGridMirrorRenderer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TimeGridMirrorRenderer.prototype.attachSegs = function (segs, mirrorInfo) {
+        this.segsByCol = this.timeGrid.groupSegsByCol(segs);
+        this.timeGrid.attachSegsByCol(this.segsByCol, this.timeGrid.mirrorContainerEls);
+        this.sourceSeg = mirrorInfo.sourceSeg;
+    };
+    TimeGridMirrorRenderer.prototype.generateSegCss = function (seg) {
+        var props = _super.prototype.generateSegCss.call(this, seg);
+        var sourceSeg = this.sourceSeg;
+        if (sourceSeg && sourceSeg.col === seg.col) {
+            var sourceSegProps = _super.prototype.generateSegCss.call(this, sourceSeg);
+            props.left = sourceSegProps.left;
+            props.right = sourceSegProps.right;
+            props.marginLeft = sourceSegProps.marginLeft;
+            props.marginRight = sourceSegProps.marginRight;
+        }
+        return props;
+    };
+    return TimeGridMirrorRenderer;
+}(TimeGridEventRenderer));
+
+var TimeGridFillRenderer = /** @class */ (function (_super) {
+    __extends(TimeGridFillRenderer, _super);
+    function TimeGridFillRenderer(timeGrid) {
+        var _this = _super.call(this) || this;
+        _this.timeGrid = timeGrid;
+        return _this;
+    }
+    TimeGridFillRenderer.prototype.attachSegs = function (type, segs) {
+        var timeGrid = this.timeGrid;
+        var containerEls;
+        // TODO: more efficient lookup
+        if (type === 'bgEvent') {
+            containerEls = timeGrid.bgContainerEls;
+        }
+        else if (type === 'businessHours') {
+            containerEls = timeGrid.businessContainerEls;
+        }
+        else if (type === 'highlight') {
+            containerEls = timeGrid.highlightContainerEls;
+        }
+        timeGrid.attachSegsByCol(timeGrid.groupSegsByCol(segs), containerEls);
+        return segs.map(function (seg) {
+            return seg.el;
+        });
+    };
+    TimeGridFillRenderer.prototype.computeSegSizes = function (segs) {
+        this.timeGrid.computeSegVerticals(segs);
+    };
+    TimeGridFillRenderer.prototype.assignSegSizes = function (segs) {
+        this.timeGrid.assignSegVerticals(segs);
+    };
+    return TimeGridFillRenderer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["FillRenderer"]));
+
+/* A component that renders one or more columns of vertical time slots
+----------------------------------------------------------------------------------------------------------------------*/
+// potential nice values for the slot-duration and interval-duration
+// from largest to smallest
+var AGENDA_STOCK_SUB_DURATIONS = [
+    { hours: 1 },
+    { minutes: 30 },
+    { minutes: 15 },
+    { seconds: 30 },
+    { seconds: 15 }
+];
+var TimeGrid = /** @class */ (function (_super) {
+    __extends(TimeGrid, _super);
+    function TimeGrid(el, renderProps) {
+        var _this = _super.call(this, el) || this;
+        _this.isSlatSizesDirty = false;
+        _this.isColSizesDirty = false;
+        _this.processOptions = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(_this._processOptions);
+        _this.renderSkeleton = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderSkeleton);
+        _this.renderSlats = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderSlats, null, [_this.renderSkeleton]);
+        _this.renderColumns = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderColumns, _this._unrenderColumns, [_this.renderSkeleton]);
+        _this.renderProps = renderProps;
+        var renderColumns = _this.renderColumns;
+        var eventRenderer = _this.eventRenderer = new TimeGridEventRenderer(_this);
+        var fillRenderer = _this.fillRenderer = new TimeGridFillRenderer(_this);
+        _this.mirrorRenderer = new TimeGridMirrorRenderer(_this);
+        _this.renderBusinessHours = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'businessHours'), fillRenderer.unrender.bind(fillRenderer, 'businessHours'), [renderColumns]);
+        _this.renderDateSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderDateSelection, _this._unrenderDateSelection, [renderColumns]);
+        _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderColumns]);
+        _this.renderBgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'bgEvent'), fillRenderer.unrender.bind(fillRenderer, 'bgEvent'), [renderColumns]);
+        _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);
+        _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderEventDrag, _this._unrenderEventDrag, [renderColumns]);
+        _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderEventResize, _this._unrenderEventResize, [renderColumns]);
+        return _this;
+    }
+    /* Options
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Parses various options into properties of this object
+    // MUST have context already set
+    TimeGrid.prototype._processOptions = function (options) {
+        var slotDuration = options.slotDuration, snapDuration = options.snapDuration;
+        var snapsPerSlot;
+        var input;
+        slotDuration = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(slotDuration);
+        snapDuration = snapDuration ? Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(snapDuration) : slotDuration;
+        snapsPerSlot = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["wholeDivideDurations"])(slotDuration, snapDuration);
+        if (snapsPerSlot === null) {
+            snapDuration = slotDuration;
+            snapsPerSlot = 1;
+            // TODO: say warning?
+        }
+        this.slotDuration = slotDuration;
+        this.snapDuration = snapDuration;
+        this.snapsPerSlot = snapsPerSlot;
+        // might be an array value (for TimelineView).
+        // if so, getting the most granular entry (the last one probably).
+        input = options.slotLabelFormat;
+        if (Array.isArray(input)) {
+            input = input[input.length - 1];
+        }
+        this.labelFormat = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])(input || {
+            hour: 'numeric',
+            minute: '2-digit',
+            omitZeroMinute: true,
+            meridiem: 'short'
+        });
+        input = options.slotLabelInterval;
+        this.labelInterval = input ?
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(input) :
+            this.computeLabelInterval(slotDuration);
+    };
+    // Computes an automatic value for slotLabelInterval
+    TimeGrid.prototype.computeLabelInterval = function (slotDuration) {
+        var i;
+        var labelInterval;
+        var slotsPerLabel;
+        // find the smallest stock label interval that results in more than one slots-per-label
+        for (i = AGENDA_STOCK_SUB_DURATIONS.length - 1; i >= 0; i--) {
+            labelInterval = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(AGENDA_STOCK_SUB_DURATIONS[i]);
+            slotsPerLabel = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["wholeDivideDurations"])(labelInterval, slotDuration);
+            if (slotsPerLabel !== null && slotsPerLabel > 1) {
+                return labelInterval;
+            }
+        }
+        return slotDuration; // fall back
+    };
+    /* Rendering
+    ------------------------------------------------------------------------------------------------------------------*/
+    TimeGrid.prototype.render = function (props, context) {
+        this.processOptions(context.options);
+        var cells = props.cells;
+        this.colCnt = cells.length;
+        this.renderSkeleton(context.theme);
+        this.renderSlats(props.dateProfile);
+        this.renderColumns(props.cells, props.dateProfile);
+        this.renderBusinessHours(context, props.businessHourSegs);
+        this.renderDateSelection(props.dateSelectionSegs);
+        this.renderFgEvents(context, props.fgEventSegs);
+        this.renderBgEvents(context, props.bgEventSegs);
+        this.renderEventSelection(props.eventSelection);
+        this.renderEventDrag(props.eventDrag);
+        this.renderEventResize(props.eventResize);
+    };
+    TimeGrid.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        // should unrender everything else too
+        this.renderSlats.unrender();
+        this.renderColumns.unrender();
+        this.renderSkeleton.unrender();
+    };
+    TimeGrid.prototype.updateSize = function (isResize) {
+        var _a = this, fillRenderer = _a.fillRenderer, eventRenderer = _a.eventRenderer, mirrorRenderer = _a.mirrorRenderer;
+        if (isResize || this.isSlatSizesDirty) {
+            this.buildSlatPositions();
+            this.isSlatSizesDirty = false;
+        }
+        if (isResize || this.isColSizesDirty) {
+            this.buildColPositions();
+            this.isColSizesDirty = false;
+        }
+        fillRenderer.computeSizes(isResize);
+        eventRenderer.computeSizes(isResize);
+        mirrorRenderer.computeSizes(isResize);
+        fillRenderer.assignSizes(isResize);
+        eventRenderer.assignSizes(isResize);
+        mirrorRenderer.assignSizes(isResize);
+    };
+    TimeGrid.prototype._renderSkeleton = function (theme) {
+        var el = this.el;
+        el.innerHTML =
+            '<div class="fc-bg"></div>' +
+                '<div class="fc-slats"></div>' +
+                '<hr class="fc-divider ' + theme.getClass('widgetHeader') + '" style="display:none" />';
+        this.rootBgContainerEl = el.querySelector('.fc-bg');
+        this.slatContainerEl = el.querySelector('.fc-slats');
+        this.bottomRuleEl = el.querySelector('.fc-divider');
+    };
+    TimeGrid.prototype._renderSlats = function (dateProfile) {
+        var theme = this.context.theme;
+        this.slatContainerEl.innerHTML =
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+                this.renderSlatRowHtml(dateProfile) +
+                '</table>';
+        this.slatEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.slatContainerEl, 'tr');
+        this.slatPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["PositionCache"](this.el, this.slatEls, false, true // vertical
+        );
+        this.isSlatSizesDirty = true;
+    };
+    // Generates the HTML for the horizontal "slats" that run width-wise. Has a time axis on a side. Depends on RTL.
+    TimeGrid.prototype.renderSlatRowHtml = function (dateProfile) {
+        var _a = this.context, dateEnv = _a.dateEnv, theme = _a.theme, isRtl = _a.isRtl;
+        var html = '';
+        var dayStart = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["startOfDay"])(dateProfile.renderRange.start);
+        var slotTime = dateProfile.minTime;
+        var slotIterator = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(0);
+        var slotDate; // will be on the view's first day, but we only care about its time
+        var isLabeled;
+        var axisHtml;
+        // Calculate the time for each slot
+        while (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["asRoughMs"])(slotTime) < Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["asRoughMs"])(dateProfile.maxTime)) {
+            slotDate = dateEnv.add(dayStart, slotTime);
+            isLabeled = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["wholeDivideDurations"])(slotIterator, this.labelInterval) !== null;
+            axisHtml =
+                '<td class="fc-axis fc-time ' + theme.getClass('widgetContent') + '">' +
+                    (isLabeled ?
+                        '<span>' + // for matchCellWidths
+                            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(dateEnv.format(slotDate, this.labelFormat)) +
+                            '</span>' :
+                        '') +
+                    '</td>';
+            html +=
+                '<tr data-time="' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["formatIsoTimeString"])(slotDate) + '"' +
+                    (isLabeled ? '' : ' class="fc-minor"') +
+                    '>' +
+                    (!isRtl ? axisHtml : '') +
+                    '<td class="' + theme.getClass('widgetContent') + '"></td>' +
+                    (isRtl ? axisHtml : '') +
+                    '</tr>';
+            slotTime = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDurations"])(slotTime, this.slotDuration);
+            slotIterator = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDurations"])(slotIterator, this.slotDuration);
+        }
+        return html;
+    };
+    TimeGrid.prototype._renderColumns = function (cells, dateProfile) {
+        var _a = this.context, calendar = _a.calendar, view = _a.view, isRtl = _a.isRtl, theme = _a.theme, dateEnv = _a.dateEnv;
+        var bgRow = new _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["DayBgRow"](this.context);
+        this.rootBgContainerEl.innerHTML =
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+                bgRow.renderHtml({
+                    cells: cells,
+                    dateProfile: dateProfile,
+                    renderIntroHtml: this.renderProps.renderBgIntroHtml
+                }) +
+                '</table>';
+        this.colEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-day, .fc-disabled-day');
+        for (var col = 0; col < this.colCnt; col++) {
+            calendar.publiclyTrigger('dayRender', [
+                {
+                    date: dateEnv.toDate(cells[col].date),
+                    el: this.colEls[col],
+                    view: view
+                }
+            ]);
+        }
+        if (isRtl) {
+            this.colEls.reverse();
+        }
+        this.colPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["PositionCache"](this.el, this.colEls, true, // horizontal
+        false);
+        this.renderContentSkeleton();
+        this.isColSizesDirty = true;
+    };
+    TimeGrid.prototype._unrenderColumns = function () {
+        this.unrenderContentSkeleton();
+    };
+    /* Content Skeleton
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Renders the DOM that the view's content will live in
+    TimeGrid.prototype.renderContentSkeleton = function () {
+        var isRtl = this.context.isRtl;
+        var parts = [];
+        var skeletonEl;
+        parts.push(this.renderProps.renderIntroHtml());
+        for (var i = 0; i < this.colCnt; i++) {
+            parts.push('<td>' +
+                '<div class="fc-content-col">' +
+                '<div class="fc-event-container fc-mirror-container"></div>' +
+                '<div class="fc-event-container"></div>' +
+                '<div class="fc-highlight-container"></div>' +
+                '<div class="fc-bgevent-container"></div>' +
+                '<div class="fc-business-container"></div>' +
+                '</div>' +
+                '</td>');
+        }
+        if (isRtl) {
+            parts.reverse();
+        }
+        skeletonEl = this.contentSkeletonEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlToElement"])('<div class="fc-content-skeleton">' +
+            '<table>' +
+            '<tr>' + parts.join('') + '</tr>' +
+            '</table>' +
+            '</div>');
+        this.colContainerEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(skeletonEl, '.fc-content-col');
+        this.mirrorContainerEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(skeletonEl, '.fc-mirror-container');
+        this.fgContainerEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(skeletonEl, '.fc-event-container:not(.fc-mirror-container)');
+        this.bgContainerEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(skeletonEl, '.fc-bgevent-container');
+        this.highlightContainerEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(skeletonEl, '.fc-highlight-container');
+        this.businessContainerEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(skeletonEl, '.fc-business-container');
+        if (isRtl) {
+            this.colContainerEls.reverse();
+            this.mirrorContainerEls.reverse();
+            this.fgContainerEls.reverse();
+            this.bgContainerEls.reverse();
+            this.highlightContainerEls.reverse();
+            this.businessContainerEls.reverse();
+        }
+        this.el.appendChild(skeletonEl);
+    };
+    TimeGrid.prototype.unrenderContentSkeleton = function () {
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(this.contentSkeletonEl);
+    };
+    // Given a flat array of segments, return an array of sub-arrays, grouped by each segment's col
+    TimeGrid.prototype.groupSegsByCol = function (segs) {
+        var segsByCol = [];
+        var i;
+        for (i = 0; i < this.colCnt; i++) {
+            segsByCol.push([]);
+        }
+        for (i = 0; i < segs.length; i++) {
+            segsByCol[segs[i].col].push(segs[i]);
+        }
+        return segsByCol;
+    };
+    // Given segments grouped by column, insert the segments' elements into a parallel array of container
+    // elements, each living within a column.
+    TimeGrid.prototype.attachSegsByCol = function (segsByCol, containerEls) {
+        var col;
+        var segs;
+        var i;
+        for (col = 0; col < this.colCnt; col++) { // iterate each column grouping
+            segs = segsByCol[col];
+            for (i = 0; i < segs.length; i++) {
+                containerEls[col].appendChild(segs[i].el);
+            }
+        }
+    };
+    /* Now Indicator
+    ------------------------------------------------------------------------------------------------------------------*/
+    TimeGrid.prototype.getNowIndicatorUnit = function () {
+        return 'minute'; // will refresh on the minute
+    };
+    TimeGrid.prototype.renderNowIndicator = function (segs, date) {
+        // HACK: if date columns not ready for some reason (scheduler)
+        if (!this.colContainerEls) {
+            return;
+        }
+        var top = this.computeDateTop(date);
+        var nodes = [];
+        var i;
+        // render lines within the columns
+        for (i = 0; i < segs.length; i++) {
+            var lineEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', { className: 'fc-now-indicator fc-now-indicator-line' });
+            lineEl.style.top = top + 'px';
+            this.colContainerEls[segs[i].col].appendChild(lineEl);
+            nodes.push(lineEl);
+        }
+        // render an arrow over the axis
+        if (segs.length > 0) { // is the current time in view?
+            var arrowEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', { className: 'fc-now-indicator fc-now-indicator-arrow' });
+            arrowEl.style.top = top + 'px';
+            this.contentSkeletonEl.appendChild(arrowEl);
+            nodes.push(arrowEl);
+        }
+        this.nowIndicatorEls = nodes;
+    };
+    TimeGrid.prototype.unrenderNowIndicator = function () {
+        if (this.nowIndicatorEls) {
+            this.nowIndicatorEls.forEach(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"]);
+            this.nowIndicatorEls = null;
+        }
+    };
+    /* Coordinates
+    ------------------------------------------------------------------------------------------------------------------*/
+    TimeGrid.prototype.getTotalSlatHeight = function () {
+        return this.slatContainerEl.getBoundingClientRect().height;
+    };
+    // Computes the top coordinate, relative to the bounds of the grid, of the given date.
+    // A `startOfDayDate` must be given for avoiding ambiguity over how to treat midnight.
+    TimeGrid.prototype.computeDateTop = function (when, startOfDayDate) {
+        if (!startOfDayDate) {
+            startOfDayDate = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["startOfDay"])(when);
+        }
+        return this.computeTimeTop(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(when.valueOf() - startOfDayDate.valueOf()));
+    };
+    // Computes the top coordinate, relative to the bounds of the grid, of the given time (a Duration).
+    TimeGrid.prototype.computeTimeTop = function (duration) {
+        var len = this.slatEls.length;
+        var dateProfile = this.props.dateProfile;
+        var slatCoverage = (duration.milliseconds - Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["asRoughMs"])(dateProfile.minTime)) / Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["asRoughMs"])(this.slotDuration); // floating-point value of # of slots covered
+        var slatIndex;
+        var slatRemainder;
+        // compute a floating-point number for how many slats should be progressed through.
+        // from 0 to number of slats (inclusive)
+        // constrained because minTime/maxTime might be customized.
+        slatCoverage = Math.max(0, slatCoverage);
+        slatCoverage = Math.min(len, slatCoverage);
+        // an integer index of the furthest whole slat
+        // from 0 to number slats (*exclusive*, so len-1)
+        slatIndex = Math.floor(slatCoverage);
+        slatIndex = Math.min(slatIndex, len - 1);
+        // how much further through the slatIndex slat (from 0.0-1.0) must be covered in addition.
+        // could be 1.0 if slatCoverage is covering *all* the slots
+        slatRemainder = slatCoverage - slatIndex;
+        return this.slatPositions.tops[slatIndex] +
+            this.slatPositions.getHeight(slatIndex) * slatRemainder;
+    };
+    // For each segment in an array, computes and assigns its top and bottom properties
+    TimeGrid.prototype.computeSegVerticals = function (segs) {
+        var options = this.context.options;
+        var eventMinHeight = options.timeGridEventMinHeight;
+        var i;
+        var seg;
+        var dayDate;
+        for (i = 0; i < segs.length; i++) {
+            seg = segs[i];
+            dayDate = this.props.cells[seg.col].date;
+            seg.top = this.computeDateTop(seg.start, dayDate);
+            seg.bottom = Math.max(seg.top + eventMinHeight, this.computeDateTop(seg.end, dayDate));
+        }
+    };
+    // Given segments that already have their top/bottom properties computed, applies those values to
+    // the segments' elements.
+    TimeGrid.prototype.assignSegVerticals = function (segs) {
+        var i;
+        var seg;
+        for (i = 0; i < segs.length; i++) {
+            seg = segs[i];
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(seg.el, this.generateSegVerticalCss(seg));
+        }
+    };
+    // Generates an object with CSS properties for the top/bottom coordinates of a segment element
+    TimeGrid.prototype.generateSegVerticalCss = function (seg) {
+        return {
+            top: seg.top,
+            bottom: -seg.bottom // flipped because needs to be space beyond bottom edge of event container
+        };
+    };
+    /* Sizing
+    ------------------------------------------------------------------------------------------------------------------*/
+    TimeGrid.prototype.buildPositionCaches = function () {
+        this.buildColPositions();
+        this.buildSlatPositions();
+    };
+    TimeGrid.prototype.buildColPositions = function () {
+        this.colPositions.build();
+    };
+    TimeGrid.prototype.buildSlatPositions = function () {
+        this.slatPositions.build();
+    };
+    /* Hit System
+    ------------------------------------------------------------------------------------------------------------------*/
+    TimeGrid.prototype.positionToHit = function (positionLeft, positionTop) {
+        var dateEnv = this.context.dateEnv;
+        var _a = this, snapsPerSlot = _a.snapsPerSlot, slatPositions = _a.slatPositions, colPositions = _a.colPositions;
+        var colIndex = colPositions.leftToIndex(positionLeft);
+        var slatIndex = slatPositions.topToIndex(positionTop);
+        if (colIndex != null && slatIndex != null) {
+            var slatTop = slatPositions.tops[slatIndex];
+            var slatHeight = slatPositions.getHeight(slatIndex);
+            var partial = (positionTop - slatTop) / slatHeight; // floating point number between 0 and 1
+            var localSnapIndex = Math.floor(partial * snapsPerSlot); // the snap # relative to start of slat
+            var snapIndex = slatIndex * snapsPerSlot + localSnapIndex;
+            var dayDate = this.props.cells[colIndex].date;
+            var time = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["addDurations"])(this.props.dateProfile.minTime, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["multiplyDuration"])(this.snapDuration, snapIndex));
+            var start = dateEnv.add(dayDate, time);
+            var end = dateEnv.add(start, this.snapDuration);
+            return {
+                col: colIndex,
+                dateSpan: {
+                    range: { start: start, end: end },
+                    allDay: false
+                },
+                dayEl: this.colEls[colIndex],
+                relativeRect: {
+                    left: colPositions.lefts[colIndex],
+                    right: colPositions.rights[colIndex],
+                    top: slatTop,
+                    bottom: slatTop + slatHeight
+                }
+            };
+        }
+    };
+    /* Event Drag Visualization
+    ------------------------------------------------------------------------------------------------------------------*/
+    TimeGrid.prototype._renderEventDrag = function (state) {
+        if (state) {
+            this.eventRenderer.hideByHash(state.affectedInstances);
+            if (state.isEvent) {
+                this.mirrorRenderer.renderSegs(this.context, state.segs, { isDragging: true, sourceSeg: state.sourceSeg });
+            }
+            else {
+                this.fillRenderer.renderSegs('highlight', this.context, state.segs);
+            }
+        }
+    };
+    TimeGrid.prototype._unrenderEventDrag = function (state) {
+        if (state) {
+            this.eventRenderer.showByHash(state.affectedInstances);
+            if (state.isEvent) {
+                this.mirrorRenderer.unrender(this.context, state.segs, { isDragging: true, sourceSeg: state.sourceSeg });
+            }
+            else {
+                this.fillRenderer.unrender('highlight', this.context);
+            }
+        }
+    };
+    /* Event Resize Visualization
+    ------------------------------------------------------------------------------------------------------------------*/
+    TimeGrid.prototype._renderEventResize = function (state) {
+        if (state) {
+            this.eventRenderer.hideByHash(state.affectedInstances);
+            this.mirrorRenderer.renderSegs(this.context, state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+        }
+    };
+    TimeGrid.prototype._unrenderEventResize = function (state) {
+        if (state) {
+            this.eventRenderer.showByHash(state.affectedInstances);
+            this.mirrorRenderer.unrender(this.context, state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+        }
+    };
+    /* Selection
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Renders a visual indication of a selection. Overrides the default, which was to simply render a highlight.
+    TimeGrid.prototype._renderDateSelection = function (segs) {
+        if (segs) {
+            if (this.context.options.selectMirror) {
+                this.mirrorRenderer.renderSegs(this.context, segs, { isSelecting: true });
+            }
+            else {
+                this.fillRenderer.renderSegs('highlight', this.context, segs);
+            }
+        }
+    };
+    TimeGrid.prototype._unrenderDateSelection = function (segs) {
+        if (segs) {
+            if (this.context.options.selectMirror) {
+                this.mirrorRenderer.unrender(this.context, segs, { isSelecting: true });
+            }
+            else {
+                this.fillRenderer.unrender('highlight', this.context);
+            }
+        }
+    };
+    return TimeGrid;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DateComponent"]));
+
+var AllDaySplitter = /** @class */ (function (_super) {
+    __extends(AllDaySplitter, _super);
+    function AllDaySplitter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    AllDaySplitter.prototype.getKeyInfo = function () {
+        return {
+            allDay: {},
+            timed: {}
+        };
+    };
+    AllDaySplitter.prototype.getKeysForDateSpan = function (dateSpan) {
+        if (dateSpan.allDay) {
+            return ['allDay'];
+        }
+        else {
+            return ['timed'];
+        }
+    };
+    AllDaySplitter.prototype.getKeysForEventDef = function (eventDef) {
+        if (!eventDef.allDay) {
+            return ['timed'];
+        }
+        else if (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["hasBgRendering"])(eventDef)) {
+            return ['timed', 'allDay'];
+        }
+        else {
+            return ['allDay'];
+        }
+    };
+    return AllDaySplitter;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Splitter"]));
+
+var TIMEGRID_ALL_DAY_EVENT_LIMIT = 5;
+var WEEK_HEADER_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])({ week: 'short' });
+/* An abstract class for all timegrid-related views. Displays one more columns with time slots running vertically.
+----------------------------------------------------------------------------------------------------------------------*/
+// Is a manager for the TimeGrid subcomponent and possibly the DayGrid subcomponent (if allDaySlot is on).
+// Responsible for managing width/height.
+var AbstractTimeGridView = /** @class */ (function (_super) {
+    __extends(AbstractTimeGridView, _super);
+    function AbstractTimeGridView() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.splitter = new AllDaySplitter();
+        _this.renderSkeleton = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderSkeleton, _this._unrenderSkeleton);
+        /* Header Render Methods
+        ------------------------------------------------------------------------------------------------------------------*/
+        // Generates the HTML that will go before the day-of week header cells
+        _this.renderHeadIntroHtml = function () {
+            var _a = _this.context, theme = _a.theme, dateEnv = _a.dateEnv, options = _a.options;
+            var range = _this.props.dateProfile.renderRange;
+            var dayCnt = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffDays"])(range.start, range.end);
+            var weekText;
+            if (options.weekNumbers) {
+                weekText = dateEnv.format(range.start, WEEK_HEADER_FORMAT);
+                return '' +
+                    '<th class="fc-axis fc-week-number ' + theme.getClass('widgetHeader') + '" ' + _this.axisStyleAttr() + '>' +
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(// aside from link, important for matchCellWidths
+                    options, dateEnv, { date: range.start, type: 'week', forceOff: dayCnt > 1 }, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(weekText) // inner HTML
+                    ) +
+                    '</th>';
+            }
+            else {
+                return '<th class="fc-axis ' + theme.getClass('widgetHeader') + '" ' + _this.axisStyleAttr() + '></th>';
+            }
+        };
+        /* Time Grid Render Methods
+        ------------------------------------------------------------------------------------------------------------------*/
+        // Generates the HTML that goes before the bg of the TimeGrid slot area. Long vertical column.
+        _this.renderTimeGridBgIntroHtml = function () {
+            var theme = _this.context.theme;
+            return '<td class="fc-axis ' + theme.getClass('widgetContent') + '" ' + _this.axisStyleAttr() + '></td>';
+        };
+        // Generates the HTML that goes before all other types of cells.
+        // Affects content-skeleton, mirror-skeleton, highlight-skeleton for both the time-grid and day-grid.
+        _this.renderTimeGridIntroHtml = function () {
+            return '<td class="fc-axis" ' + _this.axisStyleAttr() + '></td>';
+        };
+        /* Day Grid Render Methods
+        ------------------------------------------------------------------------------------------------------------------*/
+        // Generates the HTML that goes before the all-day cells
+        _this.renderDayGridBgIntroHtml = function () {
+            var _a = _this.context, theme = _a.theme, options = _a.options;
+            return '' +
+                '<td class="fc-axis ' + theme.getClass('widgetContent') + '" ' + _this.axisStyleAttr() + '>' +
+                '<span>' + // needed for matchCellWidths
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getAllDayHtml"])(options) +
+                '</span>' +
+                '</td>';
+        };
+        // Generates the HTML that goes before all other types of cells.
+        // Affects content-skeleton, mirror-skeleton, highlight-skeleton for both the time-grid and day-grid.
+        _this.renderDayGridIntroHtml = function () {
+            return '<td class="fc-axis" ' + _this.axisStyleAttr() + '></td>';
+        };
+        return _this;
+    }
+    AbstractTimeGridView.prototype.render = function (props, context) {
+        _super.prototype.render.call(this, props, context);
+        this.renderSkeleton(context);
+    };
+    AbstractTimeGridView.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderSkeleton.unrender();
+    };
+    AbstractTimeGridView.prototype._renderSkeleton = function (context) {
+        this.el.classList.add('fc-timeGrid-view');
+        this.el.innerHTML = this.renderSkeletonHtml();
+        this.scroller = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ScrollComponent"]('hidden', // overflow x
+        'auto' // overflow y
+        );
+        var timeGridWrapEl = this.scroller.el;
+        this.el.querySelector('.fc-body > tr > td').appendChild(timeGridWrapEl);
+        timeGridWrapEl.classList.add('fc-time-grid-container');
+        var timeGridEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', { className: 'fc-time-grid' });
+        timeGridWrapEl.appendChild(timeGridEl);
+        this.timeGrid = new TimeGrid(timeGridEl, {
+            renderBgIntroHtml: this.renderTimeGridBgIntroHtml,
+            renderIntroHtml: this.renderTimeGridIntroHtml
+        });
+        if (context.options.allDaySlot) { // should we display the "all-day" area?
+            this.dayGrid = new _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["DayGrid"](// the all-day subcomponent of this view
+            this.el.querySelector('.fc-day-grid'), {
+                renderNumberIntroHtml: this.renderDayGridIntroHtml,
+                renderBgIntroHtml: this.renderDayGridBgIntroHtml,
+                renderIntroHtml: this.renderDayGridIntroHtml,
+                colWeekNumbersVisible: false,
+                cellWeekNumbersVisible: false
+            });
+            // have the day-grid extend it's coordinate area over the <hr> dividing the two grids
+            var dividerEl = this.el.querySelector('.fc-divider');
+            this.dayGrid.bottomCoordPadding = dividerEl.getBoundingClientRect().height;
+        }
+    };
+    AbstractTimeGridView.prototype._unrenderSkeleton = function () {
+        this.el.classList.remove('fc-timeGrid-view');
+        this.timeGrid.destroy();
+        if (this.dayGrid) {
+            this.dayGrid.destroy();
+        }
+        this.scroller.destroy();
+    };
+    /* Rendering
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Builds the HTML skeleton for the view.
+    // The day-grid and time-grid components will render inside containers defined by this HTML.
+    AbstractTimeGridView.prototype.renderSkeletonHtml = function () {
+        var _a = this.context, theme = _a.theme, options = _a.options;
+        return '' +
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+            (options.columnHeader ?
+                '<thead class="fc-head">' +
+                    '<tr>' +
+                    '<td class="fc-head-container ' + theme.getClass('widgetHeader') + '">&nbsp;</td>' +
+                    '</tr>' +
+                    '</thead>' :
+                '') +
+            '<tbody class="fc-body">' +
+            '<tr>' +
+            '<td class="' + theme.getClass('widgetContent') + '">' +
+            (options.allDaySlot ?
+                '<div class="fc-day-grid"></div>' +
+                    '<hr class="fc-divider ' + theme.getClass('widgetHeader') + '" />' :
+                '') +
+            '</td>' +
+            '</tr>' +
+            '</tbody>' +
+            '</table>';
+    };
+    /* Now Indicator
+    ------------------------------------------------------------------------------------------------------------------*/
+    AbstractTimeGridView.prototype.getNowIndicatorUnit = function () {
+        return this.timeGrid.getNowIndicatorUnit();
+    };
+    // subclasses should implement
+    // renderNowIndicator(date: DateMarker) {
+    // }
+    AbstractTimeGridView.prototype.unrenderNowIndicator = function () {
+        this.timeGrid.unrenderNowIndicator();
+    };
+    /* Dimensions
+    ------------------------------------------------------------------------------------------------------------------*/
+    AbstractTimeGridView.prototype.updateSize = function (isResize, viewHeight, isAuto) {
+        _super.prototype.updateSize.call(this, isResize, viewHeight, isAuto); // will call updateBaseSize. important that executes first
+        this.timeGrid.updateSize(isResize);
+        if (this.dayGrid) {
+            this.dayGrid.updateSize(isResize);
+        }
+    };
+    // Adjusts the vertical dimensions of the view to the specified values
+    AbstractTimeGridView.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {
+        var _this = this;
+        var eventLimit;
+        var scrollerHeight;
+        var scrollbarWidths;
+        // make all axis cells line up
+        this.axisWidth = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["matchCellWidths"])(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-axis'));
+        // hack to give the view some height prior to timeGrid's columns being rendered
+        // TODO: separate setting height from scroller VS timeGrid.
+        if (!this.timeGrid.colEls) {
+            if (!isAuto) {
+                scrollerHeight = this.computeScrollerHeight(viewHeight);
+                this.scroller.setHeight(scrollerHeight);
+            }
+            return;
+        }
+        // set of fake row elements that must compensate when scroller has scrollbars
+        var noScrollRowEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-row').filter(function (node) {
+            return !_this.scroller.el.contains(node);
+        });
+        // reset all dimensions back to the original state
+        this.timeGrid.bottomRuleEl.style.display = 'none'; // will be shown later if this <hr> is necessary
+        this.scroller.clear(); // sets height to 'auto' and clears overflow
+        noScrollRowEls.forEach(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["uncompensateScroll"]);
+        // limit number of events in the all-day area
+        if (this.dayGrid) {
+            this.dayGrid.removeSegPopover(); // kill the "more" popover if displayed
+            eventLimit = this.context.options.eventLimit;
+            if (eventLimit && typeof eventLimit !== 'number') {
+                eventLimit = TIMEGRID_ALL_DAY_EVENT_LIMIT; // make sure "auto" goes to a real number
+            }
+            if (eventLimit) {
+                this.dayGrid.limitRows(eventLimit);
+            }
+        }
+        if (!isAuto) { // should we force dimensions of the scroll container?
+            scrollerHeight = this.computeScrollerHeight(viewHeight);
+            this.scroller.setHeight(scrollerHeight);
+            scrollbarWidths = this.scroller.getScrollbarWidths();
+            if (scrollbarWidths.left || scrollbarWidths.right) { // using scrollbars?
+                // make the all-day and header rows lines up
+                noScrollRowEls.forEach(function (rowEl) {
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["compensateScroll"])(rowEl, scrollbarWidths);
+                });
+                // the scrollbar compensation might have changed text flow, which might affect height, so recalculate
+                // and reapply the desired height to the scroller.
+                scrollerHeight = this.computeScrollerHeight(viewHeight);
+                this.scroller.setHeight(scrollerHeight);
+            }
+            // guarantees the same scrollbar widths
+            this.scroller.lockOverflow(scrollbarWidths);
+            // if there's any space below the slats, show the horizontal rule.
+            // this won't cause any new overflow, because lockOverflow already called.
+            if (this.timeGrid.getTotalSlatHeight() < scrollerHeight) {
+                this.timeGrid.bottomRuleEl.style.display = '';
+            }
+        }
+    };
+    // given a desired total height of the view, returns what the height of the scroller should be
+    AbstractTimeGridView.prototype.computeScrollerHeight = function (viewHeight) {
+        return viewHeight -
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["subtractInnerElHeight"])(this.el, this.scroller.el); // everything that's NOT the scroller
+    };
+    /* Scroll
+    ------------------------------------------------------------------------------------------------------------------*/
+    // Computes the initial pre-configured scroll state prior to allowing the user to change it
+    AbstractTimeGridView.prototype.computeDateScroll = function (duration) {
+        var top = this.timeGrid.computeTimeTop(duration);
+        // zoom can give weird floating-point values. rather scroll a little bit further
+        top = Math.ceil(top);
+        if (top) {
+            top++; // to overcome top border that slots beyond the first have. looks better
+        }
+        return { top: top };
+    };
+    AbstractTimeGridView.prototype.queryDateScroll = function () {
+        return { top: this.scroller.getScrollTop() };
+    };
+    AbstractTimeGridView.prototype.applyDateScroll = function (scroll) {
+        if (scroll.top !== undefined) {
+            this.scroller.setScrollTop(scroll.top);
+        }
+    };
+    // Generates an HTML attribute string for setting the width of the axis, if it is known
+    AbstractTimeGridView.prototype.axisStyleAttr = function () {
+        if (this.axisWidth != null) {
+            return 'style="width:' + this.axisWidth + 'px"';
+        }
+        return '';
+    };
+    return AbstractTimeGridView;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["View"]));
+AbstractTimeGridView.prototype.usesMinMaxTime = true; // indicates that minTime/maxTime affects rendering
+
+var SimpleTimeGrid = /** @class */ (function (_super) {
+    __extends(SimpleTimeGrid, _super);
+    function SimpleTimeGrid(timeGrid) {
+        var _this = _super.call(this, timeGrid.el) || this;
+        _this.buildDayRanges = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(buildDayRanges);
+        _this.slicer = new TimeGridSlicer();
+        _this.timeGrid = timeGrid;
+        return _this;
+    }
+    SimpleTimeGrid.prototype.firstContext = function (context) {
+        context.calendar.registerInteractiveComponent(this, {
+            el: this.timeGrid.el
+        });
+    };
+    SimpleTimeGrid.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.context.calendar.unregisterInteractiveComponent(this);
+    };
+    SimpleTimeGrid.prototype.render = function (props, context) {
+        var dateEnv = this.context.dateEnv;
+        var dateProfile = props.dateProfile, dayTable = props.dayTable;
+        var dayRanges = this.dayRanges = this.buildDayRanges(dayTable, dateProfile, dateEnv);
+        var timeGrid = this.timeGrid;
+        timeGrid.receiveContext(context); // hack because context is used in sliceProps
+        timeGrid.receiveProps(__assign({}, this.slicer.sliceProps(props, dateProfile, null, context.calendar, timeGrid, dayRanges), { dateProfile: dateProfile, cells: dayTable.cells[0] }), context);
+    };
+    SimpleTimeGrid.prototype.renderNowIndicator = function (date) {
+        this.timeGrid.renderNowIndicator(this.slicer.sliceNowDate(date, this.timeGrid, this.dayRanges), date);
+    };
+    SimpleTimeGrid.prototype.buildPositionCaches = function () {
+        this.timeGrid.buildPositionCaches();
+    };
+    SimpleTimeGrid.prototype.queryHit = function (positionLeft, positionTop) {
+        var rawHit = this.timeGrid.positionToHit(positionLeft, positionTop);
+        if (rawHit) {
+            return {
+                component: this.timeGrid,
+                dateSpan: rawHit.dateSpan,
+                dayEl: rawHit.dayEl,
+                rect: {
+                    left: rawHit.relativeRect.left,
+                    right: rawHit.relativeRect.right,
+                    top: rawHit.relativeRect.top,
+                    bottom: rawHit.relativeRect.bottom
+                },
+                layer: 0
+            };
+        }
+    };
+    return SimpleTimeGrid;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DateComponent"]));
+function buildDayRanges(dayTable, dateProfile, dateEnv) {
+    var ranges = [];
+    for (var _i = 0, _a = dayTable.headerDates; _i < _a.length; _i++) {
+        var date = _a[_i];
+        ranges.push({
+            start: dateEnv.add(date, dateProfile.minTime),
+            end: dateEnv.add(date, dateProfile.maxTime)
+        });
+    }
+    return ranges;
+}
+var TimeGridSlicer = /** @class */ (function (_super) {
+    __extends(TimeGridSlicer, _super);
+    function TimeGridSlicer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TimeGridSlicer.prototype.sliceRange = function (range, dayRanges) {
+        var segs = [];
+        for (var col = 0; col < dayRanges.length; col++) {
+            var segRange = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["intersectRanges"])(range, dayRanges[col]);
+            if (segRange) {
+                segs.push({
+                    start: segRange.start,
+                    end: segRange.end,
+                    isStart: segRange.start.valueOf() === range.start.valueOf(),
+                    isEnd: segRange.end.valueOf() === range.end.valueOf(),
+                    col: col
+                });
+            }
+        }
+        return segs;
+    };
+    return TimeGridSlicer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Slicer"]));
+
+var TimeGridView = /** @class */ (function (_super) {
+    __extends(TimeGridView, _super);
+    function TimeGridView() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.buildDayTable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(buildDayTable);
+        return _this;
+    }
+    TimeGridView.prototype.render = function (props, context) {
+        _super.prototype.render.call(this, props, context); // for flags for updateSize. also _renderSkeleton/_unrenderSkeleton
+        var _a = this.props, dateProfile = _a.dateProfile, dateProfileGenerator = _a.dateProfileGenerator;
+        var nextDayThreshold = context.nextDayThreshold;
+        var dayTable = this.buildDayTable(dateProfile, dateProfileGenerator);
+        var splitProps = this.splitter.splitProps(props);
+        if (this.header) {
+            this.header.receiveProps({
+                dateProfile: dateProfile,
+                dates: dayTable.headerDates,
+                datesRepDistinctDays: true,
+                renderIntroHtml: this.renderHeadIntroHtml
+            }, context);
+        }
+        this.simpleTimeGrid.receiveProps(__assign({}, splitProps['timed'], { dateProfile: dateProfile,
+            dayTable: dayTable }), context);
+        if (this.simpleDayGrid) {
+            this.simpleDayGrid.receiveProps(__assign({}, splitProps['allDay'], { dateProfile: dateProfile,
+                dayTable: dayTable,
+                nextDayThreshold: nextDayThreshold, isRigid: false }), context);
+        }
+        this.startNowIndicator(dateProfile, dateProfileGenerator);
+    };
+    TimeGridView.prototype._renderSkeleton = function (context) {
+        _super.prototype._renderSkeleton.call(this, context);
+        if (context.options.columnHeader) {
+            this.header = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DayHeader"](this.el.querySelector('.fc-head-container'));
+        }
+        this.simpleTimeGrid = new SimpleTimeGrid(this.timeGrid);
+        if (this.dayGrid) {
+            this.simpleDayGrid = new _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["SimpleDayGrid"](this.dayGrid);
+        }
+    };
+    TimeGridView.prototype._unrenderSkeleton = function () {
+        _super.prototype._unrenderSkeleton.call(this);
+        if (this.header) {
+            this.header.destroy();
+        }
+        this.simpleTimeGrid.destroy();
+        if (this.simpleDayGrid) {
+            this.simpleDayGrid.destroy();
+        }
+    };
+    TimeGridView.prototype.renderNowIndicator = function (date) {
+        this.simpleTimeGrid.renderNowIndicator(date);
+    };
+    return TimeGridView;
+}(AbstractTimeGridView));
+function buildDayTable(dateProfile, dateProfileGenerator) {
+    var daySeries = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DaySeries"](dateProfile.renderRange, dateProfileGenerator);
+    return new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DayTable"](daySeries, false);
+}
+
+var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"])({
+    defaultView: 'timeGridWeek',
+    views: {
+        timeGrid: {
+            class: TimeGridView,
+            allDaySlot: true,
+            slotDuration: '00:30:00',
+            slotEventOverlap: true // a bad name. confused with overlap/constraint system
+        },
+        timeGridDay: {
+            type: 'timeGrid',
+            duration: { days: 1 }
+        },
+        timeGridWeek: {
+            type: 'timeGrid',
+            duration: { weeks: 1 }
+        }
+    }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (main);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@fullcalendar/vue/main.esm.js":
 /*!****************************************************!*\
   !*** ./node_modules/@fullcalendar/vue/main.esm.js ***!
@@ -15052,6 +16827,33 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DatalistComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DatalistComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["posts"],
+  data: function data() {
+    return {};
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DislikeComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DislikeComponent.vue?vue&type=script&lang=js& ***!
@@ -15204,8 +17006,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/vue */ "./node_modules/@fullcalendar/vue/main.esm.js");
 /* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.esm.js");
 /* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/interaction */ "./node_modules/@fullcalendar/interaction/main.esm.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fullcalendar/timegrid */ "./node_modules/@fullcalendar/timegrid/main.esm.js");
+/* harmony import */ var _fullcalendar_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fullcalendar/list */ "./node_modules/@fullcalendar/list/main.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -15271,6 +17075,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -15282,7 +17107,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   data: function data() {
     return {
-      calendarPlugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_2__["default"]],
+      calendarPlugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_2__["default"], _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_3__["default"], _fullcalendar_list__WEBPACK_IMPORTED_MODULE_4__["default"]],
       events: "",
       newEvent: {
         event_name: "",
@@ -15300,7 +17125,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     addNewEvent: function addNewEvent() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("/api/calendar", _objectSpread({}, this.newEvent)).then(function (data) {
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("/api/calendar", _objectSpread({}, this.newEvent)).then(function (data) {
         _this.getEvents();
 
         _this.resetForm();
@@ -15329,7 +17154,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     updateEvent: function updateEvent() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.put("/api/calendar/" + this.indexToUpdate, _objectSpread({}, this.newEvent)).then(function (resp) {
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.put("/api/calendar/" + this.indexToUpdate, _objectSpread({}, this.newEvent)).then(function (resp) {
         _this2.resetForm();
 
         _this2.getEvents();
@@ -15342,7 +17167,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     deleteEvent: function deleteEvent() {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a["delete"]("/api/calendar/" + this.indexToUpdate).then(function (resp) {
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a["delete"]("/api/calendar/" + this.indexToUpdate).then(function (resp) {
         _this3.resetForm();
 
         _this3.getEvents();
@@ -15355,7 +17180,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getEvents: function getEvents() {
       var _this4 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("/api/calendar").then(function (resp) {
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("/api/calendar").then(function (resp) {
         return _this4.events = resp.data.data;
       })["catch"](function (err) {
         return console.log(err.response.data);
@@ -15367,6 +17192,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       Object.keys(this.newEvent).forEach(function (key) {
         return _this5.newEvent[key] = "";
       });
+    },
+    handleSelect: function handleSelect(arg) {
+      console.log(arg.startStr);
     }
   },
   watch: {
@@ -15530,9 +17358,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VcalendarComponent.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/VcalendarComponent.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -20054,6 +21882,25 @@ exports.push([module.i, "/* DayGridView\n---------------------------------------
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/timegrid/main.css":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/timegrid/main.css ***!
+  \***************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@charset \"UTF-8\";\n/* TimeGridView all-day area\n--------------------------------------------------------------------------------------------------*/\n.fc-timeGrid-view .fc-day-grid {\n  position: relative;\n  z-index: 2;\n  /* so the \"more..\" popover will be over the time grid */\n}\n.fc-timeGrid-view .fc-day-grid .fc-row {\n  min-height: 3em;\n  /* all-day section will never get shorter than this */\n}\n.fc-timeGrid-view .fc-day-grid .fc-row .fc-content-skeleton {\n  padding-bottom: 1em;\n  /* give space underneath events for clicking/selecting days */\n}\n\n/* TimeGrid axis running down the side (for both the all-day area and the slot area)\n--------------------------------------------------------------------------------------------------*/\n.fc .fc-axis {\n  /* .fc to overcome default cell styles */\n  vertical-align: middle;\n  padding: 0 4px;\n  white-space: nowrap;\n}\n.fc-ltr .fc-axis {\n  text-align: right;\n}\n.fc-rtl .fc-axis {\n  text-align: left;\n}\n\n/* TimeGrid Structure\n--------------------------------------------------------------------------------------------------*/\n.fc-time-grid-container,\n.fc-time-grid {\n  /* so slats/bg/content/etc positions get scoped within here */\n  position: relative;\n  z-index: 1;\n}\n.fc-time-grid {\n  min-height: 100%;\n  /* so if height setting is 'auto', .fc-bg stretches to fill height */\n}\n.fc-time-grid table {\n  /* don't put outer borders on slats/bg/content/etc */\n  border: 0 hidden transparent;\n}\n.fc-time-grid > .fc-bg {\n  z-index: 1;\n}\n.fc-time-grid .fc-slats,\n.fc-time-grid > hr {\n  /* the <hr> TimeGridView injects when grid is shorter than scroller */\n  position: relative;\n  z-index: 2;\n}\n.fc-time-grid .fc-content-col {\n  position: relative;\n  /* because now-indicator lives directly inside */\n}\n.fc-time-grid .fc-content-skeleton {\n  position: absolute;\n  z-index: 3;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n/* divs within a cell within the fc-content-skeleton */\n.fc-time-grid .fc-business-container {\n  position: relative;\n  z-index: 1;\n}\n.fc-time-grid .fc-bgevent-container {\n  position: relative;\n  z-index: 2;\n}\n.fc-time-grid .fc-highlight-container {\n  position: relative;\n  z-index: 3;\n}\n.fc-time-grid .fc-event-container {\n  position: relative;\n  z-index: 4;\n}\n.fc-time-grid .fc-now-indicator-line {\n  z-index: 5;\n}\n.fc-time-grid .fc-mirror-container {\n  /* also is fc-event-container */\n  position: relative;\n  z-index: 6;\n}\n\n/* TimeGrid Slats (lines that run horizontally)\n--------------------------------------------------------------------------------------------------*/\n.fc-time-grid .fc-slats td {\n  height: 1.5em;\n  border-bottom: 0;\n  /* each cell is responsible for its top border */\n}\n.fc-time-grid .fc-slats .fc-minor td {\n  border-top-style: dotted;\n}\n\n/* TimeGrid Highlighting Slots\n--------------------------------------------------------------------------------------------------*/\n.fc-time-grid .fc-highlight-container {\n  /* a div within a cell within the fc-highlight-skeleton */\n  position: relative;\n  /* scopes the left/right of the fc-highlight to be in the column */\n}\n.fc-time-grid .fc-highlight {\n  position: absolute;\n  left: 0;\n  right: 0;\n  /* top and bottom will be in by JS */\n}\n\n/* TimeGrid Event Containment\n--------------------------------------------------------------------------------------------------*/\n.fc-ltr .fc-time-grid .fc-event-container {\n  /* space on the sides of events for LTR (default) */\n  margin: 0 2.5% 0 2px;\n}\n.fc-rtl .fc-time-grid .fc-event-container {\n  /* space on the sides of events for RTL */\n  margin: 0 2px 0 2.5%;\n}\n.fc-time-grid .fc-event,\n.fc-time-grid .fc-bgevent {\n  position: absolute;\n  z-index: 1;\n  /* scope inner z-index's */\n}\n.fc-time-grid .fc-bgevent {\n  /* background events always span full width */\n  left: 0;\n  right: 0;\n}\n\n/* TimeGrid Event Styling\n----------------------------------------------------------------------------------------------------\nWe use the full \"fc-time-grid-event\" class instead of using descendants because the event won't\nbe a descendant of the grid when it is being dragged.\n*/\n.fc-time-grid-event {\n  margin-bottom: 1px;\n}\n.fc-time-grid-event-inset {\n  -webkit-box-shadow: 0px 0px 0px 1px #fff;\n  box-shadow: 0px 0px 0px 1px #fff;\n}\n.fc-time-grid-event.fc-not-start {\n  /* events that are continuing from another day */\n  /* replace space made by the top border with padding */\n  border-top-width: 0;\n  padding-top: 1px;\n  /* remove top rounded corners */\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n.fc-time-grid-event.fc-not-end {\n  /* replace space made by the top border with padding */\n  border-bottom-width: 0;\n  padding-bottom: 1px;\n  /* remove bottom rounded corners */\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.fc-time-grid-event .fc-content {\n  overflow: hidden;\n  max-height: 100%;\n}\n.fc-time-grid-event .fc-time,\n.fc-time-grid-event .fc-title {\n  padding: 0 1px;\n}\n.fc-time-grid-event .fc-time {\n  font-size: 0.85em;\n  white-space: nowrap;\n}\n\n/* short mode, where time and title are on the same line */\n.fc-time-grid-event.fc-short .fc-content {\n  /* don't wrap to second line (now that contents will be inline) */\n  white-space: nowrap;\n}\n.fc-time-grid-event.fc-short .fc-time,\n.fc-time-grid-event.fc-short .fc-title {\n  /* put the time and title on the same line */\n  display: inline-block;\n  vertical-align: top;\n}\n.fc-time-grid-event.fc-short .fc-time span {\n  display: none;\n  /* don't display the full time text... */\n}\n.fc-time-grid-event.fc-short .fc-time:before {\n  content: attr(data-start);\n  /* ...instead, display only the start time */\n}\n.fc-time-grid-event.fc-short .fc-time:after {\n  content: \"\\A0-\\A0\";\n  /* seperate with a dash, wrapped in nbsp's */\n}\n.fc-time-grid-event.fc-short .fc-title {\n  font-size: 0.85em;\n  /* make the title text the same size as the time */\n  padding: 0;\n  /* undo padding from above */\n}\n\n/* resizer (cursor device) */\n.fc-time-grid-event.fc-allow-mouse-resize .fc-resizer {\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: 8px;\n  overflow: hidden;\n  line-height: 8px;\n  font-size: 11px;\n  font-family: monospace;\n  text-align: center;\n  cursor: s-resize;\n}\n.fc-time-grid-event.fc-allow-mouse-resize .fc-resizer:after {\n  content: \"=\";\n}\n\n/* resizer (touch device) */\n.fc-time-grid-event.fc-selected .fc-resizer {\n  /* 10x10 dot */\n  border-radius: 5px;\n  border-width: 1px;\n  width: 8px;\n  height: 8px;\n  border-style: solid;\n  border-color: inherit;\n  background: #fff;\n  /* horizontally center */\n  left: 50%;\n  margin-left: -5px;\n  /* center on the bottom edge */\n  bottom: -5px;\n}\n\n/* Now Indicator\n--------------------------------------------------------------------------------------------------*/\n.fc-time-grid .fc-now-indicator-line {\n  border-top-width: 1px;\n  left: 0;\n  right: 0;\n}\n\n/* arrow on axis */\n.fc-time-grid .fc-now-indicator-arrow {\n  margin-top: -5px;\n  /* vertically center on top coordinate */\n}\n.fc-ltr .fc-time-grid .fc-now-indicator-arrow {\n  left: 0;\n  /* triangle pointing right... */\n  border-width: 5px 0 5px 6px;\n  border-top-color: transparent;\n  border-bottom-color: transparent;\n}\n.fc-rtl .fc-time-grid .fc-now-indicator-arrow {\n  right: 0;\n  /* triangle pointing left... */\n  border-width: 5px 6px 5px 0;\n  border-top-color: transparent;\n  border-bottom-color: transparent;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FullcalendarComponent.vue?vue&type=style&index=0&lang=css& ***!
@@ -20065,6 +21912,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 // imports
 exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!@fullcalendar/core/main.css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/core/main.css"), "");
 exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!@fullcalendar/daygrid/main.css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/daygrid/main.css"), "");
+exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!@fullcalendar/timegrid/main.css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@fullcalendar/timegrid/main.css"), "");
 
 // module
 exports.push([module.i, "\n.fc-title {\n  color: #fff;\n}\n.fc-title:hover {\n  cursor: pointer;\n}\n", ""]);
@@ -64037,6 +65885,49 @@ var SwiperSlide = VueAwesomeSwiper.SwiperSlide;exports.Swiper=Swiper;exports.Swi
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DatalistComponent.vue?vue&type=template&id=17f52d3a&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DatalistComponent.vue?vue&type=template&id=17f52d3a& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("input", {
+      staticClass: "form-control",
+      attrs: {
+        type: "text",
+        list: "todofuken_list",
+        placeholder: "タイトルを入力して下さい",
+        name: "title"
+      }
+    }),
+    _vm._v(" "),
+    _c(
+      "datalist",
+      { attrs: { id: "todofuken_list" } },
+      _vm._l(_vm.posts, function(post) {
+        return _c("option", { domProps: { value: post.title } })
+      }),
+      0
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DislikeComponent.vue?vue&type=template&id=31c01fc3&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DislikeComponent.vue?vue&type=template&id=31c01fc3& ***!
@@ -64202,7 +66093,7 @@ var render = function() {
           [
             _c("div", { staticClass: "form-group" }, [
               _c("label", { attrs: { for: "event_name" } }, [
-                _vm._v("Event Name")
+                _vm._v("イベント名")
               ]),
               _vm._v(" "),
               _c("input", {
@@ -64235,7 +66126,7 @@ var render = function() {
                 _c("div", { staticClass: "col-md-6" }, [
                   _c("div", { staticClass: "form-group" }, [
                     _c("label", { attrs: { for: "start_date" } }, [
-                      _vm._v("Start Date")
+                      _vm._v("開始日")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -64269,7 +66160,7 @@ var render = function() {
                 _c("div", { staticClass: "col-md-6" }, [
                   _c("div", { staticClass: "form-group" }, [
                     _c("label", { attrs: { for: "end_date" } }, [
-                      _vm._v("End Date")
+                      _vm._v("終了日")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -64308,7 +66199,7 @@ var render = function() {
                           staticClass: "btn btn-sm btn-primary",
                           on: { click: _vm.addNewEvent }
                         },
-                        [_vm._v("Save Event")]
+                        [_vm._v("登録")]
                       )
                     ])
                   : [
@@ -64319,7 +66210,7 @@ var render = function() {
                             staticClass: "btn btn-sm btn-success",
                             on: { click: _vm.updateEvent }
                           },
-                          [_vm._v("Update")]
+                          [_vm._v("更新")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -64328,7 +66219,7 @@ var render = function() {
                             staticClass: "btn btn-sm btn-danger",
                             on: { click: _vm.deleteEvent }
                           },
-                          [_vm._v("Delete")]
+                          [_vm._v("削除")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -64341,7 +66232,7 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._v("Cancel")]
+                          [_vm._v("閉じる")]
                         )
                       ])
                     ]
@@ -64357,8 +66248,24 @@ var render = function() {
         { staticClass: "col-md-8" },
         [
           _c("Fullcalendar", {
-            attrs: { plugins: _vm.calendarPlugins, events: _vm.events },
-            on: { eventClick: _vm.showEvent }
+            attrs: {
+              plugins: _vm.calendarPlugins,
+              events: _vm.events,
+              header: {
+                left: "title",
+                center: "dayGridMonth, timeGridWeek, timeGridDay, listWeek",
+                right: "prev today next"
+              },
+              buttonText: {
+                today: "今日",
+                month: "月",
+                week: "週",
+                day: "日",
+                list: "リスト"
+              },
+              selectable: true
+            },
+            on: { eventClick: _vm.showEvent, select: _vm.handleSelect }
           })
         ],
         1
@@ -64489,9 +66396,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VcalendarComponent.vue?vue&type=template&id=fc45a258&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/VcalendarComponent.vue?vue&type=template&id=fc45a258& ***!
   \*********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -81549,7 +83456,8 @@ Vue.component('like-component', __webpack_require__(/*! ./components/LikeCompone
 Vue.component('dislike-component', __webpack_require__(/*! ./components/DislikeComponent.vue */ "./resources/js/components/DislikeComponent.vue")["default"]);
 Vue.component('swiper-component', __webpack_require__(/*! ./components/SwiperComponent.vue */ "./resources/js/components/SwiperComponent.vue")["default"]);
 Vue.component('fullcalendar-component', __webpack_require__(/*! ./components/FullcalendarComponent.vue */ "./resources/js/components/FullcalendarComponent.vue")["default"]);
-Vue.component('vcalendar-component', __webpack_require__(/*! ./components/vcalendarComponent.vue */ "./resources/js/components/vcalendarComponent.vue")["default"]);
+Vue.component('vcalendar-component', __webpack_require__(/*! ./components/VcalendarComponent.vue */ "./resources/js/components/VcalendarComponent.vue")["default"]);
+Vue.component('datalist-component', __webpack_require__(/*! ./components/DatalistComponent.vue */ "./resources/js/components/DatalistComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -81606,6 +83514,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/DatalistComponent.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/DatalistComponent.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DatalistComponent_vue_vue_type_template_id_17f52d3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DatalistComponent.vue?vue&type=template&id=17f52d3a& */ "./resources/js/components/DatalistComponent.vue?vue&type=template&id=17f52d3a&");
+/* harmony import */ var _DatalistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatalistComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/DatalistComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DatalistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DatalistComponent_vue_vue_type_template_id_17f52d3a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DatalistComponent_vue_vue_type_template_id_17f52d3a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DatalistComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/DatalistComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/DatalistComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatalistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./DatalistComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DatalistComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatalistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/DatalistComponent.vue?vue&type=template&id=17f52d3a&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/DatalistComponent.vue?vue&type=template&id=17f52d3a& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatalistComponent_vue_vue_type_template_id_17f52d3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./DatalistComponent.vue?vue&type=template&id=17f52d3a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DatalistComponent.vue?vue&type=template&id=17f52d3a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatalistComponent_vue_vue_type_template_id_17f52d3a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatalistComponent_vue_vue_type_template_id_17f52d3a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -81990,17 +83967,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/vcalendarComponent.vue":
+/***/ "./resources/js/components/VcalendarComponent.vue":
 /*!********************************************************!*\
-  !*** ./resources/js/components/vcalendarComponent.vue ***!
+  !*** ./resources/js/components/VcalendarComponent.vue ***!
   \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vcalendarComponent.vue?vue&type=template&id=529482b4& */ "./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&");
-/* harmony import */ var _vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vcalendarComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _VcalendarComponent_vue_vue_type_template_id_fc45a258___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VcalendarComponent.vue?vue&type=template&id=fc45a258& */ "./resources/js/components/VcalendarComponent.vue?vue&type=template&id=fc45a258&");
+/* harmony import */ var _VcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VcalendarComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/VcalendarComponent.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -82010,9 +83987,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _VcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VcalendarComponent_vue_vue_type_template_id_fc45a258___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VcalendarComponent_vue_vue_type_template_id_fc45a258___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -82022,38 +83999,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/vcalendarComponent.vue"
+component.options.__file = "resources/js/components/VcalendarComponent.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/components/VcalendarComponent.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************!*\
-  !*** ./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/components/VcalendarComponent.vue?vue&type=script&lang=js& ***!
   \*********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./vcalendarComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./VcalendarComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VcalendarComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VcalendarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&":
+/***/ "./resources/js/components/VcalendarComponent.vue?vue&type=template&id=fc45a258&":
 /*!***************************************************************************************!*\
-  !*** ./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4& ***!
+  !*** ./resources/js/components/VcalendarComponent.vue?vue&type=template&id=fc45a258& ***!
   \***************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./vcalendarComponent.vue?vue&type=template&id=529482b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/vcalendarComponent.vue?vue&type=template&id=529482b4&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VcalendarComponent_vue_vue_type_template_id_fc45a258___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./VcalendarComponent.vue?vue&type=template&id=fc45a258& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VcalendarComponent.vue?vue&type=template&id=fc45a258&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VcalendarComponent_vue_vue_type_template_id_fc45a258___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_vcalendarComponent_vue_vue_type_template_id_529482b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VcalendarComponent_vue_vue_type_template_id_fc45a258___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

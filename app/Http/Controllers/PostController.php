@@ -39,7 +39,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $posts = Post::all();
+        $post_key = $posts->
+
+        return view('posts.create', compact('posts'));
     }
 
     /**
@@ -51,7 +54,7 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $post = new Post;
-        
+
         $post->title = $request->title;
         $post->body = $request->body;
         $post->user_id = Auth::id();
@@ -68,7 +71,7 @@ class PostController extends Controller
             $post->public_id = $publicId;
 
         }
-        
+
 
         $post->save();
 

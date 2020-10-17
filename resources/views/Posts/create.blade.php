@@ -17,7 +17,9 @@
                     @csrf
                     <div class="form-group">
                          <label>タイトル</label>
-                         <input type="text" class="form-control" placeholder="タイトルを入力して下さい" name="title">
+                         <datalist-component
+                         :posts="{{ json_encode($posts) }}"
+                         ></datalist-component>
                     </div>
                     <div class="form-group">
                          <label>内容</label>

@@ -4,13 +4,13 @@
     <div class="col-md-8">
       <form @submit.prevent>
         <div class="form-group">
-          <label for="event_name">Event Name</label>
+          <label for="event_name">イベント名</label>
           <input type="text" id="event_name" class="form-control" v-model="newEvent.event_name">
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label for="start_date">Start Date</label>
+              <label for="start_date">開始日</label>
               <input
                 type="date"
                 id="start_date"
@@ -21,25 +21,43 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="end_date">End Date</label>
+              <label for="end_date">終了日</label>
               <input type="date" id="end_date" class="form-control" v-model="newEvent.end_date">
             </div>
           </div>
           <div class="col-md-6 mb-4" v-if="addingMode">
-            <button class="btn btn-sm btn-primary" @click="addNewEvent">Save Event</button>
+            <button class="btn btn-sm btn-primary" @click="addNewEvent">登録</button>
           </div>
           <template v-else>
             <div class="col-md-6 mb-4">
-              <button class="btn btn-sm btn-success" @click="updateEvent">Update</button>
-              <button class="btn btn-sm btn-danger" @click="deleteEvent">Delete</button>
-              <button class="btn btn-sm btn-secondary" @click="addingMode = !addingMode">Cancel</button>
+              <button class="btn btn-sm btn-success" @click="updateEvent">更新</button>
+              <button class="btn btn-sm btn-danger" @click="deleteEvent">削除</button>
+              <button class="btn btn-sm btn-secondary" @click="addingMode = !addingMode">閉じる</button>
             </div>
           </template>
         </div>
       </form>
     </div>
     <div class="col-md-8">
-      <Fullcalendar @eventClick="showEvent" :plugins="calendarPlugins" :events="events"/>
+      <Fullcalendar
+      @eventClick="showEvent"
+      :plugins="calendarPlugins"
+      :events="events"
+      :header ="{
+        left: 'title',
+        center: 'dayGridMonth, timeGridWeek, timeGridDay, listWeek',
+        right: 'prev today next'
+      }"
+      :buttonText ="{
+        today: '今日',
+        month: '月',
+        week: '週',
+        day: '日',
+        list: 'リスト'
+      }"
+      :selectable="true"
+      @select="handleSelect"
+      />
     </div>
   </div>
 </div>
@@ -48,6 +66,7 @@
 <style lang="css">
 @import "~@fullcalendar/core/main.css";
 @import "~@fullcalendar/daygrid/main.css";
+@import "~@fullcalendar/timegrid/main.css";
 .fc-title {
   color: #fff;
 }
@@ -62,6 +81,8 @@
 import Fullcalendar from '@fullcalendar/vue';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import ListPlugin from '@fullcalendar/list';
 import axios from "axios";
 
 export default {
@@ -70,7 +91,7 @@ export default {
   },
   data() {
     return {
-      calendarPlugins: [dayGridPlugin, interactionPlugin],
+      calendarPlugins: [dayGridPlugin, interactionPlugin, timeGridPlugin, ListPlugin],
       events: "",
       newEvent: {
         event_name: "",
@@ -146,6 +167,9 @@ export default {
       Object.keys(this.newEvent).forEach(key => {
         return (this.newEvent[key] = "");
       });
+    },
+    handleSelect(arg) {
+        console.log(arg.startStr)
     }
   },
   watch: {
