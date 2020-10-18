@@ -17094,6 +17094,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -17122,6 +17123,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     this.getEvents();
   },
   methods: {
+    handleDateClick: function handleDateClick(arg) {
+      alert(arg.date);
+    },
     addNewEvent: function addNewEvent() {
       var _this = this;
 
@@ -66265,7 +66269,11 @@ var render = function() {
               },
               selectable: true
             },
-            on: { eventClick: _vm.showEvent, select: _vm.handleSelect }
+            on: {
+              eventClick: _vm.showEvent,
+              dateClick: _vm.handleDateClick,
+              select: _vm.handleSelect
+            }
           })
         ],
         1

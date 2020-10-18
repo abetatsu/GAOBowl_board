@@ -40,7 +40,6 @@ class PostController extends Controller
     public function create()
     {
         $posts = Post::all();
-        $post_key = $posts->
 
         return view('posts.create', compact('posts'));
     }

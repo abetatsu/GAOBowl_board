@@ -41,6 +41,7 @@
     <div class="col-md-8">
       <Fullcalendar
       @eventClick="showEvent"
+      @dateClick="handleDateClick"
       :plugins="calendarPlugins"
       :events="events"
       :header ="{
@@ -106,6 +107,9 @@ export default {
     this.getEvents();
   },
   methods: {
+      handleDateClick(arg) {
+      alert(arg.date)
+    },
     addNewEvent() {
       axios
         .post("/api/calendar", {
