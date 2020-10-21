@@ -33,6 +33,7 @@ Vue.component('swiper-component', require('./components/SwiperComponent.vue').de
 Vue.component('fullcalendar-component', require('./components/FullcalendarComponent.vue').default);
 Vue.component('vcalendar-component', require('./components/VcalendarComponent.vue').default);
 Vue.component('datalist-component', require('./components/DatalistComponent.vue').default);
+Vue.component('question-component', require('./components/QuestionComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

@@ -77,6 +77,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <question-component></question-component>
     </div>
 </body>
 </html>

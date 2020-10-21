@@ -1,0 +1,141 @@
+body {
+    font-family: 'Hannari';
+}
+
+.Diagnosis {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.result {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+
+    &.__active {
+        display: block;
+    }
+
+    &_inner {
+        padding: 50px 0;
+        font-size: 20px;
+    }
+
+    &_contents {
+        width: 100%;
+        border: 15px solid #ff6500;
+        transition: all 1.5s;
+        padding: 100px 20px;
+        font-size: 50px;
+        box-sizing: border-box;
+    }
+}
+
+.menubox {
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    padding: 80px 0;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all .4s ease .5s;
+
+    &.__hide {
+        display: none;
+    }
+
+    &.__active {
+        opacity: 1;
+    }
+}
+
+.menuttl {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    vertical-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuttl .txt {
+    display: inline-block;
+    vertical-align: center;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.menuItem {
+    min-width: 100%;
+    transition: all 1.5s;
+    padding: 10px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    label {
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+
+
+        input {
+            display: none;
+        }
+
+        input+.btn {
+            border: 1px solid #CCC;
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+            transition: .8;
+        }
+    }
+
+    input:checked+.btn {
+        background: #ff6500;
+        border: 1px solid #ff6500;
+    }
+
+    input:checked+.btn+.btn-txt {
+        color: #FFF;
+    }
+
+    .btn-txt {
+        z-index: 10;
+        position: relative;
+    }
+
+    .menuRadio {
+        margin-top: 40px;
+        min-width: 100%;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s ease;
+}
+
+.fade-enter,
+.fade-leave {
+    opacity: 0
+}

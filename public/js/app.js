@@ -17293,6 +17293,207 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/QuestionComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/QuestionComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var queData = [['パン', 'ごはん'], ['食べる', '食べない'], ['ハンバーグ', 'グミ'], ['ステーキ', 'カレーライス', 'ナッツ']];
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      answer: [],
+      answer_num: $('.menuItem').length,
+      sex: '',
+      current_num: 0,
+      toilet: '',
+      amount: '',
+      demand: '',
+      result_active: '',
+      nemu_active: '',
+      result_txt: '',
+      result: {
+        '0000': 1,
+        '0001': 2,
+        '0002': 3,
+        '0010': 4,
+        '0011': 5,
+        '0012': 6,
+        '0100': 7,
+        '0101': 8,
+        '0102': 9,
+        '0110': 10,
+        '0111': 11,
+        '0112': 12,
+        '1000': 13,
+        '1001': 14,
+        '1002': 15,
+        '1010': 16,
+        '1011': 17,
+        '1012': 18,
+        '1100': 19,
+        '1101': 20,
+        '1102': 21,
+        '1110': 22,
+        '1111': 23,
+        '1112': 24
+      },
+      result_num: ''
+    };
+  },
+  watch: {
+    result_num: function result_num(n, o) {
+      this.result_txt = queData[0][this.sex] + ' >> ' + queData[1][this.toilet] + ' >> ' + queData[2][this.amount] + ' >> ' + queData[3][this.demand] + ' を選択した時のコンテンツ';
+    }
+  },
+  created: function created() {
+    var _t = this;
+
+    setTimeout(function () {
+      _t.nemu_active = '__active';
+    }, 400);
+  },
+  methods: {
+    check: function check() {
+      this.answer[0] = this.sex;
+      this.answer[1] = this.toilet;
+      this.answer[2] = this.amount;
+      this.answer[3] = this.demand;
+      this.current_num = this.answer.indexOf('');
+
+      if (this.answer.indexOf('') == -1) {
+        this.nemu_active = '__hide';
+        this.result_active = '__active';
+        this.result_num = this.result[this.answer.join('')];
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SwiperComponent.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SwiperComponent.vue?vue&type=script&lang=js& ***!
@@ -66346,6 +66547,503 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/QuestionComponent.vue?vue&type=template&id=6c531d5c&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/QuestionComponent.vue?vue&type=template&id=6c531d5c& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "Diagnosis", attrs: { id: "Diagnosis" } }, [
+    _c(
+      "div",
+      { staticClass: "menubox", class: _vm.nemu_active },
+      [
+        _c(
+          "transition-group",
+          { attrs: { name: "fade", "transition-mode": "out-in" } },
+          [
+            _vm.current_num == 0
+              ? _c("div", { key: "1", staticClass: "menuItem" }, [
+                  _c("div", { staticClass: "menuttl" }, [
+                    _vm._v("\n          質問1\n          "),
+                    _c("span", { staticClass: "txt" }, [
+                      _vm._v("朝はパン？それともご飯？")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "menuRadio" }, [
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.sex,
+                            expression: "sex"
+                          }
+                        ],
+                        attrs: { name: "sex", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.sex, "0") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.sex = "0"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [_vm._v("パン")])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.sex,
+                            expression: "sex"
+                          }
+                        ],
+                        attrs: { name: "sex", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.sex, "1") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.sex = "1"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [_vm._v("ごはん")])
+                    ])
+                  ])
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.current_num == 1
+              ? _c("div", { key: "2", staticClass: "menuItem" }, [
+                  _c("div", { staticClass: "menuttl" }, [
+                    _vm._v("\n          質問2\n          "),
+                    _c("span", { staticClass: "txt" }, [
+                      _vm._v("間食はしますか？")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "menuRadio" }, [
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.toilet,
+                            expression: "toilet"
+                          }
+                        ],
+                        attrs: { name: "toilet", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.toilet, "0") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.toilet = "0"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [_vm._v("食べる")])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.toilet,
+                            expression: "toilet"
+                          }
+                        ],
+                        attrs: { name: "toilet", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.toilet, "1") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.toilet = "1"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [
+                        _vm._v("食べない")
+                      ])
+                    ])
+                  ])
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.current_num == 2
+              ? _c("div", { key: "3", staticClass: "menuItem" }, [
+                  _c("div", { staticClass: "menuttl" }, [
+                    _vm._v("\n          質問3\n          "),
+                    _c("span", { staticClass: "txt" }, [
+                      _vm._v("昼食はどちらを食べたいですか？")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "menuRadio" }, [
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.amount,
+                            expression: "amount"
+                          }
+                        ],
+                        attrs: { name: "amount", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.amount, "0") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.amount = "0"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [
+                        _vm._v("ハンバーグ")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.amount,
+                            expression: "amount"
+                          }
+                        ],
+                        attrs: { name: "amount", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.amount, "1") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.amount = "1"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [_vm._v("グミ")])
+                    ])
+                  ])
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.current_num == 3
+              ? _c("div", { key: "4", staticClass: "menuItem" }, [
+                  _c("div", { staticClass: "menuttl" }, [
+                    _vm._v("\n          質問4\n          "),
+                    _c("span", { staticClass: "txt" }, [
+                      _vm._v("晩ごはんは何が食べたいですか？")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "menuRadio" }, [
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.demand,
+                            expression: "demand"
+                          }
+                        ],
+                        attrs: { name: "demand", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.demand, "0") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.demand = "0"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [
+                        _vm._v("ステーキ")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.demand,
+                            expression: "demand"
+                          }
+                        ],
+                        attrs: { name: "demand", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.demand, "1") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.demand = "1"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [
+                        _vm._v("カレーライス")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.demand,
+                            expression: "demand"
+                          }
+                        ],
+                        attrs: { name: "demand", type: "radio", value: "2" },
+                        domProps: { checked: _vm._q(_vm.demand, "2") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.demand = "2"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [_vm._v("ナッツ")])
+                    ])
+                  ])
+                ])
+              : _vm._e()
+          ]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "result", class: _vm.result_active }, [
+      _c(
+        "div",
+        { staticClass: "result_inner" },
+        [
+          _c("transition-group", { attrs: { name: "fade" } }, [
+            _vm.result_num == 1
+              ? _c("div", { key: "1", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 肉塊です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 2
+              ? _c("div", { key: "2", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 FATです")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 3
+              ? _c("div", { key: "3", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 塊です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 4
+              ? _c("div", { key: "4", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 まあまあのポッチャリさんです")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 5
+              ? _c("div", { key: "5", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 糖質改善ポッチャリです")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 6
+              ? _c("div", { key: "6", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 甘党ぽっちゃりです")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 7
+              ? _c("div", { key: "7", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 健康体です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 8
+              ? _c("div", { key: "8", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 大学生並")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 9
+              ? _c("div", { key: "9", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 大学生並")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 10
+              ? _c("div", { key: "10", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 普通です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 11
+              ? _c("div", { key: "11", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 普通です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 12
+              ? _c("div", { key: "12", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 小動物？")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 13
+              ? _c("div", { key: "13", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 ポッチャリさんです")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 14
+              ? _c("div", { key: "14", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 普通です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 15
+              ? _c("div", { key: "15", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 なぜ最後ナッツ入れた？")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 16
+              ? _c("div", { key: "16", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 なぜグミいれた？")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 17
+              ? _c("div", { key: "17", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 なぜグミいれた？")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 18
+              ? _c("div", { key: "18", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 夜食べない派？")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 19
+              ? _c("div", { key: "19", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 十分です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 20
+              ? _c("div", { key: "20", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 結構余裕ありますね")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 21
+              ? _c("div", { key: "21", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 なぜ最後ナッツ？")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 22
+              ? _c("div", { key: "22", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 けっこうええもん食うてる")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 23
+              ? _c("div", { key: "23", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 大丈夫です")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.result_num == 24
+              ? _c("div", { key: "24", staticClass: "result_contents" }, [
+                  _vm._v("診断結果 バイトしよか")
+                ])
+              : _vm._e()
+          ])
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "detail" }, [_vm._v(_vm._s(_vm.result_txt))])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SwiperComponent.vue?vue&type=template&id=5415256c&scoped=true&":
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SwiperComponent.vue?vue&type=template&id=5415256c&scoped=true& ***!
@@ -83466,6 +84164,7 @@ Vue.component('swiper-component', __webpack_require__(/*! ./components/SwiperCom
 Vue.component('fullcalendar-component', __webpack_require__(/*! ./components/FullcalendarComponent.vue */ "./resources/js/components/FullcalendarComponent.vue")["default"]);
 Vue.component('vcalendar-component', __webpack_require__(/*! ./components/VcalendarComponent.vue */ "./resources/js/components/VcalendarComponent.vue")["default"]);
 Vue.component('datalist-component', __webpack_require__(/*! ./components/DatalistComponent.vue */ "./resources/js/components/DatalistComponent.vue")["default"]);
+Vue.component('question-component', __webpack_require__(/*! ./components/QuestionComponent.vue */ "./resources/js/components/QuestionComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -83883,6 +84582,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LikeComponent_vue_vue_type_template_id_8499806a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LikeComponent_vue_vue_type_template_id_8499806a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/QuestionComponent.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/QuestionComponent.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _QuestionComponent_vue_vue_type_template_id_6c531d5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./QuestionComponent.vue?vue&type=template&id=6c531d5c& */ "./resources/js/components/QuestionComponent.vue?vue&type=template&id=6c531d5c&");
+/* harmony import */ var _QuestionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuestionComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/QuestionComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _QuestionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _QuestionComponent_vue_vue_type_template_id_6c531d5c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _QuestionComponent_vue_vue_type_template_id_6c531d5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/QuestionComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/QuestionComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/QuestionComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/QuestionComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/QuestionComponent.vue?vue&type=template&id=6c531d5c&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/QuestionComponent.vue?vue&type=template&id=6c531d5c& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionComponent_vue_vue_type_template_id_6c531d5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionComponent.vue?vue&type=template&id=6c531d5c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/QuestionComponent.vue?vue&type=template&id=6c531d5c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionComponent_vue_vue_type_template_id_6c531d5c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionComponent_vue_vue_type_template_id_6c531d5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
