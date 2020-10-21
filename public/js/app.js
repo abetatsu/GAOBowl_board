@@ -17420,17 +17420,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-var queData = [['パン', 'ごはん'], ['食べる', '食べない'], ['ハンバーグ', 'グミ'], ['ステーキ', 'カレーライス', 'ナッツ']];
+var queData = [['飲まない', '飲む'], ['吸わない', '吸う'], ['ほぼない', 'ストレスだらけ'], ['8時間以上', '6時間', '3時間']];
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       answer: [],
       answer_num: $('.menuItem').length,
-      sex: '',
+      alcohol: '',
       current_num: 0,
-      toilet: '',
-      amount: '',
-      demand: '',
+      cigarette: '',
+      stress: '',
+      sleep: '',
       result_active: '',
       nemu_active: '',
       result_txt: '',
@@ -17465,7 +17465,7 @@ var queData = [['パン', 'ごはん'], ['食べる', '食べない'], ['ハン�
   },
   watch: {
     result_num: function result_num(n, o) {
-      this.result_txt = queData[0][this.sex] + ' >> ' + queData[1][this.toilet] + ' >> ' + queData[2][this.amount] + ' >> ' + queData[3][this.demand] + ' を選択した時のコンテンツ';
+      this.result_txt = queData[0][this.alcohol] + ' >> ' + queData[1][this.cigarette] + ' >> ' + queData[2][this.stress] + ' >> ' + queData[3][this.sleep] + ' を選択した時のコンテンツ';
     }
   },
   created: function created() {
@@ -17477,10 +17477,10 @@ var queData = [['パン', 'ごはん'], ['食べる', '食べない'], ['ハン�
   },
   methods: {
     check: function check() {
-      this.answer[0] = this.sex;
-      this.answer[1] = this.toilet;
-      this.answer[2] = this.amount;
-      this.answer[3] = this.demand;
+      this.answer[0] = this.alcohol;
+      this.answer[1] = this.cigarette;
+      this.answer[2] = this.stress;
+      this.answer[3] = this.sleep;
       this.current_num = this.answer.indexOf('');
 
       if (this.answer.indexOf('') == -1) {
@@ -66576,7 +66576,7 @@ var render = function() {
                   _c("div", { staticClass: "menuttl" }, [
                     _vm._v("\n          質問1\n          "),
                     _c("span", { staticClass: "txt" }, [
-                      _vm._v("朝はパン？それともご飯？")
+                      _vm._v("お酒は飲みますか？")
                     ])
                   ]),
                   _vm._v(" "),
@@ -66587,16 +66587,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.sex,
-                            expression: "sex"
+                            value: _vm.alcohol,
+                            expression: "alcohol"
                           }
                         ],
-                        attrs: { name: "sex", type: "radio", value: "0" },
-                        domProps: { checked: _vm._q(_vm.sex, "0") },
+                        attrs: { name: "alcohol", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.alcohol, "0") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.sex = "0"
+                              _vm.alcohol = "0"
                             },
                             _vm.check
                           ]
@@ -66605,7 +66605,9 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
-                      _c("span", { staticClass: "btn-txt" }, [_vm._v("パン")])
+                      _c("span", { staticClass: "btn-txt" }, [
+                        _vm._v("飲まない")
+                      ])
                     ]),
                     _vm._v(" "),
                     _c("label", [
@@ -66614,16 +66616,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.sex,
-                            expression: "sex"
+                            value: _vm.alcohol,
+                            expression: "alcohol"
                           }
                         ],
-                        attrs: { name: "sex", type: "radio", value: "1" },
-                        domProps: { checked: _vm._q(_vm.sex, "1") },
+                        attrs: { name: "alcohol", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.alcohol, "1") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.sex = "1"
+                              _vm.alcohol = "1"
                             },
                             _vm.check
                           ]
@@ -66632,7 +66634,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
-                      _c("span", { staticClass: "btn-txt" }, [_vm._v("ごはん")])
+                      _c("span", { staticClass: "btn-txt" }, [_vm._v("飲む")])
                     ])
                   ])
                 ])
@@ -66643,7 +66645,7 @@ var render = function() {
                   _c("div", { staticClass: "menuttl" }, [
                     _vm._v("\n          質問2\n          "),
                     _c("span", { staticClass: "txt" }, [
-                      _vm._v("間食はしますか？")
+                      _vm._v("タバコは吸いますか？")
                     ])
                   ]),
                   _vm._v(" "),
@@ -66654,43 +66656,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.toilet,
-                            expression: "toilet"
+                            value: _vm.cigarette,
+                            expression: "cigarette"
                           }
                         ],
-                        attrs: { name: "toilet", type: "radio", value: "0" },
-                        domProps: { checked: _vm._q(_vm.toilet, "0") },
+                        attrs: { name: "cigarette", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.cigarette, "0") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.toilet = "0"
-                            },
-                            _vm.check
-                          ]
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "btn" }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "btn-txt" }, [_vm._v("食べる")])
-                    ]),
-                    _vm._v(" "),
-                    _c("label", [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.toilet,
-                            expression: "toilet"
-                          }
-                        ],
-                        attrs: { name: "toilet", type: "radio", value: "1" },
-                        domProps: { checked: _vm._q(_vm.toilet, "1") },
-                        on: {
-                          change: [
-                            function($event) {
-                              _vm.toilet = "1"
+                              _vm.cigarette = "0"
                             },
                             _vm.check
                           ]
@@ -66700,8 +66675,35 @@ var render = function() {
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
                       _c("span", { staticClass: "btn-txt" }, [
-                        _vm._v("食べない")
+                        _vm._v("吸わない")
                       ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.cigarette,
+                            expression: "cigarette"
+                          }
+                        ],
+                        attrs: { name: "cigarette", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.cigarette, "1") },
+                        on: {
+                          change: [
+                            function($event) {
+                              _vm.cigarette = "1"
+                            },
+                            _vm.check
+                          ]
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "btn-txt" }, [_vm._v("吸う")])
                     ])
                   ])
                 ])
@@ -66712,7 +66714,7 @@ var render = function() {
                   _c("div", { staticClass: "menuttl" }, [
                     _vm._v("\n          質問3\n          "),
                     _c("span", { staticClass: "txt" }, [
-                      _vm._v("昼食はどちらを食べたいですか？")
+                      _vm._v("最近ストレスを感じていますか？")
                     ])
                   ]),
                   _vm._v(" "),
@@ -66723,16 +66725,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.amount,
-                            expression: "amount"
+                            value: _vm.stress,
+                            expression: "stress"
                           }
                         ],
-                        attrs: { name: "amount", type: "radio", value: "0" },
-                        domProps: { checked: _vm._q(_vm.amount, "0") },
+                        attrs: { name: "stress", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.stress, "0") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.amount = "0"
+                              _vm.stress = "0"
                             },
                             _vm.check
                           ]
@@ -66742,7 +66744,7 @@ var render = function() {
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
                       _c("span", { staticClass: "btn-txt" }, [
-                        _vm._v("ハンバーグ")
+                        _vm._v("ほぼない")
                       ])
                     ]),
                     _vm._v(" "),
@@ -66752,16 +66754,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.amount,
-                            expression: "amount"
+                            value: _vm.stress,
+                            expression: "stress"
                           }
                         ],
-                        attrs: { name: "amount", type: "radio", value: "1" },
-                        domProps: { checked: _vm._q(_vm.amount, "1") },
+                        attrs: { name: "stress", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.stress, "1") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.amount = "1"
+                              _vm.stress = "1"
                             },
                             _vm.check
                           ]
@@ -66770,7 +66772,9 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
-                      _c("span", { staticClass: "btn-txt" }, [_vm._v("グミ")])
+                      _c("span", { staticClass: "btn-txt" }, [
+                        _vm._v("ストレスだらけ")
+                      ])
                     ])
                   ])
                 ])
@@ -66780,9 +66784,7 @@ var render = function() {
               ? _c("div", { key: "4", staticClass: "menuItem" }, [
                   _c("div", { staticClass: "menuttl" }, [
                     _vm._v("\n          質問4\n          "),
-                    _c("span", { staticClass: "txt" }, [
-                      _vm._v("晩ごはんは何が食べたいですか？")
-                    ])
+                    _c("span", { staticClass: "txt" }, [_vm._v("睡眠時間は？")])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "menuRadio" }, [
@@ -66792,16 +66794,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.demand,
-                            expression: "demand"
+                            value: _vm.sleep,
+                            expression: "sleep"
                           }
                         ],
-                        attrs: { name: "demand", type: "radio", value: "0" },
-                        domProps: { checked: _vm._q(_vm.demand, "0") },
+                        attrs: { name: "sleep", type: "radio", value: "0" },
+                        domProps: { checked: _vm._q(_vm.sleep, "0") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.demand = "0"
+                              _vm.sleep = "0"
                             },
                             _vm.check
                           ]
@@ -66811,7 +66813,7 @@ var render = function() {
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
                       _c("span", { staticClass: "btn-txt" }, [
-                        _vm._v("ステーキ")
+                        _vm._v("8時間以上")
                       ])
                     ]),
                     _vm._v(" "),
@@ -66821,16 +66823,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.demand,
-                            expression: "demand"
+                            value: _vm.sleep,
+                            expression: "sleep"
                           }
                         ],
-                        attrs: { name: "demand", type: "radio", value: "1" },
-                        domProps: { checked: _vm._q(_vm.demand, "1") },
+                        attrs: { name: "sleep", type: "radio", value: "1" },
+                        domProps: { checked: _vm._q(_vm.sleep, "1") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.demand = "1"
+                              _vm.sleep = "1"
                             },
                             _vm.check
                           ]
@@ -66840,7 +66842,7 @@ var render = function() {
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
                       _c("span", { staticClass: "btn-txt" }, [
-                        _vm._v("カレーライス")
+                        _vm._v("6〜8時間")
                       ])
                     ]),
                     _vm._v(" "),
@@ -66850,16 +66852,16 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.demand,
-                            expression: "demand"
+                            value: _vm.sleep,
+                            expression: "sleep"
                           }
                         ],
-                        attrs: { name: "demand", type: "radio", value: "2" },
-                        domProps: { checked: _vm._q(_vm.demand, "2") },
+                        attrs: { name: "sleep", type: "radio", value: "2" },
+                        domProps: { checked: _vm._q(_vm.sleep, "2") },
                         on: {
                           change: [
                             function($event) {
-                              _vm.demand = "2"
+                              _vm.sleep = "2"
                             },
                             _vm.check
                           ]
@@ -66868,7 +66870,9 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", { staticClass: "btn" }),
                       _vm._v(" "),
-                      _c("span", { staticClass: "btn-txt" }, [_vm._v("ナッツ")])
+                      _c("span", { staticClass: "btn-txt" }, [
+                        _vm._v("6時間未満")
+                      ])
                     ])
                   ])
                 ])
@@ -66887,61 +66891,61 @@ var render = function() {
           _c("transition-group", { attrs: { name: "fade" } }, [
             _vm.result_num == 1
               ? _c("div", { key: "1", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 肉塊です")
+                  _vm._v("診断結果 それはちょっと寝過ぎ")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 2
               ? _c("div", { key: "2", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 FATです")
+                  _vm._v("診断結果 ハゲとは無縁です")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 3
               ? _c("div", { key: "3", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 塊です")
+                  _vm._v("診断結果 ちゃんと寝て")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 4
               ? _c("div", { key: "4", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 まあまあのポッチャリさんです")
+                  _vm._v("診断結果 ストレスで寝過ぎてるの？")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 5
               ? _c("div", { key: "5", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 糖質改善ポッチャリです")
+                  _vm._v("診断結果 ストレスマネジメント大事")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 6
               ? _c("div", { key: "6", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 甘党ぽっちゃりです")
+                  _vm._v("診断結果 とりあえず寝ようか")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 7
               ? _c("div", { key: "7", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 健康体です")
+                  _vm._v("診断結果 タバコやめようか")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 8
               ? _c("div", { key: "8", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 大学生並")
+                  _vm._v("診断結果 タバコやめたらストレス？")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 9
               ? _c("div", { key: "9", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 大学生並")
+                  _vm._v("診断結果 タバコやめてちゃんと寝よう")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.result_num == 10
               ? _c("div", { key: "10", staticClass: "result_contents" }, [
-                  _vm._v("診断結果 普通です")
+                  _vm._v("診断結果 タバコやめて筋トレしてみてはいかが？")
                 ])
               : _vm._e(),
             _vm._v(" "),

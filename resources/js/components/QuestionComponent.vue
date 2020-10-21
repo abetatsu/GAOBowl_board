@@ -5,77 +5,77 @@
           <div class="menuItem" key="1" v-if="current_num==0">
                <div class="menuttl">
                質問1
-               <span class="txt">朝はパン？それともご飯？</span>
+               <span class="txt">お酒は飲みますか？</span>
                </div>
                <div class="menuRadio">
                <label>
-               <input name="sex" type="radio" value="0" v-on:change="check" v-model="sex" />
+               <input name="alcohol" type="radio" value="0" v-on:change="check" v-model="alcohol" />
                <span class="btn"></span>
-               <span class="btn-txt">パン</span>
+               <span class="btn-txt">飲まない</span>
                </label>
                <label>
-               <input name="sex" type="radio" value="1" v-on:change="check" v-model="sex" />
+               <input name="alcohol" type="radio" value="1" v-on:change="check" v-model="alcohol" />
                <span class="btn"></span>
-               <span class="btn-txt">ごはん</span>
+               <span class="btn-txt">飲む</span>
                </label>
                </div>
           </div>
           <div class="menuItem" key="2" v-if="current_num==1">
                <div class="menuttl">
                質問2
-               <span class="txt">間食はしますか？</span>
+               <span class="txt">タバコは吸いますか？</span>
                </div>
                <div class="menuRadio">
                <label>
-               <input name="toilet" type="radio" value="0" v-on:change="check" v-model="toilet" />
+               <input name="cigarette" type="radio" value="0" v-on:change="check" v-model="cigarette" />
                <span class="btn"></span>
-               <span class="btn-txt">食べる</span>
+               <span class="btn-txt">吸わない</span>
                </label>
                <label>
-               <input name="toilet" type="radio" value="1" v-on:change="check" v-model="toilet" />
+               <input name="cigarette" type="radio" value="1" v-on:change="check" v-model="cigarette" />
                <span class="btn"></span>
-               <span class="btn-txt">食べない</span>
+               <span class="btn-txt">吸う</span>
                </label>
                </div>
           </div>
           <div class="menuItem" key="3" v-if="current_num==2">
                <div class="menuttl">
                質問3
-               <span class="txt">昼食はどちらを食べたいですか？</span>
+               <span class="txt">最近ストレスを感じていますか？</span>
                </div>
                <div class="menuRadio">
                <label>
-               <input name="amount" type="radio" value="0" v-on:change="check" v-model="amount" />
+               <input name="stress" type="radio" value="0" v-on:change="check" v-model="stress" />
                <span class="btn"></span>
-               <span class="btn-txt">ハンバーグ</span>
+               <span class="btn-txt">ほぼない</span>
                </label>
                <label>
-               <input name="amount" type="radio" value="1" v-on:change="check" v-model="amount" />
+               <input name="stress" type="radio" value="1" v-on:change="check" v-model="stress" />
                <span class="btn"></span>
-               <span class="btn-txt">グミ</span>
+               <span class="btn-txt">ストレスだらけ</span>
                </label>
                </div>
           </div>
           <div class="menuItem" key="4" v-if="current_num==3">
                <div class="menuttl">
                質問4
-               <span class="txt">晩ごはんは何が食べたいですか？</span>
+               <span class="txt">睡眠時間は？</span>
                </div>
                <div class="menuRadio">
                <label>
-               <input name="demand" type="radio" value="0" v-on:change="check" v-model="demand" />
+               <input name="sleep" type="radio" value="0" v-on:change="check" v-model="sleep" />
                <span class="btn"></span>
-               <span class="btn-txt">ステーキ</span>
+               <span class="btn-txt">8時間以上</span>
                </label>
                <label>
-               <input name="demand" type="radio" value="1" v-on:change="check" v-model="demand" />
+               <input name="sleep" type="radio" value="1" v-on:change="check" v-model="sleep" />
                <span class="btn"></span>
-               <span class="btn-txt">カレーライス</span>
+               <span class="btn-txt">6〜8時間</span>
                </label>
                <label>
-               <input name="demand" type="radio" value="2" v-on:change="check" v-model="demand" />
+               <input name="sleep" type="radio" value="2" v-on:change="check" v-model="sleep" />
                <span class="btn"></span>
-               <span class="btn-txt">ナッツ</span>
+               <span class="btn-txt">6時間未満</span>
                </label>
                </div>
           </div>
@@ -85,16 +85,16 @@
      <div class="result" v-bind:class="result_active">
           <div class="result_inner">
           <transition-group name="fade">
-               <div class="result_contents" key="1" v-if="result_num==1">診断結果 肉塊です</div>
-               <div class="result_contents" key="2" v-if="result_num==2">診断結果 FATです</div>
-               <div class="result_contents" key="3" v-if="result_num==3">診断結果 塊です</div>
-               <div class="result_contents" key="4" v-if="result_num==4">診断結果 まあまあのポッチャリさんです</div>
-               <div class="result_contents" key="5" v-if="result_num==5">診断結果 糖質改善ポッチャリです</div>
-               <div class="result_contents" key="6" v-if="result_num==6">診断結果 甘党ぽっちゃりです</div>
-               <div class="result_contents" key="7" v-if="result_num==7">診断結果 健康体です</div>
-               <div class="result_contents" key="8" v-if="result_num==8">診断結果 大学生並</div>
-               <div class="result_contents" key="9" v-if="result_num==9">診断結果 大学生並</div>
-               <div class="result_contents" key="10" v-if="result_num==10">診断結果 普通です</div>
+               <div class="result_contents" key="1" v-if="result_num==1">診断結果 それはちょっと寝過ぎ</div>
+               <div class="result_contents" key="2" v-if="result_num==2">診断結果 ハゲとは無縁です</div>
+               <div class="result_contents" key="3" v-if="result_num==3">診断結果 ちゃんと寝て</div>
+               <div class="result_contents" key="4" v-if="result_num==4">診断結果 ストレスで寝過ぎてるの？</div>
+               <div class="result_contents" key="5" v-if="result_num==5">診断結果 ストレスマネジメント大事</div>
+               <div class="result_contents" key="6" v-if="result_num==6">診断結果 とりあえず寝ようか</div>
+               <div class="result_contents" key="7" v-if="result_num==7">診断結果 タバコやめようか</div>
+               <div class="result_contents" key="8" v-if="result_num==8">診断結果 タバコやめたらストレス？</div>
+               <div class="result_contents" key="9" v-if="result_num==9">診断結果 タバコやめてちゃんと寝よう</div>
+               <div class="result_contents" key="10" v-if="result_num==10">診断結果 タバコやめて筋トレしてみてはいかが？</div>
                <div class="result_contents" key="11" v-if="result_num==11">診断結果 普通です</div>
                <div class="result_contents" key="12" v-if="result_num==12">診断結果 小動物？</div>
                <div class="result_contents" key="13" v-if="result_num==13">診断結果 ポッチャリさんです</div>
@@ -118,21 +118,21 @@
 
 <script>
 var queData = [
-     ['パン','ごはん'],
-     ['食べる','食べない'],
-     ['ハンバーグ','グミ'],
-     ['ステーキ','カレーライス','ナッツ']
+     ['飲まない','飲む'],
+     ['吸わない','吸う'],
+     ['ほぼない','ストレスだらけ'],
+     ['8時間以上','6時間','3時間']
      ]
 export default {
      data() {
           return {
                answer:[],
                answer_num:$('.menuItem').length,
-               sex:'',
+               alcohol:'',
                current_num:0,
-               toilet:'',
-               amount:'',
-               demand:'',
+               cigarette:'',
+               stress:'',
+               sleep:'',
                result_active:'',
                nemu_active:'',
                result_txt:'',
@@ -167,21 +167,21 @@ export default {
      },
      watch: {
           result_num:function(n,o){
-          this.result_txt = queData[0][this.sex]+' >> ' + queData[1][this.toilet] +' >> ' +queData[2][this.amount] +' >> ' +queData[3][this.demand] + ' を選択した時のコンテンツ'
+          this.result_txt = queData[0][this.alcohol]+' >> ' + queData[1][this.cigarette] +' >> ' +queData[2][this.stress] +' >> ' +queData[3][this.sleep] + ' を選択した時のコンテンツ'
           }
      },
      created:function(){
      var _t = this;
      setTimeout(function(){
           _t.nemu_active = '__active';
-                              },400);
+     },400);
      },
      methods:{
      check:function(){
-          this.answer[0] = this.sex;
-          this.answer[1] = this.toilet;
-          this.answer[2] = this.amount;
-          this.answer[3] = this.demand;
+          this.answer[0] = this.alcohol;
+          this.answer[1] = this.cigarette;
+          this.answer[2] = this.stress;
+          this.answer[3] = this.sleep;
           this.current_num = this.answer.indexOf('');
 
           if(this.answer.indexOf('')==-1){
